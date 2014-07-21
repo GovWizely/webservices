@@ -25,7 +25,7 @@
             {
                "match" : {
                   "title" : {
-                     "query" : "roof",
+                     "query" :  "roof",
                      "operator" : "and"
                   }
                }
@@ -33,7 +33,7 @@
             {
                "match" : {
                   "description" : {
-                     "query" : "bird",
+                     "query" :  "bird",
                      "operator" : "and"
                   }
                }

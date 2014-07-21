@@ -12,6 +12,6 @@ class TradeLead
   end
 
   def self.index_names
-    @@index_names ||= [CanadaLead, StateTradeLead, UkTradeLead].collect(&:index_name)
+    @@index_names ||= [CanadaLead, StateTradeLead, UkTradeLead, FbopenLead].collect(&:index_name)
   end
 end

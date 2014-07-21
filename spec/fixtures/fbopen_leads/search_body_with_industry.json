@@ -1,0 +1,15 @@
+{
+   "filter" : {
+      "bool" : {
+         "must" : [
+            {
+               "query" : {
+                  "match" : {
+                     "industry" : "fishing"
+                  }
+               }
+            }
+         ]
+      }
+   }
+}

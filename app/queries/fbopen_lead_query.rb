@@ -1,9 +1,9 @@
-class CanadaLeadQuery < Query
+class FbopenLeadQuery < Query
   query_fields %i(  title description industry specific_location q  )
 
   def initialize(options)
     super(options)
-    @sort = 'end_date,publish_date,title.raw,contract_number' unless @q
+    @sort = 'end_date,contract_number' unless @q
   end
 
   private

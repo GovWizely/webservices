@@ -9,17 +9,22 @@ gem 'elasticsearch'
 gem 'iso_country_codes'
 gem 'us_states', :git => 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'jbuilder'
-gem 'newrelic_rpm'
 gem 'nokogiri'
 gem 'rack-contrib'
 gem 'rake'
 gem 'sanitize'
+gem 'parslet'
+
+group :production do
+  gem 'newrelic_rpm'
+end
 
 group :development, :test do
   gem 'rspec-rails'
   gem 'shoulda-matchers'
   gem 'thin'
   gem 'pry-rails'
+  gem 'pry-byebug'
 end
 
 group :development do

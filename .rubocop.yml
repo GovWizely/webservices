@@ -1,0 +1,12 @@
+Style/AlignHash:
+  EnforcedHashRocketStyle: table
+  EnforcedColonStyle: table
+Metrics/LineLength:
+  Max: 800
+  AllowURI: true
+Style/TrailingComma:
+  EnforcedStyleForMultiline: comma
+Style/Documentation:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false

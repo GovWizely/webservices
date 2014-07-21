@@ -14,15 +14,6 @@ class AustralianTradeLeadQuery < Query
     end if @q
   end
 
-  def generate_match(json, field, query, operator = :and)
-    json.match do
-      json.set! field do
-        json.operator operator
-        json.query query
-      end
-    end
-  end
-
   def generate_filter(json)
   end
 end

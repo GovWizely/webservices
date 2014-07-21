@@ -1,0 +1,31 @@
+require 'spec_helper'
+
+describe FbopenParser do
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/fbopen_leads" }
+  let(:subject)      { FbopenParser.new }
+
+  describe '#convert' do
+    let(:srcsgt)          { open("#{fixtures_dir}/input_srcsgt").read }
+    let(:expected_srcsgt) { JSON.parse open("#{fixtures_dir}/output_srcsgt").read }
+    it 'handles SRCSGT records' do
+      subject.convert(srcsgt).should == expected_srcsgt
+    end
+
+    let(:presol)          { open("#{fixtures_dir}/input_presol").read }
+    let(:expected_presol) { JSON.parse open("#{fixtures_dir}/output_presol").read }
+    it 'handles PRESOL records' do
+      subject.convert(presol).should include *expected_presol
+    end
+
+    let(:all_records)           { open("#{fixtures_dir}/example_input").read }
+    let(:expected_output) { JSON.parse(open("#{fixtures_dir}/example_output.json").read) }
+    it 'handles all sample formats' do
+      subject.convert(all_records).should == expected_output
+    end
+
+    it 'works when given a file handle' do
+      fh = open("#{fixtures_dir}/example_input")
+      subject.convert(fh).should == expected_output
+    end
+  end
+end
