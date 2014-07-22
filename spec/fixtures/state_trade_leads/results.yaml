@@ -24,6 +24,10 @@
   :submitting_officer: Asike, Chuka
   :submitting_officer_contact: AsikeC@state.gov
   :id: DATATABLE.647
+  :geometry:
+    :type: Point
+    :latitude: 4.570868
+    :longitude: -74.29733299999998
 - :source: World Bank
   :country: PH
   :specific_location: Philippines
@@ -47,6 +51,10 @@
   :url: http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=22842
   :status: Pipeline
   :id: DATATABLE.538
+  :geometry:
+    :type: Point
+    :latitude: 12.879721
+    :longitude: 121.77401699999996
 - :source: Post Identified Project
   :country: QA
   :specific_location: Doha Medical City, Qatar
@@ -82,6 +90,10 @@
   :url: http://www.ashghal.gov.qa/English/Bids/Bids/Lists/TendersEn/DispForm2.aspx?List=63e70945%2D1f5e%2D4614%2Daa38%2Dca1eb77134e0&ID=1315&Source=http%3A%2F%2Fwww%2Eashghal%2Egov%2Eqa%2FEnglish%2FBids%2FBids%2FPages%2Flarge%5Ftnders%2Easpx
   :status: Pipeline
   :id: DATATABLE.174
+  :geometry:
+    :type: Point
+    :latitude: 25.2942804
+    :longitude: 51.4978033
 - :source: World Bank
   :country: KE
   :specific_location: Kenya
@@ -108,3 +120,4 @@
   :url: http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=228424&Projectid=P117635
   :status: Pipeline
   :id: DATATABLE.66
+  :geometry:

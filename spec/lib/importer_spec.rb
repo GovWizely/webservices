@@ -64,4 +64,33 @@ describe Importer do
     it { should eq({one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']}) }
   end
 
+  describe '#lookup_country_with_coordinates' do
+    subject { MockImporter.new.lookup_country_with_coordinates(coords) }
+
+    context 'with coordinates in Columbia' do
+      let(:coords) { {latitude: 4.570868, longitude: -74.29733299999998} }
+      it { should eq 'CO' }
+    end
+
+    context 'with coordinates in Philippines' do
+      let(:coords) { {latitude: 12.879721, longitude: 121.77401699999996} }
+      it { should eq 'PH' }
+    end
+
+    context 'with coordinates in Qatar' do
+      let(:coords) { {latitude: 25.2942804, longitude: 51.4978033} }
+      it { should eq 'QA' }
+    end
+
+    context 'with coordinates in Kenya' do
+      let(:coords) { {latitude: -0.023559, longitude: 37.906193} }
+      it { should eq 'KE' }
+    end
+
+    context 'with coordinates in Greece' do
+      let(:coords) { {latitude: 38.01632499999999, longitude: 23.785365800000022} }
+      it { should eq 'GR' }
+    end
+
+  end
 end
