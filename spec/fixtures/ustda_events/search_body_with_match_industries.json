@@ -1,0 +1,26 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "industries": "fishing"
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "end_date": {
+              "gte": "2013-10-07"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
