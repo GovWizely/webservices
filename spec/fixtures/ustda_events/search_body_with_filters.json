@@ -1,0 +1,20 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "end_date": {
+              "gte": "2013-10-07"
+            }
+          }
+        },
+        {
+          "terms": {
+            "country": ["IL", " US"]
+          }
+        }
+      ]
+    }
+  }
+}

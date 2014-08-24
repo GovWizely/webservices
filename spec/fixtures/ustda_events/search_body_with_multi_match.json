@@ -1,0 +1,28 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["description", "event_name"],
+            "operator": "and",
+            "query": "workboat"
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "end_date": {
+              "gte": "2013-10-07"
+            }
+          }
+        }
+      ]
+    }
+  }
+}
