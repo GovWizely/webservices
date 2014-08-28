@@ -5,11 +5,13 @@ describe UstdaEventQuery do
 
   describe '#new' do
     it_behaves_like 'a paginated query'
+    it_behaves_like 'a relevance-sorted query'
 
     context 'when options include countries' do
       subject { UstdaEventQuery.new(countries: 'us,ca') }
 
       its(:countries) { should == %w(US CA) }
+      its(:sort) { should == :start_date }
     end
   end
 
