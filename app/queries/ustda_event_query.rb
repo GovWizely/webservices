@@ -1,7 +1,7 @@
 class UstdaEventQuery < CountryIndustryQuery
   def initialize(options)
     super(options)
-    @sort = :start_date
+    @sort = :start_date unless @q
   end
 
   private
