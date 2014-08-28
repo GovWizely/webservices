@@ -16,10 +16,6 @@ class UstdaEventData
     registration_link:  :registration_link,
     registration_title: :registration_title,
     url:                :url,
-    country1:           :country,
-    state1:             :state,
-    city1:              :city,
-    venue1:             :venue,
     industry:           :industries,
   }.freeze
 
@@ -33,10 +29,7 @@ class UstdaEventData
     registration_link:  '',
     registration_title: '',
     url:                '',
-    country:            '',
-    state:              '',
-    city:               '',
-    venue:              '',
+    venues:             [],
     event_type:         'FIXME',
     industries:         [],
     contacts:           [],
@@ -76,6 +69,22 @@ class UstdaEventData
         .map { |k, v| { k => v.blank? ? '' : v.strip } }
         .reduce(:merge),
     ]
+    event[:venues] = venues(entry)
     EMPTY_RECORD.dup.merge(event)
+  end
+
+  def venues(entry)
+    (1..6).map do|id|
+      fields = %w(country state city venue).map { |fname| "#{fname}#{id}".to_sym }
+      venue = entry
+                .slice(*fields)
+                .map do |k, v|
+                  { k.to_s.chop => v.blank? ? '' : v.strip }
+                end
+                .reduce(:merge)
+                .symbolize_keys
+      venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
+      venue.values.all?(&:blank?) ? nil : venue
+    end.compact
   end
 end
