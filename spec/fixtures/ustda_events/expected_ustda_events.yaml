@@ -25,10 +25,23 @@
   :registration_title: USTDA China Shale Gas Development and Technologies Business
     Briefing
   :url: http://www.ustda.gov/news/events/2014/EastAsia/China/ChinaShaleGasRTM.asp
-  :country: US
-  :state: DC
-  :city: Washington
-  :venue: 
+  :venues:
+  - :country: US
+    :state: DC
+    :city: Washington
+    :venue: ''
+  - :country: US
+    :state: PA
+    :city: Pittsburgh
+    :venue: ''
+  - :country: US
+    :state: TX
+    :city: Houston
+    :venue: ''
+  - :country: US
+    :state: ''
+    :city: ''
+    :venue: ''
   :event_type: FIXME
   :industries:
   - Energy & Mining
@@ -62,10 +75,23 @@
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/news/events/2014/SouthAsia/Vietnam/VietnamAirportDevelopmentOperationsRTM.asp
-  :country: US
-  :state: DC
-  :city: Washington
-  :venue: 
+  :venues:
+  - :country: US
+    :state: DC
+    :city: Washington
+    :venue: ''
+  - :country: US
+    :state: KY
+    :city: Louisville
+    :venue: ''
+  - :country: US
+    :state: OH
+    :city: Cincinnati
+    :venue: ''
+  - :country: US
+    :state: CA
+    :city: San Francisco
+    :venue: ''
   :event_type: FIXME
   :industries:
   - Aviation Services
@@ -94,10 +120,11 @@
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/africanleadersvisits
-  :country: US
-  :state: IL
-  :city: Chicago
-  :venue: 
+  :venues:
+  - :country: US
+    :state: IL
+    :city: Chicago
+    :venue: ''
   :event_type: FIXME
   :industries:
   - Transportation Services
@@ -127,10 +154,11 @@
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/africanleadersvisits
-  :country: US
-  :state: TX
-  :city: Houston
-  :venue: 
+  :venues:
+  - :country: US
+    :state: TX
+    :city: Houston
+    :venue: ''
   :event_type: FIXME
   :industries:
   - Energy & Mining
@@ -158,10 +186,23 @@
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/news/events/2014/SubSaharanAfrica/SubSaharanAfricaLightAircraftHelicopterRTM.asp
-  :country: US
-  :state: DC
-  :city: Washington
-  :venue: 
+  :venues:
+  - :country: US
+    :state: DC
+    :city: Washington
+    :venue: ''
+  - :country: US
+    :state: KS
+    :city: Wichita
+    :venue: ''
+  - :country: US
+    :state: FL
+    :city: Orlando
+    :venue: ''
+  - :country: US
+    :state: PA
+    :city: Philadelphia
+    :venue: ''
   :event_type: FIXME
   :industries:
   - Aviation Services
