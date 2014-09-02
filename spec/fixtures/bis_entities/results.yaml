@@ -1,6 +1,5 @@
 ---
-- :source: EL
-  :entity_number: 
+- :entity_number: 
   :sdn_type: 
   :programs: 
   :name: Fazal Rahim Farid
@@ -9,10 +8,10 @@
   :start_date: '2011-11-21'
   :end_date: 
   :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See ß744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: 'bf21bcea380bad1b11712f212c0176655e7c7e9a'
+  :id: bf21bcea380bad1b11712f212c0176655e7c7e9a
   :alt_names:
   - Fazel Rahim Farid
   - Farid
@@ -28,8 +27,8 @@
     :country: AF
     :postal_code: 
     :state: 
-- :source: EL
-  :entity_number: 
+  :source: EL
+- :entity_number: 
   :sdn_type: 
   :programs: 
   :name: Fazel Khalil Construction Company
@@ -38,10 +37,10 @@
   :start_date: '2012-04-27'
   :end_date: 
   :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See ß744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: '850a547baaf505485b2d8ce8b53d18a13941d20d'
+  :id: 850a547baaf505485b2d8ce8b53d18a13941d20d
   :alt_names: []
   :addresses:
   - :address: Wazir Akbar Khan, Road Number 10, In front of National Bank, District
@@ -50,8 +49,8 @@
     :country: AF
     :postal_code: 
     :state: 
-- :source: EL
-  :entity_number: 
+  :source: EL
+- :entity_number: 
   :sdn_type: 
   :programs: 
   :name: Zurmat Construction Company offices
@@ -60,10 +59,10 @@
   :start_date: '2012-04-27'
   :end_date: 
   :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See ß744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: '9f38b5ed72bf5aafb648ad89d5bfe1143c1007c0'
+  :id: 9f38b5ed72bf5aafb648ad89d5bfe1143c1007c0
   :alt_names: []
   :addresses:
   - :address: House No. 319, 10th Street Wazeer Akbar Khan
@@ -102,8 +101,8 @@
     :country: AF
     :postal_code: 
     :state: 
-- :source: EL
-  :entity_number: 
+  :source: EL
+- :entity_number: 
   :sdn_type: 
   :programs: 
   :name: Murat Peker
@@ -112,10 +111,10 @@
   :start_date: '2013-12-12'
   :end_date: 
   :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See ß744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: '9c1144cfa761dc1f921cd85e8552b41f505bc77b'
+  :id: 9c1144cfa761dc1f921cd85e8552b41f505bc77b
   :alt_names: []
   :addresses:
   - :address: Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup
@@ -123,3 +122,26 @@
     :country: TR
     :postal_code: 
     :state: 
+  :source: EL
+- :entity_number: 
+  :sdn_type: 
+  :programs: 
+  :name: Qazi Abdallah
+  :title: 
+  :federal_register_notice: 76 FR 71867
+  :start_date: '2011-11-21'
+  :end_date: 
+  :standard_order: 
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :id: 8dc4dd45a54019ae66c58513439cb1a4fdc2e1b9
+  :alt_names:
+  - "Jawid, SaÂ\u0092id Jan Â\u0091Abd-al-Salam"
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  :source: EL
