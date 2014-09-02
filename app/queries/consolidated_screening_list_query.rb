@@ -7,7 +7,7 @@ class ConsolidatedScreeningListQuery < Query
     @sdn_type = options[:sdn_type] if options[:sdn_type].present?
     @countries = options[:countries].upcase.split(',') if options[:countries].present?
     @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
-    @sort = @q ? nil : 'id'
+    @sort = '_score,end_date:desc,id'
   end
 
   private
