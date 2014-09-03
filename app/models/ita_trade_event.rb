@@ -1,4 +1,4 @@
-class TradeEvent
+class ItaTradeEvent
   extend Indexable
 
   self.settings = {
@@ -13,7 +13,7 @@ class TradeEvent
   }.freeze
 
   self.mappings = {
-    trade_event: {
+    ita_trade_event: {
       _ttl:       { enabled: true },
       properties: {
         cost:        { type: 'float' },

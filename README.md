@@ -24,16 +24,16 @@ Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to 
 
 Fire up a server and try it all out.
 
-    bundle exec rake ita:import[TradeEvent] ita:import[ItaOfficeLocation]
+    bundle exec rake ita:import[TradeEvent::Ita] ita:import[ItaOfficeLocation]
     bundle exec rails s
 
-<http://127.0.0.1:3000/trade_events/search?size=5&offset=8>
+<http://127.0.0.1:3000/trade_events/ita/search?size=5&offset=8>
 
-<http://127.0.0.1:3000/trade_events/search?q=electrical>
+<http://127.0.0.1:3000/trade_events/ita/search?q=electrical>
 
-<http://127.0.0.1:3000/trade_events/search?countries=US,CA>
+<http://127.0.0.1:3000/trade_events/ita/search?countries=US,CA>
 
-<http://127.0.0.1:3000/trade_events/search?industry=agriculture>
+<http://127.0.0.1:3000/trade_events/ita/search?industry=agriculture>
 
 <http://127.0.0.1:3000/ita_office_locations/search?q=new>
 
