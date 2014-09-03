@@ -1,17 +1,17 @@
 require 'spec_helper'
 
-describe 'Trade Events API V1', type: :request do
+describe 'ITA Trade Events API V1', type: :request do
   before(:all) do
-    TradeEvent.recreate_index
-    TradeEventData.new("#{Rails.root}/spec/fixtures/trade_events/trade_events.xml").import
+    ItaTradeEvent.recreate_index
+    ItaTradeEventData.new("#{Rails.root}/spec/fixtures/ita_trade_events/trade_events.xml").import
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_events/results.json").read }
+  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/ita_trade_events/results.json").read }
 
-  describe 'GET /trade_events/search.json' do
+  describe 'GET /ita_trade_events/search.json' do
     context 'when search parameters are empty' do
-      before { get '/trade_events/search', {}, v1_headers }
+      before { get '/ita_trade_events/search', {}, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +30,7 @@ describe 'Trade Events API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get '/trade_events/search', { q: '2013' }, v1_headers }
+      before { get '/ita_trade_events/search', { q: '2013' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -47,7 +47,7 @@ describe 'Trade Events API V1', type: :request do
     end
 
     context 'when countries is specified' do
-      before { get '/trade_events/search', { countries: 'il' }, v1_headers }
+      before { get '/ita_trade_events/search', { countries: 'il' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -63,7 +63,7 @@ describe 'Trade Events API V1', type: :request do
     end
 
     context 'when industry is specified' do
-      before { get '/trade_events/search', { industry: 'DENTALS' }, v1_headers }
+      before { get '/ita_trade_events/search', { industry: 'DENTALS' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -79,7 +79,7 @@ describe 'Trade Events API V1', type: :request do
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do
-      before { get '/trade_events/search', { q: 'Sao' }, v1_headers }
+      before { get '/ita_trade_events/search', { q: 'Sao' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

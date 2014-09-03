@@ -1,4 +1,4 @@
-class TradeEventQuery < CountryIndustryQuery
+class ItaTradeEventQuery < CountryIndustryQuery
   def initialize(options)
     super
     @sort = :start_date
