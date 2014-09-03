@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class TradeEventData
+class ItaTradeEventData
   include Importer
 
   SINGLE_VALUED_XPATHS = {
@@ -40,7 +40,7 @@ class TradeEventData
       trade_event = process_event_info(event_info)
       trade_event
     end.compact
-    TradeEvent.index trade_events
+    ItaTradeEvent.index trade_events
   end
 
   private
