@@ -4,7 +4,7 @@ class ConsolidatedScreeningListQuery < Query
   def initialize(options={})
     super
     @q = options[:q] if options[:q].present?
-    @sdn_type = options[:sdn_type] if options[:sdn_type].present?
+    @sdn_type = options[:sdn_type].downcase if options[:sdn_type].present?
     @countries = options[:countries].upcase.split(',') if options[:countries].present?
     @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
     @sort = '_score,end_date:desc,id'
