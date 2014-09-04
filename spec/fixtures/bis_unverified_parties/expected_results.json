@@ -3,6 +3,9 @@
         "addresses": [
             {
                 "address": "Unit 2209, 22/F, Wu Chung House, 213 Queen's Road East, Wanchai",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             }
         ],
@@ -14,6 +17,9 @@
         "addresses": [
             {
                 "address": "Room 2135, Jingxin Building A, No Dong San Huan North Road, Beijing",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "CN"
             }
         ],
@@ -25,10 +31,16 @@
         "addresses": [
             {
                 "address": "Flat D12, 11/F, King Yip Factory Bldg, 59 King Yip Street, Kwun Tong, Kowloon",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             },
             {
                 "address": "Room 603, 6/F, Hang Pont Commercial Building, 31 Tonking Street, Cheung Sha Wan, Kowloon",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             }
         ],
@@ -40,6 +52,9 @@
         "addresses": [
             {
                 "address": "Unit N, 3/F, Hopewell House, 175 Hip Wo Street, KwunTong, Kowloon",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             }
         ],
@@ -53,14 +68,23 @@
         "addresses": [
             {
                 "address": "Deguninskaya Street 30, Moscow, Russia",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "RU"
             },
             {
                 "address": "Deguninskaya Street 20, Moscow, Russia",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "RU"
             },
             {
                 "address": "Novoslobodskaya Str. 24/29, Moscow, Russia",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "RU"
             }
         ],
@@ -75,10 +99,16 @@
         "addresses": [
             {
                 "address": "Flat A, 11/F, Adolfo Mansion, 114-116 Austin Road, Tsim Sha Tsui, Kowloon",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             },
             {
                 "address": "Rm 1203, 12/F, Hip Kwan Commercial Bldg, 38 Pitt Street, Yau Ma Tei",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             }
         ],
@@ -90,6 +120,9 @@
         "addresses": [
             {
                 "address": "Rm 1013B, Well Fung Ind. Center, Ta Chuen Ping Street, Kwai Chung",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "HK"
             }
         ],
@@ -101,10 +134,16 @@
         "addresses": [
             {
                 "address": "Deguninskaya Street 10, Moscow",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "RU"
             },
             {
                 "address": "Novoslobodskaya Str. 14/19, Moscow",
+                "city": null,
+                "state": null,
+                "postal_code": null,
                 "country": "RU"
             }
         ],

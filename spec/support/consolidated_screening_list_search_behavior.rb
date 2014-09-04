@@ -268,12 +268,6 @@ shared_examples 'it contains all DPL results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all DPL results' do
-  let(:source) { 'DPL' }
-  let(:expected) { all_dpl_results }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_examples 'it contains all DPL results that match "katsuta"' do
   let(:source) { 'DPL' }
   let(:expected) { [all_dpl_results[0]] }
