@@ -57,6 +57,6 @@ Click around on the files that have < 100% coverage to see what lines weren't ex
 
 ### Code Status
 
-* [![Build Status](https://magnum.travis-ci.com/InternationalTradeAdministration/webservices.png?token=EKwfm8JUGsTqz6oYyPkg)](https://magnum.travis-ci.com/InternationalTradeAdministration/webservices)
+* [![Build Status](https://travis-ci.org/GovWizely/webservices.svg)](https://travis-ci.org/GovWizely/webservices/)
 * [![Code Climate](https://codeclimate.com/repos/525c412889af7e5115008fce/badges/f5e22fe84f45d1792048/gpa.png)](https://codeclimate.com/repos/525c412889af7e5115008fce/feed)
 
