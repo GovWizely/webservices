@@ -1,0 +1,2 @@
+class BisnNonproliferationSanctionQuery < ConsolidatedScreeningListQuery
+end

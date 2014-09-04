@@ -1,0 +1,2 @@
+class BisUnverifiedPartyQuery < ConsolidatedScreeningListQuery
+end

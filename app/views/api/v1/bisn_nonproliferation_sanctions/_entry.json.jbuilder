@@ -1,0 +1,9 @@
+json.(entry[:_source],
+  :end_date,
+  :federal_register_notice,
+  :name,
+  :programs,
+  :start_date,
+  :source,
+  :source_list_url,
+)

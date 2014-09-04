@@ -1,0 +1,2 @@
+class BisnForeignSanctionsEvaderQuery < ConsolidatedScreeningListQuery
+end

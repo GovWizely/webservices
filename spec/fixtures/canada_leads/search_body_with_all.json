@@ -1,0 +1,48 @@
+{
+   "filter" : {
+      "bool" : {
+         "must" : [
+            {
+               "query" : {
+                  "match" : {
+                     "industry" : "fishing"
+                  }
+               }
+            },
+            {
+               "query" : {
+                  "match" : {
+                     "specific_location" : "canada"
+                  }
+               }
+            }
+         ]
+      }
+   },
+   "query" : {
+      "bool" : {
+         "must" : [
+            {
+               "match" : {
+                  "title" : "roof"
+               }
+            },
+            {
+               "match" : {
+                  "description" : "bird"
+               }
+            },
+            {
+               "multi_match" : {
+                  "operator" : "and",
+                  "fields" : [
+                     "title",
+                     "description"
+                  ],
+                  "query" : "workboat"
+               }
+            }
+         ]
+      }
+   }
+}

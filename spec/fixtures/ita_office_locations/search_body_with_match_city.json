@@ -1,0 +1,9 @@
+{
+    "query": {
+        "match": {
+            "city": {
+                "operator": "and", "query": "san jose"
+            }
+        }
+    }
+}

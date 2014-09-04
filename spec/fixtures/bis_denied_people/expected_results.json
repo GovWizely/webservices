@@ -1,0 +1,173 @@
+[
+    {
+        "addresses": [
+            {
+                "address": "1-25-4 MINAMI-AZABU, MINATOKU",
+                "city": "TOKYO",
+                "state": null,
+                "country": "JP",
+                "postal_code": null
+            }
+        ],
+        "end_date": "2003-03-03",
+        "federal_register_notice": "58 F.R. 42719 8/11/93",
+        "name": "KATSUTA KEISUKE",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1993-08-02",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "271 MONSARRAT DRIVE",
+                "city": "DUBLIN",
+                "state": "OH",
+                "country": "US",
+                "postal_code": "43017"
+            }
+        ],
+        "end_date": "2007-08-29",
+        "federal_register_notice": "63 F.R. 43370 8/13/98",
+        "name": "ABRISHAMI, ELHAM",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1998-08-03",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "8019 NIEDERSEEON, HOUSE 21",
+                "city": null,
+                "state": null,
+                "country": "DE",
+                "postal_code": null
+            }
+        ],
+        "end_date": null,
+        "federal_register_notice": "46 F.R. 46154 9/17/81 and 46 F.R. 19290 3/30/81",
+        "name": "ADT ANALOG AND DIGITAL TECHNIK",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1981-09-10",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "22 RUE DU 11 NOVEMBER 1918",
+                "city": "PANTIN",
+                "state": null,
+                "country": "FR",
+                "postal_code": null
+            }
+        ],
+        "end_date": null,
+        "federal_register_notice": "50 F.R. 29244 7/18/85",
+        "name": "AGNESE, ANDREE",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1985-07-11",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD",
+                "city": "COPENHAGEN",
+                "state": null,
+                "country": "DK",
+                "postal_code": null
+            }
+        ],
+        "end_date": "2000-10-04",
+        "federal_register_notice": null,
+        "name": "SEMICONDUCTOR SYSTEMS INTL., INC. (SSI)",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1992-03-20",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "BERENKOOG 29",
+                "city": "ALKMAAR",
+                "state": null,
+                "country": "NL",
+                "postal_code": "1822 BH"
+            }
+        ],
+        "end_date": "2007-03-19",
+        "federal_register_notice": "52 F.R. 9515 3/25/87",
+        "name": "KINTRACO",
+        "remarks": "CITY CORRECTED",
+        "standard_order": "Y",
+        "start_date": "1987-03-19",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "250 BONITA GLEN DRIVE, #3D",
+                "city": "CHULA VISTA",
+                "state": "CA",
+                "country": "US",
+                "postal_code": null
+            }
+        ],
+        "end_date": "2008-08-26",
+        "federal_register_notice": "65 FR 42664 7/11/00",
+        "name": "KAL TEK LABS",
+        "remarks": "NAME CORRECTED",
+        "standard_order": "Y",
+        "start_date": "1988-08-26",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "6486 S.W. 9 STREET",
+                "city": "MIAMI",
+                "state": "FL",
+                "country": "US",
+                "postal_code": "33144"
+            }
+        ],
+        "end_date": "2005-06-05",
+        "federal_register_notice": "60 F.R. 31140",
+        "name": "ABELAIRAS, AMANCIO J.",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1995-06-05",
+        "source": "DPL",
+        "source_list_url": null
+    },
+    {
+        "addresses": [
+            {
+                "address": "4 MIMOSA WAY",
+                "city": "PINELANDS",
+                "state": null,
+                "country": "ZA",
+                "postal_code": null
+            }
+        ],
+        "end_date": "2017-08-08",
+        "federal_register_notice": "62 F.R. 43503 8/14/97",
+        "name": "ACE, IAN",
+        "remarks": null,
+        "standard_order": "Y",
+        "start_date": "1997-08-08",
+        "source": "DPL",
+        "source_list_url": null
+    }
+]

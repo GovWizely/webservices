@@ -1,0 +1,2 @@
+class OfacSpecialDesignatedNationalQuery < ConsolidatedScreeningListQuery
+end

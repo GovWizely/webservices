@@ -1,0 +1,168 @@
+---
+- :entity_number: '306'
+  :sdn_type: Entity
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 
+  :id: '306'
+  :source: 'SDN'
+  :source_list_url: 
+  :name: BANCO NACIONAL DE CUBA
+  :alt_names:
+  - BNC
+  - NATIONAL BANK OF CUBA
+  :addresses:
+  - :city: Zurich
+    :country: CH
+    :postal_code: CH-8022
+    :state: 
+    :address: Zweierstrasse 35
+  - :city: Madrid
+    :country: ES
+    :postal_code: E-28036
+    :state: 
+    :address: Avenida de Concha Espina 8
+  - :city: Tokyo
+    :country: JP
+    :postal_code: '103'
+    :state: 
+    :address: Dai-Ichi Bldg. 6th Floor, 10-2 Nihombashi, 2-chome, Chuo-ku
+  - :city: Panama City
+    :country: PA
+    :postal_code: 
+    :state: 
+    :address: Federico Boyd Avenue & 51 Street
+  :programs:
+  - CUBA
+  :ids: []
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+- :entity_number: '6982'
+  :sdn_type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: Additional Djiboutian passport issued in 2010.
+  :id: '6982'
+  :source: 'SDN'
+  :source_list_url: 
+  :name: JIM'ALE, Ahmed Nur Ali
+  :alt_names:
+  - JUMALI, Ahmed Ali
+  - JIMALE, Ahmad Ali
+  - JIM'ALE, Ahmad Nur Ali
+  - JUMALE, Ahmed Nur
+  - JIMALE, Ahmed Ali
+  - JIMALE, Shaykh Ahmed Nur
+  - JIMALE, Sheikh Ahmed
+  - JUMALE, Ahmed Ali
+  :addresses:
+  - :city: Dubai
+    :country: AE
+    :postal_code: 
+    :state: 
+    :address: P.O. Box 3312
+  - :city: Mogadishu
+    :country: SO
+    :postal_code: 
+    :state: 
+    :address: 
+  - :city: Djibouti
+    :country: DJ
+    :postal_code: 
+    :state: 
+    :address: 
+  :programs:
+  - SDGT
+  :ids:
+  - :country: SO
+    :expiration_date: '2011-01-23'
+    :issue_date: '2001-10-01'
+    :number: A0181988
+    :type: Passport
+  :nationalities:
+  - SO
+  :citizenships:
+  - SO
+  - DJ
+  :dates_of_birth:
+  - '1954-05-20'
+  :places_of_birth:
+  - Eilbur, Somalia
+- :entity_number: '11043'
+  :sdn_type: Vessel
+  :title: 
+  :call_sign: 
+  :vessel_type: General Cargo
+  :gross_tonnage: '24065'
+  :gross_registered_tonnage: '16621'
+  :vessel_flag: Iran
+  :vessel_owner: IRISL
+  :remarks: 
+  :id: '11043'
+  :source: 'SDN'
+  :source_list_url: 
+  :name: PARSHAN
+  :alt_names:
+  - IRAN BRIGHTNESS
+  - BRIGHTNESS
+  - MARIGOLD
+  :addresses: []
+  :programs:
+  - NPWMD
+  :ids:
+  - :country: IR
+    :expiration_date: 
+    :issue_date: 
+    :number: IMO 9051648
+    :type: Vessel Registration Identification
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+- :entity_number: '521'
+  :sdn_type: Individual
+  :title: Executive Director, Havana International Bank
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: Might have something to do with Cuba.
+  :id: '521'
+  :source: 'SDN'
+  :source_list_url: 
+  :name: CHAO, Lazaro R.
+  :alt_names: []
+  :addresses:
+  - :city: London
+    :country: GB
+    :postal_code: EC2V 8EY
+    :state: 
+    :address: 20 Ironmonger Lane
+  :programs:
+  - CUBA
+  :ids:
+  - :country: BE
+    :expiration_date: '2011-12-25'
+    :issue_date: '2001-12-25'
+    :number: ABC123
+    :type: Passport
+  :nationalities:
+  - DE
+  :citizenships:
+  - FR
+  :dates_of_birth: []
+  :places_of_birth: []

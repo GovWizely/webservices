@@ -1,0 +1,274 @@
+<?xml version="1.0" standalone="yes"?>
+<sdnList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/sdnList.xsd">
+  <publshInformation>
+    <Publish_Date>07/16/2014</Publish_Date>
+    <Record_Count>5704</Record_Count>
+  </publshInformation>
+  <sdnEntry>
+    <uid>306</uid>
+    <lastName>BANCO NACIONAL DE CUBA</lastName>
+    <sdnType>Entity</sdnType>
+    <programList>
+      <program>CUBA</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>219</uid>
+        <type>a.k.a.</type>
+        <category>weak</category>
+        <lastName>BNC</lastName>
+      </aka>
+      <aka>
+        <uid>220</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>NATIONAL BANK OF CUBA</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>199</uid>
+        <address1>Zweierstrasse 35</address1>
+        <city>Zurich</city>
+        <postalCode>CH-8022</postalCode>
+        <country>Switzerland</country>
+      </address>
+      <address>
+        <uid>200</uid>
+        <address1>Avenida de Concha Espina 8</address1>
+        <city>Madrid</city>
+        <postalCode>E-28036</postalCode>
+        <country>Spain</country>
+      </address>
+      <address>
+        <uid>201</uid>
+        <address1>Dai-Ichi Bldg. 6th Floor, 10-2 Nihombashi, 2-chome, Chuo-ku</address1>
+        <city>Tokyo</city>
+        <postalCode>103</postalCode>
+        <country>Japan</country>
+      </address>
+      <address>
+        <uid>202</uid>
+        <address1>Federico Boyd Avenue &amp; 51 Street</address1>
+        <city>Panama City</city>
+        <country>Panama</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>6982</uid>
+    <firstName>Ahmed Nur Ali</firstName>
+    <lastName>JIM'ALE</lastName>
+    <sdnType>Individual</sdnType>
+    <remarks>Additional Djiboutian passport issued in 2010.</remarks>
+    <programList>
+      <program>SDGT</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>7613</uid>
+        <idType>Passport</idType>
+        <idNumber>A0181988</idNumber>
+        <idCountry>Somalia</idCountry>
+        <issueDate>01 Oct 2001</issueDate>
+        <expirationDate>23 Jan 2011</expirationDate>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>4955</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JUMALI</lastName>
+        <firstName>Ahmed Ali</firstName>
+      </aka>
+      <aka>
+        <uid>4956</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JIMALE</lastName>
+        <firstName>Ahmad Ali</firstName>
+      </aka>
+      <aka>
+        <uid>4957</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JIM'ALE</lastName>
+        <firstName>Ahmad Nur Ali</firstName>
+      </aka>
+      <aka>
+        <uid>4975</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JUMALE</lastName>
+        <firstName>Ahmed Nur</firstName>
+      </aka>
+      <aka>
+        <uid>14692</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JIMALE</lastName>
+        <firstName>Ahmed Ali</firstName>
+      </aka>
+      <aka>
+        <uid>14693</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JIMALE</lastName>
+        <firstName>Shaykh Ahmed Nur</firstName>
+      </aka>
+      <aka>
+        <uid>14694</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JIMALE</lastName>
+        <firstName>Sheikh Ahmed</firstName>
+      </aka>
+      <aka>
+        <uid>14695</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JUMALE</lastName>
+        <firstName>Ahmed Ali</firstName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>5048</uid>
+        <address1>P.O. Box 3312</address1>
+        <city>Dubai</city>
+        <country>United Arab Emirates</country>
+      </address>
+      <address>
+        <uid>5049</uid>
+        <city>Mogadishu</city>
+        <country>Somalia</country>
+      </address>
+      <address>
+        <uid>20922</uid>
+        <city>Djibouti</city>
+        <country>Djibouti</country>
+      </address>
+    </addressList>
+    <nationalityList>
+      <nationality>
+        <uid>8962</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </nationality>
+    </nationalityList>
+    <citizenshipList>
+      <citizenship>
+        <uid>8960</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </citizenship>
+      <citizenship>
+        <uid>8961</uid>
+        <country>Djibouti</country>
+        <mainEntry>false</mainEntry>
+      </citizenship>
+    </citizenshipList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>8958</uid>
+        <dateOfBirth>20 May 1954</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+    <placeOfBirthList>
+      <placeOfBirthItem>
+        <uid>8959</uid>
+        <placeOfBirth>Eilbur, Somalia</placeOfBirth>
+        <mainEntry>true</mainEntry>
+      </placeOfBirthItem>
+    </placeOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>11043</uid>
+    <lastName>PARSHAN</lastName>
+    <sdnType>Vessel</sdnType>
+    <programList>
+      <program>NPWMD</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>5535</uid>
+        <idType>Vessel Registration Identification</idType>
+        <idNumber>IMO 9051648</idNumber>
+        <idCountry>Iran</idCountry>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>11462</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>IRAN BRIGHTNESS</lastName>
+      </aka>
+      <aka>
+        <uid>12873</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>BRIGHTNESS</lastName>
+      </aka>
+      <aka>
+        <uid>22336</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>MARIGOLD</lastName>
+      </aka>
+    </akaList>
+    <vesselInfo>
+      <vesselType>General Cargo</vesselType>
+      <vesselFlag>Iran</vesselFlag>
+      <vesselOwner>IRISL</vesselOwner>
+      <tonnage>24065</tonnage>
+      <grossRegisteredTonnage>16621</grossRegisteredTonnage>
+    </vesselInfo>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>521</uid>
+    <firstName>Lazaro R.</firstName>
+    <lastName>CHAO</lastName>
+    <title>Executive Director, Havana International Bank</title>
+    <sdnType>Individual</sdnType>
+    <remarks>Might have something to do with Cuba.</remarks>
+    <programList>
+      <program>CUBA</program>
+    </programList>
+    <addressList>
+      <address>
+        <uid>307</uid>
+        <address1>20 Ironmonger Lane</address1>
+        <city>London</city>
+        <postalCode>EC2V 8EY</postalCode>
+        <country>United Kingdom</country>
+      </address>
+    </addressList>
+    <nationalityList>
+      <nationality>
+        <uid>1337</uid>
+        <country>Germany</country>
+        <mainEntry>true</mainEntry>
+      </nationality>
+    </nationalityList>
+    <citizenshipList>
+      <citizenship>
+        <uid>1024</uid>
+        <country>France</country>
+        <mainEntry>true</mainEntry>
+      </citizenship>
+    </citizenshipList>
+    <idList>
+      <id>
+        <uid>2368</uid>
+        <idType>Passport</idType>
+        <idNumber>ABC123</idNumber>
+        <idCountry>Belgium</idCountry>
+        <issueDate>25 Dec 2001</issueDate>
+        <expirationDate>25 Dec 2011</expirationDate>
+      </id>
+    </idList>
+  </sdnEntry>
+</sdnList>

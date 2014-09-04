@@ -1,0 +1,136 @@
+---
+- :name: SEMICONDUCTOR SYSTEMS INTL., INC. (SSI)
+  :start_date: '1992-03-20'
+  :end_date: '2000-10-04'
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 
+  :id: 7509f1f94933abd8d2367a8d89375d5fe26c352e
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
+    :city: COPENHAGEN
+    :state: 
+    :country: DK
+    :postal_code: 
+- :name: KAL TEK LABS
+  :start_date: '1988-08-26'
+  :end_date: '2008-08-26'
+  :standard_order: Y
+  :remarks: NAME CORRECTED
+  :federal_register_notice: 65 FR 42664 7/11/00
+  :id: efafb24e0e6c7359db7b00a61bba951f115a3f6a
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: '250 BONITA GLEN DRIVE, #3D'
+    :city: CHULA VISTA
+    :state: CA
+    :country: US
+    :postal_code: 
+- :name: KATSUTA KEISUKE
+  :start_date: '1993-08-02'
+  :end_date: '2003-03-03'
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 58 F.R. 42719 8/11/93
+  :id: 3f618f68cf1c69c37db62167ce626a91d7d7f3bf
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 1-25-4 MINAMI-AZABU, MINATOKU
+    :city: TOKYO
+    :state: 
+    :country: JP
+    :postal_code: 
+- :name: KINTRACO
+  :start_date: '1987-03-19'
+  :end_date: '2007-03-19'
+  :standard_order: Y
+  :remarks: CITY CORRECTED
+  :federal_register_notice: 52 F.R. 9515 3/25/87
+  :id: 6c2110d44708eb5efb72765b6a193b343e46e995
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: BERENKOOG 29
+    :city: ALKMAAR
+    :state: 
+    :country: NL
+    :postal_code: 1822 BH
+- :name: ABELAIRAS, AMANCIO J.
+  :start_date: '1995-06-05'
+  :end_date: '2005-06-05'
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 60 F.R. 31140
+  :id: b725bb6faaa14eaa021682b5bf40c4b2ee6e5bd7
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 6486 S.W. 9 STREET
+    :city: MIAMI
+    :state: FL
+    :country: US
+    :postal_code: '33144'
+- :name: ABRISHAMI, ELHAM
+  :start_date: '1998-08-03'
+  :end_date: '2007-08-29'
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 63 F.R. 43370 8/13/98
+  :id: 261ed972ea0fc79ee71afca12a7c24478e41fc00
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 271 MONSARRAT DRIVE
+    :city: DUBLIN
+    :state: OH
+    :country: US
+    :postal_code: '43017'
+- :name: ACE, IAN
+  :start_date: '1997-08-08'
+  :end_date: '2017-08-08'
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 62 F.R. 43503 8/14/97
+  :id: 2ff09e2a3a738d54e027a38e01798f8571f72611
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 4 MIMOSA WAY
+    :city: PINELANDS
+    :state: 
+    :country: ZA
+    :postal_code: 
+- :name: ADT ANALOG AND DIGITAL TECHNIK
+  :start_date: '1981-09-10'
+  :end_date: 
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 46 F.R. 46154 9/17/81 and 46 F.R. 19290 3/30/81
+  :id: c5dcc25225e4ce3b6acd1bd8be7cd3c06368d137
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 8019 NIEDERSEEON, HOUSE 21
+    :city: 
+    :state: 
+    :country: DE
+    :postal_code: 
+- :name: AGNESE, ANDREE
+  :start_date: '1985-07-11'
+  :end_date: 
+  :standard_order: Y
+  :remarks: 
+  :federal_register_notice: 50 F.R. 29244 7/18/85
+  :id: a979d30e8c60e0f9ada5aa22e7a62df676dc4580
+  :source: DPL
+  :source_list_url: 
+  :addresses:
+  - :address: 22 RUE DU 11 NOVEMBER 1918
+    :city: PANTIN
+    :state: 
+    :country: FR
+    :postal_code: 

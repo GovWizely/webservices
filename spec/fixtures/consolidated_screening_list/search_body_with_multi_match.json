@@ -1,0 +1,20 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "fields": [
+                            "alt_names",
+                            "name",
+                            "remarks",
+                            "title"
+                        ],
+                        "operator": "and",
+                        "query": "fish"
+                    }
+                }
+            ]
+        }
+    }
+}

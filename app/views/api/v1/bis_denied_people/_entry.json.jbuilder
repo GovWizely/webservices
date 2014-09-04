@@ -1,0 +1,11 @@
+json.(entry[:_source],
+  :addresses,
+  :end_date,
+  :federal_register_notice,
+  :name,
+  :remarks,
+  :standard_order,
+  :start_date,
+  :source,
+  :source_list_url,
+)

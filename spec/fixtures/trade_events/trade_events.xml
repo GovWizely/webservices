@@ -1,0 +1,398 @@
+<?xml version='1.0' encoding='windows-1252' ?>
+<EVENTLIST>
+  <HEADERINFO>
+    <HEADERTYPE>Date</HEADERTYPE>
+    <HEADERVALUE>10/08/2013 to 01/01/2020</HEADERVALUE>
+  </HEADERINFO>
+  <EVENTINFO>
+    <EVENTID>34522</EVENTID>
+    <EVENTNAME>Architectural Services</EVENTNAME>
+    <EVENTTYPE>Trade Mission</EVENTTYPE>
+    <INPUTTYPE>EVENT</INPUTTYPE>
+    <EVSTARTDT>01/08/2013</EVSTARTDT>
+    <EVENDDT>01/10/2013</EVENDDT>
+    <COST>3250.00</COST>
+    <REGISTRATIONLINK>https://emenuapps.ita.doc.gov/ePublic/TM/4R19</REGISTRATIONLINK>
+    <REGISTRATIONTITLE>Apply for this event</REGISTRATIONTITLE>
+    <STOP>
+      <STARTDT>
+        <MONTH>1</MONTH>
+        <DAY>7</DAY>
+        <YEAR>2013</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>1</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2013</YEAR>
+      </ENDDT>
+      <LOCATION>Rio De Janeiro</LOCATION>
+      <CITY>Rio De Janeiro</CITY>
+      <STATE></STATE>
+      <COUNTRY>Invalid</COUNTRY>
+    </STOP>
+    <STOP>
+      <STARTDT>
+        <MONTH>10</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2013</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>10</MONTH>
+        <DAY>10</DAY>
+        <YEAR>2013</YEAR>
+      </ENDDT>
+      <LOCATION>Recife</LOCATION>
+      <CITY>Recife</CITY>
+      <STATE></STATE>
+      <COUNTRY>Brazil</COUNTRY>
+    </STOP>
+    <CONTACT>
+      <PERSONID>4460</PERSONID>
+      <FIRSTNAME>Arica</FIRSTNAME>
+      <LASTNAME>Young</LASTNAME>
+      <POST>TPP</POST>
+      <TITLE>International Trade Specialist</TITLE>
+      <PHONE>202.482.6219</PHONE>
+      <EMAIL>Arica.Young@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>11795</PERSONID>
+      <FIRSTNAME>Carolina</FIRSTNAME>
+      <LASTNAME>Epifanio</LASTNAME>
+      <POST>Rio De Janeiro</POST>
+      <TITLE>Commercial Assistant</TITLE>
+      <PHONE>21 3823-2030 / 9769-0467 (cell)</PHONE>
+      <EMAIL>Carolina.Epifanio@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>8672</PERSONID>
+      <FIRSTNAME>Eric</FIRSTNAME>
+      <LASTNAME>Olson</LASTNAME>
+      <POST>Recife</POST>
+      <TITLE>Principal Commercial Officer</TITLE>
+      <PHONE>55-81-3416-3075</PHONE>
+      <EMAIL>Eric.Olson@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>4616</PERSONID>
+      <FIRSTNAME>Eugene</FIRSTNAME>
+      <LASTNAME>Alford</LASTNAME>
+      <POST>OSI</POST>
+      <TITLE>International Trade Specialist</TITLE>
+      <PHONE>202-482-5071</PHONE>
+      <EMAIL>Eugene.Alford@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>1476</PERSONID>
+      <FIRSTNAME>Joel</FIRSTNAME>
+      <LASTNAME>Reynoso</LASTNAME>
+      <POST>Rio De Janeiro</POST>
+      <TITLE>Commercial Officer</TITLE>
+      <PHONE>55-21-3823-2420</PHONE>
+      <EMAIL>Joel.Reynoso@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>3219</PERSONID>
+      <FIRSTNAME>Patrick</FIRSTNAME>
+      <LASTNAME>Levy</LASTNAME>
+      <POST>Rio De Janeiro</POST>
+      <TITLE>Commercial Specialist</TITLE>
+      <PHONE>55/21/3823-2413</PHONE>
+      <EMAIL>Patrick.Levy@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>2352</PERSONID>
+      <FIRSTNAME>Sergio</FIRSTNAME>
+      <LASTNAME>Teixeira</LASTNAME>
+      <POST>Rio De Janeiro</POST>
+      <TITLE>Trade Event Manager/Coordinator</TITLE>
+      <PHONE>55 21 3823-2419</PHONE>
+      <EMAIL>Sergio.Teixeira@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>4947</PERSONID>
+      <FIRSTNAME>Derek</FIRSTNAME>
+      <LASTNAME>Washam</LASTNAME>
+      <POST>American Institute of Architecture</POST>
+      <TITLE></TITLE>
+      <PHONE>202-626-7398</PHONE>
+      <EMAIL>DerekWasham@aia.org</EMAIL>
+      <TYPE>Third Party</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>4946</PERSONID>
+      <FIRSTNAME>Jessica</FIRSTNAME>
+      <LASTNAME>Salmoiraghi, Esq</LASTNAME>
+      <POST>The American Institute of Architects</POST>
+      <TITLE></TITLE>
+      <PHONE>202-626-7398</PHONE>
+      <EMAIL>jessicasalmoiraghi@aia.org</EMAIL>
+      <TYPE>Third Party</TYPE>
+    </CONTACT>
+    <DETAILDESC>The mission to Brazil is designed for U.S. architectural, project management, and design
+      services companies, that provide state-of-the-art and world class designs.
+    </DETAILDESC>
+    <INDUSTRY>Architectural/Constr./Engineering SVC</INDUSTRY>
+    <WEBSITES></WEBSITES>
+  </EVENTINFO>
+  <EVENTINFO>
+    <EVENTID>17816</EVENTID>
+    <EVENTNAME>CS Booth at Israel Medical Device Design &amp; Manufacturing Industry (MDDMI)</EVENTNAME>
+    <EVENTTYPE>Post Initiated Event-Under 5k</EVENTTYPE>
+    <INPUTTYPE>CALEVENT</INPUTTYPE>
+    <EVSTARTDT>10/08/2020</EVSTARTDT>
+    <EVENDDT>10/08/2020</EVENDDT>
+    <COST>0.00</COST>
+    <STOP>
+      <STARTDT>
+        <MONTH>10</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2020</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>10</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2020</YEAR>
+      </ENDDT>
+      <LOCATION>International Convention Center, Haifa, Israel</LOCATION>
+      <CITY>Tel Aviv</CITY>
+      <STATE></STATE>
+      <COUNTRY>Israel</COUNTRY>
+    </STOP>
+    <CONTACT>
+      <PERSONID>2660</PERSONID>
+      <FIRSTNAME>Yael</FIRSTNAME>
+      <LASTNAME>Torres</LASTNAME>
+      <POST>Tel Aviv</POST>
+      <TITLE>Commercial Specialist</TITLE>
+      <PHONE>972-3-519-8522</PHONE>
+      <EMAIL>Yael.Torres@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <DETAILDESC>We are delighted to invite U.S. suppliers and contractors to exhibit at MDDMI 2013
+    </DETAILDESC>
+    <INDUSTRY>Dental Eq.</INDUSTRY>
+    <INDUSTRY>General Industrial Eq./Supplies</INDUSTRY>
+    <INDUSTRY>Medical Eq.</INDUSTRY>
+    <INDUSTRY>Plastics Materials/Resins</INDUSTRY>
+    <INDUSTRY>Robotics</INDUSTRY>
+    <WEBSITES></WEBSITES>
+  </EVENTINFO>
+  <EVENTINFO>
+    <EVENTID>33831</EVENTID>
+    <EVENTNAME>AES Compliance Program</EVENTNAME>
+    <EVENTTYPE>Seminar-Webinar</EVENTTYPE>
+    <INPUTTYPE>EVENT</INPUTTYPE>
+    <EVSTARTDT>10/08/2020</EVSTARTDT>
+    <EVENDDT>10/08/2020</EVENDDT>
+    <COST>195</COST>
+    <REGISTRATIONLINK>https://emenuapps.ita.doc.gov/ePublic/event/editWebReg.do?SmartCode=4Q03
+    </REGISTRATIONLINK>
+    <REGISTRATIONTITLE>Register for this event</REGISTRATIONTITLE>
+    <STOP>
+      <STARTDT>
+        <MONTH>10</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2013</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>10</MONTH>
+        <DAY>8</DAY>
+        <YEAR>2013</YEAR>
+      </ENDDT>
+      <LOCATION>WCTC - Richard T Anderson Building</LOCATION>
+      <CITY>Pewaukee</CITY>
+      <STATE>WI</STATE>
+      <COUNTRY>United States</COUNTRY>
+    </STOP>
+    <CONTACT>
+      <PERSONID>5532</PERSONID>
+      <FIRSTNAME>Koreen</FIRSTNAME>
+      <LASTNAME>Grube</LASTNAME>
+      <POST>Milwaukee</POST>
+      <TITLE>International Trade Specialist</TITLE>
+      <PHONE>414-297-1853</PHONE>
+      <EMAIL>Koreen.Grube@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <DETAILDESC>How well do you know the Foreign Trade Regulations (FTR) and the Automated Export System
+      (AES)?
+    </DETAILDESC>
+    <WEBSITES></WEBSITES>
+  </EVENTINFO>
+  <EVENTINFO>
+    <EVENTID>34436</EVENTID>
+    <EVENTNAME>International Workboat Show (IWS 2013)</EVENTNAME>
+    <EVENTTYPE>Trade Promotion Event</EVENTTYPE>
+    <INPUTTYPE>EVENT</INPUTTYPE>
+    <EVSTARTDT>10/09/2020</EVSTARTDT>
+    <EVENDDT>10/11/2020</EVENDDT>
+    <COST>200.99</COST>
+    <REGISTRATIONLINK></REGISTRATIONLINK>
+    <STOP>
+      <STARTDT>
+        <MONTH>10</MONTH>
+        <DAY>9</DAY>
+        <YEAR>2020</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>10</MONTH>
+        <DAY>11</DAY>
+        <YEAR>2020</YEAR>
+      </ENDDT>
+      <LOCATION>Morial Convention Center, New Orleans, Louisiana</LOCATION>
+      <CITY>New Orleans, Louisiana</CITY>
+      <STATE>LA</STATE>
+      <COUNTRY>United States</COUNTRY>
+    </STOP>
+    <CONTACT>
+      <PERSONID>3467</PERSONID>
+      <FIRSTNAME>Benedicta Ngozi</FIRSTNAME>
+      <LASTNAME>Nkwoh</LASTNAME>
+      <POST>Lagos</POST>
+      <TITLE>Commercial Specialist</TITLE>
+      <PHONE>234-1- 460 3400,ext 3520,4704694</PHONE>
+      <EMAIL>Benedicta.Nkwoh@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>8521</PERSONID>
+      <FIRSTNAME>Delilah</FIRSTNAME>
+      <LASTNAME>DeSouza</LASTNAME>
+      <POST>New Orleans</POST>
+      <TITLE>International Trade Specialist</TITLE>
+      <PHONE>Direct 504-915-3301 Main #504-589-6546</PHONE>
+      <EMAIL>Delilah.DeSouza@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>15554</PERSONID>
+      <FIRSTNAME>Janelle</FIRSTNAME>
+      <LASTNAME>Weyek</LASTNAME>
+      <POST>Lagos</POST>
+      <TITLE>Commercial Officer</TITLE>
+      <PHONE>+234-1-460-3618</PHONE>
+      <EMAIL>Janelle.Weyek@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>2185</PERSONID>
+      <FIRSTNAME>Rebecca</FIRSTNAME>
+      <LASTNAME>Armand</LASTNAME>
+      <POST></POST>
+      <TITLE>Senior Commercial Officer</TITLE>
+      <PHONE>(234-1) 460-3400 ext 3498</PHONE>
+      <EMAIL>Rebecca.Armand@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <DETAILDESC>The International WorkBoat Show is the largest commercial marine tradeshow in North America
+      serving people and businesses working on the coastal, inland and offshore waters.
+    </DETAILDESC>
+    <INDUSTRY>Commercial Fishing Eq.</INDUSTRY>
+    <INDUSTRY>Commercial Vessel/Eq. (Non-Fisheries)</INDUSTRY>
+    <INDUSTRY>Electronic Components</INDUSTRY>
+    <INDUSTRY>Operations/Maintenance Services</INDUSTRY>
+    <INDUSTRY>Pleasure Boats/Accessories</INDUSTRY>
+    <INDUSTRY>Port/Shipbuilding Eq.</INDUSTRY>
+    <WEBSITES>
+      <WEBSITE TITLE='International Workboat Show (IWS 2013)' TYPE='Event' URL='www.workboatshow.com'/>
+    </WEBSITES>
+  </EVENTINFO>
+  <EVENTINFO>
+    <EVENTID>34568</EVENTID>
+    <EVENTNAME>Hospitalar 2014</EVENTNAME>
+    <EVENTTYPE>Trade Fair</EVENTTYPE>
+    <INPUTTYPE>EVENT</INPUTTYPE>
+    <EVSTARTDT>12/20/2020</EVSTARTDT>
+    <EVENDDT>12/23/2020</EVENDDT>
+    <COST>0.00</COST>
+    <REGISTRATIONLINK></REGISTRATIONLINK>
+    <STOP>
+      <STARTDT>
+        <MONTH>12</MONTH>
+        <DAY>20</DAY>
+        <YEAR>2020</YEAR>
+      </STARTDT>
+      <ENDDT>
+        <MONTH>12</MONTH>
+        <DAY>23</DAY>
+        <YEAR>2020</YEAR>
+      </ENDDT>
+      <LOCATION>Expo Center Norte</LOCATION>
+      <CITY>São Paulo</CITY>
+      <STATE></STATE>
+      <COUNTRY>Brazil</COUNTRY>
+    </STOP>
+    <CONTACT>
+      <PERSONID>3114</PERSONID>
+      <FIRSTNAME>Jefferson</FIRSTNAME>
+      <LASTNAME>Oliveira</LASTNAME>
+      <POST>São Paulo</POST>
+      <TITLE>Commercial Specialist</TITLE>
+      <PHONE>55/11/3250-5136</PHONE>
+      <EMAIL>Jefferson.Oliveira@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>3026</PERSONID>
+      <FIRSTNAME>Lisa</FIRSTNAME>
+      <LASTNAME>Huot</LASTNAME>
+      <POST>Trade Event Programs</POST>
+      <TITLE>Senior International Trade Specialist</TITLE>
+      <PHONE>202-482-2796</PHONE>
+      <EMAIL>Lisa.Huot@trade.gov</EMAIL>
+      <TYPE>CS</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>4964</PERSONID>
+      <FIRSTNAME>Katherine</FIRSTNAME>
+      <LASTNAME>Shibata</LASTNAME>
+      <POST>Hospitalar Fairs &amp; Congresses</POST>
+      <TITLE></TITLE>
+      <PHONE>(5511) 3897.6199</PHONE>
+      <EMAIL>katherine@hospitalar.com.br</EMAIL>
+      <TYPE>Third Party</TYPE>
+    </CONTACT>
+    <CONTACT>
+      <PERSONID>4965</PERSONID>
+      <FIRSTNAME>Ryan</FIRSTNAME>
+      <LASTNAME>Klemm</LASTNAME>
+      <POST>Messe Dusseldorf North America</POST>
+      <TITLE></TITLE>
+      <PHONE>312-781-5180</PHONE>
+      <EMAIL>ryan.klemm@mdna.com</EMAIL>
+      <TYPE>Third Party</TYPE>
+    </CONTACT>
+    <DETAILDESC>HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and is an International Trade Fair for
+      Products, Equipment, Services and Technology for Hospitals, Health Clinics and Laboratories.
+
+      HOSPITALAR is the most complete and specialized healthcare fair in Brazil and Latin America. The fair is
+      to be considered as the platform for new technologies, thus representing a great opportunity to know
+      products and services and updating for hospitals, health clinics and laboratories.
+
+      HOSPITALAR is a multi-sector trade fair, featuring 1,250 Brazilian and international exhibitors,
+      launching products or services and meeting potential and already existing clients. Exclusively dedicated
+      to healthcare professionals, HOSPITALAR 2020 received 92,000 visitors among doctors, nurses, PTs,
+      administrators, distributors and other professionals interested in the health care area, coming from all
+      over Brazil and Latin America.
+
+      Messe D&#252;sseldorf North America, the subsidiary office of Messe D&#252;sseldorf in Germany -
+      organizer of the renowned MEDICA trade fair, is the exclusive representative office of HOSPITALAR in the
+      United States and Canada, and also organizes the North American Pavilion at the show every year. This
+      pavilion provides an excellent platform to introduce your company&#39;s products and services to the
+      Brazilian Market. Please visit http://www.mdna.com for complete show details and an exhibitor&#39;s kit.
+    </DETAILDESC>
+    <INDUSTRY>Laboratory Scientific Instruments</INDUSTRY>
+    <INDUSTRY>Medical Eq.</INDUSTRY>
+    <WEBSITES>
+      <WEBSITE TITLE='Hospitalar 2014' TYPE='Event' URL='http://www.hospitalar.com/ingles/index.html'/>
+    </WEBSITES>
+  </EVENTINFO>
+</EVENTLIST>

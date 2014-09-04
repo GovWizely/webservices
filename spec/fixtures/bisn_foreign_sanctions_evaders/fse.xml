@@ -1,0 +1,167 @@
+<?xml version="1.0" standalone="yes"?>
+<sdnList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/sdnList.xsd">
+  <publshInformation>
+    <Publish_Date>02/06/2014</Publish_Date>
+    <Record_Count>13</Record_Count>
+  </publshInformation>
+  <sdnEntry>
+    <uid>15987</uid>
+    <lastName>FERLAND COMPANY LIMITED</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>(Linked To: NATIONAL IRANIAN TANKER COMPANY)</remarks>
+    <programList>
+      <program>FSE-IR</program>
+      <program>ISA</program>
+      <program>EO13645</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>114827</uid>
+        <idType>Executive Order 13645 Determination -</idType>
+        <idNumber>Material Support</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>23962</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>FERLAND CO. LTD</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>24030</uid>
+        <address1>29 A Anna Komnini St.</address1>
+        <address2>PO Box 2303</address2>
+        <city>Nicosia</city>
+        <country>Cyprus</country>
+      </address>
+      <address>
+        <uid>24049</uid>
+        <address1>5/7 Sabaneyev Most.</address1>
+        <city>Odessa</city>
+        <country>Ukraine</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>16422</uid>
+    <firstName>Vitaly</firstName>
+    <lastName>SOKOLENKO</lastName>
+    <title>General Manager of Ferland Company Limited</title>
+    <sdnType>Individual</sdnType>
+    <remarks>(Linked To: FERLAND COMPANY LIMITED)</remarks>
+    <programList>
+      <program>EO13645</program>
+      <program>FSE-IR</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9026</uid>
+        <idType>Passport</idType>
+        <idNumber>EH354160</idNumber>
+      </id>
+      <id>
+        <uid>9027</uid>
+        <idType>Passport</idType>
+        <idNumber>P0329907</idNumber>
+      </id>
+      <id>
+        <uid>114826</uid>
+        <idType>Executive Order 13645 Determination -</idType>
+        <idNumber>Material Support</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>24750</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SOKOLENKO</lastName>
+        <firstName>Vitalii</firstName>
+      </aka>
+      <aka>
+        <uid>24751</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SOKOLENKO</lastName>
+        <firstName>Vitaliy</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>14774</uid>
+        <dateOfBirth>16 Jun 1968</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>16531</uid>
+    <firstName>Houshang</firstName>
+    <lastName>HOSSEINPOUR</lastName>
+    <sdnType>Individual</sdnType>
+    <programList>
+      <program>FSE-IR</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9133</uid>
+        <idType>Passport</idType>
+        <idNumber>R17550559</idNumber>
+        <idCountry>Iran</idCountry>
+        <expirationDate>11 Jul 2015</expirationDate>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>25075</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HOSSEINPOUR</lastName>
+        <firstName>Houshang Shahali</firstName>
+      </aka>
+      <aka>
+        <uid>25077</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HOSEIN-PUR</lastName>
+        <firstName>Houshang</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>15021</uid>
+        <dateOfBirth>21 Mar 1967</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+    <placeOfBirthList>
+      <placeOfBirthItem>
+        <uid>15022</uid>
+        <placeOfBirth>Tehran, Iran</placeOfBirth>
+        <mainEntry>true</mainEntry>
+      </placeOfBirthItem>
+    </placeOfBirthList>
+        <nationalityList>
+      <nationality>
+        <uid>8962</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </nationality>
+    </nationalityList>
+    <citizenshipList>
+      <citizenship>
+        <uid>8960</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </citizenship>
+      <citizenship>
+        <uid>8961</uid>
+        <country>Djibouti</country>
+        <mainEntry>false</mainEntry>
+      </citizenship>
+    </citizenshipList>
+  </sdnEntry>
+</sdnList>

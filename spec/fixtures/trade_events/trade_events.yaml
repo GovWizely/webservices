@@ -1,0 +1,236 @@
+---
+- :city: Rio De Janeiro
+  :cost: '3250.00'
+  :country:
+  :description: The mission to Brazil is designed for U.S. architectural, project
+    management, and design services companies, that provide state-of-the-art and world
+    class designs.
+  :end_date: 2013-01-10
+  :event_name: Architectural Services
+  :event_type: Trade Mission
+  :id: '34522'
+  :registration_link: https://emenuapps.ita.doc.gov/ePublic/TM/4R19
+  :registration_title: Apply for this event
+  :start_date: 2013-01-08
+  :state:
+  :url:
+  :venue: Rio De Janeiro
+  :contacts:
+  - :email: Arica.Young@trade.gov
+    :first_name: Arica
+    :last_name: Young
+    :person_title: International Trade Specialist
+    :phone: 202.482.6219
+    :post: TPP
+  - :email: Carolina.Epifanio@trade.gov
+    :first_name: Carolina
+    :last_name: Epifanio
+    :person_title: Commercial Assistant
+    :phone: 21 3823-2030 / 9769-0467 (cell)
+    :post: Rio De Janeiro
+  - :email: Eric.Olson@trade.gov
+    :first_name: Eric
+    :last_name: Olson
+    :person_title: Principal Commercial Officer
+    :phone: 55-81-3416-3075
+    :post: Recife
+  - :email: Eugene.Alford@trade.gov
+    :first_name: Eugene
+    :last_name: Alford
+    :person_title: International Trade Specialist
+    :phone: 202-482-5071
+    :post: OSI
+  - :email: Joel.Reynoso@trade.gov
+    :first_name: Joel
+    :last_name: Reynoso
+    :person_title: Commercial Officer
+    :phone: 55-21-3823-2420
+    :post: Rio De Janeiro
+  - :email: Patrick.Levy@trade.gov
+    :first_name: Patrick
+    :last_name: Levy
+    :person_title: Commercial Specialist
+    :phone: 55/21/3823-2413
+    :post: Rio De Janeiro
+  - :email: Sergio.Teixeira@trade.gov
+    :first_name: Sergio
+    :last_name: Teixeira
+    :person_title: Trade Event Manager/Coordinator
+    :phone: 55 21 3823-2419
+    :post: Rio De Janeiro
+  - :email: DerekWasham@aia.org
+    :first_name: Derek
+    :last_name: Washam
+    :person_title:
+    :phone: 202-626-7398
+    :post: American Institute of Architecture
+  - :email: jessicasalmoiraghi@aia.org
+    :first_name: Jessica
+    :last_name: Salmoiraghi, Esq
+    :person_title:
+    :phone: 202-626-7398
+    :post: The American Institute of Architects
+  :industries:
+  - Architectural/Constr./Engineering SVC
+  :ttl: 1s
+- :city: Tel Aviv
+  :cost: 0.0
+  :country: IL
+  :description: We are delighted to invite U.S. suppliers and contractors to exhibit
+    at MDDMI 2013
+  :end_date: 2020-10-08
+  :event_name: CS Booth at Israel Medical Device Design & Manufacturing Industry (MDDMI)
+  :event_type: Post Initiated Event-Under 5k
+  :id: '17816'
+  :registration_link:
+  :registration_title:
+  :start_date: 2020-10-08
+  :state:
+  :url:
+  :venue: International Convention Center, Haifa, Israel
+  :contacts:
+  - :email: Yael.Torres@trade.gov
+    :first_name: Yael
+    :last_name: Torres
+    :person_title: Commercial Specialist
+    :phone: 972-3-519-8522
+    :post: Tel Aviv
+  :industries:
+  - Dental Eq.
+  - General Industrial Eq./Supplies
+  - Medical Eq.
+  - Plastics Materials/Resins
+  - Robotics
+  :ttl: 2558d
+- :city: Pewaukee
+  :cost: 195.0
+  :country: US
+  :description: How well do you know the Foreign Trade Regulations (FTR) and the Automated
+    Export System (AES)?
+  :end_date: 2020-10-08
+  :event_name: AES Compliance Program
+  :event_type: Seminar-Webinar
+  :id: '33831'
+  :registration_link: https://emenuapps.ita.doc.gov/ePublic/event/editWebReg.do?SmartCode=4Q03
+  :registration_title: Register for this event
+  :start_date: 2020-10-08
+  :state: WI
+  :url:
+  :venue: WCTC - Richard T Anderson Building
+  :contacts:
+  - :email: Koreen.Grube@trade.gov
+    :first_name: Koreen
+    :last_name: Grube
+    :person_title: International Trade Specialist
+    :phone: 414-297-1853
+    :post: Milwaukee
+  :industries: []
+  :ttl: 2558d
+- :city: New Orleans, Louisiana
+  :cost: 200.99
+  :country: US
+  :description: The International WorkBoat Show is the largest commercial marine tradeshow
+    in North America serving people and businesses working on the coastal, inland
+    and offshore waters.
+  :end_date: 2020-10-11
+  :event_name: International Workboat Show (IWS 2013)
+  :event_type: Trade Promotion Event
+  :id: '34436'
+  :registration_link:
+  :registration_title:
+  :start_date: 2020-10-09
+  :state: LA
+  :url: www.workboatshow.com
+  :venue: Morial Convention Center, New Orleans, Louisiana
+  :contacts:
+  - :email: Benedicta.Nkwoh@trade.gov
+    :first_name: Benedicta Ngozi
+    :last_name: Nkwoh
+    :person_title: Commercial Specialist
+    :phone: 234-1- 460 3400,ext 3520,4704694
+    :post: Lagos
+  - :email: Delilah.DeSouza@trade.gov
+    :first_name: Delilah
+    :last_name: DeSouza
+    :person_title: International Trade Specialist
+    :phone: 'Direct 504-915-3301 Main #504-589-6546'
+    :post: New Orleans
+  - :email: Janelle.Weyek@trade.gov
+    :first_name: Janelle
+    :last_name: Weyek
+    :person_title: Commercial Officer
+    :phone: +234-1-460-3618
+    :post: Lagos
+  - :email: Rebecca.Armand@trade.gov
+    :first_name: Rebecca
+    :last_name: Armand
+    :person_title: Senior Commercial Officer
+    :phone: (234-1) 460-3400 ext 3498
+    :post:
+  :industries:
+  - Commercial Fishing Eq.
+  - Commercial Vessel/Eq. (Non-Fisheries)
+  - Electronic Components
+  - Operations/Maintenance Services
+  - Pleasure Boats/Accessories
+  - Port/Shipbuilding Eq.
+  :ttl: 2561d
+- :city: São Paulo
+  :cost: 0.0
+  :country: BR
+  :description: HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and
+    is an International Trade Fair for Products, Equipment, Services and Technology
+    for Hospitals, Health Clinics and Laboratories. HOSPITALAR is the most complete
+    and specialized healthcare fair in Brazil and Latin America. The fair is to be considered
+    as the platform for new technologies, thus representing a great opportunity to know
+    products and services and updating for hospitals, health clinics and laboratories.
+    HOSPITALAR is a multi-sector trade fair, featuring 1,250 Brazilian and international
+    exhibitors, launching products or services and meeting potential and already existing
+    clients. Exclusively dedicated to healthcare professionals, HOSPITALAR 2020 received
+    92,000 visitors among doctors, nurses, PTs, administrators, distributors and other
+    professionals interested in the health care area, coming from all over Brazil and
+    Latin America. Messe Düsseldorf North America, the subsidiary office of Messe Düsseldorf
+    in Germany - organizer of the renowned MEDICA trade fair, is the exclusive representative
+    office of HOSPITALAR in the United States and Canada, and also organizes the North
+    American Pavilion at the show every year. This pavilion provides an excellent platform
+    to introduce your company's products and services to the Brazilian Market. Please
+    visit http://www.mdna.com for complete show details and an exhibitor's kit.
+  :end_date: 2020-12-23
+  :event_name: Hospitalar 2014
+  :event_type: Trade Fair
+  :id: '34568'
+  :registration_link:
+  :registration_title:
+  :start_date: 2020-12-20
+  :state:
+  :url: http://www.hospitalar.com/ingles/index.html
+  :venue: Expo Center Norte
+  :contacts:
+  - :email: Jefferson.Oliveira@trade.gov
+    :first_name: Jefferson
+    :last_name: Oliveira
+    :person_title: Commercial Specialist
+    :phone: 55/11/3250-5136
+    :post: São Paulo
+  - :email: Lisa.Huot@trade.gov
+    :first_name: Lisa
+    :last_name: Huot
+    :person_title: Senior International Trade Specialist
+    :phone: 202-482-2796
+    :post: Trade Event Programs
+  - :email: katherine@hospitalar.com.br
+    :first_name: Katherine
+    :last_name: Shibata
+    :person_title:
+    :phone: (5511) 3897.6199
+    :post: Hospitalar Fairs & Congresses
+  - :email: ryan.klemm@mdna.com
+    :first_name: Ryan
+    :last_name: Klemm
+    :person_title:
+    :phone: 312-781-5180
+    :post: Messe Dusseldorf North America
+  :industries:
+  - Laboratory Scientific Instruments
+  - Medical Eq.
+  :ttl: 2634d

@@ -1,0 +1,24 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "match": {
+                        "industry": "fishing"
+                    }
+                },
+                {
+                    "multi_match": {
+                        "fields": [
+                            "description",
+                            "title",
+                            "procurement_organization"
+                        ],
+                        "operator": "and",
+                        "query": "fish"
+                    }
+                }
+            ]
+        }
+    }
+}

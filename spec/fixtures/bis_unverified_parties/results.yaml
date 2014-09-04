@@ -1,0 +1,72 @@
+---
+- :name: China National Plant Import/Export Co.
+  :id: 46a349ebccee946c79b4ae26ca5c76a35ef6f100
+  :source: UVL
+  :addresses:
+  - :address: Room 2135, Jingxin Building A, No Dong San Huan North Road, Beijing
+    :country: CN
+  :alt_names: []
+- :name: Brilliance Technology Ltd
+  :id: cc91dc115ff25e9f2e3cab1b9d8adf75f5956982
+  :source: UVL
+  :addresses:
+  - :address: Flat A, 11/F, Adolfo Mansion, 114-116 Austin Road, Tsim Sha Tsui, Kowloon
+    :country: HK
+  - :address: Rm 1203, 12/F, Hip Kwan Commercial Bldg, 38 Pitt Street, Yau Ma Tei
+    :country: HK
+  :alt_names: []
+- :name: Dynasense Photonics Co., Limited
+  :id: 91b38427499bf36988a61096f665301b890c9ec2
+  :source: UVL
+  :addresses:
+  - :address: Unit 2209, 22/F, Wu Chung House, 213 Queen's Road East, Wanchai
+    :country: HK
+  :alt_names: []
+- :name: Hi-Shine Technology (HK) Limited
+  :id: 6e18b2585a002248ecb071d5fa8b26cdfd2f4144
+  :source: UVL
+  :addresses:
+  - :address: Flat D12, 11/F, King Yip Factory Bldg, 59 King Yip Street, Kwun Tong, Kowloon
+    :country: HK
+  - :address: Room 603, 6/F, Hang Pont Commercial Building, 31 Tonking Street, Cheung Sha Wan, Kowloon
+    :country: HK
+  :alt_names: []
+- :name: Hong Kong Haimao Info-Tec Development Co Ltd
+  :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
+  :source: UVL
+  :addresses:
+  - :address: Rm 1013B, Well Fung Ind. Center, Ta Chuen Ping Street, Kwai Chung
+    :country: HK
+  :alt_names: []
+- :name: Lianqi (HK) Electronics Co Ltd
+  :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
+  :source: UVL
+  :addresses:
+  - :address: Unit N, 3/F, Hopewell House, 175 Hip Wo Street, KwunTong, Kowloon
+    :country: HK
+  :alt_names:
+  - Lion Chip Electronics Ltd
+- :name: Security 2 Business Academy
+  :id: 5b5a164dd0e4ca3acb6397dbeb2d5713c4f13f90
+  :source: UVL
+  :addresses:
+  - :address: Deguninskaya Street 10, Moscow
+    :country: RU
+  - :address: Novoslobodskaya Str. 14/19, Moscow
+    :country: RU
+  :alt_names:
+  - S2BA
+  - Academy of Business Security
+- :name: T2BA
+  :id: c46ba5ffd6da15f8e524b58f59123894bb63e2f8
+  :source: UVL
+  :addresses:
+  - :address: Deguninskaya Street 30, Moscow, Russia
+    :country: RU
+  - :address: Deguninskaya Street 20, Moscow, Russia
+    :country: RU
+  - :address: Novoslobodskaya Str. 24/29, Moscow, Russia
+    :country: RU
+  :alt_names:
+  - Training 2 Business Academy
+  - Academy of Business Training

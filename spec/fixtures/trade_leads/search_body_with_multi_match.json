@@ -1,0 +1,9 @@
+{
+  "query": {
+    "multi_match": {
+      "fields": ["description", "title"],
+      "operator": "and",
+      "query": "water"
+    }
+  }
+}

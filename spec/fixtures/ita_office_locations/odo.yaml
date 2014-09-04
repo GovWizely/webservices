@@ -1,0 +1,1869 @@
+---
+- :post: CS Teams - HQ
+  :office_name: Global Teams
+  :country: US
+  :state: 
+  :email: Brad.Anderson@trade.gov
+  :fax: 503-326-6351
+  :mail_instructions: 
+  :phone: 503-326-3003
+  :post_type: D
+  :address:
+  - CS Global Teams
+  - U.S. Commercial Service
+  - International Trade Administration
+  - One World Trade Center
+  - 121 SW Salmon St., Suite 242
+  - Portland, OR 97204
+  :city: Portland
+  :id: US:CSTeamsHQ
+- :post: Anchorage
+  :office_name: Alaska U.S. Export Assistance Center
+  :country: US
+  :state: AK
+  :email: greg@wtcak.org
+  :fax: 907-278-2982
+  :mail_instructions: 
+  :phone: 907-271-6237
+  :post_type: D
+  :address:
+  - 1815 Bragaw Street, Suite 102
+  - Anchorage, Alaska 99508
+  - http://www.buyusa.gov/alaska/
+  :city: 
+  :id: US:Anchorage
+- :post: Birmingham
+  :office_name: Birmingham U.S. Export Assistance Center
+  :country: US
+  :state: AL
+  :email: Office.Birmingham@trade.gov
+  :fax: 205-731-0076
+  :mail_instructions: 
+  :phone: 205-731-1331
+  :post_type: D
+  :address:
+  - Birmingham U.S. Export Assistance Center
+  - 950 22nd Street North, Suite 773
+  - Birmingham, AL 35203-5309
+  - http://www.export.gov/alabama/
+  :city: Birmingham
+  :id: US:Birmingham
+- :post: Little Rock
+  :office_name: Little Rock U.S. Export Assistance Center
+  :country: US
+  :state: AR
+  :email: Office.LittleRock@trade.gov
+  :fax: 501-324-7380
+  :mail_instructions: 
+  :phone: 501-324-5794
+  :post_type: D
+  :address:
+  - Little Rock U.S. Export Assistance Center
+  - 425 West Capitol Ave., Suite 425
+  - Little Rock, AR 72201
+  - http://www.buyusa.gov/arkansas/
+  :city: Little Rock
+  :id: US:LittleRock
+- :post: Phoenix
+  :office_name: Phoenix U.S. Export Assistance Center
+  :country: US
+  :state: AZ
+  :email: Office.Phoenix@trade.gov
+  :fax: 602-745-7210
+  :mail_instructions: 
+  :phone: 602-640-2513
+  :post_type: D
+  :address:
+  - 'CS Arizona operates two different locations in Metro Phoenix:'
+  - Phoenix U.S. Export Assistance Center
+  - 2828 N Central Ave, Suite 800
+  - Phoenix, AZ 85004
+  - http://www.export.gov/arizona
+  - Scottsdale U.S. Export Assistance Center
+  - 1475 North Scottsdale Road, Suite 200
+  - Scottsdale, AZ 85257
+  - http://www.export.gov/arizona
+  :city: Phoenix
+  :id: US:Phoenix
+- :post: Tucson
+  :office_name: Tucson U.S. Export Assistance Center
+  :country: US
+  :state: AZ
+  :email: Office.Tucson@trade.gov
+  :fax: 520-243-1910
+  :mail_instructions: 
+  :phone: 520-670-5540
+  :post_type: D
+  :address:
+  - Tucson U.S. Export Assistance Center
+  - 33 North Stone Ave., Mail Stop DT-BAB-414
+  - Tucson, AZ 85701
+  - http://www.export.gov/arizona/
+  :city: Tucson
+  :id: US:Tucson
+- :post: Bakersfield
+  :office_name: Bakersfield U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: glen.roberts@trade.gov
+  :fax: 000-000-0000
+  :mail_instructions: Please mail packages and supplies to Glen Roberts in the Fresno
+    USEAC which covers Bakersfield
+  :phone: 661-637-0136
+  :post_type: D
+  :address:
+  - 2100 Chester Ave., 1st Floor Suite 110
+  - Bakersfield, California 93301
+  - http://export.gov/california/kern/index.asp
+  :city: 
+  :id: US:Bakersfield
+- :post: Cabazon
+  :office_name: Coachella Valley/Inland Empire USEAC
+  :country: US
+  :state: CA
+  :email: fred.latuperissa@trade.gov
+  :fax: 909-390-5315
+  :mail_instructions: 
+  :phone: 909-390-8283
+  :post_type: D
+  :address:
+  - 3110 East Guasti Rd, Suite 465
+  - Ontario, California 91761 http://www.export.gov/inlandempire
+  :city: 
+  :id: US:Cabazon
+- :post: Fresno
+  :office_name: Fresno U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: glen.roberts@trade.gov
+  :fax: 661 637-0156
+  :mail_instructions: 
+  :phone: 559 348-9859
+  :post_type: D
+  :address:
+  - Fresno U.S. Export Assistance Center
+  - 5245 N. Backer Avenue M/S PB5
+  - Fresno, CA 93740
+  - http://www.buyusa.gov/fresno/
+  :city: Fresno
+  :id: US:Fresno
+- :post: Inland Empire
+  :office_name: Inland Empire U.S. Export Assistance Center (Ontario, California)
+  :country: US
+  :state: CA
+  :email: office.inlandempire@trade.gov
+  :fax: 909-390-5315
+  :mail_instructions: 
+  :phone: 909-390-8283
+  :post_type: D
+  :address:
+  - 3110 East Guasti Rd, Suite 465
+  - Ontario, California 91761 http://www.export.gov/inlandempire
+  :city: 
+  :id: US:InlandEmpire
+- :post: Irvine
+  :office_name: Irvine (Newport Beach) U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: OfficeIrvine@trade.gov
+  :fax: 949-660-1338
+  :mail_instructions: 
+  :phone: 949-660-1688
+  :post_type: D
+  :address:
+  - 2302 Martin Court, Suite 315
+  - Irvine, CA 92612
+  - http://export.gov/irvine
+  :city: Irvine
+  :id: US:Irvine
+- :post: Los Angeles (Downtown)
+  :office_name: Los Angeles (Downtown) U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: rachid.sayouty@trade.gov
+  :fax: 213-894-8789
+  :mail_instructions: 
+  :phone: 213-894-8784
+  :post_type: D
+  :address:
+  - Los Angeles (Downtown) U.S. Export Assistance Center
+  - 444 South Flower street, 37th Floor
+  - Los Angeles, CA 90071
+  - http://export.gov/california/losangelesdowntown/index.asp
+  :city: Los Angeles
+  :id: US:LosAngelesDowntown
+- :post: Los Angeles (West)
+  :office_name: Los Angeles (West) U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Julieanne.Hennessy@trade.gov
+  :fax: 310-235-7220
+  :mail_instructions: 
+  :phone: 310-235-7104
+  :post_type: D
+  :address:
+  - Los Angeles (West) U.S. Export Assistance Center
+  - 11500 Olympic Blvd., Suite 601
+  - Los Angeles, CA 90064
+  - http://www.export.gov/california/losangeleswest/index.asp
+  :city: Los Angeles
+  :id: US:LosAngelesWest
+- :post: Monterey Bay
+  :office_name: Monterey Bay U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Chris.Damm@trade.gov
+  :fax: 408-535-2758
+  :mail_instructions: 
+  :phone: 408-535-2757 x 108
+  :post_type: D
+  :address:
+  - Monterey U.S. Export Assistance Center
+  - 411 Pacific St., Suite 316A
+  - Monterey, CA 93940
+  - http://www.buyusa.gov/monterey
+  :city: Monterey
+  :id: US:MontereyBay
+- :post: North Bay
+  :office_name: San Rafael (North Bay) U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Office.NorthBay@trade.gov
+  :fax: 415-485-6219
+  :mail_instructions: 
+  :phone: 415-485-6209
+  :post_type: D
+  :address:
+  - 50 Acacia Avenue
+  - 'at: Dominican University of California'
+  - San Rafael, CA 94901
+  - http://export.gov/california/northbay
+  :city: San Rafael
+  :id: US:NorthBay
+- :post: Oakland
+  :office_name: Oakland U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Rod.Hirsch@trade.gov
+  :fax: 510-273-7352
+  :mail_instructions: 
+  :phone: 510-273-7350
+  :post_type: D
+  :address:
+  - Oakland U.S. Export Assistance Center
+  - 1301 Clay St., Suite 630N
+  - Oakland, CA 94612
+  - http://www.buyusa.gov/oakland/
+  :city: Oakland
+  :id: US:Oakland
+- :post: Pacific North Network Dir
+  :office_name: Pacific North Network Director
+  :country: US
+  :state: CA
+  :email: Greg.Mignano@trade.gov
+  :fax: 503-326-6351
+  :mail_instructions: 
+  :phone: 408-242-9770
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - 121 SW Salmon Street, suite 242
+  - Portland, OR 97204
+  :city: Portland
+  :id: US:PacificNorthNetworkDir
+- :post: Pacific South Network Dir
+  :office_name: Pacific South Network Director
+  :country: US
+  :state: CA
+  :email: Richard.Swanson@trade.gov
+  :fax: 949-660-1338
+  :mail_instructions: 
+  :phone: 949-660-1688 x 153
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - 2302 Martin, Ste 315
+  - Irvine, CA 92612
+  :city: Irvine
+  :id: US:PacificSouthNetworkDir
+- :post: Sacramento
+  :office_name: Sacramento U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: George.Tastard@trade.gov
+  :fax: 916-566-7123
+  :mail_instructions: N/A
+  :phone: 916-566-7170
+  :post_type: D
+  :address:
+  - Sacramento U.S. Export Assistance Center
+  - 1410 Ethan Way, Ste. 131 N
+  - Sacramento, CA 95825
+  - http://www.export.gov/california/sacramento/
+  :city: Sacramento
+  :id: US:Sacramento
+- :post: San Diego
+  :office_name: San Diego U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Matt.Andersen@trade.gov
+  :fax: 858-467-7043
+  :mail_instructions: 
+  :phone: 858-467-7032
+  :post_type: D
+  :address:
+  - San Diego U.S. Export Assistance Center
+  - 9449 Balboa Avenue, Suite 111
+  - San Diego, CA 92123
+  - http://www.buyusa.gov/sandiego/
+  :city: San Diego
+  :id: US:SanDiego
+- :post: San Francisco
+  :office_name: San Francisco U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: office.sanfrancisco@trade.gov
+  :fax: 415-705-2299
+  :mail_instructions: 
+  :phone: 415-705-2300
+  :post_type: D
+  :address:
+  - San Francisco U.S. Export Assistance Center
+  - 50 Fremont Street, Suite 2450
+  - San Francisco, CA 94105
+  - http://www.buyusa.gov/sanfrancisco/
+  :city: San Francisco
+  :id: US:SanFrancisco
+- :post: San Jose CA
+  :office_name: San Jose (Silicon Valley) U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: Joanne.Vliet@trade.gov
+  :fax: 408-535-2758
+  :mail_instructions: 
+  :phone: 408-535-2757
+  :post_type: D
+  :address:
+  - San Jose (Silicon Valley) U.S. Export Assistance Center
+  - 55 South Market St., Suite 1040
+  - San Jose, CA 95113
+  - http://www.buyusa.gov/siliconvalley
+  :city: San Jose
+  :id: US:SanJoseCA
+- :post: Ventura County
+  :office_name: Ventura County U.S. Export Assistance Center
+  :country: US
+  :state: CA
+  :email: gerald.vaughn@trade.gov
+  :fax: 805-488-7801
+  :mail_instructions: 
+  :phone: 805-488-4844
+  :post_type: D
+  :address:
+  - Ventura County U.S. Export Assistance Center
+  - 333 Ponoma St.
+  - Port Hueneme, CA 93041
+  - http://www.export.gov/california/ventura/index.asp
+  :city: Port Hueneme
+  :id: US:VenturaCounty
+- :post: Denver
+  :office_name: Denver U.S. Export Assistance Center
+  :country: US
+  :state: CO
+  :email: Paul.Bergman@trade.gov
+  :fax: 303-844-5651
+  :mail_instructions: 
+  :phone: 303-844-6623
+  :post_type: D
+  :address:
+  - Denver U.S. Export Assistance Center
+  - 1999 Broadway, Suite 2205
+  - Denver, CO 80202
+  - http://www.buyusa.gov/colorado/
+  :city: Denver
+  :id: US:Denver
+- :post: Southwest Network Dir
+  :office_name: Southwest Network Director
+  :country: US
+  :state: CO
+  :email: James.Kennedy@trade.gov
+  :fax: 303-844-5651
+  :mail_instructions: 
+  :phone: 303-844-6623 x 211
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - World Trade Center, 1625 Broadway, Suite 680
+  - Denver, CO 80202
+  :city: Denver
+  :id: US:SouthwestNetworkDir
+- :post: Middletown
+  :office_name: Middletown U.S. Export Assistance Center
+  :country: US
+  :state: CT
+  :email: Anne.Evans@trade.gov
+  :fax: 860-638-6970
+  :mail_instructions: 
+  :phone: 860-638-6950
+  :post_type: D
+  :address:
+  - Middletown U.S. Export Assistance Center
+  - 213 Court St., Suite 903
+  - Middletown, CT 06457-3382
+  - http://www.buyusa.gov/connecticut/
+  :city: Middletown
+  :id: US:Middletown
+- :post: ODO/DAS
+  :office_name: Office of the U.S. Field DAS
+  :country: US
+  :state: DC
+  :email: NOT AVAILABLE
+  :fax: 202-482-0687
+  :mail_instructions: 
+  :phone: 202-482-0143
+  :post_type: D
+  :address:
+  - DAS - Office of Domestic Operations
+  - U.S. and Foreign Commercial Service
+  - International Trade Administration
+  - U.S. Department of Commerce
+  - 'REGULAR MAIL:'
+  - 14th & Constitution Ave., NW, RRB
+  - Washington D.C. 20230
+  - 'UPS AND FEDEX:'
+  - USA Trade Center
+  - 1300 Pennsylvania Ave., NW
+  - Suite M800
+  - Washington, DC 20004
+  :city: Washington
+  :id: US:ODODAS
+- :post: ODO/FSS
+  :office_name: National Field Support Team
+  :country: US
+  :state: DC
+  :email: Carolyn.McNeill@trade.gov
+  :fax: 202-482-6902
+  :mail_instructions: 
+  :phone: 202-482-3432
+  :post_type: D
+  :address:
+  - ODO - National Field Support Team
+  - 1300 Pennsylvania Ave NW, Washington, DC 20004
+  :city: Washington
+  :id: US:ODOFSS
+- :post: Clearwater
+  :office_name: Tampa Bay U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: Sandra.Campbell@trade.gov
+  :fax: 727-893-3839
+  :mail_instructions: 
+  :phone: 727-893-3738
+  :post_type: D
+  :address:
+  - Tampa Bay U.S. Export Assistance Center
+  - 13805 58th Street North, Suite 1-200
+  - Clearwater, FL 33760
+  - http://export.gov/florida/
+  :city: Clearwater
+  :id: US:Clearwater
+- :post: Fort Lauderdale
+  :office_name: Fort Lauderdale U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: Office.Miami@mail.doc.gov
+  :fax: 954-356-6644
+  :mail_instructions: 
+  :phone: 954-356-6640
+  :post_type: D
+  :address:
+  - Fort Lauderdale U.S. Export Assistance Center
+  - 1850 Eller Drive, Suite 401
+  - Fort Lauderdale, FL 33316
+  - http://www.export.gov/florida/
+  :city: Fort Lauderdale
+  :id: US:FortLauderdale
+- :post: Jacksonville
+  :office_name: Jacksonville U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: Jorge.Arce@trade.gov
+  :fax: 904-232-1271
+  :mail_instructions: 
+  :phone: 904-232-1270
+  :post_type: D
+  :address:
+  - Jacksonville U.S. Export Assistance Center
+  - 3 Independent Drive
+  - Jacksonville, FL 32202
+  - http://www.export.gov/florida
+  :city: Jacksonville
+  :id: US:Jacksonville
+- :post: Miami
+  :office_name: Miami U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: Office.Miami@trade.gov
+  :fax: 305-526-7434
+  :mail_instructions: 
+  :phone: 305-526-7425
+  :post_type: D
+  :address:
+  - Miami U.S. Export Assistance Center
+  - 5835 Blue Lagoon Dr., Suite 203
+  - Miami FL 33126
+  - http://www.export.gov/florida
+  :city: ''
+  :id: US:Miami
+- :post: Orlando
+  :office_name: Orlando U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: office.orlando@trade.gov
+  :fax: 407-420-4425
+  :mail_instructions: 
+  :phone: 407-420-4848, ext. 260
+  :post_type: D
+  :address:
+  - Orlando U.S. Export Assistance Center
+  - 3201 East Colonial Drive, Suite A-20
+  - Orlando, FL 32803
+  - http://www.export.gov/florida
+  :city: Orlando
+  :id: US:Orlando
+- :post: Tallahassee
+  :office_name: Tallahassee U.S. Export Assistance Center
+  :country: US
+  :state: FL
+  :email: Michael.Higgins@trade.gov
+  :fax: 850-922-0482
+  :mail_instructions: 
+  :phone: 850-942-9635
+  :post_type: D
+  :address:
+  - Tallahassee U.S. Export Assistance Center
+  - 2930 Kerry Forest Parkway, Suite 101
+  - Tallahassee, FL 32309
+  - http://www.export.gov/florida
+  :city: Tallahassee
+  :id: US:Tallahassee
+- :post: Atlanta
+  :office_name: Atlanta U.S. Export Assistance Center
+  :country: US
+  :state: GA
+  :email: Office.Atlanta@trade.gov
+  :fax: 404-347-0002
+  :mail_instructions: 
+  :phone: 404-815-1498
+  :post_type: D
+  :address:
+  - Atlanta U.S. Export Assistance Center
+  - Centergy One Building
+  - 75 Fifth St. NW, Suite 1060
+  - Atlanta, GA 30308
+  - http://www.export.gov/georgia/
+  :city: Atlanta
+  :id: US:Atlanta
+- :post: Savannah
+  :office_name: Savannah U.S. Export Assistance Center
+  :country: US
+  :state: GA
+  :email: Todd.Gerken@trade.gov
+  :fax: 912-652-4675
+  :mail_instructions: 
+  :phone: 912-652-4204
+  :post_type: D
+  :address:
+  - Savannah U.S. Export Assistance Center
+  - 111 E. Liberty St., Suite 202
+  - Savannah, GA 31401
+  - http://www.buyusa.gov/georgia/
+  :city: Savannah
+  :id: US:Savannah
+- :post: Southern Network Dir
+  :office_name: Southern Regional Director
+  :country: US
+  :state: GA
+  :email: Thomas.Strauss@trade.gov
+  :fax: 404-347-0002
+  :mail_instructions: 
+  :phone: 404-815-1529
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - 75 Fifth St. NW, Suite 1060
+  - Atlanta, GA 30308
+  :city: Atlanta
+  :id: US:SouthernNetworkDir
+- :post: Honolulu
+  :office_name: Hawaii U.S. Export Assistance Center
+  :country: US
+  :state: HI
+  :email: John.Holman@trade.gov
+  :fax: 808-522-8045
+  :mail_instructions: 
+  :phone: 808-522-8040
+  :post_type: D
+  :address:
+  - Hawaii U.S. Export Assistance Center
+  - 'Foreign Trade Zone #9'
+  - 521 Ala Moana Blvd., Rm. 214
+  - Honolulu, HI 96813
+  - http://www.export.gov/hawaii/
+  :city: Honolulu
+  :id: US:Honolulu
+- :post: Des Moines
+  :office_name: Des Moines U.S. Export Assistance Center
+  :country: US
+  :state: IA
+  :email: Patricia.Cook@trade.gov
+  :fax: 515-288-1437
+  :mail_instructions: 
+  :phone: 515-284-4590
+  :post_type: D
+  :address:
+  - US Commercial Service Iowa
+  - Federal Building, Room 749
+  - 210 Walnut Street, Des Moines, IA 50309
+  - http://export.gov/iowa/index.asp
+  :city: Des Moines
+  :id: US:DesMoines
+- :post: Boise
+  :office_name: Boise U.S. Export Assistance Center
+  :country: US
+  :state: ID
+  :email: Amy.Benson@trade.gov
+  :fax: 208-334-2631
+  :mail_instructions: 
+  :phone: 208-364-7791
+  :post_type: D
+  :address:
+  - Boise U.S. Export Assistance Center
+  - 700 W. State St., 2nd Floor
+  - Boise, ID 83720
+  - http://www.export.gov/idaho
+  :city: Boise
+  :id: US:Boise
+- :post: Chicago
+  :office_name: Chicago U.S. Export Assistance Center
+  :country: US
+  :state: IL
+  :email: Office.Chicago@trade.gov
+  :fax: 312-353-8120
+  :mail_instructions: 
+  :phone: 312-353-8040
+  :post_type: D
+  :address:
+  - Chicago U.S. Export Assistance Center
+  - 200 W. Adams St., Suite 2450
+  - Chicago, IL 60606
+  - http://export.gov/illinois
+  :city: Chicago
+  :id: US:Chicago
+- :post: Midwest Network Dir
+  :office_name: Midwest Network Director
+  :country: US
+  :state: IL
+  :email: Mary.Joyce@trade.gov
+  :fax: 312-353-8120
+  :mail_instructions: 
+  :phone: 312-886-8094
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - 200 W. Adams St., Suite 2450
+  - Chicago, IL 60606
+  :city: Chicago
+  :id: US:MidwestNetworkDir
+- :post: Peoria
+  :office_name: Peoria U.S. Export Assistance Center
+  :country: US
+  :state: IL
+  :email: shari.stout@trade.gov
+  :fax: 309-671-7818
+  :mail_instructions: 
+  :phone: 309-671-7815
+  :post_type: D
+  :address:
+  - Peoria U.S. Export Assistance Center
+  - 922 N. Glenwood Ave., Jobst Hall, Rm. 141
+  - Peoria, IL 61606
+  - http://export.gov/illinois/
+  :city: Peoria
+  :id: US:Peoria
+- :post: Rockford
+  :office_name: Rockford U.S. Export Assistance Center
+  :country: US
+  :state: IL
+  :email: Patrick.Hope@trade.gov
+  :fax: 888-628-2571
+  :mail_instructions: 
+  :phone: 815-316-2380
+  :post_type: D
+  :address:
+  - Rockford U.S. Export Assistance Center
+  - at Eiger Lab, 605 Fulton Ave., Suite E103
+  - Rockford, IL 61103
+  - http://export.gov/illinois/
+  :city: Rockford
+  :id: US:Rockford
+- :post: Indianapolis
+  :office_name: Indianapolis U.S. Export Assistance Center
+  :country: US
+  :state: IN
+  :email: Mark.Cooper@trade.gov
+  :fax: 317-582-2301
+  :mail_instructions: 
+  :phone: 317-582-2300
+  :post_type: D
+  :address:
+  - Indianapolis U.S. Export Assistance Center
+  - 11405 N. Pennsylvania St., Suite 106
+  - Carmel, IN 46032
+  - http://www.export.gov/indiana
+  :city: Carmel
+  :id: US:Indianapolis
+- :post: Wichita
+  :office_name: Wichita U.S. Export Assistance Center
+  :country: US
+  :state: KS
+  :email: Andrew.Anderson@trade.gov
+  :fax: 316-462-5506
+  :mail_instructions: 
+  :phone: 316-263-4067
+  :post_type: D
+  :address:
+  - Wichita U.S. Export Assistance Center
+  - 300 W Douglas Ave., Suite 850, Wichita, KS 67202
+  - http://www.buyusa.gov/wichita/
+  :city: Wichita
+  :id: US:Wichita
+- :post: Lexington
+  :office_name: Lexington U.S. Export Assistance Center
+  :country: US
+  :state: KY
+  :email: Sara.Moreno@trade.gov
+  :fax: 859-201-1139
+  :mail_instructions: 
+  :phone: 859-225-7001
+  :post_type: D
+  :address:
+  - 101 E. Vine St., Suite 150
+  - Lexington KY 40507-1482
+  - http://www.export.gov/kentucky/
+  :city: ''
+  :id: US:Lexington
+- :post: Louisville
+  :office_name: Louisville U.S. Export Assistance Center
+  :country: US
+  :state: KY
+  :email: Peggy.Pauley@trade.gov
+  :fax: 502-582-6573
+  :mail_instructions: 
+  :phone: 502-582-5066
+  :post_type: D
+  :address:
+  - Louisville U.S. Export Assistance Center
+  - 601 W. Broadway, Room 634B
+  - Louisville, KY 40202
+  - http://www.buyusa.gov/kentucky/
+  :city: Louisville
+  :id: US:Louisville
+- :post: New Orleans
+  :office_name: New Orleans U.S. Export Assistance Center
+  :country: US
+  :state: LA
+  :email: office.neworleans@trade.gov
+  :fax: 504-589-2337
+  :mail_instructions: 
+  :phone: 504-589-6546
+  :post_type: D
+  :address:
+  - Suite 419, U.S. Custom House
+  - 423 Canal Street
+  - New Orleans, LA 70130
+  - http://www.export.gov/louisiana
+  :city: New Orleans
+  :id: US:NewOrleans
+- :post: Shreveport
+  :office_name: Shreveport U.S. Export Assistance Center
+  :country: US
+  :state: LA
+  :email: Shreveport.Office.Box@mail.doc.gov
+  :fax: 318-676-3063
+  :mail_instructions: 
+  :phone: 318-676-3064
+  :post_type: D
+  :address:
+  - Shreveport U.S. Export Assistance Center
+  - One University Place
+  - Business Education Building 119H
+  - Shreveport, LA 71115-2399
+  - http://www.buyusa.gov/shreveport/
+  :city: Shreveport
+  :id: US:Shreveport
+- :post: Boston
+  :office_name: Boston U.S. Export Assistance Center
+  :country: US
+  :state: MA
+  :email: Office.Boston@mail.doc.gov
+  :fax: 617-565-4313
+  :mail_instructions: 
+  :phone: 617-565-4301
+  :post_type: D
+  :address:
+  - Boston U.S. Export Assistance Center
+  - JFK Federal Building
+  - 55 New Sudbury St., Suite 1826A
+  - Boston, MA 02203
+  - http://www.buyusa.gov/massachusetts/
+  :city: Boston
+  :id: US:Boston
+- :post: Northeast Network Dir
+  :office_name: Northeast Network Director
+  :country: US
+  :state: MA
+  :email: James.Cox@trade.gov
+  :fax: 617-565-4313
+  :mail_instructions: 
+  :phone: 617-565-4307
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - JFK Federal Building
+  - 55 New Sudbury St, Suite 1826A
+  - Boston, MA 02203-0001
+  :city: Boston
+  :id: US:NortheastNetworkDir
+- :post: Baltimore
+  :office_name: Baltimore U.S. Export Assistance Center
+  :country: US
+  :state: MD
+  :email: bill.burwell@trade.gov
+  :fax: 410-962-4529
+  :mail_instructions: 
+  :phone: 410-962-4539
+  :post_type: D
+  :address:
+  - Baltimore U.S. Export Assistance Center
+  - 300 West Pratt St., Suite 300
+  - Baltimore, MD 21201
+  :city: Baltimore
+  :id: US:Baltimore
+- :post: Portland ME
+  :office_name: Portland, ME U.S. Export Assistance Center
+  :country: US
+  :state: ME
+  :email: Jeffrey.Porter@trade.gov
+  :fax: 207-541-7420
+  :mail_instructions: 
+  :phone: 207-541-7430
+  :post_type: D
+  :address:
+  - Portland, ME U.S. Export Assistance Center
+  - c/o Maine International Trade Center
+  - 511 Congress St.
+  - Portland, ME 04101
+  - http://www.buyusa.gov/maine/
+  :city: Portland
+  :id: US:PortlandME
+- :post: Detroit
+  :office_name: Detroit U.S. Export Assistance Center
+  :country: US
+  :state: MI
+  :email: Sara.Coulter@trade.gov
+  :fax: 313-872-6795
+  :mail_instructions: 
+  :phone: 313-872-6794
+  :post_type: D
+  :address:
+  - Detroit U.S. Export Assistance Center
+  - 440 Burroughs Street, Suite 315, Detroit,MI 48202
+  - http://www.export.gov/michigan
+  :city: Detroit
+  :id: US:Detroit
+- :post: Grand Rapids
+  :office_name: Grand Rapids U.S. Export Assistance Center
+  :country: US
+  :state: MI
+  :email: Kendra.Kuo@trade.gov
+  :fax: 616-458-3872
+  :mail_instructions: 
+  :phone: 616-458-3564
+  :post_type: D
+  :address:
+  - U.S. Commercial Service - Grand Rapids USEAC
+  - 401 W. Fulton St., Suite 347C
+  - Grand Rapids, MI 49504
+  - http://www.export.gov/michigan
+  :city: Grand Rapids
+  :id: US:GrandRapids
+- :post: Pontiac
+  :office_name: East Michigan U.S. Export Assistance Center
+  :country: US
+  :state: MI
+  :email: Richard.Corson@Trade.gov
+  :fax: 248-975-9606
+  :mail_instructions: 
+  :phone: 248-975-9600
+  :post_type: D
+  :address:
+  - East Michigan U.S. Export Assistance Center
+  - 1200 N Telegraph Rd
+  - Administrative Annex 1, Building 47 West
+  - Pontiac, MI 48341
+  - http://www.export.gov/michigan/
+  :city: Pontiac
+  :id: US:Pontiac
+- :post: Ypsilanti
+  :office_name: Ypsilanti U.S. Export Assistance Center
+  :country: US
+  :state: MI
+  :email: Richard.Corson@trade.gov
+  :fax: 248-975-9606
+  :mail_instructions: 
+  :phone: 248-975-9600
+  :post_type: D
+  :address:
+  - Ypsilanti US Export Assistance Center
+  - c/o EMU College of Business
+  - 300 W. Michigan Ave., Suite 306G
+  - Ypsilanti, Michigan 48197
+  - http://www.export.gov/michigan
+  :city: 
+  :id: US:Ypsilanti
+- :post: Minneapolis
+  :office_name: Minneapolis U.S. Export Assistance Center
+  :country: US
+  :state: MN
+  :email: Ryan.Kanne@trade.gov
+  :fax: 612-348-1650
+  :mail_instructions: 
+  :phone: 612-348-1638
+  :post_type: D
+  :address:
+  - Minneapolis U.S. Export Assistance Center
+  - 100 N. 6th Street, Suite 210-C
+  - Minneapolis, MN 55403
+  - http://www.export.gov/minnesota/
+  :city: Minneapolis
+  :id: US:Minneapolis
+- :post: Kansas City
+  :office_name: Kansas City U.S. Export Assistance Center
+  :country: US
+  :state: MO
+  :email: Office.KansasCity@trade.gov
+  :fax: 816-471-7839
+  :mail_instructions: 
+  :phone: 816-421-1876
+  :post_type: D
+  :address:
+  - U.S. Commercial Service- Kansas City
+  - 1000 Walnut St., Suite 500
+  - Kansas City, Missouri 64106 USA
+  - http://export.gov/missouri/kansascity/
+  :city: 
+  :id: US:KansasCity
+- :post: St. Louis
+  :office_name: St. Louis U.S. Export Assistance Center
+  :country: US
+  :state: MO
+  :email: Office.StLouis@trade.gov
+  :fax: 314-260-3791
+  :mail_instructions: 
+  :phone: 314-260-3780
+  :post_type: D
+  :address:
+  - U.S. Dept. of Commerce/ITA
+  - 4300 Goodfellow Blvd., Bldg 110
+  - Suite 1100A
+  - St. Louis MO 63120
+  :city: ''
+  :id: US:StLouis
+- :post: Jackson
+  :office_name: Mississippi U.S. Export Assistance Center
+  :country: US
+  :state: MS
+  :email: Carol.Moore@trade.gov
+  :fax: 601-373-0959
+  :mail_instructions: 
+  :phone: 601-373-0773
+  :post_type: D
+  :address:
+  - Mississippi U.S. Export Assistance Center
+  - 1230 Raymond Road, Box 600
+  - Jackson, MS 39204
+  - http://www.buyusa.gov/jackson/
+  :city: Jackson
+  :id: US:Jackson
+- :post: Montana
+  :office_name: Missoula U.S. Export Assistance Center
+  :country: US
+  :state: MT
+  :email: Montana.Office.Box@mail.doc.gov
+  :fax: 503-326-6351
+  :mail_instructions: 
+  :phone: 406-370-0097
+  :post_type: D
+  :address:
+  - Missoula U.S. Export Assistance Center
+  - The University of Montana
+  - Gallagher Business Building, Suite 257
+  - Missoula, MT 59812
+  - http://www.buyusa.gov/montana/
+  :city: Missoula
+  :id: US:Montana
+- :post: Charlotte
+  :office_name: Charlotte U.S. Export Assistance Center
+  :country: US
+  :state: NC
+  :email: greg.sizemore@trade.gov
+  :fax: 704-332-2681
+  :mail_instructions: 
+  :phone: 704-333-4886
+  :post_type: D
+  :address:
+  - Charlotte U.S. Export Assistance Center
+  - 521 E. Morehead St., Suite 435
+  - Charlotte, NC 28202
+  - http://www.export.gov/northcarolina/
+  :city: Charlotte
+  :id: US:Charlotte
+- :post: Greensboro
+  :office_name: Greensboro U.S. Export Assistance Center
+  :country: US
+  :state: NC
+  :email: debbie.strader@trade.gov
+  :fax: 336-333-5158
+  :mail_instructions: 
+  :phone: 336-333-5345
+  :post_type: D
+  :address:
+  - Greensboro U.S. Export Assistance Center
+  - 342 N. Elm St.
+  - Greensboro, NC 27401
+  - http://www.export.gov/northcarolina
+  :city: Greensboro
+  :id: US:Greensboro
+- :post: Raleigh
+  :office_name: Raleigh US Export Assistance Center
+  :country: US
+  :state: NC
+  :email: Shirreef.Loza@trade.gov
+  :fax: 919-281-2754
+  :mail_instructions: 
+  :phone: 919-281-2750
+  :post_type: D
+  :address:
+  - Raleigh US Export Assistance Center
+  - 10900 World Trade Blvd., Suite 110
+  - Raleigh, NC 27617
+  - http://www.export.gov/northcarolina/
+  :city: Raleigh
+  :id: US:Raleigh
+- :post: Fargo
+  :office_name: Fargo U.S. Export Assistance Center
+  :country: US
+  :state: ND
+  :email: heather.ranck@trade.gov
+  :fax: 701-540-0262
+  :mail_instructions: 
+  :phone: 701-239-5080
+  :post_type: D
+  :address:
+  - NDSU Agribusiness and Applied Economics Department at Barry Hall
+  - 811 Second Avenue North
+  - Suite 436
+  - Fargo, ND 58102
+  :city: Fargo
+  :id: US:Fargo
+- :post: Omaha
+  :office_name: Omaha U.S. Export Assistance Center
+  :country: US
+  :state: NE
+  :email: Meredith.Bond@trade.gov
+  :fax: 402-939-0121
+  :mail_instructions: 
+  :phone: 402-597-0193
+  :post_type: D
+  :address:
+  - Omaha U.S. Export Assistance Center
+  - 6708 Pine Street
+  - NBDC Suite 200
+  - Omaha, NE 68182-0248
+  :city: Omaha
+  :id: US:Omaha
+- :post: New Hampshire
+  :office_name: New Hampshire U.S. Export Assistance Center
+  :country: US
+  :state: NH
+  :email: Office.Portsmouth@trade.gov
+  :fax: 603-953-0213
+  :mail_instructions: 
+  :phone: 603-953-0212
+  :post_type: D
+  :address:
+  - New Hampshire Export Assistance Center at UNH-IOL
+  - 121 Technology Drive, Suite 2
+  - Durham, NH 03824
+  - http://www.export.gov/newhampshire/
+  :city: Durham
+  :id: US:NewHampshire
+- :post: Central-Southern NJ
+  :office_name: Central-Southern NJ U.S. Export Assistant Center
+  :country: US
+  :state: NJ
+  :email: debora.sykes@trade.gov
+  :fax: 609-896-4249
+  :mail_instructions: 
+  :phone: 609-896-2734
+  :post_type: D
+  :address:
+  - Central-Southern NJ U.S. Export Assistant Center
+  - "(formerly Trenton USEAC)"
+  - 997 Lenox Drive, Suite 111
+  - Lawrenceville, NJ 08648
+  - http://www.export.gov/newjersey
+  :city: Lawrenceville
+  :id: US:CentralSouthernNJ
+- :post: Northern New Jersey
+  :office_name: Northern New Jersey U.S. Export Assistance Center
+  :country: US
+  :state: NJ
+  :email: Office.Newark@trade.gov
+  :fax: 973-645-4783
+  :mail_instructions: 
+  :phone: 973-645-4682
+  :post_type: D
+  :address:
+  - Northern New Jersey U.S. Export Assistance Center
+  - 20 Washington Place, Suite 615
+  - Newark, NJ 07102
+  - http://www.export.gov/newjersey
+  :city: Newark
+  :id: US:NorthernNewJersey
+- :post: Las Vegas
+  :office_name: Las Vegas U.S. Export Assistance Center
+  :country: US
+  :state: NV
+  :email: Andrew.Edlefsen@trade.gov
+  :fax: 702-388-6469
+  :mail_instructions: 
+  :phone: 702-388-6694
+  :post_type: D
+  :address:
+  - Las Vegas U.S. Export Assistance Center
+  - 300 S. Fourth St., Suite 400
+  - Las Vegas, Nevada 89101
+  - http://www.buyusa.gov/nevada/
+  :city: 
+  :id: US:LasVegas
+- :post: Reno
+  :office_name: Reno U.S. Export Assistance Center
+  :country: US
+  :state: NV
+  :email: andrew.edlefsen@trade.gov
+  :fax: 775-784-5343
+  :mail_instructions: 
+  :phone: 775-784-5342
+  :post_type: D
+  :address:
+  - Reno U.S. Export Assistance Center
+  - c/o Reno Sparks Chamber of Commerce
+  - 449 S. Virginia, 2nd Floor
+  - Reno, NV 89501
+  - http://www.buyusa.gov/nevada/
+  :city: Reno
+  :id: US:Reno
+- :post: Buffalo
+  :office_name: Buffalo U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: rosanna.masucci@trade.gov
+  :fax: 716-551-5290
+  :mail_instructions: 
+  :phone: 716-551-4191
+  :post_type: D
+  :address:
+  - Buffalo U.S. Export Assistance Center
+  - 130 S. Elmwood Ave., Suite 530
+  - Buffalo, NY 14202
+  - http://www.export.gov/newyork/bflorochsyr
+  :city: Buffalo
+  :id: US:Buffalo
+- :post: Harlem
+  :office_name: Harlem U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: Office.Harlem@trade.gov
+  :fax: 212-860-6203
+  :mail_instructions: 
+  :phone: 212-860-6200
+  :post_type: D
+  :address:
+  - Harlem U.S. Export Assistance Center
+  - 163 W. 125th St., Suite 901
+  - New York, NY 10027
+  - http://www.export.gov/newyork/harlem/
+  :city: New York
+  :id: US:Harlem
+- :post: Long Island
+  :office_name: Long Island U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: Shakir.Farsakh@trade.gov
+  :fax: 516-977-0396
+  :mail_instructions: 
+  :phone: 646-722-0182/631-935-2388
+  :post_type: D
+  :address:
+  - Long Island U.S. Export Assistance Center
+  - POB 423
+  - Old Westbury, NY 11568-0423
+  - 'Phone: 646-722-0182'
+  - www.export.gov/newyork/longisland
+  :city: Old Westbury
+  :id: US:LongIsland
+- :post: New York
+  :office_name: New York U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: Office.NewYork@trade.gov
+  :fax: 212-809-2687
+  :mail_instructions: 
+  :phone: 212-809-2675
+  :post_type: D
+  :address:
+  - New York U.S. Export Assistance Center
+  - Ted Weiss Federal Building
+  - 290 Broadway, Suite 1312
+  - New York, NY 10007
+  - http://www.buyusa.gov/nyc/
+  :city: New York
+  :id: US:NewYork
+- :post: Rochester
+  :office_name: Rochester U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: Timothy.McCall@trade.gov
+  :fax: 585-423-7570
+  :mail_instructions: 
+  :phone: 585-399-7065
+  :post_type: D
+  :address:
+  - Rochester U.S. Export Assistance Center
+  - 400 Andrews St., Suite 300
+  - Rochester, NY 14604
+  - http://www.export.gov/newyork/bflorochsyr
+  :city: Rochester
+  :id: US:Rochester
+- :post: Westchester
+  :office_name: Westchester U.S. Export Assistance Center
+  :country: US
+  :state: NY
+  :email: Joan.Kanlian@trade.gov
+  :fax: 914-682-6698
+  :mail_instructions: 
+  :phone: 914-682-6712
+  :post_type: D
+  :address:
+  - Westchester U.S. Export Assistance Center
+  - 707 Westchester Ave., Suite 209
+  - White Plains, NY 10604
+  - http://export.gov/newyork/westchester
+  :city: White Plains
+  :id: US:Westchester
+- :post: Cincinnati
+  :office_name: Cincinnati U.S. Export Assistance Center
+  :country: US
+  :state: OH
+  :email: Marcia.Brandstadt@trade.gov
+  :fax: 513-684-3227
+  :mail_instructions: 
+  :phone: 513-684-2944
+  :post_type: D
+  :address:
+  - Cincinnati U.S. Export Assistance Center
+  - 36 E. 7th St., Suite 2650
+  - Cincinnati, OH 45202
+  - http://www.buyusa.gov/greatlakes/
+  :city: Cincinnati
+  :id: US:Cincinnati
+- :post: Cleveland
+  :office_name: Cleveland U.S. Export Assistance Center
+  :country: US
+  :state: OH
+  :email: Office.Cleveland@trade.gov
+  :fax: 216-522-2235
+  :mail_instructions: 
+  :phone: 216-522-4750
+  :post_type: D
+  :address:
+  - Cleveland U.S. Export Assistance Center
+  - 600 Superior Ave., East, Suite 700
+  - Cleveland, OH 44114
+  - http://export.gov/ohio/northernohio/index.asp
+  :city: Cleveland
+  :id: US:Cleveland
+- :post: Columbus
+  :office_name: Columbus U.S. Export Assistance Center
+  :country: US
+  :state: OH
+  :email: roberta.ford@trade.gov
+  :fax: 614-365-9598
+  :mail_instructions: 
+  :phone: 614-365-9510
+  :post_type: D
+  :address:
+  - Columbus U.S. Export Assistance Center
+  - '401 N. Front St., #200'
+  - Columbus, OH 43215
+  - http://export.gov/ohio/centralohio/index.asp
+  :city: Columbus
+  :id: US:Columbus
+- :post: Great Lakes Network Dir
+  :office_name: Great Lakes Network Director
+  :country: US
+  :state: OH
+  :email: michael.miller@mail.doc.gov
+  :fax: 216-522-2235
+  :mail_instructions: 
+  :phone: 216-522-4750
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - 600 Superior Ave., East, Suite 700
+  - Cleveland, OH 44114
+  :city: Cleveland
+  :id: US:GreatLakesNetworkDir
+- :post: Oklahoma City
+  :office_name: Oklahoma City U.S. Export Assistance Center
+  :country: US
+  :state: OK
+  :email: office.oklahomacity@trade.gov
+  :fax: 405-608-4211
+  :mail_instructions: 
+  :phone: 405-608-5302
+  :post_type: D
+  :address:
+  - Oklahoma City U.S. Export Assistance Center
+  - 301 NW 63rd St., Suite 420
+  - Oklahoma City, OK 73116
+  - http://www.export.gov/oklahoma
+  :city: Oklahoma City
+  :id: US:OklahomaCity
+- :post: Tulsa
+  :office_name: Tulsa U.S. Export Assistance Center
+  :country: US
+  :state: OK
+  :email: Jim.Williams@trade.gov
+  :fax: 918-581-6263
+  :mail_instructions: 
+  :phone: 918-581-7650
+  :post_type: D
+  :address:
+  - Tulsa U.S. Export Assistance Center
+  - 700 N. Greenwood Ave., Suite 1400
+  - Tulsa, OK 74106
+  - http://www.buyusa.gov/tulsa/
+  :city: Tulsa
+  :id: US:Tulsa
+- :post: Portland OR
+  :office_name: Portland, OR U.S. Export Assistance Center
+  :country: US
+  :state: OR
+  :email: Scott.Goddin@trade.gov
+  :fax: 503-326-6351
+  :mail_instructions: 
+  :phone: 503-326-3001
+  :post_type: D
+  :address:
+  - Portland, OR U.S. Export Assistance Center
+  - One World Trade Center
+  - 121 SW Salmon St., Suite 242
+  - Portland, OR 97204
+  - http://export.gov/oregon/
+  :city: Portland
+  :id: US:PortlandOR
+- :post: Harrisburg
+  :office_name: VACANT Please Contact CS Pittsburgh or CS Philadelphia
+  :country: US
+  :state: PA
+  :email: Joseph.Hanley@trade.gov
+  :fax: VACANT
+  :mail_instructions: 
+  :phone: VACANT
+  :post_type: D
+  :address:
+  - VACANT
+  :city: 
+  :id: US:Harrisburg
+- :post: Mid-Atlantic Network Dir
+  :office_name: Mid-Atlantic Network Director
+  :country: US
+  :state: PA
+  :email: Joseph.Hanley@trade.gov
+  :fax: 215-597-6123
+  :mail_instructions: 
+  :phone: 215-597-6108
+  :post_type: D
+  :address:
+  - U.S. Commercial Service
+  - The Curtis Center, 601 Walnut St., Suite 580 West
+  - Philadelphia, PA 19106
+  :city: Philadelphia
+  :id: US:MidAtlanticNetworkDir
+- :post: Philadelphia
+  :office_name: Philadelphia U.S. Export Assistance Center
+  :country: US
+  :state: PA
+  :email: Office.Philadelphia@mail.doc.gov
+  :fax: 215-597-6123
+  :mail_instructions: 
+  :phone: 215-597-6101
+  :post_type: D
+  :address:
+  - Philadelphia U.S. Export Assistance Center
+  - The Curtis Center, 601 Walnut St., Suite 580 West
+  - Philadelphia, PA 19106-3304
+  - http://www.buyusa.gov/philadelphia/
+  :city: Philadelphia
+  :id: US:Philadelphia
+- :post: Pittsburgh
+  :office_name: Pittsburgh U.S. Export Assistance Center
+  :country: US
+  :state: PA
+  :email: Lyn.Doverspike@trade.gov
+  :fax: 412-644-2803
+  :mail_instructions: 
+  :phone: 412-644-2800
+  :post_type: D
+  :address:
+  - Pittsburgh U.S. Export Assistance Center
+  - 1000 Liberty Avenue, Suite 807
+  - Pittsburgh, PA 15222
+  - http://www.buyusa.gov/pittsburgh
+  :city: Pittsburgh
+  :id: US:Pittsburgh
+- :post: San Juan
+  :office_name: San Juan (Guaynabo) U.S. Export Assistance Center
+  :country: US
+  :state: PR
+  :email: Jose.Burgos@trade.gov
+  :fax: 787-781-7178
+  :mail_instructions: 
+  :phone: 787-775-1992,1974
+  :post_type: D
+  :address:
+  - San Juan (Guaynabo) U.S. Export Assistance Center
+  - Centro Internacional de Mercadeo, Torre II, Street 165 Suite 702
+  - Guaynabo, PR 00968-8058
+  - http://export.gov/puertorico/
+  :city: Guaynabo
+  :id: US:SanJuan
+- :post: Providence
+  :office_name: Providence U.S. Export Assistance Center
+  :country: US
+  :state: RI
+  :email: keith.yatsuhashi@trade.gov
+  :fax: 401-528-5067
+  :mail_instructions: 
+  :phone: 401-528-5104
+  :post_type: D
+  :address:
+  - Providence U.S. Export Assistance Center
+  - 315 Iron Horse Way, Suite 101
+  - Providence, RI 02908
+  - http://www.buyusa.gov/rhodeisland/
+  :city: Providence
+  :id: US:Providence
+- :post: Charleston SC
+  :office_name: Charleston, SC U.S. Export Assistance Center
+  :country: US
+  :state: SC
+  :email: Phil.Minard@trade.gov
+  :fax: 843-529-0305
+  :mail_instructions: 
+  :phone: 843-746-3404
+  :post_type: D
+  :address:
+  - Charleston, SC U.S. Export Assistance Center
+  - 1362 McMillan Ave., Suite 100
+  - North Charleston, SC 29405
+  - http://www.buyusa.gov/southcarolina/
+  :city: North Charleston
+  :id: US:CharlestonSC
+- :post: Columbia
+  :office_name: Columbia U.S. Export Assistance Center
+  :country: US
+  :state: SC
+  :email: Office.Columbia@trade.gov
+  :fax: 803-777-2615
+  :mail_instructions: 
+  :phone: 803-777-2571
+  :post_type: D
+  :address:
+  - Columbia U.S. Export Assistance Center
+  - USC Moore School of Business
+  - 1705 College St., Suite 600
+  - Columbia, SC 29208
+  - http://www.export.gov/southcarolina/
+  :city: Columbia
+  :id: US:Columbia
+- :post: Greenville
+  :office_name: Greenville U.S. Export Assistance Center
+  :country: US
+  :state: SC
+  :email: Denis.Csizmadia@trade.gov
+  :fax: 864-250-6729
+  :mail_instructions: 
+  :phone: 864-250-8429
+  :post_type: D
+  :address:
+  - Greenville U.S. Export Assistance Center
+  - Buck Mickel Center at Greenville Technical College
+  - 216 S. Pleasantburg Dr., Suite 243
+  - Greenville, SC 29607
+  - http://www.buyusa.gov/southcarolina/
+  :city: Greenville
+  :id: US:Greenville
+- :post: Sioux Falls
+  :office_name: South Dakota Export Assistance Center
+  :country: US
+  :state: SD
+  :email: Cinnamon.King@trade.gov
+  :fax: 605-330-4266
+  :mail_instructions: 
+  :phone: 605-330-4265
+  :post_type: D
+  :address:
+  - Sioux Falls U.S. Export Assistance Center
+  - 2001 S. Summit Ave
+  - Augustana College / Madsen Center
+  - Sioux Falls, SD 57197
+  - http://www.buyusa.gov/southdakota/
+  :city: Sioux Falls
+  :id: US:SiouxFalls
+- :post: Knoxville
+  :office_name: Knoxville U.S. Export Assistance Center
+  :country: US
+  :state: TN
+  :email: Robert.Leach@trade.gov
+  :fax: 865-545-4435
+  :mail_instructions: 
+  :phone: 865-545-4637
+  :post_type: D
+  :address:
+  - Knoxville U.S. Export Assistance Center
+  - '17 Market Square, #201'
+  - Knoxville, TN 37902-1405
+  - http://www.buyusa.gov/tennessee/
+  :city: Knoxville
+  :id: US:Knoxville
+- :post: Memphis
+  :office_name: Memphis U.S. Export Assistance Center
+  :country: US
+  :state: TN
+  :email: David.Spann@trade.gov
+  :fax: 901-543-3510
+  :mail_instructions: 
+  :phone: 901-544-0930
+  :post_type: D
+  :address:
+  - Memphis U.S. Export Assistance Center
+  - 22 North Front Street, Suite 200
+  - Memphis, TN 38103
+  - http://www.buyusa.gov/tennessee/
+  :city: Memphis
+  :id: US:Memphis
+- :post: Nashville
+  :office_name: Nashville U.S. Export Assistance Center
+  :country: US
+  :state: TN
+  :email: Office.Nashville@trade.gov
+  :fax: 615-736-2226
+  :mail_instructions: 
+  :phone: 615-736-2222
+  :post_type: D
+  :address:
+  - Nashville U.S. Export Assistance Center
+  - 312 Rosa Parks Blvd., Floor-10
+  - Nashville, TN 37243
+  - http://www.buyusa.gov/greatlakes/nashville.html
+  :city: Nashville
+  :id: US:Nashville
+- :post: Austin
+  :office_name: Austin U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: Karen.Parker@trade.gov
+  :fax: 512-916-5940
+  :mail_instructions: 
+  :phone: 512-916-5939
+  :post_type: D
+  :address:
+  - 221 E. 11th St., 4th Floor
+  - Austin, TX 78701
+  - "(Call for appointment)"
+  - http://www.export.gov/texas/austin/
+  :city: Austin
+  :id: US:Austin
+- :post: El Paso
+  :office_name: El Paso U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: Robert.Queen@trade.gov
+  :fax: 915-858-8827
+  :mail_instructions: 
+  :phone: 915-929-6971
+  :post_type: D
+  :address:
+  - El Paso World Trade Center
+  - 9570 Pan American Drive
+  - El Paso, TX 79927
+  :city: El Paso
+  :id: US:ElPaso
+- :post: Houston
+  :office_name: Houston U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: Office.Houston@trade.gov
+  :fax: 713-209-3135
+  :mail_instructions: 
+  :phone: 713-209-3104
+  :post_type: D
+  :address:
+  - Houston U.S. Export Assistance Center
+  - 1919 Smith St., Suite 1026
+  - Houston, TX 77002
+  - http://www.buyusa.gov/houston/
+  :city: Houston
+  :id: US:Houston
+- :post: North Texas
+  :office_name: North Texas U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: daniel.swart@trade.gov
+  :fax: 817-684-5345
+  :mail_instructions: North Texas USEAC covers all of Dallas and Ft Worth
+  :phone: 817-684-5347
+  :post_type: D
+  :address:
+  - North Texas U.S. Export Assistance Center
+  - 4300 Amon Carter Blvd Suite 114
+  - Fort Worth, Texas 76155
+  - http://www.buyusa.gov/northtexas/
+  :city: 
+  :id: US:NorthTexas
+- :post: San Antonio
+  :office_name: San Antonio U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: Daniel.Rodriguez@Trade.gov
+  :fax: 210-472-4019
+  :mail_instructions: 
+  :phone: 210-472-4020
+  :post_type: D
+  :address:
+  - San Antonio U.S. Export Assistance Center
+  - 615 E. Houston Street, Suite 207
+  - San Antonio, TX 78205
+  - http://www.buyusa.gov/sanantonio/
+  :city: San Antonio
+  :id: US:SanAntonio
+- :post: South Texas
+  :office_name: South Texas U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: Daniel.Rodriguez@trade.gov
+  :fax: 956-661-0239
+  :mail_instructions: 
+  :phone: 956-661-0238
+  :post_type: D
+  :address:
+  - South Texas Export Assistance Center
+  - 6401 S. 36th St., Suite 4
+  - McAllen, Texas 78503
+  - http://www.buyusa.gov/southtexas/
+  :city: 
+  :id: US:SouthTexas
+- :post: West Texas
+  :office_name: West Texas U.S. Export Assistance Center
+  :country: US
+  :state: TX
+  :email: harry.henson@trade.gov
+  :fax: 432-552-3490
+  :mail_instructions: 
+  :phone: 432-552-2490
+  :post_type: D
+  :address:
+  - West Texas U.S. Export Assistance Center
+  - 1400 N. FM 1788, Room 1303
+  - Midland, TX 79707-1423
+  - http://www.buyusa.gov/westtexas/
+  :city: Midland
+  :id: US:WestTexas
+- :post: Salt Lake City
+  :office_name: Salt Lake City U.S. Export Assistance Center
+  :country: US
+  :state: UT
+  :email: Salt.Lake.City.Office.Box@mail.doc.gov
+  :fax: 801-255-3147
+  :mail_instructions: 
+  :phone: 801-255-1871
+  :post_type: D
+  :address:
+  - Salt Lake City U.S. Export Assistance Center
+  - 9690 S. 300 West, Suite 201
+  - Sandy, UT 84070
+  - http://www.buyusa.gov/utah/
+  :city: Sandy
+  :id: US:SaltLakeCity
+- :post: Northern VA
+  :office_name: Northern Virginia U.S. Export Assistance Center
+  :country: US
+  :state: VA
+  :email: William.Fanjoy@trade.gov
+  :fax: 703-756-1701
+  :mail_instructions: 
+  :phone: 703-756-1702
+  :post_type: D
+  :address:
+  - Northern Virginia U.S. Export Assistance Center
+  - 2800 S. Randolph Street, 8th Floor
+  - Arlington, VA 22206
+  - http://www.export.gov/virginia
+  :city: Arlington
+  :id: US:NorthernVA
+- :post: Richmond
+  :office_name: Richmond U.S. Export Assistance Center
+  :country: US
+  :state: VA
+  :email: Eric.McDonald@trade.gov
+  :fax: 804-771-2390
+  :mail_instructions: 
+  :phone: 804-771-2246
+  :post_type: D
+  :address:
+  - Richmond U.S. Export Assistance Center
+  - 800 East Leigh Street
+  - Richmond, VA 23219
+  - www.buyusa.gov/virginia/
+  :city: Richmond
+  :id: US:Richmond
+- :post: Montpelier
+  :office_name: Montpelier U.S. Export Assistance Center
+  :country: US
+  :state: VT
+  :email: Susan.Murray@trade.gov
+  :fax: 802-828-3258
+  :mail_instructions: 
+  :phone: 802-828-4508
+  :post_type: D
+  :address:
+  - Montpelier U.S. Export Assistance Center
+  - PO Box 605
+  - 87 State Street, Room 205
+  - Montpelier, VT 05601
+  :city: Montpelier
+  :id: US:Montpelier
+- :post: Seattle
+  :office_name: Seattle U.S. Export Assistance Center
+  :country: US
+  :state: WA
+  :email: Seattle.Office.Box@mail.doc.gov
+  :fax: 206-553-7253
+  :mail_instructions: 
+  :phone: 206-553-5615
+  :post_type: D
+  :address:
+  - Seattle U.S. Export Assistance Center
+  - 2001 6th Avenue, Suite 2610
+  - Seattle, WA 98121
+  - http://export.gov/Washington/seattle/
+  :city: Seattle
+  :id: US:Seattle
+- :post: Spokane
+  :office_name: Spokane U.S. Export Assistance Center
+  :country: US
+  :state: WA
+  :email: Spokane.Office.Box@mail.doc.gov
+  :fax: 503-326-6351
+  :mail_instructions: 
+  :phone: 509-344-9398
+  :post_type: D
+  :address:
+  - Spokane U.S. Export Assistance Center
+  - Greater Spokane Incorporated
+  - 801 W. Riverside Ave.
+  - Spokane, WA 99201
+  - http://www.export.gov/washington/spokane
+  :city: Spokane
+  :id: US:Spokane
+- :post: Tacoma
+  :office_name: Tacoma U.S. Export Assistance Center is closed
+  :country: US
+  :state: WA
+  :email: Seattle.Office.Box@mail.doc.gov
+  :fax: 206-553-7253
+  :mail_instructions: 
+  :phone: 206-553-5615
+  :post_type: D
+  :address:
+  - 'Please contact the:'
+  - Seattle U.S. Export Assistance Center
+  - 2001 Sixth Ave., Suite 2610
+  - Seattle, WA 98121
+  - http://www.buyusa.gov/seattle/
+  :city: Seattle
+  :id: US:Tacoma
+- :post: Milwaukee
+  :office_name: Milwaukee U.S. Export Assistance Center
+  :country: US
+  :state: WI
+  :email: Office.Milwaukee@trade.gov
+  :fax: 414-297-3470
+  :mail_instructions: 
+  :phone: 414-297-3473
+  :post_type: D
+  :address:
+  - 1235 N. Milwaukee St.
+  - Milwaukee School of Engineering
+  - Rader School of Business, Rosenberg Hall - R-01
+  - Milwaukee, WI 53202
+  :city: Milwaukee
+  :id: US:Milwaukee
+- :post: Charleston WV
+  :office_name: Charleston, WV U.S. Export Assistance Center
+  :country: US
+  :state: WV
+  :email: Leslie.Drake@trade.gov
+  :fax: 304-347-5408
+  :mail_instructions: 
+  :phone: 304-347-5123
+  :post_type: D
+  :address:
+  - Charleston, WV U.S. Export Assistance Center
+  - 1116 Smith St., Suite 314
+  - Charleston, WV 25301
+  - http://www.buyusa.gov/westvirginia/
+  :city: Charleston
+  :id: US:CharlestonWV
+- :post: Wheeling
+  :office_name: Wheeling U.S. Export Assistance Center
+  :country: US
+  :state: WV
+  :email: Diego.Gattesco@trade.gov
+  :fax: 304-243-5494
+  :mail_instructions: 
+  :phone: 304-243-5493
+  :post_type: D
+  :address:
+  - Wheeling U.S. Export Assistance Center
+  - Wheeling Jesuit University
+  - NTTC Building, Room 134
+  - 316 Washington Ave
+  - Wheeling, WV 26003
+  - http://www.buyusa.gov/westvirginia/
+  :city: Wheeling
+  :id: US:Wheeling

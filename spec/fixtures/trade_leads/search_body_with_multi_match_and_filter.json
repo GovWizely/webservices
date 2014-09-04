@@ -1,0 +1,20 @@
+{
+  "query": {
+    "multi_match": {
+      "fields": ["description", "title"],
+      "operator": "and",
+      "query": "water"
+    }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "country": ["AU", " AE"]
+          }
+        }
+      ]
+    }
+  }
+}

@@ -1,0 +1,192 @@
+[
+    {
+        "addresses": [
+            {
+                "city": "Zurich",
+                "country": "CH",
+                "postal_code": "CH-8022",
+                "state": null,
+                "address": "Zweierstrasse 35"
+            },
+            {
+                "city": "Madrid",
+                "country": "ES",
+                "postal_code": "E-28036",
+                "state": null,
+                "address": "Avenida de Concha Espina 8"
+            },
+            {
+                "city": "Tokyo",
+                "country": "JP",
+                "postal_code": "103",
+                "state": null,
+                "address": "Dai-Ichi Bldg. 6th Floor, 10-2 Nihombashi, 2-chome, Chuo-ku"
+            },
+            {
+                "city": "Panama City",
+                "country": "PA",
+                "postal_code": null,
+                "state": null,
+                "address": "Federico Boyd Avenue & 51 Street"
+            }
+        ],
+        "alt_names": [
+            "BNC",
+            "NATIONAL BANK OF CUBA"
+        ],
+        "citizenships": [],
+        "dates_of_birth": [],
+        "entity_number": "306",
+        "ids": [],
+        "name": "BANCO NACIONAL DE CUBA",
+        "nationalities": [],
+        "places_of_birth": [],
+        "programs": [
+            "CUBA"
+        ],
+        "remarks": null,
+        "sdn_type": "Entity",
+        "source": "SDN",
+        "source_list_url": null,
+        "title": null
+    },
+    {
+        "addresses": [
+            {
+                "city": "London",
+                "country": "GB",
+                "postal_code": "EC2V 8EY",
+                "state": null,
+                "address": "20 Ironmonger Lane"
+            }
+        ],
+        "alt_names": [],
+        "citizenships": [
+            "FR"
+        ],
+        "dates_of_birth": [],
+        "entity_number": "521",
+        "ids": [
+            {
+                "country": "BE",
+                "expiration_date": "2011-12-25",
+                "issue_date": "2001-12-25",
+                "number": "ABC123",
+                "type": "Passport"
+            }
+        ],
+        "name": "CHAO, Lazaro R.",
+        "nationalities": [
+            "DE"
+        ],
+        "places_of_birth": [],
+        "programs": [
+            "CUBA"
+        ],
+        "remarks": "Might have something to do with Cuba.",
+        "sdn_type": "Individual",
+        "source": "SDN",
+        "source_list_url": null,
+        "title": "Executive Director, Havana International Bank"
+    },
+    {
+        "addresses": [
+            {
+                "city": "Dubai",
+                "country": "AE",
+                "postal_code": null,
+                "state": null,
+                "address": "P.O. Box 3312"
+            },
+            {
+                "city": "Mogadishu",
+                "country": "SO",
+                "postal_code": null,
+                "state": null,
+                "address": null
+            },
+            {
+                "city": "Djibouti",
+                "country": "DJ",
+                "postal_code": null,
+                "state": null,
+                "address": null
+            }
+        ],
+        "alt_names": [
+            "JUMALI, Ahmed Ali",
+            "JIMALE, Ahmad Ali",
+            "JIM'ALE, Ahmad Nur Ali",
+            "JUMALE, Ahmed Nur",
+            "JIMALE, Ahmed Ali",
+            "JIMALE, Shaykh Ahmed Nur",
+            "JIMALE, Sheikh Ahmed",
+            "JUMALE, Ahmed Ali"
+        ],
+        "citizenships": [
+            "SO",
+            "DJ"
+        ],
+        "dates_of_birth": [
+            "1954-05-20"
+        ],
+        "entity_number": "6982",
+        "ids": [
+            {
+                "country": "SO",
+                "expiration_date": "2011-01-23",
+                "issue_date": "2001-10-01",
+                "number": "A0181988",
+                "type": "Passport"
+            }
+        ],
+        "name": "JIM'ALE, Ahmed Nur Ali",
+        "nationalities": [
+            "SO"
+        ],
+        "places_of_birth": [
+            "Eilbur, Somalia"
+        ],
+        "programs": [
+            "SDGT"
+        ],
+        "remarks": "Additional Djiboutian passport issued in 2010.",
+        "sdn_type": "Individual",
+        "source": "SDN",
+        "source_list_url": null,
+        "title": null
+    },
+    {
+        "addresses": [],
+        "alt_names": [
+            "IRAN BRIGHTNESS",
+            "BRIGHTNESS",
+            "MARIGOLD"
+        ],
+        "call_sign": null,
+        "entity_number": "11043",
+        "gross_registered_tonnage": "16621",
+        "gross_tonnage": "24065",
+        "ids": [
+            {
+                "country": "IR",
+                "expiration_date": null,
+                "issue_date": null,
+                "number": "IMO 9051648",
+                "type": "Vessel Registration Identification"
+            }
+        ],
+        "name": "PARSHAN",
+        "programs": [
+            "NPWMD"
+        ],
+        "remarks": null,
+        "sdn_type": "Vessel",
+        "source": "SDN",
+        "source_list_url": null,
+        "title": null,
+        "vessel_flag": "Iran",
+        "vessel_owner": "IRISL",
+        "vessel_type": "General Cargo"
+    }
+]

@@ -1,0 +1,1849 @@
+---
+- :post: Belgrade
+  :office_name: Belgrade, Serbia
+  :country: 
+  :state: 
+  :email: jane.kitson@trade.gov
+  :fax: "+381 11 706 4010"
+  :mail_instructions: 
+  :phone: "+381 11 706 4112"
+  :post_type: F
+  :address:
+  - US Embassy Belgrade
+  - Bul. Kneza Aleksandra Karadjordjevica 92
+  - 11000 Belgrade
+  :city: Belgrade
+  :id: ":Belgrade"
+- :post: European Union
+  :office_name: U.S. Mission to the European Union
+  :country: 
+  :state: 
+  :email: Office.BrusselsEC@trade.gov
+  :fax: "+32-2-811-5151"
+  :mail_instructions: 
+  :phone: "+32-2-811-4817"
+  :post_type: F
+  :address:
+  - U.S. Mission to the European Union
+  - U.S. Commercial Service
+  - Zinnerstraat 13 Rue Zinner
+  - BE-1000 Brussels
+  - "*****"
+  - 'Mailing Address:'
+  - U.S. Mission to the European Union
+  - U.S. Commercial Service
+  - Regentlaan 27 Boulevard du Regent
+  - BE-1000 Brussels
+  :city: 
+  :id: ":EuropeanUnion"
+- :post: Abu Dhabi
+  :office_name: Abu Dhabi
+  :country: AE
+  :state: 
+  :email: Office.Abudhabi@trade.gov
+  :fax: 971-2-414-2228
+  :mail_instructions: 'Work Week: Sunday - Thursday'
+  :phone: 971-2-414-2304
+  :post_type: F
+  :address:
+  - American Embassy
+  - Embassies District
+  - Plot 38, Sector W59-02
+  - Street No 4
+  - Abu Dhabi, UAE
+  :city: Abu Dhabi
+  :id: AE:AbuDhabi
+- :post: Dubai
+  :office_name: Dubai
+  :country: AE
+  :state: 
+  :email: Office.Dubai@trade.gov
+  :fax: "+971-4-354-7090"
+  :mail_instructions: Please allow 4-6 weeks for pouch delivery.
+  :phone: "+971-4-309-4000"
+  :post_type: F
+  :address:
+  - American Consulate General
+  - U.S. Commercial Service
+  - Umm Hurair 1, Bur Dubai
+  - Dubai, U.A.E.
+  :city: Dubai
+  :id: AE:Dubai
+- :post: Kabul
+  :office_name: Afghanistan, Kabul US Embassy
+  :country: AF
+  :state: 
+  :email: KoenigEW@state.gov
+  :fax: "-"
+  :mail_instructions: "-"
+  :phone: "+93 (0) 700-108-498"
+  :post_type: F
+  :address: []
+  :city: Kabul
+  :id: AF:Kabul
+- :post: Buenos Aires
+  :office_name: Buenos Aires
+  :country: AR
+  :state: 
+  :email: office.buenosaires@trade.gov
+  :fax: "(54-11) 5777-4203"
+  :mail_instructions: Please use the mailing address from U.S.
+  :phone: "(54-11) 5777-4753"
+  :post_type: F
+  :address:
+  - Av. Colombia 4300
+  - C1425GMN Buenos Aires
+  :city: Buenos Aires
+  :id: AR:BuenosAires
+- :post: Vienna
+  :office_name: Vienna
+  :country: AT
+  :state: 
+  :email: office.vienna@trade.gov
+  :fax: 011-43-1-310-6917
+  :mail_instructions: Please use the "street address" to mail any time-sensitive materials.
+    The Diplomatic Postal Office (DPO) uses domestic U.S. Postal Service rates but
+    does not provide express delivery..
+  :phone: 011-43-1-313-39-2296
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Boltzmanngasse 16
+  - A-1091 Vienna
+  :city: Vienna
+  :id: AT:Vienna
+- :post: Canberra
+  :office_name: Canberra
+  :country: AU
+  :state: 
+  :email: Office.Australia@trade.gov
+  :fax: 011-61-2-9221-0573
+  :mail_instructions: As above. Use street address if sending material via courier.
+  :phone: 011-61-2-9373-9205
+  :post_type: F
+  :address:
+  - American Embassy
+  - 'Attn: U.S. Commercial Service'
+  - Moonah Place
+  - Yarralumla ACT 2600
+  - AUSTRALIA
+  :city: Canberra
+  :id: AU:Canberra
+- :post: Perth
+  :office_name: Perth
+  :country: AU
+  :state: 
+  :email: office.australia@trade.gov
+  :fax: 011-61-8-9231-9444
+  :mail_instructions: 
+  :phone: 011-61-8-6144-5149
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - Level 4, 16 St. Georges Terrace
+  - Perth WA 6000 Australia
+  - http://www.export.gov/australia
+  :city: Perth
+  :id: AU:Perth
+- :post: Sydney
+  :office_name: Sydney
+  :country: AU
+  :state: 
+  :email: office.australia@trade.gov
+  :fax: 011-61-2-9221-0573
+  :mail_instructions: As above. Use street address if sending material via courier.
+  :phone: 011-61-2-9373-9205
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - Level 59, MLC Centre
+  - 19-29 Martin Place
+  - Sydney NSW 2000
+  :city: Sydney
+  :id: AU:Sydney
+- :post: Brussels
+  :office_name: U.S. Commercial Service Brussels
+  :country: BE
+  :state: 
+  :email: Office.Brussels@trade.gov
+  :fax: "+32 2 512 3644"
+  :mail_instructions: APO mail should be addressed to SCO
+  :phone: "+32 2 811 4496"
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Regentlaan 27 Boulevard du Regent
+  - 1000 Brussels
+  - Belgium
+  :city: Brussels
+  :id: BE:Brussels
+- :post: Sofia
+  :office_name: Sofia
+  :country: BG
+  :state: 
+  :email: Office.Sofia@trade.gov
+  :fax: 359-2-939-5735
+  :mail_instructions: Postage for both Pouch and APO is U.S. domestic mail rate.
+  :phone: 359-2-939-5784
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - 16, Kozyak St.
+  - 1408 Sofia
+  - Bulgaria
+  :city: Sofia
+  :id: BG:Sofia
+- :post: Belo Horizonte
+  :office_name: Belo Horizonte
+  :country: BR
+  :state: 
+  :email: Office.BeloHorizonte@trade.gov
+  :fax: "+55 31 3213 1575"
+  :mail_instructions: 
+  :phone: "+55 31 3213 1571"
+  :post_type: F
+  :address:
+  - Av. Contorno, 4520 - 8th floor
+  - Funcionarios
+  - 30110-028 Belo Horizonte (MG)
+  - Brazil
+  :city: Belo Horizonte
+  :id: BR:BeloHorizonte
+- :post: Brasilia
+  :office_name: Brasilia
+  :country: BR
+  :state: 
+  :email: Office.brasilia@trade.gov
+  :fax: 55-61-3312-7656
+  :mail_instructions: 
+  :phone: 55-61-3312-7418
+  :post_type: F
+  :address:
+  - SES - Av. das Nações, Quadra 801, Lote 03
+  - Brasilia - DF
+  - 70403-900
+  :city: Brasilia
+  :id: BR:Brasilia
+- :post: Recife
+  :office_name: Recife
+  :country: BR
+  :state: 
+  :email: Office.Recife@trade.gov
+  :fax: 55-81-3231-1906
+  :mail_instructions: 
+  :phone: 55-81-3416-3075
+  :post_type: F
+  :address:
+  - Rua Gonçalves Maia, 163 - Boa Vista
+  - 50070-060 - Recife – PE
+  :city: Recife
+  :id: BR:Recife
+- :post: Rio De Janeiro
+  :office_name: Rio de Janeiro
+  :country: BR
+  :state: 
+  :email: Office.riodejaneiro@trade.gov
+  :fax: 55-21-3823-2424
+  :mail_instructions: 
+  :phone: 55-21-3823-2000
+  :post_type: F
+  :address:
+  - Av. Presidente Wilson, 147 / 4º Andar
+  - Rio De Janeiro RJ 20030-020
+  :city: Rio De Janeiro
+  :id: BR:RioDeJaneiro
+- :post: Sao Paulo
+  :office_name: São Paulo
+  :country: BR
+  :state: 
+  :email: Office.SaoPaulo@trade.gov
+  :fax: 55/11/3250-5399
+  :mail_instructions: 
+  :phone: 55/11/3250-5172
+  :post_type: F
+  :address:
+  - Rua Henri Dunant, 700
+  - Chacara Santo Antonio
+  - 04709-110 - Sao Paulo - SP
+  - Brazil
+  :city: Sao Paulo
+  :id: BR:SaoPaulo
+- :post: Calgary
+  :office_name: Calgary - GBI Post
+  :country: CA
+  :state: 
+  :email: Office.Calgary@trade.gov
+  :fax: 403-266-4743
+  :mail_instructions: 
+  :phone: 403-265-2116
+  :post_type: F
+  :address:
+  - 10th floor
+  - 615 Macleod Trail SE
+  - Calgary AB T2G 4T8
+  :city: Calgary
+  :id: CA:Calgary
+- :post: Montreal
+  :office_name: Montreal
+  :country: CA
+  :state: 
+  :email: Office.Montreal@trade.gov
+  :fax: 514-398-0711
+  :mail_instructions: 
+  :phone: 514-398-9695, ext. 2220
+  :post_type: F
+  :address:
+  - 1155 St-Alexander St.
+  - Montreal, Quebec H3B 3Z1
+  :city: Montreal
+  :id: CA:Montreal
+- :post: Ottawa
+  :office_name: Ottawa
+  :country: CA
+  :state: 
+  :email: Office.Ottawa@trade.gov
+  :fax: 613/238-5999
+  :mail_instructions: 
+  :phone: 613/688-5217
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - 490 Sussex Drive
+  - Ottawa, Ontario K1N 1G8
+  :city: Ottawa
+  :id: CA:Ottawa
+- :post: Toronto
+  :office_name: Toronto
+  :country: CA
+  :state: 
+  :email: Office.Toronto@trade.gov
+  :fax: "(416) 595-5419"
+  :mail_instructions: For courier delivery, use the street address. For sending regular
+    mail, use the U.S. mailing address.
+  :phone: "(416) 595-5412"
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - 480 University Avenue, Suite 602
+  - Toronto, Ontario
+  - CANADA M5G 1V2
+  :city: Toronto
+  :id: CA:Toronto
+- :post: Santiago
+  :office_name: Santiago
+  :country: CL
+  :state: 
+  :email: Santiago.Office.Box@trade.gov
+  :fax: 011-56-22-330-3172
+  :mail_instructions: Send brochures ONLY via USPS to DPO. Other methods may result
+    in delay or high customs charges. Please put PRIORITY for any USPS mail.
+  :phone: 011-56-22-330-3316
+  :post_type: F
+  :address:
+  - U.S. Embassy/Department of Commerce
+  - Av. Andres Bello 2800, Las Condes
+  - Santiago, Chile 755-0006
+  :city: Santiago
+  :id: CL:Santiago
+- :post: Beijing
+  :office_name: Beijing
+  :country: CN
+  :state: 
+  :email: Beijing.Office.Box@mail.doc.gov
+  :fax: "(86-10) 8531-3701"
+  :mail_instructions: 
+  :phone: "(86-10) 8531-3000"
+  :post_type: F
+  :address:
+  - U.S. Commercial Service - Beijing
+  - No. 55 An Jia Lou Road,
+  - Chaoyang District
+  - Beijing 100600, China
+  :city: Beijing
+  :id: CN:Beijing
+- :post: Chengdu
+  :office_name: Chengdu
+  :country: CN
+  :state: 
+  :email: Office.Chengdu@trade.gov
+  :fax: "+86 28 85589221"
+  :mail_instructions: 
+  :phone: "+86 28 85583992"
+  :post_type: F
+  :address:
+  - No. 4, Lingshiguan Road
+  - Section 4, Renmin Nan Lu
+  - Chengdu, China 610041
+  :city: Chengdu
+  :id: CN:Chengdu
+- :post: Guangzhou
+  :office_name: Guangzhou
+  :country: CN
+  :state: 
+  :email: office.guangzhou@trade.gov
+  :fax: 011-86-20-3814-5353
+  :mail_instructions: Please mail via courier to street address if possible. Packages
+    send to Washington mailing address takes at least two weeks to arrive.
+  :phone: 011-86-20-3814-5000
+  :post_type: F
+  :address:
+  - American Consulate General Guangzhou
+  - US Commercial Service
+  - NO.43 Hua Jiu Road, Zhujian New Town
+  - Guangzhou, 510623
+  - China
+  :city: Guangzhou
+  :id: CN:Guangzhou
+- :post: Shanghai
+  :office_name: Shanghai
+  :country: CN
+  :state: 
+  :email: office.shanghai@trade.gov
+  :fax: 011-86-21-6279-7639
+  :mail_instructions: 
+  :phone: 011-86-21-6279-7630
+  :post_type: F
+  :address:
+  - Shanghai Center
+  - Suite 631, East Tower
+  - 1376 Nanjing Xi Lu
+  - Shanghai, China 200040
+  :city: Shanghai
+  :id: CN:Shanghai
+- :post: Shenyang
+  :office_name: Shenyang
+  :country: CN
+  :state: 
+  :email: Cathy.Feig@trade.gov
+  :fax: 011-86-24-2322-2206
+  :mail_instructions: 
+  :phone: 011-86-24-2322-1198
+  :post_type: F
+  :address:
+  - 52 Shi Si Wei Road, Heping District
+  - Shenyang, 110003
+  :city: Shenyang
+  :id: CN:Shenyang
+- :post: Wuhan
+  :office_name: Wuhan
+  :country: CN
+  :state: 
+  :email: "-"
+  :fax: 86-27-8555-7545
+  :mail_instructions: FPO mail will continue to be forwarded VIA Beijing
+  :phone: 86-27-8555-7725; 8555-7752
+  :post_type: F
+  :address:
+  - U.S. Commercial Service - Wuhan
+  - 47F New World International Trade Tower I
+  - NO. 568, Jianshe Avenue
+  - Hankou, Wuhan, 430022, China
+  :city: Wuhan
+  :id: CN:Wuhan
+- :post: Bogota
+  :office_name: Bogota - GBI Post
+  :country: CO
+  :state: 
+  :email: Office.Bogota@trade.gov
+  :fax: 011 571 275 4575 / 275 4575
+  :mail_instructions: Use US Priority mail. Do not use a courier
+  :phone: 011 571 275 2519
+  :post_type: F
+  :address:
+  - Embajada de los Estados Unidos de America
+  - Oficina Comercial
+  - Carrera 45 No 24B-27
+  - Bogota, D.C. COLOMBIA
+  :city: Bogota
+  :id: CO:Bogota
+- :post: San Jose
+  :office_name: San Jose
+  :country: CR
+  :state: 
+  :email: Office.SanJose@trade.gov
+  :fax: 506-2231-4783
+  :mail_instructions: If sent via UPS or Fedex, please write down "Diplomatic Cargo"
+    (to avoid import duties and waiting time on delivery)
+  :phone: 506 2519-2000 or 2220-2454
+  :post_type: F
+  :address:
+  - Embajada de Estados Unidos FCS
+  - Carretera a Pavas
+  - Frente al Centro Commercial del Oeste
+  - Pavas, San Jose
+  :city: San Jose
+  :id: CR:SanJose
+- :post: Prague
+  :office_name: Prague
+  :country: CZ
+  :state: 
+  :email: Office.Prague@trade.gov
+  :fax: 420-257-02-2810
+  :mail_instructions: For courier/express deliveries, use street address. Mailing
+    address from the U.S. is for official post only, but takes 2-3 weeks for delivery.
+  :phone: 420-257-022-434
+  :post_type: F
+  :address:
+  - Trziste 15
+  - 118 01 Praha 1
+  - Czech Republic
+  :city: Prague
+  :id: CZ:Prague
+- :post: Berlin
+  :office_name: Berlin
+  :country: DE
+  :state: 
+  :email: Office.Berlin@trade.gov
+  :fax: "+49 30 8305 1949"
+  :mail_instructions: Use APO address whenever possible
+  :phone: "+49 30 8305 1940"
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - Clayallee 170
+  - 14191 Berlin
+  :city: Berlin
+  :id: DE:Berlin
+- :post: Dusseldorf
+  :office_name: Dusseldorf
+  :country: DE
+  :state: 
+  :email: Dusseldorf.Office.Box@mail.doc.gov
+  :fax: "+49 211 737 767 67"
+  :mail_instructions: 
+  :phone: "+49 211 737 767 0"
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - Willi-Becker-Allee 10
+  - 40227 Dusseldorf
+  :city: Dusseldorf
+  :id: DE:Dusseldorf
+- :post: Frankfurt
+  :office_name: Frankfurt
+  :country: DE
+  :state: 
+  :email: Frankfurt.Office.Box@mail.doc.gov
+  :fax: "+49 69 7535 3171"
+  :mail_instructions: 
+  :phone: "+49 69 7535 3120"
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - Giessener Str. 30
+  - 60435 Frankfurt/Main
+  :city: Frankfurt
+  :id: DE:Frankfurt
+- :post: Munich
+  :office_name: Munich
+  :country: DE
+  :state: 
+  :email: office.munich@trade.gov
+  :fax: "+49 89 28 52 61"
+  :mail_instructions: 
+  :phone: "+49 89 2888 754"
+  :post_type: F
+  :address:
+  - American Consulate General
+  - U.S. Commercial Service
+  - Koeniginstr. 5
+  - 80539 Munich
+  :city: Munich
+  :id: DE:Munich
+- :post: Copenhagen
+  :office_name: Copenhagen
+  :country: DK
+  :state: 
+  :email: Copenhagen.Office.Box@trade.gov
+  :fax: n/a
+  :mail_instructions: 
+  :phone: 011-45-33417315
+  :post_type: F
+  :address:
+  - Commercial Service Copenhagen
+  - Dag Hammarskjölds Alle 24
+  - DK-2100 Copenhagen O
+  :city: Copenhagen
+  :id: DK:Copenhagen
+- :post: Santo Domingo
+  :office_name: Santo Domingo
+  :country: DO
+  :state: 
+  :email: office.santodomingo@trade.gov
+  :fax: 1 809-920-0267
+  :mail_instructions: Use weight and space restrictions for APO.
+  :phone: 1 809-227-2121
+  :post_type: F
+  :address:
+  - Ave. Pedro Henriquez Ureña No. 133
+  - Edificio Empresarial Reyna l, 5th floor
+  - La Esperilla
+  - Santo Domingo, DR
+  :city: Santo Domingo
+  :id: DO:SantoDomingo
+- :post: Algiers
+  :office_name: Algiers
+  :country: DZ
+  :state: 
+  :email: algiers
+  :fax: "+213-21-693-132"
+  :mail_instructions: 
+  :phone: "+213-770-082-000"
+  :post_type: F
+  :address:
+  - 5, Chemin Cheikh Bachir Ibrahimi, El Biar, Algiers, Algeria.
+  :city: Algiers
+  :id: DZ:Algiers
+- :post: Cairo
+  :office_name: Cairo
+  :country: EG
+  :state: 
+  :email: Office.Cairo@trade.gov
+  :fax: 011-20-2-795-8368
+  :mail_instructions: By APO
+  :phone: 011-20-2-797-2340
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - 8 Kamal El Din Salah St.
+  - Garden City, Cairo
+  - EGYPT
+  :city: Cairo
+  :id: EG:Cairo
+- :post: Madrid
+  :office_name: Madrid
+  :country: ES
+  :state: 
+  :email: Madrid.Office.Box@trade.gov
+  :fax: "+34-91-563-0859"
+  :mail_instructions: 
+  :phone: "+34-91-564-8976"
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - Embassy of the United States of America
+  - Serrano, 75
+  - 28006 Madrid
+  - SPAIN
+  :city: Madrid
+  :id: ES:Madrid
+- :post: Helsinki
+  :office_name: Helsinki
+  :country: FI
+  :state: 
+  :email: helsinki.office.box@mail.doc.gov
+  :fax: "(358) 9 616 25130"
+  :mail_instructions: 
+  :phone: "(358) 9 616 250"
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Itainen Puistotie 14 B
+  - FIN-00140 Helsinki
+  - Finland
+  :city: Helsinki
+  :id: FI:Helsinki
+- :post: Paris
+  :office_name: Paris
+  :country: FR
+  :state: 
+  :email: Paris.Office.Box@trade.gov
+  :fax: "[33] (0)1 43 12 70 50"
+  :mail_instructions: 'For international mail, please address items to: U.S. Embassy,
+    U.S. Commercial Service - NEO, 18 avenue Gabriel, 75008 Paris cedex 8. Note: Packages
+    will be returned if addressed to the Embassy''s physical street address.'
+  :phone: "[33] (0)1 43 12 70 57"
+  :post_type: F
+  :address:
+  - U.S. Embassy
+  - U.S. Commercial Service
+  - 2, avenue Gabriel
+  - 75008 Paris cedex 08
+  - France
+  - "[office location: 14 bd Haussmann, 4th floor]"
+  :city: Paris
+  :id: FR:Paris
+- :post: London
+  :office_name: London
+  :country: GB
+  :state: 
+  :email: Office.London@trade.gov
+  :fax: "(44-20) 7894-0020"
+  :mail_instructions: 
+  :phone: "(44-20) 7894-0419"
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - 24 Grosvenor Square
+  - London, W1A 1AE
+  - United Kingdom
+  :city: London
+  :id: GB:London
+- :post: Accra
+  :office_name: Accra
+  :country: GH
+  :state: 
+  :email: accra.office.box@mail.doc.gov
+  :fax: "+233-302-741401"
+  :mail_instructions: 
+  :phone: "+233-302-741-870"
+  :post_type: F
+  :address:
+  - "# 24 Fourth Circular Rd."
+  - Cantonments, Accra
+  - P.O. Box 194
+  - Accra, Ghana
+  :city: Accra
+  :id: GH:Accra
+- :post: Athens
+  :office_name: Athens
+  :country: GR
+  :state: 
+  :email: Office.Athens@trade.gov
+  :fax: "+30 210 721 8660"
+  :mail_instructions: For courier mail use street address; For mailing other than
+    from the U.S. use street address but do not/do not send packages to the att. of
+    FSNs.
+  :phone: "+30 210 720 2303 / 720 2302"
+  :post_type: F
+  :address:
+  - U.S. Embassy
+  - U.S. Commercial Service
+  - 91 Vasilissis Sophias Avenue
+  - GR-101 60 Athens
+  :city: Athens
+  :id: GR:Athens
+- :post: Guatemala City
+  :office_name: Guatemala City - GBI Post
+  :country: GT
+  :state: 
+  :email: Office.Guatemala@trade.gov
+  :fax: 011-502-2331-7373
+  :mail_instructions: Please consult with us before shipping any material/correspondence
+    to our office.
+  :phone: 011-502-2326-4000
+  :post_type: F
+  :address:
+  - Avenida de la Reforma 7-01, Zona 10
+  - 01010 Guatemala
+  :city: Guatemala City
+  :id: GT:GuatemalaCity
+- :post: Hong Kong
+  :office_name: Hong Kong
+  :country: HK
+  :state: 
+  :email: office.hongkong@trade.gov
+  :fax: 011-852-2845-9800
+  :mail_instructions: For courier delivery, use the street address. For sending regular
+    mail or pouch, use the mailing address from U.S.
+  :phone: 011-852-2521-1467
+  :post_type: F
+  :address:
+  - American Consulate General
+  - U.S. Commercial Service
+  - 26 Garden Road, Central
+  - Hong Kong
+  :city: Hong Kong
+  :id: HK:HongKong
+- :post: Tegucigalpa
+  :office_name: Tegucigalpa – GBI Post
+  :country: HN
+  :state: 
+  :email: Office.Tegucigalpa@trade.gov
+  :fax: 011-504-2238-2888
+  :mail_instructions: 
+  :phone: 011-504-2236-9320
+  :post_type: F
+  :address:
+  - Embajada Americana
+  - U.S. Commercial Service
+  - Avenida La Paz
+  - Tegucigalpa M.D.C., Honduras
+  :city: Tegucigalpa
+  :id: HN:Tegucigalpa
+- :post: Zagreb
+  :office_name: Zagreb
+  :country: HR
+  :state: 
+  :email: Zagreb.Office.Box@trade.gov
+  :fax: 011-385-1-661-2446
+  :mail_instructions: Please allow three weeks if using the above State Dept pouch
+    address
+  :phone: 011-385-1-661-2224
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - American Embassy
+  - Thomasa Jeffersona 2
+  - 10010 Zagreb, Croatia
+  :city: Zagreb
+  :id: HR:Zagreb
+- :post: Budapest
+  :office_name: Budapest
+  :country: HU
+  :state: 
+  :email: Office.Budapest@trade.gov
+  :fax: 011-36-1-475-4676
+  :mail_instructions: Please note that if the Washington DC address is used, expect
+    3-4 weeks for delivery. For courier service, please use the Budapest address.
+  :phone: 011-36-1-475-4090
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Szabadsag Ter 7-9
+  - Bank Center, Granit Tower--1st Floor
+  - H-1054 Budapest
+  :city: Budapest
+  :id: HU:Budapest
+- :post: Jakarta
+  :office_name: Jakarta
+  :country: ID
+  :state: 
+  :email: Jakarta.Office.Box@mail.doc.gov
+  :fax: "(62-21) 526-2855"
+  :mail_instructions: 
+  :phone: "(62-21) 526-2850"
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Wisma Metropolitan II, 3rd Floor
+  - Jl. Jendral Sudirman Kav. 29-31
+  - Jakarta 12920
+  :city: Jakarta
+  :id: ID:Jakarta
+- :post: Dublin
+  :office_name: Dublin
+  :country: IE
+  :state: 
+  :email: office.dublin@trade.gov
+  :fax: 353-1-667-4754
+  :mail_instructions: For courier delivery, use street address. For sending regular
+    mail, use mailing address.
+  :phone: 353-1-237-5850
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - 42 Elgin Road, Ballsbridge,
+  - Dublin 4
+  :city: Dublin
+  :id: IE:Dublin
+- :post: Jerusalem
+  :office_name: West Bank
+  :country: IL
+  :state: 
+  :email: office.jerusalem@trade.gov
+  :fax: "(972-2) 623-5132"
+  :mail_instructions: 
+  :phone: "(972-2) 625-5201"
+  :post_type: F
+  :address:
+  - Ground Floor
+  - 19 Keren Hayesod Street
+  - 91008 JERUSALEM
+  :city: Jerusalem
+  :id: IL:Jerusalem
+- :post: Tel Aviv
+  :office_name: Tel Aviv
+  :country: IL
+  :state: 
+  :email: office.telaviv@trade.gov
+  :fax: "+972-3-519-8530"
+  :mail_instructions: 'Work Week: Monday - Friday'
+  :phone: "+972-3 -519-8500"
+  :post_type: F
+  :address:
+  - 71 Hayarkon Street
+  - Tel Aviv 63903
+  :city: Tel Aviv
+  :id: IL:TelAviv
+- :post: Ahmedabad
+  :office_name: Ahmedabad
+  :country: IN
+  :state: 
+  :email: office.ahmedabad@trade.gov
+  :fax: "+91 79 2656 0763"
+  :mail_instructions: 
+  :phone: "+91 79 2656 5210"
+  :post_type: F
+  :address:
+  - 'JMC House, Suite #401/402'
+  - Ambawadi
+  - Opp. Parimal Garden
+  :city: Ahmedabad
+  :id: IN:Ahmedabad
+- :post: Bangalore
+  :office_name: Bangalore
+  :country: IN
+  :state: 
+  :email: office.bangalore@trade.gov
+  :fax: "+91 80 2220 6405"
+  :mail_instructions: 
+  :phone: "+91 80 2220 6401"
+  :post_type: F
+  :address:
+  - S-2, Esteem Red Cross Bhavan
+  - 26, Race Course Road
+  - Bangalore 560001, India
+  :city: Bangalore
+  :id: IN:Bangalore
+- :post: Chennai
+  :office_name: Chennai
+  :country: IN
+  :state: 
+  :email: office.chennai@trade.gov
+  :fax: "+91 44 2857 4212"
+  :mail_instructions: 
+  :phone: "+91 44 2857 4477"
+  :post_type: F
+  :address:
+  - 220 Anna Salai
+  - Chennai 600006
+  :city: Chennai
+  :id: IN:Chennai
+- :post: Hyderabad
+  :office_name: Hyderabad
+  :country: IN
+  :state: 
+  :email: office.hyderabad@trade.gov
+  :fax: "+91 40 2330 0130"
+  :mail_instructions: 
+  :phone: "+91 40 2330 5000; 2330 4025"
+  :post_type: F
+  :address:
+  - "# 152, Hotel Taj Deccan, Banjara Hills"
+  - Hyderabad - 500 034. INDIA
+  :city: Hyderabad
+  :id: IN:Hyderabad
+- :post: Kolkata
+  :office_name: Kolkata (Calcutta)
+  :country: IN
+  :state: 
+  :email: office.calcutta@trade.gov
+  :fax: "+91 33 3984 6353"
+  :mail_instructions: Please allow 3 weeks
+  :phone: "+91 33 3984 6402"
+  :post_type: F
+  :address:
+  - The American Center
+  - 38-A, Jawaharlal Nehru Road,
+  - Kolkata (Calcutta) 700 071
+  :city: Kolkata
+  :id: IN:Kolkata
+- :post: Mumbai
+  :office_name: Mumbai
+  :country: IN
+  :state: 
+  :email: office.mumbai@trade.gov
+  :fax: "+91 22 2672 4400"
+  :mail_instructions: Please allow three weeks via pouch
+  :phone: "+91 22 2672 4000"
+  :post_type: F
+  :address:
+  - US Commercial Service
+  - American Consulate General
+  - C-49, G-Block, Bandra Kurla Complex (BKC)
+  - Bandra (E), Mumbai - 400 051.
+  :city: Mumbai
+  :id: IN:Mumbai
+- :post: New Delhi
+  :office_name: New Delhi
+  :country: IN
+  :state: 
+  :email: office.newdelhi@trade.gov
+  :fax: "+91 11 2331 5172"
+  :mail_instructions: Please allow 3 weeks for pouch
+  :phone: "+91 11 2347 2000"
+  :post_type: F
+  :address:
+  - The American Center
+  - 24 Kasturba Gandhi Marg
+  - New Delhi 110 001
+  :city: New Delhi
+  :id: IN:NewDelhi
+- :post: Baghdad
+  :office_name: Baghdad
+  :country: IQ
+  :state: 
+  :email: Rafah.Al-Emami@trade.gov
+  :fax: n/a
+  :mail_instructions: 'ATTN: Senior Commercial Officer'
+  :phone: 1-301-985-8841 ext 2937
+  :post_type: F
+  :address:
+  - U.S. Embassy
+  - International Zone
+  - Baghdad, Iraq
+  :city: Baghdad
+  :id: IQ:Baghdad
+- :post: Milan
+  :office_name: Milan
+  :country: IT
+  :state: 
+  :email: Michael.Richardson@trade.gov
+  :fax: 011-39-02-659-6561
+  :mail_instructions: 
+  :phone: 011-39-02-626-8851
+  :post_type: F
+  :address:
+  - American Consulate General
+  - U.S. Commercial Service
+  - Via Principe Amedeo 2
+  - 20121 Milan
+  - Italy
+  :city: Milan
+  :id: IT:Milan
+- :post: Rome
+  :office_name: Rome
+  :country: IT
+  :state: 
+  :email: Office.Rome@trade.gov
+  :fax: 011-39-06-4674-2113
+  :mail_instructions: 
+  :phone: 011-39-06-4674-2382
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - Via Vittorio Veneto 119/A
+  - 00187 Rome
+  - Italy
+  :city: Rome
+  :id: IT:Rome
+- :post: Amman
+  :office_name: Amman
+  :country: JO
+  :state: 
+  :email: office.amman@trade.gov
+  :fax: 011-962-6-592-0146
+  :mail_instructions: 'Work Week: Sunday - Thursday'
+  :phone: 011-962-6-590-6632
+  :post_type: F
+  :address:
+  - American Embassy
+  - Commercial Section
+  - Umaween Street, Abdoun Area
+  - P.O. Box 354
+  - Amman 11118 Jordan
+  :city: Amman
+  :id: JO:Amman
+- :post: Osaka-Kobe
+  :office_name: Osaka-Kobe
+  :country: JP
+  :state: 
+  :email: Office.Osaka-Kobe@trade.gov
+  :fax: 81-6-6315-5963
+  :mail_instructions: Regular post or pouch mail using above Mailing Address, or international
+    courier delivery using the above Street Address.
+  :phone: 81-6-6315-5957
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - 2-11-5 Nishitenma, Kita-Ku
+  - Osaka 530-8543
+  :city: Osaka-Kobe
+  :id: JP:OsakaKobe
+- :post: Tokyo
+  :office_name: Tokyo
+  :country: JP
+  :state: 
+  :email: Office.Tokyo@trade.gov
+  :fax: 81-3-3589-4235
+  :mail_instructions: 
+  :phone: 81-3-3224-5060
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - 1-10-5 Akasaka, Minato-ku
+  - Tokyo 107-8420
+  :city: Tokyo
+  :id: JP:Tokyo
+- :post: Nairobi
+  :office_name: Nairobi
+  :country: KE
+  :state: 
+  :email: Office.Nairobi@trade.gov
+  :fax: 254-20-363-6722
+  :mail_instructions: 
+  :phone: 254-20-3636000 ext. 6424
+  :post_type: F
+  :address:
+  - U.N. Avenue Gigiri
+  - P.O. Box 606 Village Market
+  - 00621 Nairobi
+  :city: Nairobi
+  :id: KE:Nairobi
+- :post: Seoul
+  :office_name: Seoul
+  :country: KR
+  :state: 
+  :email: Office.Seoul@trade.gov
+  :fax: 82-2-739-1628
+  :mail_instructions: 
+  :phone: 82-2-397-4535
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - 188, Sejong-daero, Jongno-gu
+  - Seoul 110-710
+  :city: Seoul
+  :id: KR:Seoul
+- :post: Kuwait City
+  :office_name: Kuwait City
+  :country: KW
+  :state: 
+  :email: kuwait.city.office.box@trade.gov
+  :fax: 965 2259-1271
+  :mail_instructions: 'Work Week: Sunday-Thursday EST + 8 (winter) or est+ 7 (April-Oct)'
+  :phone: 965 2259-1011
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - Masjed Al Aqsa St.
+  - Block 14, Bayan, Kuwait
+  - P.O. Box 77, Safat, 13001
+  - Kuwait City, Kuwait
+  :city: Kuwait City
+  :id: KW:KuwaitCity
+- :post: Almaty
+  :office_name: Almaty
+  :country: KZ
+  :state: 
+  :email: office.almaty@trade.gov
+  :fax: 7 (727) 250-0777
+  :mail_instructions: Send items to US mailing address if at all possible. We incur
+    high brokerage fees for courier shipments to our Almaty address.
+  :phone: 7 (727) 727-250-7612, ext 6490
+  :post_type: F
+  :address:
+  - U.S. Consulate General - Almaty
+  - U.S. Commercial Service
+  - 41 Kazibek bi St
+  - 050010, Almaty, Kazakhstan
+  :city: Almaty
+  :id: KZ:Almaty
+- :post: Beirut
+  :office_name: Beirut
+  :country: LB
+  :state: 
+  :email: Naaman.Tayyar@trade.gov
+  :fax: 961-4-541-788
+  :mail_instructions: 'Work Week: Monday - Friday'
+  :phone: 961-4-544-860
+  :post_type: F
+  :address:
+  - Commercial Section
+  - American Embassy
+  - PO Box 70-480
+  - Awkar, Lebanon
+  :city: Beirut
+  :id: LB:Beirut
+- :post: Tripoli
+  :office_name: Tripoli
+  :country: LY
+  :state: 
+  :email: Fathi.Hamidan@trade.gov
+  :fax: 218-21-3622456
+  :mail_instructions: Contact Post for appropriate mailing address
+  :phone: 218-913690680
+  :post_type: F
+  :address:
+  - U.S. Embassy| Walie Al-Ahed Road-Sidi Slim Area | Tripoli | Libya
+  :city: Tripoli
+  :id: LY:Tripoli
+- :post: Casablanca
+  :office_name: Casablanca
+  :country: MA
+  :state: 
+  :email: Casablanca.Office.Box@mail.doc.gov
+  :fax: 212-522-22-02-59
+  :mail_instructions: 
+  :phone: 212-522-26-45-50
+  :post_type: F
+  :address:
+  - 8, blvd. Moulay Youssef
+  - Casablanca
+  :city: Casablanca
+  :id: MA:Casablanca
+- :post: Guadalajara
+  :office_name: Guadalajara
+  :country: MX
+  :state: 
+  :email: guadalajara.office.box@mail.doc.gov
+  :fax: 52-33-3615-7665
+  :mail_instructions: Send promotional materials for Gold Keys, IPSs, shows, missions,
+    etc. via express mail courier service to the street address. Do not use the Laredo
+    address. Specify "no commercial value" on the mailing label.
+  :phone: 52-33-3615-1140
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - World Trade Center, Torre Pacifico piso 4
+  - Mariano Otero No. 1249
+  - Col. Rinconada del Bosque
+  - 44530 Guadalajara, JAL
+  - Mexico
+  :city: Guadalajara
+  :id: MX:Guadalajara
+- :post: Mexico City
+  :office_name: Mexico City
+  :country: MX
+  :state: 
+  :email: office.mexico@mail.doc.gov
+  :fax: 52-55-5566-1115
+  :mail_instructions: All promotional materials for Gold Keys, missions, IPSs, shows,
+    etc. should be sent to the street address using a courier service. Using regular
+    mail or the P.O Box address will delay delivery. On mailing label, claim "no commercial
+    value."
+  :phone: 52-55-5140-2600
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service - Mexico City
+  - Liverpool 31, Col. Juarez
+  - 06600 Mexico, D.F.
+  :city: Mexico City
+  :id: MX:MexicoCity
+- :post: Monterrey
+  :office_name: Monterrey
+  :country: MX
+  :state: 
+  :email: John.Howell@trade.gov
+  :fax: "(52-81) 8047-3788"
+  :mail_instructions: 
+  :phone: "(52-81) 8047-3223"
+  :post_type: F
+  :address:
+  - American Consulate General Monterrey
+  - U.S. Commercial Service
+  - Ave. Constitucion 411, Poniente
+  - 64000 Monterrey, NL
+  :city: Monterrey
+  :id: MX:Monterrey
+- :post: Kuala Lumpur
+  :office_name: Kuala Lumpur
+  :country: MY
+  :state: 
+  :email: Kuala.Lumpur.Office.Box@trade.gov
+  :fax: 60-3-2142-1866
+  :mail_instructions: 'Work Week: Monday - Friday'
+  :phone: 60-3-2168-5000
+  :post_type: F
+  :address:
+  - US Embassy Kuala Lumpur
+  - US Commercial Service
+  - 376 Jalan Tun Razak
+  - 50400 Kuala Lumpur
+  :city: Kuala Lumpur
+  :id: MY:KualaLumpur
+- :post: Lagos
+  :office_name: Lagos
+  :country: NG
+  :state: 
+  :email: Lagos.Office.Box@mail.doc.gov
+  :fax: N/A
+  :mail_instructions: U.S. Mail, Courier services (e.g. Fedex, UPS) accepted. Package
+    size/weight restrictions.
+  :phone: 011-234-1 460-3581
+  :post_type: F
+  :address:
+  - American Consulate General
+  - US Commercial Service
+  - 2 Walter Carrington Crescent, Victoria Island
+  - Lagos, Nigeria
+  :city: Lagos
+  :id: NG:Lagos
+- :post: The Hague
+  :office_name: The Hague
+  :country: NL
+  :state: 
+  :email: Office.Thehague@trade.gov
+  :fax: N/A
+  :mail_instructions: 
+  :phone: "+31-70-3102417"
+  :post_type: F
+  :address:
+  - American Embassy
+  - Lange Voorhout 102
+  - 2514 EJ The Hague
+  :city: The Hague
+  :id: NL:TheHague
+- :post: Oslo
+  :office_name: Oslo
+  :country: 'NO'
+  :state: 
+  :email: office.oslo@trade.gov
+  :fax: n/a
+  :mail_instructions: http://export.gov/norway/
+  :phone: "(47) 21 30 88 66"
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - Henrik Ibsens gate 48
+  - N-0244 Oslo
+  :city: Oslo
+  :id: NO:Oslo
+- :post: Wellington
+  :office_name: Wellington
+  :country: NZ
+  :state: 
+  :email: Office.Wellington@trade.gov
+  :fax: 011-644-473-0770
+  :mail_instructions: 
+  :phone: 011-644-462-6002
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - American Embassy
+  - 29 Fitzherbert Terrace
+  - Thorndon, Wellington
+  :city: Wellington
+  :id: NZ:Wellington
+- :post: Panama City
+  :office_name: Panama City
+  :country: PA
+  :state: 
+  :email: enrique.tellez@trade.gov
+  :fax: "(507) 317-5573"
+  :mail_instructions: For courier street address, for regular mail from any post the
+    mailing address
+  :phone: "(507) 317-5000"
+  :post_type: F
+  :address:
+  - Antigua Base de Clayton
+  - Edificio 783
+  - Calle Demetrio Basilio Lakas
+  - Panama, Rep. de Panama
+  :city: Panama City
+  :id: PA:PanamaCity
+- :post: Lima
+  :office_name: Lima
+  :country: PE
+  :state: 
+  :email: Office.Lima@trade.gov
+  :fax: 011-511-434-3041
+  :mail_instructions: 'We strongly prefer that you use US mail addressed to our Pouch
+    address. For courier service, please use the street address. Note: for courier
+    service, please specify that you are sending documents with no commercial value.
+    Thank you!'
+  :phone: 011-511-434-3040 / 618-2442
+  :post_type: F
+  :address:
+  - U.S. Embassy
+  - Commercial Section
+  - Avenida La Encalada Cuadra 17 s/n
+  - Monterrico, Surco
+  - Lima 33 - Peru
+  :city: Lima
+  :id: PE:Lima
+- :post: Manila
+  :office_name: Manila
+  :country: PH
+  :state: 
+  :email: businessphilippines@trade.gov
+  :fax: 011-632-521-0416
+  :mail_instructions: 
+  :phone: 011-632-301-6366
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - Embassy of the United States of America
+  - 1201 Roxas Boulevard
+  - Manila 0930, Philippines
+  :city: Manila
+  :id: PH:Manila
+- :post: Islamabad
+  :office_name: Islamabad
+  :country: PK
+  :state: 
+  :email: Tariq.Sayeed@trade.gov
+  :fax: 92-51-282-3981
+  :mail_instructions: 'Use APO address for regular mail. FEDEX to the street address.
+    Work Week: Monday - Friday'
+  :phone: 92-51-2080-2530
+  :post_type: F
+  :address:
+  - American Embassy
+  - Diplomatic Enclave
+  - Ramna-5
+  - Islamabad, PAKISTAN
+  :city: Islamabad
+  :id: PK:Islamabad
+- :post: Karachi
+  :office_name: Karachi
+  :country: PK
+  :state: 
+  :email: Malik.Attiq@trade.gov
+  :fax: 92-21-3561-2413
+  :mail_instructions: Mail care of SCO in Islamabad
+  :phone: 92-21-3527-5017
+  :post_type: F
+  :address:
+  - 3, 4, 5, New TPX Area, Mai Kolachi Road,
+  - Karachi, Pakistan.
+  :city: Karachi
+  :id: PK:Karachi
+- :post: Lahore
+  :office_name: Lahore
+  :country: PK
+  :state: 
+  :email: Aftab.Qamar@trade.gov
+  :fax: 92-42-603-4229
+  :mail_instructions: Mail APO care of SCO in Islamabad.
+  :phone: 92-42-603-4000
+  :post_type: F
+  :address:
+  - American Consulate
+  - 50 Shahrah-E-Bin Badees
+  - Lahore
+  :city: Lahore
+  :id: PK:Lahore
+- :post: Warsaw
+  :office_name: Warsaw
+  :country: PL
+  :state: 
+  :email: Warsaw.Office.Box@trade.gov
+  :fax: 48 22 621 6327
+  :mail_instructions: 
+  :phone: 48 22 625 4374
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - American Embassy
+  - IPC Business Center
+  - Poznanska 2/4
+  - 00-680 Warsaw
+  :city: Warsaw
+  :id: PL:Warsaw
+- :post: Lisbon
+  :office_name: Lisbon
+  :country: PT
+  :state: 
+  :email: lisbon.office.box@mail.doc.gov
+  :fax: 011-351-21-726-8914
+  :mail_instructions: When using courier, please use DHL or UPS to the street address
+  :phone: 011-351-21-770 2528 / 727 3300
+  :post_type: F
+  :address:
+  - American Embassy Lisbon
+  - U.S. Commercial Service
+  - Avenida das Forcas Armadas
+  - 1649-044 Lisbon
+  :city: Lisbon
+  :id: PT:Lisbon
+- :post: Doha
+  :office_name: Doha
+  :country: QA
+  :state: 
+  :email: Robert.Dunn@trade.gov
+  :fax: 974-4488-4163
+  :mail_instructions: 
+  :phone: 974-4496-6000
+  :post_type: F
+  :address:
+  - United States Embassy - Commercial Section
+  - 22nd February Street
+  - Al-Luqta
+  - Doha
+  - State of Qatar
+  :city: Doha
+  :id: QA:Doha
+- :post: Bucharest
+  :office_name: Bucharest
+  :country: RO
+  :state: 
+  :email: office.bucharest@trade.gov
+  :fax: "(40-21) 316-0690"
+  :mail_instructions: Courier delivery using the above Street Address; by pouch using
+    the above Mailing address.
+  :phone: "(40-21) 200-3372"
+  :post_type: F
+  :address:
+  - Commercial Section
+  - U.S. Embassy
+  - 4-6, Dr. Liviu Librescu Blvd.,
+  - District 1, Bucharest 015118,
+  - Romania
+  :city: Bucharest
+  :id: RO:Bucharest
+- :post: Moscow
+  :office_name: Moscow
+  :country: RU
+  :state: 
+  :email: Moscow.Office.Box@trade.gov
+  :fax: 7-495-728-5585
+  :mail_instructions: All couriered items should be sent via DHL - DO NOT USE FedEx
+  :phone: 7-495-728-5580
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Bolshoy Deviatinsky Pereulok, 8
+  - Moscow, 121099
+  :city: Moscow
+  :id: RU:Moscow
+- :post: St. Petersburg
+  :office_name: St. Petersburg
+  :country: RU
+  :state: 
+  :email: StPetersburg.Office.Box@trade.gov
+  :fax: 7-812-326-2561
+  :mail_instructions: "(Packages sent by UPS, FEDEX, DHL, etc should be sent via:
+    American Embassy, GSO Warehouse Takoraudantie 4 00700 Helsinki, Finland (for American
+    Consulate General St. Petersburg, FCS)"
+  :phone: 7-812-326-2560
+  :post_type: F
+  :address:
+  - U.S. Consulate General
+  - U.S. Commercial Service
+  - 15 Ulitsa Furshtatskaya
+  - St. Petersburg 191028
+  - Russia
+  :city: St. Petersburg
+  :id: RU:StPetersburg
+- :post: Dhahran
+  :office_name: Dhahran
+  :country: SA
+  :state: 
+  :email: Office.Dhahran@trade.gov
+  :fax: "+966-(0)13-330-2190"
+  :mail_instructions: 
+  :phone: "+966-(0)13-330-3200"
+  :post_type: F
+  :address:
+  - Prince Faisal bin Fahad St., between Aramco HQ and the old Dhahran Airport
+  - Dhahran
+  - P.O. Box 38955, Dhahran (Doha) 31942
+  :city: Dhahran
+  :id: SA:Dhahran
+- :post: Jeddah
+  :office_name: Jeddah
+  :country: SA
+  :state: 
+  :email: Office.Jeddah@trade.gov
+  :fax: "+966-(0)12-664-4148"
+  :mail_instructions: 
+  :phone: "+966-(0)12-667-0080"
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - American Consulate General
+  - Palestine Rd., Ruwais
+  - P. O. Box 149
+  - Jeddah 21411, Saudi Arabia
+  :city: Jeddah
+  :id: SA:Jeddah
+- :post: Riyadh
+  :office_name: Riyadh
+  :country: SA
+  :state: 
+  :email: Office.Riyadh@trade.gov
+  :fax: "+966-(0)11-488-3237"
+  :mail_instructions: 'Work Week: Saturday - Wednesday'
+  :phone: "+966-(0)11-488-3800"
+  :post_type: F
+  :address:
+  - 'Street Address (not Mailing Address):'
+  - American Embassy
+  - Abdullah al-Sahmi St.
+  - Diplomatic Quarter
+  - Riyadh 11693, Saudi Arabia
+  - 'Mailing Address (Local):'
+  - American Embassy
+  - P.O. Box 94309
+  - Riyadh 11693, Saudi Arabia
+  :city: Riyadh
+  :id: SA:Riyadh
+- :post: Stockholm
+  :office_name: Stockholm
+  :country: SE
+  :state: 
+  :email: Stockholm.office@trade.gov
+  :fax: N/A
+  :mail_instructions: Clients should note that correspondence sent to the U.S. mailing
+    address takes about 15 days to reach Stockholm. Time-sensitive materials should
+    be sent either by U.S. mail to the street address, or via courier or express delivery
+    service.
+  :phone: 46-8-783-5346
+  :post_type: F
+  :address:
+  - Embassy of the United States
+  - US Commercial Service
+  - Dag Hammarskjölds Väg 31
+  - SE -115 89, Stockholm
+  - SWEDEN
+  :city: Stockholm
+  :id: SE:Stockholm
+- :post: Singapore
+  :office_name: Singapore
+  :country: SG
+  :state: 
+  :email: office.singapore@trade.gov
+  :fax: 65-6476-9080
+  :mail_instructions: 
+  :phone: 65-6476-9037
+  :post_type: F
+  :address:
+  - American Embassy
+  - U.S. Commercial Service
+  - 27 Napier Road
+  - Singapore
+  - '258508'
+  :city: Singapore
+  :id: SG:Singapore
+- :post: Bratislava
+  :office_name: Bratislava
+  :country: SK
+  :state: 
+  :email: Office.Bratislava@trade.gov
+  :fax: "+421 2 5922 3345"
+  :mail_instructions: 'When sending mail to our local address or by courier service
+    package (FedEx, DHL, etc.), please use the following address: Americke Velvyslanectvo,
+    U.S. Commercial Service, Hviezdoslavovo namestie 5, 811 02 Bratislava, Slovak
+    Republic'
+  :phone: "+421 2 5922 3222"
+  :post_type: F
+  :address:
+  - Embassy of the United States of America
+  - U.S. Commercial Service
+  - Hviezdoslavovo nam.5
+  - 811 02 Bratislava
+  :city: Bratislava
+  :id: SK:Bratislava
+- :post: San Salvador
+  :office_name: San Salvador – GBI Post
+  :country: SV
+  :state: 
+  :email: office.sansalvador@trade.gov
+  :fax: "(503) 2501-3067 or 2298-0711"
+  :mail_instructions: Courier services must be addressed to the local Street Address,
+    Attention FCS Office
+  :phone: "(503) 2501-3211"
+  :post_type: F
+  :address:
+  - U.S. Embassy (FCS)
+  - Final Blvd. Santa Elena, Antiguo Cuscatlan, La Libertad, El Salvador, C.A.
+  :city: San Salvador
+  :id: SV:SanSalvador
+- :post: Bangkok
+  :office_name: Bangkok
+  :country: TH
+  :state: 
+  :email: Office.Bangkok@trade.gov
+  :fax: 66-2-255-2915
+  :mail_instructions: 
+  :phone: 66-2-205-5090
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - GPF Witthayu, Tower A, Suite 302
+  - 93/1 Wireless Road,
+  - Pathumwan, Bangkok 10330
+  :city: Bangkok
+  :id: TH:Bangkok
+- :post: Ankara
+  :office_name: Ankara
+  :country: TR
+  :state: 
+  :email: Office.Ankara@trade.gov
+  :fax: "(90) 312 428-8760"
+  :mail_instructions: Do not write Ankara or Turkey when using DPO address, it is
+    hard to track down.
+  :phone: "(90) 312 455-5555"
+  :post_type: F
+  :address:
+  - ASO Building
+  - 193 Ataturk Bulvari
+  - 06600 Kavaklidere
+  - Ankara Turkey
+  :city: Ankara
+  :id: TR:Ankara
+- :post: Istanbul
+  :office_name: Istanbul
+  :country: TR
+  :state: 
+  :email: Istanbul.Office.Box@mail.doc.gov
+  :fax: "(90-212) 335-9103"
+  :mail_instructions: Please note that APO regulations require mail to be addressed
+    to the American officer at post and not directly to the FSN staff.
+  :phone: "(90-212) 335-9040"
+  :post_type: F
+  :address:
+  - U.S. Commercial Service Istanbul
+  - Istinye Mahallesi
+  - Kaplicalar Mevkii No. 2
+  - Istinye Istanbul
+  - Turkey TR-34460
+  :city: Istanbul
+  :id: TR:Istanbul
+- :post: Izmir
+  :office_name: Izmir
+  :country: TR
+  :state: 
+  :email: Izmir.Office.Box@mail.doc.gov
+  :fax: 90-232-489-0267
+  :mail_instructions: 
+  :phone: 90-232-441-2446
+  :post_type: F
+  :address:
+  - U.S. Commercial Service
+  - Ataturk Caddesi, 126
+  - Kat:5
+  - 35210 Pasaport
+  - Izmir
+  :city: Izmir
+  :id: TR:Izmir
+- :post: Kaohsiung
+  :office_name: American Institute in Taiwan - Kaohsiung
+  :country: TW
+  :state: 
+  :email: Office.Kaohsiung@trade.gov
+  :fax: 011-886-7-238-5237
+  :mail_instructions: 
+  :phone: 011-886-7-238-7744
+  :post_type: F
+  :address:
+  - 2 Chung Cheng 3rd Road
+  - 5F Kaohsiung
+  :city: Kaohsiung
+  :id: TW:Kaohsiung
+- :post: Taipei
+  :office_name: American Institute in Taiwan - Taipei
+  :country: TW
+  :state: 
+  :email: Office.Taipei@trade.gov
+  :fax: "+886-2-2757-7162"
+  :mail_instructions: 
+  :phone: "+886-2-2720-1550"
+  :post_type: F
+  :address:
+  - American Institute in Taiwan
+  - 32nd Floor
+  - 333 Keelung Road Section 1
+  - Suite 3207
+  - Taipei 110
+  :city: Taipei
+  :id: TW:Taipei
+- :post: Kiev
+  :office_name: Kiev
+  :country: UA
+  :state: 
+  :email: office.kiev@trade.gov
+  :fax: 380 (44) 521-5051
+  :mail_instructions: For expedited delivery - use courier addressed to our international
+    address.
+  :phone: 380 (44) 521-5244
+  :post_type: F
+  :address:
+  - 4,Igor Sikorsky Street (formerly Tankova St.)
+  - Kyiv, Ukraine 04112
+  :city: Kiev
+  :id: UA:Kiev
+- :post: Montevideo
+  :office_name: Montevideo
+  :country: UY
+  :state: 
+  :email: Office.Montevideo@trade.gov
+  :fax: 598-2 418-8581
+  :mail_instructions: Mail sent by courier delivery should be sent to American Embassy,
+    US Commercial Service, Lauro Muller 1776, Montevideo 11200, Uruguay. All mail
+    sent by regular post or pouch should be sent to US Embassy Montevideo, Unit 4502,
+    APO AA 34035
+  :phone: 598-21770 2322
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Lauro Muller 1776
+  - Montevideo 11200
+  - Uruguay
+  :city: Montevideo
+  :id: UY:Montevideo
+- :post: Hanoi
+  :office_name: Hanoi
+  :country: VN
+  :state: 
+  :email: Office.Hanoi@trade.gov
+  :fax: 011-84-4-3850-5064
+  :mail_instructions: For courier delivery, use the above street address; For pouch,
+    use the above mailing address
+  :phone: 011-84-4-3850-5199
+  :post_type: F
+  :address:
+  - American Embassy
+  - US Commercial Service
+  - Rose GardenTower
+  - 170 Ngoc Khanh Street
+  - Hanoi
+  - Vietnam
+  :city: Hanoi
+  :id: VN:Hanoi
+- :post: Ho Chi Minh City
+  :office_name: Ho Chi Minh City
+  :country: VN
+  :state: 
+  :email: Office.HoChiMinhCity@trade.gov
+  :fax: 011-84-8-3520-4679 / 81
+  :mail_instructions: For courier delivery, use the above street address; For pouch,
+    use the above mailing address
+  :phone: 011-84-8-3520-4680
+  :post_type: F
+  :address:
+  - U.S. Consulate General
+  - U.S. Commercial Service
+  - Diamond Plaza, 8F
+  - 34 Le Duan Street, District 1
+  - Ho Chi Minh City
+  - Vietnam
+  :city: Ho Chi Minh City
+  :id: VN:HoChiMinhCity
+- :post: Cape Town
+  :office_name: Cape Town
+  :country: ZA
+  :state: 
+  :email: cape.town.office.box@trade.gov
+  :fax: "(27-21) 702-7402"
+  :mail_instructions: 
+  :phone: "(27-21) 702-7300"
+  :post_type: F
+  :address:
+  - U.S. Consulate General Cape Town
+  - 2 Reddam Avenue, West Lake
+  - Cape Town, South Africa 7945
+  :city: Cape Town
+  :id: ZA:CapeTown
+- :post: Johannesburg
+  :office_name: Johannesburg
+  :country: ZA
+  :state: 
+  :email: johannesburg.office.box@trade.gov
+  :fax: 27 11 884 0253
+  :mail_instructions: Please note that shipments to the Washington, DC address will
+    take approximately three weeks to arrive in South Africa.
+  :phone: 27 11 290 3120
+  :post_type: F
+  :address:
+  - 1 Sandton Drive
+  - Sandhurst, 2196
+  - Johannesburg
+  :city: Johannesburg
+  :id: ZA:Johannesburg
