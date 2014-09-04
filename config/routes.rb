@@ -22,5 +22,10 @@ Webservices::Application.routes.draw do
         get "/#{source}/search", to: "screening_lists/#{source}#search"
       end
     end
+
+    namespace :trade_events do
+      get 'search', to: 'consolidated#search'
+      get 'ita/search'
+    end
   end
 end
