@@ -27,7 +27,6 @@ namespace :ita do
   desc 'Recreate then import all Trade Lead indices'
   task :recreate_then_import_trade_lead_indices => :environment do
     %w( CanadaLead
-        FbopenLead
         StateTradeLead
         UkTradeLead
       ).each do |class_name|
