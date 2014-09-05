@@ -58,5 +58,6 @@ Click around on the files that have < 100% coverage to see what lines weren't ex
 ### Code Status
 
 * [![Build Status](https://travis-ci.org/GovWizely/webservices.svg)](https://travis-ci.org/GovWizely/webservices/)
+* [![Test Coverage](https://codeclimate.com/github/GovWizely/webservices/badges/coverage.svg)](https://codeclimate.com/github/GovWizely/webservices)
 * [![Code Climate](https://codeclimate.com/github/GovWizely/webservices/badges/gpa.svg)](https://codeclimate.com/github/GovWizely/webservices)
 
