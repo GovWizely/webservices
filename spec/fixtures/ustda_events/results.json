@@ -13,10 +13,32 @@
       "Energy & Mining"
     ],
     "url": "http://www.ustda.gov/news/events/2014/EastAsia/China/ChinaShaleGasRTM.asp",
-    "venue": null,
-    "city": "Washington",
-    "state": "DC",
-    "country": "US",
+    "venues": [
+      {
+        "country": "US",
+        "state": "DC",
+        "city": "Washington",
+        "venue": "GreatVenue"
+      },
+      {
+        "country": "US",
+        "state": "PA",
+        "city": "Pittsburgh",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "TX",
+        "city": "Houston",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "",
+        "city": "",
+        "venue": ""
+      }
+    ],
     "contacts": [
       {
         "first_name": "Kaitlin",
@@ -42,10 +64,32 @@
       "Aviation Services"
     ],
     "url": "http://www.ustda.gov/news/events/2014/SouthAsia/Vietnam/VietnamAirportDevelopmentOperationsRTM.asp",
-    "venue": null,
-    "city": "Washington",
-    "state": "DC",
-    "country": "US",
+    "venues": [
+      {
+        "country": "US",
+        "state": "DC",
+        "city": "Washington",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "KY",
+        "city": "Louisville",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "OH",
+        "city": "Cincinnati",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "CA",
+        "city": "San Francisco",
+        "venue": ""
+      }
+    ],
     "contacts": [
       {
         "first_name": "AJ",
@@ -71,10 +115,14 @@
       "Transportation Services"
     ],
     "url": "http://www.ustda.gov/africanleadersvisits",
-    "venue": null,
-    "city": "Chicago",
-    "state": "IL",
-    "country": "US",
+    "venues": [
+      {
+        "country": "US",
+        "state": "IL",
+        "city": "Chicago",
+        "venue": ""
+      }
+    ],
     "contacts": [
       {
         "first_name": "Steve",
@@ -100,10 +148,14 @@
       "Energy & Mining"
     ],
     "url": "http://www.ustda.gov/africanleadersvisits",
-    "venue": null,
-    "city": "Houston",
-    "state": "TX",
-    "country": "US",
+    "venues": [
+      {
+        "country": "US",
+        "state": "TX",
+        "city": "Houston",
+        "venue": ""
+      }
+    ],
     "contacts": [
       {
         "first_name": "Steve",
@@ -129,10 +181,32 @@
       "Aviation Services"
     ],
     "url": "http://www.ustda.gov/news/events/2014/SubSaharanAfrica/SubSaharanAfricaLightAircraftHelicopterRTM.asp",
-    "venue": null,
-    "city": "Washington",
-    "state": "DC",
-    "country": "US",
+    "venues": [
+      {
+        "country": "US",
+        "state": "DC",
+        "city": "Washington",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "KS",
+        "city": "Wichita",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "FL",
+        "city": "Orlando",
+        "venue": ""
+      },
+      {
+        "country": "US",
+        "state": "PA",
+        "city": "Philadelphia",
+        "venue": ""
+      }
+    ],
     "contacts": [
       {
         "first_name": "Ian",

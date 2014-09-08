@@ -16,7 +16,7 @@ class UstdaEvent
     ustda_event: {
       _ttl:       { enabled: true },
       properties: {
-        country:     { type: 'string', analyzer: 'keyword' },
+        :'venues.country' => { type: 'string', analyzer: 'keyword' },
         description: { type: 'string', analyzer: 'custom_analyzer' },
         end_date:    { type: 'date', format: 'YYYY-MM-dd' },
         event_name:  { type: 'string', analyzer: 'custom_analyzer' },
