@@ -29,7 +29,7 @@
   - :country: US
     :state: DC
     :city: Washington
-    :venue: ''
+    :venue: 'GreatVenue'
   - :country: US
     :state: PA
     :city: Pittsburgh

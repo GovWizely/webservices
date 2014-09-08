@@ -55,7 +55,7 @@ class UstdaEventData
   private
 
   def process_entry(entry)
-    event = sanitize_string_hash remap_keys(COLUMN_HASH, entry)
+    event = sanitize_entry remap_keys(COLUMN_HASH, entry)
 
     %i(start_date end_date).each do |field|
       event[field] = Date.strptime(event[field], '%m/%d/%Y').iso8601 rescue nil if event[field]
