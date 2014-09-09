@@ -57,7 +57,11 @@ class BisUnverifiedPartyData
     doc[:source] = BisUnverifiedParty.source
 
     doc[:addresses] = rows.map do |row|
-     { address: row[2], country: lookup_country(row[0])}
+     { address: row[2],
+       city: nil,
+       state: nil,
+       postal_code: nil,
+       country: lookup_country(row[0]) }
     end.uniq
 
     doc[:alt_names] =

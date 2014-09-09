@@ -31,7 +31,7 @@ class BisEntityData
 
     rows = CSV.parse(open(@resource).read, headers: true,
                                            header_converters: :symbol,
-                                           encoding: "UTF-8")
+                                           encoding: "ISO8859-1")
 
     docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
 
@@ -55,8 +55,11 @@ class BisEntityData
 
     doc[:id] = Digest::SHA1.hexdigest(doc[:name])
 
+    doc[:license_requirement] = correct_encoding(doc[:license_requirement])
+    doc[:license_policy] = correct_encoding(doc[:license_policy])
+
     doc[:alt_names] = rows.map do |row|
-      row[:alternate_name].present? ? row[:alternate_name] : nil
+      correct_encoding(row[:alternate_name])
     end.compact.uniq
 
     doc[:addresses] = rows.map { |row| process_address(row) }.uniq
@@ -65,6 +68,10 @@ class BisEntityData
     doc[:source] = BisEntity.source
 
     doc
+  end
+
+  def correct_encoding(str)
+    str.present? ? str.force_encoding('iso-8859-1').encode('utf-8').squish : nil
   end
 
   ADDRESS_HASH = {
@@ -78,6 +85,7 @@ class BisEntityData
   def process_address(row)
     address = remap_keys(ADDRESS_HASH, row.to_hash)
     address[:country] &&= lookup_country(address[:country])
+    address[:address] &&= correct_encoding(address[:address])
     address
   end
 end

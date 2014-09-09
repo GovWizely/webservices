@@ -220,25 +220,25 @@ end
 
 shared_examples 'it contains all EL results that match "fazel"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[0], all_el_results[2]] }
+  let(:expected) { [all_el_results[1], all_el_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "constructions"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[0], all_el_results[1]] }
+  let(:expected) { [all_el_results[1], all_el_results[2]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "farid"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[2]] }
+  let(:expected) { [all_el_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match countries "AF"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[0], all_el_results[1], all_el_results[2]] }
+  let(:expected) { all_el_results[0..3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -260,12 +260,6 @@ shared_context 'DPL data' do
     JSON.parse(open(
       "#{Rails.root}/spec/fixtures/bis_denied_people/expected_results.json").read)
   end
-end
-
-shared_examples 'it contains all DPL results' do
-  let(:source) { 'DPL' }
-  let(:expected) { all_dpl_results }
-  it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results' do

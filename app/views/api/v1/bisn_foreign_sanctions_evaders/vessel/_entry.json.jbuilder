@@ -1,5 +1,6 @@
+json.partial! "api/v1/consolidated_screening_entries/addresses",
+  addresses: entry[:_source][:addresses]
 json.(entry[:_source],
-  :addresses,
   :alt_names,
   :call_sign,
   :entity_number,

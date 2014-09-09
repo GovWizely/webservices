@@ -6,9 +6,12 @@ module ConsolidatedScreeningListMappable
         analysis: {
           analyzer: {
             snowball_asciifolding_nostop: {
-              type: 'custom',
               tokenizer: 'standard',
               filter: %w(standard asciifolding lowercase snowball)
+            },
+            keyword_lowercase: {
+              tokenizer: 'keyword',
+              filter: %w(lowercase)
             }
           }
         }
@@ -25,7 +28,7 @@ module ConsolidatedScreeningListMappable
           remarks:   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
           title:     { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-          sdn_type:  { type: 'string', analyzer: 'keyword' },
+          sdn_type:  { type: 'string', analyzer: 'keyword_lowercase' },
           source:    { type: 'string', analyzer: 'keyword' },
 
           addresses: { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
@@ -36,6 +39,8 @@ module ConsolidatedScreeningListMappable
           nationalities:  { type: 'string', analyzer: 'keyword' },
           citizenships:   { type: 'string', analyzer: 'keyword' },
           dates_of_birth: { type: 'date',   format: 'YYYY-MM-dd' },
+          start_date:     { type: 'date',   format: 'YYYY-MM-dd' },
+          end_date:       { type: 'date',   format: 'YYYY-MM-dd' },
 
           entity_number:  { type: 'integer' },
         }

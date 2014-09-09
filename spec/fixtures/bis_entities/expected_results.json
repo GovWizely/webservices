@@ -2,6 +2,42 @@
     {
         "addresses": [
             {
+                "address": "Microrayan 3rd Apt. 45, block #21",
+                "city": "Kabul",
+                "country": "AF",
+                "postal_code": null,
+                "state": null
+            },
+            {
+                "address": "A2 Ground Floor, City Computer Plaza, Shar-e-Naw",
+                "city": "Kabul",
+                "country": "AF",
+                "postal_code": null,
+                "state": null
+            }
+        ],
+        "alt_names": [
+            "Fazel Rahim Farid",
+            "Farid",
+            "Engineer Idris"
+        ],
+        "end_date": null,
+        "entity_number": null,
+        "federal_register_notice": "76 FR 71867",
+        "license_policy": "Presumption of denial.",
+        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
+        "name": "Fazal Rahim Farid",
+        "programs": null,
+        "sdn_type": null,
+        "source": "EL",
+        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+        "standard_order": null,
+        "start_date": "2011-11-21",
+        "title": null
+    },
+    {
+        "addresses": [
+            {
                 "address": "Wazir Akbar Khan, Road Number 10, In front of National Bank, District 10",
                 "city": "Kabul",
                 "country": "AF",
@@ -14,7 +50,7 @@
         "entity_number": null,
         "federal_register_notice": "77 FR 25055",
         "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00df744.11 of the EAR).",
+        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
         "name": "Fazel Khalil Construction Company",
         "programs": null,
         "sdn_type": null,
@@ -81,7 +117,7 @@
         "entity_number": null,
         "federal_register_notice": "77 FR 25055",
         "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00df744.11 of the EAR).",
+        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
         "name": "Zurmat Construction Company offices",
         "programs": null,
         "sdn_type": null,
@@ -99,26 +135,17 @@
                 "country": "AF",
                 "postal_code": null,
                 "state": null
-            },
-            {
-                "address": "A2 Ground Floor, City Computer Plaza, Shar-e-Naw",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
             }
         ],
         "alt_names": [
-            "Fazel Rahim Farid",
-            "Farid",
-            "Engineer Idris"
+            "Jawid, Sa\u00c2\u0092id Jan \u00c2\u0091Abd-al-Salam"
         ],
         "end_date": null,
         "entity_number": null,
         "federal_register_notice": "76 FR 71867",
         "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00df744.11 of the EAR).",
-        "name": "Fazal Rahim Farid",
+        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
+        "name": "Qazi Abdallah",
         "programs": null,
         "sdn_type": null,
         "source": "EL",
@@ -142,7 +169,7 @@
         "entity_number": null,
         "federal_register_notice": "78 FR 75485 ",
         "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00df744.11 of the EAR).",
+        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
         "name": "Murat Peker",
         "programs": null,
         "sdn_type": null,
