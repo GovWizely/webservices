@@ -38,6 +38,16 @@ namespace :ita do
     end
   end
 
+  desc 'Recreate then import all Trade Event indices'
+  task :recreate_then_import_trade_event_indices => :environment do
+    %w( TradeEvent::Ita
+        TradeEvent::Sba
+      ).each do |class_name|
+      class_name.constantize.recreate_index
+      import_data(class_name)
+    end
+  end
+
   def import_data(model_class_name)
     "#{model_class_name}Data".constantize.new.import
   end
