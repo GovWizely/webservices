@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Api::V1::ItaTradeEventsController do
+describe Api::V1::TradeEvents::ItaController do
   describe '#search' do
     let(:search_params) do
       { 'countries' => 'MX',
@@ -12,7 +12,7 @@ describe Api::V1::ItaTradeEventsController do
     let(:search) { double('search') }
 
     before do
-      ItaTradeEvent.should_receive(:search_for).with(search_params).and_return(search)
+      TradeEvent::Ita.should_receive(:search_for).with(search_params).and_return(search)
       get :search,
           bogus_param: 'bogus value',
           countries:   'MX',
