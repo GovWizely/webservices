@@ -58,10 +58,11 @@ module Indexable
   private
 
   def assign_index_name
-    self.index_name = [ES::INDEX_PREFIX, self.name.tableize].join(':').freeze
+    self.index_name =
+      [ES::INDEX_PREFIX, self.name.indexize].join(':').freeze
   end
 
   def assign_index_type
-    self.index_type = self.name.underscore.freeze
+    self.index_type = self.name.typeize.freeze
   end
 end

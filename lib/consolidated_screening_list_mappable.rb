@@ -19,7 +19,7 @@ module ConsolidatedScreeningListMappable
     }.freeze
 
     klass.mappings = {
-      klass.to_s.underscore => {
+      klass.to_s.typeize => {
         properties: {
           id:        { type: 'integer', index: :not_analyzed, include_in_all: false },
 
