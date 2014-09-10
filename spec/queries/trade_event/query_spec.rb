@@ -1,7 +1,7 @@
 require 'spec_helper'
 
-describe ItaTradeEventQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_trade_events" }
+describe TradeEvent::Query do
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'

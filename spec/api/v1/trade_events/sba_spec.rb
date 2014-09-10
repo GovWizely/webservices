@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'SBA Trade Events API V1' do
-  include_context 'SBA data'
+  include_context 'TradeEvent::Sba data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /trade_events/sba/search' do
