@@ -6,7 +6,6 @@ module SDNImporter
   def self.included(base)
     base.class_eval do
       class << self
-        attr_accessor :model
         attr_accessor :default_endpoint
       end
     end
@@ -25,7 +24,7 @@ module SDNImporter
       process_sdn_node(sdn_node)
     end.compact
 
-    self.class.model.index docs
+    self.class.model_class.index docs
   end
 
   private
@@ -48,7 +47,7 @@ module SDNImporter
 
     doc[:id] = doc[:entity_number]
 
-    doc[:source] = self.class.model.source
+    doc[:source] = self.class.model_class.source
     doc[:source_list_url] = @resource =~ URI::regexp ? @resource : nil
 
     doc[:name] = extract_name(sdn_node)

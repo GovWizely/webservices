@@ -62,4 +62,15 @@ module Importer
   def parse_american_date(date_str)
     Date.strptime(date_str, '%m/%d/%Y').iso8601 rescue nil
   end
+
+  def self.included(base)
+    base.class_eval do
+      class << self
+        def model_class
+          self.name.sub(/Data$/, '').constantize
+        end
+      end
+    end
+  end
+
 end
