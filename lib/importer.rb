@@ -63,6 +63,10 @@ module Importer
     Date.strptime(date_str, '%m/%d/%Y').iso8601 rescue nil
   end
 
+  def lookup_state(state_str)
+    State.normalize state_str
+  end
+
   def self.included(base)
     base.class_eval do
       class << self
