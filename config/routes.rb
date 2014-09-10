@@ -26,6 +26,7 @@ Webservices::Application.routes.draw do
     namespace :trade_events do
       get 'search', to: 'consolidated#search'
       get 'ita/search'
+      get 'sba/search'
     end
   end
 end

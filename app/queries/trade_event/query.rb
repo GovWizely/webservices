@@ -2,13 +2,13 @@ module TradeEvent
   class Query < ::CountryIndustryQuery
     def initialize(options)
       super(options)
-      @sort = :start_date
+      @sort = '_score,start_date'
     end
 
     private
 
     def generate_query(json)
-      generate_multi_query json, [:description, :event_name]
+      generate_multi_query json, %i(event_name registration_title description city state)
     end
 
     def generate_filter(json)
