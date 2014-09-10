@@ -102,6 +102,7 @@
   - Plastics Materials/Resins
   - Robotics
   :ttl: 2558d
+  :source: ITA
 - :city: Pewaukee
   :cost: 195.0
   :country: US
@@ -126,6 +127,7 @@
     :post: Milwaukee
   :industries: []
   :ttl: 2558d
+  :source: ITA
 - :city: New Orleans, Louisiana
   :cost: 200.99
   :country: US
@@ -175,6 +177,7 @@
   - Pleasure Boats/Accessories
   - Port/Shipbuilding Eq.
   :ttl: 2561d
+  :source: ITA
 - :city: São Paulo
   :cost: 0.0
   :country: BR
@@ -234,3 +237,4 @@
   - Laboratory Scientific Instruments
   - Medical Eq.
   :ttl: 2634d
+  :source: ITA
