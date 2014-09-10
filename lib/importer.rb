@@ -77,4 +77,8 @@ module Importer
   def can_purge_old?
     model_class.can_purge_old?
   end
+
+  def lookup_state(state_str)
+    State.normalize state_str
+  end
 end
