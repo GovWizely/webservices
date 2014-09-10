@@ -14,6 +14,7 @@ gem 'rack-contrib'
 gem 'rake'
 gem 'sanitize', '~> 2.0.6'
 gem 'parslet'
+gem 'htmlentities'
 
 group :production do
   gem 'newrelic_rpm'

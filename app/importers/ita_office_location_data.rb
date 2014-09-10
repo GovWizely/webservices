@@ -46,7 +46,7 @@ class ItaOfficeLocationData
     event_hash.reverse_merge! extract_multi_valued_fields(location_info, MULTI_VALUED_XPATHS)
     event_hash[:country] = lookup_country_by_id(event_hash[:country])
     assign_city(event_hash)
-    event_hash[:state] = event_hash[:state].present? ? state_lookup(event_hash[:state]) : nil
+    event_hash[:state] = event_hash[:state].present? ? lookup_state(event_hash[:state]) : nil
     event_hash[:id] = [event_hash[:country], normalize_post(event_hash[:post])].join(':')
     event_hash
   end
@@ -67,10 +67,6 @@ class ItaOfficeLocationData
     else
       event_hash[:city] = INVALID_CITIES.include?(event_hash[:post]) ? nil : event_hash[:post]
     end
-  end
-
-  def state_lookup(state_str)
-    State.normalize state_str
   end
 
   def normalize_post(post_str)
