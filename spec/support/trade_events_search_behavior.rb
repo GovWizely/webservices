@@ -103,8 +103,10 @@ end
 
 shared_examples 'it contains all TradeEvent::Sba results that match countries "US"' do
   let(:source) { 'SBA' }
-  let(:expected) { [all_sba_results[0..8],
-                    all_sba_results[10..12],
-                    all_sba_results[14..16]].flatten }
+  let(:expected) do
+    [all_sba_results[0..8],
+     all_sba_results[10..12],
+     all_sba_results[14..16]].flatten
+  end
   it_behaves_like 'it contains all expected results of source'
 end
