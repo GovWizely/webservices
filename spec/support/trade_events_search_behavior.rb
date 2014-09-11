@@ -28,9 +28,21 @@ shared_examples 'it contains all TradeEvent::Ita results that match "2013"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeEvent::Ita results that match "international"' do
+  let(:source) { 'ITA' }
+  let(:expected) { all_ita_results[2..3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_examples 'it contains all TradeEvent::Ita results that match countries "il"' do
   let(:source) { 'ITA' }
   let(:expected) { [all_ita_results[0]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ita results that match countries "US"' do
+  let(:source) { 'ITA' }
+  let(:expected) { all_ita_results[1..2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -77,8 +89,22 @@ shared_examples 'it contains all TradeEvent::Sba results that match "Maximus"' d
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeEvent::Sba results that match "international"' do
+  let(:source) { 'SBA' }
+  let(:expected) { [all_sba_results[10], all_sba_results[11], all_sba_results[16]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_examples 'it contains all TradeEvent::Sba results that match countries "fr,de"' do
   let(:source) { 'SBA' }
   let(:expected) { [all_sba_results[9], all_sba_results[13]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Sba results that match countries "US"' do
+  let(:source) { 'SBA' }
+  let(:expected) { [all_sba_results[0..8],
+                    all_sba_results[10..12],
+                    all_sba_results[14..16]].flatten }
   it_behaves_like 'it contains all expected results of source'
 end
