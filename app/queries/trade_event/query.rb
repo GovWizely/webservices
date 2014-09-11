@@ -1,7 +1,10 @@
 module TradeEvent
   class Query < ::CountryIndustryQuery
+    attr_reader :sources
+
     def initialize(options)
       super(options)
+      @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,start_date'
     end
 
