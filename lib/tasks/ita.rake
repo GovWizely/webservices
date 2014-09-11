@@ -45,10 +45,10 @@ namespace :ita do
   end
 
   desc 'Recreate then import all Trade Event indices'
-  task :recreate_then_import_trade_event_indices => :environment do
+  task recreate_then_import_trade_event_indices: :environment do
     %w( TradeEvent::Ita
         TradeEvent::Sba
-      ).each do |class_name|
+    ).each do |class_name|
       class_name.constantize.recreate_index
       do_import(class_name)
     end

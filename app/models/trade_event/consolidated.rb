@@ -3,7 +3,7 @@ module TradeEvent
     def self.search_for(options)
       query = Query.new(options)
       hits = ES.client.search(
-          index: index_names,
+          index: index_names(query.sources),
           body:  query.generate_search_body,
           from:  query.offset,
           size:  query.size,
@@ -12,8 +12,11 @@ module TradeEvent
       hits.deep_symbolize_keys
     end
 
-    def self.index_names
-      [Ita, Sba].map(&:index_name)
+    def self.index_names(sources)
+      classes = [Ita, Sba]
+      classes = classes.select { |c| sources.include?(c.source) } if sources.any?
+
+      classes.map(&:index_name)
     end
   end
 end

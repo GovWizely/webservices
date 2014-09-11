@@ -83,6 +83,25 @@ describe 'Consolidated Trade Events API V1' do
       end
     end
 
+    context 'when sources is specified' do
+      context 'and is set to "ITA"' do
+        let(:params) { { sources: 'ITA' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ita results'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(ITA) }
+        end
+      end
+      context 'and is set to "SBA"' do
+        let(:params) { { sources: 'SBA', size: 100 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Sba results'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(SBA) }
+        end
+      end
+    end
+
     context 'when searching for field with non ascii characters using ascii characters' do
       let(:params) { { q: 'Sao' } }
       it_behaves_like 'a successful search request'
