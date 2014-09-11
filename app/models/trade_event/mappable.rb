@@ -14,7 +14,7 @@ module TradeEvent
 
       klass.mappings = {
         klass.to_s.typeize => {
-          _ttl:       { enabled: true },
+          # _ttl:       { enabled: true },
           properties: {
             cost:               { type: 'float' },
             country:            { type: 'string', analyzer: 'keyword' },
