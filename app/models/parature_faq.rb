@@ -1,29 +1,16 @@
 class ParatureFaq
 	extend Indexable
 
-  SYNONYMS = ["ft, fort", "st, saint"]
-  STOPWORDS = %w(US Export Assistance Center USEAC Commercial Service Mission)
 
   self.settings = {
       index: {
           analysis: {
               analyzer: {
-                  case_insensitive_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter: %w(standard lowercase) },
-                  location_name_analyzer: {
+                  custom_analyzer: {
+                      type: 'custom',
+                      char_filter: 'html_strip',
                       tokenizer: 'standard',
-                      filter: %w(standard asciifolding lowercase synonym stopword) },
-                  location_name_sort: {
-                      tokenizer: 'keyword',
-                      filter: %w(lowercase asciifolding) }
-              },
-              filter: {
-                  synonym: { type: 'synonym',
-                             synonyms: SYNONYMS },
-                  stopword: { type: 'stop',
-                              ignore_case: true,
-                              stopwords: STOPWORDS.join(',') }
+                      filter: %w(standard lowercase) }
               }
           }
       }
@@ -33,9 +20,12 @@ class ParatureFaq
       parature_faq: {
           dynamic: false,
           properties: {
-
-              question: { type: 'string' },
-              answer: { type: 'string' },
+              question: { type: 'string'},
+              answer: { type: 'string', analyzer: 'custom_analyzer' },
+              published: {type: 'boolean'},
+              create_date: {type: 'date'},
+              update_date: {type: 'date'},
+              user_rating: {type: 'float'},
               id: { type: 'string', index: :not_analyzed, include_in_all: false }
           }
       }
