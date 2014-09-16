@@ -51,7 +51,11 @@ class StateTradeLeadData
     entry = remap_keys(COLUMN_HASH, entry_hash[:properties])
 
     entry[:id] = entry_hash[:id]
-    entry[:country] = lookup_country(entry[:country].squish)
+
+    entry[:geometry] = process_geometry_info(entry_hash[:geometry])
+
+    entry[:country] = lookup_country(entry[:country].squish) ||
+                      lookup_country_with_coordinates(entry[:geometry])
 
     %i(publish_date end_date).each do |field|
       entry[field] &&= Date.parse(entry[field]).iso8601 rescue nil
@@ -62,5 +66,14 @@ class StateTradeLeadData
     end
 
     entry
+  end
+
+  def process_geometry_info(geometry)
+    return nil if !geometry
+
+    geometry[:latitude] = geometry[:coordinates][1]
+    geometry[:longitude] = geometry[:coordinates][0]
+
+    geometry.except(:coordinates)
   end
 end

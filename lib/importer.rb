@@ -36,6 +36,14 @@ module Importer
     nil
   end
 
+  def lookup_country_with_coordinates(geometry)
+    geo_result = Geocoder.search("#{geometry[:latitude]},#{geometry[:longitude]}").first
+    if geo_result
+      country_string = geo_result.country
+      lookup_country(country_string)
+    end
+  end
+
   def normalize_country(country_str)
     case country_str
     when /\ABurma \(Myanmar\)\Z/i then 'Myanmar'

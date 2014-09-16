@@ -14,6 +14,7 @@ gem 'nokogiri'
 gem 'rack-contrib'
 gem 'rake'
 gem 'sanitize'
+gem 'geocoder'
 
 group :development, :test do
   gem 'rspec-rails'

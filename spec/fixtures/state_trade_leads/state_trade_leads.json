@@ -139,13 +139,7 @@
             "type": "Feature"
         },
         {
-            "geometry": {
-                "coordinates": [
-                    37.906193,
-                    -0.023559
-                ],
-                "type": "Point"
-            },
+            "geometry": null,
             "geometry_name": "the_geom",
             "id": "DATATABLE.66",
             "properties": {

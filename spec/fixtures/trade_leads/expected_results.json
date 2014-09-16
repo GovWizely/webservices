@@ -167,7 +167,8 @@
     "submitting_officer": "Asike, Chuka",
     "submitting_officer_contact": "AsikeC@state.gov",
     "url": "http://www.iadb.org/en/projects/project-description-title,1303.html?id=CO-L1146",
-    "status": "Pipeline"
+    "status": "Pipeline",
+    "geometry": {"type": "Point", "latitude": 4.570868, "longitude": -74.29733299999998}
   },
   {
     "type": "canada_lead",
@@ -214,7 +215,8 @@
     "submitting_officer": "Chuka Asike",
     "submitting_officer_contact": "asikec@state.gov",
     "url": "http://web.worldbank.org/external/projects/main?pagePK=64283627\u0026piPK=73230\u0026theSitePK=40941\u0026menuPK=22842",
-    "status": "Pipeline"
+    "status": "Pipeline",
+    "geometry": {"type": "Point", "latitude": 12.879721, "longitude": 121.77401699999996}
   },
   {
     "type": "state_trade_lead",
@@ -238,7 +240,8 @@
     "submitting_officer": "Hala Rharrit",
     "submitting_officer_contact": "RharritH@state.gov",
     "url": "http://www.ashghal.gov.qa/English/Bids/Bids/Lists/TendersEn/DispForm2.aspx?List=63e70945%2D1f5e%2D4614%2Daa38%2Dca1eb77134e0\u0026ID=1315\u0026Source=http%3A%2F%2Fwww%2Eashghal%2Egov%2Eqa%2FEnglish%2FBids%2FBids%2FPages%2Flarge%5Ftnders%2Easpx",
-    "status": "Pipeline"
+    "status": "Pipeline",
+    "geometry": {"type": "Point", "latitude": 25.2942804, "longitude": 51.4978033}
   },
   {
     "type": "state_trade_lead",
@@ -262,6 +265,7 @@
     "submitting_officer": null,
     "submitting_officer_contact": null,
     "url": "http://web.worldbank.org/external/projects/main?pagePK=64283627\u0026piPK=73230\u0026theSitePK=40941\u0026menuPK=228424\u0026Projectid=P117635",
-    "status": "Pipeline"
+    "status": "Pipeline",
+    "geometry": null
   }
 ]
