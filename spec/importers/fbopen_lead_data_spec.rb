@@ -22,6 +22,12 @@ describe FbopenLeadData do
     end
   end
 
+  describe '#default_endpoint' do
+    it 'returns valid endpoint url' do
+      URI.parse(importer.default_endpoint).scheme.should =~ /ftp|http/
+    end
+  end
+
   describe '#process_entry' do
     let(:original) do
       {

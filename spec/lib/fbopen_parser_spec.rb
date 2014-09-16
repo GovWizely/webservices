@@ -34,5 +34,12 @@ describe FbopenParser do
       fh = open("#{fixtures_dir}/example_input")
       subject.convert(fh).should == expected_output
     end
+
+    it 'logs exceptions' do
+      fh = open("#{fixtures_dir}/example_input")
+      subject.should_receive(:transform).at_least(:once).and_return(nil)
+      Rails.logger.should_receive(:error).at_least(:once).with(kind_of(NoMethodError))
+      subject.convert(fh)
+    end
   end
 end
