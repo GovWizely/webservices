@@ -99,7 +99,7 @@ class FbopenParser < Parslet::Parser
         record.each { |r| all_recs << r }
         buffer.clear
       rescue => e
-        puts e
+        Rails.logger.error(e)
       end
     end
     all_recs
