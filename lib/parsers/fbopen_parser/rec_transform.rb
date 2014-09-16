@@ -5,8 +5,7 @@ class FbopenParser::RecTransform < Parslet::Transform
       attrs = r[:attrs].reduce({}) do |memo, attr|
         key = attr[:name].to_s
         if memo.key?(key)
-          n = (2..20).find { |x| !memo.key?("#{key}#{x}") }
-          key = "#{key}#{n}"
+          Rails.logger.warn "[FbopenParser::RecTransform] Duplicate key '#{key}' on record: #{r}"
         end
         memo[key] = attr[:value].to_s.strip
         memo

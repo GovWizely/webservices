@@ -14,7 +14,14 @@ describe FbopenParser do
     let(:presol)          { open("#{fixtures_dir}/input_presol").read }
     let(:expected_presol) { JSON.parse open("#{fixtures_dir}/output_presol").read }
     it 'handles PRESOL records' do
+      Rails.logger.should_not_receive(:warn)
       subject.convert(presol).should include *expected_presol
+    end
+
+    let(:duplicatekey)          { open("#{fixtures_dir}/input_duplicatekey").read }
+    it 'warns on duplicate keys' do
+      Rails.logger.should_receive(:warn).with(/Duplicate key 'OFFICE' on record: {:ntype=>\"PRESOL\"/)
+      subject.convert(duplicatekey)
     end
 
     let(:all_records)           { open("#{fixtures_dir}/example_input").read }
