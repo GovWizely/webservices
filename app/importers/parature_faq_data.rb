@@ -27,36 +27,37 @@ class ParatureFaqData
     article_count = 379
   	Rails.logger.info "Importing #{@resource}"
 
-  	id = 241
+  	id = 1
     data = ""
-  	#data += "["
+  	data += "["
 
-  	#while id <= article_count do
+  	while id <= article_count do
 
-    #  begin
-  	#	  @resource = "https://g1.parature.com/api/v1/28023/28026/Article/#{id}/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
-  	#	  entry = Hash.from_xml(open(@resource)).to_json
-    #  rescue 
-    #    id += 1
-    #    next
-    #  end
+      begin
+  		  @resource = "https://g1.parature.com/api/v1/28023/28026/Article/#{id}/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
+  		  entry = Hash.from_xml(open(@resource)).to_json
+      rescue 
+        #puts id
+        id += 1
+        next
+      end
 
-  	#	data += ( entry + "," )
-  	#	id += 1
+  		data += ( entry + "," )
+  		id += 1
 
-  	#end
+  	end
 
-    #puts id
-  	#data = data[0...-1]
-  	#data += "]"
+    puts id
+  	data = data[0...-1]
+  	data += "]"
 
     #File.open("/Users/tmh/Desktop/output.txt", 'a') {|file| file.write(data)}
 
-    File.open("/Users/tmh/Desktop/output.txt", "r") do |infile|
-      while (line = infile.gets)
-        data += line
-      end
-    end 
+    #File.open("/Users/tmh/Desktop/output.txt", "r") do |infile|
+    #  while (line = infile.gets)
+    #    data += line
+    #  end
+    #end 
 
     doc = JSON.parse(data, symbolize_names: true)
 
