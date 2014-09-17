@@ -11,7 +11,7 @@
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: bf21bcea380bad1b11712f212c0176655e7c7e9a
+  :id: fabe2145af20dcff1163dbf2a6292f379aa9f27f
   :alt_names:
   - Fazel Rahim Farid
   - Farid
@@ -40,7 +40,7 @@
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: 850a547baaf505485b2d8ce8b53d18a13941d20d
+  :id: 82637ba282f441104f3aa8413aefdd5c303b9fe6
   :alt_names: []
   :addresses:
   - :address: Wazir Akbar Khan, Road Number 10, In front of National Bank, District
@@ -62,7 +62,7 @@
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: 9f38b5ed72bf5aafb648ad89d5bfe1143c1007c0
+  :id: 0a10ca0bd89967d7a80efc9f4ffecaa71af1ee79
   :alt_names: []
   :addresses:
   - :address: House No. 319, 10th Street Wazeer Akbar Khan
@@ -114,7 +114,7 @@
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: 9c1144cfa761dc1f921cd85e8552b41f505bc77b
+  :id: 946f840d05372d41c4baeebc61dddf1363929de5
   :alt_names: []
   :addresses:
   - :address: Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup
@@ -135,9 +135,53 @@
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/entities/default.htm
-  :id: 8dc4dd45a54019ae66c58513439cb1a4fdc2e1b9
+  :id: d741e2b6c40aa24508bd53f45fd0b7e76d7a657c
   :alt_names:
-  - "Jawid, SaÂ\u0092id Jan Â\u0091Abd-al-Salam"
+  - "Jawid, SaÂ\x92id Jan Â\x91Abd-al-Salam"
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  :source: EL
+- :entity_number: 
+  :sdn_type: 
+  :programs: 
+  :name: Qazi Abdallah
+  :title: 
+  :federal_register_notice: 76 FR 10001
+  :start_date: '2011-11-21'
+  :end_date: 
+  :standard_order: 
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :id: 6ee67838b242db8f5ec639678c518b8636c57c23
+  :alt_names:
+  - "Jawid, SaÂ\x92id Jan Â\x91Abd-al-Salam"
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  :source: EL
+- :entity_number: 
+  :sdn_type: 
+  :programs: 
+  :name: Qazi Abdallah
+  :title: 
+  :federal_register_notice: 76 FR 71867
+  :start_date: '2011-11-22'
+  :end_date: 
+  :standard_order: 
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :id: c04d65011854dc1a2b7ce94a1af2b41ca58d6760
+  :alt_names:
+  - "Jawid, SaÂ\x92id Jan Â\x91Abd-al-Salam"
   :addresses:
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul

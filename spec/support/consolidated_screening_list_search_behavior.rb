@@ -220,25 +220,25 @@ end
 
 shared_examples 'it contains all EL results that match "fazel"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[1], all_el_results[0]] }
+  let(:expected) { all_el_results[2..3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "constructions"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[1], all_el_results[2]] }
+  let(:expected) { [all_el_results[2], all_el_results[4]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "farid"' do
   let(:source) { 'EL' }
-  let(:expected) { [all_el_results[0]] }
+  let(:expected) { [all_el_results[3]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match countries "AF"' do
   let(:source) { 'EL' }
-  let(:expected) { all_el_results[0..3] }
+  let(:expected) { all_el_results[0..5] }
   it_behaves_like 'it contains all expected results of source'
 end
 
