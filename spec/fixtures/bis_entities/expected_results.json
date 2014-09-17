@@ -1,182 +1,242 @@
 [
-    {
-        "addresses": [
-            {
-                "address": "Microrayan 3rd Apt. 45, block #21",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "A2 Ground Floor, City Computer Plaza, Shar-e-Naw",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            }
-        ],
-        "alt_names": [
-            "Fazel Rahim Farid",
-            "Farid",
-            "Engineer Idris"
-        ],
-        "end_date": null,
-        "entity_number": null,
-        "federal_register_notice": "76 FR 71867",
-        "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
-        "name": "Fazal Rahim Farid",
-        "programs": null,
-        "sdn_type": null,
-        "source": "EL",
-        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-        "standard_order": null,
-        "start_date": "2011-11-21",
-        "title": null
-    },
-    {
-        "addresses": [
-            {
-                "address": "Wazir Akbar Khan, Road Number 10, In front of National Bank, District 10",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            }
-        ],
-        "alt_names": [],
-        "end_date": null,
-        "entity_number": null,
-        "federal_register_notice": "77 FR 25055",
-        "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
-        "name": "Fazel Khalil Construction Company",
-        "programs": null,
-        "sdn_type": null,
-        "source": "EL",
-        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-        "standard_order": null,
-        "start_date": "2012-04-27",
-        "title": null
-    },
-    {
-        "addresses": [
-            {
-                "address": "House No. 319, 10th Street Wazeer Akbar Khan",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "Wazir Akbar Khan, District 10, Apartment 319",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": null,
-                "city": "Tarin Cot City",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "Behind UNAMA Office, Pir Bagh Office",
-                "city": "Gardez",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "House No. 01, Street No. 01, Muhaqeq Road (Behind Pakistan and Turkish Embassies)",
-                "city": "Mazar-e-Sharif",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "Hazratan Street (Behind Jalalalabad Teaching Hospital)",
-                "city": "Jalalalabad",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            },
-            {
-                "address": "Aino Mena, Street No. 22 (Blue Color House Left Side of Road)",
-                "city": "Kandahar",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            }
-        ],
-        "alt_names": [],
-        "end_date": null,
-        "entity_number": null,
-        "federal_register_notice": "77 FR 25055",
-        "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
-        "name": "Zurmat Construction Company offices",
-        "programs": null,
-        "sdn_type": null,
-        "source": "EL",
-        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-        "standard_order": null,
-        "start_date": "2012-04-27",
-        "title": null
-    },
-    {
-        "addresses": [
-            {
-                "address": "Microrayan 3rd Apt. 45, block #21",
-                "city": "Kabul",
-                "country": "AF",
-                "postal_code": null,
-                "state": null
-            }
-        ],
-        "alt_names": [
-            "Jawid, Sa\u00c2\u0092id Jan \u00c2\u0091Abd-al-Salam"
-        ],
-        "end_date": null,
-        "entity_number": null,
-        "federal_register_notice": "76 FR 71867",
-        "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
-        "name": "Qazi Abdallah",
-        "programs": null,
-        "sdn_type": null,
-        "source": "EL",
-        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-        "standard_order": null,
-        "start_date": "2011-11-21",
-        "title": null
-    },
-    {
-        "addresses": [
-            {
-                "address": "Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup",
-                "city": "Istanbul",
-                "country": "TR",
-                "postal_code": null,
-                "state": null
-            }
-        ],
-        "alt_names": [],
-        "end_date": null,
-        "entity_number": null,
-        "federal_register_notice": "78 FR 75485 ",
-        "license_policy": "Presumption of denial.",
-        "license_requirement": "For all items subject to the EAR. (See \u00c2\u00a7744.11 of the EAR).",
-        "name": "Murat Peker",
-        "programs": null,
-        "sdn_type": null,
-        "source": "EL",
-        "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-        "standard_order": null,
-        "start_date": "2013-12-12",
-        "title": null
-    }
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, SaÂid Jan ÂAbd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-21",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, SaÂid Jan ÂAbd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 10001",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-21",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "Wazir Akbar Khan, Road Number 10, In front of National Bank, District 10",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "entity_number": null,
+    "federal_register_notice": "77 FR 25055",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Fazel Khalil Construction Company",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2012-04-27",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "A2 Ground Floor, City Computer Plaza, Shar-e-Naw",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Fazel Rahim Farid",
+      "Farid",
+      "Engineer Idris"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Fazal Rahim Farid",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-21",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "House No. 319, 10th Street Wazeer Akbar Khan",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "Wazir Akbar Khan, District 10, Apartment 319",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": null,
+        "city": "Tarin Cot City",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "Behind UNAMA Office, Pir Bagh Office",
+        "city": "Gardez",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "House No. 01, Street No. 01, Muhaqeq Road (Behind Pakistan and Turkish Embassies)",
+        "city": "Mazar-e-Sharif",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "Hazratan Street (Behind Jalalalabad Teaching Hospital)",
+        "city": "Jalalalabad",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      },
+      {
+        "address": "Aino Mena, Street No. 22 (Blue Color House Left Side of Road)",
+        "city": "Kandahar",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "entity_number": null,
+    "federal_register_notice": "77 FR 25055",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Zurmat Construction Company offices",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2012-04-27",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, SaÂid Jan ÂAbd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-22",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup",
+        "city": "Istanbul",
+        "state": null,
+        "postal_code": null,
+        "country": "TR"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "entity_number": null,
+    "federal_register_notice": "78 FR 75485 ",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Murat Peker",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2013-12-12",
+    "end_date": null,
+    "sdn_type": null,
+    "source": "EL",
+    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
+    "title": null
+  }
 ]

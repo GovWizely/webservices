@@ -44,8 +44,9 @@ class BisEntityData
     rows_by_name = {}
     rows.each do |row|
       next unless row[:name].present?
-      rows_by_name[row[:name]] ||= []
-      rows_by_name[row[:name]] << row
+      key = generate_id(row)
+      rows_by_name[key] ||= []
+      rows_by_name[key] << row
     end
     rows_by_name
   end
@@ -53,7 +54,7 @@ class BisEntityData
   def process_grouped_rows(rows)
     doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-    doc[:id] = Digest::SHA1.hexdigest(doc[:name])
+    doc[:id] = generate_id(rows.first);
 
     doc[:license_requirement] = correct_encoding(doc[:license_requirement])
     doc[:license_policy] = correct_encoding(doc[:license_policy])
@@ -87,5 +88,10 @@ class BisEntityData
     address[:country] &&= lookup_country(address[:country])
     address[:address] &&= correct_encoding(address[:address])
     address
+  end
+
+  def generate_id(row)
+    Digest::SHA1.hexdigest(
+      %i(name federal_register_notice effective_date).map { |f| row[f] }.join)
   end
 end
