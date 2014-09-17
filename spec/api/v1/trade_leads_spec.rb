@@ -10,6 +10,9 @@ describe 'Trade Leads API V1' do
 
     UkTradeLead.recreate_index
     UkTradeLeadData.new("#{Rails.root}/spec/fixtures/uk_trade_leads/uk_trade_leads.csv").import
+
+    FbopenLead.recreate_index
+    FbopenLeadData.new("#{Rails.root}/spec/fixtures/fbopen_leads/input_presol").import
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
@@ -24,11 +27,27 @@ describe 'Trade Leads API V1' do
 
       it 'returns trade leads sorted by published_date:desc, country: asc' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 12
+        json_response['total'].should == 13
         json_response['offset'].should == 0
 
         results = json_response['results']
         results.should eq(expected_results.first(10))
+      end
+    end
+
+    context 'when size is specified' do
+      before { get '/trade_leads/search', { size: 100 }, v1_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns up to the specified size' do
+        json_response = JSON.parse(response.body)
+        json_response['total'].should == 13
+        json_response['offset'].should == 0
+
+        results = json_response['results']
+        results.should match_array(expected_results)
       end
     end
 

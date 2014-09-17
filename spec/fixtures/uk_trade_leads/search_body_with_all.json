@@ -4,7 +4,10 @@
             "must": [
                 {
                     "match": {
-                        "industry": "fishing"
+                        "industry": {
+                          "operator": "and",
+                          "query": "fishing"
+                        }
                     }
                 },
                 {

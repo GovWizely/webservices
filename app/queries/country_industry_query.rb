@@ -20,6 +20,4 @@ class CountryIndustryQuery < Query
       end
     end if @industry || @q
   end
-
-
 end

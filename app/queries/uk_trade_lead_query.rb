@@ -1,25 +1,21 @@
 class UkTradeLeadQuery < CountryIndustryQuery
+  query_fields %i(  description title procurement_organization countries industry q  )
 
-  def initialize(options={})
+  def initialize(options = {})
     super options
-    @q = options[:q] if options[:q].present?
     @sort = :publish_date
   end
 
   private
 
   def generate_query(json)
-     multi_fields = %i(description title procurement_organization)
-     json.query do
-       json.bool do
-         json.must do |must_json|
-           must_json.child! { must_json.match { must_json.industry @industry } } if @industry
-           must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
-         end
-       end
-     end if @industry || @q
+    query_from_fields(
+      json,
+      searchable: %i(industry),
+      q:          %i(description title procurement_organization),
+    )
   end
 
-  def generate_filter(json)
+  def generate_filter(_json)
   end
 end

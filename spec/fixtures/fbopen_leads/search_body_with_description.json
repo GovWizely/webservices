@@ -5,7 +5,7 @@
             {
                "match" : {
                   "description" : {
-                     "query" : "bird",
+                     "query" :  "bird",
                      "operator" : "and"
                   }
                }

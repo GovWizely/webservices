@@ -1,0 +1,24 @@
+[
+   {
+      "CONTACT" : "Juanita A. Waters, Contract Administrator, Phone 7704882933, Fax N/A",
+      "NAICS" : "541990",
+      "SUBJECT" : "National Health and Nutrition Examination Survey (NHANES) Survey",
+      "YEAR" : "13",
+      "OFFADD" : "2920 Brandywine Road, Room 3000 Atlanta GA 30341-4146",
+      "DATE" : "0616",
+      "AGENCY" : "Department of Health and Human Services",
+      "ARCHDATE" : "03142014",
+      "POPADDRESS" : "At 15 different Primary Sampling Units (PSUs) yearly.  The PSU location",
+      "LOCATION" : "Procurement and Grants Office (Atlanta)",
+      "CLASSCOD" : "B",
+      "DESC" : "The National Health and Nutrition Examination Survey (NHANES) is a prog.\n<p>The NHANES program began in the early 1960's and has been conducted as a s</p>\n<p>&nbsp;</p>",
+      "POPCOUNTRY" : "BR",
+      "SETASIDE" : "N/A",
+      "SOLNBR" : "2013-N-15012",
+      "LINK" : "https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html",
+      "EMAIL" : "sample@example.net",
+      "ZIP" : "30341-4146",
+      "OFFICE" : "Centers for Disease Control and Prevention",
+      "ntype" : "PRESOL"
+   }
+]
