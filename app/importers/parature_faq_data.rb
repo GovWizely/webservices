@@ -1,4 +1,5 @@
 require 'open-uri'
+require 'csv'
 
 class ParatureFaqData
 	include Importer
@@ -25,19 +26,23 @@ class ParatureFaqData
 
   def import
     article_count = 379
+    pause_duration = 10
   	Rails.logger.info "Importing #{@resource}"
 
   	id = 1
-    data = ""
-  	data += "["
+  	data = "["
 
   	while id <= article_count do
+
+      if ( id % 100 == 0)
+        sleep pause_duration
+      end
 
       begin
   		  @resource = "https://g1.parature.com/api/v1/28023/28026/Article/#{id}/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
   		  entry = Hash.from_xml(open(@resource)).to_json
       rescue 
-        #puts id
+        puts id
         id += 1
         next
       end
@@ -66,7 +71,7 @@ class ParatureFaqData
     faqs = faqs.compact
     puts faqs.count
 
-  	ParatureFaq.index faqs
+    #ParatureFaq.index faqs
 
   end
 
@@ -84,5 +89,6 @@ class ParatureFaqData
       puts "Not published:  " + faq[:id] 
     end
   end
+
 
 end

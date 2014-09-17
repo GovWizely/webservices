@@ -21,7 +21,7 @@ class ParatureFaq
           dynamic: false,
           properties: {
               question: { type: 'string'},
-              answer: { type: 'string', analyzer: 'custom_analyzer' },
+              answer: { type: 'string' },
               published: {type: 'boolean'},
               create_date: {type: 'date', format: 'YYYY-MM-dd' },
               update_date: {type: 'date', format: 'YYYY-MM-dd' },
