@@ -77,6 +77,8 @@ class ParatureFaqData
 
 
   def process_faq_info(faq_hash)
+
+    # Get folder ids.... 
     faq = remap_keys COLUMN_HASH, faq_hash[:Article]
 
     faq[:answer] = Sanitize.clean(faq[:answer]) if faq[:answer]
