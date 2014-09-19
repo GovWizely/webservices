@@ -175,6 +175,11 @@
         <dateOfBirth>20 May 1954</dateOfBirth>
         <mainEntry>true</mainEntry>
       </dateOfBirthItem>
+      <dateOfBirthItem>
+        <uid>8958</uid>
+        <dateOfBirth>circa 1954</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
     </dateOfBirthList>
     <placeOfBirthList>
       <placeOfBirthItem>

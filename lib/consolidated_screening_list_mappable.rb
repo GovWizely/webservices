@@ -38,7 +38,7 @@ module ConsolidatedScreeningListMappable
 
           nationalities:  { type: 'string', analyzer: 'keyword' },
           citizenships:   { type: 'string', analyzer: 'keyword' },
-          dates_of_birth: { type: 'date',   format: 'YYYY-MM-dd' },
+          dates_of_birth: { type: 'string', analyzer: 'keyword' },
           start_date:     { type: 'date',   format: 'YYYY-MM-dd' },
           end_date:       { type: 'date',   format: 'YYYY-MM-dd' },
 
