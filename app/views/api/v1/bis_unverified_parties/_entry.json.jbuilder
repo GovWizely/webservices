@@ -4,4 +4,5 @@ json.(entry[:_source],
   :alt_names,
   :name,
   :source,
+  :source_list_url,
 )

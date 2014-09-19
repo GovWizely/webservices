@@ -55,6 +55,8 @@ class BisUnverifiedPartyData
     doc[:name] = row_name
     doc[:id] = Digest::SHA1.hexdigest(row_name)
     doc[:source] = BisUnverifiedParty.source
+    doc[:source_list_url] =
+      'http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html'
 
     doc[:addresses] = rows.map do |row|
      { address: row[2],

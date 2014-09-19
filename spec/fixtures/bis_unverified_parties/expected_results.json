@@ -11,7 +11,8 @@
         ],
         "alt_names": [],
         "name": "Dynasense Photonics Co., Limited",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -25,7 +26,8 @@
         ],
         "alt_names": [],
         "name": "China National Plant Import/Export Co.",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -46,7 +48,8 @@
         ],
         "alt_names": [],
         "name": "Hi-Shine Technology (HK) Limited",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -62,7 +65,8 @@
             "Lion Chip Electronics Ltd"
         ],
         "name": "Lianqi (HK) Electronics Co Ltd",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -93,7 +97,8 @@
             "Academy of Business Training"
         ],
         "name": "T2BA",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -114,7 +119,8 @@
         ],
         "alt_names": [],
         "name": "Brilliance Technology Ltd",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -128,7 +134,8 @@
         ],
         "alt_names": [],
         "name": "Hong Kong Haimao Info-Tec Development Co Ltd",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     },
     {
         "addresses": [
@@ -152,6 +159,7 @@
             "Academy of Business Security"
         ],
         "name": "Security 2 Business Academy",
-        "source": "UVL"
+        "source": "UVL",
+        "source_list_url": "http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html"
     }
 ]
