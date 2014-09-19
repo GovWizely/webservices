@@ -26,6 +26,9 @@ class ParatureFaq
               create_date: {type: 'date', format: 'YYYY-MM-dd' },
               update_date: {type: 'date', format: 'YYYY-MM-dd' },
               user_rating: {type: 'integer'},
+              topic:  {type: 'string' },
+              industry:  {type: 'string' },
+              country:  {type: 'string' },
               id: { type: 'string', index: :not_analyzed, include_in_all: false }
           }
       }
