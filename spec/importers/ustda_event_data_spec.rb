@@ -99,6 +99,7 @@ describe UstdaEventData do
         start_date:         '2014-07-30',
         end_date:           '2014-08-01',
         cost:               nil,
+        cost_currency:      '',
         description:        "USTDA and the U.S. Department of Transportation will co-host the African Leaders' Visit: Transport for high-level delegates who have recently announced plans for significant near-term expansions in both rail and aviation infrastructure. The Visit will introduce delegates to policymakers, financiers, technical experts, and equipment and services suppliers from the U.S. aviation and rail sectors. Meetings and site visits will showcase Chicago's position as a rail and aviation hub and offer participants a chance to see a confluence of advanced transportation infrastructure. Invited delegates include: Angola, Ethiopia, Nigeria, South Africa, Common Market for Eastern and Southern Africa (COMESA), and the Southern African Development Community (SADC).",
         industries:         ['Transportation Services'],
         contacts:           [{
