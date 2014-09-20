@@ -20,7 +20,8 @@
     opportunities are available. Current sponsors include ExxonMobil and Baker Hughes.
   :start_date: '2014-06-23'
   :end_date: '2014-07-03'
-  :cost: "$60"
+  :cost: 60.0
+  :cost_currency: "USD"
   :registration_link: http://www.cvent.com/d/24qxnc
   :registration_title: USTDA China Shale Gas Development and Technologies Business
     Briefing
@@ -72,6 +73,7 @@
   :start_date: '2014-07-22'
   :end_date: '2014-07-31'
   :cost: 
+  :cost_currency: ''
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/news/events/2014/SouthAsia/Vietnam/VietnamAirportDevelopmentOperationsRTM.asp
@@ -117,6 +119,7 @@
   :start_date: '2014-07-30'
   :end_date: '2014-08-01'
   :cost: 
+  :cost_currency: ''
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/africanleadersvisits
@@ -151,6 +154,7 @@
   :start_date: '2014-07-30'
   :end_date: '2014-08-01'
   :cost: 
+  :cost_currency: ''
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/africanleadersvisits
@@ -183,6 +187,7 @@
   :start_date: '2014-10-18'
   :end_date: '2014-10-30'
   :cost: 
+  :cost_currency: ''
   :registration_link: 
   :registration_title: 
   :url: http://www.ustda.gov/news/events/2014/SubSaharanAfrica/SubSaharanAfricaLightAircraftHelicopterRTM.asp

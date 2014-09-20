@@ -26,6 +26,7 @@ class UstdaEventData
     start_date:         '',
     end_date:           '',
     cost:               '',
+    cost_currency:      '',
     registration_link:  '',
     registration_title: '',
     url:                '',
@@ -61,11 +62,17 @@ class UstdaEventData
       event[field] = Date.strptime(event[field], '%m/%d/%Y').iso8601 rescue nil if event[field]
     end
 
+    event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
     event[:country] &&= lookup_country(event[:country])
     event[:industries] = Array(event[:industries])
     event[:contacts] = contact(entry)
     event[:venues] = venues(entry)
     EMPTY_RECORD.dup.merge(event)
+  end
+
+  def cost(entry)
+    cost = Monetize.parse(entry[:cost])
+    return cost.to_f, cost.currency_as_string
   end
 
   def contact(entry)
