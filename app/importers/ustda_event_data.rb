@@ -63,14 +63,18 @@ class UstdaEventData
 
     event[:country] &&= lookup_country(event[:country])
     event[:industries] = Array(event[:industries])
-    event[:contacts] = [
+    event[:contacts] = contact(entry)
+    event[:venues] = venues(entry)
+    EMPTY_RECORD.dup.merge(event)
+  end
+
+  def contact(entry)
+    [
       entry
         .slice(:first_name, :last_name, :post, :person_title, :phone, :email)
         .map { |k, v| { k => v.blank? ? '' : v.strip } }
-        .reduce(:merge),
+        .reduce(:merge)
     ]
-    event[:venues] = venues(entry)
-    EMPTY_RECORD.dup.merge(event)
   end
 
   def venues(entry)
