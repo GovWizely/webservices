@@ -30,13 +30,13 @@ end
 
 shared_examples 'it contains all SDN results that match "cuba"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[0], all_sdn_results[1]] }
+  let(:expected) { [all_sdn_results[1], all_sdn_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match "banco"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[0]] }
+  let(:expected) { [all_sdn_results[1]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -48,7 +48,7 @@ end
 
 shared_examples 'it contains all SDN results that match "havana"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[1]] }
+  let(:expected) { [all_sdn_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -60,37 +60,37 @@ end
 
 shared_examples 'it contains all SDN results that match countries "CH"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[0]] }
+  let(:expected) { [all_sdn_results[1]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "DE"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[1]] }
+  let(:expected) { [all_sdn_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "FR"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[1]] }
+  let(:expected) { [all_sdn_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "BE"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[1]] }
+  let(:expected) { [all_sdn_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "SO,JP"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[0], all_sdn_results[2]] }
+  let(:expected) { [all_sdn_results[1], all_sdn_results[2]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match sdn_type "Entity"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[0]] }
+  let(:expected) { [all_sdn_results[1]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -102,7 +102,7 @@ end
 
 shared_examples 'it contains all SDN results that match sdn_type "Individual"' do
   let(:source) { 'SDN' }
-  let(:expected) { [all_sdn_results[1], all_sdn_results[2]] }
+  let(:expected) { [all_sdn_results[0], all_sdn_results[2]] }
   it_behaves_like 'it contains all expected results of source'
 end
 

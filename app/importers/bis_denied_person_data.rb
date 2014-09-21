@@ -55,7 +55,8 @@ class BisDeniedPersonData
     doc[:id] = generate_id(rows.first.to_hash)
 
     doc[:source] = BisDeniedPerson.source
-    doc[:source_list_url] = @resource =~ URI::regexp ? @resource : nil
+    doc[:source_list_url] =
+      'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
     %i(start_date end_date).each do |field|
       doc[field] &&= parse_american_date(doc[field])

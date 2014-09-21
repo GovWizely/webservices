@@ -29,9 +29,9 @@ class BisEntityData
   def import
     Rails.logger.info "Importing #{@resource}"
 
-    rows = CSV.parse(open(@resource).read, headers: true,
-                                           header_converters: :symbol,
-                                           encoding: "ISO8859-1")
+    rows = CSV.parse(open(@resource, 'r:iso-8859-1:utf-8').read,
+                      headers: true,
+                      header_converters: :symbol)
 
     docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
 
@@ -56,11 +56,8 @@ class BisEntityData
 
     doc[:id] = generate_id(rows.first);
 
-    doc[:license_requirement] = correct_encoding(doc[:license_requirement])
-    doc[:license_policy] = correct_encoding(doc[:license_policy])
-
     doc[:alt_names] = rows.map do |row|
-      correct_encoding(row[:alternate_name])
+      strip_nonascii(row[:alternate_name])
     end.compact.uniq
 
     doc[:addresses] = rows.map { |row| process_address(row) }.uniq
@@ -71,8 +68,8 @@ class BisEntityData
     doc
   end
 
-  def correct_encoding(str)
-    str.present? ? str.force_encoding('iso-8859-1').encode('utf-8').squish : nil
+  def strip_nonascii(str)
+    str.present? ? str.delete("^\u{0000}-\u{007F}").squish : nil
   end
 
   ADDRESS_HASH = {
@@ -86,7 +83,6 @@ class BisEntityData
   def process_address(row)
     address = remap_keys(ADDRESS_HASH, row.to_hash)
     address[:country] &&= lookup_country(address[:country])
-    address[:address] &&= correct_encoding(address[:address])
     address
   end
 

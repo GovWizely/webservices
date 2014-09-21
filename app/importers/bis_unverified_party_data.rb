@@ -55,9 +55,11 @@ class BisUnverifiedPartyData
     doc[:name] = row_name
     doc[:id] = Digest::SHA1.hexdigest(row_name)
     doc[:source] = BisUnverifiedParty.source
+    doc[:source_list_url] =
+      'http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html'
 
     doc[:addresses] = rows.map do |row|
-     { address: sanitize_address(row[2]),
+     { address: row[2],
        city: nil,
        state: nil,
        postal_code: nil,
@@ -71,15 +73,5 @@ class BisUnverifiedPartyData
       .delete_if { |name| name == row_name }
 
     doc
-  end
-
-  def sanitize_address(address)
-    # In the source, there are some addresses given like:
-    # Flat A, 11/F, Adolfo Mansion, 114?116 Austin Road, Tsim Sha Tsui,...
-    #
-    # We are guessing that the ? is meant to be a dash. I only replace when
-    # there are integers on either side, in order to minimize the risk of
-    # making an incorrect replacement.
-    address.gsub(/(\d+)\?(\d+)/, '\1-\2');
   end
 end

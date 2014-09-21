@@ -52,22 +52,24 @@ module SDNImporter
     doc[:source_list_url] = @resource =~ URI::regexp ? @resource : nil
 
     doc[:name] = extract_name(sdn_node)
-    doc[:alt_names] =
-      sdn_node.xpath('.//xmlns:aka').map { |n| extract_name(n) }.compact
+
+    doc[:alt_names] = sdn_node.xpath('.//xmlns:aka')
+      .map { |n| extract_name(n) }.compact
+    doc[:programs] = sdn_node.xpath('.//xmlns:program')
+      .map { |n| n.text }.compact
+    doc[:nationalities] = sdn_node.xpath('.//xmlns:nationality')
+      .map { |n| extract_nationality(n) }.compact
+    doc[:citizenships] = sdn_node.xpath('.//xmlns:citizenship')
+      .map { |n| extract_citizenship(n) }.compact
+    doc[:dates_of_birth] = sdn_node.xpath('.//xmlns:dateOfBirthItem')
+      .map { |n| extract_dob(n) }.compact
+    doc[:places_of_birth] = sdn_node.xpath('.//xmlns:placeOfBirthItem')
+      .map { |n| extract_pob(n) }.compact
+
     doc[:addresses] =
       sdn_node.xpath('.//xmlns:address').map { |n| extract_address(n) }
-    doc[:programs] =
-      sdn_node.xpath('.//xmlns:program').map { |n| n.text }.compact
     doc[:ids] =
       sdn_node.xpath('.//xmlns:id').map { |n| extract_id(n) }
-    doc[:nationalities] =
-      sdn_node.xpath('.//xmlns:nationality').map { |n| extract_nationality(n) }
-    doc[:citizenships] =
-      sdn_node.xpath('.//xmlns:citizenship').map { |n| extract_citizenship(n) }
-    doc[:dates_of_birth] =
-      sdn_node.xpath('.//xmlns:dateOfBirthItem').map { |n| extract_dob(n) }
-    doc[:places_of_birth] =
-      sdn_node.xpath('.//xmlns:placeOfBirthItem').map { |n| extract_pob(n) }
 
     doc
   end
@@ -132,7 +134,8 @@ module SDNImporter
   end
 
   def extract_dob(node)
-    parse_date(node.xpath('./xmlns:dateOfBirth').text)
+    text = node.xpath('./xmlns:dateOfBirth').text
+    parse_date(text) || text
   end
 
   def extract_pob(node)
