@@ -11,7 +11,6 @@ class FbopenLeadQuery < Query
   def generate_query(json)
     query_from_fields(
       json,
-      searchable: %i(title description),
       q:          %i(title description),
     )
   end

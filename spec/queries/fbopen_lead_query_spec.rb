@@ -50,23 +50,6 @@ describe FbopenLeadQuery do
       end
     end
 
-    context 'when options include title' do
-      let(:query) { FbopenLeadQuery.new(title: 'roof') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_title.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
-    context 'when options include description' do
-      let(:query) { FbopenLeadQuery.new(description: 'bird') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_description.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
     context 'when options include all :)' do
       let(:query) { FbopenLeadQuery.new(description: 'bird', title: 'roof', q: 'workboat', specific_location: 'canada', industry: 'fishing') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }

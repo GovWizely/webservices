@@ -45,6 +45,7 @@ class Query
   end
 
   def query_from_fields(json, fields)
+    fields[:searchable] ||= []
     json.query do
       json.bool do
         json.must do
