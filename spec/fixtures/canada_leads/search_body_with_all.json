@@ -23,22 +23,6 @@
       "bool" : {
          "must" : [
             {
-               "match" : {
-                  "title" : {
-                     "query" : "roof",
-                     "operator" : "and"
-                  }
-               }
-            },
-            {
-               "match" : {
-                  "description" : {
-                     "query" : "bird",
-                     "operator" : "and"
-                  }
-               }
-            },
-            {
                "multi_match" : {
                   "operator" : "and",
                   "fields" : [
