@@ -16,14 +16,14 @@ class Query
     @size   = [options[:size].to_i, MAX_SIZE].min
     @q      = options[:q]
 
+    initialize_search_fields(options)
+  end
+
+  def initialize_search_fields(options)
     fields = self.class.class_variable_get('@@fields') rescue nil
     if fields
-      fields[:query].each do |sym|
-        instance_variable_set("@#{sym}", options[sym])
-      end
-      fields[:filter].each do |sym|
-        instance_variable_set("@#{sym}", options[sym])
-      end
+      fields[:query] .each { |f| instance_variable_set("@#{f}", options[f]) }
+      fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
       instance_variable_set("@sort", fields[:sort].try(:join,',')) unless q
     end
   end
