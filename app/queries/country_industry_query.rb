@@ -1,7 +1,7 @@
 class CountryIndustryQuery < Query
   attr_reader :countries
 
-  def initialize(options)
+  def initialize(options = {})
     super(options)
     @countries = options[:countries].upcase.split(',') if options[:countries].present?
     @industry = options[:industry] if options[:industry].present?

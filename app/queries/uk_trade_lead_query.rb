@@ -5,10 +5,4 @@ class UkTradeLeadQuery < CountryIndustryQuery
     filter: %i(),
     sort:   %i(publish_date),
   )
-
-  def initialize(options = {})
-    super options
-    @sort = :publish_date
-  end
-
 end
