@@ -1,24 +1,26 @@
 class FbopenLeadQuery < Query
-  query_fields %i(  title description industry specific_location q  )
 
-  def initialize(options)
-    super(options)
-    @sort = 'end_date,contract_number' unless @q
-  end
+  setup_query(
+    q: %i(title description),
+    query: %i(),
+    filter: %i(industry specific_location),
+    sort: %i(end_date contract_number),
+  )
+
 
   private
 
   def generate_query(json)
     query_from_fields(
       json,
-      q:          %i(title description),
+      my_query_fields
     )
   end
 
   def generate_filter(json)
     filter_from_fields(
       json,
-      searchable: %i(industry specific_location),
+      my_filter_fields
     )
   end
 end
