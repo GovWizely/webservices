@@ -21,6 +21,9 @@ describe FbopenLeadQuery do
       it 'generates search body with default options' do
         JSON.parse(query.generate_search_body).should == {}
       end
+      it 'should be sorted by default' do
+        query.sort.should == 'end_date,contract_number'
+      end
     end
 
     context 'when options include industry' do
@@ -47,6 +50,10 @@ describe FbopenLeadQuery do
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
+      end
+
+      it 'should be sorted by relevance' do
+        query.sort.should be_nil
       end
     end
 
