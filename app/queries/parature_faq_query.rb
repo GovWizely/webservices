@@ -9,7 +9,8 @@ class ParatureFaqQuery < Query
     @country = options[:country] if options[:country].present?
     @q = options[:q] if options[:q].present?
     @industry = options[:industry] if options[:industry].present?
- 
+    @sort = :id
+
   end
 
   def generate_query(json)
@@ -20,11 +21,11 @@ class ParatureFaqQuery < Query
         json.must do |must_json|
           must_json.child! { must_json.match { must_json.answer @answer } } if @answer
           must_json.child! { must_json.match { must_json.question @question} } if @question
-          must_json.child! { must_json.match { must_json.country @industry} } if @industry
+          must_json.child! { must_json.match { must_json.industry @industry} } if @industry
           must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
         end
       end
-    end if @question || @answer || @q || @country
+    end if @question || @answer || @industry || @q
   end
 
 

@@ -29,7 +29,7 @@ class ParatureFaq
               topic:  {type: 'string' },
               industry:  {type: 'string' },
               country:  {type: 'string' },
-              id: { type: 'string', index: :not_analyzed, include_in_all: false }
+              id: { type: 'integer' }
           }
       }
   }.freeze

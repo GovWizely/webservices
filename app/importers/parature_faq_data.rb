@@ -16,8 +16,14 @@ class ParatureFaqData
   }.freeze
 
 
- 	def initialize
-    	@resource = "https://g1.parature.com/api/v1/28023/28026/Article/1/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
+ 	def initialize(resource = nil)
+      if resource == nil
+    	 @resource = "https://g1.parature.com/api/v1/28023/28026/Article/1/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
+        @test = false
+      else
+        @resource = resource
+        @test = true
+      end
       @folder_source = "#{Rails.root}/data/parature_faqs/folders.csv"
   end
 
@@ -27,11 +33,13 @@ class ParatureFaqData
     pause_duration = 5
   	Rails.logger.info "Importing #{@resource}"
 
-  	id = 1
-    #data = ""
-  	data = "["
+    if @test == false
 
-  	while id <= article_count do
+  	 id = 1
+      #data = ""
+  	 data = "["
+
+  	 while id <= article_count do
 
       if ( id % 100 == 0)
         sleep pause_duration
@@ -49,26 +57,28 @@ class ParatureFaqData
   		data += ( entry + "," )
   		id += 1
 
-  	end
+  	 end
 
-    puts id
-  	data = data[0...-1]
-  	data += "]"
+      puts id
+  	 data = data[0...-1]
+  	 data += "]"
 
-    #File.open("/Users/tmh/Desktop/output.txt", 'a') {|file| file.write(data)}
+      doc = JSON.parse(data, symbolize_names: true)
 
-    #File.open("/Users/tmh/Desktop/output.txt", "r") do |infile|
-    #  while (line = infile.gets)
-    #    data += line
-    #  end
-    #end 
+    elsif @test == true
 
-    doc = JSON.parse(data, symbolize_names: true)
+      doc = JSON.parse( open(@resource).read, symbolize_names: true )
+
+    end
+
+    #File.open("spec/fixtures/parature_faqs/parature_faqs.json", 'w') {|file| file.write(JSON.pretty_generate(doc))}
 
     faqs = doc.map { |faq_hash| process_faq_info faq_hash }
     #puts faqs.count
     faqs = faqs.compact
     #puts faqs.count
+
+    #File.open("spec/fixtures/parature_faqs/importer_output.json", 'w') {|file| file.write(JSON.pretty_generate(faqs))}
 
     ParatureFaq.index faqs
 
@@ -102,6 +112,7 @@ class ParatureFaqData
       end
     end
 
+    faq.delete :folders
     faq[:country] = faq[:country].map {|country| lookup_country(country) }
 
     faq[:answer] = Sanitize.clean(faq[:answer]) if faq[:answer]
