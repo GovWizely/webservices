@@ -33,6 +33,7 @@ class ParatureFaqData
     pause_duration = 10
   	Rails.logger.info "Importing #{@resource}"
 
+    # Import directly from feed
     if @test == false
 
   	 id = 1
@@ -59,6 +60,7 @@ class ParatureFaqData
   	 data += "]"
       doc = JSON.parse(data, symbolize_names: true)
 
+    # Import from local file for specs
     elsif @test == true
       doc = JSON.parse( open(@resource).read, symbolize_names: true )
 
@@ -88,6 +90,7 @@ class ParatureFaqData
     faq[:industry] = []
     faq[:country] = []
 
+    # Get article folder ids and assign topic, industry, country:
     if faq[:folders][:ArticleFolder].class == Hash
       id = faq[:folders][:ArticleFolder][:id]
       if folder_hash[id][:type] != "n/a"
@@ -109,8 +112,8 @@ class ParatureFaqData
     faq[:country] = faq[:country].map {|country| lookup_country(country) }
 
     faq[:answer] = Sanitize.clean(faq[:answer]) if faq[:answer]
-    faq[:create_date] = Date.parse(faq[:create_date]) if faq[:create_date]
-    faq[:update_date] = Date.parse(faq[:update_date]) if faq[:update_date]
+    faq[:create_date] = Date.parse(faq[:create_date]).to_s if faq[:create_date]
+    faq[:update_date] = Date.parse(faq[:update_date]).to_s if faq[:update_date]
 
     if faq[:published] == "true"
       faq

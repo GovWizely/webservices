@@ -8,7 +8,6 @@ class ParatureFaqQuery < Query
     @country = options[:country] if options[:country].present?
     @q = options[:q] if options[:q].present?
     @industry = options[:industry] if options[:industry].present?
-    @sort = 'id'
   end
 
   def generate_query(json)
