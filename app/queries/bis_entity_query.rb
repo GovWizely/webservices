@@ -1,2 +1,0 @@
-class BisEntityQuery < ConsolidatedScreeningListQuery
-end

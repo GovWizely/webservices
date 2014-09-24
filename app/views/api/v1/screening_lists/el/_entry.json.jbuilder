@@ -1,0 +1,18 @@
+json.partial! "api/v1/screening_lists/addresses",
+  addresses: entry[:_source][:addresses]
+json.(entry[:_source],
+  :alt_names,
+  :entity_number,
+  :federal_register_notice,
+  :license_requirement,
+  :license_policy,
+  :name,
+  :programs,
+  :standard_order,
+  :start_date,
+  :end_date,
+  :sdn_type,
+  :source,
+  :source_list_url,
+  :title,
+)

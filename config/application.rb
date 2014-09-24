@@ -26,6 +26,8 @@ module Webservices
     # config.i18n.default_locale = :de
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
+    require 'ext/string'
+
     # Disable the asset pipeline.
     config.assets.enabled = false
 

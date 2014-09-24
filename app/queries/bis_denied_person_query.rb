@@ -1,2 +1,0 @@
-class BisDeniedPersonQuery < ConsolidatedScreeningListQuery
-end
