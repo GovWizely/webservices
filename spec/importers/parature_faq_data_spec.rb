@@ -10,14 +10,10 @@ describe ParatureFaqData do
 
     it 'loads parature faqs from specified resource' do
       ParatureFaq.should_receive(:index) do |entries|
-        entries.size.should == 28
 
-        entries[0].should == entry_hash[0]
-        entries[1].should == entry_hash[1]
-        entries[2].should == entry_hash[2]
-        entries[3].should == entry_hash[3]
-        entries[4].should == entry_hash[4]
-        entries[5].should == entry_hash[5]
+        entries.size.should == 28
+        28.times { |x| entries[x].should == entry_hash[x]}
+
       end
       importer.import
     end
