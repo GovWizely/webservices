@@ -13,7 +13,7 @@ describe 'Parature Faq API V1' do
   describe 'GET /parature_faq/search.json' do
 
     context 'when search parameters are empty' do
-      before { get search_path, { }, v1_headers }
+      before { get search_path, { size: 50 }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -23,7 +23,7 @@ describe 'Parature Faq API V1' do
         json_response['total'].should == 28
 
         results = json_response['results']
-        10.times { |x| results[x].should == expected_results[x] }
+        28.times { |x| results.should include(expected_results[x]) }
 
       end
     end
@@ -72,11 +72,11 @@ describe 'Parature Faq API V1' do
         json_response['total'].should == 5
 
         results = json_response['results']
-        results[0].should == expected_results[2]
-        results[1].should == expected_results[3]
-        results[2].should == expected_results[5]
-        results[3].should == expected_results[10]
-        results[4].should == expected_results[23]
+        results.should include expected_results[2]
+        results.should include expected_results[3]
+        results.should include expected_results[5]
+        results.should include expected_results[10]
+        results.should include expected_results[23]
 
       end
     end
@@ -93,10 +93,10 @@ describe 'Parature Faq API V1' do
         json_response['total'].should == 4
 
         results = json_response['results']
-        results[0].should == expected_results[4]
-        results[1].should == expected_results[11]
-        results[2].should == expected_results[22]
-        results[3].should == expected_results[23]
+        results.should include expected_results[4]
+        results.should include expected_results[11]
+        results.should include expected_results[22]
+        results.should include expected_results[23]
 
       end
     end

@@ -5,16 +5,13 @@ class ParatureFaqQuery < Query
     super(options)
  	  @question = options[:question].downcase if options[:question].present?
  	  @answer = options[:answer].downcase if options[:answer].present?
-    @create_date = options[:create_date].downcase if options[:create_date].present?
     @country = options[:country] if options[:country].present?
     @q = options[:q] if options[:q].present?
     @industry = options[:industry] if options[:industry].present?
-    @sort = :id
-
+    @sort = 'id'
   end
 
   def generate_query(json)
-
     multi_fields = %i(question answer industry)
     json.query do
       json.bool do
@@ -34,11 +31,9 @@ class ParatureFaqQuery < Query
       json.bool do
         json.must do
           json.child! { json.term { json.country @country } } if @country
-          json.child! { json.term { json.create_date @create_date } } if @create_date
         end
       end
-    end if @country || @create_date
+    end if @country
   end
-
 
 end

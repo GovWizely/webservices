@@ -30,17 +30,15 @@ class ParatureFaqData
 
   def import
     article_count = 379
-    pause_duration = 5
+    pause_duration = 10
   	Rails.logger.info "Importing #{@resource}"
 
     if @test == false
 
   	 id = 1
-      #data = ""
   	 data = "["
 
   	 while id <= article_count do
-
       if ( id % 100 == 0)
         sleep pause_duration
       end
@@ -49,35 +47,30 @@ class ParatureFaqData
   		  @resource = "https://g1.parature.com/api/v1/28023/28026/Article/#{id}/?_token_=S1z2KcL7rXq3m8NxP0xEdgWlTwLCcZjrAkPMhAFSrcg4rBzg5VAr0RLLchL35LJgjA7@KQunD7pkhTOQJ7tJIg=="
   		  entry = Hash.from_xml(open(@resource)).to_json
       rescue 
-        puts id
         id += 1
         next
       end
 
   		data += ( entry + "," )
   		id += 1
-
   	 end
 
-      puts id
   	 data = data[0...-1]
   	 data += "]"
-
       doc = JSON.parse(data, symbolize_names: true)
 
     elsif @test == true
-
       doc = JSON.parse( open(@resource).read, symbolize_names: true )
 
     end
 
+    # Write input JSON to local file for specs
     #File.open("spec/fixtures/parature_faqs/parature_faqs.json", 'w') {|file| file.write(JSON.pretty_generate(doc))}
 
     faqs = doc.map { |faq_hash| process_faq_info faq_hash }
-    #puts faqs.count
     faqs = faqs.compact
-    #puts faqs.count
 
+    #Write output JSON to local file for specs
     #File.open("spec/fixtures/parature_faqs/importer_output.json", 'w') {|file| file.write(JSON.pretty_generate(faqs))}
 
     ParatureFaq.index faqs
