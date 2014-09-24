@@ -11,13 +11,13 @@ namespace :ita do
 
   desc 'Recreate then import all CSL indices'
   task :recreate_then_import_csl_indices => :environment do
-    %w( BisDeniedPerson
-        BisEntity
-        BisUnverifiedParty
-        BisnForeignSanctionsEvader
-        BisnNonproliferationSanction
-        DdtcAecaDebarredParty
-        OfacSpecialDesignatedNational
+    %w( ScreeningList::Dpl
+        ScreeningList::Dtc
+        ScreeningList::El
+        ScreeningList::Fse
+        ScreeningList::Isn
+        ScreeningList::Sdn
+        ScreeningList::Uvl
       ).each do |class_name|
       class_name.constantize.recreate_index
       import_data(class_name)

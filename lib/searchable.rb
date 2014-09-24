@@ -8,7 +8,11 @@ module Searchable
   included do
     class_eval do
       class_attribute :search_klass, :search_params, instance_writer: false
-      self.search_klass = self.name.gsub(/Controller|Api::V1::/, '').singularize.constantize
+
+      parts = self.name.gsub(/Controller|Api::V1::/, '').split('::')
+      parts[0] = parts[0].singularize
+      self.search_klass = parts.join('::').constantize
+
       self.search_params = []
       search_by *COMMON_PARAMS
     end
