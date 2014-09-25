@@ -3,11 +3,21 @@ class Query
   MAX_SIZE = 100.freeze
   attr_reader :offset, :size, :sort, :q
 
+  def self.query_fields=(value)
+    class_variable_set('@@fields', value)
+  end
+  def self.query_fields
+    class_variable_get('@@fields') rescue nil
+  end
+  def query_fields
+    self.class.query_fields
+  end
+
   def self.setup_query(fields)
     fields.reverse_merge!(query: [], filter: [], sort: [])
     fields[:query].each { |f| attr_reader f }
     fields[:filter].each { |f| attr_reader f }
-    class_variable_set('@@fields', fields)
+    self.query_fields = fields
   end
 
   def initialize(options = {})
@@ -20,11 +30,10 @@ class Query
   end
 
   def initialize_search_fields(options)
-    fields = self.class.class_variable_get('@@fields') rescue nil
-    if fields
-      fields[:query] .each { |f| instance_variable_set("@#{f}", options[f]) }
-      fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
-      instance_variable_set("@sort", fields[:sort].try(:join,',')) unless q
+    if query_fields
+      query_fields[:query] .each { |f| instance_variable_set("@#{f}", options[f]) }
+      query_fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
+      instance_variable_set('@sort', query_fields[:sort].try(:join, ',')) unless q
     end
   end
 
@@ -80,12 +89,10 @@ class Query
   end
 
   def generate_query(json)
-    fields = self.class.class_variable_get('@@fields')
-    query_from_fields(json, fields)
+    query_from_fields(json, query_fields)
   end
 
   def generate_filter(json)
-    fields = self.class.class_variable_get('@@fields')
-    filter_from_fields(json, fields)
+    filter_from_fields(json, query_fields)
   end
 end
