@@ -28,11 +28,11 @@ describe 'Palestinian Legislative Council List API V1' do
       it_behaves_like 'it contains all PLC results that match countries "PS"'
     end
 
-    context 'when nsp_type is specified' do
+    context 'when type is specified' do
       subject { response }
       let(:params) { { nsp_type: 'Individual' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all PLC results that match nsp_type "Individual"'
+      it_behaves_like 'it contains all PLC results that match type "Individual"'
     end
   end
 end

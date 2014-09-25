@@ -1,6 +1,6 @@
 ---
 - :entity_number: '9639'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -27,7 +27,7 @@
   :addresses: []
   :ids: []
 - :entity_number: '9674'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -54,7 +54,7 @@
   :addresses: []
   :ids: []
 - :entity_number: '9688'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -84,7 +84,7 @@
     :address: 
   :ids: []
 - :entity_number: '9705'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -111,7 +111,7 @@
   :addresses: []
   :ids: []
 - :entity_number: '9712'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -136,7 +136,7 @@
   :addresses: []
   :ids: []
 - :entity_number: '9715'
-  :nsp_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 

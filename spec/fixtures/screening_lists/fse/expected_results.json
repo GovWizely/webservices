@@ -40,7 +40,7 @@
             "EO13645"
         ],
         "remarks": "(Linked To: NATIONAL IRANIAN TANKER COMPANY)",
-        "sdn_type": "Entity",
+        "type": "Entity",
         "source": "FSE",
         "source_list_url": null,
         "title": null
@@ -88,7 +88,7 @@
             "FSE-IR"
         ],
         "remarks": "(Linked To: FERLAND COMPANY LIMITED)",
-        "sdn_type": "Individual",
+        "type": "Individual",
         "source": "FSE",
         "source_list_url": null,
         "title": "General Manager of Ferland Company Limited"
@@ -127,7 +127,7 @@
             "FSE-IR"
         ],
         "remarks": null,
-        "sdn_type": "Individual",
+        "type": "Individual",
         "source": "FSE",
         "source_list_url": null,
         "title": null

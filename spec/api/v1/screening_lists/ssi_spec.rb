@@ -36,11 +36,11 @@ describe 'Sectoral Sanctions Identifications List API V1' do
       end
     end
 
-    context 'when sdn_type is specified' do
+    context 'when type is specified' do
       subject { response }
-      let(:params) { { sdn_type: 'Entity' } }
+      let(:params) { { type: 'Entity' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all SSI results that match sdn_type "Entity"'
+      it_behaves_like 'it contains all SSI results that match type "Entity"'
     end
   end
 end

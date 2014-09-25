@@ -5,7 +5,7 @@ module ScreeningList
     def initialize(options = {})
       super
       @q = options[:q] if options[:q].present?
-      @sdn_type = options[:sdn_type].downcase if options[:sdn_type].present?
+      @type = options[:type].downcase if options[:type].present?
       @countries = options[:countries].upcase.split(',') if options[:countries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,name.sort'
@@ -28,9 +28,9 @@ module ScreeningList
       json.filter do
         json.bool do
           json.must do
-            json.child! { json.term { json.sdn_type @sdn_type } } if @sdn_type
+            json.child! { json.term { json.type @type } } if @type
             json.child! { json.terms { json.source @sources } } if @sources.any?
-          end if @sdn_type || @sources.any?
+          end if @type || @sources.any?
           json.set! 'should' do
             json.child! { json.terms { json.set! 'addresses.country', @countries } }
             json.child! { json.terms { json.set! 'ids.country', @countries } }
@@ -38,7 +38,7 @@ module ScreeningList
             json.child! { json.terms { json.citizenships @countries } }
           end if @countries
         end
-      end if @countries || @sdn_type || @sources.any?
+      end if @countries || @type || @sources.any?
     end
   end
 end

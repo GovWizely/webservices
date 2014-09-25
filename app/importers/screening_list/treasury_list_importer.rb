@@ -55,10 +55,13 @@ module ScreeningList
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:name] = extract_name(node)
 
+      doc[:type] = doc[:sdn_type] || doc[:nsp_type]
+      doc.delete(:sdn_type)
+      doc.delete(:nsp_type)
+
       doc.merge!(extract_simple_nested_fields(node))
       doc.merge!(extract_complex_nested_fields(node))
-
-      delete_optional_fields(doc)
+      doc
     end
 
     NAME_XPATHS = {
@@ -153,12 +156,6 @@ module ScreeningList
       fields[:ids] =
         node.xpath('.//xmlns:id').map { |n| extract_id(n) }
       fields
-    end
-
-    def delete_optional_fields(doc)
-      doc.delete(:sdn_type) if doc[:sdn_type].blank?
-      doc.delete(:nsp_type) if doc[:nsp_type].blank?
-      doc
     end
   end
 end

@@ -1,6 +1,6 @@
 ---
 - :entity_number: '17013'
-  :sdn_type: Entity
+  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -84,7 +84,7 @@
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17017'
-  :sdn_type: Entity
+  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -160,7 +160,7 @@
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17254'
-  :sdn_type: Entity
+  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -230,7 +230,7 @@
     :number: Subject to Directive 2
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17260'
-  :sdn_type: Entity
+  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 

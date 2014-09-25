@@ -88,19 +88,19 @@ shared_examples 'it contains all SDN results that match countries "SO,JP"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Entity"' do
+shared_examples 'it contains all SDN results that match type "Entity"' do
   let(:source) { :SDN }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Vessel"' do
+shared_examples 'it contains all SDN results that match type "Vessel"' do
   let(:source) { :SDN }
   let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Individual"' do
+shared_examples 'it contains all SDN results that match type "Individual"' do
   let(:source) { :SDN }
   let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
@@ -184,13 +184,13 @@ shared_examples 'it contains all FSE results that match countries "UA,DJ"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all FSE results that match sdn_type "Entity"' do
+shared_examples 'it contains all FSE results that match type "Entity"' do
   let(:source) { :FSE }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all FSE results that match sdn_type "Individual"' do
+shared_examples 'it contains all FSE results that match type "Individual"' do
   let(:source) { :FSE }
   let(:expected) { [2, 1] }
   it_behaves_like 'it contains all expected results of source'
@@ -452,7 +452,7 @@ shared_examples 'it contains all PLC results that match countries "PS"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all PLC results that match nsp_type "Individual"' do
+shared_examples 'it contains all PLC results that match type "Individual"' do
   let(:source) { :PLC }
   let(:expected) { (0..5).to_a }
   it_behaves_like 'it contains all expected results of source'
@@ -494,7 +494,7 @@ shared_examples 'it contains all SSI results that match countries "UA,DJ"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SSI results that match sdn_type "Entity"' do
+shared_examples 'it contains all SSI results that match type "Entity"' do
   let(:source) { :SSI }
   let(:expected) { (0..3).to_a }
   it_behaves_like 'it contains all expected results of source'

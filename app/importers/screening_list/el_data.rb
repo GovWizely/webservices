@@ -10,7 +10,7 @@ module ScreeningList
 
     COLUMN_HASH = {
       entity_number:            :entity_number,
-      sdn_type:                 :sdn_type,
+      sdn_type:                 :type,
       programs:                 :programs,
       name:                     :name,
       title:                    :title,

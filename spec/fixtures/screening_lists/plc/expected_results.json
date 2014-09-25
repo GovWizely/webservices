@@ -21,7 +21,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
       "Shati"
     ],
@@ -54,7 +54,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -89,7 +89,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -123,7 +123,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
       "Gaza"
     ],
@@ -156,7 +156,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -195,7 +195,7 @@
     "nationalities": [
 
     ],
-    "nsp_type": "Individual",
+    "type": "Individual",
     "places_of_birth": [
 
     ],

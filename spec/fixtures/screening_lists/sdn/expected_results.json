@@ -39,7 +39,7 @@
       "CUBA"
     ],
     "remarks": "Might have something to do with Cuba.",
-    "sdn_type": "Individual",
+    "type": "Individual",
     "source": "SDN",
     "source_list_url": null,
     "title": "Executive Director, Havana International Bank"
@@ -100,7 +100,7 @@
       "CUBA"
     ],
     "remarks": null,
-    "sdn_type": "Entity",
+    "type": "Entity",
     "source": "SDN",
     "source_list_url": null,
     "title": null
@@ -168,7 +168,7 @@
       "SDGT"
     ],
     "remarks": "Additional Djiboutian passport issued in 2010.",
-    "sdn_type": "Individual",
+    "type": "Individual",
     "source": "SDN",
     "source_list_url": null,
     "title": null
@@ -200,7 +200,7 @@
       "NPWMD"
     ],
     "remarks": null,
-    "sdn_type": "Vessel",
+    "type": "Vessel",
     "source": "SDN",
     "source_list_url": null,
     "title": null,
