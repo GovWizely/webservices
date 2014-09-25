@@ -65,6 +65,11 @@ describe 'Consolidated Screening List API V1' do
           let(:sources) { %w(SDN) }
         end
       end
+
+      context 'when the search term is "technology"' do
+        let(:params) { { q: 'technology' } }
+        it_behaves_like 'it contains all UVL results that match "technology", sorted correctly'
+      end
     end
 
     context 'when countries is specified' do

@@ -11,7 +11,7 @@ module ScreeningList
               },
               keyword_lowercase:            {
                 tokenizer: 'keyword',
-                filter:    %w(lowercase),
+                filter:    %w(lowercase asciifolding),
               },
             },
           },
@@ -21,28 +21,33 @@ module ScreeningList
       klass.mappings = {
         klass.to_s.typeize => {
           properties: {
-            id:             { type: 'integer', index: :not_analyzed, include_in_all: false },
+            id:                      { type: 'integer', index: :not_analyzed, include_in_all: false },
 
-            name:           { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            alt_names:      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            remarks:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:          { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            name:                    { type:   'multi_field',
+                                       fields: {
+                                         name: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+                                         sort: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            sdn_type:       { type: 'string', analyzer: 'keyword_lowercase' },
-            source:         { type: 'string', analyzer: 'keyword' },
+            alt_names:               { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            addresses:      { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
-            ids:            { properties: { country:         { type: 'string', analyzer: 'keyword' },
-                                            issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
-                                            expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
+            sdn_type:                { type: 'string', analyzer: 'keyword_lowercase' },
+            source:                  { type: 'string', analyzer: 'keyword' },
+            federal_register_notice: { type: 'string', analyzer: 'keyword' },
 
-            nationalities:  { type: 'string', analyzer: 'keyword' },
-            citizenships:   { type: 'string', analyzer: 'keyword' },
-            dates_of_birth: { type: 'string', analyzer: 'keyword' },
-            start_date:     { type: 'date',   format: 'YYYY-MM-dd' },
-            end_date:       { type: 'date',   format: 'YYYY-MM-dd' },
+            addresses:               { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
+            ids:                     { properties: { country:         { type: 'string', analyzer: 'keyword' },
+                                                     issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
+                                                     expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
 
-            entity_number:  { type: 'integer' },
+            nationalities:           { type: 'string', analyzer: 'keyword' },
+            citizenships:            { type: 'string', analyzer: 'keyword' },
+            dates_of_birth:          { type: 'string', analyzer: 'keyword' },
+            start_date:              { type: 'date',   format: 'YYYY-MM-dd' },
+            end_date:                { type: 'date',   format: 'YYYY-MM-dd' },
+
+            entity_number:           { type: 'integer' },
           },
         },
       }.freeze
