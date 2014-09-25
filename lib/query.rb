@@ -10,7 +10,7 @@ class Query
     class_variable_set('@@fields', fields)
   end
 
-  def initialize(options)
+  def initialize(options = {})
     options.reverse_merge!(size: DEFAULT_SIZE)
     @offset = options[:offset].to_i
     @size   = [options[:size].to_i, MAX_SIZE].min
