@@ -2,7 +2,7 @@ require 'open-uri'
 require 'uri'
 
 module ScreeningList
-  module SdnImporter
+  module TreasuryListImporter
     def self.included(base)
       base.class_eval do
         class << self
@@ -20,8 +20,8 @@ module ScreeningList
 
       source = Nokogiri::XML(open(@resource))
 
-      docs = source.xpath('//xmlns:sdnEntry').map do |sdn_node|
-        process_sdn_node(sdn_node)
+      docs = source.xpath(document_node_xpath).map do |node|
+        process_node(node)
       end.compact
 
       self.class.model_class.index docs
@@ -29,9 +29,14 @@ module ScreeningList
 
     private
 
+    def document_node_xpath
+      "//xmlns:#{self.class.model_class.source == 'PLC' ? 'nsp' : 'sdn'}Entry"
+    end
+
     SINGLE_VALUED_XPATHS = {
       entity_number:            './xmlns:uid',
       sdn_type:                 './xmlns:sdnType',
+      nsp_type:                 './xmlns:nspType',
       title:                    './xmlns:title',
       call_sign:                './/xmlns:callSign',
       vessel_type:              './/xmlns:vesselType',
@@ -42,17 +47,18 @@ module ScreeningList
       remarks:                  './xmlns:remarks',
     }.freeze
 
-    def process_sdn_node(sdn_node)
-      doc = extract_fields(sdn_node, SINGLE_VALUED_XPATHS)
+    def process_node(node)
+      doc = extract_fields(node, SINGLE_VALUED_XPATHS)
 
       doc[:id] = doc[:entity_number]
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
-      doc[:name] = extract_name(sdn_node)
+      doc[:name] = extract_name(node)
 
-      doc.merge!(extract_simple_nested_fields(sdn_node))
-      doc.merge!(extract_complex_nested_fields(sdn_node))
-      doc
+      doc.merge!(extract_simple_nested_fields(node))
+      doc.merge!(extract_complex_nested_fields(node))
+
+      delete_optional_fields(doc)
     end
 
     NAME_XPATHS = {
@@ -147,6 +153,12 @@ module ScreeningList
       fields[:ids] =
         node.xpath('.//xmlns:id').map { |n| extract_id(n) }
       fields
+    end
+
+    def delete_optional_fields(doc)
+      doc.delete(:sdn_type) if doc[:sdn_type].blank?
+      doc.delete(:nsp_type) if doc[:nsp_type].blank?
+      doc
     end
   end
 end

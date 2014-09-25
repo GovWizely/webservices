@@ -141,9 +141,9 @@ describe 'Consolidated Screening List API V1' do
       end
 
       context 'and is set to "Individual"' do
-        let(:params) { { sdn_type: 'Individual' } }
-        it_behaves_like 'it contains all SDN results that match sdn_type "Individual"'
-        it_behaves_like 'it contains all FSE results that match sdn_type "Individual"'
+        let(:params) { { type: 'Individual' } }
+        it_behaves_like 'it contains all SDN results that match type "Individual"'
+        it_behaves_like 'it contains all FSE results that match type "Individual"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(SDN FSE) }
         end

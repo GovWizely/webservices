@@ -1,0 +1,210 @@
+[
+  {
+    "addresses": [
+
+    ],
+    "alt_names": [
+      "HANIYA, Ismail",
+      "HANIYYA, Ismaeel"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+      "1962"
+    ],
+    "entity_number": "9639",
+    "ids": [
+
+    ],
+    "name": "HANIYA, Ismail Abdul Salah",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+      "Shati"
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": null,
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+
+    ],
+    "alt_names": [
+
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "9715",
+    "ids": [
+
+    ],
+    "name": "JARRAR, Khaledah",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": "PFLP",
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+
+    ],
+    "alt_names": [
+      "KAFEESHEH, Hatem Rabah",
+      "QEFEISHA, Hatem",
+      "ABU ANED, Hadj Hatem"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+      "1960"
+    ],
+    "entity_number": "9674",
+    "ids": [
+
+    ],
+    "name": "QFEISHEH, Hatem",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": "HAMAS - Hebron",
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+
+    ],
+    "alt_names": [
+      "NASSER, Jamal Talab Mohammad Saleh",
+      "SALEH, Jamal Talab"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+      "1958"
+    ],
+    "entity_number": "9705",
+    "ids": [
+
+    ],
+    "name": "SALEH, Jamal",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+      "Gaza"
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": "HAMAS - Gaza",
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+
+    ],
+    "alt_names": [
+      "SHEHAB, Mohamed Abed Hadi Rahman"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+      "1956"
+    ],
+    "entity_number": "9712",
+    "ids": [
+
+    ],
+    "name": "SHIHAB, Mohammed",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": "HAMAS - Northern Gaza",
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": null,
+        "city": "Jenin",
+        "state": "West Bank",
+        "postal_code": null,
+        "country": "PS"
+      }
+    ],
+    "alt_names": [
+      "YEHIA, Khaled Said"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+      "1959"
+    ],
+    "entity_number": "9688",
+    "ids": [
+
+    ],
+    "name": "YAHIA, Khaled Abed",
+    "nationalities": [
+
+    ],
+    "nsp_type": "Individual",
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "NS-PLC"
+    ],
+    "remarks": "HAMAS - Jenin",
+    "source": "PLC",
+    "source_list_url": null,
+    "title": null
+  }
+]
