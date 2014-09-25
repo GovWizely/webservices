@@ -8,7 +8,7 @@ module ScreeningList
       @sdn_type = options[:sdn_type].downcase if options[:sdn_type].present?
       @countries = options[:countries].upcase.split(',') if options[:countries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
-      @sort = '_score,end_date:desc,id'
+      @sort = '_score,name.sort,start_date:desc,end_date:desc,federal_register_notice,id'
     end
 
     private
