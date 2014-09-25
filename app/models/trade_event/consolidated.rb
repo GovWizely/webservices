@@ -13,7 +13,7 @@ module TradeEvent
     end
 
     def self.index_names(sources)
-      classes = [Ita, Sba]
+      classes = [Ita, Sba, Exim]
       classes = classes.select { |c| sources.include?(c.source) } if sources.any?
 
       classes.map(&:index_name)
