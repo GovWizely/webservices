@@ -13,8 +13,9 @@ describe 'Consolidated Trade Events API V1' do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results'
       it_behaves_like 'it contains all TradeEvent::Sba results'
+      it_behaves_like 'it contains all TradeEvent::Exim results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(ITA SBA) }
+        let(:sources) { %w(ITA SBA EXIM) }
       end
     end
 
@@ -35,13 +36,22 @@ describe 'Consolidated Trade Events API V1' do
           let(:sources) { %w(SBA) }
         end
       end
+      context 'and is "Baltimore"' do
+        let(:params) { { q: 'Baltimore' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Exim results that match "Baltimore"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(EXIM) }
+        end
+      end
       context 'and is "international"' do
         let(:params) { { q: 'international', size: 100 } }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all TradeEvent::Ita results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match "international"'
+        it_behaves_like 'it contains all TradeEvent::Exim results that match "international"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { %w(ITA SBA) }
+          let(:sources) { %w(ITA SBA EXIM) }
         end
       end
     end
@@ -98,6 +108,14 @@ describe 'Consolidated Trade Events API V1' do
         it_behaves_like 'it contains all TradeEvent::Sba results'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(SBA) }
+        end
+      end
+      context 'and is set to "EXIM"' do
+        let(:params) { { sources: 'EXIM', size: 100 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Exim results'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(EXIM) }
         end
       end
     end
