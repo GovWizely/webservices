@@ -31,6 +31,7 @@ Webservices::Application.routes.draw do
       get 'search', to: 'consolidated#search'
       get 'ita/search'
       get 'sba/search'
+      get 'exim/search'
     end
   end
 end
