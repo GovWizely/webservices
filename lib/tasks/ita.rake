@@ -42,6 +42,7 @@ namespace :ita do
   task recreate_then_import_trade_event_indices: :environment do
     %w( TradeEvent::Ita
         TradeEvent::Sba
+        TradeEvent::Exim
     ).each do |class_name|
       class_name.constantize.recreate_index
       import_data(class_name)

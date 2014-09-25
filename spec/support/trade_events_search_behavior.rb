@@ -1,6 +1,7 @@
 shared_context 'all Trade Events fixture data' do
   include_context 'TradeEvent::Sba data'
   include_context 'TradeEvent::Ita data'
+  include_context 'TradeEvent::Exim data'
 end
 
 shared_context 'TradeEvent::Ita data' do
@@ -108,5 +109,42 @@ shared_examples 'it contains all TradeEvent::Sba results that match countries "U
      all_sba_results[10..12],
      all_sba_results[14..16]].flatten
   end
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TradeEvent::Exim data' do
+  before(:all) do
+    TradeEvent::Exim.recreate_index
+    TradeEvent::EximData.new(
+        "#{Rails.root}/spec/fixtures/trade_events/exim/trade_events.xml",
+        reject_if_ends_before: Date.parse('2013-01-11'),
+    ).import
+  end
+
+  before do
+    Date.stub(:current).and_return(Date.parse('2013-01-11'))
+  end
+
+  let(:all_exim_results) do
+    JSON.parse(
+      open("#{Rails.root}/spec/fixtures/trade_events/exim/results.json").read)
+  end
+end
+
+shared_examples 'it contains all TradeEvent::Exim results' do
+  let(:source) { 'EXIM' }
+  let(:expected) { all_exim_results }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Exim results that match "international"' do
+  let(:source) { 'EXIM' }
+  let(:expected) { [all_exim_results[1], all_exim_results[8], all_exim_results[13], all_exim_results[14], all_exim_results[15]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Exim results that match "Baltimore"' do
+  let(:source) { 'EXIM' }
+  let(:expected) { [all_exim_results[7], all_exim_results[13]] }
   it_behaves_like 'it contains all expected results of source'
 end
