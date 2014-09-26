@@ -9,20 +9,20 @@ module ScreeningList
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1007-dpl-txt'
 
     COLUMN_HASH = {
-      name: :name,
+      name:           :name,
       beginning_date: :start_date,
-      ending_date: :end_date,
+      ending_date:    :end_date,
       standard_order: :standard_order,
-      action: :remarks,
-      fr_citation: :federal_register_notice,
+      action:         :remarks,
+      fr_citation:    :federal_register_notice,
     }
 
     ADDRESS_HASH = {
       street_address: :address,
-      city: :city,
-      state: :state,
-      country: :country,
-      postal_code: :postal_code,
+      city:           :city,
+      state:          :state,
+      country:        :country,
+      postal_code:    :postal_code,
     }
 
     def initialize(resource = ENDPOINT)
@@ -31,7 +31,7 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: "UTF-8", col_sep: "\t")
+      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t")
 
       docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
 

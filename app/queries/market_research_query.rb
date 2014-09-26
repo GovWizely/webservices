@@ -1,5 +1,4 @@
 class MarketResearchQuery < CountryIndustryQuery
-
   def initialize(options)
     super(options)
     @sort = @q ? nil : 'title.keyword'

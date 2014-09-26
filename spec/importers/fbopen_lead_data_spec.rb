@@ -81,9 +81,9 @@ describe FbopenLeadData do
     it 'ignores US records' do
       us_record = original.dup
       us_record['POPCOUNTRY'] = 'US'
-      importer.__send__(:process_entry, us_record).should == nil
+      importer.__send__(:process_entry, us_record).should.nil?
       us_record['POPCOUNTRY'] = 'USA'
-      importer.__send__(:process_entry, us_record).should == nil
+      importer.__send__(:process_entry, us_record).should.nil?
     end
   end
 

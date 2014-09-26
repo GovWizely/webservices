@@ -9,7 +9,7 @@ describe ItaOfficeLocationQuery do
 
   describe '#generate_search_body' do
     context 'when options include city' do
-      let(:query) { ItaOfficeLocationQuery.new({ city: 'San Jose' }) }
+      let(:query) { ItaOfficeLocationQuery.new(city: 'San Jose') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_city.json").read }
 
       it 'generates search body with filters' do

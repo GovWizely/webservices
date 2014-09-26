@@ -52,10 +52,12 @@ describe ScreeningList::Query do
     end
 
     context 'when options include all possible fields' do
-      let(:query) { described_class.new(countries: 'us,ca',
-                                        q: 'fish',
-                                        sources: 'SDN',
-                                        sdn_type: 'Entity') }
+      let(:query) do
+        described_class.new(countries: 'us,ca',
+                            q:         'fish',
+                            sources:   'SDN',
+                            sdn_type:  'Entity')
+      end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
       it 'generates search body with countries filter' do

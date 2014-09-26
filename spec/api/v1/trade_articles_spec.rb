@@ -11,12 +11,14 @@ describe 'Trade Articles API V1' do
   let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_articles/results.json").read }
 
   describe 'GET /trade_articles/search.json' do
-    let(:params) { { q: 'multilateral development team',
-                     evergreen: 'false',
-                     pub_date_start: '2013-05-14',
-                     pub_date_end: '2013-05-15',
-                     update_date_start: '2013-06-12',
-                     update_date_end: '2013-06-12' } }
+    let(:params) do
+      { q:                 'multilateral development team',
+        evergreen:         'false',
+        pub_date_start:    '2013-05-14',
+        pub_date_end:      '2013-05-15',
+        update_date_start: '2013-06-12',
+        update_date_end:   '2013-06-12' }
+    end
 
     context 'when all params are specified' do
       before { get '/trade_articles/search', params, v1_headers }

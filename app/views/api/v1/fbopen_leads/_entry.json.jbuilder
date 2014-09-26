@@ -1,4 +1,4 @@
-json.(
+json.call(
   entry[:_source],
   :notice_type, :publish_date, :procurement_organization, :procurement_office,
   :procurement_organization_address, :classification_code, :industry,

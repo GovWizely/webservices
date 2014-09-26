@@ -11,7 +11,7 @@ describe TradeArticle do
 
     it 'should return results sorted by pub_date' do
       ids = %w(447 446 501)
-      TradeArticle.search_for(update_date_start: '2013-01-01')[:hits].collect { |h| h['_id'] }.should == ids
+      TradeArticle.search_for(update_date_start: '2013-01-01')[:hits].map { |h| h['_id'] }.should == ids
     end
 
     context 'when options is an empty hash' do
@@ -35,8 +35,8 @@ describe TradeArticle do
 
     context 'when filtering on pub_date' do
       it 'finds articles published in that range' do
-        TradeArticle.search_for(pub_date_start: '2013-05-01',pub_date_end: '2013-05-14')[:total].should == 3
-        TradeArticle.search_for(pub_date_start: '2013-05-14',pub_date_end: '2013-05-14')[:total].should == 1
+        TradeArticle.search_for(pub_date_start: '2013-05-01', pub_date_end: '2013-05-14')[:total].should == 3
+        TradeArticle.search_for(pub_date_start: '2013-05-14', pub_date_end: '2013-05-14')[:total].should == 1
         TradeArticle.search_for(pub_date_start: '2013-05-13')[:total].should == 1
         TradeArticle.search_for(pub_date_end: '2013-05-02')[:total].should == 2
       end
@@ -44,8 +44,8 @@ describe TradeArticle do
 
     context 'when filtering on update_date' do
       it 'finds articles published in that range' do
-        TradeArticle.search_for(update_date_start: '2013-05-01',update_date_end: '2013-06-12')[:total].should == 3
-        TradeArticle.search_for(update_date_start: '2013-06-12',update_date_end: '2013-06-12')[:total].should == 1
+        TradeArticle.search_for(update_date_start: '2013-05-01', update_date_end: '2013-06-12')[:total].should == 3
+        TradeArticle.search_for(update_date_start: '2013-06-12', update_date_end: '2013-06-12')[:total].should == 1
         TradeArticle.search_for(update_date_start: '2013-05-13')[:total].should == 1
         TradeArticle.search_for(update_date_end: '2013-05-07')[:total].should == 2
       end

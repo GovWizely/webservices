@@ -24,7 +24,7 @@ describe CanadaLeadQuery do
     end
 
     context 'when options include industry' do
-      let(:query) { CanadaLeadQuery.new({ industry: 'fishing' }) }
+      let(:query) { CanadaLeadQuery.new(industry: 'fishing') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_industry.json").read }
 
       it 'generates search body with queries' do
@@ -33,7 +33,7 @@ describe CanadaLeadQuery do
     end
 
     context 'when options include specific_location' do
-      let(:query) { CanadaLeadQuery.new({ specific_location: 'canada' }) }
+      let(:query) { CanadaLeadQuery.new(specific_location: 'canada') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_specific_location.json").read }
 
       it 'generates search body with filters' do
@@ -42,7 +42,7 @@ describe CanadaLeadQuery do
     end
 
     context 'when options include q' do
-      let(:query) { CanadaLeadQuery.new({ q: 'workboat' }) }
+      let(:query) { CanadaLeadQuery.new(q: 'workboat') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_q.json").read }
 
       it 'generates search body with queries' do
@@ -51,7 +51,7 @@ describe CanadaLeadQuery do
     end
 
     context 'when options include title' do
-      let(:query) { CanadaLeadQuery.new({ title: 'roof' }) }
+      let(:query) { CanadaLeadQuery.new(title: 'roof') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_title.json").read }
 
       it 'generates search body with queries' do
@@ -60,7 +60,7 @@ describe CanadaLeadQuery do
     end
 
     context 'when options include description' do
-      let(:query) { CanadaLeadQuery.new({ description: 'bird' }) }
+      let(:query) { CanadaLeadQuery.new(description: 'bird') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_description.json").read }
 
       it 'generates search body with queries' do
@@ -68,7 +68,7 @@ describe CanadaLeadQuery do
       end
     end
     context 'when options include all :)' do
-      let(:query) { CanadaLeadQuery.new({ description: 'bird', title: 'roof', q: 'workboat', specific_location: 'canada', industry: 'fishing' }) }
+      let(:query) { CanadaLeadQuery.new(description: 'bird', title: 'roof', q: 'workboat', specific_location: 'canada', industry: 'fishing') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
       it 'generates search body with queries' do

@@ -3,7 +3,6 @@ require 'uri'
 
 module ScreeningList
   module SdnImporter
-
     def self.included(base)
       base.class_eval do
         class << self
@@ -31,16 +30,16 @@ module ScreeningList
     private
 
     SINGLE_VALUED_XPATHS = {
-        entity_number: './xmlns:uid',
-        sdn_type: './xmlns:sdnType',
-        title: './xmlns:title',
-        call_sign: './/xmlns:callSign',
-        vessel_type: './/xmlns:vesselType',
-        gross_tonnage: './/xmlns:tonnage',
-        gross_registered_tonnage: './/xmlns:grossRegisteredTonnage',
-        vessel_flag: './/xmlns:vesselFlag',
-        vessel_owner: './/xmlns:vesselOwner',
-        remarks: './xmlns:remarks',
+      entity_number:            './xmlns:uid',
+      sdn_type:                 './xmlns:sdnType',
+      title:                    './xmlns:title',
+      call_sign:                './/xmlns:callSign',
+      vessel_type:              './/xmlns:vesselType',
+      gross_tonnage:            './/xmlns:tonnage',
+      gross_registered_tonnage: './/xmlns:grossRegisteredTonnage',
+      vessel_flag:              './/xmlns:vesselFlag',
+      vessel_owner:             './/xmlns:vesselOwner',
+      remarks:                  './xmlns:remarks',
     }.freeze
 
     def process_sdn_node(sdn_node)
@@ -49,14 +48,14 @@ module ScreeningList
       doc[:id] = doc[:entity_number]
 
       doc[:source] = self.class.model_class.source
-      doc[:source_list_url] = @resource =~ URI::regexp ? @resource : nil
+      doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
 
       doc[:name] = extract_name(sdn_node)
 
       doc[:alt_names] = sdn_node.xpath('.//xmlns:aka')
         .map { |n| extract_name(n) }.compact
       doc[:programs] = sdn_node.xpath('.//xmlns:program')
-        .map { |n| n.text }.compact
+        .map(&:text).compact
       doc[:nationalities] = sdn_node.xpath('.//xmlns:nationality')
         .map { |n| extract_nationality(n) }.compact
       doc[:citizenships] = sdn_node.xpath('.//xmlns:citizenship')
@@ -75,7 +74,7 @@ module ScreeningList
     end
 
     NAME_XPATHS = {
-      lastName: './xmlns:lastName',
+      lastName:  './xmlns:lastName',
       firstName: './xmlns:firstName',
     }.freeze
 
@@ -86,13 +85,13 @@ module ScreeningList
     end
 
     ADDRESS_XPATHS = {
-      address1: './xmlns:address1',
-      address2: './xmlns:address2',
-      address3: './xmlns:address3',
-      city: './xmlns:city',
-      country: './xmlns:country',
+      address1:    './xmlns:address1',
+      address2:    './xmlns:address2',
+      address3:    './xmlns:address3',
+      city:        './xmlns:city',
+      country:     './xmlns:country',
       postal_code: './xmlns:postalCode',
-      state: './xmlns:stateOrProvince',
+      state:       './xmlns:stateOrProvince',
     }.freeze
 
     def extract_address(node)
@@ -110,11 +109,11 @@ module ScreeningList
     end
 
     ID_XPATHS = {
-      country: './xmlns:idCountry',
+      country:         './xmlns:idCountry',
       expiration_date: './xmlns:expirationDate',
-      issue_date: './xmlns:issueDate',
-      number: './xmlns:idNumber',
-      type: './xmlns:idType',
+      issue_date:      './xmlns:issueDate',
+      number:          './xmlns:idNumber',
+      type:            './xmlns:idType',
     }.freeze
 
     def extract_id(node)
@@ -141,6 +140,5 @@ module ScreeningList
     def extract_pob(node)
       node.xpath('./xmlns:placeOfBirth').text
     end
-
   end
 end

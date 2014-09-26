@@ -28,7 +28,7 @@ describe TradeEventQuery do
     end
 
     context 'when options include industry' do
-      let(:query) { TradeEventQuery.new({ industry: 'fishing' }) }
+      let(:query) { TradeEventQuery.new(industry: 'fishing') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_industries.json").read }
 
       it 'generates search body with queries' do
@@ -37,7 +37,7 @@ describe TradeEventQuery do
     end
 
     context 'when options include q' do
-      let(:query) { TradeEventQuery.new({ q: 'workboat' }) }
+      let(:query) { TradeEventQuery.new(q: 'workboat') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with queries' do
@@ -46,7 +46,7 @@ describe TradeEventQuery do
     end
 
     context 'when options include countries' do
-      let(:query) { TradeEventQuery.new({ countries: 'IL, US' }) }
+      let(:query) { TradeEventQuery.new(countries: 'IL, US') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
 
       it 'generates search body with filters' do

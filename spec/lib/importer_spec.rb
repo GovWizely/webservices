@@ -6,7 +6,7 @@ describe Importer do
   end
 
   describe '#lookup_country' do
-    it "finds alpha2 code" do
+    it 'finds alpha2 code' do
       country_names = ['burma (Myanmar)',
                        "cote d'Ivoire",
                        'congo, Democratic Rep. of the',
@@ -60,8 +60,8 @@ describe Importer do
 
   describe '#sanitize_entry' do
     subject { MockImporter.new.sanitize_entry(hash) }
-    let(:hash) { {one: nil, two: ' ', three: ' f ', four: 'o', five: [' o', 'b ']} }
-    it { should eq({one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']}) }
+    let(:hash) { { one: nil, two: ' ', three: ' f ', four: 'o', five: [' o', 'b '] } }
+    it { should eq(one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']) }
   end
 
 end

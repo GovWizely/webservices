@@ -1,5 +1,4 @@
 class AustralianTradeLeadQuery < Query
-
   def initialize(options)
     super options
     @q = options[:q] if options[:q].present?
@@ -14,6 +13,6 @@ class AustralianTradeLeadQuery < Query
     end if @q
   end
 
-  def generate_filter(json)
+  def generate_filter(_json)
   end
 end

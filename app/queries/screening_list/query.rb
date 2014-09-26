@@ -2,7 +2,7 @@ module ScreeningList
   class Query < ::Query
     attr_reader :countries, :sources
 
-    def initialize(options={})
+    def initialize(options = {})
       super
       @q = options[:q] if options[:q].present?
       @sdn_type = options[:sdn_type].downcase if options[:sdn_type].present?

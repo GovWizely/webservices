@@ -89,18 +89,31 @@ module ActionController
 
     module Compatibility
       def cache_store; end
+
       def cache_store=(*); end
+
       def assets_dir=(*); end
+
       def javascripts_dir=(*); end
+
       def stylesheets_dir=(*); end
+
       def page_cache_directory=(*); end
+
       def asset_path=(*); end
+
       def asset_host=(*); end
+
       def relative_url_root=(*); end
+
       def perform_caching=(*); end
+
       def helpers_path=(*); end
+
       def allow_forgery_protection=(*); end
+
       def helper_method(*); end
+
       def helper(*); end
     end
 
@@ -123,38 +136,35 @@ module ActionController
 
       MODULES - modules
     end
-    
 
-=begin
-    MODULES = [
-      HideActions,
-      UrlFor,
-      Redirecting,
-      Rendering,
-      Renderers::All,
-      ConditionalGet,
-      RackDelegation,
+    #     MODULES = [
+    #       HideActions,
+    #       UrlFor,
+    #       Redirecting,
+    #       Rendering,
+    #       Renderers::All,
+    #       ConditionalGet,
+    #       RackDelegation,
+    #
+    #       ForceSSL,
+    #       DataStreaming,
+    #
+    #       # Before callbacks should also be executed the earliest as possible, so
+    #       # also include them at the bottom.
+    #       AbstractController::Callbacks,
+    #
+    #       # Append rescue at the bottom to wrap as much as possible.
+    #       Rescue,
+    #
+    #       # Add instrumentations hooks at the bottom, to ensure they instrument
+    #       # all the methods properly.
+    #       Instrumentation
+    #     ]
+    #
+    #     MODULES.each do |mod|
+    #       include mod
+    #     end
 
-      ForceSSL,
-      DataStreaming,
-
-      # Before callbacks should also be executed the earliest as possible, so
-      # also include them at the bottom.
-      AbstractController::Callbacks,
-
-      # Append rescue at the bottom to wrap as much as possible.
-      Rescue,
-
-      # Add instrumentations hooks at the bottom, to ensure they instrument
-      # all the methods properly.
-      Instrumentation
-    ]
-
-    MODULES.each do |mod|
-      include mod
-    end
-=end
-    
     if Rails::VERSION::MAJOR == 4
       include StrongParameters
     end

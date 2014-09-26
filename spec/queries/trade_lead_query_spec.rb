@@ -21,7 +21,7 @@ describe TradeLeadQuery do
 
   describe '#generate_search_body' do
     context 'when options include only countries' do
-      let(:query) { TradeLeadQuery.new({countries: 'ae,au' }) }
+      let(:query) { TradeLeadQuery.new(countries: 'ae,au') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_country_filter.json").read }
 
       it 'generates search body with countries filter' do
@@ -30,7 +30,7 @@ describe TradeLeadQuery do
     end
 
     context 'when options include only q' do
-      let(:query) { TradeLeadQuery.new({ q: 'water' }) }
+      let(:query) { TradeLeadQuery.new(q: 'water') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with countries filter' do
@@ -39,7 +39,7 @@ describe TradeLeadQuery do
     end
 
     context 'when options include countries and q' do
-      let(:query) { TradeLeadQuery.new({ countries: 'au, ae', q: 'water' }) }
+      let(:query) { TradeLeadQuery.new(countries: 'au, ae', q: 'water') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match_and_filter.json").read }
 
       it 'generates search body with countries filter' do

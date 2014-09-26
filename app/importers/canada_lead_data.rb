@@ -3,30 +3,30 @@ require 'csv'
 
 class CanadaLeadData
   include Importer
-  ENDPOINT = "https://buyandsell.gc.ca/procurement-data/csv/tender/active"
+  ENDPOINT = 'https://buyandsell.gc.ca/procurement-data/csv/tender/active'
 
   COLUMN_HASH = {
-    language:                              :language,
-    title:                                 :title,
-    reference_number:                      :reference_number,
-    solicitation_number:                   :contract_number,
-    publication_date:                      :publish_date,
-    date_closing:                          :end_date,
-    amendment_date:                        :publish_date_amended,
-    publishing_status:                     :status,
-    gsin:                                  :industry,
-    region_opportunity:                    :region_opportunity,
-    region_delivery:                       :specific_location,
-    notice_type:                           :notice_type,
-    trade_agreement:                       :trade_agreement,
-    tendering_procedure:                   :bid_type,
-    competitive_procurement_strategy:      :competitive_procurement_strategy,
-    non_competitive_procurement_strategy:  :non_competitive_procurement_strategy,
-    procurement_entity:                    :procurement_organization,
-    end_user_entity:                       :implementing_entity,
-    description:                           :description,
-    contact:                               :contact,
-    document:                              :urls
+    language:                             :language,
+    title:                                :title,
+    reference_number:                     :reference_number,
+    solicitation_number:                  :contract_number,
+    publication_date:                     :publish_date,
+    date_closing:                         :end_date,
+    amendment_date:                       :publish_date_amended,
+    publishing_status:                    :status,
+    gsin:                                 :industry,
+    region_opportunity:                   :region_opportunity,
+    region_delivery:                      :specific_location,
+    notice_type:                          :notice_type,
+    trade_agreement:                      :trade_agreement,
+    tendering_procedure:                  :bid_type,
+    competitive_procurement_strategy:     :competitive_procurement_strategy,
+    non_competitive_procurement_strategy: :non_competitive_procurement_strategy,
+    procurement_entity:                   :procurement_organization,
+    end_user_entity:                      :implementing_entity,
+    description:                          :description,
+    contact:                              :contact,
+    document:                             :urls,
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -39,7 +39,7 @@ class CanadaLeadData
   end
 
   def leads
-    doc = CSV.parse(open(@resource, 'r:UTF-8').read, headers: true, header_converters: :symbol, encoding: "UTF-8")
+    doc = CSV.parse(open(@resource, 'r:UTF-8').read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
     doc.map { |entry| process_entry entry.to_h }.compact
   end
 

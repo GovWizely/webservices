@@ -1,8 +1,9 @@
 class String
   def indexize
-    self.tableize.tr('/', ':')
+    tableize.tr('/', ':')
   end
+
   def typeize
-    self.indexize.singularize
+    indexize.singularize
   end
 end

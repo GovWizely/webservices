@@ -5,22 +5,22 @@ class ItaOfficeLocationData
   COMMON_URL_FRAGMENT = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type='
   OFFICE_TYPES = %w(odo oio)
   DEFAULT_RESOURCES = OFFICE_TYPES.map { |office_type| [COMMON_URL_FRAGMENT, office_type].join }
-  INVALID_CITIES = ['European Union' ]
+  INVALID_CITIES = ['European Union']
 
   SINGLE_VALUED_XPATHS = {
-      post: './POST',
-      office_name: './OFFICENAME',
-      country: './COUNTRYID',
-      state: './STATE',
-      email: './EMAIL',
-      fax: './FAX',
-      mail_instructions: './MAIL_INSTR',
-      phone: './PHONE',
-      post_type: './POSTTYPE'
+    post:              './POST',
+    office_name:       './OFFICENAME',
+    country:           './COUNTRYID',
+    state:             './STATE',
+    email:             './EMAIL',
+    fax:               './FAX',
+    mail_instructions: './MAIL_INSTR',
+    phone:             './PHONE',
+    post_type:         './POSTTYPE',
   }.freeze
 
   MULTI_VALUED_XPATHS = {
-      address: './ADDRESS'
+    address: './ADDRESS',
   }
 
   def initialize(resources = DEFAULT_RESOURCES)
@@ -32,9 +32,9 @@ class ItaOfficeLocationData
     @resources.each do |resource|
       Rails.logger.info "Importing #{resource}"
       doc = Nokogiri::XML(open(resource))
-      ita_office_locations = doc.xpath('//POSTINFO').
-          map { |location_info| process_location_info(location_info) }.
-          sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
+      ita_office_locations = doc.xpath('//POSTINFO')
+          .map { |location_info| process_location_info(location_info) }
+          .sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
       ItaOfficeLocation.index ita_office_locations.compact
     end
   end
@@ -76,5 +76,4 @@ class ItaOfficeLocationData
   def normalize_post(post_str)
     post_str.gsub(/\W/, '')
   end
-
 end

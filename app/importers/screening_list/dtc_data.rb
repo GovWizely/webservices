@@ -12,7 +12,7 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: "UTF-8")
+      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
       entries = rows.map { |row| process_row row.to_h }.compact
       self.class.model_class.index(entries)
     end
@@ -25,8 +25,8 @@ module ScreeningList
       entry[:name] =
         %i(federal_register_notices__debarred_party_given_names
            federal_register_notices__debarred_party_surnamecorporate_name).map do |key|
-        row[key].to_s
-      end.join(' ')
+          row[key].to_s
+        end.join(' ')
 
       entry[:alt_names] = row[:alias] ? row[:alias].split(';') : []
       entry[:start_date] = parse_date(row[:eff_date])

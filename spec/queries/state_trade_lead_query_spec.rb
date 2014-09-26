@@ -22,9 +22,9 @@ describe StateTradeLeadQuery do
 
     context 'with all possible options given' do
       let(:query) do
-        described_class.new(q: 'fish',
-                            countries: 'CN,FR',
-                            industry: 'fishing',
+        described_class.new(q:                 'fish',
+                            countries:         'CN,FR',
+                            industry:          'fishing',
                             specific_location: 'qatar')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }

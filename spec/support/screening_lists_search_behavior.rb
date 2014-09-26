@@ -8,7 +8,6 @@ shared_context 'all CSL fixture data' do
   include_context 'DTC data'
 end
 
-
 shared_context 'SDN data' do
   before(:all) do
     ScreeningList::Sdn.recreate_index
@@ -106,7 +105,6 @@ shared_examples 'it contains all SDN results that match sdn_type "Individual"' d
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'FSE data' do
   before(:all) do
     ScreeningList::Fse.recreate_index
@@ -198,7 +196,6 @@ shared_examples 'it contains all FSE results that match sdn_type "Individual"' d
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'EL data' do
   before(:all) do
     ScreeningList::El.recreate_index
@@ -247,7 +244,6 @@ shared_examples 'it contains all EL results that match countries "AF,TR"' do
   let(:expected) { all_el_results }
   it_behaves_like 'it contains all expected results of source'
 end
-
 
 shared_context 'DPL data' do
   before(:all) do
@@ -310,7 +306,6 @@ shared_examples 'it contains all DPL results that match countries "FR,DE"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'UVL data' do
   before(:all) do
     ScreeningList::Uvl.recreate_index
@@ -354,7 +349,6 @@ shared_examples 'it contains all UVL results that match countries "HK,CN"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'ISN data' do
   before(:all) do
     ScreeningList::Isn.recreate_index
@@ -385,7 +379,6 @@ shared_examples 'it contains all ISN results that match "aerospace"' do
   let(:expected) { [all_isn_results[1], all_isn_results[2]] }
   it_behaves_like 'it contains all expected results of source'
 end
-
 
 shared_context 'DTC data' do
   before(:all) do
@@ -430,11 +423,10 @@ shared_examples 'it contains all DTC results that match "original"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_examples 'it contains all expected results of source' do
   let(:results) do
     JSON.parse(response.body)['results']
-      .find_all { |r| r['source'] == source }
+      .select { |r| r['source'] == source }
   end
 
   it 'contains them all' do
@@ -445,7 +437,7 @@ end
 shared_examples 'it contains only results with sources' do
   let(:results) { JSON.parse(response.body)['results'] }
   let(:results_with_source_other_than_expected) do
-    results.find_all { |r| !sources.include?(r['source']) }
+    results.select { |r| !sources.include?(r['source']) }
   end
   it 'contains only results with sources' do
     expect(results_with_source_other_than_expected.length).to eq 0

@@ -1,6 +1,5 @@
 module ScreeningList
   module Mappable
-
     def self.included(klass)
       klass.settings = {
         index: {
@@ -8,34 +7,34 @@ module ScreeningList
             analyzer: {
               snowball_asciifolding_nostop: {
                 tokenizer: 'standard',
-                filter: %w(standard asciifolding lowercase snowball)
+                filter:    %w(standard asciifolding lowercase snowball),
               },
-              keyword_lowercase: {
+              keyword_lowercase:            {
                 tokenizer: 'keyword',
-                filter: %w(lowercase)
-              }
-            }
-          }
-        }
+                filter:    %w(lowercase),
+              },
+            },
+          },
+        },
       }.freeze
 
       klass.mappings = {
         klass.to_s.typeize => {
           properties: {
-            id:        { type: 'integer', index: :not_analyzed, include_in_all: false },
+            id:             { type: 'integer', index: :not_analyzed, include_in_all: false },
 
-            name:      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            alt_names: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            remarks:   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:     { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            name:           { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            alt_names:      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            remarks:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            title:          { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            sdn_type:  { type: 'string', analyzer: 'keyword_lowercase' },
-            source:    { type: 'string', analyzer: 'keyword' },
+            sdn_type:       { type: 'string', analyzer: 'keyword_lowercase' },
+            source:         { type: 'string', analyzer: 'keyword' },
 
-            addresses: { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
-            ids:       { properties: { country:         { type: 'string', analyzer: 'keyword' },
-                                       issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
-                                       expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
+            addresses:      { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
+            ids:            { properties: { country:         { type: 'string', analyzer: 'keyword' },
+                                            issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
+                                            expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
 
             nationalities:  { type: 'string', analyzer: 'keyword' },
             citizenships:   { type: 'string', analyzer: 'keyword' },
@@ -44,8 +43,8 @@ module ScreeningList
             end_date:       { type: 'date',   format: 'YYYY-MM-dd' },
 
             entity_number:  { type: 'integer' },
-          }
-        }
+          },
+        },
       }.freeze
 
       klass.class_eval do

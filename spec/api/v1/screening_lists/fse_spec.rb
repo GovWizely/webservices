@@ -50,7 +50,6 @@ describe 'BISN Foreign Sanctions Evaders API V1' do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all FSE results that match countries "CY"'
 
-
         context 'which is present in nationalities' do
           let(:params) { { countries: 'SO' } }
           it_behaves_like 'it contains all FSE results that match countries "SO"'
@@ -80,7 +79,6 @@ describe 'BISN Foreign Sanctions Evaders API V1' do
 
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all FSE results that match sdn_type "Entity"'
-
 
       context 'and is set to "Individual"' do
         let(:params) { { sdn_type: 'Individual' } }
