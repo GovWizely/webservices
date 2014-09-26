@@ -46,30 +46,12 @@ module ScreeningList
       doc = extract_fields(sdn_node, SINGLE_VALUED_XPATHS)
 
       doc[:id] = doc[:entity_number]
-
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
-
       doc[:name] = extract_name(sdn_node)
 
-      doc[:alt_names] = sdn_node.xpath('.//xmlns:aka')
-        .map { |n| extract_name(n) }.compact
-      doc[:programs] = sdn_node.xpath('.//xmlns:program')
-        .map(&:text).compact
-      doc[:nationalities] = sdn_node.xpath('.//xmlns:nationality')
-        .map { |n| extract_nationality(n) }.compact
-      doc[:citizenships] = sdn_node.xpath('.//xmlns:citizenship')
-        .map { |n| extract_citizenship(n) }.compact
-      doc[:dates_of_birth] = sdn_node.xpath('.//xmlns:dateOfBirthItem')
-        .map { |n| extract_dob(n) }.compact
-      doc[:places_of_birth] = sdn_node.xpath('.//xmlns:placeOfBirthItem')
-        .map { |n| extract_pob(n) }.compact
-
-      doc[:addresses] =
-        sdn_node.xpath('.//xmlns:address').map { |n| extract_address(n) }
-      doc[:ids] =
-        sdn_node.xpath('.//xmlns:id').map { |n| extract_id(n) }
-
+      doc.merge!(extract_simple_nested_fields(sdn_node))
+      doc.merge!(extract_complex_nested_fields(sdn_node))
       doc
     end
 
@@ -82,6 +64,23 @@ module ScreeningList
       hash = extract_fields(node, NAME_XPATHS)
       name = %i(lastName firstName).map { |f| hash[f] }.compact.join(', ').squish
       name.present? ? name : nil
+    end
+
+    def extract_simple_nested_fields(node)
+      fields = {}
+      fields[:alt_names] = node.xpath('.//xmlns:aka')
+        .map { |n| extract_name(n) }.compact
+      fields[:programs] = node.xpath('.//xmlns:program')
+        .map(&:text).compact
+      fields[:nationalities] = node.xpath('.//xmlns:nationality')
+        .map { |n| extract_nationality(n) }.compact
+      fields[:citizenships] = node.xpath('.//xmlns:citizenship')
+        .map { |n| extract_citizenship(n) }.compact
+      fields[:dates_of_birth] = node.xpath('.//xmlns:dateOfBirthItem')
+        .map { |n| extract_dob(n) }.compact
+      fields[:places_of_birth] = node.xpath('.//xmlns:placeOfBirthItem')
+        .map { |n| extract_pob(n) }.compact
+      fields
     end
 
     ADDRESS_XPATHS = {
@@ -139,6 +138,15 @@ module ScreeningList
 
     def extract_pob(node)
       node.xpath('./xmlns:placeOfBirth').text
+    end
+
+    def extract_complex_nested_fields(node)
+      fields = {}
+      fields[:addresses] =
+        node.xpath('.//xmlns:address').map { |n| extract_address(n) }
+      fields[:ids] =
+        node.xpath('.//xmlns:id').map { |n| extract_id(n) }
+      fields
     end
   end
 end
