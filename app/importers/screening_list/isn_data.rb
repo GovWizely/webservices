@@ -9,10 +9,10 @@ module ScreeningList
     ENDPOINT = "#{Rails.root}/data/screening_lists/isn/isn.csv"
 
     COLUMN_HASH = {
-      name: :name,
-      federal_register_notice: :federal_register_notice,
-      effective_date: :start_date,
-      date_liftedwaivedexpired: :end_date
+      name:                     :name,
+      federal_register_notice:  :federal_register_notice,
+      effective_date:           :start_date,
+      date_liftedwaivedexpired: :end_date,
     }
 
     def initialize(resource = ENDPOINT)
@@ -21,7 +21,7 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource, "r:ISO-8859-1").read, headers: true, header_converters: :symbol, encoding: "UTF-8")
+      rows = CSV.parse(open(@resource, 'r:ISO-8859-1').read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
 

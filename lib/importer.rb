@@ -67,10 +67,9 @@ module Importer
     base.class_eval do
       class << self
         def model_class
-          self.name.sub(/Data$/, '').constantize
+          name.sub(/Data$/, '').constantize
         end
       end
     end
   end
-
 end

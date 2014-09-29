@@ -5,22 +5,22 @@ class TradeArticleData
   ENDPOINT = 'https://new.export.gov/community/posts/content.json'
 
   COLUMN_HASH = {
-      id: :id,
-      core: :evergreen,
-      post: :content,
-      published_at: :pub_date,
-      updated_at: :update_date,
-      title: :title,
-      content_type_tags: :content_type,
-      export_phase_tags: :export_phase,
-      industry_tags: :industry,
-      topic_tags: :topic,
-      subtopic_tags: :subtopic,
-      trade_region_tags: :trade_region,
-      geo_region_tags: :geo_region,
-      geo_subregion_tags: :geo_subregion,
-      country_tags: :country,
-      keyword_tags: :keyword
+    id:                 :id,
+    core:               :evergreen,
+    post:               :content,
+    published_at:       :pub_date,
+    updated_at:         :update_date,
+    title:              :title,
+    content_type_tags:  :content_type,
+    export_phase_tags:  :export_phase,
+    industry_tags:      :industry,
+    topic_tags:         :topic,
+    subtopic_tags:      :subtopic,
+    trade_region_tags:  :trade_region,
+    geo_region_tags:    :geo_region,
+    geo_subregion_tags: :geo_subregion,
+    country_tags:       :country,
+    keyword_tags:       :keyword,
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -44,5 +44,4 @@ class TradeArticleData
     article[:update_date] = Date.parse(article[:update_date]) if article[:update_date]
     article
   end
-
 end

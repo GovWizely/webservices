@@ -10,8 +10,8 @@ describe ItaOfficeLocation do
   describe '.search_for' do
 
     it 'should return results sorted by post' do
-      alphabetized_posts = ["Belo Horizonte", "Brasilia", "Recife", "Rio De Janeiro", "Sao Paulo"]
-      ItaOfficeLocation.search_for(country: 'BR')[:hits].collect { |h| h['_source']['post'] }.should == alphabetized_posts
+      alphabetized_posts = ['Belo Horizonte', 'Brasilia', 'Recife', 'Rio De Janeiro', 'Sao Paulo']
+      ItaOfficeLocation.search_for(country: 'BR')[:hits].map { |h| h['_source']['post'] }.should == alphabetized_posts
     end
 
     context 'when options is an empty hash' do

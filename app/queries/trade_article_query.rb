@@ -53,19 +53,18 @@ class TradeArticleQuery < Query
   end
 
   def has_filter_options?
-    evergreen_set? or pub_date_range? or update_date_range?
+    evergreen_set? || pub_date_range? || update_date_range?
   end
 
   def evergreen_set?
-    @evergreen == true or @evergreen == false
+    @evergreen == true || @evergreen == false
   end
 
   def update_date_range?
-    @update_date_start or @update_date_end
+    @update_date_start || @update_date_end
   end
 
   def pub_date_range?
-    @pub_date_start or @pub_date_end
+    @pub_date_start || @pub_date_end
   end
-
 end

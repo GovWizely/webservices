@@ -5,19 +5,19 @@ class MarketResearchData
   include Importer
 
   COLUMN_HASH = {
-      id: :id,
-      country: :countries,
-      descrip: :description,
-      expdate: :expiration_date,
-      industry: :industries,
-      origform: :report_type,
-      ttitle: :title,
-      doc: :url
+    id:       :id,
+    country:  :countries,
+    descrip:  :description,
+    expdate:  :expiration_date,
+    industry: :industries,
+    origform: :report_type,
+    ttitle:   :title,
+    doc:      :url,
   }
 
   REPORT_TYPE_HASH = {
-      'bmr11' => 'Best Market Research',
-      'ccg1' => 'Country Commercial Guide'
+    'bmr11' => 'Best Market Research',
+    'ccg1'  => 'Country Commercial Guide',
   }
 
   def initialize(resource = 'http://buyusainfo.net/nextgen/ng.txt')

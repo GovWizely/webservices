@@ -9,18 +9,18 @@ module ScreeningList
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/915-consolidated-list-csv'
 
     COLUMN_HASH = {
-      entity_number: :entity_number,
-      sdn_type: :sdn_type,
-      programs: :programs,
-      name: :name,
-      title: :title,
+      entity_number:           :entity_number,
+      sdn_type:                :sdn_type,
+      programs:                :programs,
+      name:                    :name,
+      title:                   :title,
       federal_register_notice: :federal_register_notice,
-      effective_date: :start_date,
-      date_liftedwaived: :end_date,
-      standard_order: :standard_order,
-      license_requirement: :license_requirement,
-      license_policy: :license_policy,
-      weblink: :source_list_url,
+      effective_date:          :start_date,
+      date_liftedwaived:       :end_date,
+      standard_order:          :standard_order,
+      license_requirement:     :license_requirement,
+      license_policy:          :license_policy,
+      weblink:                 :source_list_url,
     }
 
     def initialize(resource = ENDPOINT)
@@ -31,8 +31,8 @@ module ScreeningList
       Rails.logger.info "Importing #{@resource}"
 
       rows = CSV.parse(open(@resource, 'r:iso-8859-1:utf-8').read,
-                        headers: true,
-                        header_converters: :symbol)
+                       headers:           true,
+                       header_converters: :symbol)
 
       docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
 
@@ -55,7 +55,7 @@ module ScreeningList
     def process_grouped_rows(rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = generate_id(rows.first);
+      doc[:id] = generate_id(rows.first)
 
       doc[:alt_names] = rows.map do |row|
         strip_nonascii(row[:alternate_name])
@@ -74,10 +74,10 @@ module ScreeningList
     end
 
     ADDRESS_HASH = {
-      address: :address,
-      city: :city,
-      country: :country,
-      postal_code: :postal_code,
+      address:       :address,
+      city:          :city,
+      country:       :country,
+      postal_code:   :postal_code,
       stateprovince: :state,
     }
 

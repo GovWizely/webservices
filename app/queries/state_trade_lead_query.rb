@@ -1,6 +1,5 @@
 class StateTradeLeadQuery < CountryIndustryQuery
-
-  def initialize(options={})
+  def initialize(options = {})
     super options
     @q = options[:q] if options[:q].present?
     @specific_location = options[:specific_location] if options[:specific_location].present?

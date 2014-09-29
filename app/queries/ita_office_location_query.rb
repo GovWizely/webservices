@@ -1,5 +1,4 @@
 class ItaOfficeLocationQuery < Query
-
   def initialize(options)
     super(options)
     @country = options[:country].downcase if options[:country].present?
@@ -33,7 +32,7 @@ class ItaOfficeLocationQuery < Query
   end
 
   def has_filter_options?
-    country_search? or state_search?
+    country_search? || state_search?
   end
 
   def country_search?
@@ -41,6 +40,6 @@ class ItaOfficeLocationQuery < Query
   end
 
   def state_search?
-    @state and @country and @country == 'us'
+    @state && @country && @country == 'us'
   end
 end

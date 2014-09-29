@@ -12,7 +12,7 @@ class MrlParser
 
   def self.foreach(resource, &block)
     parser = nil
-    open(resource, 'r:windows-1252:utf-8',).each(ROW_SEPARATOR) do |mrl_row|
+    open(resource, 'r:windows-1252:utf-8').each(ROW_SEPARATOR) do |mrl_row|
       stripped_row = mrl_row.strip
       next if stripped_row.blank?
 
@@ -32,9 +32,7 @@ class MrlParser
   private
 
   def extract_headers(header_row)
-    extract_values(header_row).map do |header_column|
-      header_column.to_sym
-    end
+    extract_values(header_row).map(&:to_sym)
   end
 
   def extract_values(row)

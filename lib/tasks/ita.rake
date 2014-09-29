@@ -1,16 +1,16 @@
 namespace :ita do
   desc 'Import data for a given index'
-  task :import, [:index_name] => :environment do |t, args|
+  task :import, [:index_name] => :environment do |_t, args|
     import_data(args.index_name)
   end
 
   desc 'Recreate an index'
-  task :recreate_index, [:index_name] => :environment do |t, args|
+  task :recreate_index, [:index_name] => :environment do |_t, args|
     args.index_name.constantize.recreate_index
   end
 
   desc 'Recreate then import all CSL indices'
-  task :recreate_then_import_csl_indices => :environment do
+  task recreate_then_import_csl_indices: :environment do
     %w( ScreeningList::Dpl
         ScreeningList::Dtc
         ScreeningList::El
@@ -18,19 +18,19 @@ namespace :ita do
         ScreeningList::Isn
         ScreeningList::Sdn
         ScreeningList::Uvl
-      ).each do |class_name|
+    ).each do |class_name|
       class_name.constantize.recreate_index
       import_data(class_name)
     end
   end
 
   desc 'Recreate then import all Trade Lead indices'
-  task :recreate_then_import_trade_lead_indices => :environment do
+  task recreate_then_import_trade_lead_indices: :environment do
     %w( CanadaLead
         FbopenLead
         StateTradeLead
         UkTradeLead
-      ).each do |class_name|
+    ).each do |class_name|
       class_name.constantize.recreate_index
       import_data(class_name)
     end

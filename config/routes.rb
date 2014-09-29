@@ -1,7 +1,7 @@
 Webservices::Application.routes.draw do
   scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
 
-    path = {'market_researches' => 'market_research_library'}
+    path = { 'market_researches' => 'market_research_library' }
 
     # Paths for the rest of the controllers are
     # the snake-case versions of their names.

@@ -50,7 +50,6 @@ describe 'OFAC Special Designated Nationals API V1' do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all SDN results that match countries "CH"'
 
-
         context 'which is present in nationalities' do
           let(:params) { { countries: 'DE' } }
           it_behaves_like 'it contains all SDN results that match countries "DE"'

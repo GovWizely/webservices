@@ -7,7 +7,7 @@ gem 'rails-api'
 gem 'airbrake'
 gem 'elasticsearch'
 gem 'iso_country_codes', '0.4.2'
-gem 'us_states', :git => 'git://github.com/GSA-OCSIT/us_states.git'
+gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'jbuilder'
 gem 'nokogiri', '1.6.0'
 gem 'rack-contrib'
@@ -29,6 +29,7 @@ end
 
 group :development do
   gem 'capistrano',  '~> 2.15'
+  gem 'rubocop', require: false
 end
 
 group :test do

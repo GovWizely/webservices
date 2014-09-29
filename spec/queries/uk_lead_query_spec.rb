@@ -13,7 +13,7 @@ describe UkTradeLeadQuery do
 
     context 'with all possible options given' do
       let(:query) do
-        described_class.new(q: 'fish',
+        described_class.new(q:        'fish',
                             industry: 'fishing')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }

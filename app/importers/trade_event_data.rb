@@ -4,29 +4,29 @@ class TradeEventData
   include Importer
 
   SINGLE_VALUED_XPATHS = {
-      city: './/CITY',
-      cost: './COST',
-      country: './/COUNTRY',
-      description: './DETAILDESC',
-      end_date: './EVENDDT',
-      event_name: './EVENTNAME',
-      event_type: './EVENTTYPE',
-      id: './EVENTID',
-      registration_link: './REGISTRATIONLINK',
-      registration_title: './REGISTRATIONTITLE',
-      start_date: './EVSTARTDT',
-      state: './/STATE',
-      url: './WEBSITES/WEBSITE/@URL',
-      venue: './/LOCATION'
+    city:               './/CITY',
+    cost:               './COST',
+    country:            './/COUNTRY',
+    description:        './DETAILDESC',
+    end_date:           './EVENDDT',
+    event_name:         './EVENTNAME',
+    event_type:         './EVENTTYPE',
+    id:                 './EVENTID',
+    registration_link:  './REGISTRATIONLINK',
+    registration_title: './REGISTRATIONTITLE',
+    start_date:         './EVSTARTDT',
+    state:              './/STATE',
+    url:                './WEBSITES/WEBSITE/@URL',
+    venue:              './/LOCATION',
   }.freeze
 
   CONTACT_XPATHS = {
-      email: './EMAIL',
-      first_name: './FIRSTNAME',
-      last_name: './LASTNAME',
-      person_title: './TITLE',
-      phone: './PHONE',
-      post: './POST'
+    email:        './EMAIL',
+    first_name:   './FIRSTNAME',
+    last_name:    './LASTNAME',
+    person_title: './TITLE',
+    phone:        './PHONE',
+    post:         './POST',
   }
 
   def initialize(resource = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020")

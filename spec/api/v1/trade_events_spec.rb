@@ -11,7 +11,7 @@ describe 'Trade Events API V1' do
 
   describe 'GET /trade_events/search.json' do
     context 'when search parameters are empty' do
-      before { get '/trade_events/search', { }, v1_headers }
+      before { get '/trade_events/search', {}, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

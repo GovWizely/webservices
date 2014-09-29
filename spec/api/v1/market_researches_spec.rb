@@ -12,7 +12,7 @@ describe 'Market Researches API V1' do
 
   describe 'GET /market_research_library/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { }, v1_headers }
+      before { get search_path, {}, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

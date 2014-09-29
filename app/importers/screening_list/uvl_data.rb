@@ -6,7 +6,7 @@ module ScreeningList
   class UvlData
     include ::Importer
 
-    ENDPOINT = "http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list"
+    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
     def initialize(resource = ENDPOINT)
       @resource = resource
@@ -14,7 +14,7 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, encoding: "UTF-8")
+      rows = CSV.parse(open(@resource).read, encoding: 'UTF-8')
 
       docs = grouped_rows(rows).map { |row_name, rows| process_grouped_rows(row_name, rows) }
 
@@ -60,11 +60,11 @@ module ScreeningList
         'http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html'
 
       doc[:addresses] = rows.map do |row|
-       { address: row[2],
-         city: nil,
-         state: nil,
-         postal_code: nil,
-         country: lookup_country(row[0]) }
+        { address:     row[2],
+          city:        nil,
+          state:       nil,
+          postal_code: nil,
+          country:     lookup_country(row[0]) }
       end.uniq
 
       doc[:alt_names] =
