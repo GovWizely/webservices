@@ -62,7 +62,7 @@ module TradeEvent
       doc[:state] &&= lookup_state(doc[:state]) rescue doc[:state]
 
       doc[:description] = sanitize_description(doc[:description])
-      doc[:industries] &&= [doc[:industries]]
+      doc[:industries] = [doc[:industries]].compact
       doc[:source] = self.class.model_class.source
       doc[:contacts] = extract_contacts(item)
 

@@ -10,7 +10,7 @@
         "city": "Washington",
         "state": "DC",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -24,7 +24,7 @@
         "city": "Minneapolis",
         "state": "MN",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -38,7 +38,7 @@
         "city": "Washington",
         "state": "DC",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -52,7 +52,7 @@
         "city": "Washington",
         "state": "DC",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -66,7 +66,7 @@
         "city": "New York",
         "state": "NY",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -80,7 +80,7 @@
         "city": "Atlanta",
         "state": "GA",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -94,7 +94,7 @@
         "city": "Canary Islands and Africagua",
         "state": null,
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -108,7 +108,7 @@
         "city": "Baltimore",
         "state": "MD",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -122,7 +122,7 @@
         "city": "Bern | Switzerland",
         "state": null,
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -136,7 +136,7 @@
         "city": "Ft. Lauderdale",
         "state": "FL",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -150,7 +150,7 @@
         "city": "Charlotte",
         "state": "North Carolina",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -164,7 +164,7 @@
         "city": "Minneapolis",
         "state": "MN",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -178,7 +178,7 @@
         "city": "Dubai",
         "state": "United Arab Emirates",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -192,7 +192,7 @@
         "city": "Baltimore",
         "state": "MD",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -206,7 +206,7 @@
         "city": "The Hague | Netherlands",
         "state": null,
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -220,7 +220,7 @@
         "city": "Savannah",
         "state": "GA",
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     },
     {
@@ -234,7 +234,7 @@
         "city": "Atlanta and Oklahoma City",
         "state": null,
         "country": null,
-        "industries": null,
+        "industries": [],
         "source": "EXIM"
     }
 
