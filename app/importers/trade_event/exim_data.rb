@@ -44,7 +44,7 @@ module TradeEvent
       event_hash[:start_date] = parse_american_date(event_hash[:start_date])
       event_hash[:end_date] = event_hash[:end_date].present? ? parse_american_date(event_hash[:end_date]) : event_hash[:start_date]
       event_hash[:country] = nil
-      event_hash[:industries] = nil
+      event_hash[:industries] = []
       event_hash[:source] = model_class.source
       event_hash
     end
