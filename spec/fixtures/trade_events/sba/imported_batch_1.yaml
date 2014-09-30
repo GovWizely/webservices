@@ -1,5 +1,5 @@
 ---
-- :address: 
+- :address: Wisconsin SBDC Centers
   :city: Wisconsin
   :cost: '0.00'
   :country: US
@@ -25,7 +25,7 @@
   :end_date: '2014-01-08'
   :end_time: '15:31'
   :id: e78c5a7eeecccd3c9f240d4703b3af8bab4450f5
-- :address: 
+- :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
   :city: Seattle
   :cost: '0.00'
   :country: US
@@ -52,7 +52,7 @@
   :end_date: '2013-12-18'
   :end_time: '14:47'
   :id: 8d41677868999146dc9b12da5c8b828d96c2b392
-- :address: 
+- :address: Wisconsin SBDC Centers
   :city: Wisconsin
   :cost: '0.00'
   :country: US
@@ -78,7 +78,7 @@
   :end_date: '2013-02-01'
   :end_time: 
   :id: fb7d16d26e16cbc5b66b67b96e626ea63ffdd6c9
-- :address: 
+- :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
   :city: MaxiMUS
   :cost: '0.00'
   :country: US
@@ -105,7 +105,7 @@
   :end_date: '2013-02-14'
   :end_time: '13:00'
   :id: f4dbcf25945516651bfc1fd6de2aa923a3af9b25
-- :address: 
+- :address: Wisconsin SBDC Centers
   :city: Wisconsin
   :cost: '0.00'
   :country: US
@@ -131,7 +131,7 @@
   :end_date: '2013-03-01'
   :end_time: 
   :id: b3f46c97375edea241c4ff98599b8113bd3157f7
-- :address: 
+- :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
   :city: Seattle
   :cost: '0.00'
   :country: US
@@ -158,7 +158,7 @@
   :end_date: '2013-03-14'
   :end_time: '13:00'
   :id: 28c89008cb98c49aad78f0e831b013301929792c
-- :address: 
+- :address: Wisconsin SBDC Centers
   :city: Wisconsin
   :cost: '0.00'
   :country: US
@@ -184,7 +184,7 @@
   :end_date: '2013-04-01'
   :end_time: 
   :id: 387844f41385ae2dc5ac025d02c18d8052322fde
-- :address: 
+- :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
   :city: Seattle
   :cost: '0.00'
   :country: US
@@ -211,7 +211,7 @@
   :end_date: '2013-04-11'
   :end_time: '13:00'
   :id: 6ac9e29e8f608aecb5a8c1a1feb87ba6dbf1f6dd
-- :address: 
+- :address: Wisconsin SBDC Centers
   :city: Wisconsin
   :cost: '0.00'
   :country: US
