@@ -28,7 +28,7 @@ module TradeEvent
     private
 
     SINGLE_VALUED_XPATHS = {
-      address:           './address',
+      address:           './street',
       city:              './city',
       cost:              './fee',
       country:           './country',
