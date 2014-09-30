@@ -1,5 +1,5 @@
 ---
-- :address: 
+- :address: 661 West Imperial Highway
   :city: Los Angeles
   :cost: 
   :country: DE
@@ -25,7 +25,7 @@
   :end_date: '2014-06-17'
   :end_time: '18:00'
   :id: 765f3c8a6b778e108e12151ab1c006b2ffe56707
-- :address: 
+- :address: 600 Forbes Avenue<br />Power Center Ballroom
   :city: Pittsburgh
   :cost: '295.00'
   :country: US
@@ -52,7 +52,7 @@
   :end_date: '2014-06-18'
   :end_time: '16:30'
   :id: 3c81d8cbf43c6f2ebb428950359e5a0434f8bd57
-- :address: 
+- :address: 815 West 1250 South Room 110
   :city: Orem
   :cost: 
   :country: FR
@@ -76,7 +76,7 @@
   :end_date: '2014-06-18'
   :end_time: '13:00'
   :id: b2f6d036371325055da05847bf06772466279378
-- :address: 
+- :address: 318 Madison Avenue
   :city: Elmira
   :cost: '20.00'
   :country: US
@@ -109,7 +109,7 @@
   :end_date: '2014-06-18'
   :end_time: '11:30'
   :id: dff3b13cc902a62bdbf17ea7911c80daf27e3a4d
-- :address: 
+- :address: 301 West 1st Street
   :city: Los Angeles
   :cost: '35.00'
   :country: US
@@ -135,7 +135,7 @@
   :end_date: '2014-06-18'
   :end_time: '14:15'
   :id: 200af2fb4fb2c7c5e1979868e7ffff30552e8b4e
-- :address: 
+- :address: 404 S. Figueroa Street
   :city: Los Angeles
   :cost: 
   :country: US
@@ -162,7 +162,7 @@
   :end_date: '2014-06-19'
   :end_time: '13:30'
   :id: ff38ea7c23e134ca62faa5134f743b705403ff9a
-- :address: 
+- :address: 600 Forbes Avenue<br />Power Center Ballroom
   :city: Pittsburgh
   :cost: '195.00'
   :country: US
@@ -188,7 +188,7 @@
   :end_date: '2014-06-19'
   :end_time: '15:00'
   :id: 04c6e1a55672a24630dca75fd9464baf1fea33c3
-- :address: 
+- :address: 398 East Main Street
   :city: Tupelo
   :cost: 
   :country: US
