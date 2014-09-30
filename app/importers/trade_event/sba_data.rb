@@ -52,7 +52,7 @@ module TradeEvent
     def import_single(url)
       Rails.logger.info "Importing #{url}"
       xml = Nokogiri::XML(open(url))
-      docs = xml.xpath('//result/item').map { |item| process_item(item) }
+      xml.xpath('//result/item').map { |item| process_item(item) }
     end
 
     def process_item(item)
