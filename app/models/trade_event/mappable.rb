@@ -18,6 +18,7 @@ module TradeEvent
           properties: {
             cost:               { type: 'float' },
             country:            { type: 'string', analyzer: 'keyword' },
+            state:              { type: 'string', analyzer: 'keyword' },
             start_date:         { type: 'date', format: 'YYYY-MM-dd' },
             end_date:           { type: 'date', format: 'YYYY-MM-dd' },
 
@@ -26,7 +27,6 @@ module TradeEvent
             registration_title: { type: 'string', analyzer: 'custom_analyzer' },
             industries:         { type: 'string', analyzer: 'custom_analyzer' },
             city:               { type: 'string', analyzer: 'custom_analyzer' },
-            state:              { type: 'string', analyzer: 'custom_analyzer' },
 
             id:                 { type: 'string', index: :not_analyzed, include_in_all: false },
           },

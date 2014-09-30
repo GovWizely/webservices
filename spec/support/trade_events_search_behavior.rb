@@ -86,7 +86,7 @@ end
 
 shared_examples 'it contains all TradeEvent::Sba results that match "Maximus"' do
   let(:source) { 'SBA' }
-  let(:expected) { all_sba_results[0..3] }
+  let(:expected) { [all_sba_results[0], all_sba_results[1], all_sba_results[3]] }
   it_behaves_like 'it contains all expected results of source'
 end
 

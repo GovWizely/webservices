@@ -11,7 +11,7 @@ module TradeEvent
     private
 
     def generate_query(json)
-      generate_multi_query json, %i(event_name registration_title description city state)
+      generate_multi_query json, %i(event_name registration_title description industries city)
     end
 
     def generate_filter(json)
