@@ -29,7 +29,7 @@ describe 'ITA Office Locations API V1' do
     end
 
     context 'when country is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose', country: 'CR' }, v1_headers }
+      before { get '/ita_office_locations/search', { q: 'saN Jose', country: 'Cr' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

@@ -1,9 +1,15 @@
 {
     "query": {
-        "match": {
-            "city": {
-                "operator": "and", "query": "san jose"
+      "bool": {
+        "must": [
+          {
+            "match": {
+                "city": {
+                    "operator": "and", "query": "San Jose"
+                }
             }
-        }
+          }
+        ]
+      }
     }
 }

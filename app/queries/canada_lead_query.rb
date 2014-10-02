@@ -1,25 +1,8 @@
 class CanadaLeadQuery < Query
-  query_fields %i(  title description industry specific_location q  )
-
-  def initialize(options)
-    super(options)
-    @sort = 'end_date,publish_date,title.raw,contract_number' unless @q
-  end
-
-  private
-
-  def generate_query(json)
-    query_from_fields(
-      json,
-      searchable: %i(title description),
-      q:          %i(title description),
-    )
-  end
-
-  def generate_filter(json)
-    filter_from_fields(
-      json,
-      searchable: %i(industry specific_location),
-    )
-  end
+  setup_query(
+    q:      %i(title description),
+    query:  %i(),
+    filter: %i(industry specific_location),
+    sort:   %i(end_date publish_date title.raw contract_number),
+  )
 end
