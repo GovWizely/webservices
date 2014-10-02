@@ -63,9 +63,9 @@ shared_context 'TradeEvent::Sba data' do
   before(:all) do
     TradeEvent::Sba.recreate_index
     TradeEvent::SbaData.new(
-        "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
-        reject_if_ends_before: Date.parse('2013-01-11'),
-      ).import
+      "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
+      reject_if_ends_before: Date.parse('2013-01-11'),
+    ).import
   end
 
   before do
@@ -74,7 +74,7 @@ shared_context 'TradeEvent::Sba data' do
 
   let(:all_sba_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/sba/expected_results.json").read)
+                 "#{Rails.root}/spec/fixtures/trade_events/sba/expected_results.json").read)
   end
 end
 
@@ -116,8 +116,8 @@ shared_context 'TradeEvent::Exim data' do
   before(:all) do
     TradeEvent::Exim.recreate_index
     TradeEvent::EximData.new(
-        "#{Rails.root}/spec/fixtures/trade_events/exim/trade_events.xml",
-        reject_if_ends_before: Date.parse('2013-01-11'),
+      "#{Rails.root}/spec/fixtures/trade_events/exim/trade_events.xml",
+      reject_if_ends_before: Date.parse('2013-01-11'),
     ).import
   end
 
@@ -139,7 +139,7 @@ end
 
 shared_examples 'it contains all TradeEvent::Exim results that match "international"' do
   let(:source) { 'EXIM' }
-  let(:expected) { [all_exim_results[1], all_exim_results[8], all_exim_results[13], all_exim_results[14], all_exim_results[15]] }
+  let(:expected) { [all_exim_results[1], all_exim_results[8], all_exim_results[13], all_exim_results[14]] }
   it_behaves_like 'it contains all expected results of source'
 end
 

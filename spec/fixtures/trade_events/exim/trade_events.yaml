@@ -169,19 +169,6 @@
     :industries: []
     :source: "EXIM"
   -
-    :id: "44886"
-    :event_name: "International Trade Finance"
-    :start_date: "2014-09-30"
-    :end_date: "2014-09-30"
-    :registration_link: null
-    :description: null
-    :url: "https://www.eventbrite.com/e/international-trade-finance-tickets-12961836201"
-    :city: "Savannah"
-    :state: "GA"
-    :country: null
-    :industries: []
-    :source: "EXIM"
-  -
     :id: "44203"
     :event_name: "FCIB 25th Annual Global Conference"
     :start_date: "2014-10-12"
