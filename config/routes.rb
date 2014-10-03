@@ -22,5 +22,10 @@ Webservices::Application.routes.draw do
         get "/#{source}/search", to: "screening_lists/#{source}#search"
       end
     end
+
+    scope '/consolidated_tariff_rate' do
+      get '/search', to: 'tariff_rates/consolidated#search'
+      get '/australia/search', to: 'tariff_rates/australia#search'
+    end
   end
 end
