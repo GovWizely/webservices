@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["question", "answer", "industry"],
+            "operator": "and",
+            "query": "tpcc"
+          }
+        }
+      ]
+    }
+  }
+}
