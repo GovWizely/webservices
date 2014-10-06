@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe UstdaEventData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ustda_events" }
+describe TradeEvent::UstdaData do
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/ustda" }
   let(:resource)     { "#{fixtures_dir}/events.csv" }
-  let(:importer)     { UstdaEventData.new(resource) }
+  let(:importer)     { TradeEvent::UstdaData.new(resource) }
 
   describe '#import' do
     it 'loads events from specified resource' do
-      UstdaEvent.should_receive(:index) do |ustda_events|
+      TradeEvent::Ustda.should_receive(:index) do |ustda_events|
         ustda_events.size.should == 5
       end
       importer.import
