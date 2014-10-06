@@ -23,6 +23,10 @@ class SharepointTradeArticleData
     data = []
 
     while id <= 213 do
+      if id == 195
+        #id += 1
+        #next
+      end
       begin
         resource = @resource % id
         article = Hash.from_xml(open(resource))
@@ -43,16 +47,28 @@ class SharepointTradeArticleData
 
   def process_article_info(article_hash)
     article_hash = article_hash["articles"]["article"].symbolize_keys
-    article = Hash[article_hash.map {|k,v| [COLUMN_HASH[k] || k, v] } ] 
-    article[:ita_tags].symbolize_keys!
+    article = Hash[article_hash.map {|k,v| [COLUMN_HASH[k] || k, v ] } ] 
+    article[:ita_tags] = Hash[article[:ita_tags].map{|k,v| [k.to_sym, v ] } ]
+
     article[:data].symbolize_keys!
-    article[:data][:url_html_source] = article[:data].delete(:html)
-    article[:data][:url_xml_source] = article[:data].delete(:xml)
+    article[:url_html_source] = article[:data][:html] 
+    article[:url_xml_source] = article[:data][:xml]
+    article.delete(:data)
+
     #article[:content] &&= Nokogiri::HTML.fragment(article[:content]).inner_text.squish
-    article[:content] &&= Sanitize.clean(article[:content]) if article[:content]
-    #article[:creation_date] &&= Date.parse(article[:creation_date])
-    #article[:release_date] &&= Date.parse(article[:release_date])
-    #article[:expiration_date] &&= Date.parse(article[:expiration_date])
+    article[:content] &&= Sanitize.clean(article[:content])
+
+    article[:creation_date] &&= Date.strptime(article[:creation_date], "%m/%d/%Y").to_s
+    article[:release_date] &&= Date.strptime(article[:release_date], "%m/%d/%Y").to_s
+    article[:expiration_date] &&= Date.strptime(article[:expiration_date], "%m/%d/%Y").to_s
     article
+  end
+
+  def replace_null_field(value)
+    if value == nil
+      return ""
+    else
+      return value
+    end
   end
 end
