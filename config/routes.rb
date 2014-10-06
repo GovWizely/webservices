@@ -35,6 +35,7 @@ Webservices::Application.routes.draw do
       get 'ita/search'
       get 'sba/search'
       get 'exim/search'
+      get 'ustda/search'
     end
   end
 end
