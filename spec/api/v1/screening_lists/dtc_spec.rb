@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'DDTC AECA Debarred Parties API V1' do
+describe 'DDTC ITAR Debarred Parties API V1' do
   include_context 'DTC data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
