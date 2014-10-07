@@ -50,10 +50,7 @@ class SharepointTradeArticleData
     article = Hash[article_hash.map {|k,v| [COLUMN_HASH[k] || k, v ] } ] 
     article[:ita_tags] = Hash[article[:ita_tags].map{|k,v| [k.to_sym, v ] } ]
 
-    article[:data].symbolize_keys!
-    article[:url_html_source] = article[:data][:html] 
-    article[:url_xml_source] = article[:data][:xml]
-    article.delete(:data)
+    collapse_nested_fields(article)
 
     #article[:content] &&= Nokogiri::HTML.fragment(article[:content]).inner_text.squish
     article[:content] &&= Sanitize.clean(article[:content])
@@ -64,11 +61,21 @@ class SharepointTradeArticleData
     article
   end
 
-  def replace_null_field(value)
-    if value == nil
-      return ""
-    else
-      return value
-    end
+  def collapse_nested_fields(article)
+    article[:source_agencies] &&= article[:source_agencies]["source_agency"]
+
+    article[:ita_tags][:export_phases] &&= article[:ita_tags][:export_phases]["export_phase"]
+    article[:ita_tags][:industries] &&= article[:ita_tags][:industries]["industry"]
+    article[:ita_tags][:countries] &&= article[:ita_tags][:countries]["country"]
+    article[:ita_tags][:topics] &&= article[:ita_tags][:topics]["topic"]
+    article[:ita_tags][:geo_regions] &&= article[:ita_tags][:geo_regions]["geo_region"]
+    article[:ita_tags][:trade_regions] &&= article[:ita_tags][:trade_regions]["trade_region"]
+    article[:ita_tags][:trade_programs] &&= article[:ita_tags][:trade_programs]["trade_program"]
+    article[:ita_tags][:trade_initiatives] &&= article[:ita_tags][:trade_initiatives]["trade_initiative"]
+
+    article[:data].symbolize_keys!
+    article[:url_html_source] = article[:data][:html] 
+    article[:url_xml_source] = article[:data][:xml]
+    article.delete(:data)
   end
 end
