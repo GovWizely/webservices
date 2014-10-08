@@ -1,9 +1,5 @@
 module TradeEvent
   class UstdaQuery < Query #CountryIndustryQuery
-    def initialize(options)
-      super
-      @sort = :start_date unless @q
-    end
 
     private
 

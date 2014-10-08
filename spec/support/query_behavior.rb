@@ -27,17 +27,3 @@ shared_examples 'a paginated query' do
     end
   end
 end
-
-shared_examples 'a relevance-sorted query' do
-  context 'when q is specified' do
-    subject { described_class.new(q: 'cat products') }
-
-    its(:sort) { should == nil }
-  end
-
-  context 'when q is not specified' do
-    subject { described_class.new({}) }
-
-    its(:sort) { should_not == nil }
-  end
-end

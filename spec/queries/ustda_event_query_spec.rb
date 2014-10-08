@@ -5,13 +5,12 @@ describe TradeEvent::UstdaQuery do
 
   describe '#new' do
     it_behaves_like 'a paginated query'
-    it_behaves_like 'a relevance-sorted query'
 
     context 'when options include countries' do
       subject { TradeEvent::UstdaQuery.new(countries: 'us,ca') }
 
       its(:countries) { should == %w(US CA) }
-      its(:sort) { should == :start_date }
+      its(:sort) { should == '_score,start_date' }
     end
   end
 
