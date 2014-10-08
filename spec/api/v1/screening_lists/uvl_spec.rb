@@ -19,7 +19,7 @@ describe 'BIS Unverified Parties API V1' do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all UVL results that match "technology"'
+      it_behaves_like 'it contains all UVL results that match "technology", sorted correctly'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'brilliance' } }
