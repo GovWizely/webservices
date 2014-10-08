@@ -5,6 +5,9 @@ require 'digest/md5'
 module ScreeningList
   class DplData
     include ::Importer
+    include CanGroupRows
+
+    self.group_by = [:name, :beginning_date, :ending_date, :fr_citation]
 
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1007-dpl-txt'
 
@@ -33,28 +36,19 @@ module ScreeningList
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t")
 
-      docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
+      docs = group_rows(rows).map do |id, grouped|
+        process_grouped_rows(id, grouped)
+      end
 
       self.class.model_class.index(docs)
     end
 
     private
 
-    def group_rows(rows)
-      rows_by_name = {}
-      rows.each do |row|
-        key = generate_id(row)
-        rows_by_name[key] ||= []  # Init. to empty array if not yet present in hash.
-        rows_by_name[key] << row
-      end
-      rows_by_name
-    end
-
-    def process_grouped_rows(rows)
+    def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = generate_id(rows.first.to_hash)
-
+      doc[:id] = id
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
@@ -68,11 +62,6 @@ module ScreeningList
       end
 
       doc
-    end
-
-    def generate_id(row)
-      Digest::SHA1.hexdigest(
-        %i(name beginning_date ending_date fr_citation).map { |f| row[f] }.join)
     end
   end
 end
