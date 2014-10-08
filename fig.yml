@@ -1,0 +1,8 @@
+webservices:
+  build: .
+  links:
+  - elasticsearch
+  ports:
+  - "3000:3000"
+elasticsearch:
+  image: dockerfile/elasticsearch
