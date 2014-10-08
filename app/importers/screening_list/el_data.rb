@@ -6,21 +6,21 @@ module ScreeningList
   class ElData
     include ::Importer
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/915-consolidated-list-csv'
+    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1068-el'
 
     COLUMN_HASH = {
-      entity_number:           :entity_number,
-      sdn_type:                :sdn_type,
-      programs:                :programs,
-      name:                    :name,
-      title:                   :title,
-      federal_register_notice: :federal_register_notice,
-      effective_date:          :start_date,
-      date_liftedwaived:       :end_date,
-      standard_order:          :standard_order,
-      license_requirement:     :license_requirement,
-      license_policy:          :license_policy,
-      weblink:                 :source_list_url,
+      entity_number:            :entity_number,
+      sdn_type:                 :sdn_type,
+      programs:                 :programs,
+      name:                     :name,
+      title:                    :title,
+      federal_register_notice:  :federal_register_notice,
+      effective_date:           :start_date,
+      date_liftedwaivedexpired: :end_date,
+      standard_order:           :standard_order,
+      license_requirement:      :license_requirement,
+      license_policy:           :license_policy,
+      web_link:                 :source_list_url,
     }
 
     def initialize(resource = ENDPOINT)
