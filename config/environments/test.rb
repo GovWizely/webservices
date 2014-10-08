@@ -44,4 +44,11 @@ Webservices::Application.configure do
       region:            'us-east-1',
       access_key_id:     'FAKE',
       secret_access_key: 'FAKE' } }
+
+  begin
+    # Running on docker?
+    es_url = Resolv.getaddress('elasticsearch_1')
+    ES.default_url = es_url
+  rescue
+  end
 end
