@@ -6,7 +6,7 @@ describe 'Parature Faq API V1' do
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
   end
 
-  let(:search_path) { '/parature_faq/search' }
+  let(:search_path) { '/faqs/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml") }
 
