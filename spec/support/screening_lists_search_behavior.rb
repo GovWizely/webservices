@@ -12,12 +12,12 @@ shared_context 'SDN data' do
   before(:all) do
     ScreeningList::Sdn.recreate_index
     ScreeningList::SdnData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml").import
   end
 
   let(:all_sdn_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/sdn/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/sdn/expected_results.json").read)
   end
 end
 
@@ -109,12 +109,12 @@ shared_context 'FSE data' do
   before(:all) do
     ScreeningList::Fse.recreate_index
     ScreeningList::FseData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/fse/fse.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/fse/fse.xml").import
   end
 
   let(:all_fse_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/fse/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/fse/expected_results.json").read)
   end
 end
 
@@ -200,12 +200,12 @@ shared_context 'EL data' do
   before(:all) do
     ScreeningList::El.recreate_index
     ScreeningList::ElData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv").import
   end
 
   let(:all_el_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/el/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/el/expected_results.json").read)
   end
 end
 
@@ -249,12 +249,12 @@ shared_context 'DPL data' do
   before(:all) do
     ScreeningList::Dpl.recreate_index
     ScreeningList::DplData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt").import
+        "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt").import
   end
 
   let(:all_dpl_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/dpl/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/dpl/expected_results.json").read)
   end
 end
 
@@ -310,12 +310,12 @@ shared_context 'UVL data' do
   before(:all) do
     ScreeningList::Uvl.recreate_index
     ScreeningList::UvlData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv").import
   end
 
   let(:all_uvl_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/uvl/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/uvl/expected_results.json").read)
   end
 end
 
@@ -353,12 +353,12 @@ shared_context 'ISN data' do
   before(:all) do
     ScreeningList::Isn.recreate_index
     ScreeningList::IsnData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv").import
   end
 
   let(:all_isn_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/isn/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/isn/expected_results.json").read)
   end
 end
 
@@ -384,12 +384,12 @@ shared_context 'DTC data' do
   before(:all) do
     ScreeningList::Dtc.recreate_index
     ScreeningList::DtcData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/dtc/aeca_debarred_parties.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv").import
   end
 
   let(:all_dtc_results) do
     JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/dtc/expected_results.json").read)
+                   "#{Rails.root}/spec/fixtures/screening_lists/dtc/expected_results.json").read)
   end
 end
 
@@ -426,7 +426,7 @@ end
 shared_examples 'it contains all expected results of source' do
   let(:results) do
     JSON.parse(response.body)['results']
-      .select { |r| r['source'] == source }
+    .select { |r| r['source'] == source }
   end
 
   it 'contains them all' do
