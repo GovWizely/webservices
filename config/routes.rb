@@ -1,5 +1,5 @@
 Webservices::Application.routes.draw do
-  scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
+  scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: {format: :json} do
 
     path = { 'market_researches' => 'market_research_library',
              'parature_faq'      => 'faqs',

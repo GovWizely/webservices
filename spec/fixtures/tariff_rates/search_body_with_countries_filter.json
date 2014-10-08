@@ -1,0 +1,13 @@
+{
+    "filter": {
+        "bool": {
+            "should": [
+                {
+                    "terms": {
+                        "countries": ["US", "AU"]
+                    }
+                }
+            ]
+        }
+    }
+}

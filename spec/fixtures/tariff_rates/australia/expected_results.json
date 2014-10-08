@@ -3,14 +3,14 @@
         "source_id": "439058",
         "tariff_line": "1011000",
         "description": "Live purebred breeding horses and asses",
-        "hs6": "10110",
+        "hs_6": "10110",
         "sector_code": "15",
         "base_rate": "0",
         "base_rate_alt": "null",
         "final_year": "2012",
-        "tls_per_6_digit": "1",
-        "trq_quota": "null",
-        "trq_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
+        "tariff_lines_per_6_digit": "1",
+        "tariff_rate_quota": "null",
+        "tariff_rate_quota_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
         "tariff_eliminated": "true",
         "product_type_id": "2",
         "pending_data": "false",
@@ -41,7 +41,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "country": "AU",
+        "countries": "US,AU",
         "source": "AUSTRALIA"
     }
 ]
