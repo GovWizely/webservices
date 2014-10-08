@@ -28,7 +28,7 @@ module TradeEvent
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      doc = Nokogiri::XML(open(ENDPOINT, 'User-Agent' => USER_AGENT))
+      doc = Nokogiri::XML(resource_fh)
       trade_events = doc.xpath('//item').map do |event_info|
         trade_event = process_event_info(event_info)
         trade_event
@@ -37,6 +37,13 @@ module TradeEvent
     end
 
     private
+
+    def resource_fh
+      if URI.parse(@resource).scheme =~ /ftp|http/
+        return open(@resource, 'User-Agent' => USER_AGENT)
+      end
+      open(@resource, 'r:UTF-8')
+    end
 
     def process_event_info(event_info)
       event_hash = extract_fields(event_info, XPATHS)
