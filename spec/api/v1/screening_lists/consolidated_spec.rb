@@ -185,7 +185,7 @@ describe 'Consolidated Screening List API V1' do
       end
 
       context 'and is set to "UVL" source' do
-        let(:params) { { sources: 'UVL' } }
+        let(:params) { { sources: 'UVL', size: 100 } }
         it_behaves_like 'it contains all UVL results'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(UVL) }

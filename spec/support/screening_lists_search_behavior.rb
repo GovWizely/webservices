@@ -316,14 +316,14 @@ end
 
 shared_examples 'it contains all UVL results' do
   let(:source) { :UVL }
-  let(:expected) { [5, 1, 0, 2, 6, 3, 7, 4] }
+  let(:expected) { (0..11).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all UVL results that match "technology", sorted correctly' do
   include_context 'full results from response'
   let(:source) { :UVL }
-  let(:expected) { [2, 5] }
+  let(:expected) { [1, 4] }
 
   it 'contains them all, sorted correctly' do
     expect(got).to eq(expected)
@@ -332,19 +332,19 @@ end
 
 shared_examples 'it contains all UVL results that match "brilliance"' do
   let(:source) { :UVL }
-  let(:expected) { [5] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all UVL results that match countries "CN"' do
   let(:source) { :UVL }
-  let(:expected) { [1] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all UVL results that match countries "HK,CN"' do
   let(:source) { :UVL }
-  let(:expected) { [5, 1, 0, 2, 6, 3] }
+  let(:expected) { (1..7).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
