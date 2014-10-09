@@ -6,7 +6,7 @@ module ScreeningList
   class ElData
     include ::Importer
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1068-el'
+    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
     COLUMN_HASH = {
       entity_number:            :entity_number,
