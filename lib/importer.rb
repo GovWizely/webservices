@@ -51,6 +51,7 @@ module Importer
     when /\ALaos\Z/i then "Lao People's Democratic Republic"
     when /\ASt\. Lucia\Z/i then 'Saint Lucia'
     when /\ASão Tomé & Príncipe\Z/i then 'Sao Tome and Principe'
+    when /\AU\.?S\.?(A\.?)?\Z/i then 'United States'
     else country_str
     end
   end
