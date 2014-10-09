@@ -6,6 +6,8 @@ shared_context 'all CSL fixture data' do
   include_context 'UVL data'
   include_context 'ISN data'
   include_context 'DTC data'
+  include_context 'PLC data'
+  include_context 'SSI data'
 end
 
 shared_context 'SDN data' do
@@ -86,19 +88,19 @@ shared_examples 'it contains all SDN results that match countries "SO,JP"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Entity"' do
+shared_examples 'it contains all SDN results that match type "Entity"' do
   let(:source) { :SDN }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Vessel"' do
+shared_examples 'it contains all SDN results that match type "Vessel"' do
   let(:source) { :SDN }
   let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SDN results that match sdn_type "Individual"' do
+shared_examples 'it contains all SDN results that match type "Individual"' do
   let(:source) { :SDN }
   let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
@@ -182,13 +184,13 @@ shared_examples 'it contains all FSE results that match countries "UA,DJ"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all FSE results that match sdn_type "Entity"' do
+shared_examples 'it contains all FSE results that match type "Entity"' do
   let(:source) { :FSE }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all FSE results that match sdn_type "Individual"' do
+shared_examples 'it contains all FSE results that match type "Individual"' do
   let(:source) { :FSE }
   let(:expected) { [2, 1] }
   it_behaves_like 'it contains all expected results of source'
@@ -417,6 +419,84 @@ end
 shared_examples 'it contains all DTC results that match "original"' do
   let(:source) { :DTC }
   let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'PLC data' do
+  before(:all) do
+    ScreeningList::Plc.recreate_index
+    ScreeningList::PlcData.new(
+      "#{Rails.root}/spec/fixtures/screening_lists/plc/ns_plc.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:PLC] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/screening_lists/plc/expected_results.json").read)
+  end
+end
+
+shared_examples 'it contains all PLC results' do
+  let(:source) { :PLC }
+  let(:expected) { (0..5).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all PLC results that match "heBron"' do
+  let(:source) { :PLC }
+  let(:expected) { [2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all PLC results that match countries "PS"' do
+  let(:source) { :PLC }
+  let(:expected) { [5] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all PLC results that match type "Individual"' do
+  let(:source) { :PLC }
+  let(:expected) { (0..5).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'SSI data' do
+  before(:all) do
+    ScreeningList::Ssi.recreate_index
+    ScreeningList::SsiData.new(
+      "#{Rails.root}/spec/fixtures/screening_lists/ssi/ssi.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:SSI] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/screening_lists/ssi/expected_results.json").read)
+  end
+end
+
+shared_examples 'it contains all SSI results' do
+  let(:source) { :SSI }
+  let(:expected) { (0..3).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SSI results that match "transneft"' do
+  let(:source) { :SSI }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SSI results that match countries "RU"' do
+  let(:source) { :SSI }
+  let(:expected) { (0..3).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SSI results that match countries "UA,DJ"' do
+  let(:source) { :SSI }
+  let(:expected) { [] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SSI results that match type "Entity"' do
+  let(:source) { :SSI }
+  let(:expected) { (0..3).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 

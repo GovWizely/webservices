@@ -9,11 +9,11 @@ module ScreeningList
 
     self.group_by = [:name, :federal_register_notice, :effective_date]
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1068-el'
+    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
     COLUMN_HASH = {
       entity_number:            :entity_number,
-      sdn_type:                 :sdn_type,
+      sdn_type:                 :type,
       programs:                 :programs,
       name:                     :name,
       title:                    :title,

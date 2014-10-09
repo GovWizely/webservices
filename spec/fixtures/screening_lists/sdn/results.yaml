@@ -1,6 +1,6 @@
 ---
 - :entity_number: '306'
-  :sdn_type: Entity
+  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -45,7 +45,7 @@
     :address: Federico Boyd Avenue & 51 Street
   :ids: []
 - :entity_number: '6982'
-  :sdn_type: Individual
+  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -102,7 +102,7 @@
     :number: A0181988
     :type: Passport
 - :entity_number: '11043'
-  :sdn_type: Vessel
+  :type: Vessel
   :title: 
   :call_sign: 
   :vessel_type: General Cargo
@@ -133,7 +133,7 @@
     :number: IMO 9051648
     :type: Vessel Registration Identification
 - :entity_number: '521'
-  :sdn_type: Individual
+  :type: Individual
   :title: Executive Director, Havana International Bank
   :call_sign: 
   :vessel_type: 

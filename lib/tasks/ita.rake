@@ -16,7 +16,9 @@ namespace :ita do
         ScreeningList::El
         ScreeningList::Fse
         ScreeningList::Isn
+        ScreeningList::Plc
         ScreeningList::Sdn
+        ScreeningList::Ssi
         ScreeningList::Uvl
     ).each do |class_name|
       class_name.constantize.recreate_index

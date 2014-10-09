@@ -1,6 +1,6 @@
 ---
 - :entity_number: '15987'
-  :sdn_type: Entity
+  :type: Entity
   :title:
   :call_sign:
   :vessel_type:
@@ -41,7 +41,7 @@
   :dates_of_birth: []
   :places_of_birth: []
 - :entity_number: '16422'
-  :sdn_type: Individual
+  :type: Individual
   :title: General Manager of Ferland Company Limited
   :call_sign:
   :vessel_type:
@@ -83,7 +83,7 @@
   - '1968-06-16'
   :places_of_birth: []
 - :entity_number: '16531'
-  :sdn_type: Individual
+  :type: Individual
   :title:
   :call_sign:
   :vessel_type:

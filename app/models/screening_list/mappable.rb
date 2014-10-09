@@ -32,7 +32,7 @@ module ScreeningList
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            sdn_type:                { type: 'string', analyzer: 'keyword_lowercase' },
+            type:                { type: 'string', analyzer: 'keyword_lowercase' },
             source:                  { type: 'string', analyzer: 'keyword' },
             federal_register_notice: { type: 'string', analyzer: 'keyword' },
 

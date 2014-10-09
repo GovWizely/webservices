@@ -1,0 +1,398 @@
+[
+  {
+    "addresses": [
+      {
+        "address": "57 B. Polyanka ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      },
+      {
+        "address": "57 Bolshaya. Polyanka",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "OAO AK TRANSNEFT",
+      "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
+      "OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT",
+      "TRANSNEFT, JSC",
+      "TRANSNEFT OJSC",
+      "TRANSNEFT"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17254",
+    "ids": [
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027700049486",
+        "type": "Registration ID"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7706061801",
+        "type": "Tax ID No."
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "00044463",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "transneft@ak.transneft.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.transneft.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 2",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "AK TRANSNEFT OAO",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "type": "Entity",
+    "source": "SSI",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "8/15 Korp. 3 ul. Rozhdestvenka",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "107996",
+        "country": "RU"
+      },
+      {
+        "address": "Bld 3 8/15, Rozhdestvenka St.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "107996",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY",
+      "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY, OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17017",
+    "ids": [
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027700159497",
+        "type": "Registration ID"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "29292940",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "MOSW RU MM",
+        "type": "SWIFT/BIC"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.bm.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "holmogorov_ss@mmbank.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "info@mmbank.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "044525219",
+        "type": "BIK (RU)"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 1",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "BANK OF MOSCOW",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "type": "Entity",
+    "source": "SSI",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "24 Usacheva ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119048",
+        "country": "RU"
+      },
+      {
+        "address": "21 Gogolevsky Blvd.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119991",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
+      "STATE CORPORATION ROSTEKHNOLOGII",
+      "ROSTEC STATE CORPORATION",
+      "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
+      "RUSSIAN TECHNOLOGIES",
+      "STATE CORPORATION ROSTECHNOLOGII"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17260",
+    "ids": [
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1077799030847",
+        "type": "Registration ID"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7704274402",
+        "type": "Tax ID No."
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "94137372",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "info@rostec.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.rostec.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 3",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "ROSTEC",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "type": "Entity",
+    "source": "SSI",
+    "source_list_url": null,
+    "title": null
+  },
+  {
+    "addresses": [
+      {
+        "address": "29, Bolshaya Morskaya str.",
+        "city": "St. Petersburg",
+        "state": null,
+        "postal_code": "190000",
+        "country": "RU"
+      },
+      {
+        "address": "37 Plyushchikha ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119121",
+        "country": "RU"
+      },
+      {
+        "address": "43, Vorontsovskaya str.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "109044",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "JSC VTB BANK",
+      "BANK VTB, OPEN JOINT-STOCK COMPANY",
+      "VNESHTORGBANK",
+      "BANK VNESHNEY TORGOVLI, OPEN JOINT-STOCK COMPANY",
+      "BANK VNESHNEY TORGOVLI, JOINT-STOCK COMPANY",
+      "BANK VNESHNEY TORGOVLI RSFSR",
+      "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII, CLOSED JOINT-STOCK COMPANY",
+      "VNESHTORGBANK ROSSII, CLOSED JOINT-STOCK COMPANY",
+      "VTB BANK, OPEN JOINT-STOCK COMPANY",
+      "BANK VTB OAO"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17013",
+    "ids": [
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027739609391",
+        "type": "Registration ID"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "00032520",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7702070139",
+        "type": "Tax ID No."
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1000",
+        "type": "License"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.vtb.com",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "VTBRRUMM",
+        "type": "SWIFT/BIC"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 1",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "VTB BANK OAO",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "type": "Entity",
+    "source": "SSI",
+    "source_list_url": null,
+    "title": null
+  }
+]

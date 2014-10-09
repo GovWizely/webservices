@@ -1,0 +1,303 @@
+---
+- :entity_number: '17013'
+  :type: Entity
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 'For more information on directives, please visit the following link:
+    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :id: '17013'
+  :source: SSI
+  :source_list_url: 
+  :name: VTB BANK OAO
+  :alt_names:
+  - JSC VTB BANK
+  - BANK VTB, OPEN JOINT-STOCK COMPANY
+  - VNESHTORGBANK
+  - BANK VNESHNEY TORGOVLI, OPEN JOINT-STOCK COMPANY
+  - BANK VNESHNEY TORGOVLI, JOINT-STOCK COMPANY
+  - BANK VNESHNEY TORGOVLI RSFSR
+  - BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII, CLOSED JOINT-STOCK COMPANY
+  - VNESHTORGBANK ROSSII, CLOSED JOINT-STOCK COMPANY
+  - VTB BANK, OPEN JOINT-STOCK COMPANY
+  - BANK VTB OAO
+  :programs:
+  - UKRAINE-EO13662
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses:
+  - :city: St. Petersburg
+    :country: RU
+    :postal_code: '190000'
+    :state: 
+    :address: 29, Bolshaya Morskaya str.
+  - :city: Moscow
+    :country: RU
+    :postal_code: '119121'
+    :state: 
+    :address: 37 Plyushchikha ul.
+  - :city: Moscow
+    :country: RU
+    :postal_code: '109044'
+    :state: 
+    :address: 43, Vorontsovskaya str.
+  :ids:
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '1027739609391'
+    :type: Registration ID
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '00032520'
+    :type: Government Gazette Number
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '7702070139'
+    :type: Tax ID No.
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '1000'
+    :type: License
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: www.vtb.com
+    :type: Website
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: VTBRRUMM
+    :type: SWIFT/BIC
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: Subject to Directive 1
+    :type: Executive Order 13662 Directive Determination -
+- :entity_number: '17017'
+  :type: Entity
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 'For more information on directives, please visit the following link:
+    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :id: '17017'
+  :source: SSI
+  :source_list_url: 
+  :name: BANK OF MOSCOW
+  :alt_names:
+  - JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY
+  - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY, OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
+  :programs:
+  - UKRAINE-EO13662
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses:
+  - :city: Moscow
+    :country: RU
+    :postal_code: '107996'
+    :state: 
+    :address: 8/15 Korp. 3 ul. Rozhdestvenka
+  - :city: Moscow
+    :country: RU
+    :postal_code: '107996'
+    :state: 
+    :address: Bld 3 8/15, Rozhdestvenka St.
+  :ids:
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: '1027700159497'
+    :type: Registration ID
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: '29292940'
+    :type: Government Gazette Number
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: MOSW RU MM
+    :type: SWIFT/BIC
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: www.bm.ru
+    :type: Website
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: holmogorov_ss@mmbank.ru
+    :type: Email Address
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: info@mmbank.ru
+    :type: Email Address
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: 044525219
+    :type: BIK (RU)
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: Subject to Directive 1
+    :type: Executive Order 13662 Directive Determination -
+- :entity_number: '17254'
+  :type: Entity
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 'For more information on directives, please visit the following link:
+    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :id: '17254'
+  :source: SSI
+  :source_list_url: 
+  :name: AK TRANSNEFT OAO
+  :alt_names:
+  - OAO AK TRANSNEFT
+  - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
+  - OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT
+  - TRANSNEFT, JSC
+  - TRANSNEFT OJSC
+  - TRANSNEFT
+  :programs:
+  - UKRAINE-EO13662
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses:
+  - :city: Moscow
+    :country: RU
+    :postal_code: '119180'
+    :state: 
+    :address: 57 B. Polyanka ul.
+  - :city: Moscow
+    :country: RU
+    :postal_code: '119180'
+    :state: 
+    :address: 57 Bolshaya. Polyanka
+  :ids:
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: '1027700049486'
+    :type: Registration ID
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: '7706061801'
+    :type: Tax ID No.
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: '00044463'
+    :type: Government Gazette Number
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: transneft@ak.transneft.ru
+    :type: Email Address
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: www.transneft.ru
+    :type: Website
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: Subject to Directive 2
+    :type: Executive Order 13662 Directive Determination -
+- :entity_number: '17260'
+  :type: Entity
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 'For more information on directives, please visit the following link:
+    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :id: '17260'
+  :source: SSI
+  :source_list_url: 
+  :name: ROSTEC
+  :alt_names:
+  - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED
+    TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
+  - STATE CORPORATION ROSTEKHNOLOGII
+  - ROSTEC STATE CORPORATION
+  - RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION
+    AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
+  - RUSSIAN TECHNOLOGIES
+  - STATE CORPORATION ROSTECHNOLOGII
+  :programs:
+  - UKRAINE-EO13662
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses:
+  - :city: Moscow
+    :country: RU
+    :postal_code: '119048'
+    :state: 
+    :address: 24 Usacheva ul.
+  - :city: Moscow
+    :country: RU
+    :postal_code: '119991'
+    :state: 
+    :address: 21 Gogolevsky Blvd.
+  :ids:
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '1077799030847'
+    :type: Registration ID
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '7704274402'
+    :type: Tax ID No.
+  - :country: RU
+    :expiration_date: 
+    :issue_date: 
+    :number: '94137372'
+    :type: Government Gazette Number
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: info@rostec.ru
+    :type: Email Address
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: www.rostec.ru
+    :type: Website
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: Subject to Directive 3
+    :type: Executive Order 13662 Directive Determination -

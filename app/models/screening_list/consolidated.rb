@@ -13,10 +13,19 @@ module ScreeningList
     end
 
     def self.index_names(sources)
-      classes = [Dpl, El, Uvl, Fse, Isn, Dtc, Sdn]
-      classes = classes.select { |c| sources.include?(c.source) } if sources.any?
+      models = [Dpl, Dtc, El, Fse, Isn, Sdn, Uvl]
 
-      classes.map(&:index_name)
+      if sources.any?
+        selected_models = models.select { |c| sources.include?(c.source) }
+
+        # If the given sources do not match any CSL models, we'll search over
+        # them all. This prevents us from querying EVERY index in our DB, which
+        # is undesirable. It would be better if we didn't send a query to ES
+        # in this case.
+        models = selected_models if selected_models.any?
+      end
+
+      models.map(&:index_name)
     end
   end
 end

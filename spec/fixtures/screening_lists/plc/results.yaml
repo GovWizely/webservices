@@ -1,0 +1,160 @@
+---
+- :entity_number: '9639'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: 
+  :id: '9639'
+  :source: PLC
+  :source_list_url: 
+  :name: HANIYA, Ismail Abdul Salah
+  :alt_names:
+  - HANIYA, Ismail
+  - HANIYYA, Ismaeel
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth:
+  - '1962'
+  :places_of_birth:
+  - Shati
+  :addresses: []
+  :ids: []
+- :entity_number: '9674'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: HAMAS - Hebron
+  :id: '9674'
+  :source: PLC
+  :source_list_url: 
+  :name: QFEISHEH, Hatem
+  :alt_names:
+  - KAFEESHEH, Hatem Rabah
+  - QEFEISHA, Hatem
+  - ABU ANED, Hadj Hatem
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth:
+  - '1960'
+  :places_of_birth: []
+  :addresses: []
+  :ids: []
+- :entity_number: '9688'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: HAMAS - Jenin
+  :id: '9688'
+  :source: PLC
+  :source_list_url: 
+  :name: YAHIA, Khaled Abed
+  :alt_names:
+  - YEHIA, Khaled Said
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth:
+  - '1959'
+  :places_of_birth: []
+  :addresses:
+  - :city: Jenin
+    :country: PS
+    :postal_code: 
+    :state: West Bank
+    :address: 
+  :ids: []
+- :entity_number: '9705'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: HAMAS - Gaza
+  :id: '9705'
+  :source: PLC
+  :source_list_url: 
+  :name: SALEH, Jamal
+  :alt_names:
+  - NASSER, Jamal Talab Mohammad Saleh
+  - SALEH, Jamal Talab
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth:
+  - '1958'
+  :places_of_birth:
+  - Gaza
+  :addresses: []
+  :ids: []
+- :entity_number: '9712'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: HAMAS - Northern Gaza
+  :id: '9712'
+  :source: PLC
+  :source_list_url: 
+  :name: SHIHAB, Mohammed
+  :alt_names:
+  - SHEHAB, Mohamed Abed Hadi Rahman
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth:
+  - '1956'
+  :places_of_birth: []
+  :addresses: []
+  :ids: []
+- :entity_number: '9715'
+  :type: Individual
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: PFLP
+  :id: '9715'
+  :source: PLC
+  :source_list_url: 
+  :name: JARRAR, Khaledah
+  :alt_names: []
+  :programs:
+  - NS-PLC
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses: []
+  :ids: []

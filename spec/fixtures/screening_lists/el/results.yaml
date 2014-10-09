@@ -1,6 +1,6 @@
 ---
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Fazal Rahim Farid
   :title: 
@@ -29,7 +29,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Fazel Khalil Construction Company
   :title: 
@@ -51,7 +51,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Zurmat Construction Company offices
   :title: 
@@ -103,7 +103,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Murat Peker
   :title: 
@@ -124,7 +124,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Qazi Abdallah
   :title: 
@@ -146,7 +146,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Qazi Abdallah
   :title: 
@@ -168,7 +168,7 @@
     :state: 
   :source: EL
 - :entity_number: 
-  :sdn_type: 
+  :type: 
   :programs: 
   :name: Qazi Abdallah
   :title: 

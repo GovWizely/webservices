@@ -24,11 +24,11 @@ describe ScreeningList::Query do
       end
     end
 
-    context 'when options include only sdn_type' do
-      let(:query) { described_class.new(sdn_type: 'Entity') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_sdn_type_filter.json").read }
+    context 'when options include only type' do
+      let(:query) { described_class.new(type: 'Entity') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_type_filter.json").read }
 
-      it 'generates search body with sdn_type filter' do
+      it 'generates search body with type filter' do
         JSON.parse(query.generate_search_body).should == search_body
       end
     end
@@ -37,7 +37,7 @@ describe ScreeningList::Query do
       let(:query) { described_class.new(sources: 'SDN') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_sources_filter.json").read }
 
-      it 'generates search body with sdn_type filter' do
+      it 'generates search body with type filter' do
         JSON.parse(query.generate_search_body).should == search_body
       end
     end
@@ -56,7 +56,7 @@ describe ScreeningList::Query do
         described_class.new(countries: 'us,ca',
                             q:         'fish',
                             sources:   'SDN',
-                            sdn_type:  'Entity')
+                            type:  'Entity')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 

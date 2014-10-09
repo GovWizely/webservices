@@ -18,13 +18,9 @@ Webservices::Application.routes.draw do
 
     scope '/consolidated_screening_list' do
       get '/search', to: 'screening_lists/consolidated#search'
-      get '/dpl/search', to: 'screening_lists/dpl#search'
-      get '/dtc/search', to: 'screening_lists/dtc#search'
-      get '/el/search', to: 'screening_lists/el#search'
-      get '/fse/search', to: 'screening_lists/fse#search'
-      get '/isn/search', to: 'screening_lists/isn#search'
-      get '/sdn/search', to: 'screening_lists/sdn#search'
-      get '/uvl/search', to: 'screening_lists/uvl#search'
+      %w(dtc dpl el fse isn plc sdn ssi uvl).each do |source|
+        get "/#{source}/search", to: "screening_lists/#{source}#search"
+      end
     end
   end
 end

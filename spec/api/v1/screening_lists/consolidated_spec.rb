@@ -121,29 +121,29 @@ describe 'Consolidated Screening List API V1' do
       end
     end
 
-    context 'when sdn_type is specified' do
+    context 'when type is specified' do
       subject { response }
 
-      let(:params) { { sdn_type: 'Entity' } }
+      let(:params) { { type: 'Entity' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all SDN results that match sdn_type "Entity"'
-      it_behaves_like 'it contains all FSE results that match sdn_type "Entity"'
+      it_behaves_like 'it contains all SDN results that match type "Entity"'
+      it_behaves_like 'it contains all FSE results that match type "Entity"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { %w(SDN FSE) }
       end
 
       context 'and is set to "Vessel"' do
-        let(:params) { { sdn_type: 'Vessel' } }
-        it_behaves_like 'it contains all SDN results that match sdn_type "Vessel"'
+        let(:params) { { type: 'Vessel' } }
+        it_behaves_like 'it contains all SDN results that match type "Vessel"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(SDN) }
         end
       end
 
       context 'and is set to "Individual"' do
-        let(:params) { { sdn_type: 'Individual' } }
-        it_behaves_like 'it contains all SDN results that match sdn_type "Individual"'
-        it_behaves_like 'it contains all FSE results that match sdn_type "Individual"'
+        let(:params) { { type: 'Individual' } }
+        it_behaves_like 'it contains all SDN results that match type "Individual"'
+        it_behaves_like 'it contains all FSE results that match type "Individual"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(SDN FSE) }
         end
