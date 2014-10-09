@@ -13,7 +13,7 @@ module ScreeningList
     end
 
     def self.index_names(sources)
-      models = [Dpl, Dtc, El, Fse, Isn, Sdn, Uvl]
+      models = [Dpl, Dtc, El, Fse, Isn, Plc, Sdn, Ssi, Uvl]
 
       if sources.any?
         selected_models = models.select { |c| sources.include?(c.source) }
