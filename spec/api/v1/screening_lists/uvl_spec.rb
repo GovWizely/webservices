@@ -5,7 +5,7 @@ describe 'BIS Unverified Parties API V1' do
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_screening_list/uvl/search' do
-    let(:params) { {} }
+    let(:params) { { size: 100 } }
     before { get '/consolidated_screening_list/uvl/search', params, v1_headers }
 
     context 'when search parameters are empty' do

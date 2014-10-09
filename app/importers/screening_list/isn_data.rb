@@ -5,6 +5,9 @@ require 'digest/md5'
 module ScreeningList
   class IsnData
     include ::Importer
+    include CanGroupRows
+
+    self.group_by = [:name, :effective_date, :federal_register_notice]
 
     ENDPOINT = "#{Rails.root}/data/screening_lists/isn/isn.csv"
 
@@ -23,28 +26,21 @@ module ScreeningList
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource, 'r:ISO-8859-1').read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
-      docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
+      rows = rows.select { |row| !expired?(row) }
+
+      docs = group_rows(rows).map do |id, grouped|
+        process_grouped_rows(id, grouped)
+      end
 
       self.class.model_class.index(docs)
     end
 
     private
 
-    def group_rows(rows)
-      rows_by_name = {}
-      rows.each do |row|
-        next if entity_expired?(row)
-        key = generate_id(row)
-        rows_by_name[key] ||= []
-        rows_by_name[key] << row
-      end
-      rows_by_name
-    end
-
-    def process_grouped_rows(rows)
+    def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = generate_id(rows.first.to_hash)
+      doc[:id] = id
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] = 'http://www.state.gov/t/isn/c15231.htm'
 
@@ -57,13 +53,8 @@ module ScreeningList
       doc
     end
 
-    def entity_expired?(row)
+    def expired?(row)
       parse_american_date(row[:date_liftedwaivedexpired]) < Time.now rescue nil
-    end
-
-    def generate_id(row)
-      Digest::SHA1.hexdigest(
-        %i(name effective_date federal_register_notice).map { |f| row[f] }.join)
     end
   end
 end

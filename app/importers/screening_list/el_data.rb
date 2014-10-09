@@ -5,6 +5,9 @@ require 'digest/md5'
 module ScreeningList
   class ElData
     include ::Importer
+    include CanGroupRows
+
+    self.group_by = [:name, :federal_register_notice, :effective_date]
 
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1068-el'
 
@@ -34,28 +37,19 @@ module ScreeningList
                        headers:           true,
                        header_converters: :symbol)
 
-      docs = group_rows(rows).map { |_, grouped| process_grouped_rows(grouped) }
+      docs = group_rows(rows).map do |id, grouped|
+        process_grouped_rows(id, grouped)
+      end
 
       self.class.model_class.index(docs)
     end
 
     private
 
-    def group_rows(rows)
-      rows_by_name = {}
-      rows.each do |row|
-        next unless row[:name].present?
-        key = generate_id(row)
-        rows_by_name[key] ||= []
-        rows_by_name[key] << row
-      end
-      rows_by_name
-    end
-
-    def process_grouped_rows(rows)
+    def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = generate_id(rows.first)
+      doc[:id] = id
 
       doc[:alt_names] = rows.map do |row|
         strip_nonascii(row[:alternate_name])
@@ -85,11 +79,6 @@ module ScreeningList
       address = remap_keys(ADDRESS_HASH, row.to_hash)
       address[:country] &&= lookup_country(address[:country])
       address
-    end
-
-    def generate_id(row)
-      Digest::SHA1.hexdigest(
-        %i(name federal_register_notice effective_date).map { |f| row[f] }.join)
     end
   end
 end
