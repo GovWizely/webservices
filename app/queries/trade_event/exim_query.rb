@@ -1,4 +1,4 @@
 module TradeEvent
-  class EximQuery < Query
+  class EximQuery < TradeEvent::Query
   end
 end
