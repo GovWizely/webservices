@@ -1,4 +1,4 @@
 module ScreeningList
-  class ElQuery < Query
+  class ElQuery < ScreeningList::Query
   end
 end

@@ -1,4 +1,4 @@
 module ScreeningList
-  class PlcQuery < Query
+  class PlcQuery < ScreeningList::Query
   end
 end

@@ -1,4 +1,4 @@
 module ScreeningList
-  class SdnQuery < Query
+  class SdnQuery < ScreeningList::Query
   end
 end
