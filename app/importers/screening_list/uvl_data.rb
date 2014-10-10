@@ -5,7 +5,8 @@ require 'digest/md5'
 module ScreeningList
   class UvlData
     include ::Importer
-    include CanGroupRows
+    prepend ::Importer::DeletesOldDocuments
+    include ScreeningList::CanGroupRows
 
     self.group_by = [:name]
 

@@ -3,6 +3,7 @@ require 'csv'
 module ScreeningList
   class DtcData
     include ::Importer
+    prepend ::Importer::DeletesOldDocuments
 
     # We don't group source entries in this importer, but we want
     # to use the generate_id method brought in by this module.

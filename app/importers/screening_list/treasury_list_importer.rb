@@ -25,7 +25,7 @@ module ScreeningList
         process_node(node)
       end.compact
 
-      self.class.model_class.index docs
+      model_class.index(docs)
     end
 
     private

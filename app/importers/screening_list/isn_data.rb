@@ -5,7 +5,8 @@ require 'digest/md5'
 module ScreeningList
   class IsnData
     include ::Importer
-    include CanGroupRows
+    prepend ::Importer::DeletesOldDocuments
+    include ScreeningList::CanGroupRows
 
     self.group_by = [:name, :effective_date, :federal_register_notice]
 

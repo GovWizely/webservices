@@ -1,10 +1,12 @@
 require 'spec_helper'
 
 describe Importer do
-  class Mock
-  end
-  class MockData
-    include Importer
+  before(:all) do
+    class Mock
+    end
+    class MockData
+      include Importer
+    end
   end
 
   after(:all) do
