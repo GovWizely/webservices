@@ -26,6 +26,9 @@ Webservices::Application.routes.draw do
     scope '/consolidated_tariff_rate' do
       get '/search', to: 'tariff_rates/consolidated#search'
       get '/australia/search', to: 'tariff_rates/australia#search'
+      get '/costa_rica/search', to: 'tariff_rates/costa_rica#search'
+      get '/el_salvador/search', to: 'tariff_rates/el_salvador#search'
+      get '/korea/search', to: 'tariff_rates/korea#search'
     end
   end
 end
