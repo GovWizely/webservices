@@ -1,4 +1,4 @@
 module TradeEvent
-  class ItaQuery < Query
+  class ItaQuery < TradeEvent::Query
   end
 end
