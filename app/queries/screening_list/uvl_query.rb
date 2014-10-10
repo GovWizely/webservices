@@ -1,4 +1,4 @@
 module ScreeningList
-  class UvlQuery < Query
+  class UvlQuery < ScreeningList::Query
   end
 end

@@ -1,4 +1,4 @@
 module ScreeningList
-  class SsiQuery < Query
+  class SsiQuery < ScreeningList::Query
   end
 end

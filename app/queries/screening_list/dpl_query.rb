@@ -1,4 +1,4 @@
 module ScreeningList
-  class DplQuery < Query
+  class DplQuery < ScreeningList::Query
   end
 end

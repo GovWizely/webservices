@@ -1,4 +1,4 @@
 module ScreeningList
-  class IsnQuery < Query
+  class IsnQuery < ScreeningList::Query
   end
 end

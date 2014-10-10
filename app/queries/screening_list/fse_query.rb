@@ -1,4 +1,4 @@
 module ScreeningList
-  class FseQuery < Query
+  class FseQuery < ScreeningList::Query
   end
 end

@@ -1,4 +1,4 @@
 module ScreeningList
-  class DtcQuery < Query
+  class DtcQuery < ScreeningList::Query
   end
 end
