@@ -1,8 +1,15 @@
 require 'spec_helper'
 
 describe Importer do
-  class MockImporter
+  class Mock
+  end
+  class MockData
     include Importer
+  end
+
+  after(:all) do
+    Object.send(:remove_const, :Mock)
+    Object.send(:remove_const, :MockData)
   end
 
   describe '#lookup_country' do
@@ -20,13 +27,13 @@ describe Importer do
                        'St. Lucia',
                        'vietnam']
       country_names.each do |country_name|
-        MockImporter.new.lookup_country(country_name).should_not be_nil
+        MockData.new.lookup_country(country_name).should_not be_nil
       end
     end
   end
 
   describe '#parse_date' do
-    subject { MockImporter.new.parse_date(date_str) }
+    subject { MockData.new.parse_date(date_str) }
 
     context 'when given a parsable string' do
       let(:date_str) { '20 May 1954' }
@@ -45,7 +52,7 @@ describe Importer do
   end
 
   describe '#parse_date' do
-    subject { MockImporter.new.parse_american_date(date_str) }
+    subject { MockData.new.parse_american_date(date_str) }
 
     context 'when given a parsable string' do
       let(:date_str) { '5/6/1999' }
@@ -59,9 +66,14 @@ describe Importer do
   end
 
   describe '#sanitize_entry' do
-    subject { MockImporter.new.sanitize_entry(hash) }
+    subject { MockData.new.sanitize_entry(hash) }
     let(:hash) { { one: nil, two: ' ', three: ' f ', four: 'o', five: [' o', 'b '] } }
     it { should eq(one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']) }
+  end
+
+  describe '.model_class' do
+    subject { MockData.new.model_class }
+    it { should eq Mock }
   end
 
 end
