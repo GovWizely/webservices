@@ -1,4 +1,4 @@
 module TariffRate
-  class AustraliaQuery < Query
+  class AustraliaQuery < TariffRate::Query
   end
 end
