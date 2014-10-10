@@ -1,4 +1,4 @@
 module TradeEvent
-  class SbaQuery < Query
+  class SbaQuery < TradeEvent::Query
   end
 end
