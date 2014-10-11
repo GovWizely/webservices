@@ -2,7 +2,7 @@ module TariffRate
   class Query < ::Query
     attr_reader :countries, :sources
 
-    def initialize(options={})
+    def initialize(options = {})
       super
       @q = options[:q] if options[:q].present?
       @countries = options[:countries].upcase.split(',') if options[:countries].present?

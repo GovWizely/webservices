@@ -1,6 +1,5 @@
 module TariffRate
   module Mappable
-
     def self.included(klass)
       klass.settings = {
           index: {
@@ -8,15 +7,15 @@ module TariffRate
                   analyzer: {
                       snowball_asciifolding_nostop: {
                           tokenizer: 'standard',
-                          filter: %w(standard asciifolding lowercase snowball)
+                          filter: %w(standard asciifolding lowercase snowball),
                       },
                       keyword_lowercase: {
                           tokenizer: 'keyword',
-                          filter: %w(lowercase)
-                      }
-                  }
-              }
-          }
+                          filter: %w(lowercase),
+                      },
+                  },
+              },
+          },
       }.freeze
 
       klass.mappings = {
@@ -55,8 +54,8 @@ module TariffRate
                   industrie: {type: 'string', analyzer: 'keyword'},
                   country: {type: 'string', analyzer: 'keyword'},
                   source: {type: 'string', analyzer: 'keyword'},
-              }
-          }
+              },
+          },
       }.freeze
 
       klass.class_eval do

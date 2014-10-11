@@ -37,17 +37,16 @@ module TariffRate
         link_text: :link_text,
         link_url: :link_url,
         quotaname: :quota_name,
-        producttype: :industry
+        producttype: :industry,
     }
 
     def initialize(resource = ENDPOINT)
       @resource = resource
     end
 
-
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: "UTF-8")
+      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
       entries = rows.map { |row| process_row row.to_h }.compact
       self.class.model_class.index(entries)
     end
@@ -55,16 +54,16 @@ module TariffRate
     private
 
     def process_row(row)
-      rate_by_year = Hash.new
-      alt_rate_by_year = Hash.new
+      rate_by_year = {}
+      alt_rate_by_year = {}
       row.each do |key, value|
         value.gsub!(/\(null\)/, 'null')
-        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?("y20")
-        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?("alt_20")
+        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('y20')
+        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20')
       end
 
       entry = sanitize_entry(remap_keys COLUMN_HASH, row)
-      entry[:countries] = "US,AU"
+      entry[:countries] = 'US,AU'
       entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note], whitespace_elements: {})
       entry[:annual_rates] = rate_by_year
       entry[:alt_annual_rates] = alt_rate_by_year

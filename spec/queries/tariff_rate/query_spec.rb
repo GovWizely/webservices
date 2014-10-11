@@ -50,7 +50,6 @@ describe TariffRate::Query do
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
-
       context 'when options include countries' do
         let(:query) { described_class.new(countries: 'US,AU') }
         let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_countries_filter.json").read }
