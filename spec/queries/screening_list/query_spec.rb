@@ -56,7 +56,7 @@ describe ScreeningList::Query do
         described_class.new(countries: 'us,ca',
                             q:         'fish',
                             sources:   'SDN',
-                            type:  'Entity')
+                            type:      'Entity')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 

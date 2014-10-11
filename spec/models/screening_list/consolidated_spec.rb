@@ -13,7 +13,7 @@ describe ScreeningList::Consolidated do
     context 'with one source' do
       context 'which is included in the list of models' do
         let(:sources) { ['SDN'] }
-        it { should eq ["test:webservices:screening_list:sdns"] }
+        it { should eq ['test:webservices:screening_list:sdns'] }
       end
 
       context 'which is not included in the list of models' do
@@ -24,19 +24,21 @@ describe ScreeningList::Consolidated do
 
     context 'with multiple sources' do
       context 'all of which are included in the list of models' do
-        let(:sources) { ['SDN', 'FSE', 'DTC'] }
-        it { should eq ["test:webservices:screening_list:dtcs",
-                        "test:webservices:screening_list:fses",
-                        "test:webservices:screening_list:sdns"] }
+        let(:sources) { %w(SDN FSE DTC) }
+        it do
+          should eq ['test:webservices:screening_list:dtcs',
+                     'test:webservices:screening_list:fses',
+                     'test:webservices:screening_list:sdns']
+        end
       end
 
       context 'some of which are included in the list of models' do
-        let(:sources) { ['Foo', 'Bar', 'DTC'] }
-        it { should eq ["test:webservices:screening_list:dtcs"] }
+        let(:sources) { %w(Foo Bar DTC) }
+        it { should eq ['test:webservices:screening_list:dtcs'] }
       end
 
       context 'some of which are included in the list of models' do
-        let(:sources) { ['Foo', 'Bar'] }
+        let(:sources) { %w(Foo Bar) }
         it { should eq all_index_names }
       end
     end
