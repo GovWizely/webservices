@@ -13,9 +13,9 @@ describe 'Consolidated Tariff Rates API V1' do
       it_behaves_like 'a successful search request'
 
       it_behaves_like 'it contains all TariffRate::Australia results'
-      # it_behaves_like 'it only contains results with sources' do
-      #   let(:sources) { %w(AUSTRALIA) }
-      # end
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { %w(AUSTRALIA) }
+      end
     end
 
     context 'when source is specified' do
@@ -24,11 +24,9 @@ describe 'Consolidated Tariff Rates API V1' do
       let(:params) { {sources: 'AUSTRALIA'} }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TariffRate::Australia results'
-      # it_behaves_like 'it only contains results with sources' do
-      #   let(:sources) { %w(AUSTRALIA) }
-      # end
-
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { %w(AUSTRALIA) }
+      end
     end
-
   end
 end

@@ -1,5 +1,6 @@
 shared_context 'all Tariff Rates fixture data' do
   include_context 'TariffRate::Australia data'
+  include_context 'TariffRate::Korea data'
 end
 
 shared_context 'TariffRate::Australia data' do
@@ -31,6 +32,38 @@ end
 shared_examples 'it contains all TariffRate::Australia results that match countries "au"' do
   let(:source) { 'AUSTRALIA' }
   let(:expected) { [all_australia_results[0]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TariffRate::Korea data' do
+  before(:all) do
+    TariffRate::Korea.recreate_index
+    TariffRate::KoreaData.new(
+        "#{Rails.root}/spec/fixtures/tariff_rates/korea/korea.csv").import
+
+  end
+
+  let(:all_korea_results) do
+    JSON.parse(open(
+                   "#{Rails.root}/spec/fixtures/tariff_rates/korea/expected_results.json").read)
+  end
+end
+
+shared_examples 'it contains all TariffRate::Korea results' do
+  let(:source) { 'KOREA' }
+  let(:expected) { all_korea_results }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TariffRate::Korea results that match "horses"' do
+  let(:source) { 'KOREA' }
+  let(:expected) { [all_korea_results[0]] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TariffRate::Korea results that match countries "au"' do
+  let(:source) { 'KOREA' }
+  let(:expected) { [all_korea_results[0]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
