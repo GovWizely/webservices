@@ -25,7 +25,7 @@ class ParatureFaqData
     Rails.logger.info "Importing #{@resource}"
 
     data = Array(1..379).map do |id|
-      sleep 10 if id % 100 == 0
+      sleep 10 if id % 100 == 0 && should_throttle
       begin
         extract_hash_from_resource(id)
       rescue OpenURI::HTTPError, Errno::ENOENT => e
@@ -54,6 +54,10 @@ class ParatureFaqData
     entry = Hash.from_xml(open(resource)).symbolize_keys
     entry[:Article].symbolize_keys!
     entry
+  end
+
+  def should_throttle
+    @should_throttle ||= URI.parse(@resource % 1).scheme =~ /ftp|http/
   end
 
   def process_faq_info(faq_hash)
