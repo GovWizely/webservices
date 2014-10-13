@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::FseData do
+  before { ScreeningList::Fse.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/fse" }
   let(:fixtures_file) { "#{fixtures_dir}/fse.xml" }
   let(:importer) { described_class.new(fixtures_file) }

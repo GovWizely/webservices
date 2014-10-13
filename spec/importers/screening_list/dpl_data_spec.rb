@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::DplData do
+  before { ScreeningList::Dpl.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/dpl" }
   let(:fixtures_file) { "#{fixtures_dir}/dpl.txt" }
   let(:importer) { described_class.new(fixtures_file) }
