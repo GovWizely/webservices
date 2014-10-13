@@ -13,6 +13,11 @@ describe String do
       it { should eq 'trade_event:sbas' }
     end
 
+    context 'of "TradeEvent::Exim"' do
+      let(:operand) { 'TradeEvent::Exim' }
+      it { should eq 'trade_event:exims' }
+    end
+
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
       it { should eq 'bis_denied_people' }
@@ -34,6 +39,11 @@ describe String do
     context 'of "TradeEvent::Sba"' do
       let(:operand) { 'TradeEvent::Sba' }
       it { should eq 'trade_event:sba' }
+    end
+
+    context 'of "TradeEvent::Exim"' do
+      let(:operand) { 'TradeEvent::Exim' }
+      it { should eq 'trade_event:exim' }
     end
 
     context 'of "BisDeniedPerson"' do

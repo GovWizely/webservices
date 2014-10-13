@@ -41,8 +41,7 @@ describe 'UK Trade Leads API V1' do
         json_response[:total].should == 2
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[2]
+        results.should match_array([expected_results[0], expected_results[2]])
       end
 
       context 'when industry is specified' do

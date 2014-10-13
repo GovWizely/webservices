@@ -1,6 +1,6 @@
 class StateTradeLeadQuery < CountryIndustryQuery
   def initialize(options = {})
-    super options
+    super
     @q = options[:q] if options[:q].present?
     @specific_location = options[:specific_location] if options[:specific_location].present?
     @sort = :publish_date
