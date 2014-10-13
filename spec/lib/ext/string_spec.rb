@@ -28,22 +28,22 @@ describe String do
     subject { operand.typeize }
     context 'of "TradeEvent::Ita"' do
       let(:operand) { 'TradeEvent::Ita' }
-      it { should eq 'trade_event:ita' }
+      it { should eq :'trade_event:ita' }
     end
 
     context 'of "TradeEvent::Sba"' do
       let(:operand) { 'TradeEvent::Sba' }
-      it { should eq 'trade_event:sba' }
+      it { should eq :'trade_event:sba' }
     end
 
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
-      it { should eq 'bis_denied_person' }
+      it { should eq :bis_denied_person }
     end
 
     context 'of "AustralianTradeLead"' do
       let(:operand) { 'AustralianTradeLead' }
-      it { should eq 'australian_trade_lead' }
+      it { should eq :australian_trade_lead }
     end
   end
 end
