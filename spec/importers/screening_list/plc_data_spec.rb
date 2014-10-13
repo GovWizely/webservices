@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::PlcData do
+  before { ScreeningList::Plc.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/plc" }
   let(:fixtures_file) { "#{fixtures_dir}/ns_plc.xml" }
   let(:importer) { described_class.new(fixtures_file) }

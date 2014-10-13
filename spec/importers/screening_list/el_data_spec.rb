@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::ElData do
+  before { ScreeningList::El.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/el" }
   let(:fixtures_file) { "#{fixtures_dir}/el.csv" }
   let(:importer) { described_class.new(fixtures_file) }
