@@ -7,7 +7,7 @@ describe TariffRate::CostaRicaData do
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
   describe '#import' do
-    it 'loads COSTARICA tariff rates from specified resource' do
+    it 'loads COSTA_RICA tariff rates from specified resource' do
       TariffRate::CostaRica.should_receive(:index) do |res|
         res.should == expected
       end
