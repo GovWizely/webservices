@@ -1,16 +1,35 @@
 require 'open-uri'
+require 'pp'
 
 class SharepointTradeArticleData
   include Importer
   ENDPOINT = '/Users/tmh/Desktop/articles/%d.xml'
 
-  COLUMN_HASH = {
-    tags: :ita_tags,
-    seometadatatitle:  :seo_metadata_title,
-    seometadatadescription: :seo_metadata_description,
-    seometadatakeyword: :seo_metadata_keyword,
-    files: :file_url,
-    images: :image_url
+  XPATHS = {
+    id:                       '//id',
+    title:                    '//title',
+    short_title:              '//short_title',
+    summary:                  '//summary',
+    creation_date:            '//creation_date',
+    release_date:             '//release_date',
+    expiration_date:          '//expiration_date',
+    evergreen:                '//evergreen',
+    content:                  '//content',
+    keyword:                  '//keyword',
+    industries:               '//tags//industries',
+    countries:                '//tags//countries',
+    trade_regions:            '//tags//trade_regions',
+    trade_programs:           '//tags//trade_programs',
+    trade_initiatives:        '//tags//trade_initiatives',
+    export_phases:            '//tags//export_phases',
+    seo_metadata_title:       '//seometadatatitle',
+    seo_metadata_description: '//seometadatadescription',
+    seo_metadata_keyword:     '//seometadatakeyword',
+    trade_url:                '//trade_url',
+    file_url:                 '//files',
+    image_url:                '//images',
+    url_html_source:          '//data//html',
+    url_xml_source:           '//data//xml',
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -19,18 +38,16 @@ class SharepointTradeArticleData
 
   def import
     Rails.logger.info "Importing #{@resource}"
-    id=116
+    id = 116
     data = []
 
-    while id <= 213 do
-      if id == 195
-        #id += 1
-        #next
-      end
+    while id <= 221
       begin
         resource = @resource % id
-        article = Hash.from_xml(open(resource))
+        article = Nokogiri::XML(open(resource))
+        article = extract_article_fields(article)
         data << article
+
       rescue
         next
       ensure
@@ -38,44 +55,53 @@ class SharepointTradeArticleData
       end
     end
 
-    articles = data.map { |article_hash| process_article_info article_hash }.compact
+    articles = data.map { |article_hash| process_article_info(article_hash) }.compact
 
     SharepointTradeArticle.index articles
   end
 
   private
 
-  def process_article_info(article_hash)
-    article_hash = article_hash["articles"]["article"].symbolize_keys
-    article = Hash[article_hash.map {|k,v| [COLUMN_HASH[k] || k, v ] } ] 
-    article[:ita_tags] = Hash[article[:ita_tags].map{|k,v| [k.to_sym, v ] } ]
+  def extract_article_fields(article)
+    article_info = article.xpath('//article')
+    article_hash = extract_fields(article_info, XPATHS)
+    article_hash = extract_source_agencies(article_info, article_hash)
+    article_hash
+  end
 
-    collapse_nested_fields(article)
+  def extract_source_agencies(article_info, article_hash)
+    article_hash[:source_agencies] = []
 
-    #article[:content] &&= Nokogiri::HTML.fragment(article[:content]).inner_text.squish
+    article_info.xpath('//source_agencies/source_agency').each do |source_agency|
+      source_business_units = []
+
+      source_agency.xpath('source_business_unit').each do |source_business_unit|
+        source_business_units << source_business_unit.text
+      end
+      source_agency.search('.//source_business_unit').remove
+
+      source_agency_hash = { source_agency: source_agency.text, source_business_units: source_business_units }
+      article_hash[:source_agencies] << source_agency_hash
+    end
+    article_hash
+  end
+
+  def process_article_info(article)
+    process_countries(article)
+
     article[:content] &&= Sanitize.clean(article[:content])
-
-    article[:creation_date] &&= Date.strptime(article[:creation_date], "%m/%d/%Y").to_s
-    article[:release_date] &&= Date.strptime(article[:release_date], "%m/%d/%Y").to_s
-    article[:expiration_date] &&= Date.strptime(article[:expiration_date], "%m/%d/%Y").to_s
+    article[:creation_date] &&= Date.strptime(article[:creation_date], '%m/%d/%Y').to_s
+    article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
+    article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
     article
   end
 
-  def collapse_nested_fields(article)
-    article[:source_agencies] &&= article[:source_agencies]["source_agency"]
-
-    article[:ita_tags][:export_phases] &&= article[:ita_tags][:export_phases]["export_phase"]
-    article[:ita_tags][:industries] &&= article[:ita_tags][:industries]["industry"]
-    article[:ita_tags][:countries] &&= article[:ita_tags][:countries]["country"]
-    article[:ita_tags][:topics] &&= article[:ita_tags][:topics]["topic"]
-    article[:ita_tags][:geo_regions] &&= article[:ita_tags][:geo_regions]["geo_region"]
-    article[:ita_tags][:trade_regions] &&= article[:ita_tags][:trade_regions]["trade_region"]
-    article[:ita_tags][:trade_programs] &&= article[:ita_tags][:trade_programs]["trade_program"]
-    article[:ita_tags][:trade_initiatives] &&= article[:ita_tags][:trade_initiatives]["trade_initiative"]
-
-    article[:data].symbolize_keys!
-    article[:url_html_source] = article[:data][:html] 
-    article[:url_xml_source] = article[:data][:xml]
-    article.delete(:data)
+  def process_countries(article)
+    if article[:countries].class == Array
+      article[:countries].map { |country| lookup_country(country) }.compact 
+    elsif article[:countries].class == String
+      article[:countries] = lookup_country(article[:countries])
+    end
   end
+
 end
