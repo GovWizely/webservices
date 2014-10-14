@@ -24,6 +24,12 @@ class SharepointTradeArticleQuery < Query
 
     @source_agency = options[:source_agency].downcase if options[:source_agency].present?
     @source_business_units = options[:source_business_units].downcase if options[:source_business_units].present?
+    @source_offices = options[:source_offices].downcase if options[:source_offices].present?
+
+    @topic = options[:topic].downcase if options[:topic].present?
+    @sub_topics = options[:sub_topics].downcase if options[:sub_topics].present?
+    @geo_region = options[:geo_region].downcase if options[:geo_region].present?
+    @geo_subregions = options[:geo_subregions].downcase if options[:geo_subregions].present?
   end
 
   def generate_query(json)
@@ -41,7 +47,9 @@ class SharepointTradeArticleQuery < Query
           must_json.child! { must_json.match { must_json.trade_regions @trade_regions } } if @trade_regions
           must_json.child! { must_json.match { must_json.trade_programs @trade_programs } } if @trade_programs
           must_json.child! { must_json.match { must_json.trade_initiatives @trade_initiatives } } if @trade_initiatives
-          must_json.child! { generate_nested_query(must_json) } if has_nested_options?
+          must_json.child! { generate_source_agency_queries(must_json) } if has_source_agency_options?
+          must_json.child! { generate_topic_queries(must_json) } if has_topic_options?
+          must_json.child! { generate_geo_region_queries(must_json) } if has_geo_region_options?
         end
       end
     end if has_query_options?
@@ -62,7 +70,7 @@ class SharepointTradeArticleQuery < Query
     end if has_filter_options?
   end
 
-  def generate_nested_query(json)
+  def generate_source_agency_queries(json)
     json.nested do
       json.path :source_agencies
 
@@ -71,6 +79,39 @@ class SharepointTradeArticleQuery < Query
           json.must do |must_json|
             must_json.child! { must_json.match { must_json.set! 'source_agencies.source_agency',  @source_agency } } if @source_agency
             must_json.child! { must_json.match { must_json.set! 'source_agencies.source_business_units',  @source_business_units } } if @source_business_units
+            must_json.child! { must_json.match { must_json.set! 'source_agencies.source_offices',  @source_offices } } if @source_offices
+          end
+        end
+      end
+
+    end
+  end
+
+  def generate_topic_queries(json)
+    json.nested do
+      json.path :topics
+
+      json.query do
+        json.bool do
+          json.must do |must_json|
+            must_json.child! { must_json.match { must_json.set! 'topics.topic',  @topic } } if @topic
+            must_json.child! { must_json.match { must_json.set! 'topics.sub_topics',  @sub_topics } } if @sub_topics
+          end
+        end
+      end
+
+    end
+  end
+
+  def generate_geo_region_queries(json)
+    json.nested do
+      json.path :geo_regions
+
+      json.query do
+        json.bool do
+          json.must do |must_json|
+            must_json.child! { must_json.match { must_json.set! 'geo_regions.geo_region',  @geo_region } } if @geo_region
+            must_json.child! { must_json.match { must_json.set! 'geo_regions.geo_subregions',  @geo_subregions } } if @geo_subregions
           end
         end
       end
@@ -95,11 +136,20 @@ class SharepointTradeArticleQuery < Query
 
   def has_query_options?
     @title || @short_title || @summary || @content || @keyword || @export_phases || @industries \
-    || @trade_regions || @trade_programs || @trade_initiatives || has_nested_options?
+    || @trade_regions || @trade_programs || @trade_initiatives || has_source_agency_options? \
+    || has_topic_options? || has_geo_region_options?
   end
 
-  def has_nested_options?
-    @source_agency || @source_business_units
+  def has_source_agency_options?
+    @source_agency || @source_business_units || @source_offices
+  end
+
+  def has_topic_options?
+    @topic || @sub_topics
+  end
+
+  def has_geo_region_options?
+    @geo_region || @geo_subregions
   end
 
   def has_filter_options?

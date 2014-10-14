@@ -28,7 +28,8 @@ class SharepointTradeArticle
         expiration_date:          { type: 'date', format: 'YYYY-MM-dd' },
         source_agencies:          { type: 'nested',
                                     source_agency: {type: 'string', analyzer: 'custom_analyzer'},
-                                    source_business_units: {type: 'string', analyzer: 'custom_analyzer'}
+                                    source_business_units: {type: 'string', analyzer: 'custom_analyzer'},
+                                    source_offices: { type: 'string', analyzer: 'custom_analyzer'}
                                   },
         evergreen:                { type: 'boolean' },
         content:                  { type: 'string', analyzer: 'custom_analyzer' },
@@ -39,8 +40,14 @@ class SharepointTradeArticle
         trade_regions:            { type: 'string', analyzer: 'custom_analyzer'  },
         trade_programs:           { type: 'string', analyzer: 'custom_analyzer'  },
         trade_initiatives:        { type: 'string', analyzer: 'custom_analyzer'  },
-        geo_regions:              { type: 'string', analyzer: 'custom_analyzer'  },
-        topics:                   { type: 'string', analyzer: 'custom_analyzer'  },
+        geo_regions:              { type: 'nested', 
+                                    geo_region: { type: 'string', analyzer: 'custom_analyzer'},
+                                    geo_subregions: { type: 'string', analyzer: 'custom_analyzer'}
+                                  },
+        topics:                   { type: 'nested', 
+                                    topic: { type: 'string', analyzer: 'custom_analyzer' },
+                                    sub_topics: { type: 'string', analyzer: 'custom_analyzer'} 
+                                  },
         seo_metadata_title:       { type: 'string' },
         seo_metadata_description: { type: 'string' },
         seo_metadata_keyword:     { type: 'string' },
