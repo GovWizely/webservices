@@ -29,9 +29,10 @@
       "NS-PLC"
     ],
     "remarks": null,
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -62,9 +63,10 @@
       "NS-PLC"
     ],
     "remarks": "PFLP",
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -97,9 +99,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Hebron",
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -131,9 +134,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Gaza",
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -164,9 +168,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Northern Gaza",
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -203,8 +208,9 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Jenin",
-    "source": "PLC",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+    "title": null,
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   }
 ]

@@ -51,6 +51,8 @@ module ScreeningList
       doc[:id] = id
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] =
+        'http://www.bis.doc.gov/index.php/the-denied-persons-list'
+      doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
       %i(start_date end_date).each do |field|

@@ -7,87 +7,6 @@
         "state": null,
         "postal_code": null,
         "country": "AF"
-      }
-    ],
-    "alt_names": [
-      "Jawid, Said Jan Abd-al-Salam"
-    ],
-    "entity_number": null,
-    "federal_register_notice": "76 FR 71867",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "license_policy": "Presumption of denial.",
-    "name": "Qazi Abdallah",
-    "programs": null,
-    "standard_order": null,
-    "start_date": "2011-11-21",
-    "end_date": null,
-    "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
-  },
-  {
-    "addresses": [
-      {
-        "address": "Microrayan 3rd Apt. 45, block #21",
-        "city": "Kabul",
-        "state": null,
-        "postal_code": null,
-        "country": "AF"
-      }
-    ],
-    "alt_names": [
-      "Jawid, Said Jan Abd-al-Salam"
-    ],
-    "entity_number": null,
-    "federal_register_notice": "76 FR 10001",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "license_policy": "Presumption of denial.",
-    "name": "Qazi Abdallah",
-    "programs": null,
-    "standard_order": null,
-    "start_date": "2011-11-21",
-    "end_date": null,
-    "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
-  },
-  {
-    "addresses": [
-      {
-        "address": "Wazir Akbar Khan, Road Number 10, In front of National Bank, District 10",
-        "city": "Kabul",
-        "state": null,
-        "postal_code": null,
-        "country": "AF"
-      }
-    ],
-    "alt_names": [
-
-    ],
-    "entity_number": null,
-    "federal_register_notice": "77 FR 25055",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "license_policy": "Presumption of denial.",
-    "name": "Fazel Khalil Construction Company",
-    "programs": null,
-    "standard_order": null,
-    "start_date": "2012-04-27",
-    "end_date": null,
-    "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
-  },
-  {
-    "addresses": [
-      {
-        "address": "Microrayan 3rd Apt. 45, block #21",
-        "city": "Kabul",
-        "state": null,
-        "postal_code": null,
-        "country": "AF"
       },
       {
         "address": "A2 Ground Floor, City Computer Plaza, Shar-e-Naw",
@@ -112,9 +31,150 @@
     "start_date": "2011-11-21",
     "end_date": null,
     "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Wazir Akbar Khan, Road Number 10, In front of National Bank, District 10",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "entity_number": null,
+    "federal_register_notice": "77 FR 25055",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Fazel Khalil Construction Company",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2012-04-27",
+    "end_date": null,
+    "type": null,
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup",
+        "city": "Istanbul",
+        "state": null,
+        "postal_code": null,
+        "country": "TR"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "entity_number": null,
+    "federal_register_notice": "78 FR 75485 ",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Murat Peker",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2013-12-12",
+    "end_date": null,
+    "type": null,
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, Said Jan Abd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-21",
+    "end_date": null,
+    "type": null,
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, Said Jan Abd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 10001",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-21",
+    "end_date": null,
+    "type": null,
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, Said Jan Abd-al-Salam"
+    ],
+    "entity_number": null,
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "programs": null,
+    "standard_order": null,
+    "start_date": "2011-11-22",
+    "end_date": null,
+    "type": null,
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
   },
   {
     "addresses": [
@@ -181,62 +241,9 @@
     "start_date": "2012-04-27",
     "end_date": null,
     "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
-  },
-  {
-    "addresses": [
-      {
-        "address": "Microrayan 3rd Apt. 45, block #21",
-        "city": "Kabul",
-        "state": null,
-        "postal_code": null,
-        "country": "AF"
-      }
-    ],
-    "alt_names": [
-      "Jawid, Said Jan Abd-al-Salam"
-    ],
-    "entity_number": null,
-    "federal_register_notice": "76 FR 71867",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "license_policy": "Presumption of denial.",
-    "name": "Qazi Abdallah",
-    "programs": null,
-    "standard_order": null,
-    "start_date": "2011-11-22",
-    "end_date": null,
-    "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
-  },
-  {
-    "addresses": [
-      {
-        "address": "Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup",
-        "city": "Istanbul",
-        "state": null,
-        "postal_code": null,
-        "country": "TR"
-      }
-    ],
-    "alt_names": [
-
-    ],
-    "entity_number": null,
-    "federal_register_notice": "78 FR 75485 ",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "license_policy": "Presumption of denial.",
-    "name": "Murat Peker",
-    "programs": null,
-    "standard_order": null,
-    "start_date": "2013-12-12",
-    "end_date": null,
-    "type": null,
-    "source": "EL",
-    "source_list_url": "http://www.bis.doc.gov/entities/default.htm",
-    "title": null
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "title": null,
+    "source": "Entity List (EL) - Bureau of Industry and Security"
   }
 ]

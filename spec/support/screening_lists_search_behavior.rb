@@ -36,7 +36,7 @@ end
 
 shared_examples 'it contains all SDN results that match "banco"' do
   let(:source) { :SDN }
-  let(:expected) { [1] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -48,7 +48,7 @@ end
 
 shared_examples 'it contains all SDN results that match "havana"' do
   let(:source) { :SDN }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -60,37 +60,37 @@ end
 
 shared_examples 'it contains all SDN results that match countries "CH"' do
   let(:source) { :SDN }
-  let(:expected) { [1] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "DE"' do
   let(:source) { :SDN }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "FR"' do
   let(:source) { :SDN }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "BE"' do
   let(:source) { :SDN }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match countries "SO,JP"' do
   let(:source) { :SDN }
-  let(:expected) { [1, 2] }
+  let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all SDN results that match type "Entity"' do
   let(:source) { :SDN }
-  let(:expected) { [1] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -102,7 +102,7 @@ end
 
 shared_examples 'it contains all SDN results that match type "Individual"' do
   let(:source) { :SDN }
-  let(:expected) { [0, 2] }
+  let(:expected) { [1, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -120,31 +120,31 @@ end
 
 shared_examples 'it contains all FSE results' do
   let(:source) { :FSE }
-  let(:expected) { [0, 2, 1] }
+  let(:expected) { [0, 1, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match "ferland"' do
   let(:source) { :FSE }
-  let(:expected) { [0, 1] }
+  let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match "vitaly"' do
   let(:source) { :FSE }
-  let(:expected) { [1] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match "shahali"' do
   let(:source) { :FSE }
-  let(:expected) { [2] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match "manager"' do
   let(:source) { :FSE }
-  let(:expected) { [1] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -162,25 +162,25 @@ end
 
 shared_examples 'it contains all FSE results that match countries "SO"' do
   let(:source) { :FSE }
-  let(:expected) { [2] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match countries "IR"' do
   let(:source) { :FSE }
-  let(:expected) { [2] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match countries "DJ"' do
   let(:source) { :FSE }
-  let(:expected) { [2] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all FSE results that match countries "UA,DJ"' do
   let(:source) { :FSE }
-  let(:expected) { [0, 2] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -192,7 +192,7 @@ end
 
 shared_examples 'it contains all FSE results that match type "Individual"' do
   let(:source) { :FSE }
-  let(:expected) { [2, 1] }
+  let(:expected) { [1, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -210,37 +210,37 @@ end
 
 shared_examples 'it contains all EL results' do
   let(:source) { :EL }
-  let(:expected) { [3, 2, 6, 5, 1, 0, 4] }
+  let(:expected) { [0, 1, 2, 3, 4, 5, 6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "fazel"' do
   let(:source) { :EL }
-  let(:expected) { [3, 2] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "constructions"' do
   let(:source) { :EL }
-  let(:expected) { [4, 2] }
+  let(:expected) { [1, 6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match "farid"' do
   let(:source) { :EL }
-  let(:expected) { [3] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match countries "AF"' do
   let(:source) { :EL }
-  let(:expected) { [3, 2, 5, 1, 0, 4] }
+  let(:expected) { [0, 1, 3, 4, 5, 6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all EL results that match countries "AF,TR"' do
   let(:source) { :EL }
-  let(:expected) { [3, 2, 6, 5, 1, 0, 4] }
+  let(:expected) { [0, 1, 2, 3, 4, 5, 6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -264,43 +264,43 @@ end
 
 shared_examples 'it contains all DPL results that match "katsuta"' do
   let(:source) { :DPL }
-  let(:expected) { [0] }
+  let(:expected) { [6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match "agnese"' do
   let(:source) { :DPL }
-  let(:expected) { [3] }
+  let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match "corrected"' do
   let(:source) { :DPL }
-  let(:expected) { [6, 5] }
+  let(:expected) { [5, 7] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match countries "ZA"' do
   let(:source) { :DPL }
-  let(:expected) { [8] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match countries "FR"' do
   let(:source) { :DPL }
-  let(:expected) { [3] }
+  let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match countries "JP"' do
   let(:source) { :DPL }
-  let(:expected) { [0] }
+  let(:expected) { [6] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DPL results that match countries "FR,DE"' do
   let(:source) { :DPL }
-  let(:expected) { [2, 3] }
+  let(:expected) { [3, 4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -394,31 +394,31 @@ end
 
 shared_examples 'it contains all DTC results' do
   let(:source) { :DTC }
-  let(:expected) { [2, 0, 1, 3] }
+  let(:expected) { [0, 1, 2, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DTC results that match "brian"' do
   let(:source) { :DTC }
-  let(:expected) { [2, 1] }
+  let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DTC results that match "john"' do
   let(:source) { :DTC }
-  let(:expected) { [1] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DTC results that match "mcsulla"' do
   let(:source) { :DTC }
-  let(:expected) { [2] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all DTC results that match "original"' do
   let(:source) { :DTC }
-  let(:expected) { [1] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -503,7 +503,7 @@ end
 shared_context 'full results from response' do
   let(:full_results) do
     JSON.parse(response.body)['results']
-      .select { |r| r['source'].to_sym == source }
+      .select { |r| r['source'] =~ /#{clue(source)}/ }
   end
   let(:got) do
     full_results.map { |f| @all_possible_full_results[source].index(f) }
@@ -520,9 +520,17 @@ end
 shared_examples 'it contains only results with sources' do
   let(:results) { JSON.parse(response.body)['results'] }
   let(:results_with_source_other_than_expected) do
-    results.select { |r| !sources.include?(r['source']) }
+    results.select do |r|
+      !sources.select do |s|
+        r['source'] =~ /#{clue(s)}/
+      end
+    end
   end
   it 'contains only results with sources' do
     expect(results_with_source_other_than_expected.length).to eq 0
   end
+end
+
+def clue(source)
+  source == :UVL ? 'Unverified List' : "(#{source})"
 end

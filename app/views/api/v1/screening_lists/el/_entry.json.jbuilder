@@ -12,7 +12,8 @@ json.call(entry[:_source],
           :start_date,
           :end_date,
           :type,
-          :source,
           :source_list_url,
+          :source_information_url,
           :title,
 )
+json.source entry[:_source][:source][:full_name]

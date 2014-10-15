@@ -9,7 +9,7 @@
                 },
                 {
                     "terms": {
-                        "source": ["SDN"]
+                        "source.code": ["SDN"]
                     }
                 }
             ],

@@ -4,6 +4,7 @@ json.call(entry[:_source],
           :federal_register_notice,
           :name,
           :start_date,
-          :source,
           :source_list_url,
+          :source_information_url,
 )
+json.source entry[:_source][:source][:full_name]

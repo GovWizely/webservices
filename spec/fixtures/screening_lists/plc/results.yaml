@@ -1,6 +1,5 @@
 ---
 - :entity_number: '9639'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -10,9 +9,13 @@
   :vessel_owner: 
   :remarks: 
   :id: '9639'
-  :source: PLC
+  :source: &1
+    :full_name: Palestinian Legislative Council List (PLC) - Treasury Department
+    :code: PLC
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: HANIYA, Ismail Abdul Salah
+  :type: Individual
   :alt_names:
   - HANIYA, Ismail
   - HANIYYA, Ismaeel
@@ -27,7 +30,6 @@
   :addresses: []
   :ids: []
 - :entity_number: '9674'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -37,9 +39,11 @@
   :vessel_owner: 
   :remarks: HAMAS - Hebron
   :id: '9674'
-  :source: PLC
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: QFEISHEH, Hatem
+  :type: Individual
   :alt_names:
   - KAFEESHEH, Hatem Rabah
   - QEFEISHA, Hatem
@@ -54,7 +58,6 @@
   :addresses: []
   :ids: []
 - :entity_number: '9688'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -64,9 +67,11 @@
   :vessel_owner: 
   :remarks: HAMAS - Jenin
   :id: '9688'
-  :source: PLC
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: YAHIA, Khaled Abed
+  :type: Individual
   :alt_names:
   - YEHIA, Khaled Said
   :programs:
@@ -84,7 +89,6 @@
     :address: 
   :ids: []
 - :entity_number: '9705'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -94,9 +98,11 @@
   :vessel_owner: 
   :remarks: HAMAS - Gaza
   :id: '9705'
-  :source: PLC
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: SALEH, Jamal
+  :type: Individual
   :alt_names:
   - NASSER, Jamal Talab Mohammad Saleh
   - SALEH, Jamal Talab
@@ -111,7 +117,6 @@
   :addresses: []
   :ids: []
 - :entity_number: '9712'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -121,9 +126,11 @@
   :vessel_owner: 
   :remarks: HAMAS - Northern Gaza
   :id: '9712'
-  :source: PLC
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: SHIHAB, Mohammed
+  :type: Individual
   :alt_names:
   - SHEHAB, Mohamed Abed Hadi Rahman
   :programs:
@@ -136,7 +143,6 @@
   :addresses: []
   :ids: []
 - :entity_number: '9715'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -146,9 +152,11 @@
   :vessel_owner: 
   :remarks: PFLP
   :id: '9715'
-  :source: PLC
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: JARRAR, Khaledah
+  :type: Individual
   :alt_names: []
   :programs:
   - NS-PLC

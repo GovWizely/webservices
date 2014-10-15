@@ -11,10 +11,11 @@ json.call(entry[:_source],
           :programs,
           :remarks,
           :type,
-          :source,
           :source_list_url,
+          :source_information_url,
           :title,
           :vessel_flag,
           :vessel_owner,
           :vessel_type,
 )
+json.source entry[:_source][:source][:full_name]

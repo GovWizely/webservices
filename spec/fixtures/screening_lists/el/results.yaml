@@ -10,7 +10,7 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: fabe2145af20dcff1163dbf2a6292f379aa9f27f
   :alt_names:
   - Fazel Rahim Farid
@@ -27,7 +27,10 @@
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: &1
+    :full_name: Entity List (EL) - Bureau of Industry and Security
+    :code: EL
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -39,7 +42,7 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: 82637ba282f441104f3aa8413aefdd5c303b9fe6
   :alt_names: []
   :addresses:
@@ -49,7 +52,8 @@
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -61,7 +65,7 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: 0a10ca0bd89967d7a80efc9f4ffecaa71af1ee79
   :alt_names: []
   :addresses:
@@ -101,7 +105,8 @@
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -113,7 +118,7 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: 946f840d05372d41c4baeebc61dddf1363929de5
   :alt_names: []
   :addresses:
@@ -122,7 +127,8 @@
     :country: TR
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -134,17 +140,18 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: d741e2b6c40aa24508bd53f45fd0b7e76d7a657c
   :alt_names:
-  - "Jawid, Said Jan Abd-al-Salam"
+  - Jawid, Said Jan Abd-al-Salam
   :addresses:
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -156,17 +163,18 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: 6ee67838b242db8f5ec639678c518b8636c57c23
   :alt_names:
-  - "Jawid, Said Jan Abd-al-Salam"
+  - Jawid, Said Jan Abd-al-Salam
   :addresses:
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
 - :entity_number: 
   :type: 
   :programs: 
@@ -178,14 +186,15 @@
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
-  :source_list_url: http://www.bis.doc.gov/entities/default.htm
+  :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
   :id: c04d65011854dc1a2b7ce94a1af2b41ca58d6760
   :alt_names:
-  - "Jawid, Said Jan Abd-al-Salam"
+  - Jawid, Said Jan Abd-al-Salam
   :addresses:
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
     :postal_code: 
     :state: 
-  :source: EL
+  :source: *1
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list

@@ -19,8 +19,10 @@ describe 'Consolidated Screening List API V1' do
       it_behaves_like 'it contains all UVL results'
       it_behaves_like 'it contains all ISN results'
       it_behaves_like 'it contains all DTC results'
+      it_behaves_like 'it contains all PLC results'
+      it_behaves_like 'it contains all SSI results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(SDN FSE EL DPL UVL ISN DTC) }
+        let(:sources) { %w(SDN FSE EL DPL UVL ISN DTC PLC SSI) }
       end
     end
 
@@ -39,6 +41,26 @@ describe 'Consolidated Screening List API V1' do
         it_behaves_like 'it contains all SDN results that match "banco"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(SDN) }
+        end
+
+        context 'and is in the PLC index' do
+          let(:params) { { q: 'heBron' } }
+          subject { response }
+          it_behaves_like 'a successful search request'
+          it_behaves_like 'it contains all PLC results that match "heBron"'
+          it_behaves_like 'it contains only results with sources' do
+            let(:sources) { %w(PLC) }
+          end
+        end
+
+        context 'and is in the SSI index' do
+          let(:params) { { q: 'transneFT' } }
+          subject { response }
+          it_behaves_like 'a successful search request'
+          it_behaves_like 'it contains all SSI results that match "transneft"'
+          it_behaves_like 'it contains only results with sources' do
+            let(:sources) { %w(SSI) }
+          end
         end
       end
 
@@ -128,8 +150,9 @@ describe 'Consolidated Screening List API V1' do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all SDN results that match type "Entity"'
       it_behaves_like 'it contains all FSE results that match type "Entity"'
+      it_behaves_like 'it contains all SSI results that match type "Entity"'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(SDN FSE) }
+        let(:sources) { %w(SDN FSE SSI) }
       end
 
       context 'and is set to "Vessel"' do
@@ -144,8 +167,9 @@ describe 'Consolidated Screening List API V1' do
         let(:params) { { type: 'Individual' } }
         it_behaves_like 'it contains all SDN results that match type "Individual"'
         it_behaves_like 'it contains all FSE results that match type "Individual"'
+        it_behaves_like 'it contains all PLC results that match type "Individual"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { %w(SDN FSE) }
+          let(:sources) { %w(SDN FSE PLC) }
         end
       end
     end

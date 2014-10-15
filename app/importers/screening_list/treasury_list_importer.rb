@@ -7,6 +7,7 @@ module ScreeningList
       base.class_eval do
         class << self
           attr_accessor :default_endpoint
+          attr_accessor :source_information_url
         end
       end
     end
@@ -30,7 +31,7 @@ module ScreeningList
     private
 
     def document_node_xpath
-      "//xmlns:#{self.class.model_class.source == 'PLC' ? 'nsp' : 'sdn'}Entry"
+      "//xmlns:#{self.class.model_class.source[:code] == 'PLC' ? 'nsp' : 'sdn'}Entry"
     end
 
     SINGLE_VALUED_XPATHS = {
@@ -53,6 +54,7 @@ module ScreeningList
       doc[:id] = doc[:entity_number]
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
+      doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
 
       doc[:type] = doc[:sdn_type] || doc[:nsp_type]

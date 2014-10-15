@@ -13,10 +13,10 @@ module ScreeningList
     end
 
     def self.index_names(sources)
-      models = [Dpl, Dtc, El, Fse, Isn, Sdn, Uvl]
+      models = [Dpl, Dtc, El, Fse, Isn, Plc, Sdn, Ssi, Uvl]
 
       if sources.any?
-        selected_models = models.select { |c| sources.include?(c.source) }
+        selected_models = models.select { |c| sources.include?(c.source[:code]) }
 
         # If the given sources do not match any CSL models, we'll search over
         # them all. This prevents us from querying EVERY index in our DB, which

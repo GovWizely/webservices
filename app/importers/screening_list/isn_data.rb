@@ -43,6 +43,7 @@ module ScreeningList
       doc[:id] = id
       doc[:source] = self.class.model_class.source
       doc[:source_list_url] = 'http://www.state.gov/t/isn/c15231.htm'
+      doc[:source_information_url] = 'http://www.state.gov/t/isn/c15231.htm'
 
       %i(start_date end_date).each do |field|
         doc[field] &&= parse_american_date(doc[field])
