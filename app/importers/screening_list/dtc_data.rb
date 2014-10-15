@@ -32,7 +32,8 @@ module ScreeningList
       entry[:start_date] = parse_american_date(row[:eff_date])
       entry[:federal_register_notice] = row[:corrected_notice] || row[:notice]
       entry[:source] = self.class.model_class.source
-      entry[:source_list_url] = 'http://www.pmddtc.state.gov/compliance/debar_intro.html'
+      entry[:source_list_url] = 'http://www.pmddtc.state.gov/compliance/debar.html'
+      entry[:source_information_url] = 'http://www.pmddtc.state.gov/compliance/debar_intro.html'
       entry[:id] = Digest::SHA1.hexdigest(
           %i(name start_date federal_register_notice).map { |f| entry[f] }.join)
 

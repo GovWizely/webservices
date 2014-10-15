@@ -14,5 +14,6 @@ json.call(entry[:_source],
           :type,
           :source,
           :source_list_url,
+          :source_information_url,
           :title,
 )
