@@ -2,51 +2,6 @@
   {
     "addresses": [
       {
-        "address": "20 Ironmonger Lane",
-        "city": "London",
-        "state": null,
-        "postal_code": "EC2V 8EY",
-        "country": "GB"
-      }
-    ],
-    "alt_names": [
-
-    ],
-    "citizenships": [
-      "FR"
-    ],
-    "dates_of_birth": [
-
-    ],
-    "entity_number": "521",
-    "ids": [
-      {
-        "country": "BE",
-        "expiration_date": "2011-12-25",
-        "issue_date": "2001-12-25",
-        "number": "ABC123",
-        "type": "Passport"
-      }
-    ],
-    "name": "CHAO, Lazaro R.",
-    "nationalities": [
-      "DE"
-    ],
-    "places_of_birth": [
-
-    ],
-    "programs": [
-      "CUBA"
-    ],
-    "remarks": "Might have something to do with Cuba.",
-    "type": "Individual",
-    "source": "SDN",
-    "source_list_url": null,
-    "title": "Executive Director, Havana International Bank"
-  },
-  {
-    "addresses": [
-      {
         "address": "Zweierstrasse 35",
         "city": "Zurich",
         "state": null,
@@ -101,9 +56,56 @@
     ],
     "remarks": null,
     "type": "Entity",
-    "source": "SDN",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "title": null,
+    "source": "Special Designated Nationals (SDN) - Treasury Department"
+  },
+  {
+    "addresses": [
+      {
+        "address": "20 Ironmonger Lane",
+        "city": "London",
+        "state": null,
+        "postal_code": "EC2V 8EY",
+        "country": "GB"
+      }
+    ],
+    "alt_names": [
+
+    ],
+    "citizenships": [
+      "FR"
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "521",
+    "ids": [
+      {
+        "country": "BE",
+        "expiration_date": "2011-12-25",
+        "issue_date": "2001-12-25",
+        "number": "ABC123",
+        "type": "Passport"
+      }
+    ],
+    "name": "CHAO, Lazaro R.",
+    "nationalities": [
+      "DE"
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "CUBA"
+    ],
+    "remarks": "Might have something to do with Cuba.",
+    "type": "Individual",
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "title": "Executive Director, Havana International Bank",
+    "source": "Special Designated Nationals (SDN) - Treasury Department"
   },
   {
     "addresses": [
@@ -169,9 +171,10 @@
     ],
     "remarks": "Additional Djiboutian passport issued in 2010.",
     "type": "Individual",
-    "source": "SDN",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "title": null,
+    "source": "Special Designated Nationals (SDN) - Treasury Department"
   },
   {
     "addresses": [
@@ -201,11 +204,12 @@
     ],
     "remarks": null,
     "type": "Vessel",
-    "source": "SDN",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
     "title": null,
     "vessel_flag": "Iran",
     "vessel_owner": "IRISL",
-    "vessel_type": "General Cargo"
+    "vessel_type": "General Cargo",
+    "source": "Special Designated Nationals (SDN) - Treasury Department"
   }
 ]

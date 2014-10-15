@@ -1,28 +1,33 @@
 ---
-- :remarks:
+- :remarks: 
   :name: Juwhan Yun
   :alt_names: []
   :start_date: '1989-09-18'
   :federal_register_notice: 57 FR 1296
-  :source: DTC
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source: &1
+    :full_name: ITAR Debarred (DTC) - State Department
+    :code: DTC
+  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
+  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: 96b1008b06e3073f2bd2b443c5c86b4c3045a6f6
-- :remarks:
+- :remarks: 
   :name: Dilligas Trading Co., Inc.
   :alt_names: []
   :start_date: '1991-12-13'
   :federal_register_notice: 57 FR 37184
-  :source: DTC
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source: *1
+  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
+  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: afd9dbfe97d679d161eaed68203399296abf631c
-- :remarks:
+- :remarks: 
   :name: Brian Joseph Fleming
   :alt_names:
   - Brian Joseph McSulla
   :start_date: '1990-07-03'
   :federal_register_notice: 58 FR 6835
-  :source: DTC
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source: *1
+  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
+  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: 47329bb61e32948a5db7c0fe6e8569c6867bb4a1
 - :remarks: See also, 57 FR 37184, 8/18/92, original notice.
   :name: John Smith
@@ -30,6 +35,7 @@
   - Brian Smith
   :start_date: '1990-12-01'
   :federal_register_notice: 57 FR 40000
-  :source: DTC
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source: *1
+  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
+  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: 5989fe6f23c0b7b07aade5e4782acbbceb57be71

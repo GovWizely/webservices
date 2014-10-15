@@ -87,9 +87,10 @@
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
     "type": "Entity",
-    "source": "SSI",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -189,9 +190,10 @@
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
     "type": "Entity",
-    "source": "SSI",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -281,9 +283,10 @@
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
     "type": "Entity",
-    "source": "SSI",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -391,8 +394,9 @@
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
     "type": "Entity",
-    "source": "SSI",
     "source_list_url": null,
-    "title": null
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   }
 ]

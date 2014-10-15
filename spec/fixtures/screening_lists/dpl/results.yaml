@@ -6,8 +6,11 @@
   :remarks: 
   :federal_register_notice: 
   :id: 7509f1f94933abd8d2367a8d89375d5fe26c352e
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: &1
+    :full_name: Denied Persons List (DPL) – Bureau of Industry and Security
+    :code: DPL
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
     :city: COPENHAGEN
@@ -21,8 +24,9 @@
   :remarks: NAME CORRECTED
   :federal_register_notice: 65 FR 42664 7/11/00
   :id: efafb24e0e6c7359db7b00a61bba951f115a3f6a
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: '250 BONITA GLEN DRIVE, #3D'
     :city: CHULA VISTA
@@ -36,8 +40,9 @@
   :remarks: 
   :federal_register_notice: 58 F.R. 42719 8/11/93
   :id: 3f618f68cf1c69c37db62167ce626a91d7d7f3bf
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 1-25-4 MINAMI-AZABU, MINATOKU
     :city: TOKYO
@@ -51,8 +56,9 @@
   :remarks: CITY CORRECTED
   :federal_register_notice: 52 F.R. 9515 3/25/87
   :id: 6c2110d44708eb5efb72765b6a193b343e46e995
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: BERENKOOG 29
     :city: ALKMAAR
@@ -66,8 +72,9 @@
   :remarks: 
   :federal_register_notice: 60 F.R. 31140
   :id: b725bb6faaa14eaa021682b5bf40c4b2ee6e5bd7
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 6486 S.W. 9 STREET
     :city: MIAMI
@@ -81,8 +88,9 @@
   :remarks: 
   :federal_register_notice: 63 F.R. 43370 8/13/98
   :id: 261ed972ea0fc79ee71afca12a7c24478e41fc00
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 271 MONSARRAT DRIVE
     :city: DUBLIN
@@ -96,8 +104,9 @@
   :remarks: 
   :federal_register_notice: 62 F.R. 43503 8/14/97
   :id: 2ff09e2a3a738d54e027a38e01798f8571f72611
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 4 MIMOSA WAY
     :city: PINELANDS
@@ -111,8 +120,9 @@
   :remarks: 
   :federal_register_notice: 46 F.R. 46154 9/17/81 and 46 F.R. 19290 3/30/81
   :id: c5dcc25225e4ce3b6acd1bd8be7cd3c06368d137
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 8019 NIEDERSEEON, HOUSE 21
     :city: 
@@ -126,8 +136,9 @@
   :remarks: 
   :federal_register_notice: 50 F.R. 29244 7/18/85
   :id: a979d30e8c60e0f9ada5aa22e7a62df676dc4580
-  :source: DPL
-  :source_list_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
+  :source: *1
+  :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
+  :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :addresses:
   - :address: 22 RUE DU 11 NOVEMBER 1918
     :city: PANTIN

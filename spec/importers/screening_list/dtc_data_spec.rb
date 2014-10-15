@@ -8,8 +8,8 @@ describe ScreeningList::DtcData do
 
   describe '#import' do
     it 'loads itar debarred parties from specified resource' do
-      ScreeningList::Dtc.should_receive(:index) do |adp|
-        adp.should == expected
+      ScreeningList::Dtc.should_receive(:index) do |dtc|
+        dtc.should == expected
       end
       importer.import
     end

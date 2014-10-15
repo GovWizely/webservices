@@ -1,6 +1,5 @@
 ---
 - :entity_number: '17013'
-  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -11,9 +10,13 @@
   :remarks: 'For more information on directives, please visit the following link:
     http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17013'
-  :source: SSI
+  :source: &1
+    :full_name: Sectoral Sanctions Identifications List (SSI) - Treasury Department
+    :code: SSI
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: VTB BANK OAO
+  :type: Entity
   :alt_names:
   - JSC VTB BANK
   - BANK VTB, OPEN JOINT-STOCK COMPANY
@@ -84,7 +87,6 @@
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17017'
-  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -95,9 +97,11 @@
   :remarks: 'For more information on directives, please visit the following link:
     http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17017'
-  :source: SSI
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: BANK OF MOSCOW
+  :type: Entity
   :alt_names:
   - JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY
   - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY, OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
@@ -160,7 +164,6 @@
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17254'
-  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -171,9 +174,11 @@
   :remarks: 'For more information on directives, please visit the following link:
     http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17254'
-  :source: SSI
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: AK TRANSNEFT OAO
+  :type: Entity
   :alt_names:
   - OAO AK TRANSNEFT
   - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
@@ -230,7 +235,6 @@
     :number: Subject to Directive 2
     :type: Executive Order 13662 Directive Determination -
 - :entity_number: '17260'
-  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -241,9 +245,11 @@
   :remarks: 'For more information on directives, please visit the following link:
     http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17260'
-  :source: SSI
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: ROSTEC
+  :type: Entity
   :alt_names:
   - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED
     TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII

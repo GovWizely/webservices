@@ -1,6 +1,5 @@
 ---
 - :entity_number: '306'
-  :type: Entity
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -10,9 +9,13 @@
   :vessel_owner: 
   :remarks: 
   :id: '306'
-  :source: SDN
+  :source: &1
+    :full_name: Special Designated Nationals (SDN) - Treasury Department
+    :code: SDN
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: BANCO NACIONAL DE CUBA
+  :type: Entity
   :alt_names:
   - BNC
   - NATIONAL BANK OF CUBA
@@ -45,7 +48,6 @@
     :address: Federico Boyd Avenue & 51 Street
   :ids: []
 - :entity_number: '6982'
-  :type: Individual
   :title: 
   :call_sign: 
   :vessel_type: 
@@ -55,9 +57,11 @@
   :vessel_owner: 
   :remarks: Additional Djiboutian passport issued in 2010.
   :id: '6982'
-  :source: SDN
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: JIM'ALE, Ahmed Nur Ali
+  :type: Individual
   :alt_names:
   - JUMALI, Ahmed Ali
   - JIMALE, Ahmad Ali
@@ -76,7 +80,7 @@
   - DJ
   :dates_of_birth:
   - '1954-05-20'
-  - 'circa 1954'
+  - circa 1954
   :places_of_birth:
   - Eilbur, Somalia
   :addresses:
@@ -102,7 +106,6 @@
     :number: A0181988
     :type: Passport
 - :entity_number: '11043'
-  :type: Vessel
   :title: 
   :call_sign: 
   :vessel_type: General Cargo
@@ -112,9 +115,11 @@
   :vessel_owner: IRISL
   :remarks: 
   :id: '11043'
-  :source: SDN
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: PARSHAN
+  :type: Vessel
   :alt_names:
   - IRAN BRIGHTNESS
   - BRIGHTNESS
@@ -133,7 +138,6 @@
     :number: IMO 9051648
     :type: Vessel Registration Identification
 - :entity_number: '521'
-  :type: Individual
   :title: Executive Director, Havana International Bank
   :call_sign: 
   :vessel_type: 
@@ -143,9 +147,11 @@
   :vessel_owner: 
   :remarks: Might have something to do with Cuba.
   :id: '521'
-  :source: SDN
+  :source: *1
   :source_list_url: 
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: CHAO, Lazaro R.
+  :type: Individual
   :alt_names: []
   :programs:
   - CUBA
