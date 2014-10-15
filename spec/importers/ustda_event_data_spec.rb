@@ -110,6 +110,7 @@ describe TradeEvent::UstdaData do
           phone:        '703-875-4357',
           email:        'ALVTransport@ustda.gov',
         }],
+        source:             'USTDA',
       }
     end
   end
