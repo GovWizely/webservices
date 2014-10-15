@@ -35,6 +35,7 @@ module TradeEvent
       event_type:         'FIXME',
       industries:         [],
       contacts:           [],
+      source:             'USTDA',
     }.freeze
 
     def initialize(resource = ENDPOINT)

@@ -49,7 +49,8 @@
         "phone": "703-239-7516",
         "email": "chinartm@experient-inc.com"
       }
-    ]
+    ],
+    "source": "USTDA"
   },
   {
     "id": "Vietnam Airport Development and Operations Reverse Trade Mission",
@@ -101,7 +102,8 @@
         "phone": "202-741-1297",
         "email": "aj@webstergroupinc.com"
       }
-    ]
+    ],
+    "source": "USTDA"
   },
   {
     "id": "African Leaders' Visit: Transport",
@@ -135,7 +137,8 @@
         "phone": "703-875-4357",
         "email": "ALVTransport@ustda.gov"
       }
-    ]
+    ],
+    "source": "USTDA"
   },
   {
     "id": "African Leaders' Visit: Energy",
@@ -169,7 +172,8 @@
         "phone": "703-875-4357",
         "email": "ALVEnergy@ustda.gov"
       }
-    ]
+    ],
+    "source": "USTDA"
   },
   {
     "id": "Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission",
@@ -181,7 +185,7 @@
     "cost_currency": "",
     "registration_link": null,
     "registration_title": null,
-    "description": "The U.S. Trade and Development Agency (USTDA) is sponsoring a Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission (RTM), to introduce delegates from across sub-Saharan Africa to U.S. technology and industry best practices in the aviation sector. Delegates from private sector aviation companies in sub-Saharan Africa will participate in site-visits where they will meet with U.S. industry experts and suppliers of light aircraft and helicopters. Futron Corporation is organizing the RTM on behalf of USTDA. For more information on the event, please contact Program Manager, Ian Christensen, by e-mail at ichristensen@futron.com or by phone at 301-280-2645.",
+    "description": "The U.S. Trade and Development Agency (USTDA) is sponsoring a Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission (RTM), to introduce delegates from across sub-Saharan Africa to U.S. technology and industry best practices in the aviation sector. Delegates from private sector aviation companies in sub-Saharan Africa will participate in site-visits where they will meet with U.S. industry experts and suppliers of light aircraft and helicopters. Futron Corporation is organizing the RTM on behalf of USTDA. For more information on the event, please contact Program Manager, Ian Christensen, by e-mail at ichristensen@futron.com or by phone at 301-280-2645. international",
     "industries": [
       "Aviation Services"
     ],
@@ -221,6 +225,7 @@
         "phone": "301-280-2645",
         "email": "ichristensen@futron.com"
       }
-    ]
+    ],
+    "source": "USTDA"
   }
 ]
