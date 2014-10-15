@@ -2,6 +2,7 @@ shared_context 'all Trade Events fixture data' do
   include_context 'TradeEvent::Sba data'
   include_context 'TradeEvent::Ita data'
   include_context 'TradeEvent::Exim data'
+  include_context 'TradeEvent::Ustda data'
 end
 
 shared_context 'TradeEvent::Ita data' do
@@ -139,5 +140,44 @@ end
 shared_examples 'it contains all TradeEvent::Exim results that match "Baltimore"' do
   let(:source) { :EXIM }
   let(:expected) { [1, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TradeEvent::Ustda data' do
+  before(:all) do
+    TradeEvent::Ustda.recreate_index
+    TradeEvent::UstdaData.new( "#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:USTDA] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/ustda/results.json").read)
+  end
+
+  before do
+    Date.stub(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_examples 'it contains all TradeEvent::Ustda results' do
+  let(:source) { :USTDA }
+  let(:expected) { (0..4).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ustda results that match "international"' do
+  let(:source) { :USTDA }
+  let(:expected) { [4] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ustda results that match "aeronautical"' do
+  let(:source) { :USTDA }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ustda results that match countries "US"' do
+  let(:source) { :USTDA }
+  let(:expected) { (0..4).to_a }
   it_behaves_like 'it contains all expected results of source'
 end

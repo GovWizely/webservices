@@ -85,6 +85,10 @@ GEM
     mime-types (1.25.1)
     mini_portile (0.5.3)
     minitest (4.7.5)
+    monetize (0.4.1)
+      money (~> 6.2.1)
+    money (6.2.1)
+      i18n (>= 0.6.4, <= 0.7.0.dev)
     multi_json (1.10.1)
     multipart-post (2.0.0)
     net-scp (1.2.1)
@@ -197,6 +201,7 @@ DEPENDENCIES
   htmlentities
   iso_country_codes (= 0.4.2)
   jbuilder
+  monetize
   newrelic_rpm
   nokogiri (= 1.6.0)
   parslet

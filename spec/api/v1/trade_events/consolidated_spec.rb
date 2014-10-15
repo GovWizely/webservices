@@ -14,8 +14,9 @@ describe 'Consolidated Trade Events API V1' do
       it_behaves_like 'it contains all TradeEvent::Ita results'
       it_behaves_like 'it contains all TradeEvent::Sba results'
       it_behaves_like 'it contains all TradeEvent::Exim results'
+      it_behaves_like 'it contains all TradeEvent::Ustda results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(ITA SBA EXIM) }
+        let(:sources) { %w(ITA SBA EXIM USTDA) }
       end
     end
 
@@ -44,14 +45,23 @@ describe 'Consolidated Trade Events API V1' do
           let(:sources) { %w(EXIM) }
         end
       end
+      context 'and is "aeronautical"' do
+        let(:params) { { q: 'aeronautical' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match "aeronautical"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(USTDA) }
+        end
+      end
       context 'and is "international"' do
         let(:params) { { q: 'international', size: 100 } }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all TradeEvent::Ita results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Exim results that match "international"'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { %w(ITA SBA EXIM) }
+          let(:sources) { %w(ITA SBA EXIM USTDA) }
         end
       end
     end
@@ -78,8 +88,9 @@ describe 'Consolidated Trade Events API V1' do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all TradeEvent::Ita results that match countries "US"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match countries "US"'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match countries "US"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { %w(ITA SBA) }
+          let(:sources) { %w(ITA SBA USTDA) }
         end
       end
     end
