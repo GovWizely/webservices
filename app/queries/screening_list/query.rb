@@ -29,7 +29,7 @@ module ScreeningList
         json.bool do
           json.must do
             json.child! { json.term { json.type @type } } if @type
-            json.child! { json.terms { json.source @sources } } if @sources.any?
+            json.child! { json.terms { json.set! 'source.code', @sources } } if @sources.any?
           end if @type || @sources.any?
           json.set! 'should' do
             json.child! { json.terms { json.set! 'addresses.country', @countries } }

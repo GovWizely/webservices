@@ -12,8 +12,8 @@ json.call(entry[:_source],
           :programs,
           :remarks,
           :type,
-          :source,
           :source_list_url,
           :source_information_url,
           :title,
 )
+json.source entry[:_source][:source][:full_name]

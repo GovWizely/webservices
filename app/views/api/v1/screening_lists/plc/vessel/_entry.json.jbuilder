@@ -11,7 +11,6 @@ json.call(entry[:_source],
           :type,
           :programs,
           :remarks,
-          :source,
           :source_list_url,
           :source_information_url,
           :title,
@@ -19,3 +18,4 @@ json.call(entry[:_source],
           :vessel_owner,
           :vessel_type,
 )
+json.source entry[:_source][:source][:full_name]

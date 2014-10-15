@@ -13,7 +13,7 @@ module Importer
 
   def sanitize_entry(entry)
     entry.each do |k, v|
-      next if v.is_a?(Array)
+      next unless v.is_a?(String)
       entry[k] = v.present? ? v.squish : nil
     end
     entry

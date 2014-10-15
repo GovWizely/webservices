@@ -31,7 +31,7 @@ module ScreeningList
     private
 
     def document_node_xpath
-      "//xmlns:#{self.class.model_class.source == 'PLC' ? 'nsp' : 'sdn'}Entry"
+      "//xmlns:#{self.class.model_class.source[:code] == 'PLC' ? 'nsp' : 'sdn'}Entry"
     end
 
     SINGLE_VALUED_XPATHS = {

@@ -4,7 +4,7 @@ json.call(entry[:_source],
           :name,
           :programs,
           :start_date,
-          :source,
           :source_list_url,
           :source_information_url,
 )
+json.source entry[:_source][:source][:full_name]

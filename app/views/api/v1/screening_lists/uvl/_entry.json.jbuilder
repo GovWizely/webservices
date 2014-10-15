@@ -3,7 +3,7 @@ json.partial! 'api/v1/screening_lists/addresses',
 json.call(entry[:_source],
           :alt_names,
           :name,
-          :source,
           :source_list_url,
           :source_information_url,
 )
+json.source entry[:_source][:source][:full_name]

@@ -33,7 +33,8 @@ module ScreeningList
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
             type:                    { type: 'string', analyzer: 'keyword_lowercase' },
-            source:                  { type: 'string', analyzer: 'keyword' },
+            source:                  { properties: { full_name: { type: 'string', index: 'no' },
+                                                     code:      { type: 'string', analyzer: 'keyword' } } },
             federal_register_notice: { type: 'string', analyzer: 'keyword' },
 
             addresses:               { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
