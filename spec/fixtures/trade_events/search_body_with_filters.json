@@ -10,8 +10,24 @@
           }
         },
         {
-          "terms": {
-            "country": ["IL", " US"]
+          "bool": {
+            "should": [
+              {
+                "terms": {
+                  "country": [
+                    "IL",
+                    " US"
+                  ]
+                }
+              },
+              {
+                "query": {
+                  "match": {
+                    "venues.country": "IL US"
+                  }
+                }
+              }
+            ]
           }
         }
       ]

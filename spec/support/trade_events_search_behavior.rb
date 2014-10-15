@@ -178,6 +178,6 @@ end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match countries "US"' do
   let(:source) { :USTDA }
-  let(:expected) { [1, 2] }
+  let(:expected) { (0..4).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
