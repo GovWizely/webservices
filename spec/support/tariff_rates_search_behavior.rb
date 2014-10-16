@@ -27,13 +27,13 @@ end
 
 shared_examples 'it contains all TariffRate::Australia results that match "horses"' do
   let(:source) { 'AUSTRALIA' }
-  let(:expected) { [all_australia_results[0]] }
+  let(:expected) { [all_australia_results[0], all_australia_results[2]] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TariffRate::Australia results that match countries "au"' do
+shared_examples 'it contains all TariffRate::Australia results that match countries "us,au"' do
   let(:source) { 'AUSTRALIA' }
-  let(:expected) { [all_australia_results[0]] }
+  let(:expected) { all_australia_results }
   it_behaves_like 'it contains all expected results of source'
 end
 
