@@ -41,7 +41,7 @@ class TradeEventData
       trade_event = process_event_info(event_info)
       trade_event
     end.compact
-    # TradeEvent.index trade_events
+    TradeEvent.index trade_events
   end
 
   private
