@@ -22,19 +22,19 @@ end
 shared_examples 'it contains all TariffRate::Australia results' do
   let(:source) { 'AUSTRALIA' }
   let(:expected) { all_australia_results }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::Australia results that match "horses"' do
   let(:source) { 'AUSTRALIA' }
   let(:expected) { [all_australia_results[0], all_australia_results[2]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::Australia results that match countries "us,au"' do
   let(:source) { 'AUSTRALIA' }
   let(:expected) { all_australia_results }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_context 'TariffRate::Korea data' do
@@ -54,19 +54,19 @@ end
 shared_examples 'it contains all TariffRate::Korea results' do
   let(:source) { 'KOREA' }
   let(:expected) { all_korea_results }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::Korea results that match "horses"' do
   let(:source) { 'KOREA' }
   let(:expected) { [all_korea_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::Korea results that match countries "kp"' do
   let(:source) { 'KOREA' }
   let(:expected) { [all_korea_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_context 'TariffRate::CostaRica data' do
@@ -86,19 +86,19 @@ end
 shared_examples 'it contains all TariffRate::CostaRica results' do
   let(:source) { 'COSTA_RICA' }
   let(:expected) { all_costa_rica_results }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::CostaRica results that match "horses"' do
   let(:source) { 'COSTA_RICA' }
   let(:expected) { [all_costa_rica_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::CostaRica results that match countries "cr"' do
   let(:source) { 'COSTA_RICA' }
   let(:expected) { [all_costa_rica_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_context 'TariffRate::ElSalvador data' do
@@ -118,23 +118,22 @@ end
 shared_examples 'it contains all TariffRate::ElSalvador results' do
   let(:source) { 'EL_SALVADOR' }
   let(:expected) { all_el_salvador_results }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::ElSalvador results that match "horses"' do
   let(:source) { 'EL_SALVADOR' }
   let(:expected) { [all_el_salvador_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
 shared_examples 'it contains all TariffRate::ElSalvador results that match countries "cr"' do
   let(:source) { 'EL_SALVADOR' }
   let(:expected) { [all_el_salvador_results[0]] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all the expected results of source'
 end
 
-
-shared_examples 'it contains all expected results of source' do
+shared_examples 'it contains all the expected results of source' do
   let(:results) do
     JSON.parse(response.body)['results']
     .select { |r| r['source'] == source }
@@ -145,7 +144,7 @@ shared_examples 'it contains all expected results of source' do
   end
 end
 
-shared_examples 'it contains only results with sources' do
+shared_examples 'it contains only the results with sources' do
   let(:results) { JSON.parse(response.body)['results'] }
   let(:results_with_source_other_than_expected) do
     results.select { |r| !sources.include?(r['source']) }
