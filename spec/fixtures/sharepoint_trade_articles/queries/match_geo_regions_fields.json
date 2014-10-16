@@ -1,0 +1,30 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "geo_regions",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "geo_regions.geo_region": "asia"
+                    }
+                  },
+                  {
+                    "match": {
+                      "geo_regions.geo_subregions": "east"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

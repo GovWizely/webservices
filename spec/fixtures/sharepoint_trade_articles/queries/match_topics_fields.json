@@ -1,0 +1,30 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "nested": {
+            "path": "topics",
+            "query": {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "topics.topic": "free trade"
+                    }
+                  },
+                  {
+                    "match": {
+                      "topics.sub_topics": "nafta"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        }
+      ]
+    }
+  }
+}
+

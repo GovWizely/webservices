@@ -1,0 +1,13 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "content": "foreign payment disputes"
+          }
+        }
+      ]
+    }
+  }
+}
