@@ -3,7 +3,7 @@ require 'pp'
 
 class SharepointTradeArticleData
   include Importer
-  ENDPOINT = '/Users/tmh/Desktop/articles_new/%d.xml'
+  ENDPOINT = '/Users/tmh/Desktop/articles/%d.xml'
 
   SINGLE_XPATHS = {
     id:                       '//id',
@@ -23,7 +23,7 @@ class SharepointTradeArticleData
     file_url:                 '//files',
     image_url:                '//images',
     url_html_source:          '//data//html',
-    url_xml_source:           '//data//xml',
+    url_xml_source:           '//data//xml'
   }.freeze
 
   MULTIPLE_XPATHS = {
@@ -32,7 +32,7 @@ class SharepointTradeArticleData
     trade_regions:     '//tags//trade_regions//trade_region',
     trade_programs:    '//tags//trade_programs//trade_programs',
     trade_initiatives: '//tags//trade_initiatives//trade_initiatives',
-    export_phases:     '//tags//export_phases//export_phase',
+    export_phases:     '//tags//export_phases//export_phase'
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -44,7 +44,7 @@ class SharepointTradeArticleData
     id = 116
     data = []
 
-    while id <= 116
+    while id <= 119
       begin
         resource = @resource % id
         article = Nokogiri::XML(open(resource))
@@ -58,6 +58,7 @@ class SharepointTradeArticleData
     end
 
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
+    #File.open("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml", 'w'){|file| file.write(articles.to_yaml)}
     SharepointTradeArticle.index articles
   end
 

@@ -47,9 +47,9 @@ class SharepointTradeArticleQuery < Query
           must_json.child! { must_json.match { must_json.trade_regions @trade_regions } } if @trade_regions
           must_json.child! { must_json.match { must_json.trade_programs @trade_programs } } if @trade_programs
           must_json.child! { must_json.match { must_json.trade_initiatives @trade_initiatives } } if @trade_initiatives
-          must_json.child! { generate_source_agency_queries(must_json) } if has_source_agency_options?
-          must_json.child! { generate_topic_queries(must_json) } if has_topic_options?
-          must_json.child! { generate_geo_region_queries(must_json) } if has_geo_region_options?
+          must_json.child! { generate_nested_queries(must_json, 'source_agencies', ['source_agency', 'source_business_units', 'source_offices']) } if has_source_agency_options?
+          must_json.child! { generate_nested_queries(must_json, 'topics', ['topic', 'sub_topics']) } if has_topic_options?
+          must_json.child! { generate_nested_queries(must_json, 'geo_regions', ['geo_region', 'geo_subregions']) } if has_geo_region_options?
         end
       end
     end if has_query_options?
@@ -70,16 +70,17 @@ class SharepointTradeArticleQuery < Query
     end if has_filter_options?
   end
 
-  def generate_source_agency_queries(json)
+
+  def generate_nested_queries(json, path, terms)
     json.nested do
-      json.path :source_agencies
+      json.path path
 
       json.query do
         json.bool do
           json.must do |must_json|
-            must_json.child! { must_json.match { must_json.set! 'source_agencies.source_agency',  @source_agency } } if @source_agency
-            must_json.child! { must_json.match { must_json.set! 'source_agencies.source_business_units',  @source_business_units } } if @source_business_units
-            must_json.child! { must_json.match { must_json.set! 'source_agencies.source_offices',  @source_offices } } if @source_offices
+            terms.each do |term|
+              must_json.child! { must_json.match { must_json.set! path+'.'+term,  instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}") 
+            end
           end
         end
       end
@@ -87,37 +88,6 @@ class SharepointTradeArticleQuery < Query
     end
   end
 
-  def generate_topic_queries(json)
-    json.nested do
-      json.path :topics
-
-      json.query do
-        json.bool do
-          json.must do |must_json|
-            must_json.child! { must_json.match { must_json.set! 'topics.topic',  @topic } } if @topic
-            must_json.child! { must_json.match { must_json.set! 'topics.sub_topics',  @sub_topics } } if @sub_topics
-          end
-        end
-      end
-
-    end
-  end
-
-  def generate_geo_region_queries(json)
-    json.nested do
-      json.path :geo_regions
-
-      json.query do
-        json.bool do
-          json.must do |must_json|
-            must_json.child! { must_json.match { must_json.set! 'geo_regions.geo_region',  @geo_region } } if @geo_region
-            must_json.child! { must_json.match { must_json.set! 'geo_regions.geo_subregions',  @geo_subregions } } if @geo_subregions
-          end
-        end
-      end
-
-    end
-  end
 
   def generate_date_range(json, date_str)
     date_start = instance_variable_get("@#{date_str}_start")
