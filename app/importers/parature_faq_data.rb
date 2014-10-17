@@ -30,7 +30,7 @@ class ParatureFaqData
     data = []
 
     while id <= article_count
-      if id % 100 == 0 and should_throttle
+      if id % 100 == 0 && should_throttle
         sleep pause_duration
      end
 

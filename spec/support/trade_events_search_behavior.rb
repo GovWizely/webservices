@@ -146,7 +146,7 @@ end
 shared_context 'TradeEvent::Ustda data' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new( "#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[:USTDA] = JSON.parse(open(
