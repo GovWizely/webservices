@@ -1,6 +1,5 @@
 module TradeEvent
-  class UstdaQuery < Query #CountryIndustryQuery
-
+  class UstdaQuery < Query # CountryIndustryQuery
     private
 
     def generate_query(json)
