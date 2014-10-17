@@ -199,7 +199,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   elasticsearch
   htmlentities
-  iso_country_codes (= 0.4.2)
+  iso_country_codes
   jbuilder
   monetize
   newrelic_rpm
