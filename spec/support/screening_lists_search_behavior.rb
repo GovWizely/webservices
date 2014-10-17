@@ -503,7 +503,7 @@ end
 shared_context 'full results from response' do
   let(:full_results) do
     JSON.parse(response.body)['results']
-      .select { |r| r['source'] =~ /#{clue(source)}/ }
+      .select { |r| r['source'] == source_full_name(source) }
   end
   let(:got) do
     full_results.map { |f| @all_possible_full_results[source].index(f) }
@@ -519,18 +519,27 @@ end
 
 shared_examples 'it contains only results with sources' do
   let(:results) { JSON.parse(response.body)['results'] }
+  let(:source_full_names) { sources.map { |s| source_full_name(s) } }
   let(:results_with_source_other_than_expected) do
-    results.select do |r|
-      !sources.select do |s|
-        r['source'] =~ /#{clue(s)}/
-      end
-    end
+    results.select { |r| !source_full_names.include?(r['source']) }
   end
+
   it 'contains only results with sources' do
     expect(results_with_source_other_than_expected.length).to eq 0
   end
 end
 
-def clue(source)
-  source == :UVL ? 'Unverified List' : "(#{source})"
+def source_full_name(code)
+  full_names = {
+    DPL: 'Denied Persons List (DPL) - Bureau of Industry and Security',
+    EL:  'Entity List (EL) - Bureau of Industry and Security',
+    FSE: 'Foreign Sanctions Evaders (FSE) - Treasury Department',
+    DTC: 'ITAR Debarred (DTC) - State Department',
+    ISN: 'Nonproliferation Sanctions (ISN) - State Department',
+    PLC: 'Palestinian Legislative Council List (PLC) - Treasury Department',
+    SSI: 'Sectoral Sanctions Identifications List (SSI) - Treasury Department',
+    SDN: 'Special Designated Nationals (SDN) - Treasury Department',
+    UVL: 'Unverified List - Bureau of Industry and Security',
+  }
+  full_names[code.to_sym] || code
 end
