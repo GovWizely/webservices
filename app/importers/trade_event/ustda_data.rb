@@ -74,7 +74,7 @@ module TradeEvent
 
     def cost(entry)
       cost = Monetize.parse(entry[:cost])
-      return cost.to_f, cost.currency_as_string
+      [cost.to_f, cost.currency_as_string]
     end
 
     def contact(entry)
@@ -82,7 +82,7 @@ module TradeEvent
         entry
           .slice(:first_name, :last_name, :post, :person_title, :phone, :email)
           .map { |k, v| { k => v.blank? ? '' : v.strip } }
-          .reduce(:merge)
+          .reduce(:merge),
       ]
     end
 

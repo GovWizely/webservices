@@ -15,7 +15,7 @@ gem 'rack-contrib'
 gem 'rake'
 gem 'sanitize', '~> 2.0.6'
 gem 'htmlentities'
-gem 'us_states', :git => 'git://github.com/GSA-OCSIT/us_states.git'
+gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 
 group :production do
   gem 'newrelic_rpm'
