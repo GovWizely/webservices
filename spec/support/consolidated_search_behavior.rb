@@ -39,5 +39,5 @@ def source_full_name(code)
     SDN: 'Specially Designated Nationals (SDN) - Treasury Department',
     UVL: 'Unverified List (UVL) - Bureau of Industry and Security',
   }
-  full_names[code.to_sym] || code
+  full_names[code.to_sym] || code.to_s
 end
