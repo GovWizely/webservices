@@ -43,6 +43,7 @@ namespace :ita do
     %w( TradeEvent::Ita
         TradeEvent::Sba
         TradeEvent::Exim
+        TradeEvent::Ustda
     ).each do |class_name|
       class_name.constantize.recreate_index
       import_data(class_name)
