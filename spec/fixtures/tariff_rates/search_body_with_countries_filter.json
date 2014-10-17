@@ -1,7 +1,7 @@
 {
     "filter": {
         "bool": {
-            "should": [
+            "must": [
                 {
                     "terms": {
                         "countries": ["US", "AU"]

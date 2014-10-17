@@ -42,7 +42,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "countries": "US,KP",
+        "countries": ["US","KP"],
         "source": "KOREA"
     }
 ]

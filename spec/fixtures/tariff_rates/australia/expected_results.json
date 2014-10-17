@@ -41,7 +41,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "countries": "US,AU",
+        "countries": ["US","AU"],
         "source": "AUSTRALIA"
     },
     {
@@ -78,7 +78,7 @@
         "industry": "Agricultural",
         "annual_rates": {"y2012": "null", "y2013": "null", "y2014": "null"},
         "alt_annual_rates": {"alt_2012": "null", "alt_2013": "null", "alt_2014": "null"},
-        "countries": "US,AU",
+        "countries": ["US","AU"],
         "source": "AUSTRALIA"
     },
     {
@@ -115,7 +115,7 @@
         "industry": "Agricultural",
         "annual_rates": {"y2012": "null", "y2013": "null", "y2014": "null"},
         "alt_annual_rates": {"alt_2012": "null", "alt_2013": "null", "alt_2014": "null"},
-        "countries": "US,AU",
+        "countries": ["US","AU"],
         "source": "AUSTRALIA"
     }
 ]

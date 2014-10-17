@@ -41,7 +41,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "countries": "US,SV",
+        "countries": ["US","SV"],
         "source": "EL_SALVADOR"
     }
 ]

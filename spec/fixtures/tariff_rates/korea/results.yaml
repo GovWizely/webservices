@@ -32,5 +32,7 @@
   :industry: "Agricultural"
   :annual_rates: {"y2012": "10", "y2013": "20", "y2014": "30"}
   :alt_annual_rates: {"alt_2012": "1", "alt_2013": "2", "alt_2014": "3"}
-  :countries: "US,KP"
+  :countries:
+    - "US"
+    - "KP"
   :source: "KOREA"

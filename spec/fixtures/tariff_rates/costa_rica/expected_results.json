@@ -41,7 +41,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "countries": "US,CR",
+        "countries": ["US","CR"],
         "source": "COSTA_RICA"
     }
 ]

@@ -38,7 +38,9 @@
       "alt_2012": "1"
       "alt_2013": "2"
       "alt_2014": "3"
-  :countries: "US,AU"
+  :countries:
+    - "US"
+    - "AU"
   :source: "AUSTRALIA"
 - :source_id: "439227"
   :tariff_line: "0102102000"
@@ -79,7 +81,9 @@
      alt_2012: "null"
      alt_2013: "null"
      alt_2014: "null"
-  :countries: "US,AU"
+  :countries:
+    - "US"
+    - "AU"
   :source: "AUSTRALIA"
 - :source_id: "441638"
   :tariff_line: "02050000"
@@ -120,5 +124,7 @@
     alt_2012: "null"
     alt_2013: "null"
     alt_2014: "null"
-  :countries: "US,AU"
+  :countries:
+    - "US"
+    - "AU"
   :source: "AUSTRALIA"
