@@ -14,7 +14,7 @@ describe 'Consolidated Tariff Rates API V1' do
 
       it_behaves_like 'it contains all TariffRate::Australia results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(AUSTRALIA) }
+        let(:sources) { %w(AUSTRALIA COSTA_RICA EL_SALVADOR KOREA) }
       end
     end
 
@@ -25,7 +25,7 @@ describe 'Consolidated Tariff Rates API V1' do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TariffRate::Australia results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(AUSTRALIA) }
+        let(:sources) { %w(AUSTRALIA COSTA_RICA EL_SALVADOR KOREA) }
       end
     end
   end
