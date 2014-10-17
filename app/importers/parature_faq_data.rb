@@ -30,7 +30,7 @@ class ParatureFaqData
     data = []
 
     while id <= article_count
-      if (id % 100 == 0)
+      if id % 100 == 0 and should_throttle
         sleep pause_duration
      end
 
@@ -50,6 +50,10 @@ class ParatureFaqData
     faqs = data.map { |faq_hash| process_faq_info(faq_hash) }.compact
 
     ParatureFaq.index faqs
+  end
+
+  def should_throttle
+    @should_throttle ||= URI.parse(@resource % 1).scheme =~ /ftp|http/
   end
 
   def process_faq_info(faq_hash)

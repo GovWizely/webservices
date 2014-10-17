@@ -3,10 +3,8 @@
     "bool": {
       "must": [
         {
-          "multi_match": {
-            "fields": ["event_name", "registration_title", "description", "industries", "city"],
-            "operator": "and",
-            "query": "workboat"
+          "match": {
+            "industries": "fishing"
           }
         }
       ]

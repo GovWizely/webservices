@@ -4,7 +4,7 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["event_name", "registration_title", "description", "industries", "city"],
+            "fields": ["description", "event_name"],
             "operator": "and",
             "query": "workboat"
           }
