@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::IsnData do
+  before { ScreeningList::Isn.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/isn" }
   let(:fixtures_file) { "#{fixtures_dir}/isn.csv" }
   let(:importer) { described_class.new(fixtures_file) }

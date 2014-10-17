@@ -5,7 +5,8 @@ require 'digest/md5'
 module ScreeningList
   class DplData
     include ::Importer
-    include CanGroupRows
+    prepend ::Importer::DeletesOldDocuments
+    include ScreeningList::CanGroupRows
 
     self.group_by = [:name, :beginning_date, :ending_date, :fr_citation]
 
@@ -34,13 +35,18 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t")
+
+      rows = CSV.parse(open(@resource).read,
+                       headers:           true,
+                       header_converters: :symbol,
+                       encoding:          'UTF-8',
+                       col_sep:           "\t")
 
       docs = group_rows(rows).map do |id, grouped|
         process_grouped_rows(id, grouped)
       end
 
-      self.class.model_class.index(docs)
+      model_class.index(docs)
     end
 
     private
@@ -49,7 +55,7 @@ module ScreeningList
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
       doc[:id] = id
-      doc[:source] = self.class.model_class.source
+      doc[:source] = model_class.source
       doc[:source_list_url] =
         'http://www.bis.doc.gov/index.php/the-denied-persons-list'
       doc[:source_information_url] =

@@ -9,8 +9,8 @@ namespace :ita do
     args.index_name.constantize.recreate_index
   end
 
-  desc 'Recreate then import all CSL indices'
-  task recreate_then_import_csl_indices: :environment do
+  desc 'Import all CSL sources'
+  task import_csl_sources: :environment do
     %w( ScreeningList::Dpl
         ScreeningList::Dtc
         ScreeningList::El
@@ -21,7 +21,6 @@ namespace :ita do
         ScreeningList::Ssi
         ScreeningList::Uvl
     ).each do |class_name|
-      class_name.constantize.recreate_index
       import_data(class_name)
     end
   end

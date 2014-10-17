@@ -72,4 +72,8 @@ module Importer
       end
     end
   end
+
+  def model_class
+    self.class.model_class
+  end
 end

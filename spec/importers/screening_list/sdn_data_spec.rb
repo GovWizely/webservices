@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::SdnData do
+  before { ScreeningList::Sdn.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/sdn" }
   let(:fixtures_file) { "#{fixtures_dir}/sdn.xml" }
   let(:importer) { described_class.new(fixtures_file) }
