@@ -19,7 +19,7 @@ module ScreeningList
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
       entries = rows.map { |row| process_row row.to_h }.compact
-      self.class.model_class.index(entries)
+      model_class.index(entries)
     end
 
     private
@@ -32,7 +32,7 @@ module ScreeningList
 
       entry[:start_date] = parse_american_date(row[:eff_date])
       entry[:federal_register_notice] = row[:corrected_notice] || row[:notice]
-      entry[:source] = self.class.model_class.source
+      entry[:source] = model_class.source
       entry[:source_list_url] = 'http://www.pmddtc.state.gov/compliance/debar.html'
       entry[:source_information_url] = 'http://www.pmddtc.state.gov/compliance/debar_intro.html'
 

@@ -41,7 +41,7 @@ module ScreeningList
         process_grouped_rows(id, grouped)
       end
 
-      self.class.model_class.index(docs)
+      model_class.index(docs)
     end
 
     private
@@ -58,7 +58,7 @@ module ScreeningList
       doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 
       doc[:start_date] &&= parse_american_date(doc[:start_date])
-      doc[:source] = self.class.model_class.source
+      doc[:source] = model_class.source
       doc[:source_list_url] =
         doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'

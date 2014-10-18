@@ -25,13 +25,13 @@ module ScreeningList
         process_node(node)
       end.compact
 
-      self.class.model_class.index docs
+      model_class.index docs
     end
 
     private
 
     def document_node_xpath
-      "//xmlns:#{self.class.model_class.source[:code] == 'PLC' ? 'nsp' : 'sdn'}Entry"
+      "//xmlns:#{model_class.source[:code] == 'PLC' ? 'nsp' : 'sdn'}Entry"
     end
 
     SINGLE_VALUED_XPATHS = {
@@ -52,7 +52,7 @@ module ScreeningList
       doc = extract_fields(node, SINGLE_VALUED_XPATHS)
 
       doc[:id] = doc[:entity_number]
-      doc[:source] = self.class.model_class.source
+      doc[:source] = model_class.source
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
