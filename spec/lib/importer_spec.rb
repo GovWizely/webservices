@@ -44,7 +44,7 @@ describe Importer do
     end
   end
 
-  describe '#parse_date' do
+  describe '#parse_american_date' do
     subject { MockImporter.new.parse_american_date(date_str) }
 
     context 'when given a parsable string' do
