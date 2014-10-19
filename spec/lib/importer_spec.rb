@@ -1,13 +1,32 @@
 require 'spec_helper'
 
 describe Importer do
-  class Mock
-  end
-  class MockData
-    include Importer
+  before do
+    class Mock
+      extend Indexable
+      self.mappings = {
+        name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
+        },
+      }
+    end
+
+    class MockData
+      include Importer
+      def initialize(docs = nil)
+        @docs = docs
+      end
+
+      def import
+        model_class.index(@docs)
+      end
+    end
   end
 
-  after(:all) do
+  after do
     Object.send(:remove_const, :Mock)
     Object.send(:remove_const, :MockData)
   end
@@ -74,5 +93,35 @@ describe Importer do
   describe '#model_class' do
     subject { MockData.new.model_class }
     it { should eq Mock }
+  end
+
+  describe '#import_then_purge_old' do
+    let(:batch_1) do
+      [{ 'id' => 1, 'content' => 'foo' },
+       { 'id' => 2, 'content' => 'bar' }]
+    end
+    let(:batch_2) do
+      [{ 'id' => 1, 'content' => 'foo [updated]' },
+       { 'id' => 3, 'content' => 'baz' }]
+    end
+    let(:batch_3) do
+      [{ 'id' => 3, 'content' => 'baz [updated]' }]
+    end
+
+    it 'purges correct documents' do
+      MockData.new(batch_1).import_then_purge_old
+      expect(stored_docs).to match_array(batch_1)
+
+      MockData.new(batch_2).import_then_purge_old
+      expect(stored_docs).to match_array(batch_2)
+
+      MockData.new(batch_3).import_then_purge_old
+      expect(stored_docs).to match_array(batch_3)
+    end
+
+    def stored_docs
+      hits = ES.client.search(index: Mock.index_name)['hits']['hits']
+      hits.map { |h| h['_source'] }
+    end
   end
 end

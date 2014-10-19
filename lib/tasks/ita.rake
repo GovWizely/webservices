@@ -1,12 +1,12 @@
 namespace :ita do
   desc 'Import data for a given index'
-  task :import, [:index_name] => :environment do |_t, args|
-    import_data(args.index_name)
+  task :import, [:model_class_name] => :environment do |_t, args|
+    do_import(args.model_class_name)
   end
 
   desc 'Recreate an index'
-  task :recreate_index, [:index_name] => :environment do |_t, args|
-    args.index_name.constantize.recreate_index
+  task :recreate_index, [:model_class_name] => :environment do |_t, args|
+    args.model_class_name.constantize.recreate_index
   end
 
   desc 'Recreate then import all CSL indices'
@@ -22,7 +22,7 @@ namespace :ita do
         ScreeningList::Uvl
     ).each do |class_name|
       class_name.constantize.recreate_index
-      import_data(class_name)
+      do_import(class_name)
     end
   end
 
@@ -34,11 +34,16 @@ namespace :ita do
         UkTradeLead
     ).each do |class_name|
       class_name.constantize.recreate_index
-      import_data(class_name)
+      do_import(class_name)
     end
   end
 
-  def import_data(model_class_name)
-    "#{model_class_name}Data".constantize.new.import
+  def do_import(model_class_name)
+    importer = "#{model_class_name}Data".constantize.new
+    if importer.can_purge_old?
+      importer.import_then_purge_old
+    else
+      importer.import
+    end
   end
 end
