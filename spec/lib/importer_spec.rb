@@ -24,6 +24,14 @@ describe Importer do
         model_class.index(@docs)
       end
     end
+
+    class MockQuery < Query
+      def generate_search_body
+        {}
+      end
+    end
+
+    Mock.recreate_index
   end
 
   after do
@@ -97,31 +105,30 @@ describe Importer do
 
   describe '#import_then_purge_old' do
     let(:batch_1) do
-      [{ 'id' => 1, 'content' => 'foo' },
-       { 'id' => 2, 'content' => 'bar' }]
+      [{ id: 1, content: 'foo' },
+       { id: 2, content: 'bar' }]
     end
     let(:batch_2) do
-      [{ 'id' => 1, 'content' => 'foo [updated]' },
-       { 'id' => 3, 'content' => 'baz' }]
+      [{ id: 1, content: 'foo [updated]' },
+       { id: 3, content: 'baz' }]
     end
     let(:batch_3) do
-      [{ 'id' => 3, 'content' => 'baz [updated]' }]
+      [{ id: 3, content: 'baz [updated]' }]
     end
 
     it 'purges correct documents' do
       MockData.new(batch_1).import_then_purge_old
-      expect(stored_docs).to match_array(batch_1)
+      expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
 
       MockData.new(batch_2).import_then_purge_old
-      expect(stored_docs).to match_array(batch_2)
+      expect(stored_docs).to match_array(batch_2.map { |d| d.except(:id) })
 
       MockData.new(batch_3).import_then_purge_old
-      expect(stored_docs).to match_array(batch_3)
+      expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
     end
 
     def stored_docs
-      hits = ES.client.search(index: Mock.index_name)['hits']['hits']
-      hits.map { |h| h['_source'] }
+      Mock.search_for({})[:hits].map { |h| h['_source'].deep_symbolize_keys }
     end
   end
 end

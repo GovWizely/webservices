@@ -7,6 +7,8 @@ describe ScreeningList::PlcData do
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
+  it_behaves_like 'an importer which can purge old documents'
+
   describe '#import' do
     it 'loads PLC from specified resource' do
       ScreeningList::Plc.should_receive(:index) do |plc|

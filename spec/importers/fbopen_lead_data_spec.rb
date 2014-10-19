@@ -5,6 +5,8 @@ describe FbopenLeadData do
   let(:resource)     { "#{fixtures_dir}/example_input" }
   let(:importer)     { FbopenLeadData.new(resource) }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     it 'loads leads from specified resource' do
       FbopenLead.should_receive(:index) do |fbo|

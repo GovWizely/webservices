@@ -83,10 +83,10 @@ module Indexable
       index: index_name,
       type:  index_type,
       id:    record[:id],
-      body:  record.except(:id, :ttl, :_timestamp),
+      body:  record.except(:id, :ttl, :timestamp),
     }
     prepared.merge!(ttl: record[:ttl]) if record[:ttl]
-    prepared.merge!(timestamp: record[:_timestamp]) if record[:_timestamp]
+    prepared.merge!(timestamp: record[:timestamp]) if record[:timestamp]
     prepared
   end
 

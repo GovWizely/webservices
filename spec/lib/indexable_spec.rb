@@ -20,15 +20,15 @@ describe Indexable do
   after { Object.send(:remove_const, :Mock) }
 
   describe '.prepare_record_for_indexing' do
-    context 'given a record with ttl and _timestamp settings' do
+    context 'given a record with ttl and timestamp settings' do
       include_context 'a working Mock model class'
       let(:now) { Time.now.to_i * 1000 }
       let(:record) do
-        { ttl:        '1d',
-          _timestamp: now,
-          foo:        'bar',
-          yin:        'yang',
-          id:         1337 }
+        { ttl:       '1d',
+          timestamp: now,
+          foo:       'bar',
+          yin:       'yang',
+          id:        1337 }
       end
       subject { Mock.send(:prepare_record_for_indexing, record) }
 
@@ -70,7 +70,7 @@ describe Indexable do
     end
 
     let(:docs_to_index) do
-      [{ title: 'foo', _timestamp: 2.days.ago.to_i * 1000 },
+      [{ title: 'foo', timestamp: 2.days.ago.to_i * 1000 },
        { title: 'bar' }]
     end
     let(:docs_expected) do

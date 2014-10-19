@@ -7,6 +7,8 @@ describe ScreeningList::SdnData do
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
+  it_behaves_like 'an importer which can purge old documents'
+
   describe '#import' do
     it 'loads special designated nationals from specified resource' do
       ScreeningList::Sdn.should_receive(:index) do |sdn|
