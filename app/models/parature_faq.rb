@@ -15,6 +15,10 @@ class ParatureFaq
 
   self.mappings = {
     parature_faq: {
+      _timestamp: {
+        enabled: true,
+        store:   true,
+      },
       dynamic:    false,
       properties: {
         question:    { type: 'string', analyzer: 'custom_analyzer' },
