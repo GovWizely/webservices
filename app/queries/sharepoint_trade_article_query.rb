@@ -62,7 +62,7 @@ class SharepointTradeArticleQuery < Query
   def generate_top_level_queries(json)
     multi_fields = %i(title content)
     json.child! { generate_multi_match(json, multi_fields, @q) } if @q
-    terms = %w(title short_title summary co       ntent keyword export_phases industries trade_regions trade_programs trade_initiatives)
+    terms = %w(title short_title summary content keyword export_phases industries trade_regions trade_programs trade_initiatives)
     terms.each do |term|
       json.child! { json.match { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
     end
