@@ -4,7 +4,9 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["title", "content"],
+            "fields": ["title", "short_title", "summary", "content", "keyword", "export_phases", "industries", "trade_regions",
+              "trade_programs", "trade_initiatives", "source_agencies", "source_business_units", "source_offices",
+              "geo_regions", "geo_subregions", "topics", "sub_topics"],
             "operator": "and",
             "query": "import"
           }

@@ -3,29 +3,18 @@
     "bool": {
       "must": [
         {
-          "nested": {
-            "path": "source_agencies",
-            "query": {
-              "bool": {
-                "must": [
-                  {
-                    "match": {
-                      "source_agencies.source_agency": "trade"
-                    }
-                  },
-                  {
-                    "match": {
-                      "source_agencies.source_business_units": "markets"
-                    }
-                  },
-                  {
-                    "match": {
-                      "source_agencies.source_offices": "director general"
-                    }
-                  }
-                ]
-              }
+          "match": {
+            "source_agencies": "trade"
+          }
+        },
+        {
+          "match": {
+            "source_business_units": "markets"
             }
+        },
+        {
+          "match": {
+            "source_offices": "director general"
           }
         }
       ]

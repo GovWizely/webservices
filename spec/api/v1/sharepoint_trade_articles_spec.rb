@@ -135,8 +135,8 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    context 'when source_agency or source_business_units or source_offices is specified' do
-      before { get search_path, { source_agency: 'trade', source_business_units: 'markets', source_offices: 'director general' }, v1_headers }
+    context 'when source_agencies or source_business_units or source_offices is specified' do
+      before { get search_path, { source_agencies: 'trade', source_business_units: 'markets', source_offices: 'director general' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -227,8 +227,8 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    context 'when topic or sub_topics is specified' do
-      before { get search_path, { topic: 'free trade', sub_topics: 'nafta' }, v1_headers }
+    context 'when topics or sub_topics is specified' do
+      before { get search_path, { topics: 'free trade', sub_topics: 'nafta' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -242,8 +242,8 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    context 'when geo_region or geo_subregion is specified' do
-      before { get search_path, { geo_region: 'asia', geo_subregion: 'east' }, v1_headers }
+    context 'when geo_regions or geo_subregion is specified' do
+      before { get search_path, { geo_regions: 'asia', geo_subregion: 'east' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

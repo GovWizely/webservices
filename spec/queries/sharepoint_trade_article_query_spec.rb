@@ -67,8 +67,8 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-    context 'when options include source_agency or source_business_units or source_offices' do
-      let(:query) { SharepointTradeArticleQuery.new(source_agency: 'trade', source_business_units: 'markets', source_offices: 'director general') }
+    context 'when options include source_agencies or source_business_units or source_offices' do
+      let(:query) { SharepointTradeArticleQuery.new(source_agencies: 'trade', source_business_units: 'markets', source_offices: 'director general') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_source_agencies_fields.json").read }
 
       it 'generates search body with queries' do
@@ -121,8 +121,8 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-    context 'when options include topic or subtopics' do
-      let(:query) { SharepointTradeArticleQuery.new(topic: 'free trade', sub_topics: 'nafta') }
+    context 'when options include topics or subtopics' do
+      let(:query) { SharepointTradeArticleQuery.new(topics: 'free trade', sub_topics: 'nafta') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_topics_fields.json").read }
 
       it 'generates search body with queries' do
@@ -130,8 +130,8 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-    context 'when options include geo_region or geo_subregion' do
-      let(:query) { SharepointTradeArticleQuery.new(geo_region: 'asia', geo_subregions: 'east') }
+    context 'when options include geo_regions or geo_subregion' do
+      let(:query) { SharepointTradeArticleQuery.new(geo_regions: 'asia', geo_subregions: 'east') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_geo_regions_fields.json").read }
 
       it 'generates search body with queries' do

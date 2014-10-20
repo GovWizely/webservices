@@ -75,43 +75,38 @@ class SharepointTradeArticleData
 
   def extract_source_agencies(article_info, article_hash)
     article_hash[:source_agencies] = []
+    article_hash[:source_business_units] = []
+    article_hash[:source_offices] = []
 
     article_info.xpath('//source_agencies/source_agency').each do |source_agency|
-      source_business_units = []
-      source_offices = extract_nodes(source_agency.xpath('//source_office'))
+      article_hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
 
       source_agency.xpath('source_business_unit').each do |source_business_unit|
-        source_business_units << source_business_unit.children.first.text
+        article_hash[:source_business_units] << source_business_unit.children.first.text
       end
-
-      source_agency_hash = {
-        source_agency:         source_agency.children.first.text,
-        source_business_units: source_business_units,
-        source_offices:        source_offices,
-      }
-      article_hash[:source_agencies] << source_agency_hash
+      article_hash[:source_agencies] << source_agency.children.first.text
     end
     article_hash
   end
 
   def extract_topics(article_info, article_hash)
     article_hash[:topics] = []
+    article_hash[:sub_topics] = []
 
     article_info.xpath('//tags//topics//topic').each do |topic|
-      sub_topics = extract_nodes(topic.xpath('//sub_topic'))
-      topic_hash = { topic: topic.children.first.text, sub_topics: sub_topics }
-      article_hash[:topics] << topic_hash
+      article_hash[:sub_topics] += extract_nodes(topic.xpath('//sub_topic'))
+      article_hash[:topics] << topic.children.first.text
     end
     article_hash
   end
 
   def extract_geo_regions(article_info, article_hash)
     article_hash[:geo_regions] = []
+    article_hash[:geo_subregions] = []
 
     article_info.xpath('//tags//geo_regions//geo_region').each do |geo_region|
-      geo_subregions = extract_nodes(geo_region.xpath('//geo_subregion'))
-      geo_region_hash = { geo_region: geo_region.children.first.text, geo_subregions: geo_subregions }
-      article_hash[:geo_regions] << geo_region_hash
+      article_hash[:geo_subregions] += extract_nodes(geo_region.xpath('//geo_subregion'))
+      article_hash[:geo_regions] << geo_region.children.first.text
     end
     article_hash
   end

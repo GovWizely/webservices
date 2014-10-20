@@ -71,26 +71,26 @@
   :export_phases:
   - Expand
   :source_agencies:
-  - :source_agency: International Trade Administration
-    :source_business_units:
-    - Global Markets
-    :source_offices:
-    - Deputy Director General
-    - Principal Deputy Assistant Secretary
+  - International Trade Administration
+  :source_business_units:
+  - Global Markets
+  :source_offices:
+  - Deputy Director General
+  - Principal Deputy Assistant Secretary
   :topics:
-  - :topic: Free Trade Agreements
-    :sub_topics:
-    - CAFTA-DR
-    - NAFTA
-    - U.S.-Australia Free Trade Agreement
-    - U.S.-Bahrain Free Trade Agreement
-    - U.S.-Chile Free Trade Agreemen
+  - Free Trade Agreements
+  :sub_topics:
+  - CAFTA-DR
+  - NAFTA
+  - U.S.-Australia Free Trade Agreement
+  - U.S.-Bahrain Free Trade Agreement
+  - U.S.-Chile Free Trade Agreemen
   :geo_regions:
-  - :geo_region: Asia
-    :geo_subregions:
-    - Asia Pacific
-    - Central Asia
-    - East Asia
+  - Asia
+  :geo_subregions:
+  - Asia Pacific
+  - Central Asia
+  - East Asia
 - :id: '117'
   :title: Advocacy and Dispute Resolution
   :short_title: Advocacy and Dispute Resolution
@@ -142,8 +142,12 @@
   :trade_initiatives: []
   :export_phases: []
   :source_agencies: []
+  :source_business_units: []
+  :source_offices: []
   :topics: []
+  :sub_topics: []
   :geo_regions: []
+  :geo_subregions: []
 - :id: '118'
   :title: ATA Carnet and Temporary Imports
   :short_title: ATA Carnet and Temporary Imports
@@ -287,8 +291,12 @@
   :trade_initiatives: []
   :export_phases: []
   :source_agencies: []
+  :source_business_units: []
+  :source_offices: []
   :topics: []
+  :sub_topics: []
   :geo_regions: []
+  :geo_subregions: []
 - :id: '119'
   :title: Catalog Exhibitions Help Put Your Products on the Map
   :short_title: Catalog Exhibitions Help Put Your Products on the Map
@@ -340,5 +348,9 @@
   :trade_initiatives: []
   :export_phases: []
   :source_agencies: []
+  :source_business_units: []
+  :source_offices: []
   :topics: []
+  :sub_topics: []
   :geo_regions: []
+  :geo_subregions: []
