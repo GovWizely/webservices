@@ -23,7 +23,7 @@ class SharepointTradeArticleData
     file_url:                 '//files',
     image_url:                '//images',
     url_html_source:          '//data//html',
-    url_xml_source:           '//data//xml'
+    url_xml_source:           '//data//xml',
   }.freeze
 
   MULTIPLE_XPATHS = {
@@ -32,7 +32,7 @@ class SharepointTradeArticleData
     trade_regions:     '//tags//trade_regions//trade_region',
     trade_programs:    '//tags//trade_programs//trade_programs',
     trade_initiatives: '//tags//trade_initiatives//trade_initiatives',
-    export_phases:     '//tags//export_phases//export_phase'
+    export_phases:     '//tags//export_phases//export_phase',
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -58,7 +58,6 @@ class SharepointTradeArticleData
     end
 
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
-    #File.open("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml", 'w'){|file| file.write(articles.to_yaml)}
     SharepointTradeArticle.index articles
   end
 
@@ -79,7 +78,7 @@ class SharepointTradeArticleData
 
     article_info.xpath('//source_agencies/source_agency').each do |source_agency|
       source_business_units = []
-      source_offices = extract_nodes( source_agency.xpath('//source_office') )
+      source_offices = extract_nodes(source_agency.xpath('//source_office'))
 
       source_agency.xpath('source_business_unit').each do |source_business_unit|
         source_business_units << source_business_unit.children.first.text
@@ -99,7 +98,7 @@ class SharepointTradeArticleData
     article_hash[:topics] = []
 
     article_info.xpath('//tags//topics//topic').each do |topic|
-      sub_topics = extract_nodes( topic.xpath('//sub_topic') )
+      sub_topics = extract_nodes(topic.xpath('//sub_topic'))
       topic_hash = { topic: topic.children.first.text, sub_topics: sub_topics }
       article_hash[:topics] << topic_hash
     end
@@ -110,7 +109,7 @@ class SharepointTradeArticleData
     article_hash[:geo_regions] = []
 
     article_info.xpath('//tags//geo_regions//geo_region').each do |geo_region|
-      geo_subregions = extract_nodes( geo_region.xpath('//geo_subregion') )
+      geo_subregions = extract_nodes(geo_region.xpath('//geo_subregion'))
       geo_region_hash = { geo_region: geo_region.children.first.text, geo_subregions: geo_subregions }
       article_hash[:geo_regions] << geo_region_hash
     end

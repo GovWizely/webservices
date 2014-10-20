@@ -30,7 +30,7 @@ describe SharepointTradeArticleQuery do
         JSON.parse(query.generate_search_body).should == search_body
       end
     end
- 
+
     context 'when options include summary' do
       let(:query) { SharepointTradeArticleQuery.new(summary: 'advocacy') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_summary.json").read }
@@ -122,7 +122,7 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include topic or subtopics' do
-      let(:query) { SharepointTradeArticleQuery.new(topic: 'free trade', sub_topics: 'nafta' ) }
+      let(:query) { SharepointTradeArticleQuery.new(topic: 'free trade', sub_topics: 'nafta') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_topics_fields.json").read }
 
       it 'generates search body with queries' do
@@ -131,7 +131,7 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include geo_region or geo_subregion' do
-      let(:query) { SharepointTradeArticleQuery.new(geo_region: 'asia', geo_subregions: 'east'  ) }
+      let(:query) { SharepointTradeArticleQuery.new(geo_region: 'asia', geo_subregions: 'east') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_geo_regions_fields.json").read }
 
       it 'generates search body with queries' do
@@ -157,7 +157,7 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-        context 'when options include trade_initiatives' do
+    context 'when options include trade_initiatives' do
       let(:query) { SharepointTradeArticleQuery.new(trade_initiatives: 'discover') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_trade_initiatives.json").read }
 
@@ -166,6 +166,14 @@ describe SharepointTradeArticleQuery do
       end
     end
 
+    context 'when options include q' do
+      let(:query) { SharepointTradeArticleQuery.new(q: 'import') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_q.json").read }
+
+      it 'generates search body with queries' do
+        JSON.parse(query.generate_search_body).should == search_body
+      end
+    end
 
   end
 end

@@ -28,21 +28,21 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    #context 'when q is specified' do
-    #  before { get search_path, { q: 'tpcc' }, v1_headers }
-    #  subject { response }
+    context 'when q is specified' do
+      before { get search_path, { q: 'import' }, v1_headers }
+      subject { response }
 
-    #  it_behaves_like 'a successful search request'
+      it_behaves_like 'a successful search request'
 
-    #  it 'returns parature faqs' do
-    #    json_response = JSON.parse(response.body, symbolize_names: true)
-    #    json_response[:total].should == 1
+      it 'returns sharepoint trade articles' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        json_response[:total].should == 1
 
-    #    results = json_response[:results]
-    #    results[0].should == expected_results[1]
+        results = json_response[:results]
+        results[0].should == expected_results[2]
 
-    #  end
-    #end
+      end
+    end
 
     context 'when title is specified' do
       before { get search_path, { title: 'ata' }, v1_headers }
@@ -258,7 +258,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_regions is specified' do
-      before { get search_path, { trade_regions: 'asia'}, v1_headers }
+      before { get search_path, { trade_regions: 'asia' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -273,7 +273,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_programs is specified' do
-      before { get search_path, { trade_programs: 'advisory'}, v1_headers }
+      before { get search_path, { trade_programs: 'advisory' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -288,7 +288,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_initiatives is specified' do
-      before { get search_path, { trade_initiatives: 'discover'}, v1_headers }
+      before { get search_path, { trade_initiatives: 'discover' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -301,8 +301,6 @@ describe 'Sharepoint Trade Article API V1' do
         results[0].should == expected_results[0]
       end
     end
-
-
 
   end
 
