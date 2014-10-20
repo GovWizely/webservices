@@ -5,7 +5,7 @@
     of key individuals representing China's Shale Gas Sector. The RTM will introduce
     the delegation to U.S. firms that export technology, services and products that
     can assist China in developing the country's shale gas resources. The reverse
-    trade mission will take place June 23 � July 3, 2014 and will include stops in
+    trade mission will take place June 23 July 3, 2014 and will include stops in
     Washington, D.C and Pittsburgh, PA. As part of its 11-day tour in the U.S., the
     Chinese delegation will brief U.S. companies on the status of the China shale
     gas industry in Houston on July 1, 2014 at the Omni Houston Hotel from 9 a.m.
@@ -43,7 +43,7 @@
     :state: ''
     :city: ''
     :venue: ''
-  :event_type: FIXME
+  :event_type: ''
   :industries:
   - Energy & Mining
   :contacts:
@@ -95,7 +95,7 @@
     :state: CA
     :city: San Francisco
     :venue: ''
-  :event_type: FIXME
+  :event_type: ''
   :industries:
   - Aviation Services
   :contacts:
@@ -130,7 +130,7 @@
     :state: IL
     :city: Chicago
     :venue: ''
-  :event_type: FIXME
+  :event_type: ''
   :industries:
   - Transportation Services
   :contacts:
@@ -166,7 +166,7 @@
     :state: TX
     :city: Houston
     :venue: ''
-  :event_type: FIXME
+  :event_type: ''
   :industries:
   - Energy & Mining
   :contacts:
@@ -212,7 +212,7 @@
     :state: PA
     :city: Philadelphia
     :venue: ''
-  :event_type: FIXME
+  :event_type: ''
   :industries:
   - Aviation Services
   :contacts:
