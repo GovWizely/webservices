@@ -95,7 +95,7 @@ describe TradeEvent::UstdaData do
         registration_title: "Event: African Leaders' Visit",
         url:                'http://www.ustda.gov/africanleadersvisits',
         event_name:         "African Leaders' Visit: Transport",
-        event_type:         'FIXME',
+        event_type:         '',
         start_date:         '2014-07-30',
         end_date:           '2014-08-01',
         cost:               nil,
