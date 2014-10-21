@@ -3,7 +3,7 @@ require 'pp'
 
 class SharepointTradeArticleData
   include Importer
-  ENDPOINT = '/Users/tmh/Desktop/articles/%d.xml'
+  ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/%d.xml"
 
   SINGLE_XPATHS = {
     id:                       '//id',
