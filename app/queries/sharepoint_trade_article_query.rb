@@ -1,14 +1,14 @@
 class SharepointTradeArticleQuery < Query
   SEARCH_TERMS = [
-    :title, :short_title, :summary, :creation_date_start, :creation_date_end,
+    :creation_date_start, :creation_date_end,
     :release_date_start, :release_date_end, :expiration_date_start, :expiration_date_end,
-    :content, :keyword, :export_phases, :industries, :trade_regions, :trade_programs,
+    :export_phases, :industries, :trade_regions, :trade_programs,
     :trade_initiatives, :countries, :source_agencies, :source_business_units,
     :source_offices, :topics, :sub_topics, :geo_regions, :geo_subregions, :q
   ]
 
   def initialize(options)
-    super(options)
+    super
     SEARCH_TERMS.each do |term|
       instance_variable_set("@#{term}", options[term].downcase) if options[term].present?
     end
@@ -16,12 +16,13 @@ class SharepointTradeArticleQuery < Query
   end
 
   def generate_query(json)
+    terms = %w(export_phases industries trade_regions trade_programs trade_initiatives
+               source_agencies source_business_units source_offices geo_regions geo_subregions topics sub_topics)
+    q_terms = %w(title short_title summary content keyword)
     json.query do
       json.bool do
         json.must do |_must_json|
-          terms = %w(title short_title summary content keyword export_phases industries trade_regions trade_programs
-                     trade_initiatives source_agencies source_business_units source_offices geo_regions geo_subregions topics sub_topics)
-          json.child! { generate_multi_match(json, terms, @q) } if @q
+          json.child! { generate_multi_match(json, q_terms + terms, @q) } if @q
           terms.each do |term|
             json.child! { json.match { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
           end
@@ -59,7 +60,7 @@ class SharepointTradeArticleQuery < Query
   end
 
   def has_query_options?
-    @title || @short_title || @summary || @content || @keyword || @export_phases || @industries \
+    @export_phases || @industries \
     || @trade_regions || @trade_programs || @trade_initiatives || @source_agencies || @source_business_units \
     || @source_offices || @topics || @sub_topics || @geo_regions || @geo_subregions || @q
   end

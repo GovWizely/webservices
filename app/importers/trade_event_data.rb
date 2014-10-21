@@ -31,7 +31,6 @@ class TradeEventData
 
   def initialize(resource = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020")
     @resource = resource
-    puts resource
   end
 
   def import

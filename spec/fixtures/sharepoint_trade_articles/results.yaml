@@ -8,41 +8,39 @@
   :release_date: 
   :expiration_date: 
   :evergreen: '0'
-  :content: " ​​​​​​​​​Once you've developed an international business plan and targeted
-    the best international market opportunities, the next step is to ensure that potential
-    customers and business partners recognize the existence, availability and benefits
-    of your company's products/services.     Google​   asdfa​   You can leverage the
-    credibility and influence of the U.S. Government and our vast global network of
-    international business experts, contacts and partners to increase your brand awareness
-    and market exposure in countries around the world.  Promote Your Products and
-    Services  Catalogs and on-line directories offer a relatively inexpensive way
-    for you to reach potential customers and business partners around the globe.  Advertise
-    in the U.S. Commerce Department's official export promotion magazine,Commercial
-    News USA (CNUSA). Distributed free of charge every other month via direct mail
-    and by U.S. embassies and consulates all over the world, CNUSA promotes the products
-    and services of U.S. companies.  Advertise inFUSE, the featured directory of U.S.
-    products onU.S. Commercial Servicewebsites around the world.Register for this
-    program.  Request a free company listingin The Export Yellow Pages, a comprehensive,
-    online directory referenced worldwide by the global trade community.  Exhibit
-    at Trade Fairs and Shows  Trade fairs and shows offer a good opportunity for you
-    company to introduce international buyers, distributors, or representatives to
-    your products and services.   Have us exhibit your product and service literature
-    for you  Save money by exhibiting alongside other U.S. companies  Meet with potential
-    buyers and partners   More about thecatalog exhibition service  Search for upcoming
-    trade shows and fairs supported by the U.S. Government  Organize a Promotional
-    Event  From product launches to technical seminars to cocktail receptions we can
-    help you organize a promotional event to reach a target audience of clients, potential
-    business partners or key decision-makers in markets around the world.  Request
-    assistance organizing a promotional event by contacting your localExport Assistance
-    Center. "
+  :content: " ​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​​Once you've developed an
+    international business plan and targeted the best international market opportunities,
+    the next step is to ensure that potential customers and business partners recognize
+    the existence, availability and benefits of your company's products/services.
+    \    Google​   asdfa​   You can leverage the credibility and influence of the
+    U.S. Government and our vast global network of international business experts,
+    contacts and partners to increase your brand awareness and market exposure in
+    countries around the world.  Promote Your Products and Services  Catalogs and
+    on-line directories offer a relatively inexpensive way for you to reach potential
+    customers and business partners around the globe.  Advertise in the U.S. Commerce
+    Department's official export promotion magazine,Commercial News USA (CNUSA). Distributed
+    free of charge every other month via direct mail and by U.S. embassies and consulates
+    all over the world, CNUSA promotes the products and services of U.S. companies.
+    \ Advertise inFUSE, the featured directory of U.S. products onU.S. Commercial
+    Servicewebsites around the world.Register for this program.  Request a free company
+    listingin The Export Yellow Pages, a comprehensive, online directory referenced
+    worldwide by the global trade community.  Exhibit at Trade Fairs and Shows  Trade
+    fairs and shows offer a good opportunity for you company to introduce international
+    buyers, distributors, or representatives to your products and services.   Have
+    us exhibit your product and service literature for you  Save money by exhibiting
+    alongside other U.S. companies  Meet with potential buyers and partners   More
+    about thecatalog exhibition service  Search for upcoming trade shows and fairs
+    supported by the U.S. Government  Organize a Promotional Event  From product launches
+    to technical seminars to cocktail receptions we can help you organize a promotional
+    event to reach a target audience of clients, potential business partners or key
+    decision-makers in markets around the world.  Request assistance organizing a
+    promotional event by contacting your localExport Assistance Center. "
   :keyword: 
   :seo_metadata_title: Advertising and Promotional Events for Exporters | Trade.gov
   :seo_metadata_description: Learn about tools to increase your brand awareness and
     market exposure in countries around the world.
   :seo_metadata_keyword: export, exporting, advertising, promotion
-  :trade_url: www2.trade.gov/116.htm
-  :file_url: 
-  :image_url: 
+  :trade_url: www2.export.gov/116.htm
   :url_html_source: http://informationportaldev/Data/Article/116.htm
   :url_xml_source: http://informationportaldev/Data/116.xml
   :industries:
@@ -91,6 +89,9 @@
   - Asia Pacific
   - Central Asia
   - East Asia
+  :file_url: []
+  :image_url:
+  - "/Files/ita_logo.png"
 - :id: '117'
   :title: Advocacy and Dispute Resolution
   :short_title: Advocacy and Dispute Resolution
@@ -131,8 +132,6 @@
   :seo_metadata_keyword: export, exporting, advocacy, dispute, resolution, assistance,
     government, trade, barrier, dispute, foreign, company, overcoming
   :trade_url: www2.trade.gov/117.htm
-  :file_url: 
-  :image_url: 
   :url_html_source: http://informationportaltest/Data/Article/117.htm
   :url_xml_source: http://informationportaltest/Data/117.xml
   :industries: []
@@ -148,6 +147,8 @@
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
+  :file_url: []
+  :image_url: []
 - :id: '118'
   :title: ATA Carnet and Temporary Imports
   :short_title: ATA Carnet and Temporary Imports
@@ -280,8 +281,6 @@
     to show their products in foreign markets for a limited period of time.
   :seo_metadata_keyword: ATA, Carnets, imports
   :trade_url: www2.trade.gov/118.htm
-  :file_url: 
-  :image_url: 
   :url_html_source: http://informationportaltest.dev.internal/Data/Article/118.htm
   :url_xml_source: http://informationportaltest.dev.internal/Data/118.xml
   :industries: []
@@ -297,6 +296,8 @@
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
+  :file_url: []
+  :image_url: []
 - :id: '119'
   :title: Catalog Exhibitions Help Put Your Products on the Map
   :short_title: Catalog Exhibitions Help Put Your Products on the Map
@@ -337,8 +338,6 @@
   :seo_metadata_keyword: export, exporting, promotion, exhibit, marketing, catalog,
     exhibitions, products, services, U.S. commercial service, international, markets
   :trade_url: www2.trade.gov/119.htm
-  :file_url: 
-  :image_url: 
   :url_html_source: http://informationportaltest/Data/Article/119.htm
   :url_xml_source: http://informationportaltest/Data/119.xml
   :industries: []
@@ -354,3 +353,5 @@
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
+  :file_url: []
+  :image_url: []

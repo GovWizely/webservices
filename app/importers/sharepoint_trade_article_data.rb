@@ -20,8 +20,6 @@ class SharepointTradeArticleData
     seo_metadata_description: '//seometadatadescription',
     seo_metadata_keyword:     '//seometadatakeyword',
     trade_url:                '//trade_url',
-    file_url:                 '//files',
-    image_url:                '//images',
     url_html_source:          '//data//html',
     url_xml_source:           '//data//xml',
   }.freeze
@@ -70,6 +68,19 @@ class SharepointTradeArticleData
     article_hash = extract_source_agencies(article_info, article_hash)
     article_hash = extract_topics(article_info, article_hash)
     article_hash = extract_geo_regions(article_info, article_hash)
+    article_hash = extract_urls(article_info, article_hash)
+    article_hash
+  end
+
+  def extract_urls(article_info, article_hash)
+    article_hash[:file_url] = []
+    article_hash[:image_url] = []
+    article_info.xpath('//images/image').each do |node|
+      article_hash[:image_url] << node.attribute('src').text
+    end
+    article_info.xpath('//files/file').each do |node|
+      article_hash[:file_url] << node.attribute('src').text
+    end
     article_hash
   end
 

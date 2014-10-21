@@ -4,14 +4,12 @@ class SharepointTradeArticle
   self.settings = {
     index: {
       analysis: {
-        analyzer:
-                  { custom_analyzer:              {
-                    tokenizer: 'standard',
-                    filter:    %w(standard asciifolding lowercase snowball) },
-                    description_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    %w(asciifolding lowercase) },
-            },
+        analyzer: {
+          custom_analyzer: {
+            tokenizer: 'standard',
+            filter:    %w(standard asciifolding lowercase snowball),
+          },
+        },
       },
     },
   }.freeze

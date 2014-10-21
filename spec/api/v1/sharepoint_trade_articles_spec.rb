@@ -44,51 +44,6 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    context 'when title is specified' do
-      before { get search_path, { title: 'ata' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
-
-        results = json_response[:results]
-        results.should include expected_results[2]
-      end
-    end
-
-    context 'when short_title is specified' do
-      before { get search_path, { short_title: 'ata' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
-
-        results = json_response[:results]
-        results.should include expected_results[2]
-      end
-    end
-
-    context 'when summary is specified' do
-      before { get search_path, { summary: 'advocacy' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
-
-        results = json_response[:results]
-        results.should include expected_results[1]
-      end
-    end
-
     context 'when creation_date_start or creation_date_end is specified' do
       before { get search_path, { creation_date_start: '2014-08-27', creation_date_end: '2014-08-28' }, v1_headers }
       subject { response }
@@ -147,37 +102,6 @@ describe 'Sharepoint Trade Article API V1' do
 
         results = json_response[:results]
         results.should include expected_results[0]
-      end
-    end
-
-    context 'when content is specified' do
-      before { get search_path, { content: 'foreign payment disputes' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 2
-
-        results = json_response[:results]
-        results[0].should == expected_results[1]
-        results[1].should == expected_results[2]
-      end
-    end
-
-    context 'when keyword is specified' do
-      before { get search_path, { keyword: 'dispute' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
-
-        results = json_response[:results]
-        results[0].should == expected_results[1]
       end
     end
 

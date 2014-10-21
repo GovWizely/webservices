@@ -13,33 +13,6 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-    context 'when options include title' do
-      let(:query) { SharepointTradeArticleQuery.new(title: 'ata') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_title.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
-    context 'when options include short_title' do
-      let(:query) { SharepointTradeArticleQuery.new(short_title: 'ata') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_short_title.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
-    context 'when options include summary' do
-      let(:query) { SharepointTradeArticleQuery.new(summary: 'advocacy') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_summary.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
     context 'when options include creation_date filter' do
       let(:query) { SharepointTradeArticleQuery.new(creation_date_start: '2014-08-27', creation_date_end: '2014-08-28') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/creation_date_filter.json").read }
@@ -70,24 +43,6 @@ describe SharepointTradeArticleQuery do
     context 'when options include source_agencies or source_business_units or source_offices' do
       let(:query) { SharepointTradeArticleQuery.new(source_agencies: 'trade', source_business_units: 'markets', source_offices: 'director general') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_source_agencies_fields.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
-    context 'when options include content' do
-      let(:query) { SharepointTradeArticleQuery.new(content: 'foreign payment disputes') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_content.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
-    context 'when options include keyword' do
-      let(:query) { SharepointTradeArticleQuery.new(keyword: 'dispute') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_keyword.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
