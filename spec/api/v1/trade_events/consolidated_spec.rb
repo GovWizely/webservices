@@ -96,11 +96,12 @@ describe 'Consolidated Trade Events API V1' do
     end
 
     context 'when industry is specified' do
-      let(:params) { { industry: 'DENTALS' } }
+      let(:params) { { industry: 'DENTALS mining' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
+      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "mining"'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(ITA) }
+        let(:sources) { %w(ITA USTDA) }
       end
     end
 
@@ -127,6 +128,14 @@ describe 'Consolidated Trade Events API V1' do
         it_behaves_like 'it contains all TradeEvent::Exim results'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(EXIM) }
+        end
+      end
+      context 'and is set to "USTDA"' do
+        let(:params) { { sources: 'USTDA', size: 100 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ustda results'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(USTDA) }
         end
       end
     end
