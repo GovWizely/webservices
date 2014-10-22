@@ -181,3 +181,8 @@ shared_examples 'it contains all TradeEvent::Ustda results that match countries 
   let(:expected) { (0..4).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
+shared_examples 'it contains all TradeEvent::Ustda results that match industry "mining"' do
+  let(:source) { :USTDA }
+  let(:expected) { [0, 3] }
+  it_behaves_like 'it contains all expected results of source'
+end
