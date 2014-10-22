@@ -16,13 +16,13 @@ class SharepointTradeArticleQuery < Query
   end
 
   def generate_query(json)
-    terms = %w(export_phases industries trade_regions trade_programs trade_initiatives
-               source_agencies source_business_units source_offices geo_regions geo_subregions topics sub_topics)
+    terms = %w(export_phases industries trade_regions trade_programs trade_initiatives 
+            source_agencies source_business_units source_offices geo_regions geo_subregions topics sub_topics)
     q_terms = %w(title short_title summary content keyword)
     json.query do
       json.bool do
         json.must do |_must_json|
-          json.child! { generate_multi_match(json, q_terms + terms, @q) } if @q
+          json.child! { generate_multi_match(json, q_terms+terms, @q) } if @q
           terms.each do |term|
             json.child! { json.match { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
           end
@@ -60,9 +60,9 @@ class SharepointTradeArticleQuery < Query
   end
 
   def has_query_options?
-    @export_phases || @industries \
-    || @trade_regions || @trade_programs || @trade_initiatives || @source_agencies || @source_business_units \
-    || @source_offices || @topics || @sub_topics || @geo_regions || @geo_subregions || @q
+    @export_phases || @industries || @trade_regions || @trade_programs || @trade_initiatives \
+    || @source_agencies || @source_business_units || @source_offices || @topics || @sub_topics\
+    || @geo_regions || @geo_subregions || @q
   end
 
   def has_filter_options?
