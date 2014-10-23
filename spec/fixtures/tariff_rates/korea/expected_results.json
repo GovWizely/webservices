@@ -15,7 +15,7 @@
         "product_type_id": "2",
         "pending_data": "false",
         "ag_id": "33",
-        "partner_name": "KP",
+        "partner_name": "KR",
         "reporter_name": "US",
         "staging_basket": "Immediate",
         "staging_basket": "Immediate",
@@ -23,7 +23,7 @@
         "num_mar_columns": "10",
         "partner_start_year": "2012",
         "reporter_start_year": "null",
-        "partner_agreement_name": "KP",
+        "partner_agreement_name": "KR",
         "reporter_agreement_name": "US",
         "partner_agreement_approved": "true",
         "reporter_agreement_approved": "null",
@@ -42,7 +42,7 @@
             "alt_2013": "2",
             "alt_2014": "3"
         },
-        "countries": ["US","KP"],
+        "countries": ["US","KR"],
         "source": "KOREA"
     }
 ]
