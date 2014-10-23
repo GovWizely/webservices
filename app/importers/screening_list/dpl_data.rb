@@ -9,7 +9,7 @@ module ScreeningList
 
     self.group_by = [:name, :beginning_date, :ending_date, :fr_citation]
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1007-dpl-txt'
+    ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
 
     COLUMN_HASH = {
       name:           :name,
