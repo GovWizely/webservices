@@ -5,9 +5,14 @@ require 'digest/md5'
 module ScreeningList
   class DplData
     include ::Importer
-    include ScreeningList::CanGroupRows
 
-    self.group_by = [:name, :beginning_date, :ending_date, :fr_citation]
+    include ::CanEnsureCsvHeaders
+    self.expected_csv_headers = %i(
+      action city country effective_date expiration_date fr_citation last_update
+      name postal_code standard_order state street_address)
+
+    include ScreeningList::CanGroupRows
+    self.group_by = %i(name beginning_date ending_date fr_citation)
 
     ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
 
@@ -35,6 +40,8 @@ module ScreeningList
     def import
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t")
+
+      ensure_expected_headers(rows.first)
 
       docs = group_rows(rows).map do |id, grouped|
         process_grouped_rows(id, grouped)

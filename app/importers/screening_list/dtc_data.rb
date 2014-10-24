@@ -4,10 +4,17 @@ module ScreeningList
   class DtcData
     include ::Importer
 
+    include ::CanEnsureCsvHeaders
+    self.expected_csv_headers = %i(
+      alias corp corrected_notice corrected_notice_date
+      date_of_birth__public_release debarred_party_full_name
+      debarred_party_given_names debarred_party_surnamecorporate_name eff_date
+      notice notice_date type)
+
     # We don't group source entries in this importer, but we want
     # to use the generate_id method brought in by this module.
     include ScreeningList::CanGroupRows
-    self.group_by = [:name, :start_date, :federal_register_notice]
+    self.group_by = %i(name start_date federal_register_notice)
 
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
@@ -18,6 +25,9 @@ module ScreeningList
     def import
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
+
+      ensure_expected_headers(rows.first)
+
       entries = rows.map { |row| process_row row.to_h }.compact
       model_class.index(entries)
     end
