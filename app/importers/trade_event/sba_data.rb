@@ -10,7 +10,6 @@ module TradeEvent
 
     def initialize(resource = ENDPOINT, options = {})
       @resource = resource
-      self.html_entities_coder = HTMLEntities.new
       self.reject_if_ends_before = options.fetch(:reject_if_ends_before, Date.current)
     end
 
@@ -61,7 +60,6 @@ module TradeEvent
       doc[:country] &&= lookup_country(doc[:country])
       doc[:state] &&= lookup_state(doc[:state]) rescue doc[:state]
 
-      doc[:description] = sanitize_description(doc[:description])
       doc[:industries] = [doc[:industries]].compact
       doc[:source] = model_class.source
       doc[:contacts] = extract_contacts(item)
@@ -70,7 +68,7 @@ module TradeEvent
 
       doc[:id] = generate_id(doc)
 
-      doc
+      sanitize_entry(doc)
     end
 
     DATETIME_XPATHS = {
@@ -94,10 +92,6 @@ module TradeEvent
     def extract_date_and_time(str)
       datetime = DateTime.parse(str)
       [datetime.to_date.iso8601, datetime.strftime('%H:%M')]
-    end
-
-    def sanitize_description(desc)
-      html_entities_coder.decode(Sanitize.clean(desc).squish)
     end
 
     def extract_contacts(item)
