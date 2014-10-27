@@ -20,7 +20,7 @@ class MarketResearchData
     'ccg1'  => 'Country Commercial Guide',
   }
 
-  def initialize(resource = 'http://buyusainfo.net/nextgen/ng.txt')
+  def initialize(resource = 'http://mr.export.gov/nextgen/ng.txt')
     @resource = resource
   end
 
@@ -41,7 +41,7 @@ class MarketResearchData
     entry[:expiration_date] = parse_date entry[:expiration_date]
     entry[:industries] = entry[:industries].present? ? str_to_a(entry[:industries]) : nil
     entry[:report_type] = detect_report_type entry[:report_type]
-    entry[:url] = "http://www.buyusainfo.net/docs/#{entry[:url]}" if entry[:url].present?
+    entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?
     entry
   end
 
