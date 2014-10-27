@@ -20,8 +20,6 @@ class SharepointTradeArticleData
     seo_metadata_description: '//seometadatadescription',
     seo_metadata_keyword:     '//seometadatakeyword',
     trade_url:                '//trade_url',
-    url_html_source:          '//data//html',
-    url_xml_source:           '//data//xml',
   }.freeze
 
   MULTIPLE_XPATHS = {
@@ -31,6 +29,8 @@ class SharepointTradeArticleData
     trade_programs:    '//tags//trade_programs//trade_programs',
     trade_initiatives: '//tags//trade_initiatives//trade_initiatives',
     export_phases:     '//tags//export_phases//export_phase',
+    url_html_source:   '//data//html',
+    url_xml_source:    '//data//xml',
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -50,7 +50,6 @@ class SharepointTradeArticleData
         next
       end
     end
-
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
     SharepointTradeArticle.index articles
   end

@@ -41,8 +41,6 @@
     market exposure in countries around the world.
   :seo_metadata_keyword: export, exporting, advertising, promotion
   :trade_url: www2.export.gov/116.htm
-  :url_html_source: http://informationportaldev/Data/Article/116.htm
-  :url_xml_source: http://informationportaldev/Data/116.xml
   :industries:
   - Aerospace & Defense
   - Agribusiness
@@ -68,6 +66,10 @@
   - Discover Global Markets
   :export_phases:
   - Expand
+  :url_html_source:
+  - http://informationportaldev/Data/Article/116.htm
+  :url_xml_source:
+  - http://informationportaldev/Data/116.xml
   :source_agencies:
   - International Trade Administration
   :source_business_units:
@@ -132,14 +134,16 @@
   :seo_metadata_keyword: export, exporting, advocacy, dispute, resolution, assistance,
     government, trade, barrier, dispute, foreign, company, overcoming
   :trade_url: www2.trade.gov/117.htm
-  :url_html_source: http://informationportaltest/Data/Article/117.htm
-  :url_xml_source: http://informationportaltest/Data/117.xml
   :industries: []
   :countries: []
   :trade_regions: []
   :trade_programs: []
   :trade_initiatives: []
   :export_phases: []
+  :url_html_source:
+  - http://informationportaltest/Data/Article/117.htm
+  :url_xml_source:
+  - http://informationportaltest/Data/117.xml
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
@@ -281,14 +285,16 @@
     to show their products in foreign markets for a limited period of time.
   :seo_metadata_keyword: ATA, Carnets, imports
   :trade_url: www2.trade.gov/118.htm
-  :url_html_source: http://informationportaltest.dev.internal/Data/Article/118.htm
-  :url_xml_source: http://informationportaltest.dev.internal/Data/118.xml
   :industries: []
   :countries: []
   :trade_regions: []
   :trade_programs: []
   :trade_initiatives: []
   :export_phases: []
+  :url_html_source:
+  - http://informationportaltest.dev.internal/Data/Article/118.htm
+  :url_xml_source:
+  - http://informationportaltest.dev.internal/Data/118.xml
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
@@ -338,14 +344,16 @@
   :seo_metadata_keyword: export, exporting, promotion, exhibit, marketing, catalog,
     exhibitions, products, services, U.S. commercial service, international, markets
   :trade_url: www2.trade.gov/119.htm
-  :url_html_source: http://informationportaltest/Data/Article/119.htm
-  :url_xml_source: http://informationportaltest/Data/119.xml
   :industries: []
   :countries: []
   :trade_regions: []
   :trade_programs: []
   :trade_initiatives: []
   :export_phases: []
+  :url_html_source:
+  - http://informationportaltest/Data/Article/119.htm
+  :url_xml_source:
+  - http://informationportaltest/Data/119.xml
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
