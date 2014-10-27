@@ -47,13 +47,12 @@ module TradeEvent
 
     def process_event_info(event_info)
       event_hash = extract_fields(event_info, XPATHS)
-      event_hash[:description] = Sanitize.clean(event_hash[:description], whitespace_elements: {})
       event_hash[:start_date] = parse_american_date(event_hash[:start_date])
       event_hash[:end_date] = event_hash[:end_date].present? ? parse_american_date(event_hash[:end_date]) : event_hash[:start_date]
       event_hash[:country] = nil
       event_hash[:industries] = []
       event_hash[:source] = model_class.source
-      event_hash
+      sanitize_entry(event_hash)
     end
   end
 end

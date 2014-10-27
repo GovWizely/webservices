@@ -96,6 +96,11 @@ describe Importer do
     subject { MockData.new.sanitize_entry(hash) }
     let(:hash) { { one: nil, two: ' ', three: ' f ', four: 'o', five: [' o', 'b '] } }
     it { is_expected.to eq(one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']) }
+
+    context 'with HTML in field values' do
+      let(:hash) { { one: '<p id="one">One...</p>', two: ' &amp; two'} }
+      it { is_expected.to eq(one: 'One...', two: '& two') }
+    end
   end
 
   describe '#model_class' do
