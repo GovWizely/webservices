@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe SharepointTradeArticleData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/sharepoint_trade_articles" }
-  let(:resource) { "#{fixtures_dir}/articles/%d.xml" }
+  let(:resource) { "#{fixtures_dir}/articles/*" }
   let(:importer) { SharepointTradeArticleData.new(resource) }
 
   describe '#import' do

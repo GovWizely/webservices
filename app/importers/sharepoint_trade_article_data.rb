@@ -3,7 +3,7 @@ require 'pp'
 
 class SharepointTradeArticleData
   include Importer
-  ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/%d.xml"
+  ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
   SINGLE_XPATHS = {
     id:                       '//id',
@@ -34,24 +34,20 @@ class SharepointTradeArticleData
   }.freeze
 
   def initialize(resource = ENDPOINT)
-    @resource = resource
+    @resources = Dir[resource]
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
-    id = 116
     data = []
 
-    while id <= 119
+    @resources.each do |resource|
       begin
-        resource = @resource % id
         article = Nokogiri::XML(open(resource))
         article = extract_article_fields(article)
         data << article
       rescue
         next
-      ensure
-        id += 1
       end
     end
 

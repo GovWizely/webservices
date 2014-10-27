@@ -60,13 +60,13 @@ class SharepointTradeArticleQuery < Query
   end
 
   def has_query_options?
-    @export_phases || @industries || @trade_regions || @trade_programs || @trade_initiatives \
-    || @source_agencies || @source_business_units || @source_offices || @topics || @sub_topics\
-    || @geo_regions || @geo_subregions || @q
+    @export_phases || @industries || @trade_regions || @trade_programs || @trade_initiatives ||
+    @source_agencies || @source_business_units || @source_offices || @topics || @sub_topics ||
+    @geo_regions || @geo_subregions || @q
   end
 
   def has_filter_options?
-    @creation_date_start || @creation_date_end || @release_date_start || @release_date_end \
-    || @expiration_date_start || @expiration_date_end || @countries
+    @creation_date_start || @creation_date_end || @release_date_start || @release_date_end ||
+    @expiration_date_start || @expiration_date_end || @countries
   end
 end
