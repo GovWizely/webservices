@@ -5,7 +5,7 @@ class SharepointTradeArticleData
   include Importer
   ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
-  SINGLE_XPATHS = {
+  SINGLE_VALUE_XPATHS = {
     id:                       '//id',
     title:                    '//title',
     short_title:              '//short_title',
@@ -22,7 +22,7 @@ class SharepointTradeArticleData
     trade_url:                '//trade_url',
   }.freeze
 
-  MULTIPLE_XPATHS = {
+  MULTI_VALUE_XPATHS = {
     industries:        '//tags//industries//industry',
     countries:         '//tags//countries//country',
     trade_regions:     '//tags//trade_regions//trade_region',
@@ -51,6 +51,7 @@ class SharepointTradeArticleData
       end
     end
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
+    #File.open("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml", 'w') {|f| f.write(articles.to_yaml)}
     SharepointTradeArticle.index articles
   end
 
@@ -58,8 +59,8 @@ class SharepointTradeArticleData
 
   def extract_article_fields(article)
     article_info = article.xpath('//article')
-    article_hash = extract_fields(article_info, SINGLE_XPATHS)
-    article_hash.merge! extract_multi_valued_fields(article_info, MULTIPLE_XPATHS)
+    article_hash = extract_fields(article_info, SINGLE_VALUE_XPATHS)
+    article_hash.merge! extract_multi_valued_fields(article_info, MULTI_VALUE_XPATHS)
     article_hash = extract_source_agencies(article_info, article_hash)
     article_hash = extract_topics(article_info, article_hash)
     article_hash = extract_geo_regions(article_info, article_hash)
@@ -123,6 +124,30 @@ class SharepointTradeArticleData
     article[:creation_date] &&= Date.strptime(article[:creation_date], '%m/%d/%Y').to_s
     article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
     article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
+    article = remove_duplicate_values(article)
+    article = replace_nulls(article)
     article
+  end
+
+  def remove_duplicate_values(hash)
+    hash.each do |k, v|
+      if v.class == Array
+        v.uniq!
+      end
+    end
+    hash
+  end
+
+  def replace_nulls(hash)
+    hash.each do |k, v|
+      if v == nil && is_date?(k) == false
+        hash[k] = ""
+      end
+    end
+  end
+
+  def is_date?(key)
+    date_keys = [:creation_date, :release_date, :expiration_date]
+    date_keys.include?(key)
   end
 end
