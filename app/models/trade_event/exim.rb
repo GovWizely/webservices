@@ -1,7 +1,7 @@
 module TradeEvent
   class Exim
     extend ::Indexable
-    include Mappable
+    include TradeEvent::Mappable
     self.source = 'EXIM'
   end
 end

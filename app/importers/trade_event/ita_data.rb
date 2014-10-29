@@ -2,7 +2,7 @@ require 'open-uri'
 
 module TradeEvent
   class ItaData
-    include Importer
+    include ::Importer
 
     SINGLE_VALUED_XPATHS = {
       city:               './/CITY',
