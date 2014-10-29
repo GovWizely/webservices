@@ -65,8 +65,8 @@ module TariffRate
       entry = sanitize_entry(remap_keys COLUMN_HASH, row)
       entry[:countries] = ['US','KR']
       entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note], whitespace_elements: {})
-      entry[:annual_rates] = rate_by_year
-      entry[:alt_annual_rates] = alt_rate_by_year
+      entry[:annual_rates] = rate_by_year.to_a
+      entry[:alt_annual_rates] = alt_rate_by_year.to_a
 
       country_names = [:partner_name, :reporter_name, :partner_agreement_name, :reporter_agreement_name]
       country_names.each do |name|
