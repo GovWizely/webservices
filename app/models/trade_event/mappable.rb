@@ -13,8 +13,11 @@ module TradeEvent
       }.freeze
 
       klass.mappings = {
-        klass.to_s.typeize => {
-          _ttl:       { enabled: true },
+        klass.name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
           properties: {
             cost:               { type: 'float' },
             country:            { type: 'string', analyzer: 'keyword' },
