@@ -3,6 +3,8 @@ require 'spec_helper'
 describe ItaOfficeLocationData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_office_locations" }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     context 'when importing domestic data' do
       let(:domestic_resource) { "#{fixtures_dir}/odo.xml" }

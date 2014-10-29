@@ -40,7 +40,7 @@ module ScreeningList
         process_grouped_rows(id, grouped)
       end
 
-      self.class.model_class.index(docs)
+      model_class.index(docs)
     end
 
     private
@@ -49,7 +49,7 @@ module ScreeningList
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
       doc[:id] = id
-      doc[:source] = self.class.model_class.source
+      doc[:source] = model_class.source
       doc[:source_list_url] =
         'http://www.bis.doc.gov/index.php/the-denied-persons-list'
       doc[:source_information_url] =

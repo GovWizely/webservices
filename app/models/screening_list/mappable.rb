@@ -19,7 +19,11 @@ module ScreeningList
       }.freeze
 
       klass.mappings = {
-        klass.to_s.typeize => {
+        klass.name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
           properties: {
             id:                      { type: 'integer', index: :not_analyzed, include_in_all: false },
 

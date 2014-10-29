@@ -6,6 +6,8 @@ describe TradeArticleData do
   let(:importer) { TradeArticleData.new(fixtures_file) }
   let(:trade_articles_hash) { YAML.load_file("#{fixtures_dir}/trade_articles.yaml") }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     it 'loads trade articles from specified resource' do
       TradeArticle.should_receive(:index) do |trade_articles|

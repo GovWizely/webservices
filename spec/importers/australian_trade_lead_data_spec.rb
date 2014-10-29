@@ -6,6 +6,8 @@ describe AustralianTradeLeadData do
   let(:importer) { AustralianTradeLeadData.new(fixtures_file) }
   let(:trade_leads_hash) { YAML.load_file("#{fixtures_dir}/trade_leads.yaml") }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     it 'loads trade leads from specified resource' do
       AustralianTradeLead.should_receive(:index) do |trade_leads|

@@ -5,6 +5,8 @@ describe CanadaLeadData do
   let(:resource)     { "#{fixtures_dir}/canada_leads.csv" }
   let(:importer)     { CanadaLeadData.new(resource) }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     it 'loads leads from specified resource' do
       CanadaLead.should_receive(:index) do |canada_leads|

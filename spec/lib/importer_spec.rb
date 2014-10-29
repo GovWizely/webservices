@@ -1,8 +1,42 @@
 require 'spec_helper'
 
 describe Importer do
-  class MockImporter
-    include Importer
+  before do
+    class Mock
+      extend Indexable
+      self.mappings = {
+        name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
+        },
+      }
+    end
+
+    class MockData
+      include Importer
+      def initialize(docs = nil)
+        @docs = docs
+      end
+
+      def import
+        model_class.index(@docs)
+      end
+    end
+
+    class MockQuery < Query
+      def generate_search_body
+        {}
+      end
+    end
+
+    Mock.recreate_index
+  end
+
+  after do
+    Object.send(:remove_const, :Mock)
+    Object.send(:remove_const, :MockData)
   end
 
   describe '#lookup_country' do
@@ -20,13 +54,13 @@ describe Importer do
                        'St. Lucia',
                        'vietnam']
       country_names.each do |country_name|
-        MockImporter.new.lookup_country(country_name).should_not be_nil
+        MockData.new.lookup_country(country_name).should_not be_nil
       end
     end
   end
 
   describe '#parse_date' do
-    subject { MockImporter.new.parse_date(date_str) }
+    subject { MockData.new.parse_date(date_str) }
 
     context 'when given a parsable string' do
       let(:date_str) { '20 May 1954' }
@@ -44,8 +78,8 @@ describe Importer do
     end
   end
 
-  describe '#parse_date' do
-    subject { MockImporter.new.parse_american_date(date_str) }
+  describe '#parse_american_date' do
+    subject { MockData.new.parse_american_date(date_str) }
 
     context 'when given a parsable string' do
       let(:date_str) { '5/6/1999' }
@@ -59,9 +93,42 @@ describe Importer do
   end
 
   describe '#sanitize_entry' do
-    subject { MockImporter.new.sanitize_entry(hash) }
+    subject { MockData.new.sanitize_entry(hash) }
     let(:hash) { { one: nil, two: ' ', three: ' f ', four: 'o', five: [' o', 'b '] } }
     it { should eq(one: nil, two: nil, three: 'f', four: 'o', five: [' o', 'b ']) }
   end
 
+  describe '#model_class' do
+    subject { MockData.new.model_class }
+    it { should eq Mock }
+  end
+
+  describe '#import_then_purge_old' do
+    let(:batch_1) do
+      [{ id: 1, content: 'foo' },
+       { id: 2, content: 'bar' }]
+    end
+    let(:batch_2) do
+      [{ id: 1, content: 'foo [updated]' },
+       { id: 3, content: 'baz' }]
+    end
+    let(:batch_3) do
+      [{ id: 3, content: 'baz [updated]' }]
+    end
+
+    it 'purges correct documents' do
+      MockData.new(batch_1).import_then_purge_old
+      expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
+
+      MockData.new(batch_2).import_then_purge_old
+      expect(stored_docs).to match_array(batch_2.map { |d| d.except(:id) })
+
+      MockData.new(batch_3).import_then_purge_old
+      expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
+    end
+
+    def stored_docs
+      Mock.search_for({})[:hits].map { |h| h['_source'].deep_symbolize_keys }
+    end
+  end
 end

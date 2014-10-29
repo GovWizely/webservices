@@ -32,30 +32,63 @@ module Indexable
   end
 
   def index(records)
-    records.each do |record|
-      hash = { index: index_name, type: index_type, id: record[:id], body: record.except(:id, :ttl) }
-      hash.merge!(ttl: record[:ttl]) if record[:ttl]
-      ES.client.index(hash)
-    end
-    ES.client.indices.refresh index: index_name
+    records.each { |record| ES.client.index(prepare_record_for_indexing(record)) }
+    ES.client.indices.refresh(index: index_name)
+
     Rails.logger.info "Imported #{records.size} entries to index #{index_name}"
   end
 
   def search_for(options)
     klass = "#{name}Query".constantize
-    query = klass.new options
+    query = klass.new(options)
     hits = ES.client.search(
-        index: index_name,
-        type:  index_type,
-        body:  query.generate_search_body,
-        from:  query.offset,
-        size:  query.size,
-        sort:  query.sort)['hits'].deep_symbolize_keys
+      index: index_name,
+      type:  index_type,
+      body:  query.generate_search_body,
+      from:  query.offset,
+      size:  query.size,
+      sort:  query.sort)['hits'].deep_symbolize_keys
     hits[:offset] = query.offset
     hits.deep_symbolize_keys
   end
 
+  def purge_old(before_time)
+    fail 'This model is unable to purge old documents' unless can_purge_old?
+    body = {
+      query: {
+        filtered: {
+          filter: {
+            range: {
+              _timestamp: {
+                lt: (before_time.to_f * 1000.0).to_i,
+              },
+            },
+          },
+        },
+      },
+    }
+
+    ES.client.delete_by_query(index: index_name, body: body)
+  end
+
+  def can_purge_old?
+    timestamp_field = mappings[name.typeize][:_timestamp]
+    timestamp_field && timestamp_field[:enabled] && timestamp_field[:store]
+  end
+
   private
+
+  def prepare_record_for_indexing(record)
+    prepared = {
+      index: index_name,
+      type:  index_type,
+      id:    record[:id],
+      body:  record.except(:id, :ttl, :timestamp),
+    }
+    prepared.merge!(ttl: record[:ttl]) if record[:ttl]
+    prepared.merge!(timestamp: record[:timestamp]) if record[:timestamp]
+    prepared
+  end
 
   def assign_index_name
     self.index_name =

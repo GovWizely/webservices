@@ -4,6 +4,6 @@ class String
   end
 
   def typeize
-    indexize.singularize
+    indexize.singularize.to_sym
   end
 end

@@ -63,13 +63,18 @@ module Importer
     Date.strptime(date_str, '%m/%d/%Y').iso8601 rescue nil
   end
 
-  def self.included(base)
-    base.class_eval do
-      class << self
-        def model_class
-          name.sub(/Data$/, '').constantize
-        end
-      end
-    end
+  def model_class
+    self.class.name.sub(/Data$/, '').constantize
+  end
+
+  def import_then_purge_old
+    fail 'Underlying model is unable to purge old documents' unless can_purge_old?
+    start_time = Time.now
+    import
+    model_class.purge_old(start_time)
+  end
+
+  def can_purge_old?
+    model_class.can_purge_old?
   end
 end

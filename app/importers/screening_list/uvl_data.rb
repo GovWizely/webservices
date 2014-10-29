@@ -27,7 +27,7 @@ module ScreeningList
         process_grouped_rows(id, grouped)
       end
 
-      self.class.model_class.index(docs)
+      model_class.index(docs)
     end
 
     private
@@ -36,7 +36,7 @@ module ScreeningList
       doc = {
         name:                   rows.first[:name],
         id:                     id,
-        source:                 self.class.model_class.source,
+        source:                 model_class.source,
         source_list_url:        'http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html',
         source_information_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list',
       }

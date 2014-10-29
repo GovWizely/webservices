@@ -5,6 +5,8 @@ describe TradeEventData do
   let(:resource) { "#{fixtures_dir}/trade_events.xml" }
   let(:importer) { TradeEventData.new(resource) }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     let(:trade_event_hash) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 

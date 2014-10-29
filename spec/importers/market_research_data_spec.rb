@@ -5,6 +5,8 @@ describe MarketResearchData do
   let(:resource) { "#{fixtures_dir}/market_researches.txt" }
   let(:importer) { MarketResearchData.new(resource) }
 
+  it_behaves_like 'an importer which cannot purge old documents'
+
   describe '#import' do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/market_researches.yaml") }
 
