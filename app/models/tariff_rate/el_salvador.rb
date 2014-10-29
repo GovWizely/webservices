@@ -1,7 +1,7 @@
 module TariffRate
   class ElSalvador
     extend ::Indexable
-    include Mappable
+    include TariffRate::Mappable
     self.source = 'EL_SALVADOR'
   end
 end

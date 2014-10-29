@@ -51,4 +51,16 @@ namespace :ita do
         ScreeningList::Ssi
         ScreeningList::Uvl )
   end
+
+  desc 'Recreate then import all Tariff Rate indices'
+  task :recreate_then_import_tariff_rate_indices => :environment do
+    %w( TariffRate::Australia
+        TariffRate::CostaRica
+        TariffRate::ElSalvador
+        TariffRate::Korea
+      ).each do |class_name|
+      class_name.constantize.recreate_index
+      import_data(class_name)
+    end
+  end
 end

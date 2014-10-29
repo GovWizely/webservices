@@ -48,7 +48,7 @@ module TariffRate
       Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
       entries = rows.map { |row| process_row row.to_h }.compact
-      self.class.model_class.index(entries)
+      model_class.index(entries)
     end
 
     private
@@ -73,7 +73,7 @@ module TariffRate
         entry[name] = lookup_country(entry[name])
       end
 
-      entry[:source] = self.class.model_class.source
+      entry[:source] = model_class.source
       entry
     end
   end

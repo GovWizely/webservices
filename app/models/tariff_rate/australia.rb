@@ -1,7 +1,7 @@
 module TariffRate
   class Australia
     extend ::Indexable
-    include Mappable
+    include TariffRate::Mappable
     self.source = 'AUSTRALIA'
   end
 end
