@@ -1,7 +1,7 @@
 module TradeEvent
   class Ita
     extend ::Indexable
-    include Mappable
+    include TradeEvent::Mappable
     self.source = 'ITA'
   end
 end

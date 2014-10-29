@@ -2,7 +2,7 @@ require 'open-uri'
 
 module TradeEvent
   class SbaData
-    include Importer
+    include ::Importer
 
     attr_accessor :html_entities_coder, :reject_if_ends_before
 
