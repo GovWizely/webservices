@@ -8,6 +8,8 @@ describe TradeEvent::EximData do
                         reject_if_ends_before: Date.parse('2013-01-11'))
   end
 
+  it_behaves_like 'an importer which can purge old documents'
+
   describe '#import' do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 

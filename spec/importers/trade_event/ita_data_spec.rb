@@ -5,6 +5,8 @@ describe TradeEvent::ItaData do
   let(:resource) { "#{fixtures_dir}/trade_events.xml" }
   let(:importer) { described_class.new(resource) }
 
+  it_behaves_like 'an importer which can purge old documents'
+
   describe '#import' do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 

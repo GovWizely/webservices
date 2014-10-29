@@ -5,6 +5,8 @@ describe TradeEvent::UstdaData do
   let(:resource)     { "#{fixtures_dir}/events.csv" }
   let(:importer)     { TradeEvent::UstdaData.new(resource) }
 
+  it_behaves_like 'an importer which can purge old documents'
+
   describe '#import' do
     it 'loads events from specified resource' do
       TradeEvent::Ustda.should_receive(:index) do |ustda_events|
