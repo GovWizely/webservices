@@ -3,6 +3,7 @@ require 'pp'
 
 class SharepointTradeArticleData
   include Importer
+  include SharepointHelpers
   ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
   SINGLE_VALUE_XPATHS = {
@@ -51,7 +52,6 @@ class SharepointTradeArticleData
       end
     end
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
-    #File.open("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml", 'w') {|f| f.write(articles.to_yaml)}
     SharepointTradeArticle.index articles
   end
 
@@ -68,86 +68,14 @@ class SharepointTradeArticleData
     article_hash
   end
 
-  def extract_urls(article_info, article_hash)
-    article_hash[:file_url] = []
-    article_hash[:image_url] = []
-    article_info.xpath('//images/image').each do |node|
-      article_hash[:image_url] << node.attribute('src').text
-    end
-    article_info.xpath('//files/file').each do |node|
-      article_hash[:file_url] << node.attribute('src').text
-    end
-    article_hash
-  end
-
-  def extract_source_agencies(article_info, article_hash)
-    article_hash[:source_agencies] = []
-    article_hash[:source_business_units] = []
-    article_hash[:source_offices] = []
-
-    article_info.xpath('//source_agencies/source_agency').each do |source_agency|
-      article_hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
-
-      source_agency.xpath('source_business_unit').each do |source_business_unit|
-        article_hash[:source_business_units] << source_business_unit.children.first.text
-      end
-      article_hash[:source_agencies] << source_agency.children.first.text
-    end
-    article_hash
-  end
-
-  def extract_topics(article_info, article_hash)
-    article_hash[:topics] = []
-    article_hash[:sub_topics] = []
-
-    article_info.xpath('//tags//topics//topic').each do |topic|
-      article_hash[:sub_topics] += extract_nodes(topic.xpath('//sub_topic'))
-      article_hash[:topics] << topic.children.first.text
-    end
-    article_hash
-  end
-
-  def extract_geo_regions(article_info, article_hash)
-    article_hash[:geo_regions] = []
-    article_hash[:geo_subregions] = []
-
-    article_info.xpath('//tags//geo_regions//geo_region').each do |geo_region|
-      article_hash[:geo_subregions] += extract_nodes(geo_region.xpath('//geo_subregion'))
-      article_hash[:geo_regions] << geo_region.children.first.text
-    end
-    article_hash
-  end
-
   def process_article_info(article)
     article[:countries] = article[:countries].map { |country| lookup_country(country) }.compact
     article[:content] &&= Sanitize.clean(article[:content])
     article[:creation_date] &&= Date.strptime(article[:creation_date], '%m/%d/%Y').to_s
     article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
     article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
-    article = remove_duplicate_values(article)
+    article = remove_duplicates(article)
     article = replace_nulls(article)
     article
-  end
-
-  def remove_duplicate_values(hash)
-    hash.each do |k, v|
-      if v.class == Array
-        v.uniq!
-      end
-    end
-    hash
-  end
-
-  def replace_nulls(hash)
-    hash.each do |k, v|
-      if v == nil && is_date?(k) == false
-        hash[k] = ""
-      end
-    end
-  end
-
-  def is_date?(key)
-    date_keys = [:creation_date, :release_date, :expiration_date]
-    date_keys.include?(key)
   end
 end
