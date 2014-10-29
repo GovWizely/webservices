@@ -5,7 +5,7 @@ require 'digest/md5'
 module ScreeningList
   class DplData
     include ::Importer
-    include CanGroupRows
+    include ScreeningList::CanGroupRows
 
     self.group_by = [:name, :beginning_date, :ending_date, :fr_citation]
 

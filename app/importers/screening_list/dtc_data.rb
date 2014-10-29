@@ -6,7 +6,7 @@ module ScreeningList
 
     # We don't group source entries in this importer, but we want
     # to use the generate_id method brought in by this module.
-    include CanGroupRows
+    include ScreeningList::CanGroupRows
     self.group_by = [:name, :start_date, :federal_register_notice]
 
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
