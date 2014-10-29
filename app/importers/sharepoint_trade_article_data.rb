@@ -1,5 +1,4 @@
 require 'open-uri'
-require 'pp'
 
 class SharepointTradeArticleData
   include Importer
