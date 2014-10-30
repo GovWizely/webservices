@@ -4,9 +4,9 @@ describe 'FTA Korea Tariff Rates API V1' do
   include_context 'TariffRate::Korea data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
-  describe 'GET /consolidated_tariff_rate/korea/search' do
+  describe 'GET /tariff_rates/korea/search' do
     let(:params) { {} }
-    before { get '/consolidated_tariff_rate/korea/search', params, v1_headers }
+    before { get '/tariff_rates/korea/search', params, v1_headers }
 
     context 'when search parameters are empty' do
       subject { response }

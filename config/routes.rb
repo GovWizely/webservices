@@ -23,12 +23,11 @@ Webservices::Application.routes.draw do
       end
     end
 
-    scope '/consolidated_tariff_rate' do
+    scope '/tariff_rates' do
       get '/search', to: 'tariff_rates/consolidated#search'
-      get '/australia/search', to: 'tariff_rates/australia#search'
-      get '/costa_rica/search', to: 'tariff_rates/costa_rica#search'
-      get '/el_salvador/search', to: 'tariff_rates/el_salvador#search'
-      get '/korea/search', to: 'tariff_rates/korea#search'
+      %w(australia costa_rica el_salvador korea).each do |source|
+        get "/#{source}/search", to: "tariff_rates/#{source}#search"
+      end
     end
   end
 end

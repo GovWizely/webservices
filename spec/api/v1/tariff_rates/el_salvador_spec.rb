@@ -4,9 +4,9 @@ describe 'FTA El Salvador Tariff Rates API V1' do
   include_context 'TariffRate::ElSalvador data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
-  describe 'GET /consolidated_tariff_rate/el_salvador/search' do
+  describe 'GET /tariff_rates/el_salvador/search' do
     let(:params) { {} }
-    before { get '/consolidated_tariff_rate/el_salvador/search', params, v1_headers }
+    before { get '/tariff_rates/el_salvador/search', params, v1_headers }
 
     context 'when search parameters are empty' do
       subject { response }
