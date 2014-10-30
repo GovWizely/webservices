@@ -8,8 +8,6 @@
               "registration_title",
               "description",
               "event_name",
-              "industries",
-              "city",
               "venues.city",
               "venues.state",
               "venues.country",
@@ -18,7 +16,7 @@
               "contacts.person_title"
             ],
             "operator": "and",
-            "query": "workboat"
+            "query": "Wichita"
           }
         }
       ]
