@@ -17,7 +17,7 @@ class ParatureFaqData
   ENDPOINT = "https://g1.parature.com/api/v1/28023/28026/Article/%d/?_token_=#{ENV['PARATURE_API_ACCESS_TOKEN']}"
 
   def initialize(resource = ENDPOINT)
-    @resource = resource
+    @resource = "#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml"
     @folder_source = "#{Rails.root}/data/parature_faqs/folders.csv"
   end
 
@@ -48,7 +48,7 @@ class ParatureFaqData
     end
 
     faqs = data.map { |faq_hash| process_faq_info(faq_hash) }.compact
-
+    #File.open("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml", 'a') {|file| file.write(faqs.to_yaml)}
     ParatureFaq.index faqs
   end
 
@@ -69,6 +69,7 @@ class ParatureFaqData
 
     faq[:answer] &&= Nokogiri::HTML.fragment(faq[:answer]).inner_text.squish
     faq[:answer] &&= strip_nonascii(faq[:answer])
+    faq[:question] &&= strip_nonascii(faq[:question])
     faq[:update_date] &&= Date.parse(faq[:update_date]).to_s
     faq
   end
