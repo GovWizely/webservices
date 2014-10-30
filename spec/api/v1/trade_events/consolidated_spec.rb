@@ -45,6 +45,14 @@ describe 'Consolidated Trade Events API V1' do
           let(:sources) { %w(EXIM) }
         end
       end
+      context 'and is "Wichita"' do
+        let(:params) { { q: 'Wichita' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match "Wichita"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(USTDA) }
+        end
+      end
       context 'and is "aeronautical"' do
         let(:params) { { q: 'aeronautical' } }
         it_behaves_like 'a successful search request'

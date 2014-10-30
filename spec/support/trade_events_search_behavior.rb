@@ -31,7 +31,7 @@ end
 
 shared_examples 'it contains all TradeEvent::Ita results that match "international"' do
   let(:source) { :ITA }
-  let(:expected) { [2, 3] }
+  let(:expected) { [1, 2, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -165,6 +165,12 @@ shared_examples 'it contains all TradeEvent::Ustda results' do
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match "international"' do
+  let(:source) { :USTDA }
+  let(:expected) { [4] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ustda results that match "Wichita"' do
   let(:source) { :USTDA }
   let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source'
