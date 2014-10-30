@@ -2,7 +2,6 @@ require 'csv'
 
 module TariffRate
   module Importer
-
     def self.included(base)
       base.class_eval do
         class << self
@@ -59,28 +58,35 @@ module TariffRate
     private
 
     def process_row(row)
-      rate_by_year = {}
-      alt_rate_by_year = {}
-      row.each do |key, value|
-        value.gsub!(/\(null\)/, 'null')
-        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('y20')
-        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20')
-      end
+      row.each { |_k, v| v.gsub!(/\(null\)/, 'null') }
 
-      entry = sanitize_entry(remap_keys COLUMN_HASH, row)
-      entry[:countries] = ['US', self.class.country_code]
-      entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note], whitespace_elements: {})
-      entry[:annual_rates] = rate_by_year.to_a
-      entry[:alt_annual_rates] = alt_rate_by_year.to_a
+      entry = sanitize_entry(remap_keys(COLUMN_HASH, row))
 
-      country_names = [:partner_name, :reporter_name, :partner_agreement_name, :reporter_agreement_name]
-      country_names.each do |name|
-        entry[name] = lookup_country(entry[name])
-      end
+      entry.merge!(extract_rate_by_year_fields(row))
+      entry.merge!(extract_country_fields(entry))
 
+      entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note])
       entry[:source] = model_class.source
       entry
     end
 
+    def extract_rate_by_year_fields(row)
+      rate_by_year = {}
+      alt_rate_by_year = {}
+      row.each do |key, value|
+        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('y20')
+        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20')
+      end
+      { annual_rates:     rate_by_year.to_a,
+        alt_annual_rates: alt_rate_by_year.to_a }
+    end
+
+    def extract_country_fields(entry)
+      country_fields = { countries: ['US', self.class.country_code] }
+      %i(partner_name reporter_name partner_agreement_name reporter_agreement_name).each do |name|
+        country_fields[name] = lookup_country(entry[name])
+      end
+      country_fields
+    end
   end
 end
