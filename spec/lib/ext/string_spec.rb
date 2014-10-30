@@ -38,12 +38,12 @@ describe String do
 
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
-      it { should eq :bis_denied_person }
+      it { should eq :'bis_denied_person' }
     end
 
     context 'of "AustralianTradeLead"' do
       let(:operand) { 'AustralianTradeLead' }
-      it { should eq :australian_trade_lead }
+      it { should eq :'australian_trade_lead' }
     end
   end
 end
