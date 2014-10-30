@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'FTA Korea Tariff Rates API V1' do
   include_context 'TariffRate::Korea data'
-  let(:v1_headers) { {'Accept' => 'application/vnd.tradegov.webservices.v1'} }
+  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_tariff_rate/korea/search' do
     let(:params) { {} }
@@ -15,7 +15,7 @@ describe 'FTA Korea Tariff Rates API V1' do
     end
 
     context 'when q is specified' do
-      let(:params) { {q: 'horses'} }
+      let(:params) { { q: 'horses' } }
 
       subject { response }
       it_behaves_like 'a successful search request'

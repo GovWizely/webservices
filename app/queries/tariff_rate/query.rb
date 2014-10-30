@@ -28,7 +28,7 @@ module TariffRate
         json.bool do
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
-            json.child! { json.terms { json.countries @countries } }if @countries
+            json.child! { json.terms { json.countries @countries } } if @countries
           end
         end
       end if @countries || @sources.any?

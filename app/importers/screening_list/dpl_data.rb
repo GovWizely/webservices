@@ -12,12 +12,12 @@ module ScreeningList
     ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
 
     COLUMN_HASH = {
-      name:             :name,
-      effective_date:   :start_date,
-      expiration_date:  :end_date,
-      standard_order:   :standard_order,
-      action:           :remarks,
-      fr_citation:      :federal_register_notice,
+      name:            :name,
+      effective_date:  :start_date,
+      expiration_date: :end_date,
+      standard_order:  :standard_order,
+      action:          :remarks,
+      fr_citation:     :federal_register_notice,
     }
 
     ADDRESS_HASH = {

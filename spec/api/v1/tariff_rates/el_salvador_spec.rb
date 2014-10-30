@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'FTA El Salvador Tariff Rates API V1' do
   include_context 'TariffRate::ElSalvador data'
-  let(:v1_headers) { {'Accept' => 'application/vnd.tradegov.webservices.v1'} }
+  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_tariff_rate/el_salvador/search' do
     let(:params) { {} }
@@ -15,7 +15,7 @@ describe 'FTA El Salvador Tariff Rates API V1' do
     end
 
     context 'when q is specified' do
-      let(:params) { {q: 'horses'} }
+      let(:params) { { q: 'horses' } }
 
       subject { response }
       it_behaves_like 'a successful search request'

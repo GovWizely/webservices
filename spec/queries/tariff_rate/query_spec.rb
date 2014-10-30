@@ -45,8 +45,8 @@ describe TariffRate::Query do
     context 'when options include all possible fields' do
       let(:query) do
         described_class.new(countries: 'us,au',
-                            q: 'horses',
-                            sources: 'AUSTRALIA')
+                            q:         'horses',
+                            sources:   'AUSTRALIA')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 

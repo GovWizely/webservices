@@ -3,11 +3,11 @@ module TariffRate
     def self.search_for(options)
       query = TariffRate::Query.new(options)
       hits = ES.client.search(
-          index:  index_names(query.sources),
-          body:   query.generate_search_body,
-          from:   query.offset,
-          size:   query.size,
-          sort:   query.sort)['hits'].deep_symbolize_keys
+          index: index_names(query.sources),
+          body:  query.generate_search_body,
+          from:  query.offset,
+          size:  query.size,
+          sort:  query.sort)['hits'].deep_symbolize_keys
       hits[:offset] = query.offset
       hits.deep_symbolize_keys
     end
