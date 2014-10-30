@@ -27,20 +27,6 @@ module SharepointHelpers
     hash
   end
 
-  def extract_topics(parent_node, hash)
-    hash[:topics] = []
-    hash[:sub_topics] = []
-    hash = extract_sub_elements(parent_node, hash, :topics, :sub_topics, '//topic', '//sub_topic')
-    hash
-  end
-
-  def extract_geo_regions(parent_node, hash)
-    hash[:geo_regions] = []
-    hash[:geo_subregions] = []
-    hash = extract_sub_elements(parent_node, hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
-    hash
-  end
-
   def extract_sub_elements(parent_node, hash, parent_key, child_key, parent_path, child_path)
     parent_node.xpath(parent_path).each do |node|
       hash[child_key] += extract_nodes(node.xpath(child_path))

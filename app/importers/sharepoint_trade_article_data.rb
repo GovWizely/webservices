@@ -60,9 +60,13 @@ class SharepointTradeArticleData
     article_info = article.xpath('//article')
     article_hash = extract_fields(article_info, SINGLE_VALUE_XPATHS)
     article_hash.merge! extract_multi_valued_fields(article_info, MULTI_VALUE_XPATHS)
+    article_hash[:topics] = []
+    article_hash[:sub_topics] = []
+    article_hash[:geo_regions] = []
+    article_hash[:geo_subregions] = []
     article_hash = extract_source_agencies(article_info, article_hash)
-    article_hash = extract_topics(article_info, article_hash)
-    article_hash = extract_geo_regions(article_info, article_hash)
+    article_hash = extract_sub_elements(article_info, article_hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
+    article_hash = extract_sub_elements(article_info, article_hash, :topics, :sub_topics, '//topic', '//sub_topic')
     article_hash = extract_urls(article_info, article_hash)
     article_hash
   end
