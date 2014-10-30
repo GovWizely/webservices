@@ -31,10 +31,6 @@ module SharepointHelpers
     hash[:topics] = []
     hash[:sub_topics] = []
     hash = extract_sub_elements(parent_node, hash, :topics, :sub_topics, '//topic', '//sub_topic')
-    #parent_node.xpath('//tags//topics//topic').each do |topic|
-    #  hash[:sub_topics] += extract_nodes(topic.xpath('//sub_topic'))
-    #  hash[:topics] << topic.children.first.text
-    #end
     hash
   end
 
@@ -42,10 +38,6 @@ module SharepointHelpers
     hash[:geo_regions] = []
     hash[:geo_subregions] = []
     hash = extract_sub_elements(parent_node, hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
-    #parent_node.xpath('//tags//geo_regions//geo_region').each do |geo_region|
-    #  hash[:geo_subregions] += extract_nodes(geo_region.xpath('//geo_subregion'))
-    #  hash[:geo_regions] << geo_region.children.first.text
-    #end
     hash
   end
 
