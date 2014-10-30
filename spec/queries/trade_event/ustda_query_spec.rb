@@ -45,6 +45,14 @@ describe TradeEvent::UstdaQuery do
         JSON.parse(query.generate_search_body).should == search_body
       end
     end
+    context 'when options include city in q' do
+      let(:query) { TradeEvent::UstdaQuery.new(q: 'Wichita') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match_city.json").read }
+
+      it 'generates search body with queries' do
+        JSON.parse(query.generate_search_body).should == search_body
+      end
+    end
 
     context 'when options include countries' do
       let(:query) { TradeEvent::UstdaQuery.new(countries: 'IL, US') }

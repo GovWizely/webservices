@@ -20,6 +20,12 @@ describe 'Trade Events API V1' do
       it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
     end
 
+    context 'when q is specified' do
+      let(:params) { { q: 'Wichita' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeEvent::Ustda results that match "Wichita"'
+    end
+
     context 'when countries is specified' do
       let(:params) { { countries: 'us' } }
       it_behaves_like 'a successful search request'
