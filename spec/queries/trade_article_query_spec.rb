@@ -38,5 +38,19 @@ describe TradeArticleQuery do
       end
     end
 
+    context 'when dates are empty' do
+      let(:some_date) { Date.parse('2013-10-17') }
+      let(:query) do
+        TradeArticleQuery.new(q: 'some term', evergreen: 'true',
+                                            pub_date_start: "", pub_date_end: "",
+                                            update_date_start: some_date, update_date_end: some_date)
+      end
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_empty_pub_params.json").read }
+
+      it 'generates search body without pub range params' do
+        JSON.parse(query.generate_search_body).should == search_body
+      end
+    end
+
   end
 end
