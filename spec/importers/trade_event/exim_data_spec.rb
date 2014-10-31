@@ -14,8 +14,8 @@ describe TradeEvent::EximData do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 
     it 'loads EXIM trade events from specified resource' do
-      TradeEvent::Exim.should_receive(:index) do |exim_trade_events|
-        exim_trade_events.should == expected
+      expect(TradeEvent::Exim).to receive(:index) do |exim_trade_events|
+        expect(exim_trade_events).to eq(expected)
       end
       importer.import
     end

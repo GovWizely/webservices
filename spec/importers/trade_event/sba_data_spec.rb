@@ -15,11 +15,11 @@ describe TradeEvent::SbaData do
     let(:expected_batch_2) { YAML.load_file("#{fixtures_dir}/imported_batch_2.yaml") }
 
     it 'loads SBA trade events from specified resource' do
-      TradeEvent::Sba.should_receive(:index) do |sba_trade_events|
-        sba_trade_events.should == expected_batch_1
+      expect(TradeEvent::Sba).to receive(:index) do |sba_trade_events|
+        expect(sba_trade_events).to eq(expected_batch_1)
       end
-      TradeEvent::Sba.should_receive(:index) do |sba_trade_events|
-        sba_trade_events.should == expected_batch_2
+      expect(TradeEvent::Sba).to receive(:index) do |sba_trade_events|
+        expect(sba_trade_events).to eq(expected_batch_2)
       end
       importer.import
     end

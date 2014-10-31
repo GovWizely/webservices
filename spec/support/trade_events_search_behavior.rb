@@ -73,7 +73,7 @@ shared_context 'TradeEvent::Sba data' do
   end
 
   before do
-    Date.stub(:current).and_return(Date.parse('2013-01-11'))
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
 end
 
@@ -121,7 +121,7 @@ shared_context 'TradeEvent::Exim data' do
   end
 
   before do
-    Date.stub(:current).and_return(Date.parse('2013-01-11'))
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
 end
 
@@ -154,7 +154,7 @@ shared_context 'TradeEvent::Ustda data' do
   end
 
   before do
-    Date.stub(:current).and_return(Date.parse('2013-01-11'))
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
 end
 
