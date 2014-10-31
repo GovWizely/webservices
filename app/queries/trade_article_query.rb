@@ -45,8 +45,8 @@ class TradeArticleQuery < Query
     json.child! do
       json.range do
         json.set! field_str.to_sym do
-          json.from date_start if date_start
-          json.to date_end if date_end
+          json.from date_start if date_start.present?
+          json.to date_end if date_end.present?
         end
       end
     end if send(date_range_method)
@@ -65,6 +65,6 @@ class TradeArticleQuery < Query
   end
 
   def pub_date_range?
-    @pub_date_start || @pub_date_end
+    @pub_date_start.present? || @pub_date_end.present?
   end
 end
