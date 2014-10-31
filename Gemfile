@@ -28,6 +28,7 @@ group :development, :test do
 end
 
 group :development do
+  gem 'guard'
   gem 'capistrano',  '~> 2.15'
   gem 'rubocop', require: false
 end
