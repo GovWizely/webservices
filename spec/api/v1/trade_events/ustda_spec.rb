@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Trade Events API V1' do
+describe 'Trade Events API V1', type: :request do
   include_context 'TradeEvent::Ustda data'
 
   describe 'GET /trade_events/ustda/search.json' do

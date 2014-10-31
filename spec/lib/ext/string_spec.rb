@@ -15,7 +15,7 @@ describe String do
 
     context 'of "TradeEvent::Exim"' do
       let(:operand) { 'TradeEvent::Exim' }
-      it { should eq 'trade_event:exims' }
+      it { is_expected.to eq 'trade_event:exims' }
     end
 
     context 'of "BisDeniedPerson"' do
@@ -43,7 +43,7 @@ describe String do
 
     context 'of "TradeEvent::Exim"' do
       let(:operand) { 'TradeEvent::Exim' }
-      it { should eq :'trade_event:exim' }
+      it { is_expected.to eq :'trade_event:exim' }
     end
 
     context 'of "BisDeniedPerson"' do

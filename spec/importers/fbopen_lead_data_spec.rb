@@ -57,25 +57,27 @@ describe FbopenLeadData do
       }
     end
 
+    subject { importer.__send__(:process_entry, original) }
+
     it 'correctly remaps data fields' do
-      expect(importer.__send__(:process_entry, original)).to eq(classification_code:              'B',
-                                                                competitive_procurement_strategy: 'N/A',
-                                                                contact:                          'Juanita A. Waters, Contract Administrator, Phone 7704882933, Fax N/A',
-                                                                contract_number:                  '2013-N-15012',
-                                                                id:                               '2013-N-15012',
-                                                                description:                      "The National Health and Nutrition Examination Survey (NHANES) is a prog. The NHANES program began in the early 1960's and has been conducted as a s",
-                                                                industry:                         '541990',
-                                                                notice_type:                      'PRESOL',
-                                                                procurement_office:               'Centers for Disease Control and Prevention',
-                                                                procurement_office_address:       '2920 Brandywine Road, Room 3000 Atlanta GA 30341-4146',
-                                                                procurement_organization:         'Department of Health and Human Services',
-                                                                procurement_organization_address: 'Procurement and Grants Office (Atlanta)',
-                                                                publish_date:                     '2013-06-16',
-                                                                specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
-                                                                specific_location:                'BR',
-                                                                title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
-                                                                url:                              'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
-                                                                end_date:                         '2014-05-30')
+      is_expected.to eq(classification_code:              'B',
+                        competitive_procurement_strategy: 'N/A',
+                        contact:                          'Juanita A. Waters, Contract Administrator, Phone 7704882933, Fax N/A',
+                        contract_number:                  '2013-N-15012',
+                        id:                               '2013-N-15012',
+                        description:                      "The National Health and Nutrition Examination Survey (NHANES) is a prog. The NHANES program began in the early 1960's and has been conducted as a s",
+                        industry:                         '541990',
+                        notice_type:                      'PRESOL',
+                        procurement_office:               'Centers for Disease Control and Prevention',
+                        procurement_office_address:       '2920 Brandywine Road, Room 3000 Atlanta GA 30341-4146',
+                        procurement_organization:         'Department of Health and Human Services',
+                        procurement_organization_address: 'Procurement and Grants Office (Atlanta)',
+                        publish_date:                     '2013-06-16',
+                        specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
+                        specific_location:                'BR',
+                        title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
+                        url:                              'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
+                        end_date:                         '2014-05-30')
     end
 
     it 'ignores US records' do

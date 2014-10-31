@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'ITA Trade Events API V1' do
+describe 'ITA Trade Events API V1', type: :request do
   include_context 'TradeEvent::Ita data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

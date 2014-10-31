@@ -9,8 +9,8 @@ describe TradeEvent::UstdaData do
 
   describe '#import' do
     it 'loads events from specified resource' do
-      TradeEvent::Ustda.should_receive(:index) do |ustda_events|
-        ustda_events.size.should == 5
+      expect(TradeEvent::Ustda).to receive(:index) do |ustda_events|
+        expect(ustda_events.size).to eq(5)
       end
       importer.import
     end
@@ -20,7 +20,7 @@ describe TradeEvent::UstdaData do
     let(:expected_event_data) { YAML.load_file("#{fixtures_dir}/expected_ustda_events.yaml") }
     it 'correctly transform events from csv' do
       events = importer.events
-      expected_event_data.each_with_index { |expected_event, index| events[index].should == expected_event }
+      expected_event_data.each_with_index { |expected_event, index| expect(events[index]).to eq(expected_event) }
     end
   end
 
@@ -70,50 +70,50 @@ describe TradeEvent::UstdaData do
       }
     end
 
+    subject { importer.__send__(:process_entry, original) }
+
     it 'correctly remaps data fields' do
-      importer.__send__(:process_entry, original).should == {
-        id:                 "African Leaders' Visit: Transport",
-        venues:             [
-          {
-            country: 'US',
-            state:   'IL',
-            city:    'Chicago',
-            venue:   'The Big Hall',
-          },
-          {
-            country: 'US',
-            state:   'KY',
-            city:    'Louisville',
-            venue:   '',
-          },
-          {
-            country: 'US',
-            state:   'OH',
-            city:    'Cincinnati',
-            venue:   'City Theatre',
-          },
-        ],
-        registration_link:  'https://example.net/register',
-        registration_title: "Event: African Leaders' Visit",
-        url:                'http://www.ustda.gov/africanleadersvisits',
-        event_name:         "African Leaders' Visit: Transport",
-        event_type:         '',
-        start_date:         '2014-07-30',
-        end_date:           '2014-08-01',
-        cost:               nil,
-        cost_currency:      '',
-        description:        "USTDA and the U.S. Department of Transportation will co-host the African Leaders' Visit: Transport for high-level delegates who have recently announced plans for significant near-term expansions in both rail and aviation infrastructure. The Visit will introduce delegates to policymakers, financiers, technical experts, and equipment and services suppliers from the U.S. aviation and rail sectors. Meetings and site visits will showcase Chicago's position as a rail and aviation hub and offer participants a chance to see a confluence of advanced transportation infrastructure. Invited delegates include: Angola, Ethiopia, Nigeria, South Africa, Common Market for Eastern and Southern Africa (COMESA), and the Southern African Development Community (SADC).",
-        industries:         ['Transportation Services'],
-        contacts:           [{
-          first_name:   'Steve',
-          last_name:    'Lewis',
-          post:         'U.S. Trade and Development Agency',
-          person_title: 'Digital Media Manager',
-          phone:        '703-875-4357',
-          email:        'ALVTransport@ustda.gov',
-        }],
-        source:             'USTDA',
-      }
+      is_expected.to eq(id:                 "African Leaders' Visit: Transport",
+                        venues:             [
+                          {
+                            country: 'US',
+                            state:   'IL',
+                            city:    'Chicago',
+                            venue:   'The Big Hall',
+                          },
+                          {
+                            country: 'US',
+                            state:   'KY',
+                            city:    'Louisville',
+                            venue:   '',
+                          },
+                          {
+                            country: 'US',
+                            state:   'OH',
+                            city:    'Cincinnati',
+                            venue:   'City Theatre',
+                          },
+                        ],
+                        registration_link:  'https://example.net/register',
+                        registration_title: "Event: African Leaders' Visit",
+                        url:                'http://www.ustda.gov/africanleadersvisits',
+                        event_name:         "African Leaders' Visit: Transport",
+                        event_type:         '',
+                        start_date:         '2014-07-30',
+                        end_date:           '2014-08-01',
+                        cost:               nil,
+                        cost_currency:      '',
+                        description:        "USTDA and the U.S. Department of Transportation will co-host the African Leaders' Visit: Transport for high-level delegates who have recently announced plans for significant near-term expansions in both rail and aviation infrastructure. The Visit will introduce delegates to policymakers, financiers, technical experts, and equipment and services suppliers from the U.S. aviation and rail sectors. Meetings and site visits will showcase Chicago's position as a rail and aviation hub and offer participants a chance to see a confluence of advanced transportation infrastructure. Invited delegates include: Angola, Ethiopia, Nigeria, South Africa, Common Market for Eastern and Southern Africa (COMESA), and the Southern African Development Community (SADC).",
+                        industries:         ['Transportation Services'],
+                        contacts:           [{
+                          first_name:   'Steve',
+                          last_name:    'Lewis',
+                          post:         'U.S. Trade and Development Agency',
+                          person_title: 'Digital Media Manager',
+                          phone:        '703-875-4357',
+                          email:        'ALVTransport@ustda.gov',
+                        }],
+                        source:             'USTDA')
     end
   end
 
