@@ -9,8 +9,8 @@ class ParatureFaqQuery < Query
     @update_date_end = options[:update_date_end] if options[:update_date_end].present?
 
     @countries = options[:countries].downcase.split(',') if options[:countries].present?
-    @industry = options[:industry].downcase if options[:industry].present?
-    @topic = options[:topic].downcase if options[:topic].present?
+    @industry = options[:industry].downcase.split(',') if options[:industry].present?
+    @topic = options[:topic].downcase.split(',') if options[:topic].present?
   end
 
   def generate_query(json)
@@ -31,8 +31,8 @@ class ParatureFaqQuery < Query
       json.bool do
         json.must do
           json.child! { json.terms { json.country @countries } } if @countries
-          json.child! { json.query { json.match_phrase { json.industry @industry } } } if @industry
-          json.child! { json.query { json.match_phrase { json.topic @topic } } } if @topic
+          json.child! { json.terms  { json.industry @industry }  } if @industry
+          json.child! { json.terms  { json.topic @topic }  } if @topic
           generate_date_range(json)
         end
       end

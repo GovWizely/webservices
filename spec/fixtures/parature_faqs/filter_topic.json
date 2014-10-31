@@ -3,10 +3,8 @@
     "bool": {
       "must": [
         {
-          "query": {
-            "match_phrase": {
-              "topic": "cafta-dr"
-            }
+          "terms": {
+              "topic": ["cafta-dr"]
           }
         }
       ]

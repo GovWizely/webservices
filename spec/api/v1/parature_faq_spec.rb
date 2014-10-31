@@ -121,10 +121,10 @@ describe 'Parature Faq API V1', type: :request do
       it 'returns parature faqs' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[28]
+        expect(results[0]).to eq(expected_results[28])
       end
     end
 

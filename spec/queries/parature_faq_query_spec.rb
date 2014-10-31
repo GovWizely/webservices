@@ -36,7 +36,7 @@ describe MarketResearchQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_industry.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 

@@ -3,10 +3,8 @@
     "bool": {
       "must": [
         {
-          "query": {
-            "match_phrase": {
-              "industry": "importing"
-            }
+          "terms": {
+              "industry": ["importing"]
           }
         }
       ]
