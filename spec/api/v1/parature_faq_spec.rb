@@ -112,6 +112,22 @@ describe 'Parature Faq API V1', type: :request do
       end
     end
 
+    context 'when topic is specified' do
+      before { get search_path, { topic: 'cafta-dr' }, v1_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns parature faqs' do
+
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        json_response[:total].should == 1
+
+        results = json_response[:results]
+        results[0].should == expected_results[28]
+      end
+    end
+
     context 'when update_date_start or update_date_end is specified' do
       before { get search_path, { update_date_start: '2013-03-20', update_date_end: '2013-04-19' }, v1_headers }
       subject { response }

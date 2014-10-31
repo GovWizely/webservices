@@ -5,10 +5,16 @@ class ParatureFaq
     index: {
       analysis: {
         analyzer:
-                  { custom_analyzer: {
-                    tokenizer: 'standard',
-                    filter:    %w(standard asciifolding lowercase snowball) },
-            },
+                  {
+                    custom_analyzer:       {
+                      tokenizer: 'standard',
+                      filter:    %w(standard asciifolding lowercase snowball),
+                    },
+                    phrase_match_analyzer: {
+                      tokenizer: 'keyword',
+                      filter:    'lowercase',
+                    },
+                  },
       },
     },
   }.freeze
@@ -24,8 +30,8 @@ class ParatureFaq
         question:    { type: 'string', analyzer: 'custom_analyzer' },
         answer:      { type: 'string', analyzer: 'custom_analyzer' },
         update_date: { type: 'date', format: 'YYYY-MM-dd' },
-        topic:       { type: 'string' },
-        industry:    { type: 'string' },
+        topic:       { type: 'string', analyzer: 'phrase_match_analyzer' },
+        industry:    { type: 'string', analyzer: 'phrase_match_analyzer' },
         country:     { type: 'string' },
         id:          { type: 'integer' },
       },

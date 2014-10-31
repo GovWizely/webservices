@@ -4,7 +4,7 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["question", "answer", "industry"],
+            "fields": ["question", "answer"],
             "operator": "and",
             "query": "tpcc"
           }
