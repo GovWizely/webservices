@@ -10,11 +10,11 @@ describe TradeEvent::ItaData do
   describe '#import' do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 
-    before { Date.stub(:current).and_return(Date.parse('2013-10-07')) }
+    before { allow(Date).to receive(:current).and_return(Date.parse('2013-10-07')) }
 
     it 'loads ITA trade events from specified resource' do
-      TradeEvent::Ita.should_receive(:index) do |ita_trade_events|
-        ita_trade_events.should == expected
+      expect(TradeEvent::Ita).to receive(:index) do |ita_trade_events|
+        expect(ita_trade_events).to eq(expected)
       end
       importer.import
     end

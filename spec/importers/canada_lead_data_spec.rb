@@ -49,28 +49,30 @@ describe CanadaLeadData do
       }
     end
 
+    subject { importer.__send__(:process_entry, original) }
+
     it 'correctly remaps data fields' do
-      expect(importer.__send__(:process_entry, original)).to eq(language:                             'English',
-                                                                title:                                'Online eICEP (6D094-132083/A)',
-                                                                reference_number:                     'PW-$$ZH-113-27647',
-                                                                publish_date:                         '2014-05-22',
-                                                                end_date:                             '2014-06-06',
-                                                                publish_date_amended:                 '2014-05-23',
-                                                                status:                               'Active',
-                                                                industry:                             'G009D: Health, U006C: Technical, U099SA: Safety',
-                                                                region_opportunity:                   'Canada',
-                                                                specific_location:                    'Alberta',
-                                                                notice_type:                          'PAC-ACAN',
-                                                                trade_agreement:                      'Agreement (AIT) Canada-Colombia (CPFTA) NA Free (NAFTA)',
-                                                                bid_type:                             'Generally only one firm has been invited to bid',
-                                                                competitive_procurement_strategy:     'Lowest/Lower Bid',
-                                                                non_competitive_procurement_strategy: 'Exclusive Rights',
-                                                                procurement_organization:             'Public Works & Government Services Canada',
-                                                                implementing_entity:                  'Public Health Agency of Canada',
-                                                                description:                          'Before awarding a Contract, the government (...)',
-                                                                contact:                              'Reynolds( ), (888) 000-0000',
-                                                                urls:                                 ['https://example.net/123/abc.pdf'],
-                                                                country:                              'CA')
+      is_expected.to eq(language:                             'English',
+                        title:                                'Online eICEP (6D094-132083/A)',
+                        reference_number:                     'PW-$$ZH-113-27647',
+                        publish_date:                         '2014-05-22',
+                        end_date:                             '2014-06-06',
+                        publish_date_amended:                 '2014-05-23',
+                        status:                               'Active',
+                        industry:                             'G009D: Health, U006C: Technical, U099SA: Safety',
+                        region_opportunity:                   'Canada',
+                        specific_location:                    'Alberta',
+                        notice_type:                          'PAC-ACAN',
+                        trade_agreement:                      'Agreement (AIT) Canada-Colombia (CPFTA) NA Free (NAFTA)',
+                        bid_type:                             'Generally only one firm has been invited to bid',
+                        competitive_procurement_strategy:     'Lowest/Lower Bid',
+                        non_competitive_procurement_strategy: 'Exclusive Rights',
+                        procurement_organization:             'Public Works & Government Services Canada',
+                        implementing_entity:                  'Public Health Agency of Canada',
+                        description:                          'Before awarding a Contract, the government (...)',
+                        contact:                              'Reynolds( ), (888) 000-0000',
+                        urls:                                 ['https://example.net/123/abc.pdf'],
+                        country:                              'CA')
     end
   end
 
