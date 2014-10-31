@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'BISN Foreign Sanctions Evaders API V1' do
+describe 'BISN Foreign Sanctions Evaders API V1', type: :request do
   include_context 'FSE data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

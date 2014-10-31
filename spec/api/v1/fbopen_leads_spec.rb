@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Fbopen Leads API V1' do
+describe 'Fbopen Leads API V1', type: :request do
   before(:all) do
     FbopenLead.recreate_index
     FbopenLeadData.new("#{Rails.root}/spec/fixtures/fbopen_leads/short_input").import
@@ -19,11 +19,11 @@ describe 'Fbopen Leads API V1' do
 
       it 'returns fbopen leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 6
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(6)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results.should include(*expected_results)
+        expect(results).to include(*expected_results)
       end
     end
 
@@ -35,11 +35,11 @@ describe 'Fbopen Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[5]
+        expect(results[0]).to eq(expected_results[5])
       end
     end
 
@@ -51,12 +51,12 @@ describe 'Fbopen Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 2
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(2)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results.should include(expected_results[1])
-        results.should include(expected_results[2])
+        expect(results).to include(expected_results[1])
+        expect(results).to include(expected_results[2])
       end
     end
 
@@ -68,13 +68,13 @@ describe 'Fbopen Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 3
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(3)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[4]
-        results[2].should == expected_results[5]
+        expect(results[0]).to eq(expected_results[0])
+        expect(results[1]).to eq(expected_results[4])
+        expect(results[2]).to eq(expected_results[5])
       end
     end
   end

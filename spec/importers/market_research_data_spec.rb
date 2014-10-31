@@ -11,14 +11,14 @@ describe MarketResearchData do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/market_researches.yaml") }
 
     it 'loads market research library from specified resource' do
-      MarketResearch.should_receive(:index) do |entries|
-        entries.size.should == 6
-        entries[0].should == entry_hash[0]
-        entries[1].should == entry_hash[1]
-        entries[2].should == entry_hash[2]
-        entries[3].should == entry_hash[3]
-        entries[4].should == entry_hash[4]
-        entries[5].should == entry_hash[5]
+      expect(MarketResearch).to receive(:index) do |entries|
+        expect(entries.size).to eq(6)
+        expect(entries[0]).to eq(entry_hash[0])
+        expect(entries[1]).to eq(entry_hash[1])
+        expect(entries[2]).to eq(entry_hash[2])
+        expect(entries[3]).to eq(entry_hash[3])
+        expect(entries[4]).to eq(entry_hash[4])
+        expect(entries[5]).to eq(entry_hash[5])
       end
       importer.import
     end

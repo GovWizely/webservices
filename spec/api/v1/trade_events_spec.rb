@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Trade Events API V1' do
+describe 'Trade Events API V1', type: :request do
   before(:all) do
     TradeEvent.recreate_index
     TradeEventData.new("#{Rails.root}/spec/fixtures/trade_events/trade_events.xml").import
@@ -18,14 +18,14 @@ describe 'Trade Events API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 4
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(4)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[1]
-        results[2].should == expected_results[2]
-        results[3].should == expected_results[3]
+        expect(results[0]).to eq(expected_results[0])
+        expect(results[1]).to eq(expected_results[1])
+        expect(results[2]).to eq(expected_results[2])
+        expect(results[3]).to eq(expected_results[3])
       end
     end
 
@@ -37,12 +37,12 @@ describe 'Trade Events API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 2
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(2)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[2]
+        expect(results[0]).to eq(expected_results[0])
+        expect(results[1]).to eq(expected_results[2])
       end
     end
 
@@ -54,11 +54,11 @@ describe 'Trade Events API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -70,11 +70,11 @@ describe 'Trade Events API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -86,11 +86,11 @@ describe 'Trade Events API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[3]
+        expect(results[0]).to eq(expected_results[3])
       end
     end
   end

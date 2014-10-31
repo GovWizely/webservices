@@ -11,8 +11,8 @@ describe ScreeningList::IsnData do
 
   describe '#import' do
     it 'loads ISN entries from specified resource' do
-      ScreeningList::Isn.should_receive(:index) do |isn|
-        isn.should == expected
+      expect(ScreeningList::Isn).to receive(:index) do |isn|
+        expect(isn).to eq(expected)
       end
       importer.import
     end

@@ -11,8 +11,8 @@ describe ScreeningList::ElData do
 
   describe '#import' do
     it 'loads BIS entities from specified resource' do
-      ScreeningList::El.should_receive(:index) do |el|
-        el.should == expected
+      expect(ScreeningList::El).to receive(:index) do |el|
+        expect(el).to eq(expected)
       end
       importer.import
     end

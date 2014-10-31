@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Australian Trade Leads API V1' do
+describe 'Australian Trade Leads API V1', type: :request do
   before(:all) do
     AustralianTradeLead.recreate_index
     AustralianTradeLeadData.new("#{Rails.root}/spec/fixtures/australian_trade_leads/trade_leads.csv").import
@@ -18,11 +18,11 @@ describe 'Australian Trade Leads API V1' do
 
       it 'returns trade leads in arbitrary order' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 3
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(3)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results.should match_array(expected_results)
+        expect(results).to match_array(expected_results)
       end
     end
   end
@@ -36,11 +36,11 @@ describe 'Australian Trade Leads API V1' do
 
       it 'returns trade leads ranked by relevance' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
+        expect(results[0]).to eq(expected_results[1])
       end
     end
   end

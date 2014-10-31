@@ -8,8 +8,8 @@ describe TariffRate::ElSalvadorData do
 
   describe '#import' do
     it 'loads EL_SALVADOR tariff rates from specified resource' do
-      TariffRate::ElSalvador.should_receive(:index) do |res|
-        res.should == expected
+      expect(TariffRate::ElSalvador).to receive(:index) do |res|
+        expect(res).to eq(expected)
       end
       importer.import
     end

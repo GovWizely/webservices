@@ -11,8 +11,8 @@ describe ScreeningList::UvlData do
 
   describe '#import' do
     it 'loads unverified parties from specified resource' do
-      ScreeningList::Uvl.should_receive(:index) do |uvl|
-        uvl.should == expected
+      expect(ScreeningList::Uvl).to receive(:index) do |uvl|
+        expect(uvl).to eq(expected)
       end
       importer.import
     end

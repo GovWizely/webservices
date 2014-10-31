@@ -8,8 +8,8 @@ describe TariffRate::AustraliaData do
 
   describe '#import' do
     it 'loads AUSTRALIA tariff rates from specified resource' do
-      TariffRate::Australia.should_receive(:index) do |res|
-        res.should == expected
+      expect(TariffRate::Australia).to receive(:index) do |res|
+        expect(res).to eq(expected)
       end
       importer.import
     end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Palestinian Legislative Council List API V1' do
+describe 'Palestinian Legislative Council List API V1', type: :request do
   include_context 'PLC data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

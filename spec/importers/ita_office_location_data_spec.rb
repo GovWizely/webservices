@@ -12,9 +12,9 @@ describe ItaOfficeLocationData do
       let(:odo_hash) { YAML.load_file("#{fixtures_dir}/odo.yaml") }
 
       it 'loads domestic office locations from specified resource' do
-        ItaOfficeLocation.should_receive(:index) do |ita_office_locations|
-          ita_office_locations.size.should == 116
-          116.times { |x| ita_office_locations[x].should == odo_hash[x] }
+        expect(ItaOfficeLocation).to receive(:index) do |ita_office_locations|
+          expect(ita_office_locations.size).to eq(116)
+          116.times { |x| expect(ita_office_locations[x]).to eq(odo_hash[x]) }
         end
         domestic_importer.import
       end
@@ -26,9 +26,9 @@ describe ItaOfficeLocationData do
       let(:oio_hash) { YAML.load_file("#{fixtures_dir}/oio.yaml") }
 
       it 'loads foreign office locations from specified resource' do
-        ItaOfficeLocation.should_receive(:index) do |ita_office_locations|
-          ita_office_locations.size.should == 113
-          113.times { |x| ita_office_locations[x].should == oio_hash[x] }
+        expect(ItaOfficeLocation).to receive(:index) do |ita_office_locations|
+          expect(ita_office_locations.size).to eq(113)
+          113.times { |x| expect(ita_office_locations[x]).to eq(oio_hash[x]) }
         end
         foreign_importer.import
       end

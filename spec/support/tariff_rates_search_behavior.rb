@@ -140,7 +140,7 @@ shared_examples 'it contains all the expected results of source' do
   end
 
   it 'contains them all' do
-    expected.should match_array(results)
+    expect(expected).to match_array(results)
   end
 end
 

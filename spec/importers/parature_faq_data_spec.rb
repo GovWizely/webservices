@@ -11,10 +11,10 @@ describe ParatureFaqData do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/importer_output.yaml") }
 
     it 'loads parature faqs from specified resource' do
-      ParatureFaq.should_receive(:index) do |entries|
+      expect(ParatureFaq).to receive(:index) do |entries|
 
-        entries.size.should == 29
-        entries.should match_array entry_hash
+        expect(entries.size).to eq(29)
+        expect(entries).to match_array entry_hash
 
       end
       importer.import

@@ -33,12 +33,12 @@ describe Indexable do
       subject { Mock.send(:prepare_record_for_indexing, record) }
 
       it do
-        should eq(body:      { foo: 'bar', yin: 'yang' },
-                  id:        1337,
-                  index:     'test:webservices:mocks',
-                  timestamp: now,
-                  ttl:       '1d',
-                  type:      :mock)
+        is_expected.to eq(body:      { foo: 'bar', yin: 'yang' },
+                          id:        1337,
+                          index:     'test:webservices:mocks',
+                          timestamp: now,
+                          ttl:       '1d',
+                          type:      :mock)
       end
     end
   end
@@ -47,7 +47,7 @@ describe Indexable do
     context 'with a model that has a _timestamp mapping' do
       include_context 'a working Mock model class'
       subject { Mock.can_purge_old? }
-      it { should be_true }
+      it { is_expected.to be_truthy }
     end
 
     context 'with a model that does not have a _timestamp mapping' do
@@ -58,7 +58,7 @@ describe Indexable do
         end
       end
       subject { Mock.can_purge_old? }
-      it { should be_false }
+      it { is_expected.to be_falsey }
     end
   end
 

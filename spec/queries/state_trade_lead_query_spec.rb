@@ -8,7 +8,11 @@ describe StateTradeLeadQuery do
 
     context 'when options include countries' do
       subject { described_class.new(countries: 'us,ca') }
-      its(:countries) { should == %w(US CA) }
+
+      describe '#countries' do
+        subject { super().countries }
+        it { is_expected.to eq(%w(US CA)) }
+      end
     end
   end
 

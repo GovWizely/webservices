@@ -8,8 +8,8 @@ describe TariffRate::CostaRicaData do
 
   describe '#import' do
     it 'loads COSTA_RICA tariff rates from specified resource' do
-      TariffRate::CostaRica.should_receive(:index) do |res|
-        res.should == expected
+      expect(TariffRate::CostaRica).to receive(:index) do |res|
+        expect(res).to eq(expected)
       end
       importer.import
     end

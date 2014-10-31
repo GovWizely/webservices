@@ -5,22 +5,22 @@ describe String do
     subject { operand.indexize }
     context 'of "TradeEvent::Ita"' do
       let(:operand) { 'TradeEvent::Ita' }
-      it { should eq 'trade_event:itas' }
+      it { is_expected.to eq 'trade_event:itas' }
     end
 
     context 'of "TradeEvent::Sba"' do
       let(:operand) { 'TradeEvent::Sba' }
-      it { should eq 'trade_event:sbas' }
+      it { is_expected.to eq 'trade_event:sbas' }
     end
 
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
-      it { should eq 'bis_denied_people' }
+      it { is_expected.to eq 'bis_denied_people' }
     end
 
     context 'of "AustralianTradeLead"' do
       let(:operand) { 'AustralianTradeLead' }
-      it { should eq 'australian_trade_leads' }
+      it { is_expected.to eq 'australian_trade_leads' }
     end
   end
 
@@ -28,22 +28,22 @@ describe String do
     subject { operand.typeize }
     context 'of "TradeEvent::Ita"' do
       let(:operand) { 'TradeEvent::Ita' }
-      it { should eq :'trade_event:ita' }
+      it { is_expected.to eq :'trade_event:ita' }
     end
 
     context 'of "TradeEvent::Sba"' do
       let(:operand) { 'TradeEvent::Sba' }
-      it { should eq :'trade_event:sba' }
+      it { is_expected.to eq :'trade_event:sba' }
     end
 
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
-      it { should eq :'bis_denied_person' }
+      it { is_expected.to eq :'bis_denied_person' }
     end
 
     context 'of "AustralianTradeLead"' do
       let(:operand) { 'AustralianTradeLead' }
-      it { should eq :'australian_trade_lead' }
+      it { is_expected.to eq :'australian_trade_lead' }
     end
   end
 end

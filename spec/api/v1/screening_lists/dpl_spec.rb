@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'BIS Denied Persons API V1' do
+describe 'BIS Denied Persons API V1', type: :request do
   include_context 'DPL data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

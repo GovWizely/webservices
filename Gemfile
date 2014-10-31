@@ -20,7 +20,7 @@ group :production do
 end
 
 group :development, :test do
-  gem 'rspec-rails',  '~> 2.14.0'
+  gem 'rspec-rails', '~> 3.0.0'
   gem 'shoulda-matchers'
   gem 'thin'
   gem 'pry-rails'
@@ -30,6 +30,7 @@ end
 group :development do
   gem 'capistrano',  '~> 2.15'
   gem 'rubocop', require: false
+  gem 'transpec'
 end
 
 group :test do

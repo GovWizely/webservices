@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Trade Leads API V1' do
+describe 'Trade Leads API V1', type: :request do
   before(:all) do
     CanadaLead.recreate_index
     CanadaLeadData.new("#{Rails.root}/spec/fixtures/canada_leads/canada_leads.csv").import
@@ -27,11 +27,11 @@ describe 'Trade Leads API V1' do
 
       it 'returns trade leads sorted by published_date:desc, country: asc' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 13
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(13)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results.should eq(expected_results.first(10))
+        expect(results).to eq(expected_results.first(10))
       end
     end
 
@@ -43,11 +43,11 @@ describe 'Trade Leads API V1' do
 
       it 'returns up to the specified size' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 13
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(13)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results.should match_array(expected_results)
+        expect(results).to match_array(expected_results)
       end
     end
 
@@ -59,13 +59,13 @@ describe 'Trade Leads API V1' do
 
       it 'returns trade leads sorted by id in descending order' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 3
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(3)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
-        results[1].should == expected_results[2]
-        results[2].should == expected_results[3]
+        expect(results[0]).to eq(expected_results[1])
+        expect(results[1]).to eq(expected_results[2])
+        expect(results[2]).to eq(expected_results[3])
       end
     end
 
@@ -77,11 +77,11 @@ describe 'Trade Leads API V1' do
 
       it 'returns relevant trade leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -93,11 +93,11 @@ describe 'Trade Leads API V1' do
 
       it 'returns relevant trade leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[7]
+        expect(results[0]).to eq(expected_results[7])
       end
     end
   end

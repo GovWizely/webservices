@@ -9,8 +9,15 @@ describe FbopenLeadQuery do
     context 'when options include industry and specific_location' do
       subject { FbopenLeadQuery.new(industry: 'asphalt', specific_location: 'US') }
 
-      its(:industry) { should == 'asphalt' }
-      its(:specific_location) { should == 'US' }
+      describe '#industry' do
+        subject { super().industry }
+        it { is_expected.to eq('asphalt') }
+      end
+
+      describe '#specific_location' do
+        subject { super().specific_location }
+        it { is_expected.to eq('US') }
+      end
     end
   end
 
@@ -19,10 +26,10 @@ describe FbopenLeadQuery do
       let(:query) { FbopenLeadQuery.new({}) }
 
       it 'generates search body with default options' do
-        JSON.parse(query.generate_search_body).should == {}
+        expect(JSON.parse(query.generate_search_body)).to eq({})
       end
       it 'should be sorted by default' do
-        query.sort.should == 'end_date,contract_number'
+        expect(query.sort).to eq('end_date,contract_number')
       end
     end
 
@@ -31,7 +38,7 @@ describe FbopenLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_industry.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -40,7 +47,7 @@ describe FbopenLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_specific_location.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -49,11 +56,11 @@ describe FbopenLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_q.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
 
       it 'should be sorted by relevance' do
-        query.sort.should be_nil
+        expect(query.sort).to be_nil
       end
     end
 
@@ -62,7 +69,7 @@ describe FbopenLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end

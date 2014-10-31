@@ -10,11 +10,11 @@ describe UkTradeLeadData do
 
   describe '#import' do
     it 'loads UK trade leads from specified resource' do
-      UkTradeLead.should_receive(:index) do |trade_leads|
-        trade_leads.size.should == 3
-        trade_leads[0].should == expected[0]
-        trade_leads[1].should == expected[1]
-        trade_leads[2].should == expected[2]
+      expect(UkTradeLead).to receive(:index) do |trade_leads|
+        expect(trade_leads.size).to eq(3)
+        expect(trade_leads[0]).to eq(expected[0])
+        expect(trade_leads[1]).to eq(expected[1])
+        expect(trade_leads[2]).to eq(expected[2])
       end
       importer.import
     end
