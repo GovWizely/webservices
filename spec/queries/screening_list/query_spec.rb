@@ -9,7 +9,10 @@ describe ScreeningList::Query do
     context 'when options include countries' do
       subject { described_class.new(countries: 'us,ca') }
 
-      its(:countries) { should == %w(US CA) }
+      describe '#countries' do
+        subject { super().countries }
+        it { is_expected.to eq(%w(US CA)) }
+      end
     end
   end
 
@@ -20,7 +23,7 @@ describe ScreeningList::Query do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with q query' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -29,7 +32,7 @@ describe ScreeningList::Query do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_type_filter.json").read }
 
       it 'generates search body with type filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -38,7 +41,7 @@ describe ScreeningList::Query do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_sources_filter.json").read }
 
       it 'generates search body with type filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -47,7 +50,7 @@ describe ScreeningList::Query do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_countries_filter.json").read }
 
       it 'generates search body with countries filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -61,7 +64,7 @@ describe ScreeningList::Query do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
       it 'generates search body with countries filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end

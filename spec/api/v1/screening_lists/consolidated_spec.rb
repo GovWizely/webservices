@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Consolidated Screening List API V1' do
+describe 'Consolidated Screening List API V1', type: :request do
   include_context 'all CSL fixture data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
@@ -236,7 +236,7 @@ describe 'Consolidated Screening List API V1' do
         let(:params) { { sources: 'NSD' } }
         it 'returns no documents' do
           json_response = JSON.parse(response.body)
-          json_response['total'].should == 0
+          expect(json_response['total']).to eq(0)
         end
       end
     end

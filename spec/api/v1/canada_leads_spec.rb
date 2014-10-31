@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Canada Leads API V1' do
+describe 'Canada Leads API V1', type: :request do
   before(:all) do
     CanadaLead.recreate_index
     CanadaLeadData.new("#{Rails.root}/spec/fixtures/canada_leads/canada_leads.csv").import
@@ -19,15 +19,15 @@ describe 'Canada Leads API V1' do
 
       it 'returns canada leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 5
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(5)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[1]
-        results[2].should == expected_results[2]
-        results[3].should == expected_results[3]
-        results[4].should == expected_results[4]
+        expect(results[0]).to eq(expected_results[0])
+        expect(results[1]).to eq(expected_results[1])
+        expect(results[2]).to eq(expected_results[2])
+        expect(results[3]).to eq(expected_results[3])
+        expect(results[4]).to eq(expected_results[4])
       end
     end
 
@@ -39,11 +39,11 @@ describe 'Canada Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[3]
+        expect(results[0]).to eq(expected_results[3])
       end
     end
 
@@ -55,11 +55,11 @@ describe 'Canada Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
+        expect(results[0]).to eq(expected_results[1])
       end
     end
 
@@ -71,11 +71,11 @@ describe 'Canada Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[2]
+        expect(results[0]).to eq(expected_results[2])
       end
     end
 
@@ -87,11 +87,11 @@ describe 'Canada Leads API V1' do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[4]
+        expect(results[0]).to eq(expected_results[4])
       end
     end
   end

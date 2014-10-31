@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Market Researches API V1' do
+describe 'Market Researches API V1', type: :request do
   before(:all) do
     MarketResearch.recreate_index
     MarketResearchData.new("#{Rails.root}/spec/fixtures/market_researches/market_researches.txt").import
@@ -19,16 +19,16 @@ describe 'Market Researches API V1' do
 
       it 'returns market researches' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 6
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(6)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
-        results[1].should == expected_results[1]
-        results[2].should == expected_results[2]
-        results[3].should == expected_results[3]
-        results[4].should == expected_results[4]
-        results[5].should == expected_results[5]
+        expect(results[0]).to eq(expected_results[0])
+        expect(results[1]).to eq(expected_results[1])
+        expect(results[2]).to eq(expected_results[2])
+        expect(results[3]).to eq(expected_results[3])
+        expect(results[4]).to eq(expected_results[4])
+        expect(results[5]).to eq(expected_results[5])
       end
     end
 
@@ -40,11 +40,11 @@ describe 'Market Researches API V1' do
 
       it 'returns market researches' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -56,12 +56,12 @@ describe 'Market Researches API V1' do
 
       it 'returns market researches' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 2
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(2)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[2]
-        results[1].should == expected_results[5]
+        expect(results[0]).to eq(expected_results[2])
+        expect(results[1]).to eq(expected_results[5])
       end
     end
 
@@ -73,11 +73,11 @@ describe 'Market Researches API V1' do
 
       it 'returns market researches' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[5]
+        expect(results[0]).to eq(expected_results[5])
       end
     end
 
@@ -89,11 +89,11 @@ describe 'Market Researches API V1' do
 
       it 'returns market researches' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
-        json_response['offset'].should == 0
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        results[0].should == expected_results[4]
+        expect(results[0]).to eq(expected_results[4])
       end
     end
   end

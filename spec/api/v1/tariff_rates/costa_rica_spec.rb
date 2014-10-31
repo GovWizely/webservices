@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'FTA Costa Rica Tariff Rates API V1' do
+describe 'FTA Costa Rica Tariff Rates API V1', type: :request do
   include_context 'TariffRate::CostaRica data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

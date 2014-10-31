@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'FTA Korea Tariff Rates API V1' do
+describe 'FTA Korea Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Korea data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

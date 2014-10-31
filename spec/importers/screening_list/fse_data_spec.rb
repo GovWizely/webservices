@@ -11,8 +11,8 @@ describe ScreeningList::FseData do
 
   describe '#import' do
     it 'loads foreign sanctions evaders from specified resource' do
-      ScreeningList::Fse.should_receive(:index) do |fse|
-        fse.should == expected
+      expect(ScreeningList::Fse).to receive(:index) do |fse|
+        expect(fse).to eq(expected)
       end
       importer.import
     end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Sectoral Sanctions Identifications List API V1' do
+describe 'Sectoral Sanctions Identifications List API V1', type: :request do
   include_context 'SSI data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

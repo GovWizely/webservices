@@ -9,8 +9,15 @@ describe CanadaLeadQuery do
     context 'when options include industry and specific_location' do
       subject { CanadaLeadQuery.new(industry: 'asphalt', specific_location: 'canada') }
 
-      its(:industry) { should == 'asphalt' }
-      its(:specific_location) { should == 'canada' }
+      describe '#industry' do
+        subject { super().industry }
+        it { is_expected.to eq('asphalt') }
+      end
+
+      describe '#specific_location' do
+        subject { super().specific_location }
+        it { is_expected.to eq('canada') }
+      end
     end
   end
 
@@ -19,7 +26,7 @@ describe CanadaLeadQuery do
       let(:query) { CanadaLeadQuery.new({}) }
 
       it 'generates search body with default options' do
-        JSON.parse(query.generate_search_body).should == {}
+        expect(JSON.parse(query.generate_search_body)).to eq({})
       end
     end
 
@@ -28,7 +35,7 @@ describe CanadaLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_industry.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -37,7 +44,7 @@ describe CanadaLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_specific_location.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -46,7 +53,7 @@ describe CanadaLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_q.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -55,7 +62,7 @@ describe CanadaLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end

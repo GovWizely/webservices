@@ -9,13 +9,19 @@ describe TradeLeadQuery do
     context 'when options include countries' do
       subject { TradeLeadQuery.new(countries: 'us,ca') }
 
-      its(:countries) { should == %w(US CA) }
+      describe '#countries' do
+        subject { super().countries }
+        it { is_expected.to eq(%w(US CA)) }
+      end
     end
 
     context 'when options does not include q' do
       subject { TradeLeadQuery.new(countries: 'us,ca') }
 
-      its(:sort) { should eq 'publish_date:desc,country:asc' }
+      describe '#sort' do
+        subject { super().sort }
+        it { is_expected.to eq 'publish_date:desc,country:asc' }
+      end
     end
   end
 
@@ -25,7 +31,7 @@ describe TradeLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_country_filter.json").read }
 
       it 'generates search body with countries filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -34,7 +40,7 @@ describe TradeLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with countries filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -43,7 +49,7 @@ describe TradeLeadQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match_and_filter.json").read }
 
       it 'generates search body with countries filter' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end

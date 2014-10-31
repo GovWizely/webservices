@@ -11,8 +11,8 @@ describe ScreeningList::DplData do
 
   describe '#import' do
     it 'loads denied persons from specified resource' do
-      ScreeningList::Dpl.should_receive(:index) do |dpl|
-        dpl.should == expected
+      expect(ScreeningList::Dpl).to receive(:index) do |dpl|
+        expect(dpl).to eq(expected)
       end
       importer.import
     end

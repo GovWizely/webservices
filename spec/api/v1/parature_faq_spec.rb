@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Parature Faq API V1' do
+describe 'Parature Faq API V1', type: :request do
   before(:all) do
     ParatureFaq.recreate_index
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
@@ -20,10 +20,10 @@ describe 'Parature Faq API V1' do
 
       it 'returns parature faqs' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 29
+        expect(json_response[:total]).to eq(29)
 
         results = json_response[:results]
-        results.should match_array expected_results
+        expect(results).to match_array expected_results
 
       end
     end
@@ -36,10 +36,10 @@ describe 'Parature Faq API V1' do
 
       it 'returns parature faqs' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[1]
+        expect(results[0]).to eq(expected_results[1])
 
       end
     end
@@ -52,11 +52,11 @@ describe 'Parature Faq API V1' do
 
       it 'returns parature faqs' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 2
+        expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        results.should include expected_results[4]
-        results.should include expected_results[18]
+        expect(results).to include expected_results[4]
+        expect(results).to include expected_results[18]
       end
     end
 
@@ -68,11 +68,11 @@ describe 'Parature Faq API V1' do
 
       it 'returns parature faqs' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 2
+        expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        results.should include expected_results[26]
-        results.should include expected_results[28]
+        expect(results).to include expected_results[26]
+        expect(results).to include expected_results[28]
       end
     end
 
@@ -85,14 +85,14 @@ describe 'Parature Faq API V1' do
       it 'returns parature faqs' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 5
+        expect(json_response[:total]).to eq(5)
 
         results = json_response[:results]
-        results.should include expected_results[4]
-        results.should include expected_results[11]
-        results.should include expected_results[22]
-        results.should include expected_results[23]
-        results.should include expected_results[28]
+        expect(results).to include expected_results[4]
+        expect(results).to include expected_results[11]
+        expect(results).to include expected_results[22]
+        expect(results).to include expected_results[23]
+        expect(results).to include expected_results[28]
       end
     end
 
@@ -105,10 +105,10 @@ describe 'Parature Faq API V1' do
       it 'returns parature faqs' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[27]
+        expect(results[0]).to eq(expected_results[27])
       end
     end
 
@@ -121,15 +121,15 @@ describe 'Parature Faq API V1' do
       it 'returns parature faqs' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 6
+        expect(json_response[:total]).to eq(6)
 
         results = json_response[:results]
-        results.should include expected_results[1]
-        results.should include expected_results[21]
-        results.should include expected_results[24]
-        results.should include expected_results[25]
-        results.should include expected_results[26]
-        results.should include expected_results[28]
+        expect(results).to include expected_results[1]
+        expect(results).to include expected_results[21]
+        expect(results).to include expected_results[24]
+        expect(results).to include expected_results[25]
+        expect(results).to include expected_results[26]
+        expect(results).to include expected_results[28]
       end
     end
   end

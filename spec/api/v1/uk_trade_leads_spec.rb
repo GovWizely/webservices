@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'UK Trade Leads API V1' do
+describe 'UK Trade Leads API V1', type: :request do
   before(:all) do
     UkTradeLead.recreate_index
     UkTradeLeadData.new("#{Rails.root}/spec/fixtures/uk_trade_leads/uk_trade_leads.csv").import
@@ -19,14 +19,14 @@ describe 'UK Trade Leads API V1' do
 
       it 'returns all documents' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 3
+        expect(json_response[:total]).to eq(3)
 
         results = json_response[:results]
 
         # Order is different due to sort condition in query.
-        results[0].should == expected_results[1]
-        results[1].should == expected_results[0]
-        results[2].should == expected_results[2]
+        expect(results[0]).to eq(expected_results[1])
+        expect(results[1]).to eq(expected_results[0])
+        expect(results[2]).to eq(expected_results[2])
       end
     end
 
@@ -38,10 +38,10 @@ describe 'UK Trade Leads API V1' do
 
       it 'returns documents which contain the word "and"' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 2
+        expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        results.should match_array([expected_results[0], expected_results[2]])
+        expect(results).to match_array([expected_results[0], expected_results[2]])
       end
 
       context 'when industry is specified' do
@@ -52,10 +52,10 @@ describe 'UK Trade Leads API V1' do
 
         it 'returns documents with industry equal to "85000000"' do
           json_response = JSON.parse(response.body, symbolize_names: true)
-          json_response[:total].should == 1
+          expect(json_response[:total]).to eq(1)
 
           results = json_response[:results]
-          results[0].should == expected_results[0]
+          expect(results[0]).to eq(expected_results[0])
         end
       end
 
@@ -63,10 +63,10 @@ describe 'UK Trade Leads API V1' do
         let(:params) { { q: 'limited' } }
         it 'returns the document which contains the word "limited"' do
           json_response = JSON.parse(response.body, symbolize_names: true)
-          json_response[:total].should == 1
+          expect(json_response[:total]).to eq(1)
 
           results = json_response[:results]
-          results[0].should == expected_results[2]
+          expect(results[0]).to eq(expected_results[2])
         end
       end
     end

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'BIS Unverified Parties API V1' do
+describe 'BIS Unverified Parties API V1', type: :request do
   include_context 'UVL data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

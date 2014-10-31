@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Trade Articles API V1' do
+describe 'Trade Articles API V1', type: :request do
   before(:all) do
     TradeArticle.recreate_index
     fixtures_file = "#{Rails.root}/spec/fixtures/trade_articles/trade_articles.json"
@@ -28,10 +28,10 @@ describe 'Trade Articles API V1' do
 
       it 'returns matching trade articles' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
+        expect(json_response['total']).to eq(1)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 

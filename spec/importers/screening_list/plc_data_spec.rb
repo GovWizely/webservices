@@ -11,8 +11,8 @@ describe ScreeningList::PlcData do
 
   describe '#import' do
     it 'loads PLC from specified resource' do
-      ScreeningList::Plc.should_receive(:index) do |plc|
-        plc.should == expected
+      expect(ScreeningList::Plc).to receive(:index) do |plc|
+        expect(plc).to eq(expected)
       end
       importer.import
     end

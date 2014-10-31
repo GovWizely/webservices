@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'ITA Office Locations API V1' do
+describe 'ITA Office Locations API V1', type: :request do
   before(:all) do
     ItaOfficeLocation.recreate_index
     fixtures_dir = "#{Rails.root}/spec/fixtures/ita_office_locations"
@@ -20,11 +20,11 @@ describe 'ITA Office Locations API V1' do
 
       it 'returns matching office locations' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 2
+        expect(json_response['total']).to eq(2)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
-        results[1].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[1])
+        expect(results[1]).to eq(expected_results[0])
       end
     end
 
@@ -36,10 +36,10 @@ describe 'ITA Office Locations API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
+        expect(json_response['total']).to eq(1)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
+        expect(results[0]).to eq(expected_results[1])
       end
     end
 
@@ -51,10 +51,10 @@ describe 'ITA Office Locations API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
+        expect(json_response['total']).to eq(1)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -66,10 +66,10 @@ describe 'ITA Office Locations API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
+        expect(json_response['total']).to eq(1)
 
         results = json_response['results']
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -81,10 +81,10 @@ describe 'ITA Office Locations API V1' do
 
       it 'returns trade events' do
         json_response = JSON.parse(response.body)
-        json_response['total'].should == 1
+        expect(json_response['total']).to eq(1)
 
         results = json_response['results']
-        results[0].should == expected_results[1]
+        expect(results[0]).to eq(expected_results[1])
       end
     end
 

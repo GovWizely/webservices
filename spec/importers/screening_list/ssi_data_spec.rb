@@ -11,8 +11,8 @@ describe ScreeningList::SsiData do
 
   describe '#import' do
     it 'loads SSI from specified resource' do
-      ScreeningList::Ssi.should_receive(:index) do |ssi|
-        ssi.should == expected
+      expect(ScreeningList::Ssi).to receive(:index) do |ssi|
+        expect(ssi).to eq(expected)
       end
       importer.import
     end

@@ -10,17 +10,26 @@ describe TradeArticleQuery do
       context 'when options include evergreen as true' do
         subject { TradeArticleQuery.new(evergreen: 'true') }
 
-        its(:evergreen) { should be_true }
+        describe '#evergreen' do
+          subject { super().evergreen }
+          it { is_expected.to be_truthy }
+        end
       end
       context 'when options include evergreen as false' do
         subject { TradeArticleQuery.new(evergreen: 'false') }
 
-        its(:evergreen) { should be_false }
+        describe '#evergreen' do
+          subject { super().evergreen }
+          it { is_expected.to be_falsey }
+        end
       end
       context 'when options exclude evergreen' do
         subject { TradeArticleQuery.new({}) }
 
-        its(:evergreen) { should be_nil }
+        describe '#evergreen' do
+          subject { super().evergreen }
+          it { is_expected.to be_nil }
+        end
       end
     end
 
@@ -34,7 +43,7 @@ describe TradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all_params.json").read }
 
       it 'generates search body with all params' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -48,7 +57,7 @@ describe TradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_empty_pub_params.json").read }
 
       it 'generates search body without pub range params' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 

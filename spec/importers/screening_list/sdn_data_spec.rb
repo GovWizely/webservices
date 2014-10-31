@@ -11,8 +11,8 @@ describe ScreeningList::SdnData do
 
   describe '#import' do
     it 'loads special designated nationals from specified resource' do
-      ScreeningList::Sdn.should_receive(:index) do |sdn|
-        sdn.should == expected
+      expect(ScreeningList::Sdn).to receive(:index) do |sdn|
+        expect(sdn).to eq(expected)
       end
       importer.import
     end
