@@ -59,7 +59,7 @@ module TariffRate
     private
 
     def process_row(row)
-      row.each { |_k, v| v.gsub!(/\(null\)/, 'nil') }
+      row.each { |_k, v| row[_k] = nil if v == "(null)" }
 
       entry = sanitize_entry(remap_keys(COLUMN_HASH, row))
       entry[:id] = Digest::SHA1.hexdigest(row.to_s)
@@ -76,8 +76,8 @@ module TariffRate
       rate_by_year = {}
       alt_rate_by_year = {}
       row.each do |key, value|
-        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('y20') && value != 'nil'
-        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20') && value != 'nil'
+        rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('y20') && !value.nil?
+        alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20') && !value.nil?
       end
       { annual_rates:     rate_by_year,
         alt_annual_rates: alt_rate_by_year }

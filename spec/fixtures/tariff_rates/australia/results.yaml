@@ -1,15 +1,15 @@
 ---
-- :id: "ac4e9c0429825d3555eb373820634fd06cd03967"
+- :id: "2d147a6263d45d9c11d6f8c0edd2847cb9452661"
   :source_id: "439058"
   :tariff_line: "01011000"
   :description: "Live purebred breeding horses and asses"
   :hs_6: "010110"
   :sector_code: "15"
   :base_rate: "0"
-  :base_rate_alt: "nil"
+  :base_rate_alt: 
   :final_year: "2012"
   :tariff_lines_per_6_digit: "1"
-  :tariff_rate_quota: "nil"
+  :tariff_rate_quota: 
   :tariff_rate_quota_note: "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker."
   :tariff_eliminated: "true"
   :product_type_id: "2"
@@ -21,15 +21,15 @@
   :staging_basket_id: "6"
   :num_mar_columns: "10"
   :partner_start_year: "2012"
-  :reporter_start_year: "nil"
+  :reporter_start_year: 
   :partner_agreement_name: "AU"
   :reporter_agreement_name: "US"
   :partner_agreement_approved: "true"
-  :reporter_agreement_approved: "nil"
+  :reporter_agreement_approved: 
   :rule_text: "A change to heading 01.01 through 01.06 from any other chapter."
-  :link_text: "nil"
-  :link_url: "nil"
-  :quota_name: "nil"
+  :link_text: 
+  :link_url: 
+  :quota_name: 
   :industry: "Agricultural"
   :annual_rates:
     y2012: "10"
@@ -43,17 +43,17 @@
     - "US"
     - "AU"
   :source: "AUSTRALIA"
-- :id: 4ca184467eeab101868af9af3e68081dc62d5c67
+- :id: "eb5fad6ac09549ec9af595c241f0379a1df588d7"
   :source_id: "439227"
   :tariff_line: "0102102000"
   :description: "Beef cattle"
   :hs_6: "010210"
   :sector_code: "15"
   :base_rate: "89.1"
-  :base_rate_alt: "nil"
+  :base_rate_alt: 
   :final_year: "2012"
   :tariff_lines_per_6_digit: "3"
-  :tariff_rate_quota: "nil"
+  :tariff_rate_quota: 
   :tariff_rate_quota_note: "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker."
   :tariff_eliminated: "true"
   :product_type_id: "2"
@@ -64,16 +64,16 @@
   :staging_basket: "Immediate"
   :staging_basket_id: "6"
   :num_mar_columns: "10"
-  :partner_start_year: "nil"
+  :partner_start_year: 
   :reporter_start_year: "2012"
   :partner_agreement_name: "US"
   :reporter_agreement_name: "AU"
-  :partner_agreement_approved: "nil"
+  :partner_agreement_approved: 
   :reporter_agreement_approved: "true"
   :rule_text: "A change to heading 01.01 through 01.06 from any other chapter."
-  :link_text: "nil"
-  :link_url: "nil"
-  :quota_name: "nil"
+  :link_text: 
+  :link_url: 
+  :quota_name: 
   :industry: "Agricultural"
   :annual_rates:
     y2012: "100"
@@ -83,17 +83,17 @@
     - "US"
     - "AU"
   :source: "AUSTRALIA"
-- :id: "98d78f8c3a5147d4914461b51c89abe34c20aed2"
+- :id: "cdecf3a0fc661b22daa7bd24b353e0e8d490b961"
   :source_id: "441638"
   :tariff_line: "02050000"
   :description: "Meat of horses, asses, mules or hinnies, fresh, chilled or frozen"
   :hs_6: "020500"
   :sector_code: "17"
   :base_rate: "0"
-  :base_rate_alt: "nil"
+  :base_rate_alt: 
   :final_year: "2012"
   :tariff_lines_per_6_digit: "1"
-  :tariff_rate_quota: "nil"
+  :tariff_rate_quota: 
   :tariff_rate_quota_note: "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker."
   :tariff_eliminated: "true"
   :product_type_id: "2"
@@ -105,15 +105,15 @@
   :staging_basket_id: "6"
   :num_mar_columns: "10"
   :partner_start_year: "2012"
-  :reporter_start_year: "nil"
+  :reporter_start_year: 
   :partner_agreement_name: "AU"
   :reporter_agreement_name: "US"
   :partner_agreement_approved: "true"
-  :reporter_agreement_approved: "nil"
+  :reporter_agreement_approved: 
   :rule_text: "A change to heading 02.01 through 02.10 from any other chapter except from fowls of the species Gallus domesticus (chickens) of heading 01.05."
-  :link_text: "nil"
-  :link_url: "nil"
-  :quota_name: "nil"
+  :link_text: 
+  :link_url: 
+  :quota_name: 
   :industry: "Agricultural"
   :annual_rates: {}
   :alt_annual_rates:
