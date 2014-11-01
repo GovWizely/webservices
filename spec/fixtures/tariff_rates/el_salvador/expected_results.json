@@ -6,10 +6,10 @@
         "hs_6": "10110",
         "sector_code": "15",
         "base_rate": "0",
-        "base_rate_alt": "null",
+        "base_rate_alt": "nil",
         "final_year": "2012",
         "tariff_lines_per_6_digit": "1",
-        "tariff_rate_quota": "null",
+        "tariff_rate_quota": "nil",
         "tariff_rate_quota_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
         "tariff_eliminated": "true",
         "product_type_id": "2",
@@ -21,27 +21,27 @@
         "staging_basket_id": "6",
         "num_mar_columns": "10",
         "partner_start_year": "2012",
-        "reporter_start_year": "null",
+        "reporter_start_year": "nil",
         "partner_agreement_name": "SV",
         "reporter_agreement_name": "US",
         "partner_agreement_approved": "true",
-        "reporter_agreement_approved": "null",
+        "reporter_agreement_approved": "nil",
         "rule_text": "A change to heading 01.01 through 01.06 from any other chapter.",
-        "link_text": "null",
-        "link_url": "null",
-        "quota_name": "null",
+        "link_text": "nil",
+        "link_url": "nil",
+        "quota_name": "nil",
         "industry": "Agricultural",
-        "annual_rates": [
-            ["y2012", "10"],
-            ["y2013", "20"],
-            ["y2014", "30"]
-        ],
-        "alt_annual_rates": [
-            ["alt_2012", "1"],
-            ["alt_2013", "2"],
-            ["alt_2014", "3"]
-        ],
-        "countries": ["US","SV"],
+        "annual_rates": {
+            "y2012": "10",
+            "y2013": "20",
+            "y2014": "30"
+        },
+        "alt_annual_rates": {
+            "alt_2012": "1",
+            "alt_2013": "2",
+            "alt_2014": "3"
+        },
+        "countries": ["US", "SV"],
         "source": "EL_SALVADOR"
     }
 ]

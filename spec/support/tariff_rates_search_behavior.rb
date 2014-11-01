@@ -10,7 +10,6 @@ shared_context 'TariffRate::Australia data' do
     TariffRate::Australia.recreate_index
     TariffRate::AustraliaData.new(
         "#{Rails.root}/spec/fixtures/tariff_rates/australia/australia.csv").import
-
   end
 
   let(:all_australia_results) do
@@ -74,7 +73,6 @@ shared_context 'TariffRate::CostaRica data' do
     TariffRate::CostaRica.recreate_index
     TariffRate::CostaRicaData.new(
         "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica/costa_rica.csv").import
-
   end
 
   let(:all_costa_rica_results) do
@@ -106,7 +104,6 @@ shared_context 'TariffRate::ElSalvador data' do
     TariffRate::ElSalvador.recreate_index
     TariffRate::ElSalvadorData.new(
         "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador/el_salvador.csv").import
-
   end
 
   let(:all_el_salvador_results) do
