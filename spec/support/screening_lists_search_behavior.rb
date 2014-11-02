@@ -538,8 +538,8 @@ def source_full_name(code)
     ISN: 'Nonproliferation Sanctions (ISN) - State Department',
     PLC: 'Palestinian Legislative Council List (PLC) - Treasury Department',
     SSI: 'Sectoral Sanctions Identifications List (SSI) - Treasury Department',
-    SDN: 'Special Designated Nationals (SDN) - Treasury Department',
-    UVL: 'Unverified List - Bureau of Industry and Security',
+    SDN: 'Specially Designated Nationals (SDN) - Treasury Department',
+    UVL: 'Unverified List (UVL) - Bureau of Industry and Security',
   }
   full_names[code.to_sym] || code
 end

@@ -59,7 +59,7 @@
     "source_list_url": null,
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
     "title": null,
-    "source": "Special Designated Nationals (SDN) - Treasury Department"
+    "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
     "addresses": [
@@ -105,7 +105,7 @@
     "source_list_url": null,
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
     "title": "Executive Director, Havana International Bank",
-    "source": "Special Designated Nationals (SDN) - Treasury Department"
+    "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
     "addresses": [
@@ -174,7 +174,7 @@
     "source_list_url": null,
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
     "title": null,
-    "source": "Special Designated Nationals (SDN) - Treasury Department"
+    "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
     "addresses": [
@@ -210,6 +210,6 @@
     "vessel_flag": "Iran",
     "vessel_owner": "IRISL",
     "vessel_type": "General Cargo",
-    "source": "Special Designated Nationals (SDN) - Treasury Department"
+    "source": "Specially Designated Nationals (SDN) - Treasury Department"
   }
 ]

@@ -3,7 +3,7 @@ module ScreeningList
     extend ::Indexable
     include ScreeningList::Mappable
     self.source = {
-      full_name: 'Special Designated Nationals (SDN) - Treasury Department',
+      full_name: 'Specially Designated Nationals (SDN) - Treasury Department',
       code:      'SDN',
     }
   end
