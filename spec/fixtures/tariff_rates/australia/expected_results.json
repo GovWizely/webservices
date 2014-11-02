@@ -6,10 +6,10 @@
         "hs_6": "010110",
         "sector_code": "15",
         "base_rate": "0",
-        "base_rate_alt": "null",
+        "base_rate_alt": null,
         "final_year": "2012",
         "tariff_lines_per_6_digit": "1",
-        "tariff_rate_quota": "null",
+        "tariff_rate_quota": null,
         "tariff_rate_quota_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
         "tariff_eliminated": "true",
         "product_type_id": "2",
@@ -21,27 +21,27 @@
         "staging_basket_id": "6",
         "num_mar_columns": "10",
         "partner_start_year": "2012",
-        "reporter_start_year": "null",
+        "reporter_start_year": null,
         "partner_agreement_name": "AU",
         "reporter_agreement_name": "US",
         "partner_agreement_approved": "true",
-        "reporter_agreement_approved": "null",
+        "reporter_agreement_approved": null,
         "rule_text": "A change to heading 01.01 through 01.06 from any other chapter.",
-        "link_text": "null",
-        "link_url": "null",
-        "quota_name": "null",
+        "link_text": null,
+        "link_url": null,
+        "quota_name": null,
         "industry": "Agricultural",
-        "annual_rates": [
-            ["y2012", "10"],
-            ["y2013", "20"],
-            ["y2014", "30"]
-        ],
-        "alt_annual_rates": [
-            ["alt_2012", "1"],
-            ["alt_2013", "2"],
-            ["alt_2014", "3"]
-        ],
-        "countries": ["US","AU"],
+        "annual_rates": {
+            "y2012": "10",
+            "y2013": "20",
+            "y2014": "30"
+        },
+        "alt_annual_rates": {
+            "alt_2012": "1",
+            "alt_2013": "2",
+            "alt_2014": "3"
+        },
+        "countries": ["US", "AU"],
         "source": "AUSTRALIA"
     },
     {
@@ -51,10 +51,10 @@
         "hs_6": "010210",
         "sector_code": "15",
         "base_rate": "89.1",
-        "base_rate_alt": "null",
+        "base_rate_alt": null,
         "final_year": "2012",
         "tariff_lines_per_6_digit": "3",
-        "tariff_rate_quota": "null",
+        "tariff_rate_quota": null,
         "tariff_rate_quota_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
         "tariff_eliminated": "true",
         "product_type_id": "2",
@@ -65,28 +65,23 @@
         "staging_basket": "Immediate",
         "staging_basket_id": "6",
         "num_mar_columns": "10",
-        "partner_start_year": "null",
+        "partner_start_year": null,
         "reporter_start_year": "2012",
         "partner_agreement_name": "US",
         "reporter_agreement_name": "AU",
-        "partner_agreement_approved": "null",
+        "partner_agreement_approved": null,
         "reporter_agreement_approved": "true",
         "rule_text": "A change to heading 01.01 through 01.06 from any other chapter.",
-        "link_text": "null",
-        "link_url": "null",
-        "quota_name": "null",
+        "link_text": null,
+        "link_url": null,
+        "quota_name": null,
         "industry": "Agricultural",
-        "annual_rates": [
-            ["y2012", "null"],
-            ["y2013", "null"],
-            ["y2014", "null"]
-        ],
-        "alt_annual_rates": [
-            ["alt_2012", "null"],
-            ["alt_2013", "null"],
-            ["alt_2014", "null"]
-        ],
-        "countries": ["US","AU"],
+        "annual_rates": {
+            "y2012": "100",
+            "y2013": "200"
+        },
+        "alt_annual_rates": {},
+        "countries": ["US", "AU"],
         "source": "AUSTRALIA"
     },
     {
@@ -96,10 +91,10 @@
         "hs_6": "020500",
         "sector_code": "17",
         "base_rate": "0",
-        "base_rate_alt": "null",
+        "base_rate_alt": null,
         "final_year": "2012",
         "tariff_lines_per_6_digit": "1",
-        "tariff_rate_quota": "null",
+        "tariff_rate_quota": null,
         "tariff_rate_quota_note": "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker.",
         "tariff_eliminated": "true",
         "product_type_id": "2",
@@ -111,27 +106,22 @@
         "staging_basket_id": "6",
         "num_mar_columns": "10",
         "partner_start_year": "2012",
-        "reporter_start_year": "null",
+        "reporter_start_year": null,
         "partner_agreement_name": "AU",
         "reporter_agreement_name": "US",
         "partner_agreement_approved": "true",
-        "reporter_agreement_approved": "null",
+        "reporter_agreement_approved": null,
         "rule_text": "A change to heading 02.01 through 02.10 from any other chapter except from fowls of the species Gallus domesticus (chickens) of heading 01.05.",
-        "link_text": "null",
-        "link_url": "null",
-        "quota_name": "null",
+        "link_text": null,
+        "link_url": null,
+        "quota_name": null,
         "industry": "Agricultural",
-        "annual_rates": [
-            ["y2012", "null"],
-            ["y2013", "null"],
-            ["y2014", "null"]
-        ],
-        "alt_annual_rates": [
-            ["alt_2012", "null"],
-            ["alt_2013", "null"],
-            ["alt_2014", "null"]
-        ],
-        "countries": ["US","AU"],
+        "annual_rates": {},
+        "alt_annual_rates": {
+            "alt_2013": "300",
+            "alt_2014": "400"
+        },
+        "countries": ["US", "AU"],
         "source": "AUSTRALIA"
     }
 ]
