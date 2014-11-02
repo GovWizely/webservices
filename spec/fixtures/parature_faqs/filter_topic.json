@@ -1,10 +1,10 @@
 {
-  "query": {
+  "filter": {
     "bool": {
       "must": [
         {
-          "match": {
-            "industry": "importing"
+          "terms": {
+              "topic": ["cafta-dr"]
           }
         }
       ]

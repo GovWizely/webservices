@@ -46,9 +46,7 @@ class ParatureFaqData
         id += 1
       end
     end
-
     faqs = data.map { |faq_hash| process_faq_info(faq_hash) }.compact
-
     ParatureFaq.index faqs
   end
 
@@ -69,6 +67,7 @@ class ParatureFaqData
 
     faq[:answer] &&= Nokogiri::HTML.fragment(faq[:answer]).inner_text.squish
     faq[:answer] &&= strip_nonascii(faq[:answer])
+    faq[:question] &&= strip_nonascii(faq[:question])
     faq[:update_date] &&= Date.parse(faq[:update_date]).to_s
     faq
   end
