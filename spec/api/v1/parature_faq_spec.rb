@@ -10,7 +10,7 @@ describe 'Parature Faq API V1', type: :request do
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml") }
 
-  describe 'GET /parature_faq/search.json' do
+  describe 'GET /faqs/search.json' do
 
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, v1_headers }
@@ -96,8 +96,8 @@ describe 'Parature Faq API V1', type: :request do
       end
     end
 
-    context 'when industry is specified' do
-      before { get search_path, { industry: 'importing' }, v1_headers }
+    context 'when industries is specified' do
+      before { get search_path, { industries: 'importing' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -112,8 +112,8 @@ describe 'Parature Faq API V1', type: :request do
       end
     end
 
-    context 'when topic is specified' do
-      before { get search_path, { topic: 'cafta-dr' }, v1_headers }
+    context 'when topics is specified' do
+      before { get search_path, { topics: 'cafta-dr' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
