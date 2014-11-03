@@ -4,7 +4,9 @@ shared_context 'full results from response' do
       .select { |r| r['source'] == source_full_name(source) }
   end
   let(:got) do
-    full_results.map { |f| @all_possible_full_results[source].index(f) }
+    full_results.map do |f|
+      @all_possible_full_results[source].index(f)
+    end
   end
 end
 

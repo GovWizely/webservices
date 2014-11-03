@@ -22,10 +22,6 @@ describe TradeEvent::UstdaQuery do
   end
 
   describe '#generate_search_body' do
-    before do
-      allow(Date).to receive(:current).and_return(Date.parse('2013-10-07'))
-    end
-
     context 'when options is an empty hash' do
       let(:query) { TradeEvent::UstdaQuery.new({}) }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_default_options.json").read }

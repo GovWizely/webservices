@@ -1,79 +1,5 @@
 ---
-- :cost: '3250.00'
-  :description: The mission to Brazil is designed for U.S. architectural, project
-    management, and design services companies, that provide state-of-the-art and world
-    class designs.
-  :end_date: 2013-01-10
-  :event_name: Architectural Services
-  :event_type: Trade Mission
-  :id: '34522'
-  :registration_link: https://emenuapps.ita.doc.gov/ePublic/TM/4R19
-  :registration_title: Apply for this event
-  :start_date: 2013-01-08
-  :url: 
-  :contacts:
-  - :email: Arica.Young@trade.gov
-    :first_name: Arica
-    :last_name: Young
-    :person_title: International Trade Specialist
-    :phone: 202.482.6219
-    :post: TPP
-  - :email: Carolina.Epifanio@trade.gov
-    :first_name: Carolina
-    :last_name: Epifanio
-    :person_title: Commercial Assistant
-    :phone: 21 3823-2030 / 9769-0467 (cell)
-    :post: Rio De Janeiro
-  - :email: Eric.Olson@trade.gov
-    :first_name: Eric
-    :last_name: Olson
-    :person_title: Principal Commercial Officer
-    :phone: 55-81-3416-3075
-    :post: Recife
-  - :email: Eugene.Alford@trade.gov
-    :first_name: Eugene
-    :last_name: Alford
-    :person_title: International Trade Specialist
-    :phone: 202-482-5071
-    :post: OSI
-  - :email: Joel.Reynoso@trade.gov
-    :first_name: Joel
-    :last_name: Reynoso
-    :person_title: Commercial Officer
-    :phone: 55-21-3823-2420
-    :post: Rio De Janeiro
-  - :email: Patrick.Levy@trade.gov
-    :first_name: Patrick
-    :last_name: Levy
-    :person_title: Commercial Specialist
-    :phone: 55/21/3823-2413
-    :post: Rio De Janeiro
-  - :email: Sergio.Teixeira@trade.gov
-    :first_name: Sergio
-    :last_name: Teixeira
-    :person_title: Trade Event Manager/Coordinator
-    :phone: 55 21 3823-2419
-    :post: Rio De Janeiro
-  - :email: DerekWasham@aia.org
-    :first_name: Derek
-    :last_name: Washam
-    :person_title: 
-    :phone: 202-626-7398
-    :post: American Institute of Architecture
-  - :email: jessicasalmoiraghi@aia.org
-    :first_name: Jessica
-    :last_name: Salmoiraghi, Esq
-    :person_title: 
-    :phone: 202-626-7398
-    :post: The American Institute of Architects
-  :industries:
-  - Architectural/Constr./Engineering SVC
-  :venues:
-  - :city: Rio De Janeiro
-    :country: 
-    :state: 
-    :venue: Rio De Janeiro
-  :ttl: 1s
+
 - :cost: 0.0
   :description: We are delighted to invite U.S. suppliers and contractors to exhibit
     at MDDMI 2013
@@ -103,7 +29,6 @@
     :country: IL
     :state: 
     :venue: International Convention Center, Haifa, Israel
-  :ttl: 2558d
   :source: ITA
 - :cost: 195.0
   :description: How well do you know the Foreign Trade Regulations (FTR) and the Automated
@@ -129,7 +54,6 @@
     :country: US
     :state: WI
     :venue: WCTC - Richard T Anderson Building
-  :ttl: 2558d
   :source: ITA
 - :cost: 200.99
   :description: The International WorkBoat Show is the largest commercial marine tradeshow
@@ -180,7 +104,6 @@
     :country: US
     :state: LA
     :venue: Morial Convention Center, New Orleans, Louisiana
-  :ttl: 2561d
   :source: ITA
 - :cost: 0.0
   :description: HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and
@@ -242,5 +165,4 @@
     :country: BR
     :state: 
     :venue: Expo Center Norte
-  :ttl: 2634d
   :source: ITA

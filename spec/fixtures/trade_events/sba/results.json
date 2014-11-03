@@ -1,5 +1,6 @@
 [
   {
+    "id": "a3925bf8dc3c6c46f7bf65791f68173e88867a89",
     "event_name": "Small Business Development Center Maximus [recurring]",
     "event_type": "Resource Partner",
     "start_date": "2013-01-01",
@@ -29,6 +30,7 @@
     "country": "US"
   },
   {
+    "id": "bb0a5e15db1eefd43754f721975d88abe1ac683c",
     "event_name": "Seattle - SBA Loan Briefing [recurring]",
     "event_type": "SBA Participating",
     "start_date": "2013-01-10",
@@ -58,6 +60,7 @@
     "country": "US"
   },
   {
+    "id": "82488156b6a2f7240495bc43060c0b4c262f96f8",
     "event_name": "Small Business Development Center Classes",
     "event_type": "Resource Partner",
     "start_date": "2013-02-01",
@@ -87,6 +90,7 @@
     "country": "US"
   },
   {
+    "id": "81588edfe12cbd3ebb1ef05901fb48b98118bf4a",
     "event_name": "Seattle - SBA Loan Briefing",
     "event_type": "SBA Participating",
     "start_date": "2013-02-14",
@@ -116,6 +120,7 @@
     "country": "US"
   },
   {
+    "id": "1e9a67392d02ac1935fca0872e754b4f79f52181",
     "event_name": "Small Business Development Center Classes",
     "event_type": "Resource Partner",
     "start_date": "2013-03-01",
@@ -145,6 +150,7 @@
     "country": "US"
   },
   {
+    "id": "6357c0ccb00cd10898b6098bb769f555b3218b62",
     "event_name": "Seattle - SBA Loan Briefing",
     "event_type": "SBA Participating",
     "start_date": "2013-03-14",
@@ -174,6 +180,7 @@
     "country": "US"
   },
   {
+    "id": "1d564251f14da8862379f2db812148988d5d5b2b",
     "event_name": "Small Business Development Center Classes",
     "event_type": "Resource Partner",
     "start_date": "2013-04-01",
@@ -203,6 +210,7 @@
     "country": "US"
   },
   {
+    "id": "0baa420252da3a0047156c6dcca75fd395791c4f",
     "event_name": "Seattle - SBA Loan Briefing",
     "event_type": "SBA Participating",
     "start_date": "2013-04-11",
@@ -232,6 +240,7 @@
     "country": "US"
   },
   {
+    "id": "ceb79b23c1c10c9a727683c0250dba9e2531e572",
     "event_name": "Small Business Development Center Classes",
     "event_type": "Resource Partner",
     "start_date": "2013-05-01",
@@ -261,6 +270,7 @@
     "country": "US"
   },
   {
+    "id": "dd12543922512740e00d9a602b719519f186b562",
     "event_name": "Introductory Export Workshop for Aerospace Suppliers",
     "event_type": "SBA Participating",
     "start_date": "2014-06-17",
@@ -290,6 +300,7 @@
     "country": "DE"
   },
   {
+    "id": "ac4762e9b2ccb537b4be1ce206c004286dc0e50f",
     "event_name": "Export Compliance & Documentation Training",
     "event_type": "Resource Partner",
     "start_date": "2014-06-18",
@@ -319,6 +330,7 @@
     "country": "US"
   },
   {
+    "id": "71ada50f1413e011cb8e788475fcc6f142891925",
     "event_name": "Understanding Incoterms",
     "event_type": "Resource Partner",
     "start_date": "2014-06-18",
@@ -348,6 +360,7 @@
     "country": "US"
   },
   {
+    "id": "39ce32491650ade4fa1774a748b9b828c26bef80",
     "event_name": "International Sales Contacts Commercial Invoices and Other Doucments",
     "event_type": "SBA Participating",
     "start_date": "2014-06-18",
@@ -377,6 +390,7 @@
     "country": "US"
   },
   {
+    "id": "27fed639cc4814cfcbd49c91a1a90d30f2c3884b",
     "event_name": "SBDC Exporting Workshop",
     "event_type": "Resource Partner",
     "start_date": "2014-06-18",
@@ -406,6 +420,7 @@
     "country": "FR"
   },
   {
+    "id": "1ad75d3410313305cda3cfd1983c53acf38c7bf6",
     "event_name": "2014 SBA Small Business Awards & Conference #thenextbigthing",
     "event_type": "SBA Sponsored",
     "start_date": "2014-06-19",
@@ -435,6 +450,7 @@
     "country": "US"
   },
   {
+    "id": "0e05225b186c05b7fa124e6eb548b82e449dfb26",
     "event_name": "Introduction To Exporting (Tupelo)",
     "event_type": "Resource Partner",
     "start_date": "2014-06-19",
@@ -464,6 +480,7 @@
     "country": "US"
   },
   {
+    "id": "3d17cc02d14c8055953885cb2d02ae9de61ab590",
     "event_name": "Letters of Credit & International Banking",
     "event_type": "Resource Partner",
     "start_date": "2014-06-19",

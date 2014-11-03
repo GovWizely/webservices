@@ -3,6 +3,7 @@ shared_context 'all Trade Events fixture data' do
   include_context 'TradeEvent::Ita data'
   include_context 'TradeEvent::Exim data'
   include_context 'TradeEvent::Ustda data'
+  include_context 'TradeEvent::Dl data'
 end
 
 shared_context 'TradeEvent::Ita data' do
@@ -190,5 +191,34 @@ end
 shared_examples 'it contains all TradeEvent::Ustda results that match industry "mining"' do
   let(:source) { :USTDA }
   let(:expected) { [0, 3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TradeEvent::Dl data' do
+  before(:all) do
+    TradeEvent::Dl.recreate_index
+    TradeEvent::DlData.new(
+      "#{Rails.root}/spec/fixtures/trade_events/dl/trade_events.xml",
+    ).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:DL] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/dl/results.json").read)
+  end
+
+  before do
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_examples 'it contains all TradeEvent::Dl results' do
+  let(:source) { :DL }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Dl results that match "Bangladesh"' do
+  let(:source) { :DL }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
