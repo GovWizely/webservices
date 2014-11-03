@@ -1,0 +1,12 @@
+json.call(entry[:_source],
+          :event_name,
+          :description,
+          :url,
+          :start_date,
+          :end_date,
+          :city,
+          :state,
+          :country,
+          :industries,
+          :source,
+)

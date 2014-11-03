@@ -4,12 +4,14 @@ shared_context 'full results from response' do
       .select { |r| r['source'] == source_full_name(source) }
   end
   let(:got) do
-    full_results.map { |f| @all_possible_full_results[source].index(f) }
+    full_results.map { |f|
+      @all_possible_full_results[source].index(f) }
   end
 end
 
 shared_examples 'it contains all expected results of source' do
   include_context 'full results from response'
+  
   it 'contains them all' do
     expect(got).to match_array(expected)
   end
