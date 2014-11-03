@@ -15,8 +15,9 @@ describe 'Consolidated Trade Events API V1', type: :request do
       it_behaves_like 'it contains all TradeEvent::Sba results'
       it_behaves_like 'it contains all TradeEvent::Exim results'
       it_behaves_like 'it contains all TradeEvent::Ustda results'
+      it_behaves_like 'it contains all TradeEvent::Dl results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(ITA SBA EXIM USTDA) }
+        let(:sources) { %w(ITA SBA EXIM USTDA DL) }
       end
     end
 
@@ -144,6 +145,14 @@ describe 'Consolidated Trade Events API V1', type: :request do
         it_behaves_like 'it contains all TradeEvent::Ustda results'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { %w(USTDA) }
+        end
+      end
+      context 'and is set to "DL"' do
+        let(:params) { { sources: 'DL', size: 100 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Dl results'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { %w(DL) }
         end
       end
     end
