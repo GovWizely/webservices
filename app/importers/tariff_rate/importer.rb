@@ -59,7 +59,7 @@ module TariffRate
     private
 
     def process_row(row)
-      row.each { |_k, v| row[_k] = nil if v == "(null)" }
+      row.each { |_k, v| row[_k] = nil if v == '(null)' }
 
       entry = sanitize_entry(remap_keys(COLUMN_HASH, row))
       entry[:id] = Digest::SHA1.hexdigest(row.to_s)

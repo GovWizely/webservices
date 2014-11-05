@@ -13,7 +13,7 @@ module TariffRate
     end
 
     def self.index_names(sources)
-      classes = [Australia, CostaRica, ElSalvador, Korea]
+      classes = [Australia, CostaRica, ElSalvador, Guatemala, Korea]
       classes = classes.select { |c| sources.include?(c.source) } if sources.any?
 
       classes.map(&:index_name)

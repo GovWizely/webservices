@@ -35,6 +35,7 @@ namespace :ita do
   task recreate_then_import_tariff_rate_indices: :environment do
     %w( TariffRate::Australia
         TariffRate::CostaRica
+        TariffRate::Guatemala
         TariffRate::ElSalvador
         TariffRate::Korea
     ).each do |class_name|
