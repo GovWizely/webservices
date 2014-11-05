@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe MarketResearchQuery do
+describe ParatureFaqQuery do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs" }
 
   describe '#generate_search_body' do
@@ -31,18 +31,18 @@ describe MarketResearchQuery do
       end
     end
 
-    context 'when options include industry' do
-      let(:query) { ParatureFaqQuery.new(industry: 'importing') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_industry.json").read }
+    context 'when options include industries' do
+      let(:query) { ParatureFaqQuery.new(industries: 'importing') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_industries.json").read }
 
       it 'generates search body with queries' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
-    context 'when options include topic' do
-      let(:query) { ParatureFaqQuery.new(topic: 'cafta-dr') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_topic.json").read }
+    context 'when options include topics' do
+      let(:query) { ParatureFaqQuery.new(topics: 'cafta-dr') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_topics.json").read }
 
       it 'generates search body with queries' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
