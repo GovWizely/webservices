@@ -44,8 +44,8 @@ module TradeEvent
     def process_event_info(event_info)
       event_hash = extract_fields(event_info, XPATHS)
       event_hash[:city] = nil
-      event_hash[:start_date] = parse_american_date( event_hash[:start_date] ) || '2100-01-01'
-      event_hash[:end_date] = parse_american_date( event_hash[:end_date] ) || parse_american_date( event_hash[:start_date] ) || '2100-01-10'
+      event_hash[:start_date] = nil
+      event_hash[:end_date] = nil
       event_hash[:state] = nil
       event_hash[:country] = nil
       event_hash[:industries] = []

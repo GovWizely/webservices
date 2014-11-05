@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'DL Trade Events API V1', type: :request do
-  # before { allow(Date).to receive(:current).and_return(Date.parse('2013-10-07')) }
   include_context 'TradeEvent::Dl data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 

@@ -51,13 +51,11 @@ module TradeEvent
       process_required_fields(event_hash)
 
       if event_invalid?(event_hash)
-        event_hash[:ttl] = '1s'
-        return event_hash
+        return nil
       end
 
       process_optional_fields(event_hash)
 
-      event_hash[:ttl] = "#{(event_hash[:end_date] - Date.current).to_i}d"
       event_hash[:source] = model_class.source
       event_hash
     end

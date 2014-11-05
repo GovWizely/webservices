@@ -9,6 +9,7 @@ module TradeEvent
           size:  query.size,
           sort:  query.sort)['hits'].deep_symbolize_keys
       hits[:offset] = query.offset
+
       hits.deep_symbolize_keys
     end
 
