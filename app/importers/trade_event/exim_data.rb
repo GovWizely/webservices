@@ -42,10 +42,10 @@ module TradeEvent
     private
 
     def resource_fh
-      if URI.parse(@resource).scheme =~ /ftp|http/
-        return open(@resource, 'User-Agent' => USER_AGENT)
-      end
-      open(@resource, 'r:UTF-8')
+      args = URI.parse(@resource).scheme =~ /ftp|http/ ?
+        { 'User-Agent' => USER_AGENT } :
+        'r:UTF-8'
+      open(@resource, args)
     end
 
     def process_event_info(event_info)
