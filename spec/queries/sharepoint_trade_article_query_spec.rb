@@ -9,7 +9,7 @@ describe SharepointTradeArticleQuery do
       let(:query) { SharepointTradeArticleQuery.new({}) }
 
       it 'generates search body with default options' do
-        JSON.parse(query.generate_search_body).should == {}
+        expect(JSON.parse(query.generate_search_body)).to eq({})
       end
     end
 
@@ -18,7 +18,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/creation_date_filter.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -27,7 +27,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/release_date_filter.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -36,7 +36,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/expiration_date_filter.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -45,7 +45,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_export_phases.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -54,7 +54,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_industries.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -63,7 +63,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_countries.json").read }
 
       it 'generates search body with filters' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -72,7 +72,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_topics_fields.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -81,7 +81,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_geo_regions_fields.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -90,7 +90,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_regions.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -99,7 +99,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_programs.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -108,7 +108,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_initiatives.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 
@@ -117,7 +117,7 @@ describe SharepointTradeArticleQuery do
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_q.json").read }
 
       it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 

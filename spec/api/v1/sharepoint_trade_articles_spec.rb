@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Sharepoint Trade Article API V1' do
+describe 'Sharepoint Trade Article API V1', :type => :request do
   before(:all) do
     SharepointTradeArticle.recreate_index
     SharepointTradeArticleData.new("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*").import
@@ -20,10 +20,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 4
+        expect(json_response[:total]).to eq(4)
 
         results = json_response[:results]
-        results.should match_array expected_results
+        expect(results).to match_array expected_results
 
       end
     end
@@ -36,10 +36,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[2]
+        expect(results[0]).to eq(expected_results[2])
 
       end
     end
@@ -53,12 +53,12 @@ describe 'Sharepoint Trade Article API V1' do
       it 'returns sharepoint trade articles' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 3
+        expect(json_response[:total]).to eq(3)
 
         results = json_response[:results]
-        results.should include expected_results[0]
-        results.should include expected_results[2]
-        results.should include expected_results[3]
+        expect(results).to include expected_results[0]
+        expect(results).to include expected_results[2]
+        expect(results).to include expected_results[3]
       end
     end
 
@@ -71,7 +71,7 @@ describe 'Sharepoint Trade Article API V1' do
       it 'returns sharepoint trade articles' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 0
+        expect(json_response[:total]).to eq(0)
 
       end
     end
@@ -85,7 +85,7 @@ describe 'Sharepoint Trade Article API V1' do
       it 'returns sharepoint trade articles' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 0
+        expect(json_response[:total]).to eq(0)
 
       end
     end
@@ -98,10 +98,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -113,10 +113,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -129,10 +129,10 @@ describe 'Sharepoint Trade Article API V1' do
       it 'returns sharepoint trade articles' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -144,10 +144,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -159,10 +159,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -174,10 +174,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -189,10 +189,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
@@ -204,10 +204,10 @@ describe 'Sharepoint Trade Article API V1' do
 
       it 'returns sharepoint trade articles' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        results[0].should == expected_results[0]
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 

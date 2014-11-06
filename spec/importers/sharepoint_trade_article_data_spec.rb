@@ -9,10 +9,10 @@ describe SharepointTradeArticleData do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
     it 'loads sharepoint trade articles from specified resource' do
-      SharepointTradeArticle.should_receive(:index) do |entries|
+      expect(SharepointTradeArticle).to receive(:index) do |entries|
 
-        entries.size.should == 4
-        entries.should match_array entry_hash
+        expect(entries.size).to eq(4)
+        expect(entries).to match_array entry_hash
 
       end
       importer.import
