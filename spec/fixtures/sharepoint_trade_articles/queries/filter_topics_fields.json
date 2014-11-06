@@ -1,0 +1,19 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "topics": ["free trade agreements"]
+            }
+        },
+        {
+          "terms": {
+            "sub_topics": ["nafta", "cafta-dr"]
+            }
+          }
+      ]
+    }
+  }
+}
+

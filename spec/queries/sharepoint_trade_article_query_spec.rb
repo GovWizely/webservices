@@ -40,18 +40,9 @@ describe SharepointTradeArticleQuery do
       end
     end
 
-    context 'when options include source_agencies or source_business_units or source_offices' do
-      let(:query) { SharepointTradeArticleQuery.new(source_agencies: 'trade', source_business_units: 'markets', source_offices: 'director general') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_source_agencies_fields.json").read }
-
-      it 'generates search body with queries' do
-        JSON.parse(query.generate_search_body).should == search_body
-      end
-    end
-
     context 'when options include export_phases' do
-      let(:query) { SharepointTradeArticleQuery.new(export_phases: 'expand') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_export_phases.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(export_phases: 'expand,learn') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_export_phases.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -59,8 +50,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include industries' do
-      let(:query) { SharepointTradeArticleQuery.new(industries: 'defense') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_industries.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(industries: 'agribusniess,aerospace & defense') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_industries.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -77,8 +68,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include topics or subtopics' do
-      let(:query) { SharepointTradeArticleQuery.new(topics: 'free trade', sub_topics: 'nafta') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_topics_fields.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(topics: 'free trade agreements', sub_topics: 'nafta,cafta-dr') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_topics_fields.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -86,8 +77,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include geo_regions or geo_subregion' do
-      let(:query) { SharepointTradeArticleQuery.new(geo_regions: 'asia', geo_subregions: 'east') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_geo_regions_fields.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(geo_regions: 'asia', geo_subregions: 'east asia,asia pacific') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_geo_regions_fields.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -95,8 +86,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include trade_regions' do
-      let(:query) { SharepointTradeArticleQuery.new(trade_regions: 'asia') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_trade_regions.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(trade_regions: 'andean community,african growth and opportunity act') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_regions.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -104,8 +95,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include trade_programs' do
-      let(:query) { SharepointTradeArticleQuery.new(trade_programs: 'advisory') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_trade_programs.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(trade_programs: 'advocacy,advisory committees') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_programs.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body
@@ -113,8 +104,8 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include trade_initiatives' do
-      let(:query) { SharepointTradeArticleQuery.new(trade_initiatives: 'discover') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/match_trade_initiatives.json").read }
+      let(:query) { SharepointTradeArticleQuery.new(trade_initiatives: 'discover global markets') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/filter_trade_initiatives.json").read }
 
       it 'generates search body with queries' do
         JSON.parse(query.generate_search_body).should == search_body

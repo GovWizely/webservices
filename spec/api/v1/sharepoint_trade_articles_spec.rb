@@ -90,23 +90,8 @@ describe 'Sharepoint Trade Article API V1' do
       end
     end
 
-    context 'when source_agencies or source_business_units or source_offices is specified' do
-      before { get search_path, { source_agencies: 'trade', source_business_units: 'markets', source_offices: 'director general' }, v1_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns sharepoint trade articles' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        json_response[:total].should == 1
-
-        results = json_response[:results]
-        results.should include expected_results[0]
-      end
-    end
-
     context 'when export_phases is specified' do
-      before { get search_path, { export_phases: 'expand' }, v1_headers }
+      before { get search_path, { export_phases: 'expand, learn' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -121,7 +106,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when industries is specified' do
-      before { get search_path, { industries: 'defense' }, v1_headers }
+      before { get search_path, { industries: 'agribusniess,aerospace & defense' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -152,7 +137,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when topics or sub_topics is specified' do
-      before { get search_path, { topics: 'free trade', sub_topics: 'nafta' }, v1_headers }
+      before { get search_path, { topics: 'free trade agreements', sub_topics: 'nafta,cafta-dr' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -167,7 +152,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when geo_regions or geo_subregion is specified' do
-      before { get search_path, { geo_regions: 'asia', geo_subregion: 'east' }, v1_headers }
+      before { get search_path, { geo_regions: 'asia', geo_subregion: 'east asia,asia pacific' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -182,7 +167,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_regions is specified' do
-      before { get search_path, { trade_regions: 'asia' }, v1_headers }
+      before { get search_path, { trade_regions: 'andean community,african growth and opportunity act' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -197,7 +182,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_programs is specified' do
-      before { get search_path, { trade_programs: 'advisory' }, v1_headers }
+      before { get search_path, { trade_programs: 'advocacy,advisory committees' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -212,7 +197,7 @@ describe 'Sharepoint Trade Article API V1' do
     end
 
     context 'when trade_initiatives is specified' do
-      before { get search_path, { trade_initiatives: 'discover' }, v1_headers }
+      before { get search_path, { trade_initiatives: 'discover global markets' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

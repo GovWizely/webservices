@@ -68,13 +68,15 @@ module SharepointHelpers
     end
   end
 
-  def generate_sp_filter(json)
+  def generate_sp_filter(json, filter_terms)
     json.bool do
       json.must do
         generate_date_range(json, 'creation_date')
         generate_date_range(json, 'release_date')
         generate_date_range(json, 'expiration_date')
-        json.child! { json.terms { json.countries @countries } } if @countries
+        filter_terms.each do |term|
+          json.child! { json.terms { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
+        end
       end
     end
   end
