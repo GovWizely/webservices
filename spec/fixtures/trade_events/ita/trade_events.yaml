@@ -1,7 +1,5 @@
 ---
-- :city: Rio De Janeiro
-  :cost: '3250.00'
-  :country:
+- :cost: '3250.00'
   :description: The mission to Brazil is designed for U.S. architectural, project
     management, and design services companies, that provide state-of-the-art and world
     class designs.
@@ -12,9 +10,7 @@
   :registration_link: https://emenuapps.ita.doc.gov/ePublic/TM/4R19
   :registration_title: Apply for this event
   :start_date: 2013-01-08
-  :state:
-  :url:
-  :venue: Rio De Janeiro
+  :url: 
   :contacts:
   - :email: Arica.Young@trade.gov
     :first_name: Arica
@@ -61,33 +57,34 @@
   - :email: DerekWasham@aia.org
     :first_name: Derek
     :last_name: Washam
-    :person_title:
+    :person_title: 
     :phone: 202-626-7398
     :post: American Institute of Architecture
   - :email: jessicasalmoiraghi@aia.org
     :first_name: Jessica
     :last_name: Salmoiraghi, Esq
-    :person_title:
+    :person_title: 
     :phone: 202-626-7398
     :post: The American Institute of Architects
   :industries:
   - Architectural/Constr./Engineering SVC
+  :venues:
+  - :city: Rio De Janeiro
+    :country: 
+    :state: 
+    :venue: Rio De Janeiro
   :ttl: 1s
-- :city: Tel Aviv
-  :cost: 0.0
-  :country: IL
+- :cost: 0.0
   :description: We are delighted to invite U.S. suppliers and contractors to exhibit
     at MDDMI 2013
   :end_date: 2020-10-08
   :event_name: CS Booth at Israel Medical Device Design & Manufacturing Industry (MDDMI)
   :event_type: Post Initiated Event-Under 5k
   :id: '17816'
-  :registration_link:
-  :registration_title:
+  :registration_link: 
+  :registration_title: 
   :start_date: 2020-10-08
-  :state:
-  :url:
-  :venue: International Convention Center, Haifa, Israel
+  :url: 
   :contacts:
   - :email: Yael.Torres@trade.gov
     :first_name: Yael
@@ -101,11 +98,14 @@
   - Medical Eq.
   - Plastics Materials/Resins
   - Robotics
+  :venues:
+  - :city: Tel Aviv
+    :country: IL
+    :state: 
+    :venue: International Convention Center, Haifa, Israel
   :ttl: 2558d
   :source: ITA
-- :city: Pewaukee
-  :cost: 195.0
-  :country: US
+- :cost: 195.0
   :description: How well do you know the Foreign Trade Regulations (FTR) and the Automated
     Export System (AES)?
   :end_date: 2020-10-08
@@ -115,9 +115,7 @@
   :registration_link: https://emenuapps.ita.doc.gov/ePublic/event/editWebReg.do?SmartCode=4Q03
   :registration_title: Register for this event
   :start_date: 2020-10-08
-  :state: WI
-  :url:
-  :venue: WCTC - Richard T Anderson Building
+  :url: 
   :contacts:
   - :email: Koreen.Grube@trade.gov
     :first_name: Koreen
@@ -126,11 +124,14 @@
     :phone: 414-297-1853
     :post: Milwaukee
   :industries: []
+  :venues:
+  - :city: Pewaukee
+    :country: US
+    :state: WI
+    :venue: WCTC - Richard T Anderson Building
   :ttl: 2558d
   :source: ITA
-- :city: New Orleans, Louisiana
-  :cost: 200.99
-  :country: US
+- :cost: 200.99
   :description: The International WorkBoat Show is the largest commercial marine tradeshow
     in North America serving people and businesses working on the coastal, inland
     and offshore waters.
@@ -138,12 +139,10 @@
   :event_name: International Workboat Show (IWS 2013)
   :event_type: Trade Promotion Event
   :id: '34436'
-  :registration_link:
-  :registration_title:
+  :registration_link: 
+  :registration_title: 
   :start_date: 2020-10-09
-  :state: LA
   :url: www.workboatshow.com
-  :venue: Morial Convention Center, New Orleans, Louisiana
   :contacts:
   - :email: Benedicta.Nkwoh@trade.gov
     :first_name: Benedicta Ngozi
@@ -161,14 +160,14 @@
     :first_name: Janelle
     :last_name: Weyek
     :person_title: Commercial Officer
-    :phone: +234-1-460-3618
+    :phone: "+234-1-460-3618"
     :post: Lagos
   - :email: Rebecca.Armand@trade.gov
     :first_name: Rebecca
     :last_name: Armand
     :person_title: Senior Commercial Officer
-    :phone: (234-1) 460-3400 ext 3498
-    :post:
+    :phone: "(234-1) 460-3400 ext 3498"
+    :post: 
   :industries:
   - Commercial Fishing Eq.
   - Commercial Vessel/Eq. (Non-Fisheries)
@@ -176,38 +175,40 @@
   - Operations/Maintenance Services
   - Pleasure Boats/Accessories
   - Port/Shipbuilding Eq.
+  :venues:
+  - :city: New Orleans, Louisiana
+    :country: US
+    :state: LA
+    :venue: Morial Convention Center, New Orleans, Louisiana
   :ttl: 2561d
   :source: ITA
-- :city: São Paulo
-  :cost: 0.0
-  :country: BR
+- :cost: 0.0
   :description: HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and
     is an International Trade Fair for Products, Equipment, Services and Technology
     for Hospitals, Health Clinics and Laboratories. HOSPITALAR is the most complete
-    and specialized healthcare fair in Brazil and Latin America. The fair is to be considered
-    as the platform for new technologies, thus representing a great opportunity to know
-    products and services and updating for hospitals, health clinics and laboratories.
+    and specialized healthcare fair in Brazil and Latin America. The fair is to be
+    considered as the platform for new technologies, thus representing a great opportunity
+    to know products and services and updating for hospitals, health clinics and laboratories.
     HOSPITALAR is a multi-sector trade fair, featuring 1,250 Brazilian and international
     exhibitors, launching products or services and meeting potential and already existing
     clients. Exclusively dedicated to healthcare professionals, HOSPITALAR 2020 received
     92,000 visitors among doctors, nurses, PTs, administrators, distributors and other
-    professionals interested in the health care area, coming from all over Brazil and
-    Latin America. Messe Düsseldorf North America, the subsidiary office of Messe Düsseldorf
-    in Germany - organizer of the renowned MEDICA trade fair, is the exclusive representative
-    office of HOSPITALAR in the United States and Canada, and also organizes the North
-    American Pavilion at the show every year. This pavilion provides an excellent platform
-    to introduce your company's products and services to the Brazilian Market. Please
-    visit http://www.mdna.com for complete show details and an exhibitor's kit.
+    professionals interested in the health care area, coming from all over Brazil
+    and Latin America. Messe Düsseldorf North America, the subsidiary office of Messe
+    Düsseldorf in Germany - organizer of the renowned MEDICA trade fair, is the exclusive
+    representative office of HOSPITALAR in the United States and Canada, and also
+    organizes the North American Pavilion at the show every year. This pavilion provides
+    an excellent platform to introduce your company's products and services to the
+    Brazilian Market. Please visit http://www.mdna.com for complete show details and
+    an exhibitor's kit.
   :end_date: 2020-12-23
   :event_name: Hospitalar 2014
   :event_type: Trade Fair
   :id: '34568'
-  :registration_link:
-  :registration_title:
+  :registration_link: 
+  :registration_title: 
   :start_date: 2020-12-20
-  :state:
   :url: http://www.hospitalar.com/ingles/index.html
-  :venue: Expo Center Norte
   :contacts:
   - :email: Jefferson.Oliveira@trade.gov
     :first_name: Jefferson
@@ -224,17 +225,22 @@
   - :email: katherine@hospitalar.com.br
     :first_name: Katherine
     :last_name: Shibata
-    :person_title:
-    :phone: (5511) 3897.6199
+    :person_title: 
+    :phone: "(5511) 3897.6199"
     :post: Hospitalar Fairs & Congresses
   - :email: ryan.klemm@mdna.com
     :first_name: Ryan
     :last_name: Klemm
-    :person_title:
+    :person_title: 
     :phone: 312-781-5180
     :post: Messe Dusseldorf North America
   :industries:
   - Laboratory Scientific Instruments
   - Medical Eq.
+  :venues:
+  - :city: São Paulo
+    :country: BR
+    :state: 
+    :venue: Expo Center Norte
   :ttl: 2634d
   :source: ITA

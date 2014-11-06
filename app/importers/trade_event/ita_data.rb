@@ -5,9 +5,7 @@ module TradeEvent
     include ::Importer
 
     SINGLE_VALUED_XPATHS = {
-      city:               './/CITY',
       cost:               './COST',
-      country:            './/COUNTRY',
       description:        './DETAILDESC',
       end_date:           './EVENDDT',
       event_name:         './EVENTNAME',
@@ -16,9 +14,7 @@ module TradeEvent
       registration_link:  './REGISTRATIONLINK',
       registration_title: './REGISTRATIONTITLE',
       start_date:         './EVSTARTDT',
-      state:              './/STATE',
       url:                './WEBSITES/WEBSITE/@URL',
-      venue:              './/LOCATION',
     }.freeze
 
     CONTACT_XPATHS = {
@@ -28,7 +24,14 @@ module TradeEvent
       person_title: './TITLE',
       phone:        './PHONE',
       post:         './POST',
-    }
+    }.freeze
+
+    VENUE_XPATHS = {
+      city:    './/CITY',
+      country: './/COUNTRY',
+      state:   './/STATE',
+      venue:   './/LOCATION',
+    }.freeze
 
     def initialize(resource = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020")
       @resource = resource
@@ -70,7 +73,14 @@ module TradeEvent
       event_hash[:industries] = event_info.xpath('./INDUSTRY').map do |industry|
         extract_node industry
       end.compact.uniq
+      event_hash[:venues] = extract_venues(event_info)
       event_hash
+    end
+
+    def extract_venues(event_info)
+      venue = extract_fields(event_info, VENUE_XPATHS)
+      venue[:country] = venue[:country].present? ? lookup_country(venue[:country]) : nil
+      [venue]
     end
 
     def process_optional_fields(event_hash)
@@ -81,7 +91,6 @@ module TradeEvent
     def process_required_fields(event_hash)
       event_hash[:start_date] = process_date(event_hash[:start_date]) rescue nil
       event_hash[:end_date] = process_date(event_hash[:end_date]) rescue nil
-      event_hash[:country] = event_hash[:country].present? ? lookup_country(event_hash[:country]) : nil
     end
 
     def process_date(date_string)
@@ -89,7 +98,7 @@ module TradeEvent
     end
 
     def event_invalid?(event_hash)
-      event_hash[:country].nil? ||
+      event_hash[:venues].first[:country].nil? ||
           event_hash[:end_date].nil? || event_hash[:start_date].nil? ||
           event_hash[:end_date] < Date.current
     end

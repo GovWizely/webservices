@@ -9,7 +9,7 @@ module TradeEvent
     ENDPOINT = 'http://www.exim.gov/customcf/feeds/events/'
     USER_AGENT = 'Mozilla/5.0 (Macintosh; Intel Mac OS X 10_7_0) AppleWebKit/535.2 (KHTML, like Gecko) Chrome/15.0.854.0 Safari/535.2'
 
-    XPATHS = {
+    SINGLE_VALUED_XPATHS = {
       id:                './id',
       event_name:        './event_name',
       start_date:        './start_date',
@@ -17,8 +17,11 @@ module TradeEvent
       registration_link: './registration_link',
       description:       './description',
       url:               './url',
-      city:              './city',
-      state:             './state',
+    }.freeze
+
+    VENUE_XPATHS = {
+      city:  './city',
+      state: './state',
     }.freeze
 
     def initialize(resource = ENDPOINT, options = {})
@@ -46,13 +49,19 @@ module TradeEvent
     end
 
     def process_event_info(event_info)
-      event_hash = extract_fields(event_info, XPATHS)
+      event_hash = extract_fields(event_info, SINGLE_VALUED_XPATHS)
       event_hash[:start_date] = parse_american_date(event_hash[:start_date])
       event_hash[:end_date] = event_hash[:end_date].present? ? parse_american_date(event_hash[:end_date]) : event_hash[:start_date]
-      event_hash[:country] = nil
       event_hash[:industries] = []
+      event_hash[:venues] = extract_venues(event_info)
       event_hash[:source] = model_class.source
       sanitize_entry(event_hash)
+    end
+
+    def extract_venues(event_info)
+      venue = extract_fields(event_info, VENUE_XPATHS)
+      venue[:country] = venue[:venue] = nil
+      [venue]
     end
   end
 end

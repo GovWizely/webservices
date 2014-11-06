@@ -25,17 +25,8 @@ module TradeEvent
       json.filter do
         json.bool do
           json.must do
-            json.child! do
-              json.range { json.end_date { json.gte Date.current } }
-            end
-            json.child! do
-              json.bool do
-                json.set! :should do
-                  json.child! { json.terms { json.country @countries } }
-                  json.child! { json.query { json.match { json.set! 'venues.country', @countries.map(&:strip).join(' ') } } }
-                end
-              end
-            end if @countries
+            json.child! { json.range { json.end_date { json.gte Date.current } } }
+            json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
           end
         end
       end

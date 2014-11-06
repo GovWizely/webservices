@@ -27,25 +27,33 @@ module TradeEvent
     private
 
     SINGLE_VALUED_XPATHS = {
-      address:           './street',
-      city:              './city',
       cost:              './fee',
-      country:           './country',
       description:       './body',
       event_cancelled:   './event_cancelled',
       event_name:        './node_title',
       event_type:        './event_type',
       industries:        './industry',
       registration_link: './registration_website',
-      state:             './province',
-      venue:             './location_name',
     }.freeze
+
+    DATETIME_XPATHS = {
+      event_date: './event_date',
+      time_zone:  './time_zone',
+    }
 
     CONTACT_XPATHS = {
       email:     './registration_email',
       last_name: './contact_name',
       phone:     './registration_phone',
       post:      './agency',
+    }.freeze
+
+    VENUE_XPATHS = {
+      address: './street',
+      city:    './city',
+      country: './country',
+      state:   './province',
+      venue:   './location_name',
     }.freeze
 
     def import_single(url)
@@ -57,24 +65,16 @@ module TradeEvent
     def process_item(item)
       doc = extract_fields(item, SINGLE_VALUED_XPATHS)
 
-      doc[:country] &&= lookup_country(doc[:country])
-      doc[:state] &&= lookup_state(doc[:state]) rescue doc[:state]
+      doc.merge!(extract_date_and_time_fields(item))
 
       doc[:industries] = [doc[:industries]].compact
       doc[:source] = model_class.source
       doc[:contacts] = extract_contacts(item)
-
-      doc.merge!(extract_date_and_time_fields(item))
-
+      doc[:venues] = extract_venues(item)
       doc[:id] = generate_id(doc)
 
       sanitize_entry(doc)
     end
-
-    DATETIME_XPATHS = {
-      event_date: './event_date',
-      time_zone:  './time_zone',
-    }
 
     def extract_date_and_time_fields(item)
       fields = extract_fields(item, DATETIME_XPATHS)
@@ -99,6 +99,13 @@ module TradeEvent
       contact.values.any? ? [contact] : []
     end
 
+    def extract_venues(item)
+      venue = extract_fields(item, VENUE_XPATHS)
+      venue[:country] &&= lookup_country(venue[:country])
+      venue[:state] &&= lookup_state(venue[:state]) rescue venue[:state]
+      [venue]
+    end
+
     def generate_id(doc)
       Digest::SHA1.hexdigest(
         %i(city cost country event_name event_type start_date
@@ -118,7 +125,7 @@ module TradeEvent
     end
 
     def doc_valid?(doc)
-      doc[:country] &&
+      doc[:venues].first[:country] &&
         doc[:end_date] &&
         doc[:start_date] &&
         Date.parse(doc[:end_date]) >= reject_if_ends_before &&

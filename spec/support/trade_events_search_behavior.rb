@@ -91,7 +91,7 @@ end
 
 shared_examples 'it contains all TradeEvent::Sba results that match "international"' do
   let(:source) { :SBA }
-  let(:expected) { [10, 11, 16] }
+  let(:expected) { [11, 12, 16] }
   it_behaves_like 'it contains all expected results of source'
 end
 

@@ -1,21 +1,22 @@
 [
   {
     "id": "17816",
-    "event_name": "CS Booth at Israel Medical Device Design \u0026 Manufacturing Industry (MDDMI)",
+    "event_name": "CS Booth at Israel Medical Device Design & Manufacturing Industry (MDDMI)",
     "event_type": "Post Initiated Event-Under 5k",
     "start_date": "2020-10-08",
     "end_date": "2020-10-08",
     "cost": 0.0,
     "registration_link": null,
     "registration_title": null,
-    "source": "ITA",
     "description": "We are delighted to invite U.S. suppliers and contractors to exhibit at MDDMI 2013",
-    "industries": ["Dental Eq.", "General Industrial Eq./Supplies", "Medical Eq.", "Plastics Materials/Resins", "Robotics"],
+    "industries": [
+      "Dental Eq.",
+      "General Industrial Eq./Supplies",
+      "Medical Eq.",
+      "Plastics Materials/Resins",
+      "Robotics"
+    ],
     "url": null,
-    "venue": "International Convention Center, Haifa, Israel",
-    "city": "Tel Aviv",
-    "state": null,
-    "country": "IL",
     "contacts": [
       {
         "email": "Yael.Torres@trade.gov",
@@ -25,7 +26,12 @@
         "phone": "972-3-519-8522",
         "post": "Tel Aviv"
       }
-    ]
+    ],
+    "source": "ITA",
+    "venue": "International Convention Center, Haifa, Israel",
+    "city": "Tel Aviv",
+    "state": null,
+    "country": "IL"
   },
   {
     "id": "33831",
@@ -36,14 +42,11 @@
     "cost": 195.0,
     "registration_link": "https://emenuapps.ita.doc.gov/ePublic/event/editWebReg.do?SmartCode=4Q03",
     "registration_title": "Register for this event",
-    "source": "ITA",
     "description": "How well do you know the Foreign Trade Regulations (FTR) and the Automated Export System (AES)?",
-    "industries": [],
+    "industries": [
+
+    ],
     "url": null,
-    "venue": "WCTC - Richard T Anderson Building",
-    "city": "Pewaukee",
-    "state": "WI",
-    "country": "US",
     "contacts": [
       {
         "email": "Koreen.Grube@trade.gov",
@@ -53,7 +56,12 @@
         "phone": "414-297-1853",
         "post": "Milwaukee"
       }
-    ]
+    ],
+    "source": "ITA",
+    "venue": "WCTC - Richard T Anderson Building",
+    "city": "Pewaukee",
+    "state": "WI",
+    "country": "US"
   },
   {
     "id": "34436",
@@ -64,14 +72,16 @@
     "cost": 200.99,
     "registration_link": null,
     "registration_title": null,
-    "source": "ITA",
     "description": "The International WorkBoat Show is the largest commercial marine tradeshow in North America serving people and businesses working on the coastal, inland and offshore waters.",
-    "industries": ["Commercial Fishing Eq.", "Commercial Vessel/Eq. (Non-Fisheries)", "Electronic Components", "Operations/Maintenance Services", "Pleasure Boats/Accessories", "Port/Shipbuilding Eq."],
+    "industries": [
+      "Commercial Fishing Eq.",
+      "Commercial Vessel/Eq. (Non-Fisheries)",
+      "Electronic Components",
+      "Operations/Maintenance Services",
+      "Pleasure Boats/Accessories",
+      "Port/Shipbuilding Eq."
+    ],
     "url": "www.workboatshow.com",
-    "venue": "Morial Convention Center, New Orleans, Louisiana",
-    "city": "New Orleans, Louisiana",
-    "state": "LA",
-    "country": "US",
     "contacts": [
       {
         "email": "Benedicta.Nkwoh@trade.gov",
@@ -105,7 +115,12 @@
         "phone": "(234-1) 460-3400 ext 3498",
         "post": null
       }
-    ]
+    ],
+    "source": "ITA",
+    "venue": "Morial Convention Center, New Orleans, Louisiana",
+    "city": "New Orleans, Louisiana",
+    "state": "LA",
+    "country": "US"
   },
   {
     "id": "34568",
@@ -116,14 +131,12 @@
     "cost": 0.0,
     "registration_link": null,
     "registration_title": null,
-    "source": "ITA",
     "description": "HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and is an International Trade Fair for Products, Equipment, Services and Technology for Hospitals, Health Clinics and Laboratories. HOSPITALAR is the most complete and specialized healthcare fair in Brazil and Latin America. The fair is to be considered as the platform for new technologies, thus representing a great opportunity to know products and services and updating for hospitals, health clinics and laboratories. HOSPITALAR is a multi-sector trade fair, featuring 1,250 Brazilian and international exhibitors, launching products or services and meeting potential and already existing clients. Exclusively dedicated to healthcare professionals, HOSPITALAR 2020 received 92,000 visitors among doctors, nurses, PTs, administrators, distributors and other professionals interested in the health care area, coming from all over Brazil and Latin America. Messe Düsseldorf North America, the subsidiary office of Messe Düsseldorf in Germany - organizer of the renowned MEDICA trade fair, is the exclusive representative office of HOSPITALAR in the United States and Canada, and also organizes the North American Pavilion at the show every year. This pavilion provides an excellent platform to introduce your company's products and services to the Brazilian Market. Please visit http://www.mdna.com for complete show details and an exhibitor's kit.",
-    "industries": ["Laboratory Scientific Instruments", "Medical Eq."],
+    "industries": [
+      "Laboratory Scientific Instruments",
+      "Medical Eq."
+    ],
     "url": "http://www.hospitalar.com/ingles/index.html",
-    "venue": "Expo Center Norte",
-    "city": "São Paulo",
-    "state": null,
-    "country": "BR",
     "contacts": [
       {
         "email": "Jefferson.Oliveira@trade.gov",
@@ -147,7 +160,7 @@
         "last_name": "Shibata",
         "person_title": null,
         "phone": "(5511) 3897.6199",
-        "post": "Hospitalar Fairs \u0026 Congresses"
+        "post": "Hospitalar Fairs & Congresses"
       },
       {
         "email": "ryan.klemm@mdna.com",
@@ -157,6 +170,11 @@
         "phone": "312-781-5180",
         "post": "Messe Dusseldorf North America"
       }
-    ]
+    ],
+    "source": "ITA",
+    "venue": "Expo Center Norte",
+    "city": "São Paulo",
+    "state": null,
+    "country": "BR"
   }
 ]

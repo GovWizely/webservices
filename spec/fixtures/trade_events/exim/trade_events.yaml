@@ -21,10 +21,12 @@
     once conference registration is open. For More Information: Please contact Capital
     Meeting Planning via email: Registrar@cmpinc.net or by phone: 703.536.4992.'
   :url: 
-  :city: Washington
-  :state: DC
-  :country: 
   :industries: []
+  :venues:
+  - :city: Washington
+    :state: DC
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '45076'
   :event_name: Global Access Exporter Forum
@@ -33,10 +35,12 @@
   :registration_link: "/newsandevents/events/loader.cfm?csModule=security/getfile&pageID=45075"
   :description: 
   :url: http://www.wtcno.org/
-  :city: New Orleans
-  :state: LA
-  :country: 
   :industries: []
+  :venues:
+  - :city: New Orleans
+    :state: LA
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44785'
   :event_name: Global Access for Small Business Forum
@@ -51,10 +55,12 @@
     Board of Directors Export-Import Bank of the United States Invite You to Attend
     an Exporter Forum
   :url: "/smallbusiness/global-access-forum-registration.cfm"
-  :city: Minneapolis
-  :state: MN
-  :country: 
   :industries: []
+  :venues:
+  - :city: Minneapolis
+    :state: MN
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44802'
   :event_name: Working Capital Delegated Authority Qualifying Training
@@ -64,10 +70,12 @@
   :description: 8:30 AM Working Capital Delegated Authority Qualifying Training for
     Lenders 12:30 PM Adjourn
   :url: https://www.cmpinc.net/ExImSmallBusiness
-  :city: Washington
-  :state: DC
-  :country: 
   :industries: []
+  :venues:
+  - :city: Washington
+    :state: DC
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44800'
   :event_name: Trade Finance Solutions for Exporters and Lenders
@@ -79,14 +87,16 @@
     (New at Ex-Im) 9:00 AM Working Capital Guarantee – Overview 9:45 AM Global Credit
     Express 10:30 AM BREAK 10:45 AM Overview of General Bank Public Policies 11:15
     AM Short-term Credit Insurance 12:00 PM LUNCH 1:00 PM Structured Trade and Project
-    Finance 1:30 PM Short-Term Financial Institution Policies / Medium/Long Term
-    Financing, "Buyer Finance" 2:30 PM Operations 3:15 PM BREAK 3:30 PM Legal 3:50
-    PM Wrap Up 4:00 PM Adjourn
+    Finance 1:30 PM Short-Term Financial Institution Policies / Medium/Long Term Financing,
+    "Buyer Finance" 2:30 PM Operations 3:15 PM BREAK 3:30 PM Legal 3:50 PM Wrap Up
+    4:00 PM Adjourn
   :url: https://www.cmpinc.net/ExImSmallBusiness
-  :city: Washington
-  :state: DC
-  :country: 
   :industries: []
+  :venues:
+  - :city: Washington
+    :state: DC
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '42020'
   :event_name: 'DISCOVER GLOBAL MARKETS: Sub-Saharan Africa'
@@ -95,10 +105,12 @@
   :registration_link: 
   :description: 
   :url: http://bit.ly/DiscoverAfrica2014
-  :city: Atlanta
-  :state: GA
-  :country: 
   :industries: []
+  :venues:
+  - :city: Atlanta
+    :state: GA
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '43740'
   :event_name: Virginia and DC District Export Council Energy and Environmental Technologies
@@ -108,10 +120,12 @@
   :registration_link: 
   :description: 
   :url: http://go.usa.gov/NrPH
-  :city: Canary Islands and Africagua
-  :state: 
-  :country: 
   :industries: []
+  :venues:
+  - :city: Canary Islands and Africagua
+    :state: 
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '38267'
   :event_name: FCIB 25th Annual Global Conference
@@ -120,10 +134,12 @@
   :registration_link: 
   :description: 
   :url: http://fcibglobal.com/events/event-calendar/details/216-fcib-global-conference.html
-  :city: Baltimore
-  :state: MD
-  :country: 
   :industries: []
+  :venues:
+  - :city: Baltimore
+    :state: MD
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44199'
   :event_name: Using Technology to Drive Performance in International Credit Management
@@ -140,10 +156,12 @@
     This Roundtable series will provide a global generic template of helpful hints
     and tips on managing such a project.'
   :url: https://fcibglobal.com/events/event-calendar/details/241-using-technology-to-drive-performance-in-international-credit-management-berne-switzerland.html
-  :city: Bern | Switzerland
-  :state: 
-  :country: 
   :industries: []
+  :venues:
+  - :city: Bern | Switzerland
+    :state: 
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '42494'
   :event_name: ICTF's Annual Global Trade Symposium
@@ -152,10 +170,12 @@
   :registration_link: 
   :description: 
   :url: http://www.ictfworld.org/page/2014GlobalSymposium
-  :city: Ft. Lauderdale
-  :state: FL
-  :country: 
   :industries: []
+  :venues:
+  - :city: Ft. Lauderdale
+    :state: FL
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '42437'
   :event_name: 'DISCOVER GLOBAL MARKETS: The Americas'
@@ -164,10 +184,12 @@
   :registration_link: 
   :description: 
   :url: http://www.export.gov/northcarolina/discovertheamericas/
-  :city: Charlotte
-  :state: North Carolina
-  :country: 
   :industries: []
+  :venues:
+  - :city: Charlotte
+    :state: North Carolina
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '42439'
   :event_name: 'DISCOVER GLOBAL MARKETS: Healthcare and Life Sciences'
@@ -176,10 +198,12 @@
   :registration_link: 
   :description: 
   :url: http://export.gov/minnesota/discoverglobalmarketshealthcareandlifesciences/index.asp
-  :city: Minneapolis
-  :state: MN
-  :country: 
   :industries: []
+  :venues:
+  - :city: Minneapolis
+    :state: MN
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '42745'
   :event_name: Intersec Dubai 2015
@@ -188,10 +212,12 @@
   :registration_link: 
   :description: 
   :url: http://www.georgia.org/wp-content/uploads/2014/07/Intersec-Dubai-2015_Recruitment-Flyer.pdf
-  :city: Dubai
-  :state: United Arab Emirates
-  :country: 
   :industries: []
+  :venues:
+  - :city: Dubai
+    :state: United Arab Emirates
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44203'
   :event_name: FCIB 25th Annual Global Conference
@@ -205,10 +231,12 @@
     you and your company. The Global Conference is truly a can't-miss professional
     development opportunity!
   :url: https://fcibglobal.com/events/event-calendar/details/216-fcib-global-conference.html
-  :city: Baltimore
-  :state: MD
-  :country: 
   :industries: []
+  :venues:
+  - :city: Baltimore
+    :state: MD
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44201'
   :event_name: Using Technology to Drive Performance in International Credit Management
@@ -225,10 +253,12 @@
     This Roundtable series will provide a global generic template of helpful hints
     and tips on managing such a project.'
   :url: https://fcibglobal.com/events/event-calendar/details/242-using-technology-to-drive-performance-in-international-credit-management-the-hague-netherlands.html
-  :city: The Hague | Netherlands
-  :state: 
-  :country: 
   :industries: []
+  :venues:
+  - :city: The Hague | Netherlands
+    :state: 
+    :venue: 
+    :country: 
   :source: EXIM
 - :id: '44888'
   :event_name: 2014 Mexico and Costa Rica Inbound Trade Mission
@@ -237,8 +267,10 @@
   :registration_link: 
   :description: 
   :url: https://directory.susta.org/events/view/2660
-  :city: Atlanta and Oklahoma City
-  :state: 
-  :country: 
   :industries: []
+  :venues:
+  - :city: Atlanta and Oklahoma City
+    :state: 
+    :venue: 
+    :country: 
   :source: EXIM

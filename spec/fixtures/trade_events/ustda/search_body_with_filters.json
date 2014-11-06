@@ -10,10 +10,11 @@
           }
         },
         {
-          "query": {
-            "match": {
-              "venues.country": "IL US"
-            }
+          "terms": {
+            "venues.country": [
+              "IL",
+              "US"
+            ]
           }
         }
       ]

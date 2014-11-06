@@ -29,7 +29,12 @@ module TradeEvent
             event_name:         { type: 'string', analyzer: 'custom_analyzer' },
             registration_title: { type: 'string', analyzer: 'custom_analyzer' },
             industries:         { type: 'string', analyzer: 'custom_analyzer' },
-            city:               { type: 'string', analyzer: 'custom_analyzer' },
+
+            venues:             { properties: { venue:   { type: 'string', analyzer: 'custom_analyzer' },
+                                                address: { type: 'string', analyzer: 'custom_analyzer' },
+                                                city:    { type: 'string', analyzer: 'custom_analyzer' },
+                                                state:   { type: 'string', analyzer: 'keyword' },
+                                                country: { type: 'string', analyzer: 'keyword' } } },
 
             id:                 { type: 'string', index: :not_analyzed, include_in_all: false },
           },

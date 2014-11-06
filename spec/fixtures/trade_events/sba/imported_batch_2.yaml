@@ -1,8 +1,5 @@
 ---
-- :address: 661 West Imperial Highway
-  :city: Los Angeles
-  :cost: 
-  :country: DE
+- :cost: 
   :description: 'Cost: FREE, Seating is limited Pre-registration Required by 06/14,
     Introductory Export Workshop for Aerospace Suppliers: Learn Strategic importance
     of aerospace suppliers in California exports; practical approaches to exporting;
@@ -11,24 +8,25 @@
   :event_type: SBA Participating
   :industries: []
   :registration_link: http://tinyrul.com/Flight14
-  :state: CA
-  :venue: Flight Path Museum
+  :time_zone: Pacific Standard Time
+  :start_date: '2014-06-17'
+  :start_time: '14:00'
+  :end_date: '2014-06-17'
+  :end_time: '18:00'
   :source: SBA
   :contacts:
   - :email: 
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
-  :time_zone: Pacific Standard Time
-  :start_date: '2014-06-17'
-  :start_time: '14:00'
-  :end_date: '2014-06-17'
-  :end_time: '18:00'
-  :id: 765f3c8a6b778e108e12151ab1c006b2ffe56707
-- :address: 600 Forbes Avenue Power Center Ballroom
-  :city: Pittsburgh
-  :cost: '295.00'
-  :country: US
+  :venues:
+  - :address: 661 West Imperial Highway
+    :city: Los Angeles
+    :country: DE
+    :state: CA
+    :venue: Flight Path Museum
+  :id: dd12543922512740e00d9a602b719519f186b562
+- :cost: '295.00'
   :description: 'Take-Aways: •You will be aware of the new export security requirements
     for all exporters. •You will have an 11 point checklist to guide you to full compliance
     on every export. •You will have a better understanding of the regulations and
@@ -38,48 +36,50 @@
   :event_type: Resource Partner
   :industries: []
   :registration_link: http://www.duq.edu/sbdc/
-  :state: PA
-  :venue: Duquesne University Power Center
+  :time_zone: Eastern Standard Time
+  :start_date: '2014-06-18'
+  :start_time: '08:30'
+  :end_date: '2014-06-18'
+  :end_time: '16:30'
   :source: SBA
   :contacts:
   - :email: duqsbdc@duq.edu
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
-  :time_zone: Eastern Standard Time
-  :start_date: '2014-06-18'
-  :start_time: '08:30'
-  :end_date: '2014-06-18'
-  :end_time: '16:30'
-  :id: 3c81d8cbf43c6f2ebb428950359e5a0434f8bd57
-- :address: 815 West 1250 South Room 110
-  :city: Orem
-  :cost: 
-  :country: FR
+  :venues:
+  - :address: 600 Forbes Avenue<br />Power Center Ballroom
+    :city: Pittsburgh
+    :country: US
+    :state: PA
+    :venue: Duquesne University Power Center
+  :id: ac4762e9b2ccb537b4be1ce206c004286dc0e50f
+- :cost: 
   :description: Save the date! How Can I Export? Come find out. Multiple Presenters,
     Your Questions Answered, State Resources You Can Use to Sell Your Products Abroad.
   :event_name: SBDC Exporting Workshop
   :event_type: Resource Partner
   :industries: []
   :registration_link: https://clients.utahsbdc.org/reg.aspx?mode=event&event=6340028
-  :state: UT
-  :venue: Orem/Provo SBDC Utah Valley University
+  :time_zone: Mountain Standard Time
+  :start_date: '2014-06-18'
+  :start_time: '09:00'
+  :end_date: '2014-06-18'
+  :end_time: '13:00'
   :source: SBA
   :contacts:
   - :email: sbdc@uvu.edu
     :last_name: Vira Bahr
     :phone: 801-863-8230
     :post: Small Business Administration
-  :time_zone: Mountain Standard Time
-  :start_date: '2014-06-18'
-  :start_time: '09:00'
-  :end_date: '2014-06-18'
-  :end_time: '13:00'
-  :id: b2f6d036371325055da05847bf06772466279378
-- :address: 318 Madison Avenue
-  :city: Elmira
-  :cost: '20.00'
-  :country: US
+  :venues:
+  - :address: 815 West 1250 South Room 110
+    :city: Orem
+    :country: FR
+    :state: UT
+    :venue: Orem/Provo SBDC Utah Valley University
+  :id: 27fed639cc4814cfcbd49c91a1a90d30f2c3884b
+- :cost: '20.00'
   :description: Corning Community College’s Small Business Development Center is offering
     the workshop “Understanding Incoterms” on Wednesday, June 18th from 9:00 – 11:30
     a.m. at CCC's Academic & Workforce Development Center, 318 Madison Avenue, Room
@@ -95,24 +95,25 @@
   :event_type: Resource Partner
   :industries: []
   :registration_link: 
-  :state: NY
-  :venue: CCC's Academic & Workforce Development Center
+  :time_zone: Eastern Standard Time
+  :start_date: '2014-06-18'
+  :start_time: '09:00'
+  :end_date: '2014-06-18'
+  :end_time: '11:30'
   :source: SBA
   :contacts:
   - :email: sbdc@corning-cc.edu
     :last_name: Mary
     :phone: 607-937-6861
     :post: Small Business Administration
-  :time_zone: Eastern Standard Time
-  :start_date: '2014-06-18'
-  :start_time: '09:00'
-  :end_date: '2014-06-18'
-  :end_time: '11:30'
-  :id: dff3b13cc902a62bdbf17ea7911c80daf27e3a4d
-- :address: 301 West 1st Street
-  :city: Los Angeles
-  :cost: '35.00'
-  :country: US
+  :venues:
+  - :address: 318 Madison Avenue
+    :city: Elmira
+    :country: US
+    :state: NY
+    :venue: CCC&#039;s Academic &amp; Workforce Development Center
+  :id: 71ada50f1413e011cb8e788475fcc6f142891925
+- :cost: '35.00'
   :description: 'Cost: $35, Pre-registration Required, International Sales Contacts
     Commercial Invoices and Other Documents: Avoiding legal pitfalls; Strategies on
     structuring your transactions; Documents and information you need and more, presented
@@ -121,24 +122,25 @@
   :event_type: SBA Participating
   :industries: []
   :registration_link: 
-  :state: CA
-  :venue: Los Angeles Law Library
+  :time_zone: Pacific Standard Time
+  :start_date: '2014-06-18'
+  :start_time: '12:15'
+  :end_date: '2014-06-18'
+  :end_time: '14:15'
   :source: SBA
   :contacts:
   - :email: JCornel@portla.org
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
-  :time_zone: Pacific Standard Time
-  :start_date: '2014-06-18'
-  :start_time: '12:15'
-  :end_date: '2014-06-18'
-  :end_time: '14:15'
-  :id: 200af2fb4fb2c7c5e1979868e7ffff30552e8b4e
-- :address: 404 S. Figueroa Street
-  :city: Los Angeles
-  :cost: 
-  :country: US
+  :venues:
+  - :address: 301 West 1st Street
+    :city: Los Angeles
+    :country: US
+    :state: CA
+    :venue: Los Angeles Law Library
+  :id: 39ce32491650ade4fa1774a748b9b828c26bef80
+- :cost: 
   :description: 'The luncheon session will feature the SBA Small Business Awards,
     which pays tribute to small business owners and champions in 10 award categories.
     8:15 a.m. Opening Session 9:15 a.m. General Session 10:30 a.m. Breakout Sessions
@@ -148,24 +150,25 @@
   :event_type: SBA Sponsored
   :industries: []
   :registration_link: http://events.lachamber.com/sbaweb/events/events.asp?&id=76086&wpid=-101&details=True&date=&cale_id=5206&newsession=TRUE&sid=122646944
-  :state: CA
-  :venue: The Westin Bonaventure Hotel
+  :time_zone: Pacific Standard Time
+  :start_date: '2014-06-19'
+  :start_time: '08:15'
+  :end_date: '2014-06-19'
+  :end_time: '13:30'
   :source: SBA
   :contacts:
   - :email: mattebery@lachamber.com
     :last_name: Patrick Patrick
     :phone: 213-580-7548
     :post: Small Business Administration
-  :time_zone: Pacific Standard Time
-  :start_date: '2014-06-19'
-  :start_time: '08:15'
-  :end_date: '2014-06-19'
-  :end_time: '13:30'
-  :id: ff38ea7c23e134ca62faa5134f743b705403ff9a
-- :address: 600 Forbes Avenue Power Center Ballroom
-  :city: Pittsburgh
-  :cost: '195.00'
-  :country: US
+  :venues:
+  - :address: 404 S. Figueroa Street
+    :city: Los Angeles
+    :country: US
+    :state: CA
+    :venue: The Westin Bonaventure Hotel
+  :id: 1ad75d3410313305cda3cfd1983c53acf38c7bf6
+- :cost: '195.00'
   :description: 'Take-Aways: •You will know the best type of L/C to use to manage
     your risk and exposure •You will know the specific strategies and tools to use
     during critical negotiations •You will be in the driver’s seat to properly structure
@@ -174,24 +177,25 @@
   :event_type: Resource Partner
   :industries: []
   :registration_link: http://www.duq.edu/sbdc/
-  :state: PA
-  :venue: Duquesne University Power Center
+  :time_zone: Eastern Standard Time
+  :start_date: '2014-06-19'
+  :start_time: '09:00'
+  :end_date: '2014-06-19'
+  :end_time: '15:00'
   :source: SBA
   :contacts:
   - :email: duqsbdc@duq.edu
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
-  :time_zone: Eastern Standard Time
-  :start_date: '2014-06-19'
-  :start_time: '09:00'
-  :end_date: '2014-06-19'
-  :end_time: '15:00'
-  :id: 04c6e1a55672a24630dca75fd9464baf1fea33c3
-- :address: 398 East Main Street
-  :city: Tupelo
-  :cost: 
-  :country: US
+  :venues:
+  - :address: 600 Forbes Avenue<br />Power Center Ballroom
+    :city: Pittsburgh
+    :country: US
+    :state: PA
+    :venue: Duquesne University Power Center
+  :id: 3d17cc02d14c8055953885cb2d02ae9de61ab590
+- :cost: 
   :description: 'Are you interested in getting new customers for your business, but
     don’t know where to begin? This seminar outlines the basic steps to exporting
     your product or service. Topics include: regulations such as licenses and permits;
@@ -204,17 +208,21 @@
   :event_type: Resource Partner
   :industries: []
   :registration_link: 
-  :state: MS
-  :venue: Renasant Center for IDEAs
+  :time_zone: Central Standard Time
+  :start_date: '2014-06-19'
+  :start_time: '13:00'
+  :end_date: '2014-06-19'
+  :end_time: '14:30'
   :source: SBA
   :contacts:
   - :email: 
     :last_name: Precious Thompson
     :phone: 
     :post: Small Business Administration
-  :time_zone: Central Standard Time
-  :start_date: '2014-06-19'
-  :start_time: '13:00'
-  :end_date: '2014-06-19'
-  :end_time: '14:30'
-  :id: 1a6672c8063291d501753e26b2c399fd24afaf13
+  :venues:
+  - :address: 398 East Main Street
+    :city: Tupelo
+    :country: US
+    :state: MS
+    :venue: Renasant Center for IDEAs
+  :id: 0e05225b186c05b7fa124e6eb548b82e449dfb26
