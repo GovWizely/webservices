@@ -35,19 +35,17 @@ module ScreeningList
     private
 
     def process_row(row)
-      entry = { remarks: row[:notes] }
-
-      entry[:name] = extract_name(row)
-      entry[:alt_names] = extract_alt_names(row)
-
-      entry[:start_date] = parse_american_date(row[:eff_date])
-      entry[:federal_register_notice] = row[:corrected_notice] || row[:notice]
-      entry[:source] = model_class.source
-      entry[:source_list_url] = 'http://www.pmddtc.state.gov/compliance/debar.html'
-      entry[:source_information_url] = 'http://www.pmddtc.state.gov/compliance/debar_intro.html'
-
+      entry = {
+        remarks:                 nil,
+        name:                    extract_name(row),
+        alt_names:               extract_alt_names(row),
+        start_date:              parse_american_date(row[:eff_date]),
+        federal_register_notice: (row[:corrected_notice] || row[:notice]),
+        source:                  model_class.source,
+        source_list_url:         'http://www.pmddtc.state.gov/compliance/debar.html',
+        source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
+      }
       entry[:id] = generate_id(entry)
-
       sanitize_entry(entry)
     end
 

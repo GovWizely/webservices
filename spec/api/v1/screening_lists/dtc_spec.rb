@@ -30,11 +30,6 @@ describe 'DDTC ITAR Debarred Parties API V1', type: :request do
         let(:params) { { q: 'mcsulla' } }
         it_behaves_like 'it contains all DTC results that match "mcsulla"'
       end
-
-      context 'when search term exists only in remarks' do
-        let(:params) { { q: 'original' } }
-        it_behaves_like 'it contains all DTC results that match "original"'
-      end
     end
 
   end
