@@ -128,19 +128,19 @@ end
 
 shared_examples 'it contains all TradeEvent::Exim results' do
   let(:source) { :EXIM }
-  let(:expected) { (0..15).to_a }
+  let(:expected) { (0..14).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Exim results that match "international"' do
   let(:source) { :EXIM }
-  let(:expected) { [1, 3, 10, 12] }
+  let(:expected) { [0, 2, 9, 11] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Exim results that match "Baltimore"' do
   let(:source) { :EXIM }
-  let(:expected) { [1, 2] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 

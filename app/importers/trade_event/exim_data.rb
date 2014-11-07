@@ -50,12 +50,26 @@ module TradeEvent
 
     def process_event_info(event_info)
       event_hash = extract_fields(event_info, SINGLE_VALUED_XPATHS)
-      event_hash[:start_date] = parse_american_date(event_hash[:start_date])
-      event_hash[:end_date] = event_hash[:end_date].present? ? parse_american_date(event_hash[:end_date]) : event_hash[:start_date]
+      return nil if event_invalid?(event_hash)
+      event_hash.merge!(extract_dates(event_hash))
       event_hash[:industries] = []
       event_hash[:venues] = extract_venues(event_info)
       event_hash[:source] = model_class.source
       sanitize_entry(event_hash)
+    end
+
+    def event_invalid?(event_hash)
+      URI.parse(event_hash[:registration_link]).host =~ /export.gov$/
+    rescue URI::InvalidURIError
+      false
+    end
+
+    def extract_dates(event_hash)
+      start_date = parse_american_date(event_hash[:start_date])
+      end_date = event_hash[:end_date].present? ?
+        parse_american_date(event_hash[:end_date]) :
+        start_date
+      { start_date: start_date, end_date: end_date }
     end
 
     def extract_venues(event_info)
