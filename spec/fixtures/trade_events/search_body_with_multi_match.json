@@ -4,22 +4,21 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["description", "event_name"],
+            "fields": [
+              "registration_title",
+              "description",
+              "event_name",
+              "industries",
+              "city",
+              "venues.city",
+              "venues.state",
+              "venues.country",
+              "contacts.first_name",
+              "contacts.last_name",
+              "contacts.person_title"
+            ],
             "operator": "and",
             "query": "workboat"
-          }
-        }
-      ]
-    }
-  },
-  "filter": {
-    "bool": {
-      "must": [
-        {
-          "range": {
-            "end_date": {
-              "gte": "2013-10-07"
-            }
           }
         }
       ]

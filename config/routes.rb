@@ -29,5 +29,14 @@ Webservices::Application.routes.draw do
         get "/#{source}/search", to: "tariff_rates/#{source}#search"
       end
     end
+
+    namespace :trade_events do
+      get 'search', to: 'consolidated#search'
+      get 'ita/search'
+      get 'sba/search'
+      get 'exim/search'
+      get 'dl/search'
+      get 'ustda/search'
+    end
   end
 end

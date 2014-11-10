@@ -12,9 +12,10 @@ module Importer
   end
 
   def sanitize_entry(entry)
+    @html_entities_coder ||= HTMLEntities.new
     entry.each do |k, v|
       next unless v.is_a?(String)
-      entry[k] = v.present? ? v.squish : nil
+      entry[k] = v.present? ? @html_entities_coder.decode(Sanitize.clean(v)).squish : nil
     end
     entry
   end
@@ -51,6 +52,7 @@ module Importer
     when /\ALaos\Z/i then "Lao People's Democratic Republic"
     when /\ASt\. Lucia\Z/i then 'Saint Lucia'
     when /\ASão Tomé & Príncipe\Z/i then 'Sao Tome and Principe'
+    when /\AU\.?S\.?(A\.?)?\Z/i then 'United States'
     else country_str
     end
   end
@@ -76,5 +78,9 @@ module Importer
 
   def can_purge_old?
     model_class.can_purge_old?
+  end
+
+  def lookup_state(state_str)
+    State.normalize state_str
   end
 end

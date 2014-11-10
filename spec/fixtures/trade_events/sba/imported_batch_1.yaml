@@ -1,0 +1,248 @@
+---
+- :cost: '0.00'
+  :description: The Small Business Development Centers conduct classroom training
+    throughout the state that can provide skills and knowledge for entrepreneurs and
+    small businesses. Classes revolve around various topics including business planning,
+    starting and financing a business. Visit http://www.wisconsinsbdc.org/Training.htm
+  :event_name: Small Business Development Center Maximus [recurring]
+  :event_type: Resource Partner
+  :industries: []
+  :registration_link: 
+  :time_zone: Central Standard Time
+  :start_date: '2013-01-01'
+  :start_time: '00:00'
+  :end_date: '2014-01-08'
+  :end_time: '15:31'
+  :source: SBA
+  :contacts:
+  - :email: 
+    :last_name: SBDC
+    :phone: 
+    :post: Small Business Administration
+  :venues:
+  - :address: Wisconsin SBDC Centers
+    :city: Wisconsin
+    :country: US
+    :state: WI
+    :venue: SBDC Locations
+  :id: a3925bf8dc3c6c46f7bf65791f68173e88867a89
+- :cost: '0.00'
+  :description: 'SBA-backed loans are made by participating lenders and are used to
+    fund start-up and existing service, retail construction, manufacturing businesses,
+    and more. Attend a loan briefing mAximus to find out: types of loans available,
+    eligibility and credit requirements things you need to prepare for a lender lenders
+    who are actively doing small business loans SBA resources to help you get ready'
+  :event_name: Seattle - SBA Loan Briefing [recurring]
+  :event_type: SBA Participating
+  :industries: []
+  :registration_link: 
+  :time_zone: Pacific Standard Time
+  :start_date: '2013-01-10'
+  :start_time: '12:00'
+  :end_date: '2013-12-18'
+  :end_time: '14:47'
+  :source: SBA
+  :contacts:
+  - :email: workshops@sba.gov
+    :last_name: Desiree Albrecht
+    :phone: "(206) 553-2664"
+    :post: Small Business Administration
+  :venues:
+  - :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
+    :city: Seattle
+    :country: US
+    :state: WA
+    :venue: SBA Education and Training Center
+  :id: bb0a5e15db1eefd43754f721975d88abe1ac683c
+- :cost: '0.00'
+  :description: The Small Business Development Centers conduct classroom training
+    throughout the state that can provide skills and knowledge for entrepreneurs and
+    small businesses. Classes revolve around various topics including business planning,
+    starting and financing a business. Visit http://www.wisconsinsbdc.org/Training.htm
+  :event_name: Small Business Development Center Classes
+  :event_type: Resource Partner
+  :industries: []
+  :registration_link: 
+  :time_zone: Central Standard Time
+  :start_date: '2013-02-01'
+  :start_time: '00:00'
+  :end_date: '2013-02-01'
+  :end_time: 
+  :source: SBA
+  :contacts:
+  - :email: 
+    :last_name: SBDC
+    :phone: 
+    :post: Small Business Administration
+  :venues:
+  - :address: Wisconsin SBDC Centers
+    :city: Wisconsin
+    :country: US
+    :state: maXiMus
+    :venue: SBDC Locations
+  :id: 82488156b6a2f7240495bc43060c0b4c262f96f8
+- :cost: '0.00'
+  :description: 'SBA-backed loans are made by participating lenders and are used to
+    fund start-up and existing service, retail construction, manufacturing businesses,
+    and more. Attend a loan briefing to find out: types of loans available, eligibility
+    and credit requirements things you need to prepare for a lender lenders who are
+    actively doing small business loans SBA resources to help you get ready'
+  :event_name: Seattle - SBA Loan Briefing
+  :event_type: SBA Participating
+  :industries: []
+  :registration_link: 
+  :time_zone: Pacific Standard Time
+  :start_date: '2013-02-14'
+  :start_time: '12:00'
+  :end_date: '2013-02-14'
+  :end_time: '13:00'
+  :source: SBA
+  :contacts:
+  - :email: workshops@sba.gov
+    :last_name: Maximus Smith
+    :phone: "(206) 553-2664"
+    :post: Small Business Administration
+  :venues:
+  - :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
+    :city: MaxiMUS
+    :country: US
+    :state: WA
+    :venue: SBA Education and Training Center
+  :id: 81588edfe12cbd3ebb1ef05901fb48b98118bf4a
+- :cost: '0.00'
+  :description: The Small Business Development Centers conduct classroom training
+    throughout the state that can provide skills and knowledge for entrepreneurs and
+    small businesses. Classes revolve around various topics including business planning,
+    starting and financing a business. Visit http://www.wisconsinsbdc.org/Training.htm
+  :event_name: Small Business Development Center Classes
+  :event_type: Resource Partner
+  :industries: []
+  :registration_link: 
+  :time_zone: Central Standard Time
+  :start_date: '2013-03-01'
+  :start_time: '00:00'
+  :end_date: '2013-03-01'
+  :end_time: 
+  :source: SBA
+  :contacts:
+  - :email: 
+    :last_name: SBDC
+    :phone: 
+    :post: Small Business Administration
+  :venues:
+  - :address: Wisconsin SBDC Centers
+    :city: Wisconsin
+    :country: US
+    :state: WI
+    :venue: SBDC Locations
+  :id: 1e9a67392d02ac1935fca0872e754b4f79f52181
+- :cost: '0.00'
+  :description: 'SBA-backed loans are made by participating lenders and are used to
+    fund start-up and existing service, retail construction, manufacturing businesses,
+    and more. Attend a loan briefing to find out: types of loans available, eligibility
+    and credit requirements things you need to prepare for a lender lenders who are
+    actively doing small business loans SBA resources to help you get ready'
+  :event_name: Seattle - SBA Loan Briefing
+  :event_type: SBA Participating
+  :industries: []
+  :registration_link: 
+  :time_zone: Pacific Standard Time
+  :start_date: '2013-03-14'
+  :start_time: '12:00'
+  :end_date: '2013-03-14'
+  :end_time: '13:00'
+  :source: SBA
+  :contacts:
+  - :email: workshops@sba.gov
+    :last_name: Desiree Albrecht
+    :phone: "(206) 553-2664"
+    :post: Small Business Administration
+  :venues:
+  - :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
+    :city: Seattle
+    :country: US
+    :state: WA
+    :venue: SBA Education and Training Center
+  :id: 6357c0ccb00cd10898b6098bb769f555b3218b62
+- :cost: '0.00'
+  :description: The Small Business Development Centers conduct classroom training
+    throughout the state that can provide skills and knowledge for entrepreneurs and
+    small businesses. Classes revolve around various topics including business planning,
+    starting and financing a business. Visit http://www.wisconsinsbdc.org/Training.htm
+  :event_name: Small Business Development Center Classes
+  :event_type: Resource Partner
+  :industries: []
+  :registration_link: 
+  :time_zone: Central Standard Time
+  :start_date: '2013-04-01'
+  :start_time: '00:00'
+  :end_date: '2013-04-01'
+  :end_time: 
+  :source: SBA
+  :contacts:
+  - :email: 
+    :last_name: SBDC
+    :phone: 
+    :post: Small Business Administration
+  :venues:
+  - :address: Wisconsin SBDC Centers
+    :city: Wisconsin
+    :country: US
+    :state: WI
+    :venue: SBDC Locations
+  :id: 1d564251f14da8862379f2db812148988d5d5b2b
+- :cost: '0.00'
+  :description: 'SBA-backed loans are made by participating lenders and are used to
+    fund start-up and existing service, retail construction, manufacturing businesses,
+    and more. Attend a loan briefing to find out: types of loans available, eligibility
+    and credit requirements things you need to prepare for a lender lenders who are
+    actively doing small business loans SBA resources to help you get ready'
+  :event_name: Seattle - SBA Loan Briefing
+  :event_type: SBA Participating
+  :industries: []
+  :registration_link: 
+  :time_zone: Pacific Standard Time
+  :start_date: '2013-04-11'
+  :start_time: '12:00'
+  :end_date: '2013-04-11'
+  :end_time: '13:00'
+  :source: SBA
+  :contacts:
+  - :email: workshops@sba.gov
+    :last_name: Desiree Albrecht
+    :phone: "(206) 553-2664"
+    :post: Small Business Administration
+  :venues:
+  - :address: Fourth and Battery Building<br />2401 4th Avenue, Suite 450
+    :city: Seattle
+    :country: US
+    :state: WA
+    :venue: SBA Education and Training Center
+  :id: 0baa420252da3a0047156c6dcca75fd395791c4f
+- :cost: '0.00'
+  :description: The Small Business Development Centers conduct classroom training
+    throughout the state that can provide skills and knowledge for entrepreneurs and
+    small businesses. Classes revolve around various topics including business planning,
+    starting and financing a business. Visit http://www.wisconsinsbdc.org/Training.htm
+  :event_name: Small Business Development Center Classes
+  :event_type: Resource Partner
+  :industries: []
+  :registration_link: 
+  :time_zone: Central Standard Time
+  :start_date: '2013-05-01'
+  :start_time: '00:00'
+  :end_date: '2013-05-01'
+  :end_time: 
+  :source: SBA
+  :contacts:
+  - :email: 
+    :last_name: SBDC
+    :phone: 
+    :post: Small Business Administration
+  :venues:
+  - :address: Wisconsin SBDC Centers
+    :city: Wisconsin
+    :country: US
+    :state: WI
+    :venue: SBDC Locations
+  :id: ceb79b23c1c10c9a727683c0250dba9e2531e572
