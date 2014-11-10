@@ -22,32 +22,38 @@ class ParatureFaqData
   end
 
   def import
-    article_count = 379
-    pause_duration = 10
     Rails.logger.info "Importing #{@resource}"
 
-    id = 1
-    data = []
-
-    while id <= article_count
-      if (id % 100 == 0)
-        sleep pause_duration
-     end
-
+    data = Array(1..379).map do |id|
+      sleep 10 if id % 100 == 0
       begin
-        resource = @resource % id
-        entry = Hash.from_xml(open(resource))
-        entry = entry.symbolize_keys
-        entry[:Article] = entry[:Article].symbolize_keys
-        data << entry
-      rescue
-        next
-      ensure
-        id += 1
+        extract_hash_from_resource(id)
+      rescue OpenURI::HTTPError, Errno::ENOENT => e
+        raise unless error_permitted(e)
+        nil
       end
-    end
+    end.compact
+
     faqs = data.map { |faq_hash| process_faq_info(faq_hash) }.compact
-    ParatureFaq.index faqs
+    model_class.index(faqs)
+  end
+
+  private
+
+  def error_permitted(error)
+    @permitted_error_messages ||= [
+      '404 Not Found',
+      '500 Internal Server Error',
+      'No such file or directory',
+    ]
+    @permitted_error_messages.select { |m| error.message =~ /#{m}/ }.count > 0
+  end
+
+  def extract_hash_from_resource(id)
+    resource = @resource % id
+    entry = Hash.from_xml(open(resource)).symbolize_keys
+    entry[:Article].symbolize_keys!
+    entry
   end
 
   def process_faq_info(faq_hash)
