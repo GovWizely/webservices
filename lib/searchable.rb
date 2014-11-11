@@ -9,7 +9,7 @@ module Searchable
     class_eval do
       class_attribute :search_klass, :search_params, instance_writer: false
 
-      parts = name.gsub(/Controller|Api::V1::/, '').split('::')
+      parts = name.gsub(/Controller|Api::V\d+::/, '').split('::')
       parts[0] = parts[0].singularize
       self.search_klass = parts.join('::').constantize
 

@@ -6,6 +6,14 @@ shared_context 'all Trade Events fixture data' do
   include_context 'TradeEvent::Dl data'
 end
 
+shared_context 'all Trade Events v2 fixture data' do
+  include_context 'TradeEvent::Sba data v2'
+  include_context 'TradeEvent::Ita data v2'
+  include_context 'TradeEvent::Exim data v2'
+  include_context 'TradeEvent::Ustda data v2'
+  include_context 'TradeEvent::Dl data v2'
+end
+
 shared_context 'TradeEvent::Ita data' do
   before(:all) do
     TradeEvent::Ita.recreate_index
@@ -15,6 +23,18 @@ shared_context 'TradeEvent::Ita data' do
     @all_possible_full_results ||= {}
     @all_possible_full_results[:ITA] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ita/results.json").read)
+  end
+end
+
+shared_context 'TradeEvent::Ita data v2' do
+  before(:all) do
+    TradeEvent::Ita.recreate_index
+    TradeEvent::ItaData.new(
+      "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:ITA] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/ita/results_v2.json").read)
   end
 end
 
@@ -78,6 +98,24 @@ shared_context 'TradeEvent::Sba data' do
   end
 end
 
+shared_context 'TradeEvent::Sba data v2' do
+  before(:all) do
+    TradeEvent::Sba.recreate_index
+    TradeEvent::SbaData.new(
+      "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
+      reject_if_ends_before: Date.parse('2013-01-11'),
+    ).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:SBA] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/sba/results_v2.json").read)
+  end
+
+  before do
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
 shared_examples 'it contains all TradeEvent::Sba results' do
   let(:source) { :SBA }
   let(:expected) { (0..16).to_a }
@@ -126,6 +164,24 @@ shared_context 'TradeEvent::Exim data' do
   end
 end
 
+shared_context 'TradeEvent::Exim data v2' do
+  before(:all) do
+    TradeEvent::Exim.recreate_index
+    TradeEvent::EximData.new(
+      "#{Rails.root}/spec/fixtures/trade_events/exim/trade_events.xml",
+      reject_if_ends_before: Date.parse('2013-01-11'),
+    ).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:EXIM] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/exim/results_v2.json").read)
+  end
+
+  before do
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
 shared_examples 'it contains all TradeEvent::Exim results' do
   let(:source) { :EXIM }
   let(:expected) { (0..14).to_a }
@@ -152,6 +208,21 @@ shared_context 'TradeEvent::Ustda data' do
     @all_possible_full_results ||= {}
     @all_possible_full_results[:USTDA] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ustda/results.json").read)
+  end
+
+  before do
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_context 'TradeEvent::Ustda data v2' do
+  before(:all) do
+    TradeEvent::Ustda.recreate_index
+    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:USTDA] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/ustda/results_v2.json").read)
   end
 
   before do
@@ -204,6 +275,23 @@ shared_context 'TradeEvent::Dl data' do
     @all_possible_full_results ||= {}
     @all_possible_full_results[:DL] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/dl/results.json").read)
+  end
+
+  before do
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_context 'TradeEvent::Dl data v2' do
+  before(:all) do
+    TradeEvent::Dl.recreate_index
+    TradeEvent::DlData.new(
+      "#{Rails.root}/spec/fixtures/trade_events/dl/trade_events.xml",
+    ).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[:DL] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/trade_events/dl/results_v2.json").read)
   end
 
   before do
