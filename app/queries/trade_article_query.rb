@@ -1,4 +1,4 @@
-class TradeArticleQuery < Query
+class TradeArticleQuery < CountryIndustryQuery
   attr_reader :evergreen, :pub_date_start, :pub_date_end, :update_date_start, :update_date_end, :q
 
   def initialize(options)
@@ -13,9 +13,7 @@ class TradeArticleQuery < Query
   private
 
   def generate_query(json)
-    json.query do
-      generate_multi_match(json, [:title, :content], @q)
-    end if @q
+    generate_multi_query json, [:title, :content]
   end
 
   def generate_filter(json)
@@ -31,6 +29,8 @@ class TradeArticleQuery < Query
               json.evergreen @evergreen
             end
           end if evergreen_set?
+
+          json.child! { json.terms { json.countries @countries } } if @countries
         end
       end
     end if has_filter_options?
@@ -53,7 +53,7 @@ class TradeArticleQuery < Query
   end
 
   def has_filter_options?
-    evergreen_set? || pub_date_range? || update_date_range?
+    evergreen_set? || pub_date_range? || update_date_range? || @countries
   end
 
   def evergreen_set?

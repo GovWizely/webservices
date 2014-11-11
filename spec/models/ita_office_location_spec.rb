@@ -29,6 +29,7 @@ describe ItaOfficeLocation, type: :model do
     context 'when looking up locations in a US state' do
       it 'finds all hits in that state' do
         expect(ItaOfficeLocation.search_for(state: 'Dc', country: 'US')[:total]).to eq(2)
+        expect(ItaOfficeLocation.search_for(state: 'dc', country: 'us')[:total]).to eq(2)
         expect(ItaOfficeLocation.search_for(state: 'Fl')[:total]).to eq(6)
       end
     end

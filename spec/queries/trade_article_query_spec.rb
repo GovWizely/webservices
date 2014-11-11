@@ -38,7 +38,8 @@ describe TradeArticleQuery do
       let(:query) do
         TradeArticleQuery.new(q: 'some term', evergreen: 'true',
                                             pub_date_start: some_date, pub_date_end: some_date,
-                                            update_date_start: some_date, update_date_end: some_date)
+                                            update_date_start: some_date, update_date_end: some_date,
+                                            countries: "IL, US")
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all_params.json").read }
 

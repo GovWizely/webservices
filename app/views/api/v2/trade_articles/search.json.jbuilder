@@ -17,7 +17,7 @@ json.results do
               :trade_region,
               :geo_region,
               :geo_subregion,
-              :country,
+              :countries,
               :keyword,
        )
   end

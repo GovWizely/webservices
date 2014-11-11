@@ -1,15 +1,16 @@
 {
-    "query": {
-      "bool": {
-        "must": [
-          {
-            "match": {
-                "city": {
-                    "operator": "and", "query": "San Jose"
-                }
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "city": {
+                "operator": "and", 
+                "query": "San Jose"
             }
           }
-        ]
-      }
+        }
+      ]
     }
+  }
 }

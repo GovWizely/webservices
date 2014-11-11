@@ -8,7 +8,11 @@ describe 'Trade Articles API V1', type: :request do
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_articles/results.json").read }
+  let(:all_possible_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_articles/results.json").read }
+
+  let(:result_list) { 
+    @results.map { |r| all_possible_results.index( r ) }
+  } 
 
   describe 'GET /trade_articles/search.json' do
     let(:params) do
@@ -30,10 +34,40 @@ describe 'Trade Articles API V1', type: :request do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
 
-        results = json_response['results']
-        expect(results[0]).to eq(expected_results[0])
+        @results = json_response['results']
+        expect(result_list).to eq([2])
       end
     end
 
+
+    context 'when countries listed in params' do
+      before { get '/trade_articles/search', { country: "US" }, v1_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns matching trade articles' do
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(1)
+
+        @results = json_response['results']
+        expect(result_list).to eq([0])
+      end
+    end
+
+    context 'when multiple countries listed in params' do
+      before { get '/trade_articles/search', { country: "US,IL" }, v1_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns matching trade articles' do
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(2)
+
+        @results = json_response['results']
+        expect(result_list).to eq([0,1])
+      end
+    end
   end
 end

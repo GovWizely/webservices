@@ -19,7 +19,7 @@ class TradeArticleData
     trade_region_tags:  :trade_region,
     geo_region_tags:    :geo_region,
     geo_subregion_tags: :geo_subregion,
-    country_tags:       :country,
+    country_tags:       :countries,
     keyword_tags:       :keyword,
   }.freeze
 

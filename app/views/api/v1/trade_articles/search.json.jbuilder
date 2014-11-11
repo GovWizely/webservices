@@ -17,8 +17,11 @@ json.results do
               :trade_region,
               :geo_region,
               :geo_subregion,
-              :country,
               :keyword,
        )
+
+    json.country do
+      json.array! trade_article[:_source][:countries]
+    end
   end
 end

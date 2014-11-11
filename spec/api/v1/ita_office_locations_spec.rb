@@ -34,7 +34,7 @@ describe 'ITA Office Locations API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns trade events' do
+      it 'returns matching office locations' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
 
@@ -49,7 +49,7 @@ describe 'ITA Office Locations API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns trade events' do
+      it 'returns matching office locations' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
 
@@ -64,7 +64,7 @@ describe 'ITA Office Locations API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns trade events' do
+      it 'returns matching office locations' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
 
@@ -79,12 +79,25 @@ describe 'ITA Office Locations API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns trade events' do
+      it 'returns matching office locations' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
 
         results = json_response['results']
         expect(results[0]).to eq(expected_results[1])
+      end
+    end
+
+
+    context 'when multiple countries are specified' do
+      before { get '/ita_office_locations/search', { country: 'RU,CN'}, v1_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns right number of matching office locations' do
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(8)
       end
     end
 
