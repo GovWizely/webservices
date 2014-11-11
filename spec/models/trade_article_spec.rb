@@ -26,6 +26,12 @@ describe TradeArticle, type: :model do
       end
     end
 
+    context 'when matching on countries' do
+      it 'finds all articles marked with "US"' do
+        expect(TradeArticle.search_for(country: 'US')[:total]).to eq(1)
+      end
+    end
+
     context 'when filtering by evergreen field' do
       it 'finds just evergreen matches' do
         expect(TradeArticle.search_for(evergreen: 'true')[:total]).to eq(2)

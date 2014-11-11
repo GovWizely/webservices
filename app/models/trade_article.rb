@@ -12,6 +12,7 @@ class TradeArticle
         pub_date:    { type: 'date' },
         update_date: { type: 'date' },
         id:          { type: 'string', index: :not_analyzed, include_in_all: false },
+        country:     { type: 'string', analyzer: 'keyword' },
       },
     },
   }.freeze
