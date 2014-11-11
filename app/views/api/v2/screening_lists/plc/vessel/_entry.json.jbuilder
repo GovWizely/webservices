@@ -1,0 +1,21 @@
+json.partial! 'api/v2/screening_lists/addresses',
+              addresses: entry[:_source][:addresses]
+json.call(entry[:_source],
+          :alt_names,
+          :call_sign,
+          :entity_number,
+          :gross_registered_tonnage,
+          :gross_tonnage,
+          :ids,
+          :name,
+          :type,
+          :programs,
+          :remarks,
+          :source_list_url,
+          :source_information_url,
+          :title,
+          :vessel_flag,
+          :vessel_owner,
+          :vessel_type,
+)
+json.source entry[:_source][:source][:full_name]

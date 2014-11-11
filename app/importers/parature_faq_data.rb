@@ -60,6 +60,10 @@ class ParatureFaqData
     @should_throttle ||= URI.parse(@resource % 1).scheme =~ /ftp|http/
   end
 
+  def should_throttle
+    @should_throttle ||= URI.parse(@resource % 1).scheme =~ /ftp|http/
+  end
+
   def process_faq_info(faq_hash)
     @folder_hash = get_folder_info
 
