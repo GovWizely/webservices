@@ -16,7 +16,7 @@
     "trade_region": [],
     "geo_region": [],
     "geo_subregion": [],
-    "countries": [
+    "country": [
       "US"
     ],
     "keyword": []
@@ -38,8 +38,7 @@
     "trade_region": [],
     "geo_region": [],
     "geo_subregion": [],
-    "countries": [
-      "US",
+    "country": [
       "IL"
     ],
     "keyword": []
@@ -63,7 +62,7 @@
     "trade_region": [],
     "geo_region": [],
     "geo_subregion": [],
-    "countries": [],
+    "country": [],
     "keyword": []
   }
 ]

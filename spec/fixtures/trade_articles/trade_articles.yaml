@@ -58,7 +58,8 @@
   :trade_region: []
   :geo_region: []
   :geo_subregion: []
-  :country: []
+  :country: 
+  - US
   :keyword: []
 - ! :evergreen: true
   :id: 446
@@ -76,5 +77,6 @@
   :trade_region: []
   :geo_region: []
   :geo_subregion: []
-  :country: []
+  :country: 
+  - IL
   :keyword: []

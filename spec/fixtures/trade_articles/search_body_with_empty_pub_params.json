@@ -1,9 +1,15 @@
 {
   "query": {
-    "multi_match": {
-      "fields": ["title", "content"],
-      "operator": "and",
-      "query": "some term"
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["title", "content"],
+            "operator": "and",
+            "query": "some term"
+          }
+        }
+      ]
     }
   },
   "filter": {

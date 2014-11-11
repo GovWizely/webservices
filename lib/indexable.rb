@@ -41,6 +41,7 @@ module Indexable
   def search_for(options)
     klass = "#{name}Query".constantize
     query = klass.new(options)
+    # binding.pry
     hits = ES.client.search(
       index: index_name,
       type:  index_type,
@@ -48,6 +49,7 @@ module Indexable
       from:  query.offset,
       size:  query.size,
       sort:  query.sort)['hits'].deep_symbolize_keys
+    # binding.pry
     hits[:offset] = query.offset
     hits.deep_symbolize_keys
   end
