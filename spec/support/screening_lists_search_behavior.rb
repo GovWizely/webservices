@@ -416,12 +416,6 @@ shared_examples 'it contains all DTC results that match "mcsulla"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all DTC results that match "original"' do
-  let(:source) { :DTC }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_context 'PLC data' do
   before(:all) do
     ScreeningList::Plc.recreate_index
