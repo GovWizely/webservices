@@ -25,7 +25,7 @@ class ParatureFaqData
     Rails.logger.info "Importing #{@resource}"
 
     data = Array(1..379).map do |id|
-      sleep 10 if id % 100 == 0 && should_throttle
+      sleep 10 if id % 10 == 0 && should_throttle
       begin
         extract_hash_from_resource(id)
       rescue OpenURI::HTTPError, Errno::ENOENT => e
