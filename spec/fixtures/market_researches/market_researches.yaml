@@ -38,12 +38,11 @@
     as recruitment of consultants for projects that are funded by the ADB.
   :expiration_date: '2014-11-26'
   :id: '14271734'
-  :industries:
+  :industries: []
   :report_type: Market Research Report
   :title: ADVANCE Procurement Notices, October 2013
   :url: http://mr.export.gov/docs/x_9944661.pdf
-- :countries:
-  - KE
+- :countries: []
   :description: The Government of the Republic of Kenya has received financing from
     the International Development Association (IDA), and Kenya Airports Authority
     has received financing from Agence Française de Développement (AFD) towards the
@@ -113,7 +112,7 @@
   :description: Bosnia and Herzogovina Country Commercial Guide is a primer on
     doing business in the country.
   :expiration_date: '2016-01-01'
-  :industries:
+  :industries: []
   :report_type: Country Commercial Guide
   :title: Bosnia and Herzogovina Country Commercial Guide
   :url: http://mr.export.gov/docs/x_3092299.pdf

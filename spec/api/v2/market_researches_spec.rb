@@ -8,7 +8,7 @@ describe 'Market Researches API V2', type: :request do
 
   let(:search_path) { '/market_research_library/search' }
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/market_researches/results.json").read }
+  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/market_researches/results_v2.json").read }
 
   describe 'GET /market_research_library/search.json' do
     context 'when search parameters are empty' do
