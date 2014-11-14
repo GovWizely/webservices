@@ -2,6 +2,8 @@ module TariffRate
   class Guatemala
     extend ::Indexable
     include TariffRate::Mappable
-    self.source = 'GUATEMALA'
+    self.source = {
+      code: 'GUATEMALA',
+    }
   end
 end

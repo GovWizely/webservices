@@ -59,7 +59,7 @@ module TradeEvent
 
       process_optional_fields(event_hash)
 
-      event_hash[:source] = model_class.source
+      event_hash[:source] = model_class.source[:code]
       event_hash
     end
 

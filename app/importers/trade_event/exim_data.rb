@@ -54,7 +54,7 @@ module TradeEvent
       event_hash.merge!(extract_dates(event_hash))
       event_hash[:industries] = []
       event_hash[:venues] = extract_venues(event_info)
-      event_hash[:source] = model_class.source
+      event_hash[:source] = model_class.source[:code]
       sanitize_entry(event_hash)
     end
 
