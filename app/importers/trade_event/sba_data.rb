@@ -6,7 +6,7 @@ module TradeEvent
 
     attr_accessor :html_entities_coder, :reject_if_ends_before
 
-    ENDPOINT = 'http://www.sba.gov/event-list/views/new_events_listing.xml?display_id=services_1&filters[event_topic][value]=6&limit=100&offset=0'
+    ENDPOINT = 'https://www.sba.gov/event-list/views/new_events_listing.xml?display_id=services_1&filters[event_topic][value]=6&limit=100&offset=0'
 
     def initialize(resource = ENDPOINT, options = {})
       @resource = resource
