@@ -1,5 +1,4 @@
 json.call(entry[:_source],
-          :end_date,
           :federal_register_notice,
           :name,
           :programs,
