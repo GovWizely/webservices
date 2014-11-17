@@ -1,0 +1,19 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "geo_regions": ["asia"]
+          }
+        },
+        {
+          "terms": {
+            "geo_subregions": ["east asia", "asia pacific"]
+            }
+          }
+      ]
+    }
+  }
+}
+

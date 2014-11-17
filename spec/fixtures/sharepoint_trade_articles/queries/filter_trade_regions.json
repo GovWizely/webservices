@@ -1,0 +1,13 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "trade_regions": ["andean community", "african growth and opportunity act"]
+          }
+        }
+      ]
+    }
+  }
+}
