@@ -11,6 +11,7 @@ Webservices::Application.routes.draw do
              'state_trade_leads'      => 'state_trade_leads',
              'uk_trade_leads'         => 'uk_trade_leads',
              'trade_leads'            => 'trade_leads',
+             'sharepoint_trade_articles' => 'sharepoint_trade_articles'
      }
 
     path.each do |controller, path|
