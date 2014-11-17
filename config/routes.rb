@@ -1,16 +1,17 @@
 Webservices::Application.routes.draw do
-  scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
+  concern :api_routable do
 
-    path = { 'market_researches' => 'market_research_library',
-             'parature_faq'      => 'faqs',
+    path = { 'market_researches'      => 'market_research_library',
+             'parature_faq'           => 'faqs',
+             'ita_office_locations'   => 'ita_office_locations',
+             'trade_articles'         => 'trade_articles',
+             'australian_trade_leads' => 'australian_trade_leads',
+             'canada_leads'           => 'canada_leads',
+             'fbopen_leads'           => 'fbopen_leads',
+             'state_trade_leads'      => 'state_trade_leads',
+             'uk_trade_leads'         => 'uk_trade_leads',
+             'trade_leads'            => 'trade_leads',
      }
-
-    # Paths for the rest of the controllers are
-    # the snake-case versions of their names.
-    Dir[Rails.root.join('app/controllers/api/v1/*.rb').to_s].map do |filename|
-      controller = File.basename(filename, '.rb').sub('_controller', '')
-      path[controller] ||= controller
-    end
 
     path.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false
@@ -38,5 +39,21 @@ Webservices::Application.routes.draw do
       get 'dl/search'
       get 'ustda/search'
     end
+  end
+
+  scope 'v2', module: 'api/v2', defaults: { format: :json } do
+    concerns :api_routable
+  end
+
+  scope 'v1', module: 'api/v1', defaults: { format: :json } do
+    concerns :api_routable
+  end
+
+  scope module: 'api/v2', constraints: ApiConstraint.new(default: false, version: 2), defaults: { format: :json } do
+    concerns :api_routable
+  end
+
+  scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
+    concerns :api_routable
   end
 end
