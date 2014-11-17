@@ -5,7 +5,7 @@ class SharepointTradeArticle
     index: {
       analysis: {
         analyzer: {
-          custom_analyzer: {
+          custom_analyzer:       {
             tokenizer: 'standard',
             filter:    %w(standard asciifolding lowercase snowball),
           },

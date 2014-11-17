@@ -1,17 +1,17 @@
 Webservices::Application.routes.draw do
   concern :api_routable do
 
-    path = { 'market_researches'      => 'market_research_library',
-             'parature_faq'           => 'faqs',
-             'ita_office_locations'   => 'ita_office_locations',
-             'trade_articles'         => 'trade_articles',
-             'australian_trade_leads' => 'australian_trade_leads',
-             'canada_leads'           => 'canada_leads',
-             'fbopen_leads'           => 'fbopen_leads',
-             'state_trade_leads'      => 'state_trade_leads',
-             'uk_trade_leads'         => 'uk_trade_leads',
-             'trade_leads'            => 'trade_leads',
-             'sharepoint_trade_articles' => 'ita_articles'
+    path = { 'market_researches'         => 'market_research_library',
+             'parature_faq'              => 'faqs',
+             'ita_office_locations'      => 'ita_office_locations',
+             'trade_articles'            => 'trade_articles',
+             'australian_trade_leads'    => 'australian_trade_leads',
+             'canada_leads'              => 'canada_leads',
+             'fbopen_leads'              => 'fbopen_leads',
+             'state_trade_leads'         => 'state_trade_leads',
+             'uk_trade_leads'            => 'uk_trade_leads',
+             'trade_leads'               => 'trade_leads',
+             'sharepoint_trade_articles' => 'ita_articles',
      }
 
     path.each do |controller, path|
