@@ -6,11 +6,11 @@ describe 'Sharepoint Trade Article API V1', :type => :request do
     SharepointTradeArticleData.new("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*").import
   end
 
-  let(:search_path) { '/sharepoint_trade_articles/search' }
+  let(:search_path) { '/ita_articles/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml") }
 
-  describe 'GET /sharepoint_trade_articles/search.json' do
+  describe 'GET /ita_articles/search.json' do
 
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, v1_headers }
