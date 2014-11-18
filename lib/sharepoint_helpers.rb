@@ -15,7 +15,6 @@ module SharepointHelpers
     hash[:source_agencies] = []
     hash[:source_business_units] = []
     hash[:source_offices] = []
-
     parent_node.xpath('//source_agencies/source_agency').each do |source_agency|
       hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
 

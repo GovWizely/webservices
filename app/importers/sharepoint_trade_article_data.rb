@@ -42,13 +42,9 @@ class SharepointTradeArticleData
     data = []
 
     @resources.each do |resource|
-      begin
-        article = Nokogiri::XML(open(resource))
-        article = extract_article_fields(article)
-        data << article
-      rescue
-        next
-      end
+      article = Nokogiri::XML(open(resource))
+      article = extract_article_fields(article)
+      data << article
     end
     articles = data.map { |article_hash| process_article_info(article_hash) }.compact
     SharepointTradeArticle.index articles
