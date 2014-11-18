@@ -33,6 +33,18 @@ class SharepointTradeArticleData
     url_xml_source:    '//data//xml',
   }.freeze
 
+  EMPTY_KEYS = {
+    source_agencies:       [],
+    source_business_units: [],
+    source_offices:        [],
+    file_url:              [],
+    image_url:             [],
+    topics:                [],
+    sub_topics:            [],
+    geo_regions:           [],
+    geo_subregions:        [],
+  }.freeze
+
   def initialize(resource = ENDPOINT)
     @resources = Dir[resource]
   end
@@ -56,14 +68,14 @@ class SharepointTradeArticleData
     article_info = article.xpath('//article')
     article_hash = extract_fields(article_info, SINGLE_VALUE_XPATHS)
     article_hash.merge! extract_multi_valued_fields(article_info, MULTI_VALUE_XPATHS)
-    article_hash[:topics] = []
-    article_hash[:sub_topics] = []
-    article_hash[:geo_regions] = []
-    article_hash[:geo_subregions] = []
+    EMPTY_KEYS.each do |k, v|
+      article_hash[k] = v.clone
+    end
     article_hash = extract_source_agencies(article_info, article_hash)
     article_hash = extract_sub_elements(article_info, article_hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
     article_hash = extract_sub_elements(article_info, article_hash, :topics, :sub_topics, '//topic', '//sub_topic')
-    article_hash = extract_urls(article_info, article_hash)
+    article_hash = extract_src_text(article_info, article_hash, :file_url, '//files/file')
+    article_hash = extract_src_text(article_info, article_hash, :image_url, '//images/image')
     article_hash
   end
 

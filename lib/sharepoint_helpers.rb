@@ -1,20 +1,12 @@
 module SharepointHelpers
-  def extract_urls(parent_node, hash)
-    hash[:file_url] = []
-    hash[:image_url] = []
-    parent_node.xpath('//images/image').each do |node|
-      hash[:image_url] << node.attribute('src').text
-    end
-    parent_node.xpath('//files/file').each do |node|
-      hash[:file_url] << node.attribute('src').text
+  def extract_src_text(parent_node, hash, key, path)
+    parent_node.xpath(path).each do |node|
+      hash[key] << node.attribute('src').text
     end
     hash
   end
 
   def extract_source_agencies(parent_node, hash)
-    hash[:source_agencies] = []
-    hash[:source_business_units] = []
-    hash[:source_offices] = []
     parent_node.xpath('//source_agencies/source_agency').each do |source_agency|
       hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
 
