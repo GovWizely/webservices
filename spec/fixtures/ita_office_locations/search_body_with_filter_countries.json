@@ -1,0 +1,16 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "country": [
+              "br",
+              "ru"
+            ]
+          }
+        }
+      ]
+    }
+  }
+}
