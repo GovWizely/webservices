@@ -36,5 +36,7 @@ module Webservices
     # This is a default secret_key_base for development that will be overridden if you place
     # a similar entry in config/initializers/secret_token.rb
     config.secret_key_base = '2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b'
+
+    config.i18n.enforce_available_locales = false
   end
 end

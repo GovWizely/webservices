@@ -40,7 +40,6 @@
   :seo_metadata_description: Learn about tools to increase your brand awareness and
     market exposure in countries around the world.
   :seo_metadata_keyword: export, exporting, advertising, promotion
-  :trade_url: www2.export.gov/116.htm
   :industries:
   - Aerospace & Defense
   - Agribusiness
@@ -77,6 +76,9 @@
   :source_offices:
   - Deputy Director General
   - Principal Deputy Assistant Secretary
+  :file_url: []
+  :image_url:
+  - "/Files/ita_logo.png"
   :topics:
   - Free Trade Agreements
   :sub_topics:
@@ -91,9 +93,7 @@
   - Asia Pacific
   - Central Asia
   - East Asia
-  :file_url: []
-  :image_url:
-  - "/Files/ita_logo.png"
+  :trade_url: http://www.export.gov/articles/advertising-and-promotional-events-for-exporters-trade-gov.html
 - :id: '117'
   :title: Advocacy and Dispute Resolution
   :short_title: Advocacy and Dispute Resolution
@@ -133,7 +133,6 @@
     overcome trade barriers, bureaucratic problems and unfair trading practices.
   :seo_metadata_keyword: export, exporting, advocacy, dispute, resolution, assistance,
     government, trade, barrier, dispute, foreign, company, overcoming
-  :trade_url: www2.trade.gov/117.htm
   :industries: []
   :countries: []
   :trade_regions: []
@@ -147,12 +146,13 @@
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
+  :file_url: []
+  :image_url: []
   :topics: []
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
-  :file_url: []
-  :image_url: []
+  :trade_url: http://www.export.gov/articles/advocacy-and-dispute-resolution-trade-gov.html
 - :id: '118'
   :title: ATA Carnet and Temporary Imports
   :short_title: ATA Carnet and Temporary Imports
@@ -284,7 +284,6 @@
   :seo_metadata_description: Temporary importation provisions for companies or professionals
     to show their products in foreign markets for a limited period of time.
   :seo_metadata_keyword: ATA, Carnets, imports
-  :trade_url: www2.trade.gov/118.htm
   :industries: []
   :countries: []
   :trade_regions: []
@@ -298,12 +297,13 @@
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
+  :file_url: []
+  :image_url: []
   :topics: []
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
-  :file_url: []
-  :image_url: []
+  :trade_url: http://www.export.gov/articles/ata-carnet-and-temporary-imports-trade-gov.html
 - :id: '119'
   :title: Catalog Exhibitions Help Put Your Products on the Map
   :short_title: Catalog Exhibitions Help Put Your Products on the Map
@@ -343,7 +343,6 @@
     ways to stimulate interest in your firm's products and services.
   :seo_metadata_keyword: export, exporting, promotion, exhibit, marketing, catalog,
     exhibitions, products, services, U.S. commercial service, international, markets
-  :trade_url: www2.trade.gov/119.htm
   :industries: []
   :countries: []
   :trade_regions: []
@@ -357,9 +356,10 @@
   :source_agencies: []
   :source_business_units: []
   :source_offices: []
+  :file_url: []
+  :image_url: []
   :topics: []
   :sub_topics: []
   :geo_regions: []
   :geo_subregions: []
-  :file_url: []
-  :image_url: []
+  :trade_url: http://www.export.gov/articles/catalog-exhibitions-help-put-your-products-on-the-map-trade-gov.html

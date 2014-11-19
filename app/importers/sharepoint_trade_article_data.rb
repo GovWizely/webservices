@@ -18,7 +18,6 @@ class SharepointTradeArticleData
     seo_metadata_title:       '//seometadatatitle',
     seo_metadata_description: '//seometadatadescription',
     seo_metadata_keyword:     '//seometadatakeyword',
-    trade_url:                '//trade_url',
   }.freeze
 
   MULTI_VALUE_XPATHS = {
@@ -42,6 +41,7 @@ class SharepointTradeArticleData
     sub_topics:            [],
     geo_regions:           [],
     geo_subregions:        [],
+    trade_url:             [],
   }.freeze
 
   def initialize(resource = ENDPOINT)
@@ -66,9 +66,7 @@ class SharepointTradeArticleData
     article_info = article.xpath('//article')
     article_hash = extract_fields(article_info, SINGLE_VALUE_XPATHS)
     article_hash.merge! extract_multi_valued_fields(article_info, MULTI_VALUE_XPATHS)
-    EMPTY_KEYS.each do |k, v|
-      article_hash[k] = v.clone
-    end
+    EMPTY_KEYS.each { |k, v| article_hash[k] = v.clone }
     article_hash = extract_source_agencies(article_info, article_hash)
     article_hash = extract_sub_elements(article_info, article_hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
     article_hash = extract_sub_elements(article_info, article_hash, :topics, :sub_topics, '//topic', '//sub_topic')
@@ -83,6 +81,7 @@ class SharepointTradeArticleData
     article[:creation_date] &&= Date.strptime(article[:creation_date], '%m/%d/%Y').to_s
     article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
     article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
+    article[:trade_url] = 'http://www.export.gov/articles/' + article[:seo_metadata_title].parameterize + '.html'
     article = remove_duplicates(article)
     article = replace_nulls(article)
     article
