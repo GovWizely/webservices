@@ -1,4 +1,4 @@
-json.partial! 'api/v1/screening_lists/addresses',
+json.partial! 'api/v2/screening_lists/addresses',
               addresses: entry[:_source][:addresses]
 json.call(entry[:_source],
           :alt_names,
@@ -11,9 +11,11 @@ json.call(entry[:_source],
           :places_of_birth,
           :programs,
           :remarks,
-          :type,
-          :source_list_url,
-          :source_information_url,
-          :title,
 )
 json.source entry[:_source][:source][:full_name]
+json.call(entry[:_source],
+          :source_information_url,
+          :source_list_url,
+          :title,
+          :type,
+)

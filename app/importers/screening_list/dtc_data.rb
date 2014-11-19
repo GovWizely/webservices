@@ -36,7 +36,6 @@ module ScreeningList
 
     def process_row(row)
       entry = {
-        remarks:                 nil,
         name:                    extract_name(row),
         alt_names:               extract_alt_names(row),
         start_date:              parse_american_date(row[:eff_date]),

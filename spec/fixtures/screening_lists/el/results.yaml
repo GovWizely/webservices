@@ -1,12 +1,7 @@
 ---
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Fazal Rahim Farid
-  :title: 
+- :name: Fazal Rahim Farid
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -31,14 +26,9 @@
     :full_name: Entity List (EL) - Bureau of Industry and Security
     :code: EL
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Fazel Khalil Construction Company
-  :title: 
+- :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -54,14 +44,9 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Zurmat Construction Company offices
-  :title: 
+- :name: Zurmat Construction Company offices
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -107,14 +92,9 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Murat Peker
-  :title: 
+- :name: Murat Peker
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -129,14 +109,9 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Qazi Abdallah
-  :title: 
+- :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -152,14 +127,9 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Qazi Abdallah
-  :title: 
+- :name: Qazi Abdallah
   :federal_register_notice: 76 FR 10001
   :start_date: '2011-11-21'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
@@ -175,14 +145,9 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
-- :entity_number: 
-  :type: 
-  :programs: 
-  :name: Qazi Abdallah
-  :title: 
+- :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-22'
-  :end_date: 
   :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.

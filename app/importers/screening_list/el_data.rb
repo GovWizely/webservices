@@ -22,18 +22,13 @@ module ScreeningList
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
     COLUMN_HASH = {
-      entity_number:            :entity_number,
-      sdn_type:                 :type,
-      programs:                 :programs,
-      name:                     :name,
-      title:                    :title,
-      federal_register_notice:  :federal_register_notice,
-      effective_date:           :start_date,
-      date_liftedwaivedexpired: :end_date,
-      standard_order:           :standard_order,
-      license_requirement:      :license_requirement,
-      license_policy:           :license_policy,
-      web_link:                 :source_list_url,
+      name:                    :name,
+      federal_register_notice: :federal_register_notice,
+      effective_date:          :start_date,
+      standard_order:          :standard_order,
+      license_requirement:     :license_requirement,
+      license_policy:          :license_policy,
+      web_link:                :source_list_url,
     }
 
     def initialize(resource = ENDPOINT)

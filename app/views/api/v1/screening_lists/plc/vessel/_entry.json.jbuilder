@@ -8,14 +8,16 @@ json.call(entry[:_source],
           :gross_tonnage,
           :ids,
           :name,
-          :type,
           :programs,
           :remarks,
-          :source_list_url,
+)
+json.source entry[:_source][:source][:full_name]
+json.call(entry[:_source],
           :source_information_url,
+          :source_list_url,
           :title,
+          :type,
           :vessel_flag,
           :vessel_owner,
           :vessel_type,
 )
-json.source entry[:_source][:source][:full_name]
