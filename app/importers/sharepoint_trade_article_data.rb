@@ -2,7 +2,6 @@ require 'open-uri'
 
 class SharepointTradeArticleData
   include Importer
-  include SharepointHelpers
   ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
   SINGLE_VALUE_XPATHS = {
@@ -88,5 +87,54 @@ class SharepointTradeArticleData
     article = remove_duplicates(article)
     article = replace_nulls(article)
     article
+  end
+
+  def extract_src_text(parent_node, hash, key, path)
+    parent_node.xpath(path).each do |node|
+      hash[key] << node.attribute('src').text
+    end
+    hash
+  end
+
+  def extract_source_agencies(parent_node, hash)
+    parent_node.xpath('//source_agencies/source_agency').each do |source_agency|
+      hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
+
+      source_agency.xpath('source_business_unit').each do |source_business_unit|
+        hash[:source_business_units] << source_business_unit.children.first.text
+      end
+      hash[:source_agencies] << source_agency.children.first.text
+    end
+    hash
+  end
+
+  def extract_sub_elements(parent_node, hash, parent_key, child_key, parent_path, child_path)
+    parent_node.xpath(parent_path).each do |node|
+      hash[child_key] += extract_nodes(node.xpath(child_path))
+      hash[parent_key] << node.children.first.text
+    end
+    hash
+  end
+
+  def remove_duplicates(hash)
+    hash.each do |_k, v|
+      if v.class == Array
+        v.uniq!
+      end
+    end
+    hash
+  end
+
+  def replace_nulls(hash)
+    hash.each do |k, v|
+      if v.nil? && is_date?(k) == false
+        hash[k] = ''
+      end
+    end
+  end
+
+  def is_date?(key)
+    date_keys = [:creation_date, :release_date, :expiration_date]
+    date_keys.include?(key)
   end
 end
