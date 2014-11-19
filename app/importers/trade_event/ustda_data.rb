@@ -35,7 +35,7 @@ module TradeEvent
       event_type:         '',
       industries:         [],
       contacts:           [],
-      source:             'USTDA',
+      source:             '',
     }.freeze
 
     def initialize(resource = ENDPOINT)
@@ -69,6 +69,8 @@ module TradeEvent
       event[:industries] = Array(event[:industries])
       event[:contacts] = contact(entry)
       event[:venues] = venues(entry)
+      event[:source] = model_class.source[:code]
+
       EMPTY_RECORD.dup.merge(event)
     end
 

@@ -68,7 +68,7 @@ module TradeEvent
       doc.merge!(extract_date_and_time_fields(item))
 
       doc[:industries] = [doc[:industries]].compact
-      doc[:source] = model_class.source
+      doc[:source] = model_class.source[:code]
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
       doc[:id] = generate_id(doc)

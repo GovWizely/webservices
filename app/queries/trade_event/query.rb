@@ -2,8 +2,8 @@ module TradeEvent
   class Query < ::CountryIndustryQuery
     attr_reader :sources
 
-    def initialize(options)
-      super(options)
+    def initialize(options = {})
+      super
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,start_date'
     end
@@ -25,10 +25,11 @@ module TradeEvent
       json.filter do
         json.bool do
           json.must do
-            json.child! { json.terms { json.set! 'venues.country', @countries } }
+            json.child! { json.terms { json.source @sources } } if @sources.any?
+            json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
           end
         end
-      end if @countries
+      end if @sources.any? || @countries
     end
   end
 end
