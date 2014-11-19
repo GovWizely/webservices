@@ -45,20 +45,19 @@ class SharepointTradeArticleData
   }.freeze
 
   def initialize(resource = ENDPOINT)
-    @resources = Dir[resource]
+    @resource = resource
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
-    data = []
 
-    @resources.each do |resource|
-      article = Nokogiri::XML(open(resource))
-      article = extract_article_fields(article)
-      data << article
-    end
-    articles = data.map { |article_hash| process_article_info(article_hash) }.compact
-    SharepointTradeArticle.index articles
+    articles = Dir[@resource].map do |resource|
+      xml = Nokogiri::XML(open(resource))
+      article_hash = extract_article_fields(xml)
+      process_article_info(article_hash)
+    end.compact
+
+    SharepointTradeArticle.index(articles)
   end
 
   private
