@@ -11,7 +11,7 @@ describe ItaOfficeLocation, type: :model do
 
     it 'should return results sorted by post' do
       alphabetized_posts = ['Belo Horizonte', 'Brasilia', 'Recife', 'Rio De Janeiro', 'Sao Paulo']
-      expect(ItaOfficeLocation.search_for(country: 'BR')[:hits].map { |h| h['_source']['post'] }).to eq(alphabetized_posts)
+      expect(ItaOfficeLocation.search_for(countries: 'BR')[:hits].map { |h| h['_source']['post'] }).to eq(alphabetized_posts)
     end
 
     context 'when options is an empty hash' do
@@ -22,13 +22,13 @@ describe ItaOfficeLocation, type: :model do
 
     context 'when looking up locations in a country' do
       it 'finds all hits in that country' do
-        expect(ItaOfficeLocation.search_for(country: 'Br')[:total]).to eq(5)
+        expect(ItaOfficeLocation.search_for(countries: 'Br')[:total]).to eq(5)
       end
     end
 
     context 'when looking up locations in a US state' do
       it 'finds all hits in that state' do
-        expect(ItaOfficeLocation.search_for(state: 'Dc', country: 'US')[:total]).to eq(2)
+        expect(ItaOfficeLocation.search_for(state: 'Dc', countries: 'US')[:total]).to eq(2)
         expect(ItaOfficeLocation.search_for(state: 'Fl')[:total]).to eq(6)
       end
     end

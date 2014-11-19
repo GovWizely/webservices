@@ -3,10 +3,12 @@ require 'spec_helper'
 describe Api::V1::ItaOfficeLocationsController, type: :controller do
   describe '#search' do
     let(:search_params) do
-      { 'country' => 'US',
-        'state'   => 'DC',
-        'city'    => 'Washington',
-        'q'       => 'national' }
+      {
+        'countries' => 'US',
+        'country'   => 'US',
+        'state'     => 'DC',
+        'city'      => 'Washington',
+        'q'         => 'national' }
     end
     let(:search) { double('search') }
 
