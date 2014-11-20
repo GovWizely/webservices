@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe 'UK Trade Leads API V1', type: :request do
   before(:all) do
-    UkTradeLead.recreate_index
-    UkTradeLeadData.new("#{Rails.root}/spec/fixtures/uk_trade_leads/uk_trade_leads.csv").import
+    TradeLead::Uk.recreate_index
+    TradeLead::UkData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
   end
-
-  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/uk_trade_leads/results.yaml") }
+  let(:expected_results) { JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/uk/results_v1.json").read, symbolize_names: true) }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /uk_trade_leads/search' do
@@ -20,13 +20,8 @@ describe 'UK Trade Leads API V1', type: :request do
       it 'returns all documents' do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(3)
-
         results = json_response[:results]
-
-        # Order is different due to sort condition in query.
-        expect(results[0]).to eq(expected_results[1])
-        expect(results[1]).to eq(expected_results[0])
-        expect(results[2]).to eq(expected_results[2])
+        expect(results).to match_array(expected_results)
       end
     end
 
@@ -45,7 +40,8 @@ describe 'UK Trade Leads API V1', type: :request do
       end
 
       context 'when industry is specified' do
-        let(:params) { { industry: '85000000' } }
+        # let(:params) { { industry: '85000000' } }
+        let(:params) { { industries: '85000000' } }
 
         subject { response }
         it_behaves_like 'a successful search request'
