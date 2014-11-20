@@ -46,7 +46,7 @@ module ScreeningList
 
       entry[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
-        'http://www.pmddtc.state.gov/compliance/debar.html';
+        'http://www.pmddtc.state.gov/compliance/debar.html'
 
       entry[:id] = generate_id(entry)
       sanitize_entry(entry)

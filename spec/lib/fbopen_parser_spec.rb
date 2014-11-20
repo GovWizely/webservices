@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe FbopenParser do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/fbopen_leads" }
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
   let(:subject)      { FbopenParser.new }
 
   describe '#convert' do

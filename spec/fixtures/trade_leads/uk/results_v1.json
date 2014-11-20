@@ -1,0 +1,53 @@
+[
+  {
+    "id": "1393212",
+    "reference_number": "2014-018",
+    "publish_date": "2014-05-15",
+    "min_contract_value": "4500000.00",
+    "max_contract_value": "6000000.00",
+    "status": "Live",
+    "url": "http://www.contractsfinder.businesslink.gov.uk/Common/View%20Notice.aspx?NoticeId=1393212",
+    "procurement_organization": null,
+    "contact": "procurement@suffolk.pnn.police.uk",
+    "title": "Police Healthcare Services to the Suffolk and Norfolk Constabularies",
+    "description": "Expressions of interest are invited from suitably qualified and experienced contractors who wish to be considered for the provision of Police Healthcare Services for the Police Investigation Centres (PIC’s) and the Sexual Assault Referral Centres (S",
+    "notice_type": "Published Tender Doc Set",
+    "specific_location": "Suffolk",
+    "industry": "85000000",
+    "country": "GB"
+  },
+  {
+    "id": "1385220",
+    "reference_number": "NW 8 14/15JMP",
+    "publish_date": "2014-05-08",
+    "min_contract_value": "15423.07",
+    "max_contract_value": "15423.07",
+    "status": "Live",
+    "url": "http://www.contractsfinder.businesslink.gov.uk/Common/View%20Notice.aspx?NoticeId=1385220",
+    "procurement_organization": null,
+    "contact": "TransparencySGRM@highways.gsi.gov.uk",
+    "title": "Spatial Planning Arrangement (Lot 4): Highways Agency SPF North West Contract Management 2014 2015",
+    "description": "Spatial planning works.",
+    "notice_type": "Published Contract Doc Set",
+    "specific_location": "England",
+    "industry": "71000000",
+    "country": "GB"
+  },
+  {
+    "id": "1431035",
+    "reference_number": "BCGS/14/1/1",
+    "publish_date": "2014-06-16",
+    "min_contract_value": "0.00",
+    "max_contract_value": "0.00",
+    "status": "Live",
+    "url": "http://www.contractsfinder.businesslink.gov.uk/Common/View%20Notice.aspx?NoticeId=1431035",
+    "procurement_organization": "Brocklesby Limited",
+    "contact": null,
+    "title": "Supply of Near Infra-red Scanners",
+    "description": "To supply install and commission a Near Infra Red facility able to support the client's process quality and product development activities. The NIR facility will comprise of two scanners. These are: - Bench top analyser suit",
+    "notice_type": "Below OJEU: Contract Award",
+    "specific_location": "East Riding of Yorkshire",
+    "industry": "38520000|38300000|38540000",
+    "country": "GB"
+  }
+]
