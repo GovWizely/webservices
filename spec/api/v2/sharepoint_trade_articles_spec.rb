@@ -7,7 +7,7 @@ describe 'Sharepoint Trade Article API V2', type: :request do
   end
 
   let(:search_path) { '/ita_articles/search' }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
+  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml") }
 
   describe 'GET /ita_articles/search.json' do

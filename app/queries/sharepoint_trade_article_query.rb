@@ -20,10 +20,9 @@ class SharepointTradeArticleQuery < Query
   end
 
   def generate_query(json)
-    terms = []
     q_terms = %w(title short_title summary content keyword)
     json.query do
-      generate_sp_query(terms, q_terms, json)
+      generate_sp_query(q_terms, json)
     end if @q
   end
 
@@ -42,13 +41,10 @@ class SharepointTradeArticleQuery < Query
     @topics || @sub_topics || @geo_regions || @geo_subregions
   end
 
-  def generate_sp_query(terms, q_terms, json)
+  def generate_sp_query(q_terms, json)
     json.bool do
       json.must do |_must_json|
-        json.child! { generate_multi_match(json, q_terms + terms, @q) } if @q
-        terms.each do |term|
-          json.child! { json.match { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
-        end
+        json.child! { generate_multi_match(json, q_terms, @q) } if @q
       end
     end
   end
