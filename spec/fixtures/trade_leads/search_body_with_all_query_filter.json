@@ -1,0 +1,42 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "match": {
+            "industry": "dental"
+          }
+        },
+        {
+          "multi_match": {
+            "fields": [
+              "title",
+              "description",
+              "topic",
+              "tags", 
+              "procurement_organization"
+            ],
+            "operator": "and",
+            "query": "women"
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "source": ["FBO"]
+          }
+        },
+        {
+          "terms": {
+            "country": ["CA", "AU"]
+          }
+        }
+      ]
+    }
+  }
+}

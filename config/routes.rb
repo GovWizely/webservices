@@ -1,16 +1,25 @@
 Webservices::Application.routes.draw do
+  concern :api_v1_routable do
+    path = {
+      'australian_trade_leads' => 'AUSTRALIA',
+      'canada_leads'           => 'CANADA',
+      'fbopen_leads'           => 'FBO',
+      'state_trade_leads'      => 'STATE',
+      'uk_trade_leads'         => 'UK',
+    }
+
+    path.each do |path, source|
+      get "/#{path}/search(.json)" => 'trade_leads/consolidated#search', format: false, defaults: { sources: source }
+    end
+
+  end
+
   concern :api_routable do
 
     path = { 'market_researches'         => 'market_research_library',
              'parature_faq'              => 'faqs',
              'ita_office_locations'      => 'ita_office_locations',
              'trade_articles'            => 'trade_articles',
-             'australian_trade_leads'    => 'australian_trade_leads',
-             'canada_leads'              => 'canada_leads',
-             'fbopen_leads'              => 'fbopen_leads',
-             'state_trade_leads'         => 'state_trade_leads',
-             'uk_trade_leads'            => 'uk_trade_leads',
-             'trade_leads'               => 'trade_leads',
              'sharepoint_trade_articles' => 'ita_articles',
      }
 
@@ -32,6 +41,10 @@ Webservices::Application.routes.draw do
       end
     end
 
+    scope '/trade_leads' do
+      get '/search', to: 'trade_leads/consolidated#search'
+    end
+
     namespace :trade_events do
       get 'search', to: 'consolidated#search'
       get 'ita/search'
@@ -47,6 +60,7 @@ Webservices::Application.routes.draw do
   end
 
   scope 'v1', module: 'api/v1', defaults: { format: :json } do
+    concerns :api_v1_routable
     concerns :api_routable
   end
 
@@ -55,6 +69,7 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
+    concerns :api_v1_routable
     concerns :api_routable
   end
 end
