@@ -2,7 +2,6 @@ require 'open-uri'
 
 class SharepointTradeArticleData
   include Importer
-  include SharepointHelpers
   ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
   SINGLE_VALUE_XPATHS = {
@@ -19,7 +18,6 @@ class SharepointTradeArticleData
     seo_metadata_title:       '//seometadatatitle',
     seo_metadata_description: '//seometadatadescription',
     seo_metadata_keyword:     '//seometadatakeyword',
-    trade_url:                '//trade_url',
   }.freeze
 
   MULTI_VALUE_XPATHS = {
@@ -33,25 +31,33 @@ class SharepointTradeArticleData
     url_xml_source:    '//data//xml',
   }.freeze
 
+  EMPTY_KEYS = {
+    source_agencies:       [],
+    source_business_units: [],
+    source_offices:        [],
+    file_url:              [],
+    image_url:             [],
+    topics:                [],
+    sub_topics:            [],
+    geo_regions:           [],
+    geo_subregions:        [],
+    trade_url:             [],
+  }.freeze
+
   def initialize(resource = ENDPOINT)
-    @resources = Dir[resource]
+    @resource = resource
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
-    data = []
 
-    @resources.each do |resource|
-      begin
-        article = Nokogiri::XML(open(resource))
-        article = extract_article_fields(article)
-        data << article
-      rescue
-        next
-      end
-    end
-    articles = data.map { |article_hash| process_article_info(article_hash) }.compact
-    SharepointTradeArticle.index articles
+    articles = Dir[@resource].map do |resource|
+      xml = Nokogiri::XML(open(resource))
+      article_hash = extract_article_fields(xml)
+      process_article_info(article_hash)
+    end.compact
+
+    SharepointTradeArticle.index(articles)
   end
 
   private
@@ -60,14 +66,12 @@ class SharepointTradeArticleData
     article_info = article.xpath('//article')
     article_hash = extract_fields(article_info, SINGLE_VALUE_XPATHS)
     article_hash.merge! extract_multi_valued_fields(article_info, MULTI_VALUE_XPATHS)
-    article_hash[:topics] = []
-    article_hash[:sub_topics] = []
-    article_hash[:geo_regions] = []
-    article_hash[:geo_subregions] = []
+    EMPTY_KEYS.each { |k, v| article_hash[k] = v.clone }
     article_hash = extract_source_agencies(article_info, article_hash)
     article_hash = extract_sub_elements(article_info, article_hash, :geo_regions, :geo_subregions, '//geo_region', '//geo_subregion')
     article_hash = extract_sub_elements(article_info, article_hash, :topics, :sub_topics, '//topic', '//sub_topic')
-    article_hash = extract_urls(article_info, article_hash)
+    article_hash = extract_src_text(article_info, article_hash, :file_url, '//files/file')
+    article_hash = extract_src_text(article_info, article_hash, :image_url, '//images/image')
     article_hash
   end
 
@@ -77,8 +81,58 @@ class SharepointTradeArticleData
     article[:creation_date] &&= Date.strptime(article[:creation_date], '%m/%d/%Y').to_s
     article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
     article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
+    article[:trade_url] = 'http://www.export.gov/articles/' + article[:seo_metadata_title].parameterize + '.html'
     article = remove_duplicates(article)
     article = replace_nulls(article)
     article
+  end
+
+  def extract_src_text(parent_node, hash, key, path)
+    parent_node.xpath(path).each do |node|
+      hash[key] << node.attribute('src').text
+    end
+    hash
+  end
+
+  def extract_source_agencies(parent_node, hash)
+    parent_node.xpath('//source_agencies/source_agency').each do |source_agency|
+      hash[:source_offices] += extract_nodes(source_agency.xpath('//source_office'))
+
+      source_agency.xpath('source_business_unit').each do |source_business_unit|
+        hash[:source_business_units] << source_business_unit.children.first.text
+      end
+      hash[:source_agencies] << source_agency.children.first.text
+    end
+    hash
+  end
+
+  def extract_sub_elements(parent_node, hash, parent_key, child_key, parent_path, child_path)
+    parent_node.xpath(parent_path).each do |node|
+      hash[child_key] += extract_nodes(node.xpath(child_path))
+      hash[parent_key] << node.children.first.text
+    end
+    hash
+  end
+
+  def remove_duplicates(hash)
+    hash.each do |_k, v|
+      if v.class == Array
+        v.uniq!
+      end
+    end
+    hash
+  end
+
+  def replace_nulls(hash)
+    hash.each do |k, v|
+      if v.nil? && is_date?(k) == false
+        hash[k] = ''
+      end
+    end
+  end
+
+  def is_date?(key)
+    date_keys = [:creation_date, :release_date, :expiration_date]
+    date_keys.include?(key)
   end
 end

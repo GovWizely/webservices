@@ -1,19 +1,19 @@
 require 'spec_helper'
 
-describe 'Sharepoint Trade Article API V1', type: :request do
+describe 'Sharepoint Trade Article API V2', type: :request do
   before(:all) do
     SharepointTradeArticle.recreate_index
     SharepointTradeArticleData.new("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*").import
   end
 
   let(:search_path) { '/ita_articles/search' }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
+  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml") }
 
   describe 'GET /ita_articles/search.json' do
 
     context 'when search parameters are empty' do
-      before { get search_path, { size: 50 }, v1_headers }
+      before { get search_path, { size: 50 }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -29,7 +29,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: 'import' }, v1_headers }
+      before { get search_path, { q: 'import' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -45,7 +45,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when creation_date_start or creation_date_end is specified' do
-      before { get search_path, { creation_date_start: '2014-08-27', creation_date_end: '2014-08-28' }, v1_headers }
+      before { get search_path, { creation_date_start: '2014-08-27', creation_date_end: '2014-08-28' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -63,7 +63,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when release_date_start or release_date_end is specified' do
-      before { get search_path, { release_date_start: '2014-08-27', release_date_end: '2014-08-28' }, v1_headers }
+      before { get search_path, { release_date_start: '2014-08-27', release_date_end: '2014-08-28' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -77,7 +77,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when expiration_date_start or expiration_date_end is specified' do
-      before { get search_path, { expiration_date_start: '2014-08-27', expiration_date_end: '2014-08-28' }, v1_headers }
+      before { get search_path, { expiration_date_start: '2014-08-27', expiration_date_end: '2014-08-28' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -91,7 +91,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when export_phases is specified' do
-      before { get search_path, { export_phases: 'expand, learn' }, v1_headers }
+      before { get search_path, { export_phases: 'expand, learn' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -106,7 +106,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when industries is specified' do
-      before { get search_path, { industries: 'agribusniess,aerospace & defense' }, v1_headers }
+      before { get search_path, { industries: 'agribusniess,aerospace & defense' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -121,7 +121,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when countries is specified' do
-      before { get search_path, { countries: 'af,ao' }, v1_headers }
+      before { get search_path, { countries: 'af,ao' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -137,7 +137,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when topics or sub_topics is specified' do
-      before { get search_path, { topics: 'free trade agreements', sub_topics: 'nafta,cafta-dr' }, v1_headers }
+      before { get search_path, { topics: 'free trade agreements', sub_topics: 'nafta,cafta-dr' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -152,7 +152,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when geo_regions or geo_subregions is specified' do
-      before { get search_path, { geo_regions: 'asia', geo_subregions: 'east asia,asia pacific' }, v1_headers }
+      before { get search_path, { geo_regions: 'asia', geo_subregions: 'east asia,asia pacific' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -167,7 +167,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when trade_regions is specified' do
-      before { get search_path, { trade_regions: 'andean community,african growth and opportunity act' }, v1_headers }
+      before { get search_path, { trade_regions: 'andean community,african growth and opportunity act' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -182,7 +182,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when trade_programs is specified' do
-      before { get search_path, { trade_programs: 'advocacy,advisory committees' }, v1_headers }
+      before { get search_path, { trade_programs: 'advocacy,advisory committees' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -197,7 +197,7 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when trade_initiatives is specified' do
-      before { get search_path, { trade_initiatives: 'discover global markets' }, v1_headers }
+      before { get search_path, { trade_initiatives: 'discover global markets' }, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
