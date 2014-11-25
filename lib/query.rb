@@ -22,10 +22,12 @@ class Query
 
   def initialize(options = {})
     options.reverse_merge!(size: DEFAULT_SIZE)
+
+    cleanup_invalid_bytes(options, [:q])
+
     @offset = options[:offset].to_i
     @size   = [options[:size].to_i, MAX_SIZE].min
     @q      = options[:q]
-
     initialize_search_fields(options)
   end
 
@@ -94,5 +96,13 @@ class Query
 
   def generate_filter(json)
     filter_from_fields(json, query_fields)
+  end
+
+  private
+
+  def cleanup_invalid_bytes(obj, fields)
+    fields.each do | f |
+      obj[f] = obj[f].encode('UTF-8', 'UTF-8', invalid: :replace, undef: :replace, replace: '') if obj[f]
+    end
   end
 end
