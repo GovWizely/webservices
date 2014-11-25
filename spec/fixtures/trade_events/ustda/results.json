@@ -16,6 +16,16 @@
     "url": "http://www.ustda.gov/news/events/2014/EastAsia/China/ChinaShaleGasRTM.asp",
     "source": "USTDA",
     "venue": "GreatVenue",
+    "contacts":[  
+        {  
+            "first_name":"Kaitlin",
+            "last_name":"Blackborow",
+            "post":"Experient, Inc.",
+            "person_title":"Program Manager",
+            "phone":"703-239-7516",
+            "email":"chinartm@experient-inc.com"
+        }
+    ],
     "city": "Washington",
     "state": "DC",
     "country": "US"
@@ -37,6 +47,16 @@
     "url": "http://www.ustda.gov/news/events/2014/SouthAsia/Vietnam/VietnamAirportDevelopmentOperationsRTM.asp",
     "source": "USTDA",
     "venue": "",
+    "contacts":[  
+        {  
+            "first_name":"AJ",
+            "last_name":"Bownas",
+            "post":"The Webster Group",
+            "person_title":"Sr. Director of Meetings \u0026 Conferences",
+            "phone":"202-741-1297",
+            "email":"aj@webstergroupinc.com"
+        }
+    ],
     "city": "Washington",
     "state": "DC",
     "country": "US"
@@ -58,6 +78,16 @@
     "url": "http://www.ustda.gov/africanleadersvisits",
     "source": "USTDA",
     "venue": "",
+    "contacts":[  
+        {  
+            "first_name":"Steve",
+            "last_name":"Lewis",
+            "post":"U.S. Trade and Development Agency",
+            "person_title":"Digital Media Manager",
+            "phone":"703-875-4357",
+            "email":"ALVTransport@ustda.gov"
+        }
+    ],
     "city": "Chicago",
     "state": "IL",
     "country": "US"
@@ -79,6 +109,16 @@
     "url": "http://www.ustda.gov/africanleadersvisits",
     "source": "USTDA",
     "venue": "",
+    "contacts":[  
+        {  
+            "first_name":"Steve",
+            "last_name":"Lewis",
+            "post":"U.S. Trade and Development Agency",
+            "person_title":"Digital Media Manager",
+            "phone":"703-875-4357",
+            "email":"ALVEnergy@ustda.gov"
+        }
+    ],
     "city": "Houston",
     "state": "TX",
     "country": "US"
@@ -100,6 +140,16 @@
     "url": "http://www.ustda.gov/news/events/2014/SubSaharanAfrica/SubSaharanAfricaLightAircraftHelicopterRTM.asp",
     "source": "USTDA",
     "venue": "",
+    "contacts":[  
+        {  
+            "first_name":"Ian",
+            "last_name":"Christianson",
+            "post":"Futron Corporation",
+            "person_title":"Program Manager",
+            "phone":"301-280-2645",
+            "email":"ichristensen@futron.com"
+        }
+    ],
     "city": "Washington",
     "state": "DC",
     "country": "US"
