@@ -52,14 +52,8 @@ describe TariffRate::Query do
                             sources:   'AUSTRALIA')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
-
-      context 'when options include countries' do
-        let(:query) { described_class.new(countries: 'US,AU') }
-        let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_countries_filter.json").read }
-
-        it 'generates search body with countries filter' do
-          expect(JSON.parse(query.generate_search_body)).to eq(search_body)
-        end
+      it 'generates search body with all possible filters' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end

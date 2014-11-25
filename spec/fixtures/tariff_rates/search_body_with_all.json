@@ -1,38 +1,41 @@
 {
-    "filter": {
-        "bool": {
-            "must": [
-                {
-                    "terms": {
-                        "source": ["AUSTRALIA"]
-                    }
-                }
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": [
+              "description",
+              "tariff_rate_quota_note",
+              "rule_text",
+              "tariff_line"
             ],
-            "should": [
-                {
-                    "terms": {
-                        "countries": ["US", "AU"]
-                    }
-                }
-            ]
+            "operator": "and",
+            "query": "horses"
+          }
         }
-    },
-    "query": {
-        "bool": {
-            "must": [
-                {
-                    "multi_match": {
-                        "fields": [
-                            "alt_names",
-                            "name",
-                            "remarks",
-                            "title"
-                        ],
-                        "operator": "and",
-                        "query": "horses"
-                    }
-                }
-            ]
-        }
+      ]
     }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "source": [
+              "AUSTRALIA"
+            ]
+          }
+        },
+        {
+          "terms": {
+            "countries": [
+              "US",
+              "AU"
+            ]
+          }
+        }
+      ]
+    }
+  }
 }
