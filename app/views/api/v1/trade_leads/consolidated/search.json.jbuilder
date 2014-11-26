@@ -24,19 +24,21 @@ json.call(@search, :total, :offset)
 json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys
-    json.id hit['_id']                        if entry[:_source][:source].downcase == 'state' || entry[:_source][:source].downcase == 'uk'
+
+    source = entry[:_source][:source].downcase
 
     if !params[:sources] || params[:sources].empty?
-      if entry[:_source][:source] == 'UK' || entry[:_source][:source] == 'STATE'
-        json.type (entry[:_source][:source].downcase + '_trade_lead')
-      elsif entry[:_source][:source] == 'FBO'
+      if %w(state uk).include?(source)
+        json.type "#{source}_trade_lead"
+      elsif source == 'fbo'
         json.type 'fbopen_lead'
       else
-        json.type (entry[:_source][:source].downcase + '_lead')
+        json.type "#{source}_lead"
       end
     end
 
-    json.source entry[:_source][:lead_source] if entry[:_source][:source].downcase == 'state'
-    json.call(entry[:_source], *field_lists[entry[:_source][:source].downcase.to_sym])
+    json.id hit['_id'] if %w(state uk).include?(source)
+    json.source entry[:_source][:lead_source] if source == 'state'
+    json.call(entry[:_source], *field_lists[source.to_sym])
   end
 end

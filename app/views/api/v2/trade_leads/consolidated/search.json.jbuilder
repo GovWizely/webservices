@@ -24,7 +24,8 @@ json.call(@search, :total, :offset)
 json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys
-    json.id hit['_id'] if entry[:_source][:source].downcase == 'state' || entry[:_source][:source].downcase == 'uk'
-    json.call(entry[:_source], *field_lists[entry[:_source][:source].downcase.to_sym])
+    source = entry[:_source][:source].downcase
+    json.id hit['_id'] if %(state uk).include?(source)
+    json.call(entry[:_source], *field_lists[source.to_sym])
   end
 end
