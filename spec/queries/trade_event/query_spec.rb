@@ -7,10 +7,10 @@ describe TradeEvent::Query do
     it_behaves_like 'a paginated query'
 
     context 'when options include countries' do
-      subject { described_class.new(countries: 'us,ca') }
+      let(:query) { described_class.new(countries: 'us,ca') }
 
       describe '#countries' do
-        subject { super().countries }
+        subject { query.countries }
         it { is_expected.to eq(%w(US CA)) }
       end
     end
@@ -22,7 +22,7 @@ describe TradeEvent::Query do
     end
 
     context 'when options is an empty hash' do
-      let(:query) { described_class.new({}) }
+      let(:query) { described_class.new }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_default_options.json").read }
 
       it 'generates search body with default options' do

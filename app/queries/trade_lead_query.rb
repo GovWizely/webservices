@@ -1,7 +1,7 @@
 class TradeLeadQuery < Query
   attr_reader :countries, :sort
 
-  def initialize(options)
+  def initialize(options = {})
     super
     @q = options[:q] if options[:q].present?
     @countries = options[:countries].upcase.split(',') if options[:countries].present?

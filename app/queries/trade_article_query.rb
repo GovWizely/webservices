@@ -1,7 +1,7 @@
 class TradeArticleQuery < Query
   attr_reader :evergreen, :pub_date_start, :pub_date_end, :update_date_start, :update_date_end, :q
 
-  def initialize(options)
+  def initialize(options = {})
     super
     [:pub_date_start, :pub_date_end, :update_date_start, :update_date_end, :q].each do |sym|
       instance_variable_set("@#{sym}", options[sym])

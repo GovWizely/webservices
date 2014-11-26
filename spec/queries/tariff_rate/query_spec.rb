@@ -7,12 +7,8 @@ describe TariffRate::Query do
     it_behaves_like 'a paginated query'
 
     context 'when options include countries' do
-      subject { described_class.new(countries: 'us,au') }
-
-      describe '#countries' do
-        subject { super().countries }
-        it { is_expected.to eq(%w(US AU)) }
-      end
+      subject { described_class.new(countries: 'us,au').countries }
+      it { is_expected.to eq(%w(US AU)) }
     end
   end
 
@@ -52,14 +48,8 @@ describe TariffRate::Query do
                             sources:   'AUSTRALIA')
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all.json").read }
-
-      context 'when options include countries' do
-        let(:query) { described_class.new(countries: 'US,AU') }
-        let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_countries_filter.json").read }
-
-        it 'generates search body with countries filter' do
-          expect(JSON.parse(query.generate_search_body)).to eq(search_body)
-        end
+      it 'generates search body with all possible filters' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
   end
