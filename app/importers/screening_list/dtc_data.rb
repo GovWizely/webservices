@@ -41,9 +41,13 @@ module ScreeningList
         start_date:              parse_american_date(row[:eff_date]),
         federal_register_notice: (row[:corrected_notice] || row[:notice]),
         source:                  model_class.source,
-        source_list_url:         'http://www.pmddtc.state.gov/compliance/debar.html',
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
+
+      entry[:source_list_url] = row[:type] == 'Administrative' ?
+        'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
+        'http://www.pmddtc.state.gov/compliance/debar.html';
+
       entry[:id] = generate_id(entry)
       sanitize_entry(entry)
     end
