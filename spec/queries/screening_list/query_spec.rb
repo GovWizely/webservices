@@ -27,6 +27,13 @@ describe ScreeningList::Query do
       end
     end
 
+    context 'when the search q is "Müller" with invalid utf-8 byte' do
+      it 'replaces all the invalid bytes' do
+        expect { described_class.new(q: "Müller\255".force_encoding('UTF-8')) }.not_to raise_error
+        expect(described_class.new(q: "Müller\255".force_encoding('UTF-8')).generate_search_body).to include("\"Müller\"")
+      end
+    end
+
     context 'when options include only type' do
       let(:query) { described_class.new(type: 'Entity') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_type_filter.json").read }
