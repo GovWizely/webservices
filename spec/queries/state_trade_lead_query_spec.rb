@@ -7,10 +7,10 @@ describe StateTradeLeadQuery do
     it_behaves_like 'a paginated query'
 
     context 'when options include countries' do
-      subject { described_class.new(countries: 'us,ca') }
+      let(:query) { described_class.new(countries: 'us,ca') }
 
       describe '#countries' do
-        subject { super().countries }
+        subject { query.countries }
         it { is_expected.to eq(%w(US CA)) }
       end
     end

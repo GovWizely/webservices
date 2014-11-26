@@ -6,7 +6,7 @@ class ItaOfficeLocationQuery < Query
     sort:   %i(post.sort),
   )
 
-  def initialize(options)
+  def initialize(options = {})
     super
     @country = options[:countries].downcase.split(',') if options[:countries].present?
     @state = options[:state].downcase.split(',') if options[:state].present?

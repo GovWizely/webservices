@@ -7,10 +7,10 @@ describe MarketResearchQuery do
     it_behaves_like 'a paginated query'
 
     context 'when options include countries' do
-      subject { MarketResearchQuery.new(countries: 'us,ca') }
+      let(:query) { described_class.new(countries: 'us,ca') }
 
       describe '#countries' do
-        subject { super().countries }
+        subject { query.countries }
         it { is_expected.to eq(%w(US CA)) }
       end
     end
@@ -18,7 +18,7 @@ describe MarketResearchQuery do
 
   describe '#generate_search_body' do
     context 'when options is an empty hash' do
-      let(:query) { MarketResearchQuery.new({}) }
+      let(:query) { described_class.new }
 
       it 'generates search body with default options' do
         expect(JSON.parse(query.generate_search_body)).to eq({})
@@ -26,7 +26,7 @@ describe MarketResearchQuery do
     end
 
     context 'when options include industry' do
-      let(:query) { MarketResearchQuery.new(industry: 'fishing') }
+      let(:query) { described_class.new(industry: 'fishing') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_industries.json").read }
 
       it 'generates search body with queries' do
@@ -35,7 +35,7 @@ describe MarketResearchQuery do
     end
 
     context 'when options include q' do
-      let(:query) { MarketResearchQuery.new(q: 'workboat') }
+      let(:query) { described_class.new(q: 'workboat') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with queries' do
@@ -44,7 +44,7 @@ describe MarketResearchQuery do
     end
 
     context 'when options include countries' do
-      let(:query) { MarketResearchQuery.new(countries: 'IL, US') }
+      let(:query) { described_class.new(countries: 'IL, US') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
 
       it 'generates search body with filters' do

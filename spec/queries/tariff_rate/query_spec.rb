@@ -7,12 +7,8 @@ describe TariffRate::Query do
     it_behaves_like 'a paginated query'
 
     context 'when options include countries' do
-      subject { described_class.new(countries: 'us,au') }
-
-      describe '#countries' do
-        subject { super().countries }
-        it { is_expected.to eq(%w(US AU)) }
-      end
+      subject { described_class.new(countries: 'us,au').countries }
+      it { is_expected.to eq(%w(US AU)) }
     end
   end
 
