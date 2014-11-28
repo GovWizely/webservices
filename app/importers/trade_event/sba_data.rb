@@ -103,7 +103,7 @@ module TradeEvent
       venue = extract_fields(item, VENUE_XPATHS)
       venue[:country] &&= lookup_country(venue[:country])
       venue[:state] &&= lookup_state(venue[:state]) rescue venue[:state]
-      [venue]
+      [sanitize_entry(venue)]
     end
 
     def generate_id(doc)

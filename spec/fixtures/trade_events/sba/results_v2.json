@@ -57,7 +57,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building<br />2401 4th Avenue, Suite 450",
+      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
       "city": "Seattle",
       "state": "WA",
       "country": "US"
@@ -121,7 +121,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building<br />2401 4th Avenue, Suite 450",
+      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
       "city": "MaxiMUS",
       "state": "WA",
       "country": "US"
@@ -185,7 +185,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building<br />2401 4th Avenue, Suite 450",
+      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
       "city": "Seattle",
       "state": "WA",
       "country": "US"
@@ -249,7 +249,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building<br />2401 4th Avenue, Suite 450",
+      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
       "city": "Seattle",
       "state": "WA",
       "country": "US"
@@ -345,7 +345,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "Duquesne University Power Center",
-      "address": "600 Forbes Avenue<br />Power Center Ballroom",
+      "address": "600 Forbes Avenue Power Center Ballroom",
       "city": "Pittsburgh",
       "state": "PA",
       "country": "US"
@@ -376,7 +376,7 @@
     ],
     "source": "SBA",
     "venues": [{
-      "venue": "CCC&#039;s Academic &amp; Workforce Development Center",
+      "venue": "CCC's Academic & Workforce Development Center",
       "address": "318 Madison Avenue",
       "city": "Elmira",
       "state": "NY",
@@ -537,7 +537,7 @@
     "source": "SBA",
     "venues": [{
       "venue": "Duquesne University Power Center",
-      "address": "600 Forbes Avenue<br />Power Center Ballroom",
+      "address": "600 Forbes Avenue Power Center Ballroom",
       "city": "Pittsburgh",
       "state": "PA",
       "country": "US"
