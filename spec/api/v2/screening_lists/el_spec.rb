@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'BIS Entities API V2', type: :request do
-  include_context 'EL data'
+  include_context 'ScreeningList::El data'
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /consolidated_screening_list/el/search' do
@@ -10,7 +10,7 @@ describe 'BIS Entities API V2', type: :request do
 
     context 'when search parameters are empty' do
       subject { response }
-      it_behaves_like 'it contains all EL results'
+      it_behaves_like 'it contains all ScreeningList::El results'
       it_behaves_like 'a successful search request'
     end
 
@@ -19,16 +19,16 @@ describe 'BIS Entities API V2', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all EL results that match "fazel"'
+      it_behaves_like 'it contains all ScreeningList::El results that match "fazel"'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'constructions' } }
-        it_behaves_like 'it contains all EL results that match "constructions"'
+        it_behaves_like 'it contains all ScreeningList::El results that match "constructions"'
       end
 
       context 'when search term exists only in alt_names' do
         let(:params) { { q: 'farid' } }
-        it_behaves_like 'it contains all EL results that match "farid"'
+        it_behaves_like 'it contains all ScreeningList::El results that match "farid"'
       end
     end
 
@@ -38,13 +38,13 @@ describe 'BIS Entities API V2', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'AF' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all EL results that match countries "AF"'
+        it_behaves_like 'it contains all ScreeningList::El results that match countries "AF"'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'af,tr' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all EL results that match countries "AF,TR"'
+        it_behaves_like 'it contains all ScreeningList::El results that match countries "AF,TR"'
       end
     end
 

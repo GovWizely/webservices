@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'BIS Denied Persons API V1', type: :request do
-  include_context 'DPL data'
+  include_context 'ScreeningList::Dpl data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_screening_list/dpl/search' do
@@ -10,7 +10,7 @@ describe 'BIS Denied Persons API V1', type: :request do
 
     context 'when search parameters are empty' do
       subject { response }
-      it_behaves_like 'it contains all DPL results'
+      it_behaves_like 'it contains all ScreeningList::Dpl results'
       it_behaves_like 'a successful search request'
     end
 
@@ -19,16 +19,16 @@ describe 'BIS Denied Persons API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all DPL results that match "katsuta"'
+      it_behaves_like 'it contains all ScreeningList::Dpl results that match "katsuta"'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'agnese' } }
-        it_behaves_like 'it contains all DPL results that match "agnese"'
+        it_behaves_like 'it contains all ScreeningList::Dpl results that match "agnese"'
       end
 
       context 'when search term exists only in remarks' do
         let(:params) { { q: 'corrected' } }
-        it_behaves_like 'it contains all DPL results that match "corrected"'
+        it_behaves_like 'it contains all ScreeningList::Dpl results that match "corrected"'
       end
     end
 
@@ -38,13 +38,13 @@ describe 'BIS Denied Persons API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'za' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all DPL results that match countries "ZA"'
+        it_behaves_like 'it contains all ScreeningList::Dpl results that match countries "ZA"'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'fr,de' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all DPL results that match countries "FR,DE"'
+        it_behaves_like 'it contains all ScreeningList::Dpl results that match countries "FR,DE"'
       end
     end
 

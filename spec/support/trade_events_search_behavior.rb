@@ -1,17 +1,17 @@
 shared_context 'all Trade Events fixture data' do
-  include_context 'TradeEvent::Sba data'
-  include_context 'TradeEvent::Ita data'
-  include_context 'TradeEvent::Exim data'
-  include_context 'TradeEvent::Ustda data'
   include_context 'TradeEvent::Dl data'
+  include_context 'TradeEvent::Exim data'
+  include_context 'TradeEvent::Ita data'
+  include_context 'TradeEvent::Sba data'
+  include_context 'TradeEvent::Ustda data'
 end
 
 shared_context 'all Trade Events v2 fixture data' do
-  include_context 'TradeEvent::Sba data v2'
-  include_context 'TradeEvent::Ita data v2'
-  include_context 'TradeEvent::Exim data v2'
-  include_context 'TradeEvent::Ustda data v2'
   include_context 'TradeEvent::Dl data v2'
+  include_context 'TradeEvent::Exim data v2'
+  include_context 'TradeEvent::Ita data v2'
+  include_context 'TradeEvent::Sba data v2'
+  include_context 'TradeEvent::Ustda data v2'
 end
 
 shared_context 'TradeEvent::Ita data' do
@@ -21,7 +21,7 @@ shared_context 'TradeEvent::Ita data' do
       "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:ITA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ita/results.json").read)
   end
 end
@@ -33,49 +33,49 @@ shared_context 'TradeEvent::Ita data v2' do
       "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:ITA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ita/results_v2.json").read)
   end
 end
 
 shared_examples 'it contains all TradeEvent::Ita results' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [0, 1, 2, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match "2013"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [0, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match "international"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [1, 2, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match countries "il"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match countries "US"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [1, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match industry "DENTALS"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ita results that match "Sao"' do
-  let(:source) { :ITA }
+  let(:source) { TradeEvent::Ita }
   let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
@@ -89,7 +89,7 @@ shared_context 'TradeEvent::Sba data' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:SBA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/sba/results.json").read)
   end
 
@@ -107,7 +107,7 @@ shared_context 'TradeEvent::Sba data v2' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:SBA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/sba/results_v2.json").read)
   end
 
@@ -117,31 +117,31 @@ shared_context 'TradeEvent::Sba data v2' do
 end
 
 shared_examples 'it contains all TradeEvent::Sba results' do
-  let(:source) { :SBA }
+  let(:source) { TradeEvent::Sba }
   let(:expected) { (0..16).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match "Maximus"' do
-  let(:source) { :SBA }
+  let(:source) { TradeEvent::Sba }
   let(:expected) { [0, 1, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match "international"' do
-  let(:source) { :SBA }
+  let(:source) { TradeEvent::Sba }
   let(:expected) { [11, 12, 16] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match countries "fr,de"' do
-  let(:source) { :SBA }
+  let(:source) { TradeEvent::Sba }
   let(:expected) { [9, 13] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match countries "US"' do
-  let(:source) { :SBA }
+  let(:source) { TradeEvent::Sba }
   let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16] }
   it_behaves_like 'it contains all expected results of source'
 end
@@ -155,7 +155,7 @@ shared_context 'TradeEvent::Exim data' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:EXIM] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Exim] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/exim/results.json").read)
   end
 
@@ -173,7 +173,7 @@ shared_context 'TradeEvent::Exim data v2' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:EXIM] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Exim] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/exim/results_v2.json").read)
   end
 
@@ -183,19 +183,19 @@ shared_context 'TradeEvent::Exim data v2' do
 end
 
 shared_examples 'it contains all TradeEvent::Exim results' do
-  let(:source) { :EXIM }
+  let(:source) { TradeEvent::Exim }
   let(:expected) { (0..14).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Exim results that match "international"' do
-  let(:source) { :EXIM }
+  let(:source) { TradeEvent::Exim }
   let(:expected) { [0, 2, 9, 11] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Exim results that match "Baltimore"' do
-  let(:source) { :EXIM }
+  let(:source) { TradeEvent::Exim }
   let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
@@ -206,7 +206,7 @@ shared_context 'TradeEvent::Ustda data' do
     TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:USTDA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ustda/results.json").read)
   end
 
@@ -221,7 +221,7 @@ shared_context 'TradeEvent::Ustda data v2' do
     TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:USTDA] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/ustda/results_v2.json").read)
   end
 
@@ -231,36 +231,36 @@ shared_context 'TradeEvent::Ustda data v2' do
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { (0..4).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match "international"' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match "Wichita"' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match "aeronautical"' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match countries "US"' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { (0..4).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 shared_examples 'it contains all TradeEvent::Ustda results that match industry "mining"' do
-  let(:source) { :USTDA }
+  let(:source) { TradeEvent::Ustda }
   let(:expected) { [0, 3] }
   it_behaves_like 'it contains all expected results of source'
 end
@@ -273,7 +273,7 @@ shared_context 'TradeEvent::Dl data' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:DL] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Dl] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/dl/results.json").read)
   end
 
@@ -290,7 +290,7 @@ shared_context 'TradeEvent::Dl data v2' do
     ).import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[:DL] = JSON.parse(open(
+    @all_possible_full_results[TradeEvent::Dl] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/trade_events/dl/results_v2.json").read)
   end
 
@@ -300,13 +300,13 @@ shared_context 'TradeEvent::Dl data v2' do
 end
 
 shared_examples 'it contains all TradeEvent::Dl results' do
-  let(:source) { :DL }
+  let(:source) { TradeEvent::Dl }
   let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Dl results that match "Bangladesh"' do
-  let(:source) { :DL }
+  let(:source) { TradeEvent::Dl }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end

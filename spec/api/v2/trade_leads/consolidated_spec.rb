@@ -18,7 +18,10 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains all TradeLead::Canada results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(AUSTRALIA FBO STATE UK CANADA) }
+        let(:sources) do
+          [TradeLead::Australia, TradeLead::Fbopen, TradeLead::State,
+           TradeLead::Uk, TradeLead::Canada]
+        end
       end
     end
 
@@ -29,7 +32,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeLead::Australia results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(AUSTRALIA) }
+        let(:sources) { [TradeLead::Australia] }
       end
     end
 
@@ -37,7 +40,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'FBO' } }
       it_behaves_like 'it contains all TradeLead::Fbopen results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(FBO) }
+        let(:sources) { [TradeLead::Fbopen] }
       end
     end
 
@@ -45,7 +48,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'STATE' } }
       it_behaves_like 'it contains all TradeLead::State results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(STATE) }
+        let(:sources) { [TradeLead::State] }
       end
     end
 
@@ -53,7 +56,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'UK' } }
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(UK) }
+        let(:sources) { [TradeLead::Uk] }
       end
     end
 
@@ -61,7 +64,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'CANADA' } }
       it_behaves_like 'it contains all TradeLead::Canada results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(CANADA) }
+        let(:sources) { [TradeLead::Canada] }
       end
 
       context 'and searching for field with non ascii characters using ascii characters' do
@@ -88,7 +91,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { q: 'equipment', sources: 'AUSTRALIA' } }
       it_behaves_like 'it contains all TradeLead::Australia results that match "equipment"'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { %w(AUSTRALIA) }
+        let(:sources) { [TradeLead::Australia] }
       end
     end
 
