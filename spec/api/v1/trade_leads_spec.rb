@@ -2,15 +2,27 @@ require 'spec_helper'
 
 describe 'Trade Leads API V1', type: :request do
   before(:all) do
+
     TradeLead::Australia.recreate_index
     TradeLead::Canada.recreate_index
     TradeLead::Fbopen.recreate_index
     TradeLead::State.recreate_index
     TradeLead::Uk.recreate_index
-    TradeLead::FbopenData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/input_presol").import
-    TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-    TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
-    TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+
+    VCR.use_cassette("TradeLead_FbopenData/_leads/correctly_transform_leads_from_dump", :record => :new_episodes) do
+      TradeLead::FbopenData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/input_presol").import
+    end
+
+    VCR.use_cassette("TradeLead_CanadaData/_leads/correctly_transform_leads_from_csv", :record => :new_episodes) do
+      TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
+    end
+    
+    VCR.use_cassette("TradeLead_UkData/_import/loads_UK_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    end
+    VCR.use_cassette("TradeLead_StateData/_import/loads_state_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    end
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }

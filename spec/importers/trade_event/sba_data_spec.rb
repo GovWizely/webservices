@@ -10,7 +10,7 @@ describe TradeEvent::SbaData do
 
   it_behaves_like 'an importer which can purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:expected_batch_1) { YAML.load_file("#{fixtures_dir}/imported_batch_1.yaml") }
     let(:expected_batch_2) { YAML.load_file("#{fixtures_dir}/imported_batch_2.yaml") }
 

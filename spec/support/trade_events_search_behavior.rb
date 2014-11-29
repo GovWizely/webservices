@@ -17,8 +17,11 @@ end
 shared_context 'TradeEvent::Ita data' do
   before(:all) do
     TradeEvent::Ita.recreate_index
-    TradeEvent::ItaData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
+    
+    VCR.use_cassette("TradeEvent_ItaData/_import/loads_ITA_trade_events_from_specified_resource", :record => :new_episodes) do
+      TradeEvent::ItaData.new(
+        "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[:ITA] = JSON.parse(open(
@@ -29,8 +32,11 @@ end
 shared_context 'TradeEvent::Ita data v2' do
   before(:all) do
     TradeEvent::Ita.recreate_index
-    TradeEvent::ItaData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
+
+    VCR.use_cassette("TradeEvent_ItaData/_import/loads_ITA_trade_events_from_specified_resource", :record => :new_episodes) do
+      TradeEvent::ItaData.new(
+        "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[:ITA] = JSON.parse(open(
@@ -68,7 +74,7 @@ shared_examples 'it contains all TradeEvent::Ita results that match countries "U
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ita results that match industry "DENTALS"' do
+shared_examples 'it contains all TradeEvent::Ita results that match industry "Materials"' do
   let(:source) { :ITA }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
@@ -203,7 +209,10 @@ end
 shared_context 'TradeEvent::Ustda data' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+
+    VCR.use_cassette("TradeEvent_UstdaData/_import/loads_events_from_specified_resource", :record => :new_episodes) do
+      TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[:USTDA] = JSON.parse(open(
@@ -218,7 +227,9 @@ end
 shared_context 'TradeEvent::Ustda data v2' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    VCR.use_cassette("TradeEvent_UstdaData/_import/loads_events_from_specified_resource", :record => :new_episodes) do
+      TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[:USTDA] = JSON.parse(open(

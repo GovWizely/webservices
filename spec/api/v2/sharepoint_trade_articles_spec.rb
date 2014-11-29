@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 describe 'Sharepoint Trade Article API V2', type: :request do
-  before(:all) do
-    SharepointTradeArticle.recreate_index
-    SharepointTradeArticleData.new("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*").import
-  end
+  include_context 'SharepointTradeArticle data'
 
   let(:search_path) { '/ita_articles/search' }
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }

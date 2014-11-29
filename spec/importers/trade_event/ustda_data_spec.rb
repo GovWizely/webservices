@@ -7,7 +7,7 @@ describe TradeEvent::UstdaData do
 
   it_behaves_like 'an importer which can purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     it 'loads events from specified resource' do
       expect(TradeEvent::Ustda).to receive(:index) do |ustda_events|
         expect(ustda_events.size).to eq(5)
@@ -16,7 +16,7 @@ describe TradeEvent::UstdaData do
     end
   end
 
-  describe '#events' do
+  describe '#events', :vcr do
     let(:expected_event_data) { YAML.load_file("#{fixtures_dir}/expected_ustda_events.yaml") }
     it 'correctly transform events from csv' do
       events = importer.events
@@ -24,7 +24,7 @@ describe TradeEvent::UstdaData do
     end
   end
 
-  describe '#process_entry' do
+  describe '#process_entry', :vcr do
     let(:original) do
       {
         id:                 "African Leaders' Visit: Transport",

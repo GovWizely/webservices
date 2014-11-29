@@ -7,7 +7,7 @@ describe TradeLead::CanadaData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     it 'loads leads from specified resource' do
       expect(TradeLead::Canada).to receive(:index) do |canada_leads|
         expect(canada_leads.size).to eq(5)
@@ -16,7 +16,7 @@ describe TradeLead::CanadaData do
     end
   end
 
-  describe '#leads' do
+  describe '#leads', :vcr do
     let(:expected_lead_data) { YAML.load_file("#{fixtures_dir}/expected_canada_leads.yaml") }
     it 'correctly transform leads from csv' do
       canada_leads = importer.leads
@@ -24,7 +24,7 @@ describe TradeLead::CanadaData do
     end
   end
 
-  describe '#process_entry' do
+  describe '#process_entry', :vcr do
     let(:original) do
       { language:                             'English',
         title:                                'Online eICEP (6D094-132083/A)',

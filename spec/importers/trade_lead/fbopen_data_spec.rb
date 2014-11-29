@@ -7,7 +7,7 @@ describe TradeLead::FbopenData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     it 'loads leads from specified resource' do
       expect(TradeLead::Fbopen).to receive(:index) do |fbo|
         expect(fbo.size).to eq(2)
@@ -16,7 +16,7 @@ describe TradeLead::FbopenData do
     end
   end
 
-  describe '#leads' do
+  describe '#leads', :vcr do
     let(:expected_lead_data) { YAML.load_file("#{fixtures_dir}/expected_leads.yaml") }
     it 'correctly transform leads from dump' do
       leads = importer.leads
@@ -24,13 +24,13 @@ describe TradeLead::FbopenData do
     end
   end
 
-  describe '#default_endpoint' do
+  describe '#default_endpoint', :vcr do
     it 'returns valid endpoint url' do
       expect(URI.parse(importer.default_endpoint).scheme).to match(/ftp|http/)
     end
   end
 
-  describe '#process_entry' do
+  describe '#process_entry', :vcr do
     let(:original) do
       {
         'ntype'      => 'PRESOL',

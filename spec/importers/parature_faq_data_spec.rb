@@ -8,7 +8,7 @@ describe ParatureFaqData do
 
   it_behaves_like 'an importer which can purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/importer_output.yaml") }
 
     it 'loads parature faqs from specified resource' do

@@ -2,10 +2,11 @@ require 'spec_helper'
 
 describe 'Canada Leads API V1', type: :request do
   before(:all) do
-    TradeLead::Canada.recreate_index
-    TradeLead::CanadaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-
+    VCR.use_cassette("TradeLead_CanadaData/_leads/correctly_transform_leads_from_csv", :record => :new_episodes) do
+      TradeLead::Canada.recreate_index
+      TradeLead::CanadaData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
+    end
   end
 
   let(:search_path) { '/canada_leads/search' }
@@ -20,6 +21,7 @@ describe 'Canada Leads API V1', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns canada leads' do
+        
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(5)
         expect(json_response['offset']).to eq(0)

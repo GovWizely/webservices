@@ -78,6 +78,7 @@ module TradeLead
 
       lead[:description] &&= Nokogiri::HTML.fragment(lead[:description]).inner_text.squish
       lead[:source] = TradeLead::Fbopen.source[:code]
+      lead[:industry] = normalize_industries( lead[:industry])
       lead[:id]      = lead[:contract_number]
       EMPTY_RECORD.dup.merge(lead)
     end

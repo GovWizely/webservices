@@ -8,7 +8,7 @@ describe TradeLead::StateData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     it 'loads state trade leads from specified resource' do
       expect(TradeLead::State).to receive(:index) do |trade_leads|
         expect(trade_leads.size).to eq(4)

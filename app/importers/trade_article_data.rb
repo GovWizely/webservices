@@ -42,6 +42,7 @@ class TradeArticleData
     article[:title] = CGI.unescapeHTML(article[:title]) if article[:title]
     article[:pub_date] = Date.parse(article[:pub_date]) if article[:pub_date]
     article[:update_date] = Date.parse(article[:update_date]) if article[:update_date]
+    article[:industry] = normalize_industries( article[:industry] ) if article[:industry]
     article
   end
 end

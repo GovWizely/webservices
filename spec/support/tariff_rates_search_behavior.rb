@@ -9,8 +9,10 @@ end
 shared_context 'TariffRate::Australia data' do
   before(:all) do
     TariffRate::Australia.recreate_index
-    TariffRate::AustraliaData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/australia/australia.csv").import
+    VCR.use_cassette("TariffRate_AustraliaData/_import/loads_AUSTRALIA_tariff_rates_from_specified_resource", :record => :new_episodes) do
+      TariffRate::AustraliaData.new(
+          "#{Rails.root}/spec/fixtures/tariff_rates/australia/australia.csv").import
+    end
   end
 
   let(:all_australia_results) do
@@ -40,8 +42,10 @@ end
 shared_context 'TariffRate::Korea data' do
   before(:all) do
     TariffRate::Korea.recreate_index
-    TariffRate::KoreaData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/korea/korea.csv").import
+    VCR.use_cassette("TariffRate_KoreaData/_import/loads_KOREA_tariff_rates_from_specified_resource", :record => :new_episodes) do
+      TariffRate::KoreaData.new(
+          "#{Rails.root}/spec/fixtures/tariff_rates/korea/korea.csv").import
+    end
 
   end
 
@@ -72,8 +76,10 @@ end
 shared_context 'TariffRate::CostaRica data' do
   before(:all) do
     TariffRate::CostaRica.recreate_index
-    TariffRate::CostaRicaData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica/costa_rica.csv").import
+    VCR.use_cassette("TariffRate_CostaRicaData/_import/loads_COSTA_RICA_tariff_rates_from_specified_resource", :record => :new_episodes) do
+      TariffRate::CostaRicaData.new(
+          "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica/costa_rica.csv").import
+    end
   end
 
   let(:all_costa_rica_results) do
@@ -103,8 +109,10 @@ end
 shared_context 'TariffRate::ElSalvador data' do
   before(:all) do
     TariffRate::ElSalvador.recreate_index
-    TariffRate::ElSalvadorData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador/el_salvador.csv").import
+    VCR.use_cassette("TariffRate_ElSalvadorData/_import/loads_EL_SALVADOR_tariff_rates_from_specified_resource", :record => :new_episodes) do
+      TariffRate::ElSalvadorData.new(
+          "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador/el_salvador.csv").import
+    end
   end
 
   let(:all_el_salvador_results) do
@@ -134,8 +142,10 @@ end
 shared_context 'TariffRate::Guatemala data' do
   before(:all) do
     TariffRate::Guatemala.recreate_index
-    TariffRate::GuatemalaData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/guatemala/guatemala.csv").import
+    VCR.use_cassette("TariffRate_GuatemalaData/_import/loads_GUATEMALA_tariff_rates_from_specified_resource", :record => :new_episodes) do
+      TariffRate::GuatemalaData.new(
+          "#{Rails.root}/spec/fixtures/tariff_rates/guatemala/guatemala.csv").import
+    end
 
   end
 

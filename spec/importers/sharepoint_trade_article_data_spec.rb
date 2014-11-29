@@ -5,7 +5,7 @@ describe SharepointTradeArticleData do
   let(:resource) { "#{fixtures_dir}/articles/*" }
   let(:importer) { SharepointTradeArticleData.new(resource) }
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
     it 'loads sharepoint trade articles from specified resource' do

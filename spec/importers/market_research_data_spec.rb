@@ -7,7 +7,7 @@ describe MarketResearchData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/market_researches.yaml") }
 
     it 'loads market research library from specified resource' do

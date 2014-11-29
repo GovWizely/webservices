@@ -10,7 +10,7 @@ describe TradeEvent::EximData do
 
   it_behaves_like 'an importer which can purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 
     it 'loads EXIM trade events from specified resource' do

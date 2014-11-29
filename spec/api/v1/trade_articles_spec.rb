@@ -1,11 +1,7 @@
 require 'spec_helper'
 
 describe 'Trade Articles API V1', type: :request do
-  before(:all) do
-    TradeArticle.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/trade_articles/trade_articles.json"
-    TradeArticleData.new(fixtures_file).import
-  end
+  include_context 'TradeArticle data'
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_articles/results.json").read }

@@ -1,0 +1,625 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Dental%20Eq.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"4a0bd251e50acc4db8edb2ef0a1c7b93"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - c7fdeaa7-125f-495b-aa3f-d82448fa716f
+      X-Runtime:
+      - '0.018464'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":14,"industry_name":"Healthcare, Biotechnology \u0026
+        Pharmaceuticals","sector_id":67,"sector_name":"Dental Equipment"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=General%20Industrial%20Eq./Supplies
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"974a465163cd1ccb0fa71116646df23c"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 2d97a03a-177e-4ea4-a4cb-a54aad75d229
+      X-Runtime:
+      - '0.019445'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":15,"industry_name":"Industrial Machinery \u0026 Equipment","sector_id":74,"sector_name":"General
+        Industrial Equipment \u0026 Supplies"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Medical%20Eq.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"b347ab1b24b9617fd98b80193790f0e1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - d50f2ff6-7ff7-45fa-9e66-e6806a1cb62c
+      X-Runtime:
+      - '0.019193'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":14,"industry_name":"Healthcare, Biotechnology \u0026
+        Pharmaceuticals","sector_id":69,"sector_name":"Medical Equipment"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Plastics%20Materials/Resins
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0f7f38e569da139860d6aea2802ee53e"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 67be19c5-a87e-40cb-9115-7c61006aeea4
+      X-Runtime:
+      - '0.019206'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":16,"industry_name":"Industrial Materials","sector_id":88,"sector_name":"Plastics"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Robotics
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"57d0a1ddbef53b176493812b7e8d1454"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - afe69a2c-f2f1-40b8-bffa-4db231bcbc3d
+      X-Runtime:
+      - '0.018188'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":15,"industry_name":"Industrial Machinery \u0026 Equipment","sector_id":81,"sector_name":"Robotics"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Commercial%20Fishing%20Eq.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"acae89f3cbddf2e3dca558fc6ab084af"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - aa1659a1-8fa5-4be5-9e81-c9b253b02f17
+      X-Runtime:
+      - '0.019294'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":18,"industry_name":"Marine Industries","sector_id":96,"sector_name":"Commercial
+        Fishing Equipment"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Commercial%20Vessel/Eq.%20(Non-Fisheries)
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"3c81ea6fd592b82c6b767b017f128742"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - afa9dcfa-e168-46b6-a126-4decc763b56f
+      X-Runtime:
+      - '0.018982'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":18,"industry_name":"Marine Industries","sector_id":97,"sector_name":"Commercial
+        Vessel Equipment (Non-Fisheries)"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Electronic%20Components
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"0e2d3bff257827b24cbbe794d51ac9be"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - d9531890-d9f0-40b2-9ef9-4df5e35ab28c
+      X-Runtime:
+      - '0.019049'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":15,"industry_name":"Industrial Machinery \u0026 Equipment","sector_id":72,"sector_name":"Electronic
+        Components"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Operations/Maintenance%20Services
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"7ce0e3c84d7392e6d487d779bb239a63"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 885c150c-e6ad-4d3b-accf-1cdbae031b26
+      X-Runtime:
+      - '0.018883'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":5,"industry_name":"Business \u0026 Professional Services","sector_id":31,"sector_name":"Operations
+        \u0026 Maintenance Services"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Pleasure%20Boats/Accessories
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"ddf9e44cc474263a64c5eaf48503f241"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 2010692d-0649-406e-9aa3-7a5d71f42597
+      X-Runtime:
+      - '0.018657'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":18,"industry_name":"Marine Industries","sector_id":98,"sector_name":"Pleasure
+        Boats \u0026 Accessories"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Port/Shipbuilding%20Eq.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"f928306bb8b87047595f43b163cac437"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - adc76eae-81ed-4241-9780-0fff4a2e1a30
+      X-Runtime:
+      - '0.018698'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":18,"industry_name":"Marine Industries","sector_id":99,"sector_name":"Port
+        \u0026 Shipbuilding Equipment"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Laboratory%20Scientific%20Instruments
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"8dd60d38dea1f779026330d86b9c1cff"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 63c4d64e-fb76-43d2-889c-c2e746e4784b
+      X-Runtime:
+      - '0.018828'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":15,"industry_name":"Industrial Machinery \u0026 Equipment","sector_id":75,"sector_name":"Laboratory
+        Scientific Instruments"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+- request:
+    method: get
+    uri: http://localhost:3003/industry_sector.json?emenu=Medical%20Eq.
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      X-Ua-Compatible:
+      - chrome=1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - '"b347ab1b24b9617fd98b80193790f0e1"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      Set-Cookie:
+      - request_method=GET; path=/
+      X-Request-Id:
+      - 6a1c9c34-6ab1-4cb0-80db-e969adc04022
+      X-Runtime:
+      - '0.018015'
+      Connection:
+      - close
+      Server:
+      - thin 1.6.1 codename Death Proof
+    body:
+      encoding: UTF-8
+      string: '{"industry_id":14,"industry_name":"Healthcare, Biotechnology \u0026
+        Pharmaceuticals","sector_id":69,"sector_name":"Medical Equipment"}'
+    http_version: 
+  recorded_at: Fri, 28 Nov 2014 08:38:30 GMT
+recorded_with: VCR 2.9.3

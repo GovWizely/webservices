@@ -82,6 +82,7 @@ class SharepointTradeArticleData
     article[:release_date] &&= Date.strptime(article[:release_date], '%m/%d/%Y').to_s
     article[:expiration_date] &&= Date.strptime(article[:expiration_date], '%m/%d/%Y').to_s
     article[:trade_url] = 'http://www.export.gov/articles/' + article[:seo_metadata_title].parameterize + '.html'
+    article[:industries] = normalize_industries( article[:industries] )
     article = remove_duplicates(article)
     article = replace_nulls(article)
     article

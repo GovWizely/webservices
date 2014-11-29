@@ -52,6 +52,7 @@ module TradeLead
       end
       entry[:country] = 'GB'
       entry[:source] = TradeLead::Uk.source[:code]
+      entry[:industry] = normalize_industries entry[:industry]
       entry
     end
 

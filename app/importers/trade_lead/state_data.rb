@@ -54,6 +54,7 @@ module TradeLead
       entry[:id] = entry_hash[:id]
       entry[:country] = lookup_country(entry[:country].squish)
       entry[:source] = TradeLead::State.source[:code]
+      entry[:industry] = normalize_industries entry[:industry]
 
       %i(publish_date end_date).each do |field|
         entry[field] &&= Date.parse(entry[field]).iso8601 rescue nil

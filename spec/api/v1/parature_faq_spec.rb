@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V1', type: :request do
-  before(:all) do
-    ParatureFaq.recreate_index
-    ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
-  end
+  include_context 'Parature FAQ data'
 
   let(:search_path) { '/faqs/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }

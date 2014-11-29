@@ -58,6 +58,7 @@ module TradeLead
 
       lead[:country] = 'CA'
       lead[:source] = TradeLead::Canada.source[:code]
+      lead[:industry] = normalize_industries lead[:industry]
       lead
     end
   end

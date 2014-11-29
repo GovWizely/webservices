@@ -7,7 +7,7 @@ describe TradeEvent::ItaData do
 
   it_behaves_like 'an importer which can purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
 
     before { allow(Date).to receive(:current).and_return(Date.parse('2013-10-07')) }

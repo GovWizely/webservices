@@ -66,7 +66,7 @@ module TradeEvent
 
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
       event[:country] &&= lookup_country(event[:country])
-      event[:industries] = Array(event[:industries])
+      event[:industries] = normalize_industries( Array(event[:industries]))
       event[:contacts] = contact(entry)
       event[:venues] = venues(entry)
       event[:source] = model_class.source[:code]

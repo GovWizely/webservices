@@ -2,9 +2,11 @@ require 'spec_helper'
 
 describe 'Fbopen Leads API V1', type: :request do
   before(:all) do
-    TradeLead::Fbopen.recreate_index
-    TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    VCR.use_cassette("TradeLead_FbopenData/_leads/correctly_transform_leads_from_dump", :record => :new_episodes) do
+      TradeLead::Fbopen.recreate_index
+      TradeLead::FbopenData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    end
   end
 
   let(:search_path) { '/fbopen_leads/search' }

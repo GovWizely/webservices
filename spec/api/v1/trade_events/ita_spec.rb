@@ -27,9 +27,9 @@ describe 'ITA Trade Events API V1', type: :request do
     end
 
     context 'when industry is specified' do
-      let(:params) { { industry: 'DENTALS' } }
+      let(:params) { { industry: 'Materials' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match industry "Materials"'
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do

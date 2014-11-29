@@ -2,9 +2,11 @@ require 'spec_helper'
 
 describe 'State Trade Leads API V1', type: :request do
   before(:all) do
-    TradeLead::State.recreate_index
-    TradeLead::StateData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    VCR.use_cassette("TradeLead_StateData/_import/loads_state_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::State.recreate_index
+      TradeLead::StateData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    end
   end
   let(:expected_results) { JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/state/results_v1.json").read) }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }

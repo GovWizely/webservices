@@ -8,7 +8,7 @@ describe TradeArticleData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     it 'loads trade articles from specified resource' do
       expect(TradeArticle).to receive(:index) do |trade_articles|
         expect(trade_articles.size).to eq(3)

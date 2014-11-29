@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Consolidated Trade Leads API V2', type: :request do
+describe 'Consolidated Trade Leads API V2', :vcr, type: :request do
   include_context 'all Trade Leads fixture data'
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 

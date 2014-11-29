@@ -5,7 +5,7 @@ describe ItaOfficeLocationData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     context 'when importing domestic data' do
       let(:domestic_resource) { "#{fixtures_dir}/odo.xml" }
       let(:domestic_importer) { ItaOfficeLocationData.new(domestic_resource) }

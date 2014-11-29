@@ -39,7 +39,7 @@ class MarketResearchData
     entry = remap_keys COLUMN_HASH, source_hash
     entry[:countries] = entry[:countries].present? ? extract_countries(entry[:countries]) : []
     entry[:expiration_date] = parse_date entry[:expiration_date]
-    entry[:industries] = entry[:industries].present? ? str_to_a(entry[:industries]) : []
+    entry[:industries] = entry[:industries].present? ? normalize_industries( str_to_a( entry[:industries] ) ) : []
     entry[:report_type] = detect_report_type entry[:report_type]
     entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?
     entry

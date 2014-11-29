@@ -1,10 +1,7 @@
 require 'spec_helper'
 
 describe 'Market Researches API V1', type: :request do
-  before(:all) do
-    MarketResearch.recreate_index
-    MarketResearchData.new("#{Rails.root}/spec/fixtures/market_researches/market_researches.txt").import
-  end
+  include_context 'MarketResearch data'
 
   let(:search_path) { '/market_research_library/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }

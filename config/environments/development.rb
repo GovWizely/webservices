@@ -19,5 +19,7 @@ Webservices::Application.configure do
   # Print deprecation notices to the Rails logger.
   config.active_support.deprecation = :log
 
+  IndustryMappingClient.host = 'localhost:3003'
+
   config.action_dispatch.default_headers.merge!('Access-Control-Allow-Origin' => '*')
 end

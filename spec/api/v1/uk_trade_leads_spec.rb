@@ -1,15 +1,17 @@
 require 'spec_helper'
 
-describe 'UK Trade Leads API V1', type: :request do
+describe 'UK Trade Leads API V1', :vcr => true, type: :request do
   before(:all) do
-    TradeLead::Uk.recreate_index
-    TradeLead::UkData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    VCR.use_cassette("TradeLead_UkData/_import/loads_UK_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::Uk.recreate_index
+      TradeLead::UkData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    end
   end
   let(:expected_results) { JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/uk/results_v1.json").read, symbolize_names: true) }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
-  describe 'GET /uk_trade_leads/search' do
+  describe 'GET /uk_trade_leads/search', :vcr => true do
     let(:params) { {} }
     before { get '/uk_trade_leads/search', params, v1_headers }
 

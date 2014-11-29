@@ -39,10 +39,11 @@ end
 
 shared_context 'TradeLead::Canada data' do
   before(:all) do
-    TradeLead::Canada.recreate_index
-    TradeLead::CanadaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-
+    VCR.use_cassette("TradeLead_CanadaData/_leads/correctly_transform_leads_from_csv") do
+      TradeLead::Canada.recreate_index
+      TradeLead::CanadaData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
+    end
   end
 
   let(:all_canada_results) do
@@ -82,9 +83,11 @@ end
 
 shared_context 'TradeLead::Fbopen data' do
   before(:all) do
-    TradeLead::Fbopen.recreate_index
-    TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    VCR.use_cassette("TradeLead_FbopenData/_import/loads_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::Fbopen.recreate_index
+      TradeLead::FbopenData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    end
   end
 
   let(:all_fbopen_results) do
@@ -119,9 +122,11 @@ end
 
 shared_context 'TradeLead::State data' do
   before(:all) do
-    TradeLead::State.recreate_index
-    TradeLead::StateData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    VCR.use_cassette("TradeLead_StateData/_import/loads_state_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::State.recreate_index
+      TradeLead::StateData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    end
   end
 
   let(:all_state_results) do
@@ -167,9 +172,11 @@ end
 
 shared_context 'TradeLead::Uk data' do
   before(:all) do
-    TradeLead::Uk.recreate_index
-    TradeLead::UkData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    VCR.use_cassette("TradeLead_UkData/_import/loads_UK_trade_leads_from_specified_resource", :record => :new_episodes) do
+      TradeLead::Uk.recreate_index
+      TradeLead::UkData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    end
   end
 
   let(:all_uk_results) do

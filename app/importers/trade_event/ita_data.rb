@@ -60,6 +60,8 @@ module TradeEvent
       process_optional_fields(event_hash)
 
       event_hash[:source] = model_class.source[:code]
+      event_hash[:industries] = normalize_industries( event_hash[:industries])
+
       event_hash
     end
 

@@ -57,6 +57,22 @@ module Importer
     end
   end
 
+
+  # use the '|' symbol as a delimiter by default
+  def normalize_industries( industries, delimiter="|" )
+    if industries.is_a?( Array )
+      normalize_industry_array( industries )
+    elsif industries.is_a?( String )
+      normalize_industry_array( industries.split( delimiter ) ).join( delimiter )
+    # else
+    #   industries # we want return result as-is if the input param is not of Array or String type. It will decrease coverage, though
+    end
+  end
+
+  def normalize_industry_array( arr )
+    arr.map{ |i| i.present? && ( IndustryMappingClient.map_industry( i ) || i ) }.uniq
+  end
+
   def parse_date(date_str)
     Date.parse(date_str).to_s rescue nil
   end
