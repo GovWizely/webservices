@@ -64,6 +64,7 @@ describe 'UK Trade Leads API V1', type: :request do
           expect(results[0]).to eq(expected_results[2])
         end
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
   end

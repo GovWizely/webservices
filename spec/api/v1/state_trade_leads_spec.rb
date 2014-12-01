@@ -61,6 +61,7 @@ describe 'State Trade Leads API V1', type: :request do
           expect(results[0]).to eq(expected_results[3])
         end
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when countries is specified' do
@@ -93,6 +94,7 @@ describe 'State Trade Leads API V1', type: :request do
           expect(results[1]).to eq(expected_results[2])
         end
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when industry is specified' do
@@ -109,5 +111,6 @@ describe 'State Trade Leads API V1', type: :request do
         expect(results[0]).to eq(expected_results[3])
       end
     end
+    it_behaves_like "an empty result when an industries search doesn't match any documents"
   end
 end

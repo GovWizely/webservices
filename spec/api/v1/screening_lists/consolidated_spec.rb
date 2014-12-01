@@ -96,6 +96,8 @@ describe 'Consolidated Screening List API V1', type: :request do
         let(:params) { { q: 'technology' } }
         it_behaves_like 'it contains all ScreeningList::Uvl results that match "technology", sorted correctly'
       end
+
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when countries is specified' do
@@ -145,6 +147,7 @@ describe 'Consolidated Screening List API V1', type: :request do
           let(:sources) { [ScreeningList::Sdn, ScreeningList::Fse, ScreeningList::Dpl] }
         end
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when type is specified' do

@@ -18,6 +18,7 @@ describe 'EXIM Trade Events API V1', type: :request do
       let(:params) { { q: 'Baltimore' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Exim results that match "Baltimore"'
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
   end

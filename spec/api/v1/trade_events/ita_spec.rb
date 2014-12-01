@@ -18,6 +18,7 @@ describe 'ITA Trade Events API V1', type: :request do
       let(:params) { { q: '2013' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results that match "2013"'
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when countries is specified' do

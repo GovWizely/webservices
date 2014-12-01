@@ -76,6 +76,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
           let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Exim, TradeEvent::Ustda] }
         end
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when countries is specified' do
@@ -105,6 +106,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
           let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Ustda] }
         end
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when industry is specified' do
@@ -115,6 +117,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita, TradeEvent::Ustda] }
       end
+      it_behaves_like "an empty result when an industry search doesn't match any documents"
     end
 
     context 'when sources is specified' do

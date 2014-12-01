@@ -39,6 +39,7 @@ describe 'BIS Denied Persons API V1', type: :request do
         let(:params) { { countries: 'za' } }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all ScreeningList::Dpl results that match countries "ZA"'
+        it_behaves_like "an empty result when a countries search doesn't match any documents"
       end
 
       context 'two countries searched for' do

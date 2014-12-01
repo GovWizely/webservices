@@ -30,7 +30,8 @@ describe 'Canada Leads API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: 'engineer' }, v1_headers }
+      let(:params) { { q: 'engineer' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -43,10 +44,12 @@ describe 'Canada Leads API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[3])
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when industry is specified' do
-      before { get search_path, { industries: 'dental' }, v1_headers }
+      let(:params) { { industries: 'dental' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -59,6 +62,7 @@ describe 'Canada Leads API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[1])
       end
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do

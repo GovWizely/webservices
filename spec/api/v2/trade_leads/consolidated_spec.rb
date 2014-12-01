@@ -87,6 +87,8 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it search among tags of TradeLead::State that match "sanitation"'
     end
 
+    it_behaves_like "an empty result when a query doesn't match any documents"
+
     context "when search query is set to 'equipment' and source is set to 'AUSTRALIA'" do
       let(:params) { { q: 'equipment', sources: 'AUSTRALIA' } }
       it_behaves_like 'it contains all TradeLead::Australia results that match "equipment"'
@@ -103,11 +105,13 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Uk results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Canada results that match industries "Health Care Medical"'
     end
+    it_behaves_like "an empty result when an industries search doesn't match any documents"
 
     context "when contries is set to 'QA'" do
       let(:params) { { countries: 'QA' } }
       it_behaves_like 'it contains all TradeLead::State results that match country "QA"'
     end
+    it_behaves_like "an empty result when a countries search doesn't match any documents"
 
     context "when contries is set to 'CA'" do
       let(:params) { { countries: 'CA' } }
