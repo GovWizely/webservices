@@ -3,7 +3,7 @@ shared_context 'all Tariff Rates fixture data' do
   include_context 'TariffRate::CostaRica data'
   include_context 'TariffRate::ElSalvador data'
   include_context 'TariffRate::Guatemala data'
-  include_context 'TariffRate::Korea data'
+  include_context 'TariffRate::SouthKorea data'
 end
 
 shared_context 'TariffRate::Australia data' do
@@ -36,32 +36,32 @@ shared_examples 'it contains all TariffRate::Australia results that match countr
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_context 'TariffRate::Korea data' do
+shared_context 'TariffRate::SouthKorea data' do
   before(:all) do
-    TariffRate::Korea.recreate_index
-    TariffRate::KoreaData.new(
-        "#{Rails.root}/spec/fixtures/tariff_rates/korea/korea.csv").import
+    TariffRate::SouthKorea.recreate_index
+    TariffRate::SouthKoreaData.new(
+        "#{Rails.root}/spec/fixtures/tariff_rates/south_korea/korea.csv").import
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[TariffRate::Korea] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/korea/expected_results.json").read)
+    @all_possible_full_results[TariffRate::SouthKorea] = JSON.parse(open(
+                   "#{Rails.root}/spec/fixtures/tariff_rates/south_korea/expected_results.json").read)
   end
 end
 
-shared_examples 'it contains all TariffRate::Korea results' do
-  let(:source) { TariffRate::Korea }
+shared_examples 'it contains all TariffRate::SouthKorea results' do
+  let(:source) { TariffRate::SouthKorea }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TariffRate::Korea results that match "horses"' do
-  let(:source) { TariffRate::Korea }
+shared_examples 'it contains all TariffRate::SouthKorea results that match "horses"' do
+  let(:source) { TariffRate::SouthKorea }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TariffRate::Korea results that match countries "kp"' do
-  let(:source) { TariffRate::Korea }
+shared_examples 'it contains all TariffRate::SouthKorea results that match countries "kp"' do
+  let(:source) { TariffRate::SouthKorea }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
