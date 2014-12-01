@@ -1,9 +1,15 @@
 {
   "query": {
-    "multi_match": {
-      "fields": ["description", "title"],
-      "operator": "and",
-      "query": "water"
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["title", "description", "topic", "tags", "procurement_organization"],
+            "operator": "and",
+            "query": "women"
+          }
+        }
+      ]
     }
   }
 }

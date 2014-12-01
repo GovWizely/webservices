@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe 'State Trade Leads API V1', type: :request do
   before(:all) do
-    StateTradeLead.recreate_index
-    StateTradeLeadData.new("#{Rails.root}/spec/fixtures/state_trade_leads/state_trade_leads.json").import
+    TradeLead::State.recreate_index
+    TradeLead::StateData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
   end
-
-  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/state_trade_leads/results.yaml") }
+  let(:expected_results) { JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/state/results_v1.json").read) }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /state_trade_leads/search' do
@@ -18,16 +18,10 @@ describe 'State Trade Leads API V1', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns all documents' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(4)
-
-        results = json_response[:results]
-
-        # Order is different due to sort condition in query.
-        expect(results[0]).to eq(expected_results[3])
-        expect(results[1]).to eq(expected_results[2])
-        expect(results[2]).to eq(expected_results[1])
-        expect(results[3]).to eq(expected_results[0])
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(4)
+        results = json_response['results']
+        expect(results).to match_array(expected_results)
       end
     end
 
@@ -38,10 +32,10 @@ describe 'State Trade Leads API V1', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns documents which contain the word "objective"' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(2)
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(2)
 
-        results = json_response[:results]
+        results = json_response['results']
         expect(results[0]).to eq(expected_results[3])
         expect(results[1]).to eq(expected_results[1])
       end
@@ -49,10 +43,10 @@ describe 'State Trade Leads API V1', type: :request do
       context 'when search term exists only in procurement_organization' do
         let(:params) { { q: 'department' } }
         it 'returns the document which contains the word "department"' do
-          json_response = JSON.parse(response.body, symbolize_names: true)
-          expect(json_response[:total]).to eq(1)
+          json_response = JSON.parse(response.body)
+          expect(json_response['total']).to eq(1)
 
-          results = json_response[:results]
+          results = json_response['results']
           expect(results[0]).to eq(expected_results[1])
         end
       end
@@ -60,10 +54,10 @@ describe 'State Trade Leads API V1', type: :request do
       context 'when search term exists only in tags' do
         let(:params) { { q: 'sanitation' } }
         it 'returns the document which contains the word "sanitation"' do
-          json_response = JSON.parse(response.body, symbolize_names: true)
-          expect(json_response[:total]).to eq(1)
+          json_response = JSON.parse(response.body)
+          expect(json_response['total']).to eq(1)
 
-          results = json_response[:results]
+          results = json_response['results']
           expect(results[0]).to eq(expected_results[3])
         end
       end
@@ -77,10 +71,10 @@ describe 'State Trade Leads API V1', type: :request do
         it_behaves_like 'a successful search request'
 
         it 'returns the document with countries equal to PH' do
-          json_response = JSON.parse(response.body, symbolize_names: true)
-          expect(json_response[:total]).to eq(1)
+          json_response = JSON.parse(response.body)
+          expect(json_response['total']).to eq(1)
 
-          results = json_response[:results]
+          results = json_response['results']
           expect(results[0]).to eq(expected_results[1])
         end
       end
@@ -90,43 +84,29 @@ describe 'State Trade Leads API V1', type: :request do
         it_behaves_like 'a successful search request'
 
         it 'returns the document with countries equal to PH' do
-          json_response = JSON.parse(response.body, symbolize_names: true)
-          expect(json_response[:total]).to eq(2)
+          json_response = JSON.parse(response.body)
+          expect(json_response['total']).to eq(2)
 
-          results = json_response[:results]
-          expect(results[0]).to eq(expected_results[2])
-          expect(results[1]).to eq(expected_results[1])
+          results = json_response['results']
+
+          expect(results[0]).to eq(expected_results[1])
+          expect(results[1]).to eq(expected_results[2])
         end
       end
     end
 
     context 'when industry is specified' do
-      let(:params) { { industry: 'Utilities' } }
+      let(:params) { { industries: 'Utilities' } }
 
       subject { response }
       it_behaves_like 'a successful search request'
 
       it 'returns documents with industry equal to "Utilities"' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(1)
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(1)
 
-        results = json_response[:results]
+        results = json_response['results']
         expect(results[0]).to eq(expected_results[3])
-      end
-    end
-
-    context 'when specific_location is specified' do
-      let(:params) { { specific_location: 'qatar' } }
-
-      subject { response }
-      it_behaves_like 'a successful search request'
-
-      it 'returns documents with specific_location matching "qatar"' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(1)
-
-        results = json_response[:results]
-        expect(results[0]).to eq(expected_results[2])
       end
     end
   end
