@@ -6,6 +6,6 @@ module TariffRate
                           TariffRate::CostaRica,
                           TariffRate::ElSalvador,
                           TariffRate::Guatemala,
-                          TariffRate::Korea]
+                          TariffRate::SouthKorea]
   end
 end

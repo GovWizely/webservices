@@ -16,11 +16,11 @@ describe 'Consolidated Tariff Rates API V1', type: :request do
       it_behaves_like 'it contains all TariffRate::CostaRica results'
       it_behaves_like 'it contains all TariffRate::ElSalvador results'
       it_behaves_like 'it contains all TariffRate::Guatemala results'
-      it_behaves_like 'it contains all TariffRate::Korea results'
+      it_behaves_like 'it contains all TariffRate::SouthKorea results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
           [TariffRate::Australia, TariffRate::CostaRica, TariffRate::ElSalvador,
-           TariffRate::Guatemala, TariffRate::Korea]
+           TariffRate::Guatemala, TariffRate::SouthKorea]
         end
       end
     end
@@ -60,11 +60,11 @@ describe 'Consolidated Tariff Rates API V1', type: :request do
       end
     end
 
-    context 'and is set to "KOREA" source' do
-      let(:params) { { sources: 'KOREA' } }
-      it_behaves_like 'it contains all TariffRate::Korea results'
+    context 'and is set to "SOUTH_KOREA" source' do
+      let(:params) { { sources: 'SOUTH_KOREA' } }
+      it_behaves_like 'it contains all TariffRate::SouthKorea results'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [TariffRate::Korea] }
+        let(:sources) { [TariffRate::SouthKorea] }
       end
     end
   end
