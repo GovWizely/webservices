@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'BIS Unverified Parties API V1', type: :request do
-  include_context 'UVL data'
+  include_context 'ScreeningList::Uvl data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_screening_list/uvl/search' do
@@ -10,7 +10,7 @@ describe 'BIS Unverified Parties API V1', type: :request do
 
     context 'when search parameters are empty' do
       subject { response }
-      it_behaves_like 'it contains all UVL results'
+      it_behaves_like 'it contains all ScreeningList::Uvl results'
       it_behaves_like 'a successful search request'
     end
 
@@ -19,11 +19,11 @@ describe 'BIS Unverified Parties API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all UVL results that match "technology", sorted correctly'
+      it_behaves_like 'it contains all ScreeningList::Uvl results that match "technology", sorted correctly'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'brilliance' } }
-        it_behaves_like 'it contains all UVL results that match "brilliance"'
+        it_behaves_like 'it contains all ScreeningList::Uvl results that match "brilliance"'
       end
     end
 
@@ -33,13 +33,13 @@ describe 'BIS Unverified Parties API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'CN' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all UVL results that match countries "CN"'
+        it_behaves_like 'it contains all ScreeningList::Uvl results that match countries "CN"'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'hk,cn' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all UVL results that match countries "HK,CN"'
+        it_behaves_like 'it contains all ScreeningList::Uvl results that match countries "HK,CN"'
       end
     end
 

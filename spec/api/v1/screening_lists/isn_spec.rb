@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'BISN Nonproliferation Sanctions API V1', type: :request do
-  include_context 'ISN data'
+  include_context 'ScreeningList::Isn data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_screening_list/isn/search' do
@@ -10,7 +10,7 @@ describe 'BISN Nonproliferation Sanctions API V1', type: :request do
 
     context 'when search parameters are empty' do
       subject { response }
-      it_behaves_like 'it contains all ISN results'
+      it_behaves_like 'it contains all ScreeningList::Isn results'
       it_behaves_like 'a successful search request'
     end
 
@@ -19,11 +19,11 @@ describe 'BISN Nonproliferation Sanctions API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ISN results that match "ahmad"'
+      it_behaves_like 'it contains all ScreeningList::Isn results that match "ahmad"'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'aerospace' } }
-        it_behaves_like 'it contains all ISN results that match "aerospace"'
+        it_behaves_like 'it contains all ScreeningList::Isn results that match "aerospace"'
       end
     end
 

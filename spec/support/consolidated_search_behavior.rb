@@ -29,17 +29,6 @@ shared_examples 'it contains only results with sources' do
   end
 end
 
-def source_full_name(code)
-  full_names = {
-    DPL: 'Denied Persons List (DPL) - Bureau of Industry and Security',
-    EL:  'Entity List (EL) - Bureau of Industry and Security',
-    FSE: 'Foreign Sanctions Evaders (FSE) - Treasury Department',
-    DTC: 'ITAR Debarred (DTC) - State Department',
-    ISN: 'Nonproliferation Sanctions (ISN) - State Department',
-    PLC: 'Palestinian Legislative Council List (PLC) - Treasury Department',
-    SSI: 'Sectoral Sanctions Identifications List (SSI) - Treasury Department',
-    SDN: 'Specially Designated Nationals (SDN) - Treasury Department',
-    UVL: 'Unverified List (UVL) - Bureau of Industry and Security',
-  }
-  full_names[code.to_sym] || code.to_s
+def source_full_name(source)
+  (source.source.is_a?(Hash) && source.source[:full_name]) || source.source[:code]
 end
