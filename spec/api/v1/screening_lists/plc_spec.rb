@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe 'Palestinian Legislative Council List API V1', type: :request do
-  include_context 'PLC data'
+  include_context 'ScreeningList::Plc data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /consolidated_screening_list/plc/search' do
@@ -10,7 +10,7 @@ describe 'Palestinian Legislative Council List API V1', type: :request do
 
     context 'when search parameters are empty' do
       subject { response }
-      it_behaves_like 'it contains all PLC results'
+      it_behaves_like 'it contains all ScreeningList::Plc results'
       it_behaves_like 'a successful search request'
     end
 
@@ -18,21 +18,21 @@ describe 'Palestinian Legislative Council List API V1', type: :request do
       let(:params) { { q: 'heBron' } }
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all PLC results that match "heBron"'
+      it_behaves_like 'it contains all ScreeningList::Plc results that match "heBron"'
     end
 
     context 'when countries is specified' do
       subject { response }
       let(:params) { { countries: 'PS' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all PLC results that match countries "PS"'
+      it_behaves_like 'it contains all ScreeningList::Plc results that match countries "PS"'
     end
 
     context 'when type is specified' do
       subject { response }
       let(:params) { { nsp_type: 'Individual' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all PLC results that match type "Individual"'
+      it_behaves_like 'it contains all ScreeningList::Plc results that match type "Individual"'
     end
   end
 end
