@@ -18,6 +18,7 @@ describe 'Trade Events API V1', type: :request do
       let(:params) { { q: 'international' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when q is specified' do

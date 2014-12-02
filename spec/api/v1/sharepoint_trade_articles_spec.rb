@@ -29,7 +29,8 @@ describe 'Sharepoint Trade Article API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: 'import' }, v1_headers }
+      let(:params) { { q: 'import' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -42,6 +43,8 @@ describe 'Sharepoint Trade Article API V1', type: :request do
         expect(results[0]).to eq(expected_results[2])
 
       end
+
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when creation_date_start or creation_date_end is specified' do

@@ -33,7 +33,8 @@ describe 'Market Researches API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: '2013' }, v1_headers }
+      let(:params) { { q: '2013' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -46,10 +47,12 @@ describe 'Market Researches API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[0])
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when countries is specified' do
-      before { get search_path, { countries: 'ar,br' }, v1_headers }
+      let(:params) { { countries: 'ar,br' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -63,10 +66,12 @@ describe 'Market Researches API V1', type: :request do
         expect(results[0]).to eq(expected_results[2])
         expect(results[1]).to eq(expected_results[5])
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when industry is specified' do
-      before { get search_path, { industry: 'chemicals' }, v1_headers }
+      let(:params) { { industry: 'chemicals' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -79,6 +84,7 @@ describe 'Market Researches API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[5])
       end
+      it_behaves_like "an empty result when an industry search doesn't match any documents"
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do

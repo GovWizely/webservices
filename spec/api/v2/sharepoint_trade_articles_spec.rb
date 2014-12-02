@@ -29,7 +29,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: 'import' }, v2_headers }
+      let(:params) { { q: 'import' } }
+      before { get search_path, params, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -42,6 +43,7 @@ describe 'Sharepoint Trade Article API V2', type: :request do
         expect(results[0]).to eq(expected_results[2])
 
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when creation_date_start or creation_date_end is specified' do
@@ -106,7 +108,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
     end
 
     context 'when industries is specified' do
-      before { get search_path, { industries: 'agribusniess,aerospace & defense' }, v2_headers }
+      let(:params) { { industries: 'agribusniess,aerospace & defense' } }
+      before { get search_path, params, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -118,10 +121,12 @@ describe 'Sharepoint Trade Article API V2', type: :request do
         results = json_response[:results]
         expect(results[0]).to eq(expected_results[0])
       end
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when countries is specified' do
-      before { get search_path, { countries: 'af,ao' }, v2_headers }
+      let(:params) { { countries: 'af,ao' } }
+      before { get search_path, params, v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -134,6 +139,7 @@ describe 'Sharepoint Trade Article API V2', type: :request do
         results = json_response[:results]
         expect(results[0]).to eq(expected_results[0])
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when topics or sub_topics is specified' do

@@ -29,7 +29,8 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when q is specified' do
-      before { get search_path, { q: 'tpcc' }, v1_headers }
+      let(:params) { { q: 'tpcc' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -42,6 +43,7 @@ describe 'Parature Faq API V1', type: :request do
         expect(results[0]).to eq(expected_results[1])
 
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when question is specified' do
@@ -77,7 +79,8 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when countries is specified' do
-      before { get search_path, { countries: 'tr,cr' }, v1_headers }
+      let(:params) { { countries: 'tr,cr' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -94,10 +97,12 @@ describe 'Parature Faq API V1', type: :request do
         expect(results).to include expected_results[23]
         expect(results).to include expected_results[28]
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when industries is specified' do
-      before { get search_path, { industries: 'importing' }, v1_headers }
+      let(:params) { { industries: 'importing' } }
+      before { get search_path, params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -110,6 +115,8 @@ describe 'Parature Faq API V1', type: :request do
         results = json_response[:results]
         expect(results[0]).to eq(expected_results[27])
       end
+
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when topics is specified' do

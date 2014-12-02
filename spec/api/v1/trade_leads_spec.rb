@@ -50,7 +50,8 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when countries is populated' do
-      before { get '/trade_leads/search', { countries: 'GB' }, v1_headers }
+      let(:params) { { countries: 'GB' } }
+      before { get '/trade_leads/search', params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -65,10 +66,12 @@ describe 'Trade Leads API V1', type: :request do
         expect(results[1]).to eq(expected_results[2])
         expect(results[2]).to eq(expected_results[3])
       end
+      it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when q matches a title' do
-      before { get '/trade_leads/search', { q: 'physician service' }, v1_headers }
+      let(:params) { { q: 'physician service' } }
+      before { get '/trade_leads/search', params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -81,6 +84,7 @@ describe 'Trade Leads API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[0])
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when q matches a description' do

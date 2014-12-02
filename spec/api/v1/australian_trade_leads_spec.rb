@@ -30,7 +30,8 @@ describe 'Australian Trade Leads API V1', type: :request do
 
   describe 'GET /australian_trade_leads/search.json' do
     context 'when q is populated' do
-      before { get '/australian_trade_leads/search', { q: 'motor' }, v1_headers }
+      let(:params) { { q: 'motor' } }
+      before { get '/australian_trade_leads/search', params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -43,6 +44,7 @@ describe 'Australian Trade Leads API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[1])
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
   end
 end

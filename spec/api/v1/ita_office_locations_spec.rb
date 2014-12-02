@@ -13,7 +13,8 @@ describe 'ITA Office Locations API V1', type: :request do
   describe 'GET /ita_office_locations/search.json' do
 
     context 'when q is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose' }, v1_headers }
+      let(:params) { { q: 'san jose' } }
+      before { get '/ita_office_locations/search', params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -26,6 +27,7 @@ describe 'ITA Office Locations API V1', type: :request do
         expect(results[0]).to eq(expected_results[1])
         expect(results[1]).to eq(expected_results[0])
       end
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when country is specified' do
@@ -41,6 +43,7 @@ describe 'ITA Office Locations API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[1])
       end
+
     end
 
     context 'when USA and state is specified' do
@@ -89,7 +92,8 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when multiple countries are specified' do
-      before { get '/ita_office_locations/search', { country: 'RU,CN' }, v1_headers }
+      let(:params) { { country: 'RU,CN' } }
+      before { get '/ita_office_locations/search', params, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -98,6 +102,7 @@ describe 'ITA Office Locations API V1', type: :request do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(8)
       end
+      it_behaves_like "an empty result when a country search doesn't match any documents"
     end
 
   end
