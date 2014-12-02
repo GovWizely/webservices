@@ -1,13 +1,16 @@
 require 'spec_helper'
 
 describe MarketResearchData do
+
+pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
+
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
   let(:resource) { "#{fixtures_dir}/market_researches.txt" }
   let(:importer) { MarketResearchData.new(resource) }
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import' do
+  describe '#import', :vcr do
     let(:entry_hash) { YAML.load_file("#{fixtures_dir}/market_researches.yaml") }
 
     it 'loads market research library from specified resource' do
@@ -23,4 +26,7 @@ describe MarketResearchData do
       importer.import
     end
   end
+
+end
+
 end

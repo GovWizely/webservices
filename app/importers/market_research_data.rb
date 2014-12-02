@@ -36,11 +36,11 @@ class MarketResearchData
   private
 
   def process_source_hash(source_hash)
-    entry = remap_keys COLUMN_HASH, source_hash
+    entry = remap_keys(COLUMN_HASH, source_hash)
     entry[:countries] = entry[:countries].present? ? extract_countries(entry[:countries]) : []
-    entry[:expiration_date] = parse_date entry[:expiration_date]
-    entry[:industries] = entry[:industries].present? ? str_to_a(entry[:industries]) : []
-    entry[:report_type] = detect_report_type entry[:report_type]
+    entry[:expiration_date] = parse_date(entry[:expiration_date])
+    entry[:industries] = extract_industries(entry[:industries])
+    entry[:report_type] = detect_report_type(entry[:report_type])
     entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?
     entry
   end
@@ -54,6 +54,12 @@ class MarketResearchData
     input_str.split(delimiter).map do |item|
       item.present? ? item.squish : nil
     end.compact
+  end
+
+  def extract_industries(industries_str)
+    industries = str_to_a(industries_str || '')
+    { original: industries,
+      mapped:   industries.map { |i| normalize_industry(i) }.compact }
   end
 
   def detect_report_type(report_type_str)

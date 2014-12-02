@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe 'Market Researches API V2', type: :request do
-  before(:all) do
-    MarketResearch.recreate_index
-    MarketResearchData.new("#{Rails.root}/spec/fixtures/market_researches/market_researches.txt").import
-  end
+  include_context 'MarketResearch data'
+
+pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
 
   let(:search_path) { '/market_research_library/search' }
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
@@ -103,4 +102,7 @@ describe 'Market Researches API V2', type: :request do
       end
     end
   end
+
+end
+
 end

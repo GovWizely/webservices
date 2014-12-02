@@ -22,6 +22,13 @@ class MarketResearch
         countries:   { type: 'string', analyzer: 'keyword' },
         description: { type: 'string', analyzer: 'custom_analyzer' },
         industries:  { type: 'string', analyzer: 'custom_analyzer' },
+        industries:  {
+          type:       'nested',
+          properties: {
+            original: { type: 'string', analyzer: 'custom_analyzer' },
+            mapped:   { type: 'string', analyzer: 'custom_analyzer' },
+          },
+        },
         title:       {
           type: 'string', analyzer: 'custom_analyzer',
           fields: {
