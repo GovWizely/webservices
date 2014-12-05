@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>333</id>
+    <title>Trade Agreements</title>
+    <short_title>Trade Agreements</short_title>
+    <summary>Get information and links to the Trade and Related Agreements Database.</summary>
+    <creation_date>9/20/2014</creation_date>
+    <release_date/>
+    <expiration_date>9/20/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Enforcement &amp; Compliance<source_office>Trade Agreements Negotiations and Compliance</source_office></source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>1</evergreen>
+    <content><![CDATA[<h2>​Trade Agreements</h2><p>TANC's <strong>Trade and Related Agreements</strong> Database (TARA) includes active, binding agreements between the United States and its trading partners covering manufactured products and services (see Site Map for disclaimers). It is designed to provide the public with information on agreements currently in force and does not include agriculture agreements. For information on agricultural trade issues, please contact the <a href="http://www.fas.usda.gov/ustrade.asp"><span style="text-decoration:underline;">U.S. Department of Agriculture</span></a>.</p><h2>Agreements Guides</h2><p>The Agreements Guides are quick, concise explanations of individual trade agreements. Aimed especially at small to medium-sized exporters, the Guides will tell you what each agreement does without having to read through the detailed, technical language of the full text.</p><table width="100%" class="ms-rteTable-default" cellspacing="0"><tbody><tr><td class="ms-rteTable-default" style="width:100%;"><h2>Related Links</h2></td></tr><tr><td class="ms-rteTable-default"><ul><li><a href="http://tcc.export.gov/Trade_Agreements/All_Trade_Agreements/index.asp"><span style="text-decoration:underline;">List All Trade Agreements</span></a> </li><li><a href="http://tcc.export.gov/Trade_Agreements/Intellectual_Property_Rights/index.asp"><span style="text-decoration:underline;">Intellectual Property Rights Agreements</span></a> </li><li><a href="http://tcc.export.gov/Trade_Agreements/WTO_Agreements/index.asp"><span style="text-decoration:underline;">WTO Agreements</span></a> </li><li><a href="http://tcc.export.gov/Trade_Agreements/Free_Trade_Agreements/index.asp"><span style="text-decoration:underline;">Free Trade Agreements</span></a> </li><li><a href="http://tcc.export.gov/Trade_Agreements/Bilateral_Investment_Treaties/index.asp"><span style="text-decoration:underline;">Bilateral Investment Treaties</span></a> </li></ul></td></tr></tbody></table><table width="100%" class="ms-rteTable-default" cellspacing="0"><tbody><tr><td class="ms-rteTable-default" style="width:100%;"><h3>Agreements Guides</h3></td></tr><tr><td class="ms-rteTable-default"><ul><li><a href="http://tcc.export.gov/Trade_Agreements/Exporters_Guides/List_All_Guides/index.asp"><span style="text-decoration:underline;">List All AgreementsGuides</span></a> </li></ul></td></tr></tbody></table>]]></content>
+    <keyword/>
+    <tags>
+      <industries/>
+      <countries/>
+      <topics>
+        <topic>Trade Regulations</topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <export_phases>
+        <export_phase>Exporting</export_phase>
+      </export_phases>
+      <trade_initiatives>
+        <trade_initiatives>Discover Global Markets</trade_initiatives>
+      </trade_initiatives>
+    </tags>
+    <seometadatatitle>Trade Agreements</seometadatatitle>
+    <seometadatadescription>Get information and links to the Trade and Related Agreements Database.</seometadatadescription>
+    <seometadatakeyword>Trade and Related Agreements Database, Agreement Guides, Trade Agreements</seometadatakeyword>
+    <trade_url> www.export.gov/333.htm</trade_url>
+    <files/>
+    <images/>
+    <data>
+      <html>http://informationportalprod/Data/Article/333.htm</html>
+      <xml>http://informationportalprod/Data/333.xml</xml>
+    </data>
+  </article>
+</articles>

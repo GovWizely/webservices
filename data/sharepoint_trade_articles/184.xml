@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>184</id>
+    <title>Tariff Resources</title>
+    <short_title>Tariff Resources</short_title>
+    <summary>Get information about resources on tariffs across several product types including agricultural exports.</summary>
+    <creation_date>8/27/2014</creation_date>
+    <release_date/>
+    <expiration_date>9/29/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Global Markets</source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>1</evergreen>
+    <content><![CDATA[<h2>Import Duties</h2><p>To obtain tariff rates for specific products imported into the United States,<a href="https://admin.export.gov/community/users/international-logistics/posts/67-duty-and-tax-calculation-methods"><span style="text-decoration:underline;">view the complete U.S. Harmonized Tariff Schedule online.</span></a></p><p>Note: You will need a<a href="https://admin.export.gov/community/users/international-logistics/posts/51-the-harmonized-system"><span style="text-decoration:underline;">Harmonized System (HS) or Schedule B number</span></a>to lookup any U.S. tariff information.</p><p>To check on regulations such as import quotas, or for general import information, contact the<a href="http://cbp.gov/xp/cgov/toolbox/contacts/ports/"><span style="text-decoration:underline;">US Customs office nearest you</span></a>, or call toll free 1-877-287-8667 (outside Washington D.C. only).</p><h2>Agricultural Exports</h2><p><a href="http://www.fas.usda.gov/"><span style="text-decoration:underline;">US Department of Agriculture's Foreign Agricultural Service</span></a>: For agricultural products with HS chapter headings 1 through 24. All tariff requests for agricultural exports must be faxed.</p><ul><li>For Europe, Africa, and the Middle East: Tel: 202-720-1341; fax: 202-690-2079</li><li>For Asia and the Americas: Tel: 202-720-1289; fax: 202-690-1093</li></ul><h2>Private Sector Tariff Resources</h2><p><a href="http://www.nextlinx.com/"><span style="text-decoration:underline;">NextLinx</span></a>: NextLinx provides global trade content and management solutions that help companies simplify, automate and accelerate the importing and exporting of goods across international borders. NextLinx software and web services solutions combine global trade business rules, and country-specific trade content and data, including duties, taxes, tariffs and documentation, to help companies reduce the risks and costs associated with importing and exporting goods across international borders. NextLinx Global Knowledge, a comprehensive database of global trade content, contains Harmonized Tariff Schedules (HTS), Export Control Numbers (ECN), preferential duties, import and export control regulations. NextLinx can be reached via telephone: 1-800-673-8539 or email: emailinfo@nextlinx.com.</p><p><a href="http://www.worldtariff.com/"><span style="text-decoration:underline;">WorldTariff</span></a>: A FedEx Trade Networks Company, publishes worldwide customs duty and tax information. WorldTariff collects data from the world's customs authorities, then simplifies, standardizes and translates it into English. Fully qualified Harmonized System (HS) classifications for duty purposes; Complete HS descriptions, covering HS Chapters 1-97 on over 100 countries around the world; MFN (Most Favored Nation) applied duty rates; Import Taxes; Continually updated; Three media formats: online, print and data elements. Questions? Call (800) 556-9334, (415) 591-6696.</p><h2>Tariff Publication</h2><p>The International Customs Journal, published by the<a href="http://www.bitd.org/"><span style="text-decoration:underline;">International Customs Tariffs Bureau (BITD)</span></a>, covers duties indexed by HS numbers for individual countries. The timeliness of the tariff schedules varies from country to country (i.e., new schedules are not published in consistent time intervals). Schedule volumes can be purchased from the National Technical Information Service (NTIS) by phone at 1-800-553-6847 or (703) 605-6000.</p>]]></content>
+    <keyword>export, exporting, tariff, resource</keyword>
+    <tags>
+      <industries/>
+      <countries/>
+      <topics>
+        <topic>International Logisitics<sub_topic>Tariffs and Import Fees</sub_topic></topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <export_phases>
+        <export_phase>Exporting</export_phase>
+      </export_phases>
+      <trade_initiatives>
+        <trade_initiatives>Discover Global Markets</trade_initiatives>
+      </trade_initiatives>
+    </tags>
+    <seometadatatitle>Tariff Resources</seometadatatitle>
+    <seometadatadescription>Get information about resources on tariffs across several product types including agricultural exports.</seometadatadescription>
+    <seometadatakeyword>Exports, Tariffs, Agricultural Products, NetLinx, WorldTariff,  International Customs Tariffs Bureau </seometadatakeyword>
+    <trade_url> www.export.gov/184.htm</trade_url>
+    <files/>
+    <images/>
+    <data>
+      <html>http://informationportalprod/Data/Article/184.htm</html>
+      <xml>http://informationportalprod/Data/184.xml</xml>
+    </data>
+  </article>
+</articles>

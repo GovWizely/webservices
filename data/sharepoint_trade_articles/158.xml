@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>158</id>
+    <title>Introduction to Trade Data and Analysis</title>
+    <short_title>Trade Data Analysis</short_title>
+    <summary>Get access to trade data which can be used by companies to identify the best countries to target for their exporting efforts. </summary>
+    <creation_date>4/30/2013</creation_date>
+    <release_date/>
+    <expiration_date>10/4/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Global Markets</source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>0</evergreen>
+    <content><![CDATA[<p>​​​Trade data can help companies identify the best countries to target their exporting efforts. Companies can gauge the size of the market for their product as well as develop a price strategy to become competitive.</p><p>The official U.S. import and export statistics reflect government and non-government shipments of merchandise between foreign countries and the U.S. Customs Territory (i.e. the 50 states, District of Columbia, and Puerto Rico), U.S.<a href="http://www.trade.gov/mas/ian/referenceinfo/tg_ian_001872.asp#P20_3244">Foreign Trade Zones</a>, and the U.S. Virgin Islands, without regard to whether or not a commercial transaction is involved.</p><p>The first step to accessing export and import statistics is to classify the product with one of the following commodity classification codes:<a href="http://www.usitc.gov/tata/hts/">Harmonized Tariff Schedule (HTS)</a>,<a href="http://www.census.gov/foreign-trade/schedules/b/index.html">Schedule B Number</a>,<a href="http://www.census.gov/epcd/www/naics.html">North American Industry Classification System (NAICS)</a>, or<a href="http://www.intracen.org/tradstat/sitc3list.htm">Standard International Trade Classification (SITC)</a>. Each of these classification systems allow assign 6-10 digit codes for specific items, which them allow agencies to collect and analyze data for each coded item. For help with any of the terms or concepts, take a look at<a href="http://ita.doc.gov/td/industry/otea/trade_data_basics.html">Basics of Trade Data</a>.</p><h2><strong>Two Ways to Access Trade Data</strong></h2><p><a href="http://tse.export.gov/">Trade Stats Express</a>is a service provided by the International Trade Administration (ITA). &quot;Get the latest annual and quarterly trade data with TradeStats Express.™ Retrieve, visualize, analyze, print and download your customized output.&quot;<a href="http://trade.gov/data.asp">More on ITA trade products.</a></p><p><a href="http://www.usatradeonline.gov/">USA Trade Online</a>is another trade data service provided by the US Census Bureau. It offers the most current export and import statistics and provides a wealth of detail such as the unit price (quantity/value) of specific products in foreign countries.<a href="http://www.census.gov/foreign-trade/data/index.html">More on Census Bureau trade products.</a></p><p>The main difference between these two trade data sites is the level of detail each provides in data. TradeStat Express is great for accessing broader information, while USA Trade Online provides a greater level of detailed trade data.</p><h2><strong>Differences between TradeStats Express (ITA) and USA Trade Online (Census Bureau)</strong></h2><p><a href="http://tse.export.gov/"><strong>TradeStats Express</strong></a></p><p><a href="http://www.usatradeonline.gov/"><strong>USA Trade Online</strong></a></p><h3>Commodity Codes Available</h3><ul><li><span style="line-height:1.6;">HS (2, 4 digit levels)</span></li><li><span style="line-height:1.6;">NAICS (up to 4 digits)</span></li><li><span style="line-height:1.6;">SITC (up to 3 digits)</span></li><li><span style="line-height:1.6;">HS (2, 4, 6, 10 digit levels)</span></li><li><span style="line-height:1.6;">NAICS (up to 6 digits)</span></li></ul><h3>Output Display Options</h3><ul><li><span style="line-height:1.6;">Maps, Graphs, Tables</span></li><li><span style="line-height:1.6;">Graphs, Tables</span></li></ul><h3>Download Formats</h3><ul><li><span style="line-height:1.6;">CSV, Gif for Maps and Legends, Zip files</span></li><li><span style="line-height:1.6;">Delimited, Excel, XML Programs</span></li></ul><h3>Time periods availability</h3><ul><li><span style="line-height:1.6;">Quarterly, Annually</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Monthly, Quarterly, Annually</span><br></li></ul><h3>Level of Detail</h3><ul><li><span style="line-height:1.6;">Trade/Economic Groups</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Geographic Regions</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Quantity, Value</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Port Level Detail</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Method of Transportation</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Shipping Weight</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">Market Level Ranking</span><br></li></ul><h3>Most Current Data Available</h3><ul><li><span style="line-height:1.6;">Months after Official Release</span></li><li><span style="line-height:1.6;"></span><span style="line-height:1.6;">45 Calendar Days after Reported Month;</span><a href="http://www.census.gov/foreign-trade/faq/gen/gen0007.html" style="line-height:1.6;">Schedule of Release</a><br></li></ul><h3>Training Materials</h3><ul><li><span style="line-height:1.6;">Training Videos</span></li><li><span style="line-height:1.6;">Trade Stats Express </span><a href="http://tse.export.gov/TSE/HELP_TSE/helpTSE.htm" style="line-height:1.6;">Help Page</a><span style="line-height:1.6;"></span></li><li><span style="line-height:1.6;">Instructional Manual</span></li><li>Import and Export <a href="http://www.census.gov/foreign-trade/aes/exporttraining/videos/" style="line-height:1.6;">T​raining Videos</a><span style="line-height:1.6;"></span></li><li><span style="line-height:1.6;">Live Webinars</span></li><li><span style="line-height:1.6;"></span><a href="http://www.census.gov/foreign-trade/aes/exporttraining/videos/index.html#usingtradedata" style="line-height:1.6;">Training Course</a></li><li><a href="http://www.usatradeonline.gov/usatrade.nsf/ref/pP4_NewUsers?OpenDocument" style="line-height:1.6;">Instructional Manual</a></li></ul><h3>Cost</h3><p>Free</p><p><a href="http://www.usatradeonline.gov/usatrade.nsf/vwRef/subscribe">Subscriptions Available</a>. Free at local Federal Repository Libraries​</p>]]></content>
+    <keyword/>
+    <tags>
+      <industries/>
+      <countries/>
+      <topics>
+        <topic>Market Intelligence<sub_topic>Market Research</sub_topic><sub_topic>Trade Data and Analysis</sub_topic></topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <export_phases>
+        <export_phase>Learn</export_phase>
+      </export_phases>
+      <trade_initiatives>
+        <trade_initiatives>Discover Global Markets</trade_initiatives>
+      </trade_initiatives>
+    </tags>
+    <seometadatatitle>Introduction to Trade Data and Analysis</seometadatatitle>
+    <seometadatadescription>Get access to trade data which can be used by companies to identify the best countries to target for their exporting efforts. </seometadatadescription>
+    <seometadatakeyword>Trade Data, Exports, Classification Codes, Training Materials</seometadatakeyword>
+    <trade_url> www.export.gov/158.htm</trade_url>
+    <files/>
+    <images/>
+    <data>
+      <html>http://informationportalprod/Data/Article/158.htm</html>
+      <xml>http://informationportalprod/Data/158.xml</xml>
+    </data>
+  </article>
+</articles>

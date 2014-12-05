@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>451</id>
+    <title>Welcome to the Maine U.S. Export Assistance Center</title>
+    <short_title>Maine USEAC Homepage</short_title>
+    <summary>Learn more about the Maine U.S. Export Assistance Center.</summary>
+    <creation_date>9/26/2014</creation_date>
+    <release_date/>
+    <expiration_date>9/26/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Global Markets</source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>0</evergreen>
+    <content><![CDATA[<p><img src="http://informationportalprod/Files/Maine_homepage1.jpg" alt="View of urban street and sidewalk" style="margin:5px;" /><img src="http://informationportalprod/Files/Maine_homepage2.jpg" alt="Businessman talking on cell phone" style="margin:5px;" /><img src="http://informationportalprod/Files/Maine_homepage3.jpg" alt="Warehouse with fork lift" style="margin:5px;" /><br></p><p>The U.S. Commercial Service of the U.S. Department of Commerce is a federal government agency dedicated to helping small-to-medium sized companies with their exporting strategies.</p><p>The Maine Export Assistance Center is part of an international network of domestic Export Assistance Centers and foreign offices in 154 cities in 80 countries worldwide. Our U.S. and international offices are directly linked through a global communications and information network which offers a unique and valuable service to Maine's exporters.</p><p>Together with our partners at the Maine International Trade Center (<a href="http://mitc.com/">MITC</a>), we can help your company to penetrate profitable markets throughout the globe!</p>]]></content>
+    <keyword/>
+    <tags>
+      <industries/>
+      <countries/>
+      <topics>
+        <topic>Exporting</topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <trade_initiatives/>
+      <export_phases>
+        <export_phase>Learn</export_phase>
+      </export_phases>
+    </tags>
+    <seometadatatitle>Welcome to the Maine U.S. Export Assistance Center</seometadatatitle>
+    <seometadatadescription>Learn more about the Maine U.S. Export Assistance Center.</seometadatadescription>
+    <seometadatakeyword>export, exporting, assistance, Maine</seometadatakeyword>
+    <trade_url> www.export.gov/451.htm</trade_url>
+    <files/>
+    <images>
+      <image src="/Files/Maine_homepage1.jpg" name="Maine_homepage1"/>
+      <image src="/Files/Maine_homepage2.jpg" name="Maine_homepage2"/>
+      <image src="/Files/Maine_homepage3.jpg" name="Maine_homepage3"/>
+    </images>
+    <data>
+      <html>http://informationportalprod/Data/Article/451.htm</html>
+      <xml>http://informationportalprod/Data/451.xml</xml>
+    </data>
+  </article>
+</articles>
