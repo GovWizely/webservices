@@ -22,8 +22,8 @@ describe 'BIS Entities API V2', type: :request do
       it_behaves_like 'it contains all ScreeningList::El results that match "fazel"'
 
       context 'when search term exists only in name' do
-        let(:params) { { q: 'constructions' } }
-        it_behaves_like 'it contains all ScreeningList::El results that match "constructions"'
+        let(:params) { { q: 'construction' } }
+        it_behaves_like 'it contains all ScreeningList::El results that match "construction"'
       end
 
       context 'when search term exists only in alt_names' do

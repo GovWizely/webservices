@@ -18,6 +18,14 @@ describe ScreeningList::Query do
 
   describe '#generate_search_body' do
 
+    context 'when options include name and fuzziness' do
+      let(:query) { described_class.new(name: 'mohamed', fuzziness: '0') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_name_and_fuzziness.json").read }
+      it 'generates search body with name and fuzziness' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
     context 'when options include only q' do
       let(:query) { described_class.new(q: 'fish') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }

@@ -1,0 +1,28 @@
+{
+    "query": {
+        "bool": {
+            "should": [
+                {
+                    "multi_match": {
+                        "fields": [
+                            "name",
+                            "alt_names"
+                        ],
+                        "operator": "and",
+                        "query": "mohamed"
+                    }
+                },
+                {
+                    "multi_match": {
+                        "fields":[
+                            "name",
+                            "alt_names"
+                        ],
+                        "query": "mohamed",
+                        "fuzziness": 0
+                    }
+                }
+            ]
+        }
+    }
+}

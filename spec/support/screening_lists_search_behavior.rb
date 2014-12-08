@@ -220,7 +220,7 @@ shared_examples 'it contains all ScreeningList::El results that match "fazel"' d
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::El results that match "constructions"' do
+shared_examples 'it contains all ScreeningList::El results that match "construction"' do
   let(:source) { ScreeningList::El }
   let(:expected) { [1, 6] }
   it_behaves_like 'it contains all expected results of source'
@@ -426,6 +426,12 @@ shared_context 'ScreeningList::Plc data' do
     @all_possible_full_results[ScreeningList::Plc] = JSON.parse(open(
       "#{Rails.root}/spec/fixtures/screening_lists/plc/expected_results.json").read)
   end
+end
+
+shared_examples 'it contains all ScreeningList::Plc results that math "mohammed" with fuzziness of 1' do
+  let(:source) { ScreeningList::Plc }
+  let(:expected) { [3, 4] }
+  it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all ScreeningList::Plc results' do

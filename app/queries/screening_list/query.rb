@@ -9,6 +9,8 @@ module ScreeningList
       @countries = options[:countries].upcase.split(',') if options[:countries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,name.sort'
+      @name = options[:name] if options[:name].present?
+      @fuzziness = options[:fuzziness].to_i if options[:fuzziness].present?
     end
 
     private
@@ -17,11 +19,31 @@ module ScreeningList
       multi_fields = %i(alt_names name remarks title)
       json.query do
         json.bool do
+
           json.must do
             json.child! { generate_multi_match(json, multi_fields, @q) } if @q
+          end if @q
+
+          if @name
+            generate_name_queries(json, %w(name alt_names), @name)
+          end
+
+        end
+      end if @q || @name || @fuzziness
+    end
+
+    def generate_name_queries(json, fields, value)
+      json.set! 'should' do
+        json.child! { generate_multi_match(json, fields, value) }
+
+        json.child! do
+          json.multi_match do
+            json.fields fields
+            json.query value
+            json.fuzziness @fuzziness if @fuzziness
           end
         end
-      end if @q
+      end if @name || @fuzziness
     end
 
     def generate_filter(json)
