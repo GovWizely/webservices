@@ -72,4 +72,6 @@ Webservices::Application.routes.draw do
     concerns :api_v1_routable
     concerns :api_routable
   end
+
+  match '404', via: :all, to: 'application#not_found'
 end
