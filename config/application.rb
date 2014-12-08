@@ -38,5 +38,7 @@ module Webservices
     config.secret_key_base = '2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b2874915d5abc3ca7314fa1d903ec6a1b'
 
     config.i18n.enforce_available_locales = false
+
+    config.exceptions_app = self.routes
   end
 end
