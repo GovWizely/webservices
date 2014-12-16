@@ -1,0 +1,18 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "fields": [
+                            "title",
+                            "content"
+                        ],
+                        "operator": "and",
+                        "query": "colombia"
+                    }
+                }
+            ]
+        }
+    }
+}

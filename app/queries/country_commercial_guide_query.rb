@@ -1,22 +1,23 @@
 class CountryCommercialGuideQuery < Query
   def initialize(options = {})
     super
-    @sort = @q ? nil : 'title.keyword'
+    @q = options[:q] if options[:q].present?
   end
 
   private
 
   def generate_query(json)
-    generate_multi_query json, [:description, :title]
+    multi_fields = %i(title content)
+    json.query do
+      json.bool do
+        json.must do
+          json.child! { generate_multi_match(json, multi_fields, @q) } if @q
+        end
+      end
+    end if @q
   end
 
   def generate_filter(json)
-    json.filter do
-      json.bool do
-        json.must do
-          json.child! { json.terms { json.countries @countries } }
-        end
-      end
-    end if @countries
+
   end
 end
