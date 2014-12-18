@@ -20,8 +20,10 @@ class CountryCommercialGuide
     country_commercial_guide: {
       properties: {
         title: { type: 'string', analyzer: 'custom_analyzer' },
+        section: { type: 'string', analyzer: 'custom_analyzer' },
         content: { type: 'string', analyzer: 'custom_analyzer' },
-        url: { type: 'string' },
+        md_url: { type: 'string' },
+        pdf_url: { type: 'string' },
         id: { type: 'string', index: :not_analyzed, include_in_all: false },
       },
     },
