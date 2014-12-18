@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>128</id>
+    <title>Duty and Tax Calculation Methods</title>
+    <short_title>Tax Calculation Methods</short_title>
+    <summary>See examples of the two generally accepted methods for calculating duty rates: CIF and FOB.</summary>
+    <creation_date>8/27/2014</creation_date>
+    <release_date/>
+    <expiration_date>9/29/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Global Markets</source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>1</evergreen>
+    <content><![CDATA[<p>​There are two generally accepted methods for calculating duty rates: CIF and FOB. Most countries use the CIF method. Some exceptions may apply. VAT (Value Added Taxes) are generally applied on the CIF or FOB + Duty value. The figures used below are for<strong><em>example only</em></strong>. For questions about duty and tax calculation call 1-800-USA-TRAD(E).</p><h2>CIF (Cost, Insurance, Freight)</h2><p>A pricing term indicating that the cost of goods, insurance, and freight are included in the quoted price. Duty is calculated by adding all costs together. See below for example.*</p><blockquote dir="ltr" style="margin-right:0px;"><p>Invoice Value<br>Insurance Paid<br>Freight Paid<br>Total CIF Value<br>Duty Rate = 7%<br>Duty Charge<br>Total CIF+Duty Value<br>VAT = 18%<br>VAT Tax Charge<br><strong>CIF+Duty+VAT</strong></p><p>$932<br>$16<br>$52<br>$1000<br>x .07<br>$70.00<br>$1070.00<br>x .18<br>$192.60<br><strong>$1262.60</strong></p></blockquote><h2>FOB (Free on Board)</h2><p>A pricing term indicating that the cost of the goods, including all transportation and insurance costs from the manufacturer to the port of departure, as well as the costs of loading the vessel, are included in the quoted price. It should be noted that the Incoterm FOB applies only to shipments via sea or inland waterway transport. For the purpose of calculating duties and taxes for international shipments, the term FOB generally applies to the commercial invoice value and does not include the cost of shipping and insurance. See below for example.*</p><blockquote dir="ltr" style="margin-right:0px;"><p>FOB Value<br>Duty Rate = 7%<br>Duty Charge<br>Total FOB + Duty Value<br>VAT = 18%<br>VAT Tax Charge<br><strong>FOB+Duty+VAT</strong></p><p>$932<br>x .07<br>+ $65.24<br>997.24<br>x .18<br>$179.50<br><strong>$1176.74</strong></p></blockquote><p><strong>* NOTE: The information presented above is for example only.</strong>The duty and tax rates listed above are not specific to any HS (harmonized system) number or country.</p>]]></content>
+    <keyword>export, exporting, tariff, tax, duty, calculation, CIF, FOB, VAT, cost, insurance, freight, value, added, taxes, free, Board</keyword>
+    <tags>
+      <industries/>
+      <countries/>
+      <topics>
+        <topic>International Logisitics<sub_topic>Tariffs and Import Fees</sub_topic></topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <export_phases>
+        <export_phase>Exporting</export_phase>
+      </export_phases>
+      <trade_initiatives>
+        <trade_initiatives>Discover Global Markets</trade_initiatives>
+      </trade_initiatives>
+    </tags>
+    <seometadatatitle>Duty and Tax Calculation Methods</seometadatatitle>
+    <seometadatadescription>See examples of the two generally accepted methods for calculating duty rates: CIF and FOB.</seometadatadescription>
+    <seometadatakeyword>Exports, Tariffs, Duties, Calculations</seometadatakeyword>
+    <trade_url> www.export.gov/128.htm</trade_url>
+    <files/>
+    <images/>
+    <data>
+      <html>http://informationportalprod/Data/Article/128.htm</html>
+      <xml>http://informationportalprod/Data/128.xml</xml>
+    </data>
+  </article>
+</articles>

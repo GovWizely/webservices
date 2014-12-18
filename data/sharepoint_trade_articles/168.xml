@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<articles>
+  <article>
+    <id>168</id>
+    <title>Office of Foreign Assets Control (OFAC)</title>
+    <short_title>OFAC</short_title>
+    <summary>The Office of Foreign Assets Control (OFAC) of the US Department of the Treasury administers and enforces economic and trade sanctions based on US foreign policy and national security goals.</summary>
+    <creation_date>8/27/2014</creation_date>
+    <release_date/>
+    <expiration_date>10/5/2015</expiration_date>
+    <source_agencies>
+      <source_agency>International Trade Administration<source_business_unit>Global Markets</source_business_unit></source_agency>
+    </source_agencies>
+    <evergreen>0</evergreen>
+    <content><![CDATA[<p>The<a href="http://www.treasury.gov/about/organizational-structure/offices/Pages/Office-of-Foreign-Assets-Control.aspx"><span style="text-decoration:underline;">Office of Foreign Assets Control (OFAC)</span></a>of the US Department of the Treasury administers and enforces economic and trade sanctions based on US foreign policy and national security goals against targeted foreign countries, terrorists, international narcotics traffickers, and those engaged in activities related to the proliferation of weapons of mass destruction.</p><h3>Additional Resources</h3><ul><li><a href="http://www.treasury.gov/resource-center/sanctions/OFAC-Enforcement/Pages/OFAC-Recent-Actions.aspx"><span style="text-decoration:underline;">Recent OFAC Actions</span></a></li><li><a href="http://www.treasury.gov/resource-center/sanctions/Pages/regulations.aspx"><span style="text-decoration:underline;">OFAC Guidance by Industry</span></a></li><li><a href="http://www.treasury.gov/resource-center/sanctions/OFAC-Enforcement/Documents/ofac.xml"><span style="text-decoration:underline;">OFAC RSS Feed</span></a></li></ul><p>​</p>]]></content>
+    <keyword>export, exporting, sanctions, foreign, asset, control, OFAC, economic, trade, treasury</keyword>
+    <tags>
+      <countries/>
+      <topics>
+        <topic>Trade Regulations<sub_topic>Export Control</sub_topic></topic>
+      </topics>
+      <geo_regions/>
+      <trade_regions/>
+      <trade_programs/>
+      <trade_initiatives/>
+      <export_phases>
+        <export_phase>Learn</export_phase>
+      </export_phases>
+      <industries>
+        <industry>Aerospace &amp; Defense</industry>
+        <industry>Security &amp; Safety</industry>
+      </industries>
+    </tags>
+    <seometadatatitle>Office of Foreign Assets Control (OFAC)</seometadatatitle>
+    <seometadatadescription>The Office of Foreign Assets Control (OFAC) of the US Department of the Treasury administers and enforces economic and trade sanctions based on US foreign policy and national security goals.</seometadatadescription>
+    <seometadatakeyword>assets control, OFAC, trade sanctions, foreign policy, export control</seometadatakeyword>
+    <trade_url> www.export.gov/168.htm</trade_url>
+    <files/>
+    <images/>
+    <data>
+      <html>http://informationportalprod/Data/Article/168.htm</html>
+      <xml>http://informationportalprod/Data/168.xml</xml>
+    </data>
+  </article>
+</articles>
