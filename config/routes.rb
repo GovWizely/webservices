@@ -21,7 +21,7 @@ Webservices::Application.routes.draw do
              'ita_office_locations'      => 'ita_office_locations',
              'trade_articles'            => 'trade_articles',
              'sharepoint_trade_articles' => 'ita_articles',
-             'country_commercial_guides' => 'country_commercial_guides'
+             'country_commercial_guides' => 'country_commercial_guides',
      }
 
     path.each do |controller, path|

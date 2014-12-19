@@ -19,12 +19,11 @@ class CountryCommercialGuide
   self.mappings = {
     country_commercial_guide: {
       properties: {
-        title: { type: 'string', analyzer: 'custom_analyzer' },
+        title:   { type: 'string', analyzer: 'custom_analyzer' },
         section: { type: 'string', analyzer: 'custom_analyzer' },
         content: { type: 'string', analyzer: 'custom_analyzer' },
-        md_url: { type: 'string' },
         pdf_url: { type: 'string' },
-        id: { type: 'string', index: :not_analyzed, include_in_all: false },
+        id:      { type: 'string', index: :not_analyzed, include_in_all: false },
       },
     },
   }.freeze

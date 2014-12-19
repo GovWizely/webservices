@@ -1,3 +1,3 @@
 json.call(entry[:_source],
-          :title, :section, :md_url, :pdf_url, :content
+          :title, :section, :pdf_url, :content
 )

@@ -7,7 +7,7 @@ class CountryCommercialGuideQuery < Query
   private
 
   def generate_query(json)
-    multi_fields = %i(title content)
+    multi_fields = %i(title section content)
     json.query do
       json.bool do
         json.must do
@@ -17,7 +17,6 @@ class CountryCommercialGuideQuery < Query
     end if @q
   end
 
-  def generate_filter(json)
-
+  def generate_filter(_json)
   end
 end

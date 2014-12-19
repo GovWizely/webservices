@@ -6,6 +6,7 @@
                     "multi_match": {
                         "fields": [
                             "title",
+                            "section",
                             "content"
                         ],
                         "operator": "and",
