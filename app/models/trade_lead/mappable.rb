@@ -20,6 +20,10 @@ module TradeLead
 
       klass.mappings = {
         klass.name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
           properties: {
             id:                       { type: 'string', index: :not_analyzed, include_in_all: false },
             country:                  { type: 'string', analyzer: 'keyword' },

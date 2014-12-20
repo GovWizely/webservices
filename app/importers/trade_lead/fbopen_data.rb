@@ -45,7 +45,7 @@ module TradeLead
     }.freeze
 
     def default_endpoint
-      date = 24.hours.ago.in_time_zone('Eastern Time (US & Canada)').strftime('%Y%m%d')
+      date = 24.hours.ago.in_time_zone('Pacific Time (US & Canada)').strftime('%Y%m%d')
       "ftp://ftp.fbo.gov/FBOFeed#{date}"
     end
 
