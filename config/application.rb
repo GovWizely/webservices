@@ -39,6 +39,6 @@ module Webservices
 
     config.i18n.enforce_available_locales = false
 
-    config.exceptions_app = self.routes
+    config.exceptions_app = routes
   end
 end

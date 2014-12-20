@@ -30,6 +30,26 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
     end
 
+    context 'when name is specified' do
+      let(:params) { { name: 'banco' } }
+      subject { response }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [ScreeningList::Sdn] }
+      end
+
+      context 'and fuzziness is specified' do
+        let(:params) { { name: 'mohammed', fuzziness: '1' } }
+        subject { response }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all ScreeningList::Plc results that math "mohammed" with fuzziness of 1'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [ScreeningList::Plc] }
+        end
+      end
+    end
+
     context 'when q is specified' do
       let(:params) { { q: 'cuba' } }
 

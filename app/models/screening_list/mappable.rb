@@ -9,6 +9,10 @@ module ScreeningList
                 tokenizer: 'standard',
                 filter:    %w(standard asciifolding lowercase snowball),
               },
+              standard_asciifolding_nostop: {
+                tokenizer: 'standard',
+                filter:    %w(standard asciifolding lowercase),
+              },
               keyword_lowercase:            {
                 tokenizer: 'keyword',
                 filter:    %w(lowercase asciifolding),
@@ -29,10 +33,10 @@ module ScreeningList
 
             name:                    { type:   'multi_field',
                                        fields: {
-                                         name: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+                                         name: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
                                          sort: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:               { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            alt_names:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
