@@ -5,7 +5,7 @@ describe TradeLead::FbopenData do
   let(:resource)     { "#{fixtures_dir}/example_input" }
   let(:importer)     { described_class.new(resource) }
 
-  it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
     it 'loads leads from specified resource' do

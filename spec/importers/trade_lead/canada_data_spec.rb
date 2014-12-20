@@ -5,7 +5,7 @@ describe TradeLead::CanadaData do
   let(:resource)     { "#{fixtures_dir}/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
 
-  it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
     it 'loads leads from specified resource' do

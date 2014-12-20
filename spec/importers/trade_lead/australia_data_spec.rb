@@ -6,7 +6,7 @@ describe TradeLead::AustraliaData do
   let(:importer) { described_class.new(fixtures_file) }
   let(:trade_leads_hash) { YAML.load_file("#{fixtures_dir}/trade_leads.yaml") }
 
-  it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
     it 'loads trade leads from specified resource' do
