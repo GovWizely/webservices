@@ -7,7 +7,7 @@ class CountryCommercialGuideQuery < Query
   private
 
   def generate_query(json)
-    multi_fields = %i(title section content)
+    multi_fields = %i(title chapter section content)
     json.query do
       json.bool do
         json.must do

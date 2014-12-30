@@ -1,80 +1,70 @@
-require 'csv'
+
 require 'open-uri'
 
 class CountryCommercialGuideData
   include Importer
 
-  ENDPOINT = "#{Rails.root}/data/country_commercial_guides/*"
+  ENDPOINT = "#{Rails.root}/data/country_commercial_guides/yaml/*"
 
   def initialize(resource = ENDPOINT)
     @resource = resource
+    @entry_title, @entry_chapter, @entry_country, @entry_url, @md_file, @topics, @md_url = ''
+    @entries = []
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
 
-    entries = []
     Dir[@resource].each do |resource|
-      source_file = open(resource)
-      entries += build_entry_hashes(source_file)
-      source_file.close
+      yaml_hash = YAML.load_file(resource)
+      parse_yaml(yaml_hash)
+      build_entry_hashes
     end
 
-    CountryCommercialGuide.index entries
+    CountryCommercialGuide.index @entries
   end
 
   private
 
-  def build_entry_hashes(source_file)
-    source_title = extract_source_title(source_file)
-    pdf_url = extract_pdf_url(source_file)
-
-    set_entry_fields(source_file, source_title, pdf_url)
+  def parse_yaml(hash)
+    @md_file = hash['md_file']
+    @entry_title = hash['title']
+    @entry_country = hash['country']
+    @entry_url = hash['pdf_url']
+    @md_url = hash['md_url']
+    @entries = hash['entries']
+    @entries.each(&:symbolize_keys!)
   end
 
-  def set_entry_fields(source_file, source_title, pdf_url)
-    entries = []
-    count = -1
-    source_file.rewind
-    source_file.each do |line|
-      if line.include?('<h1 id="chap')
-        count += 1
-        entries[count] = {}
-        section = line.split('">').last.strip
-        section.slice!('</h1>')
-        entries[count][:section] = section
-        entries[count][:title] = source_title
-        entries[count][:pdf_url] = pdf_url
-        entries[count][:content] = line.gsub!("\n", '<br />')
-      elsif !entries[count].nil?
-        entries[count][:content] += line.gsub!("\n", '<br />')
+  def build_entry_hashes
+    md_content = open("#{Rails.root}/data/country_commercial_guides/markdown/#{@md_file}")
+    position = 0
+    @entries.each_with_index do |value, index|
+
+      md_content.seek(position)
+      md_content.each do |line|
+
+        if line.include?('id="' + value[:section_url] + '"')
+          value[:content] = ''
+          value[:content] += line
+        elsif !@entries[index + 1].nil? && line.include?('id="' + @entries[index + 1][:section_url] + '"')
+          position = md_content.pos - line.length
+          break
+        elsif !value[:content].nil?
+          value[:content] += line
+        end
+
       end
+
+      set_field_values(value)
     end
-    entries
   end
 
-  def extract_source_title(source_file)
-    source_title = ''
-    source_file.each do |line|
-      if line.include?('title')
-        line.slice!('title: ')
-        source_title = line.strip
-        break
-      end
-    end
-    source_title
-  end
-
-  def extract_pdf_url(source_file)
-    source_file.rewind
-    pdf_url = ''
-    source_file.each do |line|
-      if line.include?('pdf_url')
-        line.slice!('pdf_url: ')
-        pdf_url = line.strip
-        break
-      end
-    end
-    pdf_url
+  def set_field_values(hash)
+    hash[:title] = @entry_title
+    hash[:country] = @entry_country
+    hash[:pdf_url] = @entry_url
+    hash[:md_url] = @md_url
+    hash[:section_url] = @md_url + '#' + hash[:section_url]
   end
 end

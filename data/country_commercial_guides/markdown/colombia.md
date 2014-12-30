@@ -2,53 +2,53 @@
 permalink: "colombia.html"
 layout: guide
 title: Country Commercial Guides - Colombia
+pdf_url: http://www.buyusainfo.net/docs/x_9121404.pdf
 published: true
-pdf_url:  http://www.buyusainfo.net/docs/x_9121404.pdf
 ---
 
 ![Market](images/us-commercial-service.png)
 
-<h1 id="table-of-contents">Doing Business in Colombia</h1>
+#Doing Business in Colombia
 
 #2014 Country Commercial Guide for U.S. Companies
 
 ####INTERNATIONAL COPYRIGHT, U.S. & FOREIGN COMMERCIAL SERVICE AND U.S. DEPARTMENT OF STATE, 2014. ALL RIGHTS RESERVED OUTSIDE OF THE UNITED STATES.
 
-[Chapter 1: Doing Business In Colombia](#chap1)
+* Chapter 1: Doing Business In Colombia
 
-[Chapter 2: Political and Economic Environment](#chap2)
+* Chapter 2: Political and Economic Environment
 
-[Chapter 3: Selling U.S. Products and Services](#chap3)
+* Chapter 3: Selling U.S. Products and Services
 
-[Chapter 4: Leading Sectors for U.S. Export and Investment](#chap4)
+* Chapter 4: Leading Sectors for U.S. Export and Investment
 
-[Chapter 5: Trade Regulations and Standards](#chap5)
+* Chapter 5: Trade Regulations and Standards
 
-[Chapter 6: Investment Climate](#chap6)
+* Chapter 6: Investment Climate
 
-[Chapter 7: Trade and Project Financing](#chap7)
+* Chapter 7: Trade and Project Financing
 
-[Chapter 8: Business Travel](#chap8)
+* Chapter 8: Business Travel
 
-[Chapter 9: Contacts, Market Research and Trade Events](#chap9)
+* Chapter 9: Contacts, Market Research and Trade Events
 
-[Chapter 10: Guide to Our Services](#chap10)
+* Chapter 10: Guide to Our Services
 
----
+Return to table of contents
 
-[Return to table of contents](#table-of-contents)
+#Chapter 1: Doing Business In Colombia
 
-<h1 id="chap1">Chapter 1: Doing Business in Colombia</h1>
+* Market Overview
 
-* [Market Overview](#market-overview)
+* Market Challenges
 
-* [Market Challenges](#market-challenges)
+* Market Opportunities
 
-* [Market Opportunities](#market-opportunities)
+* Market Entry Strategy
 
-* [Market Entry Strategy](#market-entry-strategy)
+###Market Overview 
 
-<h3 id="market-overview">Market Overview</h3>[Return to top](#chap1)
+Return to top
 
 The Republic of Colombia is the fourth largest economy in Latin America, after Brazil, Mexico, and Argentina, and has the third largest population with approximately 46 million inhabitants. It is the only country in South America with two coasts (Pacific and Caribbean), which provides tactical shipping advantages in today’s global economy. Aided by major security improvements, steady economic growth, and moderate inflation, Colombia has become a free market economy with major commercial and investment ties to the United States, Europe, Asia and the rest of Latin America. Since the implementation of the U.S.-Colombia Free Trade Agreement (FTA) on May 15, 2012, U.S. exports to Colombia have increased nearly twenty percent.
 
@@ -68,7 +68,9 @@ The Colombian government has implemented bilateral or multilateral trade agreeme
 
 The U.S.-Colombia FTA entered into force on May 15, 2012, , which immediately eliminated import tariffs on 80 percent of U.S. exports of consumer and industrial products to Colombia, with remaining tariffs phased out over one to ten years. Other provisions include strong protection for U.S. investors (legal stability), expanded access to service markets, greater intellectual property rights protection, market access for remanufactured goods, increased transparency and improved dispute settlement mechanisms (arbitration).
 
-<h3 id="market-challenges">Market Challenges</h3>[Return to top](#chap1)
+###Market Challenges 
+
+Return to top
 
 As with any market, there remain challenges to doing business in Colombia (some of which were eliminated with the implementation of the FTA). Several are listed below:
 
@@ -86,7 +88,9 @@ Colombia has been on the Special 301 “Watch List” every year since 1991, ref
 
 Customs duties have been consolidated into four tariff levels: 0 to 5 percent on capital goods and industrial goods and raw materials not produced in Colombia, 10 percent on manufactured goods with some exemptions, and 15 to 20 percent on consumer and “sensitive” goods. Exceptions include automobiles, which are subject to a 35 percent duty. A group of agricultural products is protected by a price band mechanism that offers variable duties as high as 100 percent. The majority of U.S. made products are not subject to an import duty due to the FTA. The duties for some products are being phased out over a period of up to ten years. For these products the duty is being reduced each year until it becomes zero.
 
-<h3 id="market-opportunities">Market Opportunities</h3>[Return to top](#chap1)
+###Market Opportunities 
+
+Return to top
 
 On the other side of the ledger, Colombia provides significant opportunities for U.S. exporters:
 
@@ -98,7 +102,9 @@ Significant U.S. export opportunities not already mentioned include: cotton, whe
 
 beverage processing and packaging equipment, medical equipment, oil and gas equipment, mining equipment, franchising, and education.
 
-<h3 id="market-entry-strategy">Market Entry Strategy</h3>[Return to top](#chap1)
+###Market Entry Strategy 
+
+Return to top
 
 Market entry strategies are as follows:
 
@@ -112,55 +118,57 @@ Offer excellent after-sales service arrangements and maintain the sales relation
 
 Provide high quality products and/or services, affordable financing and competitive pricing. Support your local partner’s marketing efforts with advertising campaigns or by participating in trade shows. Do not be hands off; visit often. Spanish-language sales collateral and service manuals are essential, and may be required in certain sectors, like medical products. U.S.-based staff with a strong knowledge of Spanish is certainly helpful.
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
----
+Return to top
 
-<h1 id="chap2">Chapter 2: Political and Economic Environment</h1>
+#Chapter 2: Political and Economic Environment
 
 For background information on the political and economic environment of the country, please click on the link below to the U.S. Department of State Background Notes.
 
 [http://www.state.gov/r/pa/ei/bgn/35754.html](http://www.state.gov/r/pa/ei/bgn/35754.html)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
----
+Return to top
 
-<h1 id="chap3">Chapter 3: Selling U.S. Products and Services</h1>
+#Chapter 3: Selling U.S. Products and Services
 
-* [Using an Agent or Distributor](#using-an-agent-or-distributor)
+* Using an Agent or Distributor
 
-* [Establishing an Office](#establishing-an-office)
+* Establishing an Office
 
-* [Franchising](#franchising1)
+* Franchising
 
-* [Direct Marketing](#direct-marketing)
+* Direct Marketing
 
-* [Joint Ventures/Licensing](#joint-ventures-licensing)
+* Joint Ventures/Licensing
 
-* [Selling to the Government](#selling-to-the-government)
+* Selling to the Government
 
-* [Distribution and Sales Channels](#distribution-and-sales-channels)
+* Distribution and Sales Channels
 
-* [Selling Factors/Techniques](#selling-factors-techniques)
+* Selling Factors/Techniques
 
-* [Electronic Commerce](#electronic-commerce)
+* Electronic Commerce
 
-* [Trade Promotion and Advertising](#trade-promotion-and-advertising)
+* Trade Promotion and Advertising
 
-* [Pricing](#pricing)
+* Pricing
 
-* [Sales Service/Customer Support](#sales-service-customer-support)
+* Sales Service/Customer Support
 
-* [Protecting Your Intellectual Property](#protecting-your-intellectual-property)
+* Protecting Your Intellectual Property
 
-* [Due Diligence](#due-diligence)
+* Due Diligence
 
-* [Local Professional Services](#local-professional-services)
+* Local Professional Services
 
-* [Web Resources](#web-resources1)
+* Web Resources
 
-<h3 id="using-an-agent-or-distributor">Using an Agent or Distributor</h3>[Return to top](#chap3)
+###Using an Agent or Distributor 
+
+Return to top
 
 Colombian law does not require foreign firms to secure local representation for private sector sales. However, Colombians prefer to deal with companies that have a local representative to ensure access to after-sales services. The one exception to this law is for sales to the government, which do require foreign bidders to have legal representation in Colombia.
 
@@ -170,7 +178,9 @@ An agent or representative differs from an appointed distributor. The former is 
 
 The U.S. Commercial Service recommends that U.S. companies consult a local attorney to execute an agency or distribution contract and to thoroughly vet the prospective partner by conducting a background check. Formality, personal relationships and trust are key ingredients for a long lasting contract. Colombians want to know their supplier or business partner personally before deciding whether he or she is trustworthy. U.S. companies seeking agents, distributors, or representatives in Colombia should consider contacting the U.S. Commercial Service office to request assistance in entering the Colombian market.
 
-<h3 id="establishing-an-office">Establishing an Office</h3>[Return to top](#chap3)
+###Establishing an Office 
+
+Return to top
 
 There are three common forms of organizing your business in Colombia: a corporation, a limited liability partnership, and a branch or subsidiary of a foreign corporation. U.S. firms should obtain legal and tax related advice from a Colombian law firm or accounting firm. The U.S. Commercial Service office has a list of attorneys on its website: http://export.gov/colombia/businessserviceproviders/index.asp
 
@@ -198,7 +208,7 @@ IV. File the Company’s Ledgers and other corporate books at the Chamber of Com
 
 All companies (including branches of foreign companies domiciled in Colombia) must register themselves and their accounting books, including: daily journal entries, balance sheet, meeting minutes, and other required documents by law in the Commercial Register of the Chamber of Commerce in the cities where they are located.
 
-Please check the current cost to register the books at http://camara.ccb.org.co/documentos/11594_tarifasregistrosp2013f.pdf
+Please check the current cost to register the books at [http://camara.ccb.org.co/documentos/11594_tarifasregistrosp2013f.pdf](http://camara.ccb.org.co/documentos/11594_tarifasregistrosp2013f.pdf)
 
 Open an account at the bank of your choice:
 
@@ -208,7 +218,9 @@ VI. Register the foreign investment with the Central Bank:
 
 Once the investment is made, that is, once the initial capital assigned is registered by the company, any subsequent capital increases must be registered with the Central Bank (Banco de la República). The registry process varies according to the destination of the funds.
 
-<h3 id="franchising1">Franchising</h3>[Return to top](#chap3)
+###Franchising 
+
+Return to top
 
 The number of franchises in Colombia has more than doubled over the past 10 years. This boom has been driven by a better understanding and acceptance of the concept of franchising by many local firms, and by the improvement in international perception of the business environment due to the implementation of newly-signed free trade agreements.
 
@@ -232,7 +244,9 @@ As Colombia’s economy is expected to continue growing at a stable and dynamic 
 
 In terms of outlook by franchising category, food and beverages will continue to benefit the most from current economic trends, followed by clothing retail concepts. Services franchises are just starting to gain traction and have yet to become an attractive business opportunity for most investors, with the largest share found in the specialized services (7 percent), health (4 percent), and education and training (3 percent) categories.
 
-<h3 id="direct-marketing">Direct Marketing</h3>[Return to top](#chap3)
+###Direct Marketing 
+
+Return to top
 
 Direct marketing is popular in Colombia. Its growth has been fueled by such factors as technological advances in printing and distribution, the spread of cable TV, the increased use of credit cards and flexible payment plans, and changing lifestyles. Other factors include: more women entering the job market and people seeking ways to save time in making household purchases. Many stores and large distributors are producing their own catalogs for phone, mail orders, e-mail, or the web with products that can be paid for with cash, check, debit or credit cards.
 
@@ -240,7 +254,9 @@ E-commerce is a viable marketing alternative. The U.S. Commercial Service sugges
 
 International direct marketing is becoming more popular in Colombia. U.S. firms can take advantage of improved legislation for postal, express, and courier shipments. The Colombia Customs Code contains postal and courier shipping rules. Certain postal shipments (correspondence, postcards, and printed materials) are exempt from licensing requirements and payment of duties. At present, courier or express shipments with a value of less than US$ 1,000 and a weight of under 20 kilograms are freely imported and classified under HS 98.03.00.00.00, but are subject to a 10 percent Cost Insurance and Freight (CIF) tariff and 16 percent VAT on the CIF-duty-paid value of shipments. Rules apply to both air and surface shipments. However, it is expected that later in 2014 products with a value of US$ 200 or less will be able to enter Colombia without being subject to tariff or tax. The Colombian Congress passed the postal law in December 2009. Firms are advised to re-check existing regulations to determine the impact of the proposed changes on their business plans.
 
-<h3 id="joint-ventures-licensing">Joint Ventures/Licensing</h3>[Return to top](#chap3)
+###Joint Ventures/Licensing 
+
+Return to top
 
 Globalization has created a pressing need for a range of new technologies in Colombia. Although joint ventures and licensing agreements have been important business practices in Colombia, recently they have become even more important as businesses strive to become more competitive.
 
@@ -252,7 +268,9 @@ some cases eliminates the need for a tender as the asset will not be retained by
 
 The approval of the FTA between the United States and Colombia further strengthens prospects for joint ventures and licensing agreements, as the investment, intellectual property and dispute settlement chapters should create more certainty for U.S. companies and investors interested in doing business with Colombian companies and individuals.
 
-<h3 id="selling-to-the-government">Selling to the Government</h3>[Return to top](#chap3)
+###Selling to the Government 
+
+Return to top
 
 Government entities, institutions, and commercial enterprises must follow the provisions of Law 80 of October 31, 1993, which regulates purchases made and contracts entered into by the government and state industrial and commercial enterprises.
 
@@ -304,8 +322,9 @@ Colombian military contracts above a certain amount (more than US$ 1 million for
 
 Because of the FTA U.S. firms are given national treatment and for all federal government tenders the U.S. companies are required to be treated the same as Colombian companies bidding on the tender.
 
+###Distribution and Sales Channels
 
-<h3 id="distribution-and-sales-channels">Distribution and Sales Channels</h3>[Return to top](#chap3)
+Return to top
 
 Colombia offers a full range of sales channels to consumers, with various distribution methods depending on the type of product offered. These methods range from traditional wholesalers selling to traditional shops which then sell to the public, to more sophisticated methods, such as large department stores and superstores, which are increasingly popular outlets.
 
@@ -313,7 +332,9 @@ While most imported items, especially capital equipment and raw materials, are s
 
 Consumer products from around the globe are available in Colombia at acceptable price levels. Under-invoicing of goods (usually of Chinese origin) and contraband articles sold at deep discounts remain a problem for legitimate retailers. The Colombian government has attained encouraging results in its effort to reduce contraband. Free trade zones and bonded warehouses are commonly used for imported merchandise and processing of export-oriented goods. Modifications to the Free Trade Zone legislation took effect in November 2007 and offer interesting benefits. The MUISCA electronic customs system will address contraband and invoicing issues.
 
-<h3 id="selling-factors-techniques">Selling Factors/Techniques</h3>[Return to top](#chap3)
+###Selling Factors/Techniques
+
+Return to top
 
 As Colombia’s largest trading partner, the United States traditionally has been a “natural” market for products and services. The factors favoring U.S. exports are: the geographic proximity of the two countries, many Colombians who study abroad study in the United States, the large number of U.S. firms operating in Colombia, the technological leadership that the United States maintains in many key industrial sectors, the existence of a free trade agreement between the two countries, and the high quality of U.S. made products.
 
@@ -325,7 +346,9 @@ To obtain better prices, guarantees, parts, and after-sales servicing, Colombian
 
 U.S. firms competing for major infrastructure contracts should begin early in the contracting cycle. U.S. manufacturers and construction, service, and engineering companies should initiate contact as soon as possible with government entities and private firms, which have indicated plans, or even just an interest, in developing projects. Once a project has gone to tender, it is usually too late to be competitive if the supplier company has not already involved themselves up front in the process. As mentioned in the section “Selling to the Government”, a local agent or legal representative is required for all government contracts. Therefore, U.S. companies interested in government procurement or contracts should conduct due diligence and appoint an agent or representative as quickly as possible.
 
-<h3 id="electronic-commerce">Electronic Commerce</h3>[Return to top](#chap3)
+###Electronic Commerce
+
+Return to top
 
 There are promising E- commerce opportunities in Colombia since the Colombian Congress provided the legal framework to regulate business done via the internet. In 2010, the United States and Colombia signed an E-commerce agreement that emphasizes open and fair e-trade.
 
@@ -337,7 +360,9 @@ The combination of institutional and societal factors prevents more rapid growth
 
 Most Colombian E-commerce will take place through North American vendors, and great opportunities exist for large and small U.S. companies and the home office community that can efficiently utilize E-commerce technology to their benefit. Colombian companies view E-commerce as a means of improving their competitiveness.
 
-<h3 id="trade-promotion-and-advertising">Trade Promotion and Advertising</h3>[Return to top](#chap3)
+###Trade Promotion and Advertising
+
+Return to top
 
 Introducing new consumer products to the Colombian market usually requires an extensive advertising campaign. Companies’ marketing strategies frequently include media ads, and printed technical and sales articles in a combination of media -- radio, television, cable TV, newspapers, periodicals, trade magazines, and on Internet websites-- announcing sales and special offers.
 
@@ -425,7 +450,9 @@ CM& [http://www.cmi.com.co/](http://www.cmi.com.co/)
 
 Noticias Uno [http://noticiasunolaredindependiente.com](http://noticiasunolaredindependiente.com)
 
-<h3 id="pricing">Pricing</h3>[Return to top](#chap3)
+###Pricing
+
+Return to top
 
 Colombian consumers buy many imported products. Consumers may pay between 60 to 100 percent over the Free On Board (FOB) price of the product. The final price of most imported consumer goods is calculated by estimating 20 percent of the FOB price for freight and insurance, warehousing, and other documentation costs; a 16 percent VAT (in most products); the import tariff (if the product is not duty free); and a 30-40 percent profit, thus putting the final price at an approximately 60-80 percent over the FOB price.
 
@@ -435,7 +462,9 @@ Suppliers to large chain stores, supermarkets, and super stores must provide cer
 
 When buying a food product, Colombians look for three things: brand recognition, which is usually related to high quality and social status; reliable and sufficient nutritional information such as the number of portions, nutritional value, and expiration date; attractive, colorful packaging and labeling. This tends to be more important for children’s products. All this information should be in Spanish.
 
-<h3 id="sales-service-customer-support">Sales Service/Customer Support</h3>[Return to top](#chap3)
+###Sales Service/Customer Support
+
+Return to top
 
 After-sales service and customer support are decisive purchasing factors in Colombia. Government and private firms often request that their potential suppliers provide testimonials regarding client satisfaction with equipment and after-sales service.
 
@@ -445,7 +474,9 @@ All original import and re-export documentation should be kept and presented wit
 
 In some instances, Colombian Customs may authorize the import of replacement goods without the requirement of having previously exported the damaged goods or parts for replacement and/or repair. However, Customs will require a warranty bond equivalent to 100 percent of custom duties paid, valid for one year from the date replacement goods are being imported. This would ensure that damaged goods would then be exported within the following month from the date replacement goods was re-imported.
 
-<h3 id="Protecting Your Intellectual Property">Protecting Your Intellectual Property</h3>[Return to top](#chap3)
+###Protecting Your Intellectual Property
+
+Return to top
 
 **Introduction**
 
@@ -522,7 +553,9 @@ Enforcement is carried out by another series of agencies including: the Tax and 
 
 Periodically, the Economic Section recommends candidates for U.S. PTO training in Washington, DC.
 
-<h3 id="due-diligence">Due Diligence</h3>[Return to top](#chap3)
+###Due Diligence
+
+Return to top
 
 U.S. companies should take care in selecting their Colombian partners. U.S. small and medium-sized businesses can save time and money by contracting with the U.S. Commercial Service to perform an International Partner Search (IPS) to find pre-qualified global partners who express interest in their products and services. The U.S. Commercial Service can generate a customized International Company Profile (ICP) to evaluate your potential business partner. Researched and prepared by our trade specialists, ICPs enable U.S. small and medium-sized businesses to more effectively assess overseas companies. To contract for an IPS or an ICP, visit www.export.gov/cs to find the closest U.S. Commercial Service office.
 
@@ -538,13 +571,15 @@ background checks on potential business partners, U.S. companies should also con
 
 The Colombian government regulates the financial, commercial, credit and services personal information managed by information companies through the “Habeas Data” law (Ley 1266 of 2008). One of the most important changes is that, before the law, bad “behavior” on the personal, financial, and commercial obligation history was maintained for at least four years in the information management companies’ databases. This law ensures every person’s right to clear bad credit history information after a year in order to have access to credit and services in the financial and commercial sectors. Otherwise, in many cases, it was necessary for a person to wait for four years to have access to those services and credit.
 
-<h3 id="local-professional-services">Local Professional Services</h3>[Return to top](#chap3)
+###Local Professional Services
+
+Return to top
 
 U.S. companies bidding on major government, or even private sector, projects/procurement and those entering into joint ventures or other long-term contractual arrangements should seek local legal advice. Also, companies that are concerned about the protection of intellectual property such as trademarks, copyrights, and patents should also seek legal counsel before entering the Colombian market.
 
 There are a number of good Colombian law firms that specialize in various aspects of commercial law. Additionally, a number of major U.S. firms who operate internationally have affiliate arrangements in Colombia. Several legal and business services providers in Colombia are found on the U.S. Commercial Service’s website: [http://export.gov/colombia/businessserviceproviders/index.asp](http://export.gov/colombia/businessserviceproviders/index.asp)
 
-<h3 id="web-resources1">Web Resources</h3>[Return to top](#chap3)
+###Web ResourcesReturn to top
 
 Andean Development Corp. (CAF) : [www.caf.com](www.caf.com) and [www.comunidadandina.org](www.comunidadandina.org)
 
@@ -596,44 +631,45 @@ World Bank: [www.worldbank.org](www.worldbank.org)
 
 Telecommunications Enterprise: [www.telefonica.com.co](www.telefonica.com.co)
 
+Return to table of contents
 
-[Return to table of contents](#table-of-contents)
-
-<h1 id="chap4">Chapter 4: Leading Sectors for U.S. Export and Investment</h1>
+#Chapter 4: Leading Sectors for U.S. Export and Investment
 
 **Commercial Sectors**
 
-* [Automotive](#automotive)
+* Automotive
 
-* [Defense](#defense)
+* Defense
 
-* [Education](#education)
+* Education
 
-* [Electric Power and Renewable Energy](#electric-power-and-renewable-energy)
+* Electric Power and Renewable Energy
 
-* [Food Processing Equipment](#food-processing-equipment)
+* Food Processing Equipment
 
-* [Franchising](#franchising2)
+* Franchising
 
-* [Information Technology](#information-technology)
+* Information Technology
 
-* [Infrastructure and Construction](#infrastructure-and-construction)
+* Infrastructure and Construction
 
-* [Medical Equipment](#medical-equipment)
+* Medical Equipment
 
-* [Mining Equipment](#mining-equipment)
+* Mining Equipment
 
-* [Oil and Gas Equipment](#oil-and-gas-equipment)
+* Oil and Gas Equipment
 
-* [Processed Food and Beverages](#processed-food-and-beverages)
+* Processed Food and Beverages
 
-* [Travel and Tourism](#travel-and-tourism)
+* Travel and Tourism
 
-* [Agricultural Sector](#agricultural-sector)
+* Agricultural Sector
 
-<h3 id="automotive">Automotive</h3>
+###Automotive
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Automotive Market](images/automotive-market.png)
 
@@ -669,7 +705,9 @@ Colombian end-users of automotive parts and accessories are numerous, varied, an
 
 83 percent of total Colombian vehicles are for private use; 14 percent are in public service and 3 percent are for official use (not including those owned by the Ministry of Transportation, the Ministry of Defense, and the Ministry of Foreign Relations).
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 Best prospects for Automotive Parts and Accessories are:
 
@@ -689,7 +727,9 @@ Best prospects for Automotive Parts and Accessories are:
 
 Tire recycling operators
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 With regard to auto parts, Colombia is the United States’ fifth largest trading partner in Latin America and the United States is Colombia’s third largest trading partner after China and Mexico. Colombia’s competitive economy provides opportunities for U.S. manufacturers. Two main areas for opportunities in the automotive industry in Colombia are:
 
@@ -710,7 +750,9 @@ Other end-users are as follows:
 * Tire Distributors
 * Government Agencies Other End-Users: rental car and limousine companies.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 U.S. Commercial Service Bogotá contact: Carolina Arregoces Email: Carolina.arregoces@trade.gov Tel: (571) 275-2755
 
@@ -736,9 +778,11 @@ PROEXPORT COLOMBIA (Export Promotion): [www.proexport.com.co](www.proexport.com.
 
 ![HS Codes](images/hs-codes.png)
 
-<h3 id="defense">Defense</h3>
+###Defense
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![hardware](images/hardware.png)
 
@@ -760,7 +804,9 @@ The United States has had a privileged relationship with Colombia in regards to 
 
 The Colombian military keeps high standards for its equipment, which historically was a great opportunity for American products. However, the United States could lose market share in the future due to pricing and more competitive bidding from foreign manufacturers. U.S. manufactured equipment is already losing market share for personal arms, with more rifles currently being bought from Australia, Belgium and Russia. Additional examples of non U.S. military products being used in Colombia include: British-made Hoover Crafts, French 105mm Obuses, and local Colombian manufacturing of various products including aluminum flat boats.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 Best prospects include trucks and light armored vehicles (LAV-4x4 and 8x8), engines and turbines, military apparel and footwear, fixed-wing and rotary wing aircraft helmets,
 
@@ -772,7 +818,9 @@ In regards to services, there is a significant need for security assistance, mai
 
 The Colombian military has potential in the fields of specialized training for all new communications systems, medical training, and environmental training for hazardous material (HAZMAT) management, transport, process and disposal of HAZMAT, expertise in demolition, technical support for reconnaissance and analysis, and security operations.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 Military equipment trends have remained the same post-Plan Colombia, since the government continues to support drug interdiction and eradication efforts. Due to the significant improvement of national security, the Colombian Air Force has been more involved with military and civilian rescue operations. In 2010 the Air Force created a new rescue unit and continues to purchase rescue equipment and life support systems. The National Police is expanding its activity in civilian and urban surveillance, adapting its force and upgrading its equipment to this environment. Recent navy purchases have shown the government’s interest to increase the guarding of the Caribbean coast, especially around the islands of San Andres and Providencia, an area in which there is a territorial dispute between Colombia and Nicaragua. There is also interest from the Ministry of Defense to purchase close to 20 fighter jets, some of the possible candidates may include the F-16 and F-18 Hornet. However, this has been put on hold until further notice in 2014.
 
@@ -784,7 +832,9 @@ The security forces number about 435,000 uniformed personnel: 285,000 in the mil
 
 On May 15, 2012 the FTA agreement between the United States and Colombia entered into effect. 80 percent of U.S. exports of consumer and industrial products to Colombia are duty-free immediately upon entry into force, with remaining tariffs phased out over ten years. Other provisions include strong protection for U.S. investors (legal stability), expanded access to service markets, greater intellectual property rights protection, market access for remanufactured goods, increased transparency and improved dispute settlement mechanisms (arbitration). The majority of defense and military equipment have no tariffs since the implementation of the FTA. Prior to the agreement tariffs ranged between 5 and 20 percent.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 CS Bogota contact: 
 
@@ -800,7 +850,6 @@ Tel: 011-571-275-2764 / fax: 011-571-315-2190/71
 
 E-mail: [camilo.gonzalez@trade.gov](camilo.gonzalez@trade.gov)
 
-
 Colombian Ministry of National Defense: [www.mindefensa.gov.co/irj/portal/Mindefensa](www.mindefensa.gov.co/irj/portal/Mindefensa) 
 
 Colombian Government: [www.gobiernolinea.gov.co](www.gobiernolinea.gov.co) 
@@ -811,16 +860,19 @@ Security Fair Colombia: [http://securityfaircolombia.com/](http://securityfairco
 
 Medellin Aviation Fair: [http://www.f-aircolombia.com.co/](http://www.f-aircolombia.com.co/)
 
+###Education
 
-<h3 id="education">Education</h3>
+####Overview 
 
-####Overview [Return to top](#chap4)
+Return to top
 
 U.S. colleges and universities remain the preferred overseas destination for Colombian students, despite significant competition from other countries like the United Kingdom, Spain, France and Argentina. There are several reasons that make the United States a leading destination, chief among them higher employment opportunities after graduation, the chance to improve English skills, and the high quality of education. The preferred states for Colombian students are California, New York, Texas, Massachusetts, Illinois and Florida.
 
 According to the Institute of International Education, Colombia is ranked 22nd in the world and 2nd among South American Countries (after Brazil) in sending students to the United States.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 In academic year 2012/2013, 6,543 Colombian students traveled to the United States to study. That constitutes a 3.9 percent increase over the previous year.
 
@@ -832,12 +884,13 @@ Given the demands of modern day society, the number of Colombian undergraduate a
 
 Under government-to-government or private agreements, both public and private universities in Colombia have developed programs with universities in the United States, Europe and Latin America. Priority is given to projects that foster post-graduate programs for training professors as well as research to enhance teaching.
 
-
 Most scholarships are awarded through two institutions, one of which is the Colombian Institute for Educational Loans and Technical Studies Abroad (ICETEX, by its initials in Spanish), which is dedicated to finance higher education through the system of payback financial aid that allows students to start or continue their higher education either in country or abroad. During 2013 ICETEX awarded 837 scholarships for Master’s and PhD programs. The second institution is COLFUTURO, which is a non-profit organization that provides funds to Colombian professionals/students to study abroad. Their loan program is available to students who have been accepted to graduate programs at foreign universities. During 2013 COLFUTURO awarded 1,112 scholarships: 956 for Master’s programs and 156 for PhD programs. Overall, 246 of those scholarships were for programs in the United States.
 
 COLFUTURO also has agreements with many universities such as: Carnegie Mellon - Heinz College, Columbia, Duke, Johnson School of Management - Cornell University, Kogod School of Business - American University, The Krannert School of Management - Purdue University, Tulane University, and Harvard University.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 Not only can a greater number of Colombian students now afford to study in the United States, but newly created employment opportunities in Colombia also make American degrees even more valuable. International education is highly valued in Colombia. A recent survey of employers found that 58 percent preferred to hire people who had earned advanced degrees abroad.
 
@@ -849,7 +902,9 @@ There are concrete opportunities to increase the number of Colombian students at
 
 In Colombia, there is a strong network of 11 Education USA centers administering language programs and doing extensive outreach around the country. Advising centers are located at 9 binational centers, the Fulbright commission and COLFUTURO.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Julio Acero, Commercial Assistant: [Julio.Acero@trade.gov](Julio.Acero@trade.gov) Tel: 011 571 275-2635
 
@@ -863,9 +918,11 @@ COLFUTURO, http://www.colfuturo.org Education USA: [http://www.educationusa.stat
 
 National Administrative Department of Statistics –DANE: [www.dane.gov.co/](www.dane.gov.co/)
 
-<h3 id="electric-power-and-renewable-energy">Electric Power and Renewable Energy</h3>
+###Electric Power and Renewable Energy
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Electrical](images/electrical.png)
 
@@ -879,7 +936,9 @@ Efforts are underway to promote private ventures in the areas of solar, wind, ge
 
 Importers of U.S. electric power generation equipment benefit from the relative proximity of Colombia to the United States. And with the implementation on May 12, 2012 of the United States-Colombia Trade Promotion Agreement (FTA), Colombia will eliminate import duties for equipment, spare parts, and accessories for this sector.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 * Power, distribution, and specialty transformers
 * Switchgears
@@ -889,7 +948,9 @@ Importers of U.S. electric power generation equipment benefit from the relative 
 * Steam, gas, and hydraulic turbines
 * Turbine generator sets
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 The outlook for the Colombian electricity sector is promising since the GOC is planning to develop several new power generation projects through 2018, mostly hydro, to accommodate the expanded demand. Additionally, the GOC is exploring prospects for becoming a major exporter of electricity (including goods and services) to the Andean region and Central America.
 
@@ -897,7 +958,9 @@ As a result of this trend some solid business prospects exist to continue using 
 
 To assist with these GOC efforts, the U.S. Trade and Development Agency has awarded feasibility study grants for a geothermal power plant (ISAGEN), a 20 MW landfill waste-to-energy facility, and a proposed solar-wind power project. In addition, USTDA is also supporting the GOC’s interest in applying SmartGrid technologies to improve the nation’s high-voltage transmission and distribution network.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Please contact Julio Carbó, Commercial Specialist of the U.S. Commercial Service at the U.S. Embassy Bogotá, Colombia at [Julio.Carbo@trade.gov](Julio.Carbo@trade.gov) or 011-571-275-2723.
 
@@ -912,10 +975,11 @@ Please contact Julio Carbó, Commercial Specialist of the U.S. Commercial Servic
 * Ministry of Mines and Energy (MME): [www.minminas.gov.co](www.minminas.gov.co)
 * Transelca: [http://www.transelca.com.co](http://www.transelca.com.co)
 
+###Food Processing Equipment
 
-<h3 id="food-processing-equipment">Food Processing Equipment</h3>
+####Overview 
 
-####Overview [Return to top](#chap4)
+Return to top
 
 ![Food](images/food.png)
 
@@ -927,7 +991,9 @@ In 2013 the food industry grew approximately 9 percent, compared to 6 percent in
 
 Among the most important sectors in the food processing equipment industry in Colombia are sugar mills, rice mills, cereal mills industry, the oils and fats sector, dairy products, the chocolate and candy industries, and the meat and beverage sectors. Most of the equipment and raw materials required for those industries are imported. The implementation of the United States -Colombia Trade Promotion Agreement (commonly referred to as the FTA) will increase opportunities for U.S. exporters on this Industry.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 Based on market data and growing demand, and taking into consideration the following recap of market entry of machinery, processing equipment and raw material to supply local food and beverage production, the following sectors are considered the most attractive for U.S. exporters:
 
@@ -939,7 +1005,9 @@ Oils and fats processing is another promising industry segment, given that Colom
 
 #####[http://globalimpactconsulting.com/30/3/2/hot_sectors/food_processing/colombia.html](http://globalimpactconsulting.com/30/3/2/hot_sectors/food_processing/colombia.html)
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 The recent influx of economic data regarding foreign direct investment and a decrease in unemployment show that Colombia is on its way to perform at all-time highs in terms of economic activity.
 
@@ -949,7 +1017,9 @@ Competition from local equipment producers in this sector is minimal. The qualit
 
 This is especially true in terms of competing with the latest technologies such as nanotechnology and electronic/robotics used for production/packaging lines. The May 2012 implementation of the FTA emphasized the importance of improving the competitiveness of this sector. The FTA eliminated the five to 15 percent Colombian tariffs on U.S. products for this industry and will significantly increase the competitiveness of U.S. food machinery and packaging equipment in the Colombian market.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Alimentos Magazine, Axioma Communications LTDA. [http://www.revistaialimentos.com.co](http://www.revistaialimentos.com.co)
 
@@ -967,10 +1037,11 @@ For More Information
 
 Please contact Julio Acero, Commercial Specialist of the U.S. Commercial Service at the U.S. Embassy Bogotá, Colombia at [julio.acero@trade.gov](julio.acero@trade.gov) or 011-571-275-2635. You can also visit our website at [www.export.gov/colombia](www.export.gov/colombia).
 
+###Franchising
 
-<h3 id="franchising2">Franchising</h3>
+####Overview 
 
-####Overview [Return to top](#chap4)
+Return to top
 
 The number of franchises in Colombia has more than doubled over the past 10 years. This boom has been driven by a better understanding and acceptance of the concept of franchising by many local firms, and by the improvement in international perception of the business environment due to the implementation of newly-signed free trade agreements.
 
@@ -1002,7 +1073,9 @@ In terms of outlook by franchising category, food and beverages will continue to
 
 ![Trends](images/trends.png)
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 **CS Bogota contact:**
 
@@ -1016,9 +1089,11 @@ Tel: 571-275-2814
 
 * **MasFranquicias: Franchising Portal. ‘Franchising Data in Colombia as of June 2013’. [http://bit.ly/1drxxvO](http://bit.ly/1drxxvO)**
 
-<h3 id="#information-technology">Information Technology</h3>
+###Information Technology
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 Colombia’s IT Market Overview
 
@@ -1106,12 +1181,13 @@ Finally, the Productive Transformation Program, crafted by the Ministry of Trade
 
 For the BPO sector, Colombia has sought to attract the establishment of Call Centers within its territory by offering attractive investment conditions and strengthening human capital, particularly in language skills. It has also sought to become more attractive in Knowledge Process Outsourcing, Information Technology Outsourcing and Added-Value Services.
 
-
 In the last couple of years Colombia has been successful in attracting large multinationals such as HP, Unisys, Indra, and Teleperformance, which have established large data and call center facilities throughout the country. These operations, which require large investments in computers, servers, software and components, are expected to continue as policymakers at the local and national level remain adamant about consolidating BPO as a driver of economic growth and employment in Colombia.
 
 As progress is made on all these fronts, interesting opportunities will emerge for U.S. companies capable of identifying emerging demand for more sophisticated products and services from local and foreign companies operating in these sectors in Colombia.
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 Best prospects for:
 
@@ -1123,7 +1199,9 @@ Best prospects for:
 
 4. Mobile Applications
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 Opportunities for U.S. companies in the Colombian IT market are associated to three main drivers: 1) increased connectivity and affordability of equipment; 2) multi-sector economic growth; and 3) government programs for institutional, regional and SME modernization.
 
@@ -1153,7 +1231,9 @@ Specific opportunities may also be found in these sectors for companies seeking 
 
 Security Software Solutions should also be of interest for retailing and financial services companies.
 
-####Note on Telecommunications and the U.S. - Colombia FTA [Return to top](#chap4)
+####Note on Telecommunications and the U.S. - Colombia FTA 
+
+Return to top
 
 General Overview
 
@@ -1183,7 +1263,9 @@ In September 2012 Colombia’s Communications Regulatory Commission (CRC) publis
 
 56 legislative and regulatory steps to comply with what was negotiated under the agreement.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 **CS Bogota contact:**
 
@@ -1205,10 +1287,11 @@ Tel: 571-275-2814
 * 2012 Tax Reform- [http://bit.ly/TBXf4z](http://bit.ly/TBXf4z)
 * Cámara Colombiana de Informática y Telecomunicaciones- [www.ccit.org.co](www.ccit.org.co)
 
+###Infrastructure and Construction
 
-<h3 id="#infrastructure-and-construction">Infrastructure and Construction</h3>
+####Overview 
 
-####Overview [Return to top](#chap4)
+Return to top
 
 A constant complaint among Colombian companies is that bringing merchandise to Bogota or Medellin from the port of Buenaventura is more expensive than shipping goods from that same port all the way to Asia. According to the “Infrastructura de Transporte en Colombia” study, Colombia has the highest internal costs for container transportation in all of Latin America. It costs (on average) a whopping US$1,808 to move a container in Colombia vs. US$925 in Mexico or US$280 in Peru10. These high transportation costs are often jokingly referred to as a “national tax”, and they result in an additional cost to the end user. Historically, in addition to Colombia’s challenging geography with its three mountains ranges dividing the country, the main forces behind the nation’s inadequate infrastructure network have been corruption, militancy and shifting government agendas over the years.
 
@@ -1240,7 +1323,9 @@ While the urban transport projects of Bogota are not part of the 4G concessions,
 
 The execution of the projects mentioned above involve both private and public financing efforts. Opportunities exist for American banks that may be interested in supporting some of these projects, especially those under 4G PPP contracts.
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 Best prospects in the transportation and infrastructure sectors are:
 
@@ -1252,7 +1337,9 @@ Best prospects in the transportation and infrastructure sectors are:
 * Road safety equipment and services
 * Railroad equipment and services
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 On May 15, 2014, the United States-Colombia Trade Promotion Agreement (FTA) will celebrate its two year anniversary. Thanks to the FTA, road and railroad construction equipment (which were previously assessed an average tariff of 15 percent) currently enter the Colombian market duty-free. Services such as project management, bridge design, architecture and engineering design, among others, also have advantages as a result of the FTA.
 
@@ -1262,7 +1349,9 @@ As opportunities are concentrated in road construction, airport expansion, railr
 
 ####CONSTRUCTION
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 Market research firm Business Monitor International (BMI) has recently revised their forecast for the construction industry’s real growth in Colombia from 5.5 percent to 8.35 percent for 2013. This is underpinned by an official revision to industry growth in 2012, which was previously believed to have been 3.28 percent, but is now reported by Colombia's Central Bank to have been 6.3 percent. In addition, the industry reported strong growth of 9.89 percent in the first half of 2013. With continued strong backing from the GOC for the sector, BMI maintains their outlook of a healthy annual average real construction growth of 5.9 percent between 2014 and 2018.
 
@@ -1332,9 +1421,11 @@ Email: paola.lugari@trade.gov
 
 Tel: 011-(571) 275-2723.
 
-<h3 id="medical-equipment">Medical Equipment</h3>
+###Medical Equipment
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Dollars](images/dollars.png)
 
@@ -1358,7 +1449,9 @@ Intellectual Property Rights:
 
 The FTA requires high levels of intellectual property protection and enforcement, consistent with U.S. and international standards, and will support the growth of trade in valuable digital and other intellectual property-based products. The FTA also provides enhanced protections for trademarks, copyrights, and patents, such as the implementation of a Colombian electronic trademark application system and on-line database, prohibition on the circumvention of technological protection measures used by copyright holders, and requirements for the parties to provide robust patent and test data protection.
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 Best prospects for U.S. medical equipment manufacturers include:
 
@@ -1374,7 +1467,9 @@ Best prospects for U.S. medical equipment manufacturers include:
 
 It is expected that a number of Colombia’s clinical laboratories will be upgraded in the near future, which will provide an opportunity for exporters of clinical laboratory equipment. Opportunities also remain in medical, surgical, dental and veterinary instruments and electro medical equipment.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 In 2012 Colombia imported medical equipment and supplies valued at US$1.02 billion, the highest level ever. Of this total, US$359 million was from the United States. The medical device industry is concentrated around the capital of Bogota. Per capita spending on medical devices is average for the region. While there is some domestic capacity for manufacturing basic items, the medical device market is heavily reliant on imports, especially for more high-tech items. A few multinationals manufacture within the country.
 
@@ -1406,19 +1501,21 @@ MEDITECH COLOMBIA [http://www.feriameditech.com/](http://www.feriameditech.com/)
 
 BELLEZA Y SALUD [www.feriabellezaysalud.com](www.feriabellezaysalud.com) (August 21st-25th) The Beauty and Health Fair has established itself as the leading event where the most recognized companies in the sector and leading professionals in the area of health and beauty will be present to show visitors the latest trends, developments in products, equipment and services integral to beauty for men and women.
 
-####Resources [Return to top](#chap4)
+####Resources Return to top
 
-* Health Ministry, Ministerio de la Proteccion Social: www.minproteccionsocial.gov.co
+* Health Ministry, Ministerio de la Proteccion Social: [www.minproteccionsocial.gov.co](www.minproteccionsocial.gov.co)
 
-* National Industries Association (ANDI): www.andi.com.co
+* National Industries Association (ANDI): [www.andi.com.co](www.andi.com.co)
 
-* National Institute for Food and Medicine Surveillance: (Instituto Nacional de Vigilancia de Medicamentos y Alimentos or INVIMA): www.invima.gov.co
+* National Institute for Food and Medicine Surveillance: (Instituto Nacional de Vigilancia de Medicamentos y Alimentos or INVIMA): [www.invima.gov.co](www.invima.gov.co)
 
 For more information please contact Paola Lugari, Commercial Specialist of the U.S. Commercial Service in Colombia at [paola.lugari@trade.gov](paola.lugari@trade.gov) or (571) 275-2796.
 
-<h3 id="mining-equipment">Mining Equipment</h3>
+###Mining Equipment
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Mining](images/mining.png)
 
@@ -1434,33 +1531,41 @@ Colombia has proven coal reserves of 6.6 billion metric tons, and up to an addit
 
 Imports of mining equipment benefit from Colombia’s relative proximity to the United States. And, with the implementation of the United States-Colombia Trade Promotion Agreement (FTA) which went into effect on May 15th 2012, Colombia will eliminate import duties for equipment, spare parts, and accessories destined for various mining activities (production, processing, and transformation).
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 Areas of opportunity include mineral exploration (geophysics, mapping, diamond drilling, tunneling), production equipment (drilling, extraction, loading, hauling and crushing), and mining software (resource estimation, modeling, mine design and planning, maintenance and optimization), as well as environmental consulting remediation and mine closure, and mine safety equipment.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 If international commodity prices improve, the leading Colombian coal producers, including Cerrejón, Drummond and Glencore will continue to expand operations in various parts of the country and produce more than 100 million tons per year.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 * Colombian Government: [www.gobiernoenlinea.gov.co](www.gobiernoenlinea.gov.co)
-* National Planning Department (DNP): www.dnp.gov.co
-* Ministry of Transportation: www.mintransporte.gov.co
-* Ministry of Mines and Energy: www.minminas.gov.co
-* Mining and Energy Planning Unit: www.upme.gov.co
-* National Environmental Licensing Agency (ANLA): www.anla.gov.co
-* Drummond Ltd.: www.drummondltd.com
-* Carbones del Cerrejón: www.cerrejoncoal.com
-* Colombian Geological and Mining Service: www.ingeominas.gov.co
-* Inter-American Development Bank (IDB): www.iadb.org/exr/country/eng/colombia/ 
-* The World Bank (WB): www.worldbank.org
+* National Planning Department (DNP): [www.dnp.gov.co](www.dnp.gov.co)
+* Ministry of Transportation: [www.mintransporte.gov.co](www.mintransporte.gov.co)
+* Ministry of Mines and Energy: [www.minminas.gov.co](www.minminas.gov.co)
+* Mining and Energy Planning Unit: [www.upme.gov.co](www.upme.gov.co)
+* National Environmental Licensing Agency (ANLA): [www.anla.gov.co](www.anla.gov.co)
+* Drummond Ltd.: [www.drummondltd.com](www.drummondltd.com)
+* Carbones del Cerrejón: [www.cerrejoncoal.com](www.cerrejoncoal.com)
+* Colombian Geological and Mining Service: [www.ingeominas.gov.co](www.ingeominas.gov.co)
+* Inter-American Development Bank (IDB): [www.iadb.org/exr/country/eng/colombia/](www.iadb.org/exr/country/eng/colombia/)
+* The World Bank (WB): [www.worldbank.org](www.worldbank.org)
 
 For more information please contact Julio Carbó, Commercial Specialist of the U.S. Commercial Service in Colombia at [Julio.Carbo@trade.gov](Julio.Carbo@trade.gov) or 011-(571) 275-2723.
 
-<h3 id="oil-and-gas-equipment">Oil and Gas Equipment</h3>
+###Oil and Gas Equipment
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 The oil and gas machinery and services market continues to represent an important opportunity for U.S. companies. The Government of Colombia (GOC) continues to place top priority on oil and gas exploration and production, as evidenced by the fact that the country has already reached its 2015 target production level of over one million barrels per day.
 
@@ -1480,7 +1585,9 @@ Oil and gas companies are conducting an aggressive exploration campaign througho
 
 In May 2011 Ex-Im Bank announced the approval of US$3.8 billion in loans and guarantees for the modernization of the Cartagena Refinery project (Reficar) and Ecopetrol to support the acquisition of U.S. goods and services for the industry. Imports of oil & gas equipment benefit from Colombia’s relative proximity to the United States. And with the implementation of the United States-Colombia Trade Promotion Agreement (FTA), Colombia eliminated import duties for equipment, spare parts, and accessories destined for various activities including exploration, production, refining, and transformation.
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 * Seismic activity services (both 2D and 3D)
 * Improved analytical seismic computer codes
@@ -1490,13 +1597,17 @@ In May 2011 Ex-Im Bank announced the approval of US$3.8 billion in loans and gua
 * Enhanced oil recovery for selected fields in which production is dwindling
 * Crude oil and natural gas pipeline design and construction services
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 Potential opportunities involve petrochemical and refinery expansion projects, including an expansion of the Barrancabermeja refinery which awarded Foster Wheeler USA and Process Consultants the project management contract and expects to open the selection process for the US$2.5 billion EPC contract.
 
 Other large projects include the construction of the US$4.2 billion Oleoducto del Bicentenario, a 960 kilometer crude pipeline (450,000 barrels per day) that is expected to become operational by the end of 2014. Ecopetrol has a 55 percent share of this project. Other partners include a 32.8 percent share held by Pacific Rubiales, and the remaining 12.2 percent held by other firms including PetroMinerales and Hocol.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 * National Hydrocarbons Agency (ANH): [www.anh.gov.co](www.anh.gov.co)
 * Ministry of Mines and Energy: [www.minminas.gov.co](www.minminas.gov.co)
@@ -1509,9 +1620,11 @@ Other large projects include the construction of the US$4.2 billion Oleoducto de
 
 For more information please contact Julio Carbó, Commercial Specialist of the U.S. Commercial Service in Colombia at [Julio.Carbo@trade.gov](Julio.Carbo@trade.gov) or (571) 275-2723.
 
-<h3 id="processed-food-and-beverages">Processed Food and Beverages</h3>
+###Processed Food and Beverages
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Imports2](images/imports2.png)
 
@@ -1565,7 +1678,9 @@ These developments are supported by forecasts for the sector. Soft drink sales (
 
 Leading brands from international spirits firms are gradually finding markets in wealthy metropolitan areas, which will inevitably lead to an increase in consumption over the forecast period.
 
-####Best Products/Services [Return to top](#chap4)
+####Best Products/Services 
+
+Return to top
 
 ![Food1](images/food1.png)
 
@@ -1575,7 +1690,7 @@ Leading brands from international spirits firms are gradually finding markets in
 
 ![Food4](images/food4.png)
 
-####Opportunities [Return to top](#chap4)
+####Opportunities Return to top
 
 The FTA is providing duty-free access on 77 percent of all agricultural tariff lines, accounting for 52 percent of current U.S. exports to Colombia. Colombia will eliminate most other tariffs on agricultural products within 15 years. Duty-free treatment is also extended to most processed food products, including pastry and dessert mixes, spices, condiments (except mayonnaise), frozen vegetables, processed turkey, beer, wine, nuts, soup preparations, soft drinks, cookies, snacks, and chips, among others. Before the FTA these products had an average tariff of between 5 and 20 percent.
 
@@ -1620,7 +1735,9 @@ Colombia requires country-of-origin labeling for processed food products. Howeve
 
 origin labeling is required. Also, fresh fruit and vegetables do not require country of origin labeling. Product labeling information on imported processed products must be present at the point of retail sale. The responsibility for this labeling information rests with the importer, not the retailer. Many Colombian importers arrange for this information to be placed on the product by the exporting firm, before it enters Colombia. Labels on processed food products must indicate the specific name of the product, ingredients in order of predominance, name and address of manufacturer and importer, number of units, instructions for storage and usage (when required), and expiration date.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 - USDA Foreign Agricultural Service: [http://gain.fas.usda.gov/Lists/Advanced%20Search/AllItems.aspx](http://gain.fas.usda.gov/Lists/Advanced%20Search/AllItems.aspx)
 - National Industries Association (ANDI): [www.andi.com.co](www.andi.com.co)
@@ -1630,9 +1747,11 @@ origin labeling is required. Also, fresh fruit and vegetables do not require cou
 
 For more information please contact Paola Lugari, Commercial Specialist of the U.S. Commercial Service in Colombia at [paola.lugari@trade.gov](paola.lugari@trade.gov) or (571) 275-27-96.
 
-<h3 id="">Travel and Tourism</h3>
+###Travel and Tourism
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Travel](images/travel.png)
 
@@ -1654,7 +1773,9 @@ Most Colombians organize their trips through a local travel agent, and are known
 
 Colombians have significantly diversified their travel habits, selecting other countries for their vacation plans. South America, especially Argentina and Brazil, have become increasingly popular destinations. These destinations are attractive alternatives to the United States because there is no visa required and promotional packages that include low airfares and all-inclusive hotel or resort rates are readily available. The strong competition from alternative destinations makes it imperative for the U.S. Travel and Tourism industry in Colombia to consistently promote travel opportunities.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 * Air Transportation Services
 * Hotels, Motels, Lodging facilities
@@ -1668,7 +1789,9 @@ Colombians have significantly diversified their travel habits, selecting other c
 * Cruises
 * Health insurance cards
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 The total number of passengers traveling from Colombia to foreign countries increased by 15 percent between 2008 and 2012. From 2012 to 2013 the number of travelers grew approximately 22 percent. The growth rate for 2014 is expected to increase by 15 percent. There are positive factors that will help Colombia to augment the number of travelers going abroad for business and tourism purposes such as: (a) the “Open Skies” agreement which entered in force in January 2013 (b) the implementation of the FTA;
 
@@ -1686,7 +1809,9 @@ Other incentives:
 * Legal Stability Agreements to guarantee investment projects
 * Tax discounts by hiring new employees under 28, handicapped, displaced, or women over 40
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 * Office of Travel and Tourism Industries [http://tinet.ita.doc.gov](http://tinet.ita.doc.gov)
 * Colombian Association of Airlines (ALAICO): [www.alaico.org](www.alaico.org) or Tel: 011 571 618-0540
@@ -1700,15 +1825,19 @@ For More Information
 
 Please contact Julio Acero, Commercial Assistant of the U.S. Commercial Service at the U.S. Embassy Bogotá, Colombia at [Julio.Acero@trade.gov](Julio.Acero@trade.gov) or 011-571-275-2635.
 
-<h3 id="agricultural-sector">Agricultural Sectors</h3>
+###Agricultural Sectors
 
 **Consumer Oriented Products**
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 Demand in Colombia for consumer oriented and other high-value food products has been growing steadily since the early 1990s. Specific products showing an increase in sales since then are red meat, fresh/frozen pork, mechanically de-boned chicken meat, hatching eggs, fresh fruits, processed fruits and vegetables, pet food, beer, nursery products, and various types of snacks and prepared foods. The main conditions that support the rise of consumer oriented product trade include: Colombia’s consistent annual economic growth above 4 percent, an expanding middle class, falling poverty, and changing consumer tastes and preferences.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 Strong foreign direct investment in Colombia is likely to continue and although the Colombian peso has slightly weakened against the dollar, the impact on imports from the United States will be negligible.
 
@@ -1716,11 +1845,15 @@ Historically, Chile has been the principal supplier of imported fresh fruits to 
 
 Although the production of domestic processed foods is growing, imports play an increasingly important role to meet a growing consumer demand and changes in tastes and preferences. Sustained economic growth in the past two years and strong competition in the supermarket sector has also had an important impact on imports. The United States is the principal foreign supplier of consumer oriented food products to Colombia. U.S. food products are highly regarded in the Colombian market for their quality and value as well as for their wide diversity.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 U.S. food companies looking to break into the Colombian market for consumer oriented food products and beverages should consider visiting Colombia to conduct a preliminary market analysis and meet potential buyers. Implementation of the FTA provided increased opportunities for U.S. food and beverages and it is critical to develop business relationships with Colombian counterparts. There will also be increased opportunities for foreign direct investment with local food processing companies.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Trade Shows: Alimentec is a food industry exhibition that takes place in Bogota, Colombia, every two years in the month of June. Information can be found at [http://www.feriaalimentec.com/](http://www.feriaalimentec.com/)
 
@@ -1734,21 +1867,29 @@ The Office of Agricultural Affairs at the American Embassy Bogotá can be contac
 
 ###WHEAT
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Wheat](images/wheat.png)
 
 Wheat production is marginal in Colombia and is expected to average about 24 thousand metric tons annually. Colombia’s wheat is primarily of low quality and is not likely to expand. Under the FTA, the U.S. wheat enters Colombia with zero duty and no quota. Prior to FTA implementation, U.S. market share fell due to duty preferences for imports from the Southern Common Market (MERCOSUR) and Canada. FTA implementation created more favorable trade circumstances for U.S. wheat with greater opportunities for trade.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 FTA implementation has greatly helped the United States to recover lost wheat import market share at the expense of Canada and MERCOSUR. Zero duties and no quota will create more competitive trade conditions against MERCOSUR wheat, which is subject to a price band mechanism, where duties fluctuate based on a reference price. Canadian wheat, which also has zero duties and no quota, will be the primary competitor.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 While bread consumption in Colombia remains low, there has been a steady increase in Colombian pasta consumption creating increased demand for high-quality Durum wheat.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 The U.S. Wheat Associates, Inc, from its regional office in Santiago, Chile, services wheat trade in South America. Information on the wheat market can be obtained from United States. Wheat Associates, Inc., La Concepción 177/32B, Casilla 16616,
 
@@ -1760,22 +1901,29 @@ The Office of Agricultural Affairs at the American Embassy Bogotá can be contac
 
 ###Corn 
 
-####Overview [Return to top](#chap4)
+####Overview 
 
+Return to top
 
 Colombia’s yellow corn production is challenged by low productivity and is very susceptible to weather conditions and plant pests. As a result, about 60 percent of the market is satisfied by imports. Colombian imports of U.S. corn have fallen in recent years because of high prices and strong competition from MERCOSUR. Colombian corn demand is expected to increase because of growing feed needs from the Colombian poultry sector. Under the FTA, U.S. yellow and white corn are subject to a tariff-rate-quota (TRQ) to be phased out over 12 years.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 The FTA has improved market conditions for U.S. corn against MERCOSUR competitors. The United States is poised to take advantage of TRQ preferences, in addition to quality and shipping cost differences to attract Colombian buyers. U.S. corn can take advantage of more competitive trade conditions against MERCOSUR corn, which is subject to a price band mechanism, where duties fluctuate based on a reference price.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 Corn imports will increase in the following years due to: 1) a continued growth of the Colombian economy and a relatively strong Colombian peso; and, 2) a rising middle
 
 88 class and shifting dietary patterns towards more animal protein that generates a significant demand for more animal feed to satisfy primarily the poultry and swine sectors.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Trade Shows: AgroExpo is an agro-industry and livestock exhibition that takes place in Bogota, Colombia, every two years in the month of July. Information can be found at [www.corferias.com](www.corferias.com). The U.S. Grains Council has a regional consultant for trade servicing in different grain commodities in Colombia and the Andean region. The consultant is Mr. Jaime Cuellar, Calle 92 No. 10-40, Apto. 503, Bogotá, D.C., Telephone (57-1) 236-7532, 864-8695, mobile phone (57-3) 315-383-3288, fax (57-1) 236-7532 or 864-8704, E-mail: jacuellar@epm.net.co, Website: www.grains.org
 
@@ -1787,13 +1935,17 @@ The oilseed meal supply in Colombia is composed mainly of soybean meal, cottonse
 
 ###SOYBEAN MEAL
 
-####Overview [Return to top](#chap4)
+####Overview 
+
+Return to top
 
 ![Soybean](images/soybean.png)
 
 The oilseed meal supply in Colombia is composed mainly of soybean meal, cottonseed meal, palm kernel meal, and sesame seed meal. All fishmeal used in the country is imported from Perú, Chile, and Ecuador. The FTA eliminated duties on all imports of U.S. soybeans and soybean meal. Primary competitors are MERCOSUR countries.
 
-####Best Prospects/Services [Return to top](#chap4)
+####Best Prospects/Services 
+
+Return to top
 
 Total domestic consumption of soybean meal and palm kernel meal are forecast to
 
@@ -1801,11 +1953,15 @@ make up 90 percent of Colombian vegetable meal used for animal feed production.
 
 U.S. export market share of soybean meal to Colombia dramatically dropped to 5 percent against MERCOSUR countries in recent years. Zero duties and no quota under the FTA have greatly helped soybean meal exports recover and expand market share against competitors.
 
-####Opportunities [Return to top](#chap4)
+####Opportunities 
+
+Return to top
 
 The FTA has created new opportunities for U.S. exporters and investment opportunities for new oilseed crushing facilities and feed manufacturing plants in Colombia. Soybean meal imports will continue to increase in the following years due to a rising middle class and shifting dietary patterns towards more animal protein that generates a significant demand for more animal feed to satisfy primarily the poultry and swine sectors.
 
-####Resources [Return to top](#chap4)
+####Resources 
+
+Return to top
 
 Trade Shows: AgroExpo is an agro-industry and livestock exhibition that takes place in Bogota, Colombia, every two years in the month of July. Information can be found at [www.corferias.com](www.corferias.com).
 
@@ -1815,33 +1971,35 @@ The local feed industry, a main user of imported soybean meal, is represented by
 
 The Office of Agricultural Affairs at the American Embassy Bogotá can be contacted via e-mail at [agbogota@usda.gov](agbogota@usda.gov) or telephone (57-1) 275-4623, fax (57-1) 275-4525.
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
-<h1 id="chap5">Chapter 5: Trade Regulations and Standards</h1>
+#Chapter 5: Trade Regulations and Standards
 
-* [Import Tariffs](#import-tariffs)
+* Import Tariffs
 
-* [Trade Barriers](#trade-barriers)
+* Trade Barriers
 
-* [Import Requirements and Documentation](#import-requirements-and-documentation)
+* Import Requirements and Documentation
 
-* [U.S. Export Controls](#us-export-controls)
+* U.S. Export Controls
 
-* [Temporary Entry](#temporary-entry)
+* Temporary Entry
 
-* [Labeling and Marking Requirements](#labeling-and-marking-requirements)
+* Labeling and Marking Requirements
 
-* [Prohibited and Restricted Imports](#prohibited-and-restricted-imports)
+* Prohibited and Restricted Imports
 
-* [Customs Regulations and Contact Information](#customs-regulations-and-contact-information)
+* Customs Regulations and Contact Information
 
-* [Standards](#standards)
+* Standards
 
-* [Trade Agreements](#trade-agreements)
+* Trade Agreements
 
-* [Web Resources](#web-resources2)
+* Web Resources
 
-<h3 id="import-tariffs">Import Tariffs</h3> [Return to top](#chap5)
+###Import Tariffs 
+
+Return to top
 
 Most of Colombia’s duties have been consolidated into three tariff levels: 0 percent to 5 percent on capital goods, industrial goods, and raw materials not produced in Colombia; 10 percent on manufactured goods, with some exceptions; and 15 percent to 20 percent on consumer and "sensitive" goods. Exceptions include: automobiles, which are subject to a 35 percent duty; beef and rice, which are subject to an 80 percent duty; and milk and cream, which are subject to a 98 percent duty. Whey is currently subject to a 20 percent duty in-quota (3,000 tons) and a 94 percent duty outside the quota. Other agricultural products fall under the Andean Price Band System (APBS) established by Decision 371 of the Andean Community (AC). The AC includes Bolivia, Colombia, Ecuador and Peru. The APBS protects domestic industry with a variable levy by increasing tariffs when world prices fall, and lowering tariffs when world prices rise.
 
@@ -1859,7 +2017,9 @@ substantially increase U.S. exports. U.S. exports to Colombia have increased by 
 
 •Many agricultural commodities also benefit from the Agreement, as more than half of current U.S. farm exports to Colombia became duty-free immediately, and virtually all remaining tariffs will be eliminated within 15 years. Colombia immediately eliminated duties on wheat, barley, soybeans, soybean meal and flour, high-quality beef, bacon, almost all fruit and vegetable products, wheat, peanuts, whey, cotton, and the vast majority of processed products. The Agreement also provides duty free tariff rate quotas (TRQ) on standard beef, chicken leg quarters, dairy products, corn, sorghum, animal feeds, rice, and soybean oil.
 
-<h3 id="trade-barriers">Trade Barriers</h3> [Return to top](#chap5)
+###Trade Barriers 
+
+Return to top
 
 Despite the efforts mentioned above to consolidate and simplify its tariff rate schedule, Colombia's numerous economic integration agreements have fostered overlapping tariff applications. For example, a product may be subject to more than ten different duties depending on whether it comes from a member of the Andean Community, the Latin American Integration Agreement, or the Caribbean Community. Approximately 97 percent of the Colombian Harmonized Tariff Schedule (CHTS) products can be imported without an import license, but import tariffs and VAT still apply. Colombia’s harmonized tariff schedule book lists all applicable import duties. U.S. exporters can obtain a copy of the CHTS at:
 
@@ -1966,7 +2126,9 @@ In order to register with INVIMA, exporting establishments must provide the foll
 
 **Pre-Shipment Certification:** In 1999, the Colombian Government eliminated requirements for the prior inspection and certification of imported food products at loading ports as part of an effort to ease import procedures. However, for rough/paddy rice, an ICA inspector is required to monitor the loading and treatment procedures at the U.S. port of embarkation.
 
-<h3 id="import-requirements-and-documentation">Import Requirements and Documentation</h3> [Return to top](#chap5)
+###Import Requirements and Documentation 
+
+Return to top
 
 U.S. exporters must be aware that their importers in Colombia must follow the basic steps below to complete an import transaction into Colombia:
 
@@ -2008,11 +2170,15 @@ Products that require special documentation include: vegetables, plants, fruits,
 
 Most of Colombia’s foreign trade procedures have been streamlined through the VUCE (Unified Portal for Foreign Trade- www.vuce.gov.co), which gives users access to forms, online payments and follow-up on requests and processes related to an import or export operation.
 
-<h3 id="us-export-controls">U.S. Export Controls</h3> [Return to top](#chap5)
+###U.S. Export Controls 
+
+Return to top
 
 U.S. exporters should be aware that the U.S. Government may prohibit the export of certain products to Colombia or require an export license. The Department of Commerce’s Bureau of Industry and Security’s (BIS) Office of Export Enforcement licenses most controlled product and technology exports. Licenses are required for certain high technology items or technology transfers and items with dual use potential (commercial items which could have military applications). In recent years there have been increased restrictions on the export of precursor chemicals to Colombia, due to concerns they may be utilized by narcotics traffickers to produce drugs. For more information on U.S. export compliance and enforcement licensing issues contact BIS: Tel: (202) 482- 1208, (800) 424-2980, or web site - [http://www.bis.doc.gov](http://www.bis.doc.gov) . For information on the export of defense articles, weapons, and firearms contact the State Department’s Defense Trade Controls Directorate (DDTC), Tel: (202) 663-2700, Fax. (202) 261-8264, [http://www.pmddtc.state.gov](http://www.pmddtc.state.gov)
 
-<h3 id="temporary-entry">Temporary Entry</h3> [Return to top](#chap5)
+###Temporary Entry 
+
+Return to top
 
 Non-fungible merchandise that can be thoroughly identified by marks, serial numbers, or other symbols can be temporarily brought into Colombia for specific purposes. The merchandise must be re-exported immediately after the pre-authorized period, without any alteration or modification, except for the normal deterioration caused by use.
 
@@ -2028,7 +2194,9 @@ approval must be obtained before expiration of the initial authorization. Short-
 
 Long-term customs declarations for temporary imports must include the U.S. dollar calculation of duties and taxes in accordance with the tariff schedule effective on the submission date. The total amount may be divided into equal quotas to be paid semi-annually, during the temporary import period. The importer may be required to guarantee an equivalent of 100 percent of the import duties. Import duties are non-refundable.
 
-<h3 id="labeling-and-marking-requirements">Labeling and Marking Requirements</h3> [Return to top](#chap5)
+###Labeling and Marking Requirements 
+
+Return to top
 
 Specific marks or labels are not required, except for food, pharmaceutical products, and textiles. Labels on processed food products must indicate: the specific name of the product, ingredients in order of amount, name and address of manufacturer and importer, country-of- origin, number of units, instructions for storage and usage (when required), expiration date, and other instructions as required by the Ministry of Social Protection or the Industry and Commerce Superintendent. Labels and illustrations cannot be inaccurate or misleading.
 
@@ -2046,7 +2214,9 @@ Colombian labeling requirements for processed foods do not address the question 
 
 Product labeling information on imported processed products must be present at the point of retail sale. The responsibility for this labeling information rests with the importer, not the retailer. Many Colombian importers arrange for this information to be placed on the product by the exporting firm, before it enters Colombia.
 
-<h3 id="prohibited-and-restricted-imports">Prohibited and Restricted Imports</h3> [Return to top](#chap5)
+###Prohibited and Restricted Imports 
+
+Return to top
 
 Imports of the following products have been specifically prohibited: dieldrin, aldrin, chlordane, endosulfan, heptachlor, lindane, and any preparations containing these products, gasoline that contains lead tetraethylene, and weapon-type toys.
 
@@ -2054,22 +2224,28 @@ An import license is required for 101 sub-classifications of the Colombian Tarif
 
 Colombia prohibited the importation of live cattle from the United States following the detection of a Bovine Spongiform Encephalopathy (BSE) positive cow in the United States in 2003. In 2007, the World Organization for Animal Health (OIE) classified the United States as controlled risk for BSE. This prohibition still exists today and the USG and GOC continue negotiations to lift this ban.
 
-<h3 id="customs-regulations-and-contact-information">Customs Regulations and Contact Information</h3> [Return to top](#chap5)
+###Customs Regulations and Contact Information 
+
+Return to top
 
 Colombian Tax and Customs Department: [www.dian.gov.co](www.dian.gov.co)
 
-<h3 id="standards">Standards</h3> [Return to top](#chap5)
+###Standards 
 
-* [Overview](#overview)
-* [Standards Organizations](#standards-organizations)
-* [Conformity Assessment](#conformity-assessment)
-* [Product Certification](#product-certification)
-* [Accreditation](#accreditation)
-* [Publication of Technical Regulations](#publication-of-technical-regulations)
-* [Labeling and Marking](#labeling-and-marking)
-* [Contacts](#contacts)
+Return to top
 
-<h4 id="overview">Overview</h4> [Return to top](#standards)
+* Overview
+* Standards Organizations
+* Conformity Assessment
+* Product Certification
+* Accreditation
+* Publication of Technical Regulations
+* Labeling and Marking
+* Contacts
+
+####Overview 
+
+Return to top
 
 Decree 2153 of 1992 defined the Colombian standards regime’s legal framework. Decree 2153 modified the structure of the Superintendent of Industry and Commerce (SIC), and along with Decree 2269 of 1993, created the National Standardization, Certification, and Metrology System (SNNCM). The latter decree designated the Colombian Technical Standards Institute (ICONTEC) as the main standards development organization and SIC as the national accreditation organization.
 
@@ -2077,7 +2253,9 @@ Colombia further revised its standards regime following its accession to the Wor
 
 On February 3, 2010, per Decree 323 of 2010, the accreditation role was transferred from SIC to the Colombian National Accreditation Organization (ONAC), created by Decree 4738 of 2008, and therefore, eliminated the provisions of Decree 2269 of 1993 and Decree 2153 of 1992.
 
-<h4 id="standards-organizations">Standards Organizations</h4> [Return to top](#standards)
+####Standards Organizations 
+
+Return to top
 
 The Colombian Standards and Certification Institute (ICONTEC) is a private-sector organization created in 1963. The SIC has also accredited ICONTEC for product certification, quality assurance, and environmental systems certification.
 
@@ -2091,29 +2269,39 @@ ICONTEC’s technical standards development committees cover a wide range of iss
 
 Member countries of the World Trade Organization (WTO) are required under the Agreement on Technical Barriers to Trade (TBT Agreement) to report to the WTO all proposed technical regulations that could affect trade with other Member countries. Notify U.S. is a free, web-based e- mail subscription service that offers an opportunity to review and comment on proposed foreign technical regulations that can affect your access to international markets. Register online at Internet URL: www.nist.gov/notifyus/
 
-<h4 id="conformity-assessment">Conformity Assessment</h4> [Return to top](#standards)
+####Conformity Assessment 
+
+Return to top
 
 On November 20, 2007, the Ministry of Foreign Trade and over 90 private entities including product certifiers, product inspectors, and accredited testing, calibration and assay laboratories, enacted the creation of Colombia’s National Accreditation Organization (ONAC) as a public-private organization following the guidelines of the National Quality Policy and with the aim to allow international recognition of the country’s conformity assessment certificates including laboratory testing, and calibration certificates in accordance with ISO/IEC 17011 standards.
 
 Per Decrees 4738 and 3257 of 2008, ONAC accredits and supervises the certification entities, as well as testing and calibration laboratories, a task previously assigned to the SIC, through the Delegated Superintendent for Consumer Protection (SDPC).
 
-<h4 id="product-certification">Product Certification</h4> [Return to top](#standards)
+####Product Certification 
+
+Return to top
 
 Manufacturers and importers of products regulated by official mandatory technical standards or technical regulations need to register themselves in SIC’s Mandatory Registry prior to selling products in Colombia. Products can be tested in accredited laboratories to obtain the certificate of conformity and SIC accepts certificates issued by accredited certification entities, such as members of the International Accreditation Forum (IAF) multilateral agreement.
 
 The Ministry of Commerce, Industry and Tourism eliminated the mandatory status for the majority of products previously covered. SIC is working with other government agencies to develop technical regulations for products that present threats to health, safety, environment, or national security. Under WTO commitments, the Colombian government must submit draft technical regulations for comment prior to the new regulation’s entry into force.
 
-<h4 id="accreditation">Accreditation</h4> [Return to top](#standards)
+####Accreditation 
+
+Return to top
 
 ONAC has a detailed list of accredited entities such as inspection entities, personnel and product certification, clinical laboratories, calibration and assay laboratories, available in: http://www.onac.org.co/modulos/contenido/default.asp?idmodulo=234
 
 The National Institute of Surveillance of Food and Medicines (INVIMA) oversees the National Sanitary Surveillance System and is the responsible organization regarding the accreditation of sanitary, biological products, medicines, food, beverage, cosmetics, and medical devices and products related to human health requirements. For more information, please review: www.invima.gov.co
 
-<h4 id="publication-of-technical-regulations">Publication of Technical Regulations</h4> [Return to top](#standards)
+####Publication of Technical Regulations 
+
+Return to top
 
 MinCIT (Regulations Directorate) is the WTO point of contact for TBT draft technical regulations, and upcoming Colombian notifications on TBT and SPS regulations. This group verifies compliance (and coordinates) with the WTO TBT Agreement, the SPS Agreement, and compliance with conformity assessment procedures and maintains an information system concerning national or foreign technical regulations, among other related matters.
 
-<h4 id="labeling-and-marking">Labeling and Marking</h4> [Return to top](#standards)
+####Labeling and Marking 
+
+Return to top
 
 Specific marks or labels are not required for products, except for food, pharmaceutical, and textiles products. Labels on processed food products must indicate: the specific name of the product, ingredients in order of predominance, name and address of manufacturer and importer, number of units, instructions for storage and usage (when required), expiration date, and other instructions as required by the Ministry of Social Protection or the Industry and Commerce Superintendent. Labels and illustrations cannot be inaccurate or misleading. Labels on pharmaceutical products must indicate in Spanish: "for sale under medical, dental, or veterinary prescription,” with the generic name, commercial name, net weight or volume, weight or quantity of active ingredients, license number, and the lot control number. For those products having limited shelf life, labels should include the date of expiration. Insecticides and other toxic products should display the skull and crossbones, the word "poison" in Spanish, and information regarding usage and antidotes. Products for which there are no antidotes cannot be licensed and can only be used in programs under the direct control of public health authorities.
 
@@ -2121,7 +2309,9 @@ The SIC oversees compliance with labeling and marking requirements of all produc
 
 The National Metrology Institute (INM), created by Decree 4175 of November 2011, provides calibration of metrology systems, provides technical training and coordinates activities with the International Legal Metrology Organization (OIML). The INM took the metrology responsibilities from SIC, and controls the national standard for the main physical properties (weight, volume, temperature, etc.) that serves as reference to the Colombian industry.
 
-<h4 id="contacts">Contacts</h4> [Return to top](#standards)
+####Contacts 
+
+Return to top
 
 The following contacts can assist companies with their inquiries and research on standards in Colombia:
 
@@ -2199,7 +2389,9 @@ Tel. (571) 275-27-23 / 275-25-19
 
 [Julio.Carbo@trade.gov](Julio.Carbo@trade.gov)
 
-<h3 id="trade-agreements">Trade Agreements</h3> [Return to top](#chap5)
+###Trade Agreements 
+
+Return to top
 
 Since 1969, Colombia has been a member of the Andean Community, which constitutes a free trade agreement with Bolivia, Ecuador, and Peru. Venezuela left the Andean Community in April 2011. A new framework to facilitate limited commercial relations was negotiated in 2011 and entered into force in October 2012. The Andean Community
 
@@ -2211,7 +2403,9 @@ Apart from the FTAFTA, Colombia has various free- trade agreements with individu
 
 In addition, to stimulate trade and investment, Colombia has Bilateral Investment Treaties (BITs) with Switzerland, Peru and Spain; Colombia has included investment protection chapters in FTAs with Chile, México, Canada, EFTA countries, El Salvador, Honduras, Guatemala, and the United States. Additional BITs have been negotiated with China, India, and the United Kingdom.
 
-<h3 id="web-resources2">Web Resources</h3> [Return to top](#chap5)
+###Web Resources 
+
+Return to top
 
 USTR: [http://www.ustr.gov/Trade_Agreements/Bilateral/Colombia_FTA/Section_Index.html](http://www.ustr.gov/Trade_Agreements/Bilateral/Colombia_FTA/Section_Index.html)
 
@@ -2237,47 +2431,47 @@ Colombia International Corporation: [http://www.cci.org.co](http://www.cci.org.c
 
 Proexport Colombia: [www.proexport.com.co](www.proexport.com.co)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
-<h1 id="chap6">Chapter 6: Investment Climate</h1>
+#Chapter 6: Investment Climate
 
-* [Openness to Foreign Investment](#openness-to-foreign-investment)
+* Openness to Foreign Investment
 
-* [Conversion and Transfer Policies](#conversion-and-transfer-policies)
+* Conversion and Transfer Policies
 
-* [Expropriation and Compensation](#expropriation-and-compensation)
+* Expropriation and Compensation
 
-* [Dispute Settlement](#dispute-settlement)
+* Dispute Settlement
 
-* [Performance Requirements and Incentives](#performance-requirements-and-incentives)
+* Performance Requirements and Incentives
 
-* [Right to Private Ownership and Establishment](#right-to-private-ownership-and-establishment)
+* Right to Private Ownership and Establishment
 
-* [Protection of Property Rights](#protection-of-property-rights)
+* Protection of Property Rights
 
-* [Transparency of Regulatory System](#transparency-of-regulatory-system)
+* Transparency of Regulatory System
 
-* [Efficient Capital Markets and Portfolio Investment](#efficient-capital-markets-and-portfolio-investment)
+* Efficient Capital Markets and Portfolio Investment
 
-* [Competition from State-Owned Enterprises (SOEs)](#seos)
+* Competition from State-Owned Enterprises (SOEs)
 
-* [Corporate Social Responsibility](#corporate-social-responsibility)
+* Corporate Social Responsibility
 
-* [Political Violence](#political-violence)
+* Political Violence
 
-* [Corruption](#corruption)
+* Corruption
 
-* [Bilateral Investment Agreements](#bilateral-investment-agreements)
+* Bilateral Investment Agreements
 
-* [OPIC and Other Investment Insurance Programs](#opic)
+* OPIC and Other Investment Insurance Programs
 
-* [Labor](#labor)
+* Labor
 
-* [Foreign-Trade Zones/Free Ports](#foreign-trade-zones-free-ports)
+* Foreign-Trade Zones/Free Ports
 
-* [Foreign Direct Investment Statistics](#foreign-direct-investment-statistics)
+* Foreign Direct Investment Statistics
 
-* [Web Resources](#foreign-direct-investment-statistics)
+* Web Resources
 
 With increased security, a market of 47 million people, an abundance of natural resources, and an educated and growing middle-class, the Colombian government has opened the country up to global trade and investment. Colombia in 2013 had the fourth largest GDP in Latin America after Brazil, Mexico, and Argentina, and has sustained an average growth rate over four percent for the past decade. The World Bank’s 2014 “Doing Business Report” ranked Colombia 43 out of 189 for ease of doing business and recognized Colombia for best practices in protecting investors, paying taxes, and improving trade across borders. However, the survey also noted Colombia’s high transportation costs and deficiencies in enforcing contracts.
 
@@ -2289,7 +2483,7 @@ restrictions to foreign ownership in specific sectors still exist, Colombia rece
 
 Security in Colombia has improved significantly in the past 15 years, with the number of kidnappings down by 86 percent since 2003, and the number of homicides falling by 35 percent in the same period. Since November 2012, the Colombian government and the Revolutionary Armed Forces of Colombia (FARC) have been conducting peace negotiations in Havana, Cuba. Even so, an active domestic insurgency is still ongoing, posing a threat to commercial activity and investment, especially in rural zones where government control is weaker. Corruption is also a significant challenge in Colombia. According to the World Economic Forum’s Global Competitiveness Index (2013-2014), corruption is the biggest problem for doing business in Colombia. The Colombian government continues to work on improving its business climate. The three largest majority state-owned enterprises, Ecopetrol, ISA, and ISAGEN, are considered models of professional management, competition, and excellent corporate governance. Through its numerous investment treaties, free trade agreements, and progress towards accession into the Organization for Economic Cooperation and Development, Colombia has shown it is eager to increase international trade and investment.
 
-<h3 id="openness-to-foreign-investment">Openness to Foreign Investment</h3> [Return to top](#chap6)
+###Openness to Foreign Investment Return to top
 
 **Attitude Toward FDI**
 
@@ -2347,7 +2541,9 @@ Since 2010, the Santos administration has continued efforts to open up the econo
 
 Colombia’s exports promotion agency, Proexport, has an official website to promote investment in Colombia ([http://www.investincolombia.com.co/](http://www.investincolombia.com.co/)). It gathers investment climate information by sector and region and offers free services to new and established investors such as tailored information requests, public and private sector contacts, and suggestions for in-country visits/agendas. Proexport’s investment booklet provides detailed information about the business environment, including the labor market, legal considerations, exchange rate regime, free trade zones, environmental licensing, and private equity fund opportunities (http://www.investincolombia.com.co/publications.html).
 
-<h3 id="conversion-and-transfer-policies">Conversion and Transfer Policies</h3> [Return to top](#chap6)
+###Conversion and Transfer Policies 
+
+Return to top
 
 **Foreign Exchange and Remittance Policies**
 
@@ -2355,13 +2551,17 @@ No restrictions apply to transferring funds associated with FDI. However, foreig
 
 If investments are registered, repatriation is permitted without any limits. The government permits full remittance of all net profits regardless of the type or amount of investment. Foreign investments must be channeled through the foreign exchange market and registered within one year with the Central Bank’s foreign exchange office to be able to repatriate or reinvest the proceeds. There are no restrictions on the repatriation of revenues generated from the sale or closure of a business, reduction of investment, or transfer of a portfolio. Colombian law authorizes the government to restrict remittances in the event that international reserves fall below three months’ worth of imports, and reserves have been well above that level for decades.
 
-<h3 id="expropriation-and-compensation">Expropriation and Compensation</h3> [Return to top](#chap6)
+###Expropriation and Compensation 
+
+Return to top
 
 Article 58 of the Constitution governs indemnifications and expropriations and guarantees owners’ rights for legally-acquired property. For assets taken by eminent
 
 domain, Colombian law provides a right of appeal both on the basis of the decision itself and on the level of compensation. The Constitution does not specify how to proceed in compensation cases, which remains a concern for foreign investors. The Colombian government has sought to resolve such concerns through the negotiation of bilateral investment treaties and strong investment chapters in free trade agreements, such as the FTA.
 
-<h3 id="dispute-settlement">Dispute Settlement</h3> [Return to top](#chap6)
+###Dispute Settlement 
+
+Return to top
 
 **Legal System, Specialized Courts, Judicial Independence, Judgments of Foreign Courts**
 
@@ -2388,7 +2588,9 @@ The law permits contracting parties to agree to submit disputes to international
 
 Domestic commercial litigation takes on average 885 days from the pretrial stage until the final hearing and judgment. Traditionally, most court proceedings are carried out in writing and only the evidence-gathering stage is carried out through hearings, including witness depositions, site inspections, and cross-examinations. The Colombian government has accelerated proceedings and reduced the backlog of court cases by allowing more verbal public hearings and creating alternative court mechanisms. The new Code of General Procedure that will enter in force in June 2014 also establishes an oral proceeding which is carried out in two hearings, and there are now penalties for not ruling in the time limit set by the law. Enforcement of an arbitral award can take up to two years.
 
-<h3 id="performance-requirements-and-incentives">Performance Requirements and Incentives</h3> [Return to top](#chap6)
+###Performance Requirements and Incentives 
+
+Return to top
 
 According to the Constitution and foreign investment regulations, foreign investment in Colombia receives the same treatment as an investment made by Colombian nationals. Any investment made by a person that does not qualify as a resident of Colombia for foreign exchange purposes will qualify as foreign investment. Foreign investment is permitted in all sectors, except in activities related to defense, national security, and
 
@@ -2416,11 +2618,15 @@ Foreign investors can participate without discrimination in government-subsidize
 
 There are no performance requirements imposed on foreigners as a condition for establishing, maintaining or expanding investments. The Colombian government does not have performance requirements, impose local employment requirements, or require excessively difficult visa, residence, and work permit requirements for investors. Under the FTA, Colombia grants substantial market access across its entire services sector.
 
-<h3 id="right-to-private-ownership-and-establishment">Right to Private Ownership and Establishment</h3> [Return to top](#chap6)
+###Right to Private Ownership and Establishment 
+
+Return to top
 
 The 1991 Constitution explicitly protects individual rights against state actions and upholds the right to private property.
 
-<h3 id="protection-of-property-rights">Protection of Property Rights</h3> [Return to top](#chap6)
+###Protection of Property Rights 
+
+Return to top
 
 Colombia has effective means for enforcing property and contractual rights through judicial proceedings.
 
@@ -2466,13 +2672,17 @@ Local attorneys list: [http://bogota.usembassy.gov/attorneys.html](http://bogota
 
 For additional information about treaty obligations and points of contact at local IP offices, please see WIPO’s country profiles at [http://www.wipo.int/directory/en/](http://www.wipo.int/directory/en/).
 
-<h3 id="transparency-of-regulatory-system">Transparency of Regulatory System</h3> [Return to top](#chap6)
+###Transparency of Regulatory System 
+
+Return to top
 
 The Colombian legal and regulatory systems are generally transparent and consistent with international norms. The commercial code and other laws cover broad areas including banking and credit, bankruptcy/reorganization, business establishment/conduct, commercial contracts, credit, corporate organization, fiduciary obligations, insurance, industrial property, and real property law. The civil code contains provisions relating to contracts, mortgages, liens, notary functions, and registries. There are no identified private sector associations or nongovernmental organizations leading informal regulatory processes. The ministries generally consult with relevant actors, both foreign and national, when drafting regulations and proposed laws are typically published as drafts for public comment.
 
 Enforcement mechanisms exist, but historically the judicial system has not taken an active role in adjudicating commercial cases. The 1991 Constitution provided the judiciary with greater administrative and financial independence from the executive branch. Colombia has completed its transition to an oral accusatory system to make criminal investigations and trials more efficient. The new system separates the investigative functions assigned to the Office of the Attorney General from trial functions. Lack of coordination among government entities as well as insufficient resources complicate timely resolution of cases.
 
-<h3 id="efficient-capital-markets-and-portfolio-investment">Efficient Capital Markets and Portfolio Investment</h3> [Return to top](#chap6)
+###Efficient Capital Markets and Portfolio Investment 
+
+Return to top
 
 Market capitalization has risen from $14 billion in 2003 to $215 billion as of December 2013. Sound fiscal and macroeconomic management allowed Colombia to claim the triple crown of seeing its credit ratings increased to ‘Investment Grade’ level by Standard and Poor’s, Moody’s, and Fitch Ratings. Foreign investors are allowed to participate in capital markets by negotiating and acquiring shares, bonds, and other securities listed by the Foreign Investment Statute. These activities must be conducted via a local administrator, which can be a trust company or a stock brokerage firm that has been authorized to do so by the Financial Superintendent (Super Financiera). Foreign investment capital funds are not allowed to acquire more than ten percent of the total amount of a Colombian company's outstanding shares. Foreigners have no restrictions to establish a bank account as long as they have a valid visa and government ID (Cedula).
 
@@ -2488,7 +2698,9 @@ The principal source of long-term corporate and project finance in Colombia are 
 
 the local stock or bond markets with the majority meeting their financing needs through the banking system, by reinvesting their profits, and through suppliers’ credit.
 
-<h3 id="seos">Competition from State-Owned Enterprises (SOEs)</h3> [Return to top](#chap6)
+###Competition from State-Owned Enterprises (SOEs) 
+
+Return to top
 
 **OECD Guidelines on Corporate Governance of SOEs**
 
@@ -2506,13 +2718,17 @@ considered to be good examples of professional management, competition, and exce
 
 Colombia started operating a sovereign wealth fund in 2012 using royalties from the extractive industry. The fund’s main objective is to promote saving and economic stabilization in the country, but it also aims to boost productivity in Colombia through new technologies and innovation. The fund is administrated by the Central Bank.
 
-<h3 id="corporate-social-responsibility">Corporate Social Responsibility</h3> [Return to top](#chap6)
+###Corporate Social Responsibility 
+
+Return to top
 
 Colombia adheres to the corporate social responsibility (CSR) principles outlined in the OECD Guidelines for Multinational Enterprises. It has a long tradition of CSR across many industries and encourages public and private enterprises to follow OECD guidelines. Beneficiaries of CSR programs include students, children, populations vulnerable to Colombia's armed conflict, victims of violence, and the environment. Larger companies, in particular, structure their CSR programs in line with generally accepted international CSR principles. On several occasions, companies in Colombia have been recognized on an international level, including by the State Department, for their CSR commitments.
 
 Overall, Colombia has strong environmental laws on the books, is proactive at the federal level in enacting environmental protections, and does not waive labor or environmental regulations to attract investors. However, the Colombian government struggles with enforcement, particularly in more remote areas. Geography, lack of infrastructure, and lack of state presence all play a role, as does a general shortage of resources in its national and regional level institutions. The Environmental Chapter of the CTPA requires Colombia to maintain and enforce environmental laws, protect biodiversity, and promote opportunities for public participation.
 
-<h3 id="political-violence">Political Violence Return</h3> [Return to top](#chap6)
+###Political Violence Return 
+
+Return to top
 
 Violence, including political violence, has diminished significantly in recent years. Colombian government figures show that the number of terrorist acts decreased by seven percent from 2012 to 2013 to 830 incidents. Homicides nationally continued a downward trend, with 15,234 in 2013, compared with 16,440 in 2012. The number of kidnappings in 2013 was 299, a two percent decrease from 305 in 2012, and a 91 percent decrease since 1999 when there were 3,204 kidnappings.
 
@@ -2522,7 +2738,9 @@ The extractive sector has been especially hard hit by insurgent attacks. Accordi
 
 The Colombian government and FARC have been in peace negotiations in Havana, Cuba since November 2012. They have agreed in principle on two of the five negotiating topics – agriculture and rural development and political participation – and discussion on a third topic, drugs, is ongoing. The last two agenda items, victims and end of conflict, have yet to be addressed.
 
-<h3 id="corruption">Corruption Return</h3> [Return to top](#chap6)
+###Corruption Return 
+
+Return to top
 
 UN Anticorruption Convention, OECD Convention on Combatting Bribery Corruption Corruption is a significant challenge in Colombia. According to the World Economic Forum’s Global Competitiveness Index (2013-2014), corruption is the biggest problem for doing business in Colombia. The Colombian Attorney General estimates that corrupt activity drains $2.1 billion per year from the country’s economy. According to the “AmericasBarometer 2013” published by the Latin American Public Opinion Project, the perception of corruption in Colombia reached 81.7 percent, its highest level since the study was first carried out in 2004. Similarly, the latest Survey of Colombian Companies’ Anti-Bribery Practices, carried out in 2012, found that 94 percent of businesspeople believed their peers offered bribes and that 58 percent of companies lacked mechanisms for reporting cases of bribery. Responders said that corruption increases the cost of projects almost 15 percent, particularly for government contracts.
 
@@ -2554,7 +2772,9 @@ Carrera 8 No.7-26 Bogota, Colombia
 
 [gersonmotta@presidencia.gov.co](gersonmotta@presidencia.gov.co)
 
-<h3 id="bilateral-investment-agreements">Bilateral Investment Agreements</h3> [Return to top](#chap6)
+###Bilateral Investment Agreements 
+
+Return to top
 
 Colombia has nine free trade agreements that include investment chapters: the U.S., European Union, Canada, Chile, Mexico, Cuba, Andean Community of Nations (Bolivia, Ecuador, and Peru), European Free Trade Area (only Switzerland and Liechtenstein have ratified), Mercosur (Brazil, Argentina, Paraguay, Uruguay, and Venezuela), and North Triangle (El Salvador, Honduras, and Guatemala). Colombia has signed agreements with Israel, Panama, Costa Rica, and South Korea that are expected to be ratified and enter into force within the next two years. Free trade agreement negotiations with Turkey and Japan are ongoing and Colombia’s goal is to have sixteen trade agreements with over fifty countries (including the 27 EU members) by the end of 2014.
 
@@ -2564,11 +2784,13 @@ Additionally, Colombia has stand-alone bilateral investment treaties in force wi
 
 Colombia has double taxation agreements in force with Spain, Chile, Switzerland, and now Canada. It has signed agreements with India, Mexico, South Korea, and Portugal. Talks for such accords have concluded successfully with Belgium, the Czech Republic, and France. Colombia is currently negotiating double taxation agreements with Germany, the Netherlands, Japan, and the United States.
 
-<h3 id="opic">Overseas Private Investment Corporation (OPIC) and Other Investment Insurance Programs</h3> [Return to top](#chap6)
+###Overseas Private Investment Corporation (OPIC) and Other Investment Insurance Programs Return to top
 
 OPIC made its first investment in Colombia in 1985 and has since made investments totaling over $2 billion in a variety of sectors. Additional information can be found at [www.opic.gov](www.opic.gov).
 
-<h3 id="labor">Labor</h3> [Return to top](#chap6)
+###Labor 
+
+Return to top
 
 The labor market reflected positive results in Colombia’s healthy economy. The average annual unemployment rate in 2013 was 9.6 percent, the first time in many years under ten percent. That said, Colombia has one of the highest unemployment rates in the region. About 64.5 percent of the population actively participates in the labor force. Forty-nine percent of the workforce was working in the informal economy at the end of 2013. Colombia has abundant unskilled and semi-skilled labor throughout the country, as well as managerial-level employees who are often bilingual.
 
@@ -2582,13 +2804,17 @@ Foreign companies operating in Colombia must follow the same hiring rules as nat
 
 In 2010, Law 1429 eliminated the mandatory proportion requirement for foreign and national personnel; 100 percent of the workforce, including the board of directors, can be foreign nationals. Labor permits are not required in Colombia, except for under-aged workers. Foreign employees have the same rights as Colombian employees.
 
-<h3 id="foreign-trade-zones-free-ports">Foreign-Trade Zones/Free Ports</h3> [Return to top](#chap6)
+###Foreign-Trade Zones/Free Ports 
+
+Return to top
 
 To attract foreign investment and promote the importation of capital goods, the Colombian government uses a number of drawback and duty deferral programs. One example is free trade zones (FTZ), which the government has used to attract more investment and create more jobs. In 2005, Colombia’s Congress passed comprehensive FTZ modernization legislation that opened investment to international companies, allowed one-company/standalone FTZs, and permitted the designation of pre-existing plants as FTZs. This law was updated in 2007 to outline the requirements to be declared a FTZ. As of December 2013 there were 97 FTZs, an almost tenfold increase since 2005. FTZs account for $7.8 billion in investment and provide 47,076 direct jobs and 96,291 indirect ones. While the customs authority, DIAN, oversees requests to establish FTZs, the Colombian government is not involved in their operation.
 
 In 2002, Colombia accepted the WTO Committee on Subsidies and Countervailing Measures’ decision to phase out all export subsidies in FTZs by December 31, 2006. However, FTZs maintain their special customs and foreign exchange regimes, per Law 1004 passed in 2005, which also grants a preferential 15 percent corporate income tax and exemption from customs duties and value-added taxes on imported materials. In January 2013, the new tax reform took effect, grandfathering benefits to existing FTZs while requiring new ones to pay an additional income tax of nine percent until 2015 and eight percent beginning in 2016. In return for these and other incentives, every FTZ project must meet specific investment and job creation commitments. Requirements range from a minimum of $17 million in new investments and 500 jobs for agro-industrial projects, to $34 million in new investment and 150 jobs created for manufacturing projects. Job creation requirements may be lowered by 15 positions for every additional $3 million invested with a minimum requirement of 50 jobs created.
 
-<h3 id="foreign-direct-investment-statistics">Foreign Direct Investment Statistics</h3> [Return to top](#chap6)
+###Foreign Direct Investment Statistics 
+
+Return to top
 
 ![Econ-Data1](images/econ-data1.png)
 
@@ -2608,24 +2834,25 @@ Bogota, Colombia (571) 275-2000
 
 [BogotaECONShared@state.gov](BogotaECONShared@state.gov)
 
+Return to table of contents
 
-[Return to table of contents](#table-of-contents)
+#Chapter 7: Trade and Project Financing
 
-<h1 id="chap7">Chapter 7: Trade and Project Financing</h1>
+* How Do I Get Paid (Methods of Payment)
 
-* [How Do I Get Paid (Methods of Payment)](#how-do-I-get-paid)
+* How Does the Banking System Operate
 
-* [How Does the Banking System Operate](#how-does-the-banking-system-operate)
+* Foreign-Exchange Controls
 
-* [Foreign-Exchange Controls](#foreign-exchange-controls)
+* U.S. Banks and Local Correspondent Banks
 
-* [U.S. Banks and Local Correspondent Banks](#us-banks-and-local-correspondent-banks)
+* Project Financing
 
-* [Project Financing](#project-financing)
+* Web Resources
 
-* [Web Resources](#web-resources4)
+###How Do I Get Paid (Methods of Payment) 
 
-<h3 id="how-do-I-get-paid">How Do I Get Paid (Methods of Payment)</h3> [Return to top](#chap7)
+Return to top
 
 Most products are imported through letters of credit or time drafts. Soft and long-term financing is an important sales tool, especially for government imports or public tenders. Foreign suppliers, financial intermediaries in Colombia, or foreign financial institutions, may finance Colombian imports.
 
@@ -2633,7 +2860,9 @@ Colombian importers may freely negotiate payment terms with their suppliers, but
 
 General trade finance is freely available and letters of credit are widely used in Colombia. Methods, terms, and conditions of payment vary with the type of credit. Most imports of equipment are paid via irrevocable 180-day letter of credit (L/C), payable on sight against shipping documents. Normal payment term is 60 days. There are transactional cases in which suppliers may extend terms to 120 days by time draft, but this is not common practice. When a satisfactory trading relationship has been established, terms are those generally applied in international trade. Short-term is considered any term less than one year; medium-term is from one to four years; and, long-term ranges from five years up to 20 years.
 
-<h3 id="how-does-the-banking-system-operate">How Does the Banking System Operate</h3> [Return to top](#chap7)
+###How Does the Banking System Operate 
+
+Return to top
 
 Colombia’s financial system operates under the supervision of the Financial Superintendent, created in 2005 from the merger of the Banking Superintendent and the Stock Exchange Superintendent. The financial system is relatively large in comparison with the nation’s gross domestic product. It has many highly sophisticated institutions with state-of-the-art technology. However, financial services are still very costly and intermediation remains the most important financial activity.
 
@@ -2643,7 +2872,9 @@ Colombia has not reached the banking coverage of developed countries. However, a
 
 In 2009 a new law reforming the financial sector was passed. The reforms increased protection for financial customers, including requirements that financial institutions properly disclose the costs associated with their operations. They also forbid agreements in which consumers waive their rights and provisions shifting the burden of proof to consumers. The reforms create Advocate for Financial Consumers positions, which every financial institution must have and who are responsible for ensuring that financial institutions do not violate consumers' rights. The new law also introduces greater flexibility to the pension fund system by creating the multi-fund structure to allow for various risk investment profiles. It allows foreign banks and foreign insurance companies to operate locally without having to incorporate a Colombian entity, although they do have to set up a branch in Colombia, subject to all relevant legal requirements. Finally the law establishes mechanisms to promote microfinance, securitization and the development of capital markets.
 
-<h3 id="foreign-exchange-controls">Foreign-Exchange Controls</h3> [Return to top](#chap7)
+###Foreign-Exchange Controls 
+
+Return to top
 
 Colombia imposes no foreign exchange controls on trade. However, exchange regulations require that the following transactions be channeled through intermediaries (i.e. banks or other recognized financial institutions) authorized for such purposes, and must be declared to the Central Bank:
 
@@ -2663,7 +2894,9 @@ Projects performed by companies with foreign capital in special sectors such as 
 
 The Ministry of Finance issued Decree 4145 on November 5, 2010 reinstating a withholding tax of 33 percent on interest paid on foreign debt. This decree will raise the cost of capital for local borrowers. The purpose of the decree is to reduce the inflow of foreign currency. Decree 4145 does not supersede a lower rate of withholding tax provided for in Colombia’s tax treaties with Spain and Chile.
 
-<h3 id="us-banks-and-local-correspondent-banks">U.S. Banks and Local Correspondent Banks</h3> [Return to top](#chap7)
+###U.S. Banks and Local Correspondent Banks 
+
+Return to top
 
 Virtually all Colombian banks have correspondent banks in the United States. The following are major Colombian banks and U.S. banks with which they have correspondent relationships:
 
@@ -2753,7 +2986,9 @@ BBVA Bank, New York
 
 BBVA Bank, Miami
 
-<h3 id="#project-financing">Project Financing</h3> [Return to top](#chap7)
+###Project Financing 
+
+Return to top
 
 The government and the Central Bank are important sources of funding for the financial system. The Central Bank, in addition to providing the usual discount facilities to support system liquidity, manages several special government funds to promote lending into a number of sectors that have been determined to be important to national development or economically essential. The funding comes from government capital, bonds, and current fiscal appropriations, if needed to cover deficits. Access to the funds tends to require considerable paperwork; applicants must qualify and margins are limited. Their importance as a funding resource has diminished in recent years.
 
@@ -2777,7 +3012,9 @@ The Andean Development Corporation (Corporacion Andina de Fomento) is the only o
 
 **World Bank:** In 1994, Colombia approved through Law 149, its adherence to the Multilateral Investment Guarantee Agency (MIGA), created in 1985 by the World Bank to stimulate the flow of resources for productive ends between member countries and in particular toward developing countries.
 
-<h3 id="web-resources4">Web Resources Return</h3> [Return to top](#chap7)
+###Web Resources Return 
+
+Return to top
 
 Export-Import Bank of the United States: [http://www.exim.gov](http://www.exim.gov)
 
@@ -2801,31 +3038,33 @@ Colombian Customs and Income Tax Offices: [http://www.dian.gov.co](http://www.di
 
 Colombian Ministry for Foreign Affairs: [http://www.cancilleria.gov.co/](http://www.cancilleria.gov.co/)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
-<h1 id="chap8">Chapter 8: Business Travel</h1>
+#Chapter 8: Business Travel
 
-* [Business Customs](#business-customs)
+* Business Customs
 
-* [Travel Advisory](#travel-advisory)
+* Travel Advisory
 
-* [Visa Requirements](#visa-requirements)
+* Visa Requirements
 
-* [Telecommunications](#telecommunications)
+* Telecommunications
 
-* [Transportation](#transportation)
+* Transportation
 
-* [Language](#language)
+* Language
 
-* [Health](#health)
+* Health
 
-* [Local Time, Business Hours and Holidays](#local-time)
+* Local Time, Business Hours and Holidays
 
-* [Temporary Entry of Materials and Personal Belongings](#temporary-entry)
+* Temporary Entry of Materials and Personal Belongings
 
-* [Web Resources](#web-resources5)
+* Web Resources
 
-<h3 id="business-customs">Business Customs</h3> [Return to top](#chap8)
+###Business Customs 
+
+Return to top
 
 Colombia, in terms of natural and human resources, offers a strategic location, an educated workforce, and a well-developed industrial capacity. There is a lively international business community in Colombia, with hundreds of well-known, established companies that are committed to a long- term presence. Most companies know their risk profiles and take appropriate measures. It is expensive to do business in Colombia, relative to other Latin American countries. The cost of doing business in Cartagena and Bogota reflect costs similar to major U.S. and European cities. The Santos government is continuing the previous administration’s commitment to improve the country’s infrastructure (ports, roads, and communications) as a means of promoting a modern business environment and lowering operating costs.
 
@@ -2839,7 +3078,9 @@ Working breakfasts and lunches at hotels and private clubs have become common pr
 
 associations, government entities, and private firms are hosting an increasing number of national and regional conventions, conferences, and seminars in the country. These events present excellent opportunities for meeting Colombian business people and key government officials, as well as for assessing market potential.
 
-<h3 id="travel-advisory">Travel Advisory</h3> [Return to top](#chap8)
+###Travel Advisory 
+
+Return to top
 
 So that travelers can make an informed decision, the State Department provides risk assessments related to on-going violence, dangers and unrest that could affect U.S. citizens in various countries around the world. There is currently a State Department travel warning in effect for U.S. citizens planning travel to Colombia. For the latest security information, Americans traveling abroad should regularly monitor the Department of State, Bureau of Consular Affairs’ website at [http://travel.state.gov](http://travel.state.gov) where the current Worldwide Caution Public Announcement, Travel Warnings and Public Announcements can be found.
 
@@ -2861,7 +3102,9 @@ The U.S. Embassy is located at Avenida El Dorado and Carrera 50. For U.S. citize
 
 The Consular Agency in Barranquilla provides limited consular services to U.S. citizens and is located at Calle 77B, No. 57-141, Piso 5, Centro Empresarial Las Americas, Barranquilla, Atlantico, Colombia; telephone (011-57-5) 353-2001; fax (011-57-5) 353-5216; e-mail: [agrpersonal@gmail.com](agrpersonal@gmail.com)
 
-<h3 id="visa-requirements">Visa Requirements</h3> [Return to top](#chap8)
+###Visa Requirements 
+
+Return to top
 
 U.S. Citizens (who are not also Colombian citizens) traveling to Colombia are required to carry a valid U.S. passport to enter and depart Colombia and a return/onward ticket. U.S. citizens do not need a visa for a tourist/business stay of 60 days or less. Stiff fines are imposed if passports are not stamped on arrival and/or if stays exceeding the authorized period of stay (generally 60-90 days) are not approved in advance by Colombian Immigration.
 
@@ -2874,7 +3117,6 @@ In an effort to encourage foreign investment and attract tourism, Colombian visa
 **Special Temporary Visas:** Valid for multiple entries during one year. It expires if the foreigner leaves the country for more than 180 Days.
 
 For more information on other types of visas, or information concerning entry and customs requirements, immigration regulations, and other related matters, please visit Colombia’s Ministry of Foreign Affairs website (www.cancilleria.gov.co). Information is also available at the Colombian Embassy located at 2118 Leroy Place NW, Washington DC, 20008; Tel: (202) 387-8338 (www.colombiaemb.org). Additionally, Colombia has consular offices in the following U.S. cities: Atlanta, Boston, Chicago, Houston, Miami, Los Angeles, Newark, New York City, San Francisco, Orlando, Tampa and San Juan (Puerto Rico).
-
 
 U.S. citizens whose passports are lost or stolen in Colombia must obtain a new passport from the U.S. Embassy and present it, together with a police report of the loss or theft, to the main immigration office in Bogota to obtain permission to depart.
 
@@ -2898,7 +3140,9 @@ U.S. Embassy Bogota Colombia website: [http://bogota.usembassy.gov](http://bogot
 
 Appointment Website: [http://colombia.usvisa-info.com](http://colombia.usvisa-info.com)
 
-<h3 id="telecommunications">Telecommunications</h3> [Return to top](#chap8)
+###Telecommunications 
+
+Return to top
 
 Colombia has a reliable domestic and international telecommunications system. Cellular phones are widely used in Colombia with automatic roaming within the country; there are also roaming agreements with U.S. carriers and most other Latin American countries.
 
@@ -2910,23 +3154,31 @@ large concentration by carrier, with Claro boasting a 63 percent and 57 percent 
 
 Colombia’s Government has made a major push to increase connectivity and access to telecommunications. In that regard, the Ministry of InformationTechnologies and Communications has launched a major program called ‘Vive Digital’, which is trying to increase the number of internet connections in the country, which as of year’s end 2013 stood at over 7.6 million for broadband and almost at 4 million for fixed and mobile connections.
 
-<h3 id="transportation">Transportation</h3> [Return to top](#chap8)
+###Transportation 
+
+Return to top
 
 **Airports:** Colombian air transportation is well developed, with international airports in Armenia, Bogotá, Barranquilla, Cartagena, Cali, Cucuta, Leticia, Pereira, Medellin, and San Andres Island providing regular flights to major cities abroad. Currently, there are five U.S. airlines (American, Delta, United, JetBlue, and Spirit) that provide direct daily flights between Colombia and the United States. Frequent domestic flights connect principal cities within Colombia. Business travelers should be aware that prior flight reservations within Colombia (even though pre-paid) are not always honored, and flights may be overbooked to popular destinations such as Cartagena. Thus, a final confirmation is advisable 24-hours before departure as is arriving at the airport three hours in advance of the flight. In January 2013 an Open Sky Agreement entered into effect between the United States and Colombia which has increased the flight frequencies among the two countries.
 
 **Taxis:** Taxi service is available at all major hotels. Given traffic conditions and security concerns, business travelers should contract hourly taxi service or hired cars with drivers. Arrangements may be made with your hotel for your transportation. The current rate is about US$ 15.00 per hour or 30,000 COP. If normal yellow city taxis must be used, ensure the hotel/restaurant calls a “radio taxi” and provides you with a code. Never hail taxis on the street and never share a cab with an unknown person (including the driver's "brother, son, cousin, etc."). Taxis fares increase 30 percent after dark.
 
-<h3 id="language">Language</h3> [Return to top](#chap8)
+###Language 
+
+Return to top
 
 Spanish is the official language and spoken throughout the country. It is advisable to have some knowledge of Spanish or to hire the services of a qualified interpreter. Many senior executives and government officials speak English. Make the effort to translate your sales literature and website information into Spanish to improve your customer service.
 
-<h3 id="health">Health</h3> [Return to top](#chap8)
+###Health 
+
+Return to top
 
 Bogota is a high altitude location (8,600 ft). Travelers should take it easy the first day, avoid alcohol, eat moderately and stay hydrated. Medical care is adequate in major cities, but quality varies elsewhere. In Bogota in particular, travelers can find very qualified general practitioners and specialists. Doctors and hospitals often expect
 
 immediate cash payment for health services, although many hospitals in principal cities accept major U.S. credit cards. U.S. medical insurance is not always valid outside the United States. Visitors with a particular medical problem may therefore wish to consider supplemental medical insurance with specific overseas coverage, including the provision for medical evacuation or other emergencies.
 
-<h3 id="local-time">Local Time, Business Hours, and Holidays</h3> [Return to top](#chap8)
+###Local Time, Business Hours, and Holidays 
+
+Return to top
 
 Colombian time is the same as U.S. Eastern Standard time, without daylight-saving adjustments, e.g. Washington time in winter, Chicago time in summer.
 
@@ -2946,7 +3198,9 @@ Regional Holidays: February 9 through February 11, (Carnival), Barranquilla. Dec
 
 The U.S. Embassy in Bogota observes U.S. government holidays as well as Colombian holidays.
 
-<h3 id="temporary-entry">Temporary Entry of Materials and Personal Belongings</h3> [Return to top](#chap8)
+###Temporary Entry of Materials and Personal Belongings 
+
+Return to top
 
 Non-fungible merchandise that can be thoroughly identified by marks, serial numbers, or other symbols can be temporarily brought into Colombian territory for specific purposes. The merchandise must be re-exported immediately after the pre- authorized period, without being subject to any alteration or modification, except for the normal deterioration caused by use. There are two categories for temporary imports: short and long term. The DIAN decides which of the two systems will be applied to a specific case:
 
@@ -2956,7 +3210,9 @@ Long-Term: Colombian Customs regulations also allow companies to import equipmen
 
 Demonstration Equipment: The international carnet system for temporary imports of demonstration equipment (to be used in promotional campaigns or trade shows) is not in effect in Colombia. The DIAN has implemented an alternative system. Visitors bringing in equipment for demonstration purposes are requested to fill out a special form provided by the DIAN upon their arrival at an international airport. The equipment may stay in the country up to 90 days. There is no deposit requirement.
 
-<h3 id="web-resources5">Web Resources</h3> [Return to top](#chap8)
+###Web Resources 
+
+Return to top
 
 Information on Yellow Fever, see [http://www.cdc.gov/travel/diseases/yellowfever.htm](http://www.cdc.gov/travel/diseases/yellowfever.htm) 
 
@@ -2968,17 +3224,19 @@ CIS - [http://travel.state.gov/travel/cis_pa_tw/cis/cis_1090.html](http://travel
 
 Travel warning - [http://travel.state.gov/travel/cis_pa_tw/tw/tw_941.html](http://travel.state.gov/travel/cis_pa_tw/tw/tw_941.html)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
-<h1 id="chap9">Chapter 9: Contacts, Market Research, and Trade Events</h1>
+#Chapter 9: Contacts, Market Research, and Trade Events
 
-* [Contacts](#contacts)
+* Contacts
 
-* [Market Research](#market-research)
+* Market Research
 
-* [Trade Events](#trade-events)
+* Trade Events
 
-<h3 id="contacts">Contacts</h3> [Return to top](#chap9)
+###Contacts 
+
+Return to top
 
 Andean Development Corp. (CAF): [www.caf.com](www.caf.com) 
 
@@ -3150,21 +3408,25 @@ Visit USA Committee Colombia: [www.visitusacol.com](www.visitusacol.com)
 
 World Bank: [http://www.worldbank.org/](http://www.worldbank.org/)
 
-<h3 id="market-research">Market Research</h3> [Return to top](#chap9)
+###Market Research 
+
+Return to top
 
 To view market research reports produced by the U.S. Commercial Service please go to the following website: [http://www.export.gov/marketresearch.html](http://www.export.gov/marketresearch.html) and click on Country and Industry Market Reports.
 
 Please note that these reports are only available to U.S. citizens and U.S. companies. Registration to the site is required, but free of charge.
 
-<h3 id="trade-events">Trade Events</h3> [Return to top](#chap9)
+###Trade Events 
+
+Return to top
 
 Please click on the link below for information on upcoming trade events.
 
 [http://export.gov/ibp/ibp.asp?ReportID=IBP](http://export.gov/ibp/ibp.asp?ReportID=IBP)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
-<h1 id="chap10">Chapter 10: Guide to Our Services</h1>
+#Chapter 10: Guide to Our Services
 
 The U.S. Commercial Service offers customized solutions to help your business enter and succeed in markets worldwide. Our global network of trade specialists will work one-on-one with you through every step of the exporting process, helping you to:
 
@@ -3180,7 +3442,7 @@ For more information on the services the U.S. Commercial Service offers U.S. bus
 
 [http://www.export.gov/colombia](http://www.export.gov/colombia)
 
-[Return to table of contents](#table-of-contents)
+Return to table of contents
 
 U.S. exporters seeking general export information/assistance or country- specific commercial information should consult with their nearest **Export Assistance Center** or the **U.S. Department of Commerce's Trade Information Center** at **(800) USA-TRADE**, or go to the following website: [http://www.export.gov](http://www.export.gov)
 
