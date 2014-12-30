@@ -8,7 +8,7 @@ class CountryCommercialGuideData
 
   def initialize(resource = ENDPOINT)
     @resource = resource
-    @entry_title, @entry_chapter, @entry_country, @entry_url, @md_file, @topics, @md_url = ''
+    @title, @chapter, @country, @pdf_url, @md_file, @topics, @md_url = ''
     @entries = []
   end
 
@@ -28,9 +28,9 @@ class CountryCommercialGuideData
 
   def parse_yaml(hash)
     @md_file = hash['md_file']
-    @entry_title = hash['title']
-    @entry_country = hash['country']
-    @entry_url = hash['pdf_url']
+    @title = hash['title']
+    @country = lookup_country(hash['country'])
+    @pdf_url = hash['pdf_url']
     @md_url = hash['md_url']
     @entries = hash['entries']
     @entries.each(&:symbolize_keys!)
@@ -61,9 +61,9 @@ class CountryCommercialGuideData
   end
 
   def set_field_values(hash)
-    hash[:title] = @entry_title
-    hash[:country] = @entry_country
-    hash[:pdf_url] = @entry_url
+    hash[:title] = @title
+    hash[:country] = @country
+    hash[:pdf_url] = @pdf_url
     hash[:md_url] = @md_url
     hash[:section_url] = @md_url + '#' + hash[:section_url]
   end
