@@ -16,7 +16,7 @@ We use bundler to manage gems. You can install bundler and other required gems l
 
 We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
-    $ brew install elasticsearch
+    brew install elasticsearch
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
