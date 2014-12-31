@@ -5,7 +5,7 @@ module TradeLead
   class UkData
     include Importer
 
-    # Could implement some params here to fetch historical data
+    # Could implement some params here to fetch historical data #
     ENDPOINT = 'https://online.contractsfinder.businesslink.gov.uk/PublicFileDownloadHandler.ashx?fileName=notices.csv&recordType=Notices&fileContent=Recent'
 
     COLUMN_HASH = {
