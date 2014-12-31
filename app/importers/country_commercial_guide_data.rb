@@ -8,7 +8,7 @@ class CountryCommercialGuideData
 
   def initialize(resource = ENDPOINT)
     @resource = resource
-    @title, @chapter, @country, @pdf_url, @md_file, @topics, @md_url = ''
+    @title, @chapter, @country, @pdf_url, @topics, @text_path, @md_file = ''
     @entries = []
   end
 
@@ -29,9 +29,9 @@ class CountryCommercialGuideData
   def parse_yaml(hash)
     @md_file = hash['md_file']
     @title = hash['title']
-    @country = lookup_country(hash['country'])
+    @country = hash['country']
     @pdf_url = hash['pdf_url']
-    @md_url = hash['md_url']
+    @text_path = hash['text_path']
     @entries = hash['entries']
     @entries.each(&:symbolize_keys!)
   end
@@ -55,7 +55,7 @@ class CountryCommercialGuideData
         end
 
       end
-
+      File.open("#{Rails.root}/data/country_commercial_guides/#{@country.downcase}/#{value[:section_url]}.md", 'w'){|f| f.write(value[:content]) }
       set_field_values(value)
     end
   end
@@ -64,7 +64,7 @@ class CountryCommercialGuideData
     hash[:title] = @title
     hash[:country] = @country
     hash[:pdf_url] = @pdf_url
-    hash[:md_url] = @md_url
-    hash[:section_url] = @md_url + '#' + hash[:section_url]
+    hash[:section_url] = @text_path  + hash[:section_url] + '.md'
+    hash[:content] = Nokogiri::HTML(hash[:content].gsub("\n", ' ')).text
   end
 end

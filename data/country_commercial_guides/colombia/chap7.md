@@ -1,0 +1,192 @@
+<h1 id="chap7">Chapter 7: Trade and Project Financing</h1>
+
+* [How Do I Get Paid (Methods of Payment)](#how-do-I-get-paid)
+
+* [How Does the Banking System Operate](#how-does-the-banking-system-operate)
+
+* [Foreign-Exchange Controls](#foreign-exchange-controls)
+
+* [U.S. Banks and Local Correspondent Banks](#us-banks-and-local-correspondent-banks)
+
+* [Project Financing](#project-financing)
+
+* [Web Resources](#web-resources4)
+
+<h3 id="how-do-I-get-paid">How Do I Get Paid (Methods of Payment)</h3> [Return to top](#chap7)
+
+Most products are imported through letters of credit or time drafts. Soft and long-term financing is an important sales tool, especially for government imports or public tenders. Foreign suppliers, financial intermediaries in Colombia, or foreign financial institutions, may finance Colombian imports.
+
+Colombian importers may freely negotiate payment terms with their suppliers, but importers must list the agreed payment terms on the import documents and may not subsequently change them. These are generally between one and six months for imported products for immediate consumption, including raw materials, intermediate goods, and consumer goods, with almost no term limitations for capital goods, which are payable within the timetables set on the import documentation, plus a grace period of three additional months. Foreign payments may be authorized in installments, but in no case can the original terms listed on the import documents be changed.
+
+General trade finance is freely available and letters of credit are widely used in Colombia. Methods, terms, and conditions of payment vary with the type of credit. Most imports of equipment are paid via irrevocable 180-day letter of credit (L/C), payable on sight against shipping documents. Normal payment term is 60 days. There are transactional cases in which suppliers may extend terms to 120 days by time draft, but this is not common practice. When a satisfactory trading relationship has been established, terms are those generally applied in international trade. Short-term is considered any term less than one year; medium-term is from one to four years; and, long-term ranges from five years up to 20 years.
+
+<h3 id="how-does-the-banking-system-operate">How Does the Banking System Operate</h3> [Return to top](#chap7)
+
+Colombia’s financial system operates under the supervision of the Financial Superintendent, created in 2005 from the merger of the Banking Superintendent and the Stock Exchange Superintendent. The financial system is relatively large in comparison with the nation’s gross domestic product. It has many highly sophisticated institutions with state-of-the-art technology. However, financial services are still very costly and intermediation remains the most important financial activity.
+
+128 Following the 1998-1999 financial crises, almost half of banking and non-banking institutions were closed, taken over, or forced to merge. Many weaker financial institutions merged or are now affiliated with more experienced and financially sound owners. Still, experts consider that the sector has not reached its ideal size. The presence of foreign banks has intensified competition and investment in advanced technologies and government authorities have made significant efforts to improve the health of the financial sector. In January 2012, Scotia Bank of Canada acquired Colpatria Bank for US$1 billion. The most recent investment, valued at US$1.3 billion, was the acquisition of Helm Bank by the Chilean group Corpbanca in October 2012. Commercial banks are allowed to complete all authorized credit operations, with the exception of leasing operations and real estate sector investments. Only commercial banks provide checking accounts. Within this group, some institutions specialize in housing and construction financing (mortgage banks). Commercial banks dominate the financial market, accounting for over 80 percent of the financial system’s assets.
+
+Colombia has not reached the banking coverage of developed countries. However, almost all financial entities are expanding the infrastructure and coverage of their banking services, and access to virtual banking has improved significantly.
+
+In 2009 a new law reforming the financial sector was passed. The reforms increased protection for financial customers, including requirements that financial institutions properly disclose the costs associated with their operations. They also forbid agreements in which consumers waive their rights and provisions shifting the burden of proof to consumers. The reforms create Advocate for Financial Consumers positions, which every financial institution must have and who are responsible for ensuring that financial institutions do not violate consumers' rights. The new law also introduces greater flexibility to the pension fund system by creating the multi-fund structure to allow for various risk investment profiles. It allows foreign banks and foreign insurance companies to operate locally without having to incorporate a Colombian entity, although they do have to set up a branch in Colombia, subject to all relevant legal requirements. Finally the law establishes mechanisms to promote microfinance, securitization and the development of capital markets.
+
+<h3 id="foreign-exchange-controls">Foreign-Exchange Controls</h3> [Return to top](#chap7)
+
+Colombia imposes no foreign exchange controls on trade. However, exchange regulations require that the following transactions be channeled through intermediaries (i.e. banks or other recognized financial institutions) authorized for such purposes, and must be declared to the Central Bank:
+
+* Imports and exports of goods
+* External loans and related financing costs 
+* Investment of capital from abroad and remittances of profits thereon
+* Investment of Colombian capital abroad, as well as remittances of yields 
+* Investment in foreign securities and assets and their associated profits 
+* Endorsements and guarantees in foreign currency
+* Derivative or secondary financial operations, e.g. forwards, swaps, caps, floors, or collars.
+
+Colombia has reduced foreign exchange controls significantly in recent years. External Resolution No. 6 of 2000 abolished prior deposit requirements with the Central Bank for
+
+129 public and private external loans as well as for foreign financing of imports into Colombia. Also, Resolution 11 allows residents to make payments to other residents in U.S. dollars through checking accounts held abroad, and Resolution 8 authorizes stock brokerage firms to act as intermediaries in the foreign exchange market. The Colombian peso is convertible and investors report no untoward restrictions on access to hard currency.
+
+Projects performed by companies with foreign capital in special sectors such as the exploration and production of oil, natural gas, coal, nickel, and uranium are subject to a special foreign exchange policy. Under the special policy, investors are not bound to repatriate export-generated foreign currency. Companies devoted to technical services related to hydrocarbon exploration and production activities may carry out operations in a foreign currency with no repatriation obligation. Furthermore, foreign investors are not obligated to reimburse Colombia with foreign currency obtained from the sale of products from these operations. Expenses incurred abroad that are related to the development of these projects must be paid in foreign currency. Companies interested in being covered by these special provisions must notify the central bank.
+
+The Ministry of Finance issued Decree 4145 on November 5, 2010 reinstating a withholding tax of 33 percent on interest paid on foreign debt. This decree will raise the cost of capital for local borrowers. The purpose of the decree is to reduce the inflow of foreign currency. Decree 4145 does not supersede a lower rate of withholding tax provided for in Colombia’s tax treaties with Spain and Chile.
+
+<h3 id="us-banks-and-local-correspondent-banks">U.S. Banks and Local Correspondent Banks</h3> [Return to top](#chap7)
+
+Virtually all Colombian banks have correspondent banks in the United States. The following are major Colombian banks and U.S. banks with which they have correspondent relationships:
+
+**Davivienda:** 
+
+Davivienda Internacional 
+
+JP Morgan Chase Citibank 
+
+Bank of New York Mellon
+
+**BanColombia:** 
+
+Citibank 
+
+Bank of New York Mellon 
+
+Deutsche Bank
+
+Bank of America
+
+**CoBank:** 
+
+JP Morgan Chase 
+
+American Express Bank 
+
+Lloyds TSB Bank 
+
+International Bank of Miami
+
+Regions Bank
+
+**Banco de Occidente:**
+
+Citibank
+
+Bank of America 
+
+Bank of New York Mellon
+
+American Express Bank
+
+**Banco Popular:**
+
+Bank of America 
+
+Dressner Bank
+
+Bayerische Hypound-Vereins 
+
+Bank Citibank 
+
+Bank of New York Mellon
+
+TD Bank 
+
+HCBC Bank
+
+ING Bank
+
+Regions Bank
+
+**Banco de Bogotá:**
+
+Citibank 
+
+Bank of America 
+
+Deutsche bank 
+
+JP Morgan
+
+Bank of New York Mellon
+
+**AV Villas:**
+
+Banco de Occidente USA
+
+**Colpatria Bank:** 
+
+Bank of America
+
+**BBVA Colombia:** 
+
+BBVA Bank, New York 
+
+BBVA Bank, Miami
+
+<h3 id="#project-financing">Project Financing</h3> [Return to top](#chap7)
+
+The government and the Central Bank are important sources of funding for the financial system. The Central Bank, in addition to providing the usual discount facilities to support system liquidity, manages several special government funds to promote lending into a number of sectors that have been determined to be important to national development or economically essential. The funding comes from government capital, bonds, and current fiscal appropriations, if needed to cover deficits. Access to the funds tends to require considerable paperwork; applicants must qualify and margins are limited. Their importance as a funding resource has diminished in recent years.
+
+Leasing, and domestic and international (both operating and capital) financing are becoming popular, mainly because of tax benefits. Factoring and international credit insurance is available. Transactional financing is more associated with trade in
+
+consumer goods, while equity-based financing is more commonly used for project financing.
+
+Colombian exporters have access to credit offered by the Colombian Foreign Trade Bank (Bancoldex). This credit is also extended to Colombian importers for industrial imports.
+
+Foreign investors have full access to local credit. While the Colombian Government still directs credit to some areas (notably agriculture), credit is mostly allocated by the private financial market. Loans of foreign origin or foreign financing of imports are permitted.
+
+**EX-IM:** The Export-Import Bank of the United States (Ex-Im) provides a full range of services in Colombia. Ex-Im offers a range of loan, insurance, and loan guarantee programs to facilitate exports of U.S. goods and services to Colombian governmental and private companies. For additional information visit: www.exim.gov
+
+**OPIC:** OPIC is a U.S. government agency that supports, finances and insures projects that have a positive effect on U.S. employment, are financially sound and promise benefits to the social and economic development of the host country. OPIC assistance is available for new investments, privatization, and for expansion and modernization of existing plants sponsored by U.S. investors. Access OPIC programs at: www.opic.gov
+
+**Multilateral Funding Agencies and Financial Markets:** Multilateral agencies such as the World Bank through the International Finance Corporation (IFC), the Inter-American Development Bank (IDB), the Andean Development Corporation (CAF), the Export Import Bank of Japan, and USAID (and development agencies of Japan and Canada) are active in providing financing for projects in Latin America and the Caribbean.
+
+The Andean Development Corporation (Corporacion Andina de Fomento) is the only organization to provide major direct financing for greenfield projects in Colombia. The CAF has provided direct financing to the private sector for the development of greenfield projects in various infrastructure sectors.
+
+**IADC:** The Inter-American Development Corporation provides development capital to export oriented companies in the agricultural business through “Corfisura Fondo de Desarrollo de Empresas,” Colombia's first development capital fund in manufacturing, mining, and emerging technology sectors.
+
+**World Bank:** In 1994, Colombia approved through Law 149, its adherence to the Multilateral Investment Guarantee Agency (MIGA), created in 1985 by the World Bank to stimulate the flow of resources for productive ends between member countries and in particular toward developing countries.
+
+<h3 id="web-resources4">Web Resources Return</h3> [Return to top](#chap7)
+
+Export-Import Bank of the United States: [http://www.exim.gov](http://www.exim.gov)
+
+Country Limitation Schedule: [http://www.exim.gov/tools/country/country_limits.html](http://www.exim.gov/tools/country/country_limits.html) 
+
+OPIC: [http://www.opic.gov](http://www.opic.gov) 
+
+Trade and Development Agency: [http://www.tda.gov/](http://www.tda.gov/)
+
+SBA's Office of International Trade: [http://www.sba.gov/oit/](http://www.sba.gov/oit/)
+
+USDA Commodity Credit Corporation: [http://www.fsa.usda.gov/ccc/default.html](http://www.fsa.usda.gov/ccc/default.html) 
+
+U.S. Agency for International Development: [http://www.usaid.gov](http://www.usaid.gov) 
+
+U.S. Embassy Website in Bogotá, Colombia: [http://bogota.usembassy.gov](http://bogota.usembassy.gov) 
+
+Colombian Banking Association: [http://www.asobancaria.com](http://www.asobancaria.com)
+
+Colombian Customs and Income Tax Offices: [http://www.dian.gov.co](http://www.dian.gov.co) 
+
+Colombian Ministry for Foreign Affairs: [http://www.cancilleria.gov.co/](http://www.cancilleria.gov.co/)
+
+[Return to table of contents](#table-of-contents)
+
