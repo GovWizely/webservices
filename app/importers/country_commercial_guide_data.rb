@@ -1,6 +1,4 @@
 
-require 'open-uri'
-
 class CountryCommercialGuideData
   include Importer
 
@@ -8,21 +6,23 @@ class CountryCommercialGuideData
 
   def initialize(resource = ENDPOINT)
     @resource = resource
-    @title, @chapter, @country, @pdf_url, @topics, @text_path, @md_file = ''
+    @title, @country, @pdf_url, @text_path, @md_file, @chapter = ''
     @entries = []
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
 
+    entries = []
     Dir[@resource].each do |resource|
       yaml_hash = YAML.load_file(resource)
       parse_yaml(yaml_hash)
       clear_output_directory
       build_entry_hashes
+      entries += @entries
     end
 
-    CountryCommercialGuide.index @entries
+    CountryCommercialGuide.index entries
   end
 
   private
@@ -33,6 +33,7 @@ class CountryCommercialGuideData
     @country = hash['country']
     @pdf_url = hash['pdf_url']
     @text_path = hash['text_path']
+    @chapter = hash['break_chapter']
     @entries = hash['entries'].map(&:symbolize_keys!)
   end
 
@@ -48,6 +49,9 @@ class CountryCommercialGuideData
           entry[:content] = line
         elsif !@entries[index + 1].nil? && line.include?('id="' + @entries[index + 1][:section_url] + '"')
           position = md_content.pos - line.length
+          break
+        elsif line.include?('id="' + @chapter + '"')
+          position = md_content.pos
           break
         elsif !entry[:content].nil?
           entry[:content] += line
