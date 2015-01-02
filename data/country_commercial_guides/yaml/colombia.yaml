@@ -3,7 +3,7 @@ md_file: 'colombia-ids.md'
 title: 'Country Commercial Guides - Colombia'
 country: 'Colombia'
 pdf_url: 'http://www.buyusainfo.net/docs/x_9121404.pdf'
-text_path: 'some-aws-place/colombia/'
+text_path: 'http://govwizely.github.io/ccg/colombia/'
 entries:
   - chapter: 'Chapter 1: Doing Business In Colombia'
     section: ''
