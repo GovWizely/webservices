@@ -1,3 +1,7 @@
+--- 
+permalink: 'education.html' 
+published: true 
+---
 <h3 id="education">Education</h3>
 
 ####Overview [Return to top](#chap4)

@@ -1,3 +1,7 @@
+--- 
+permalink: 'travel-and-tourism.html' 
+published: true 
+---
 <h3 id="travel-and-tourism">Travel and Tourism</h3>
 
 ####Overview [Return to top](#chap4)

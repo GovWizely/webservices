@@ -1,3 +1,7 @@
+--- 
+permalink: 'food-processing-equipment.html' 
+published: true 
+---
 <h3 id="food-processing-equipment">Food Processing Equipment</h3>
 
 ####Overview [Return to top](#chap4)

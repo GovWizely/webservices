@@ -1,3 +1,7 @@
+--- 
+permalink: 'medical-equipment.html' 
+published: true 
+---
 <h3 id="medical-equipment">Medical Equipment</h3>
 
 ####Overview [Return to top](#chap4)

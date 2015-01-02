@@ -9,7 +9,6 @@ class CountryCommercialGuideData
   def initialize(resource = ENDPOINT)
     @resource = resource
     @title, @chapter, @country, @pdf_url, @topics, @text_path, @md_file = ''
-    @yaml_header = ''
     @entries = []
   end
 

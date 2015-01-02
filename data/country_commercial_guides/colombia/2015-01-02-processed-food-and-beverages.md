@@ -1,3 +1,7 @@
+--- 
+permalink: 'processed-food-and-beverages.html' 
+published: true 
+---
 <h3 id="processed-food-and-beverages">Processed Food and Beverages</h3>
 
 ####Overview [Return to top](#chap4)

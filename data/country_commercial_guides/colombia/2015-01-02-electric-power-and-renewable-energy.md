@@ -1,3 +1,7 @@
+--- 
+permalink: 'electric-power-and-renewable-energy.html' 
+published: true 
+---
 <h3 id="electric-power-and-renewable-energy">Electric Power and Renewable Energy</h3>
 
 ####Overview [Return to top](#chap4)

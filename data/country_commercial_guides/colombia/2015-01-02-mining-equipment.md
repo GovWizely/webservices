@@ -1,3 +1,7 @@
+--- 
+permalink: 'mining-equipment.html' 
+published: true 
+---
 <h3 id="mining-equipment">Mining Equipment</h3>
 
 ####Overview [Return to top](#chap4)

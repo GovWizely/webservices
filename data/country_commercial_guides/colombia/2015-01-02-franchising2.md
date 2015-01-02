@@ -1,3 +1,7 @@
+--- 
+permalink: 'franchising2.html' 
+published: true 
+---
 <h3 id="franchising2">Franchising</h3>
 
 ####Overview [Return to top](#chap4)

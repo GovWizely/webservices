@@ -1,3 +1,7 @@
+--- 
+permalink: 'information-technology.html' 
+published: true 
+---
 <h3 id="information-technology">Information Technology</h3>
 
 ####Overview [Return to top](#chap4)

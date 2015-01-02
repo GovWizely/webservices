@@ -1,3 +1,7 @@
+--- 
+permalink: 'oil-and-gas-equipment.html' 
+published: true 
+---
 <h3 id="oil-and-gas-equipment">Oil and Gas Equipment</h3>
 
 ####Overview [Return to top](#chap4)

@@ -1,3 +1,7 @@
+--- 
+permalink: 'infrastructure-and-construction.html' 
+published: true 
+---
 <h3 id="infrastructure-and-construction">Infrastructure and Construction</h3>
 
 ####Overview [Return to top](#chap4)

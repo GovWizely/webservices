@@ -1,3 +1,7 @@
+--- 
+permalink: 'agricultural-sector.html' 
+published: true 
+---
 <h3 id="agricultural-sector">Agricultural Sectors</h3>
 
 **Consumer Oriented Products**

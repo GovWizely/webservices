@@ -1,3 +1,7 @@
+--- 
+permalink: 'automotive.html' 
+published: true 
+---
 <h3 id="automotive">Automotive</h3>
 
 ####Overview [Return to top](#chap4)
