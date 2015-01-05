@@ -1,0 +1,124 @@
+---
+md_file: '2015-01-05-argentina.md'
+title: 'Country Commercial Guides - Argentina'
+country: 'Argentina'
+pdf_url: 'http://www.buyusainfo.net/docs/x_2216628.pdf'
+text_path: 'http://govwizely.github.io/ccg/argentina/'
+break_chapter: 'chap9'
+entries:
+  - chapter: 'Chapter 1: Doing Business In Argentina'
+    section: ''
+    topics:
+      - 'Doing Business In Argentina'
+    section_url: 'chap1'
+
+  - chapter: 'Chapter 2: Political and Economic Environment'
+    section: ''
+    topics:
+      - 'Political and Economic Environment'
+    section_url: 'chap2'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: ''
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'chap3'
+
+  - chapter: 'Chapter 4: Trade Regulations and Standards'
+    section: ''
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'chap4'
+
+  - chapter: 'Chapter 5: Investment Climate in Argentina'
+    section: ''
+    topics:
+      - 'Investment Climate in Argentina'
+    section_url: 'chap5'
+
+  - chapter: 'Chapter 6: Trade and Project Financing'
+    section: ''
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'chap6'
+
+  - chapter: 'Chapter 7: Getting Paid by Your Latin American Buyer'
+    section: ''
+    topics:
+      - 'Getting Paid by Your Latin American Buyer'
+    section_url: 'chap7'
+
+  - chapter: 'Chapter 8: Business Travel Information'
+    section: ''
+    topics:
+      - 'Business Travel Information'
+    section_url: 'chap8'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Agricultural Machinery, Irrigation Equipment, Parts and Components'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Agricultural Machinery, Irrigation Equipment, Parts and Components'
+    section_url: 'agricultural-machinery'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Agriculture'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Agriculture'
+    section_url: 'agriculture'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Electronic Security Equipment'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Electronic Security Equipment'
+    section_url: 'electronic-security-equipment'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Food Processing Equipment'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Food Processing Equipment'
+    section_url: 'food-processing-equipment'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Information and Communications Technology'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Information and Communications Technology'
+    section_url: 'information-and-communications-technology'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Medical Technology'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Medical Technology'
+    section_url: 'medical-technology'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Mining Machinery & Equipment'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Mining Machinery & Equipment'
+    section_url: 'mining-machinery-and-equipment'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Renewable Energy Technology and Equipment'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Renewable Energy Technology and Equipment'
+    section_url: 'renewable-energy-technology'
+
+  - chapter: 'Chapter 9: Top U.S. Export Prospects'
+    section: 'Travel and Tourism'
+    topics:
+      - 'Top U.S. Export Prospects'
+      - 'Travel and Tourism'
+    section_url: 'travel-and-tourism'
+
+  - chapter: 'Chapter 10: Additional Resources'
+    section: ''
+    topics:
+      - 'Additional Resources'
+    section_url: 'chap10'
