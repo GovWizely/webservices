@@ -20,5 +20,13 @@ describe CountryCommercialGuideQuery do
       end
     end
 
+    context 'when options include countries and topics' do
+      let(:query) { CountryCommercialGuideQuery.new(countries: 'co', topics: 'automotive') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
+      it 'generates search body with filtered by country and topic' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
   end
 end

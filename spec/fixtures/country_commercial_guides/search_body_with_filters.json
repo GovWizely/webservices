@@ -1,0 +1,18 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "terms": {
+            "country": ["co"]
+          }
+        },
+        {
+          "terms": {
+            "topics": ["automotive"]
+          }
+        }
+      ]
+    }
+  }
+}
