@@ -8,7 +8,7 @@ describe 'Country Commercial Guide API V1', type: :request do
 
   let(:search_path) { '/country_commercial_guides/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/country_commercial_guides/results.yaml") }
+  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/country_commercial_guides/results_with_content.yaml") }
 
   describe 'GET /country_commercial_guides/search.json' do
 

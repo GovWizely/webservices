@@ -21,7 +21,7 @@ class CountryCommercialGuideData
       build_entry_hashes
       entries += @entries
     end
-
+    #File.open("#{Rails.root}/spec/fixtures/country_commercial_guides/results.yaml", 'w'){|f| f.write(entries.to_yaml)}
     CountryCommercialGuide.index entries
   end
 
@@ -33,7 +33,7 @@ class CountryCommercialGuideData
     @country = hash['country']
     @pdf_url = hash['pdf_url']
     @text_path = hash['text_path']
-    @chapter = hash['break_chapter']
+    #@chapter = hash['break_chapter']
     @entries = hash['entries'].map(&:symbolize_keys!)
   end
 
@@ -50,9 +50,9 @@ class CountryCommercialGuideData
         elsif !@entries[index + 1].nil? && line.include?('id="' + @entries[index + 1][:section_url] + '"')
           position = md_content.pos - line.length
           break
-        elsif line.include?('id="' + @chapter + '"')
-          position = md_content.pos
-          break
+        #elsif line.include?('id="' + @chapter + '"')
+        #  position = md_content.pos
+        #  break
         elsif !entry[:content].nil?
           entry[:content] += line
         end
@@ -69,6 +69,8 @@ class CountryCommercialGuideData
     entry[:pdf_url] = @pdf_url
     entry[:section_url] = @text_path  + entry[:section_url] + '.html'
     entry[:content] = Nokogiri::HTML(entry[:content].gsub("\n", ' ')).text
+    entry[:content].gsub!("\r", ' ')
+    entry[:content].gsub!("\t", ' ')
   end
 
   def write_entry_to_file(entry)

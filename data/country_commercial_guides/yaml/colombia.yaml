@@ -4,132 +4,919 @@ title: 'Country Commercial Guides - Colombia'
 country: 'Colombia'
 pdf_url: 'http://www.buyusainfo.net/docs/x_9121404.pdf'
 text_path: 'http://govwizely.github.io/ccg/colombia/'
-break_chapter: 'chap4'
 entries:
+
   - chapter: 'Chapter 1: Doing Business In Colombia'
     section: ''
     topics:
       - 'Doing Business In Colombia'
     section_url: 'chap1'
+
+  - chapter: 'Chapter 1: Doing Business In Colombia'
+    section: 'Market Overview'
+    topics:
+      - 'Doing Business In Colombia'
+    section_url: 'market-overview'
+
+  - chapter: 'Chapter 1: Doing Business In Colombia'
+    section: 'Market Challenges'
+    topics:
+      - 'Doing Business In Colombia'
+    section_url: 'market-challenges'
+
+  - chapter: 'Chapter 1: Doing Business In Colombia'
+    section: 'Market Opportunities'
+    topics:
+      - 'Doing Business In Colombia'
+    section_url: 'market-opportunities'
+
+  - chapter: 'Chapter 1: Doing Business In Colombia'
+    section: 'Market Entry Strategy'
+    topics:
+      - 'Doing Business In Colombia'
+    section_url: 'market-entry-strategy'
+
   - chapter: 'Chapter 2: Political and Economic Environment'
     section: ''
     topics:
       - 'Political and Economic Environment'
     section_url: 'chap2'
+
   - chapter: 'Chapter 3: Selling U.S. Products and Services'
     section: ''
     topics:
       - 'Selling U.S. Products and Services'
     section_url: 'chap3'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Using an Agent or Distributor'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'using-an-agent-or-distributor'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Establishing an Office'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'establishing-an-office'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Franchising'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'franchising1'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Direct Marketing'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'direct-marketing'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Joint Ventures/Licensing'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'joint-ventures-licensing'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Selling to the Government'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'selling-to-the-government'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Distribution and Sales Channels'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'distribution-and-sales-channels'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Selling Factors/Techniques'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'selling-factors-techniques'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Electronic Commerce'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'electronic-commerce'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Trade Promotion and Advertising'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'trade-promotion-and-advertising'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Pricing'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'pricing'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Sales Service/Customer Support'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'sales-service-customer-support'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Protecting Your Intellectual Property'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'protecting-your-intellectual-property'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Due Diligence'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'due-diligence'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Local Professional Services'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'local-professional-services'
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Web Resources'
+    topics:
+      - 'Selling U.S. Products and Services'
+    section_url: 'web-resources1'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Automotive'
+    section: ''
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'chap4'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Automotive'
     section_url: 'automotive'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Defense'
+    section: 'Automotive - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Defense - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Defense'
     section_url: 'defense'     
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Education'
+    section: 'Defense - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Defense'
+    section_url: 'defense-best-prospects' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Defense - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Defense'
+    section_url: 'defense-opportunities' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Defense - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Defense'
+    section_url: 'defense-resources' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Education - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Education' 
     section_url: 'education'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Electric Power and Renewable Energy'
+    section: 'Education - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Education' 
+    section_url: 'education-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Education - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Education' 
+    section_url: 'education-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Education - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Education' 
+    section_url: 'education-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Electric Power and Renewable Energy - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Electric Power and Renewable Energy'
     section_url: 'electric-power-and-renewable-energy' 
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Food Processing Equipment'
+    section: 'Electric Power and Renewable Energy - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Electric Power and Renewable Energy'
+    section_url: 'electric-power-and-renewable-energy-best-prospects' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Electric Power and Renewable Energy - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Electric Power and Renewable Energy'
+    section_url: 'electric-power-and-renewable-energy-opportunities' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Electric Power and Renewable Energy - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Electric Power and Renewable Energy'
+    section_url: 'electric-power-and-renewable-energy-resources' 
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Food Processing Equipment - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Food Processing Equipment' 
     section_url: 'food-processing-equipment'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Franchising'
+    section: 'Food Processing Equipment - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Food Processing Equipment' 
+    section_url: 'food-processing-equipment-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Food Processing Equipment - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Food Processing Equipment' 
+    section_url: 'food-processing-equipment-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Food Processing Equipment - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Food Processing Equipment' 
+    section_url: 'food-processing-equipment-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Franchising - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Franchising'
     section_url: 'franchising2'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Information Technology'
+    section: 'Franchising - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Franchising'
+    section_url: 'franchising2-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Information Technology - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Information Technology' 
     section_url: 'information-technology'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Infrastructure and Construction'
+    section: 'Information Technology - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Information Technology' 
+    section_url: 'information-technology-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Information Technology - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Information Technology' 
+    section_url: 'information-technology-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Information Technology - Note on Telecommunications and the U.S. - Colombia FTA'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Information Technology' 
+    section_url: 'information-technology-telecommunications'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Information Technology - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Information Technology' 
+    section_url: 'information-technology-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Infrastructure and Construction - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Infrastructure and Construction'
     section_url: 'infrastructure-and-construction'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Medical Equipment'
+    section: 'Infrastructure and Construction - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Infrastructure and Construction'
+    section_url: 'infrastructure-and-construction-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Infrastructure and Construction - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Infrastructure and Construction'
+    section_url: 'infrastructure-and-construction-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Infrastructure and Construction - Construction Overview'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Infrastructure and Construction'
+    section_url: 'infrastructure-and-construction-construction-overview'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Medical Equipment - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Medical Equipment'
     section_url: 'medical-equipment'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Mining Equipment'
+    section: 'Medical Equipment - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Medical Equipment'
+    section_url: 'medical-equipment-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Medical Equipment - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Medical Equipment'
+    section_url: 'medical-equipment-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Medical Equipment - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Medical Equipment'
+    section_url: 'medical-equipment-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Mining Equipment - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Mining Equipment' 
     section_url: 'mining-equipment'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Oil and Gas Equipment'
+    section: 'Mining Equipment - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Mining Equipment' 
+    section_url: 'mining-equipment-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Mining Equipment - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Mining Equipment' 
+    section_url: 'mining-equipment-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Mining Equipment - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Mining Equipment' 
+    section_url: 'mining-equipment-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Oil and Gas Equipment - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Oil and Gas Equipment' 
     section_url: 'oil-and-gas-equipment'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Processed Food and Beverages'
+    section: 'Oil and Gas Equipment - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Oil and Gas Equipment' 
+    section_url: 'oil-and-gas-equipment-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Oil and Gas Equipment - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Oil and Gas Equipment' 
+    section_url: 'oil-and-gas-equipment-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Oil and Gas Equipment - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Oil and Gas Equipment' 
+    section_url: 'oil-and-gas-equipment-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Processed Food and Beverages - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Processed Food and Beverages' 
     section_url: 'processed-food-and-beverages'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Travel and Tourism'
+    section: 'Processed Food and Beverages - Best Products/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Processed Food and Beverages' 
+    section_url: 'processed-food-and-beverages-best-products'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Processed Food and Beverages - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Processed Food and Beverages' 
+    section_url: 'processed-food-and-beverages-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Processed Food and Beverages - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Processed Food and Beverages' 
+    section_url: 'processed-food-and-beverages-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Travel and Tourism - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Travel and Tourism' 
     section_url: 'travel-and-tourism'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Agricultural Sector'
+    section: 'Travel and Tourism - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Travel and Tourism' 
+    section_url: 'travel-and-tourism-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Travel and Tourism - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Travel and Tourism' 
+    section_url: 'travel-and-tourism-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Travel and Tourism - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Travel and Tourism' 
+    section_url: 'travel-and-tourism-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Agricultural Sector' 
     section_url: 'agricultural-sector'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Wheat'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-wheat'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Corn'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-corn'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sector - Soybean Meal'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Agricultural Sector' 
+    section_url: 'agricultural-sector-soybean-meal'
+
   - chapter: 'Chapter 5: Trade Regulations and Standards'
     section: ''
     topics:
       - 'Trade Regulations and Standards'
     section_url: 'chap5'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Import Tariffs'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'import-tariffs'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Trade Barriers'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'trade-barriers'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Import Requirements and Documentation'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'import-requirements-and-documentation'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'U.S. Export Controls'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'us-export-controls'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Temporary Entry'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'temporary-entry'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Labeling and Marking Requirements'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'labeling-and-marking-requirements'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Prohibited and Restricted Imports'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'prohibited-and-restricted-imports'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Customs Regulations and Contact Information'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'customs-regulations-and-contact-information'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Overview'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards Organizations'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-organizations'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Conformity Assessment'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-conformity-assessment'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Product Certification'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-product-certification'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Accreditation'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-accreditation'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Publication of Technical Regulations'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-publication-of-technical-regulations'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Labeling and Marking'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-labeling-and-marking'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Standards - Contacts'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'standards-contacts'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Trade Agreements'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'trade-agreements'
+
+  - chapter: 'Chapter 5: Trade Regulations and Standards'
+    section: 'Web Resources'
+    topics:
+      - 'Trade Regulations and Standards'
+    section_url: 'web-resources2'
+
   - chapter: 'Chapter 6: Investment Climate'
-    section: ''
+    section: 'Overview'
     topics:
       - 'Investment Climate'
     section_url: 'chap6'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Openness to Foreign Investment'
+    topics:
+      - 'Investment Climate'
+    section_url: 'openness-to-foreign-investment'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Conversion and Transfer Policies'
+    topics:
+      - 'Investment Climate'
+    section_url: 'conversion-and-transfer-policies'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Expropriation and Compensation'
+    topics:
+      - 'Investment Climate'
+    section_url: 'expropriation-and-compensation'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Dispute Settlement'
+    topics:
+      - 'Investment Climate'
+    section_url: 'dispute-settlement'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Performance Requirements and Incentives'
+    topics:
+      - 'Investment Climate'
+    section_url: 'performance-requirements-and-incentives'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Right to Private Ownership and Establishment'
+    topics:
+      - 'Investment Climate'
+    section_url: 'right-to-private-ownership-and-establishment'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Protection of Property Rights'
+    topics:
+      - 'Investment Climate'
+    section_url: 'protection-of-property-rights'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Transparency of Regulatory System'
+    topics:
+      - 'Investment Climate'
+    section_url: 'transparency-of-regulatory-system'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Efficient Capital Markets and Portfolio Investment'
+    topics:
+      - 'Investment Climate'
+    section_url: 'efficient-capital-markets-and-portfolio-investment'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Competition from State-Owned Enterprises (SOEs)'
+    topics:
+      - 'Investment Climate'
+    section_url: 'competition-from-soes'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Corporate Social Responsibility'
+    topics:
+      - 'Investment Climate'
+    section_url: 'corporate-social-responsibility'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Political Violence Return'
+    topics:
+      - 'Investment Climate'
+    section_url: 'political-violence'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Corruption Return'
+    topics:
+      - 'Investment Climate'
+    section_url: 'corruption'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Bilateral Investment Agreements'
+    topics:
+      - 'Investment Climate'
+    section_url: 'bilateral-investment-agreements'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Overseas Private Investment Corporation (OPIC) and Other Investment Insurance Programs'
+    topics:
+      - 'Investment Climate'
+    section_url: 'opic'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Labor'
+    topics:
+      - 'Investment Climate'
+    section_url: 'labor'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Foreign-Trade Zones/Free Ports'
+    topics:
+      - 'Investment Climate'
+    section_url: 'foreign-trade-zones-free-ports'
+
+  - chapter: 'Chapter 6: Investment Climate'
+    section: 'Foreign Direct Investment Statistics'
+    topics:
+      - 'Investment Climate'
+    section_url: 'foreign-direct-investment-statistics'
+
   - chapter: 'Chapter 7: Trade and Project Financing'
     section: ''
     topics:
       - 'Trade and Project Financing'
     section_url: 'chap7'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'How Do I Get Paid (Methods of Payment)'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'how-do-I-get-paid'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'How Does the Banking System Operate'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'how-does-the-banking-system-operate'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'Foreign-Exchange Controls'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'foreign-exchange-controls'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'U.S. Banks and Local Correspondent Banks'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'us-banks-and-local-correspondent-banks'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'Project Financing'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'project-financing'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'Web Resources'
+    topics:
+      - 'Trade and Project Financing'
+    section_url: 'web-resources4'
+
   - chapter: 'Chapter 8: Business Travel'
     section: ''
     topics:
       - 'Business Travel'
     section_url: 'chap8'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Business Customs'
+    topics:
+      - 'Business Travel'
+    section_url: 'business-customs'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Travel Advisory'
+    topics:
+      - 'Business Travel'
+    section_url: 'travel-advisory'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Visa Requirements'
+    topics:
+      - 'Business Travel'
+    section_url: 'visa-requirements'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Telecommunications'
+    topics:
+      - 'Business Travel'
+    section_url: 'telecommunications'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Transportation'
+    topics:
+      - 'Business Travel'
+    section_url: 'transportation'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Language'
+    topics:
+      - 'Business Travel'
+    section_url: 'language'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Health'
+    topics:
+      - 'Business Travel'
+    section_url: 'health'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Local Time, Business Hours, and Holidays'
+    topics:
+      - 'Business Travel'
+    section_url: 'local-time'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Temporary Entry of Materials and Personal Belongings'
+    topics:
+      - 'Business Travel'
+    section_url: 'temporary-entry'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Web Resources'
+    topics:
+      - 'Business Travel'
+    section_url: 'web-resources5'
+
   - chapter: 'Chapter 9: Contacts, Market Research, and Trade Events'
     section: ''
     topics:
       - 'Contacts, Market Research and Trade Events'
     section_url: 'chap9'
+
+  - chapter: 'Chapter 9: Contacts, Market Research, and Trade Events'
+    section: 'Contacts'
+    topics:
+      - 'Contacts, Market Research and Trade Events'
+    section_url: 'contacts'
+
+  - chapter: 'Chapter 9: Contacts, Market Research, and Trade Events'
+    section: 'Market Research'
+    topics:
+      - 'Contacts, Market Research and Trade Events'
+    section_url: 'market-research'
+
+  - chapter: 'Chapter 9: Contacts, Market Research, and Trade Events'
+    section: 'Trade Events'
+    topics:
+      - 'Contacts, Market Research and Trade Events'
+    section_url: 'trade-events'
+
   - chapter: 'Chapter 10: Guide to Our Services'
     section: ''
     topics:
