@@ -29,17 +29,15 @@ module ScreeningList
             store:   true,
           },
           properties: {
-            id:                      { type: 'integer', index: :not_analyzed, include_in_all: false },
-
-            name:                    { type:   'string',
+            name:                    { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
-                                       fields: {
+                                       fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:               { type:   'string',
+            alt_names:               { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
-                                       fields: {
-                                         keyword:      { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

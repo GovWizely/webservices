@@ -19,9 +19,8 @@ class SharepointTradeArticle
   }.freeze
 
   self.mappings = {
-    sharepoint_trade_article: {
+    name.typeize => {
       properties: {
-        id:                       { type: 'string', index: :not_analyzed, include_in_all: false },
         title:                    { type: 'string', analyzer: 'custom_analyzer' },
         short_title:              { type: 'string', analyzer: 'custom_analyzer' },
         summary:                  { type: 'string', analyzer: 'custom_analyzer' },

@@ -21,7 +21,6 @@ module TariffRate
       klass.mappings = {
         klass.to_s.typeize => {
           properties: {
-            id:                          { type: 'integer', index: :not_analyzed, include_in_all: false },
             source_id:                   { type: 'string' },
             tariff_line:                 { type: 'string' },
             description:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

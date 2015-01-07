@@ -27,6 +27,7 @@ module Webservices
     config.autoload_paths += Dir["#{config.root}/lib/**/"]
 
     require 'ext/string'
+    require 'ext/hash'
 
     # Disable the asset pipeline.
     config.assets.enabled = false
@@ -40,5 +41,12 @@ module Webservices
     config.i18n.enforce_available_locales = false
 
     config.exceptions_app = routes
+
+    def model_classes
+      Dir[Rails.root.join('app/models/**/*.rb').to_s].map do |filename|
+        klass = filename.gsub(/(^.+models\/|\.rb$)/, '').camelize.constantize
+        klass.is_a?(Indexable) ? klass : nil
+      end.compact
+    end
   end
 end

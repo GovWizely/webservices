@@ -30,18 +30,18 @@ class ItaOfficeLocation
   }.freeze
 
   self.mappings = {
-    ita_office_location: {
-      dynamic:    false,
+    name.typeize => {
+      dynamic:    'false',
       properties: {
-        post:        { type:   'multi_field',
-                       fields: {
-                         post: { type: 'string', analyzer: 'location_name_analyzer' },
-                         sort: { type: 'string', analyzer: 'location_name_sort' } } },
+        post:        {
+          type:     'string',
+          analyzer: 'location_name_analyzer',
+          fields:   {
+            sort: { type: 'string', analyzer: 'location_name_sort' } } },
         office_name: { type: 'string', analyzer: 'location_name_analyzer' },
         country:     { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
         state:       { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
         city:        { type: 'string', analyzer: 'location_name_analyzer' },
-        id:          { type: 'string', index: :not_analyzed, include_in_all: false },
       },
     },
   }.freeze

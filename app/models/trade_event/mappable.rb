@@ -36,7 +36,6 @@ module TradeEvent
                                                 state:   { type: 'string', analyzer: 'keyword' },
                                                 country: { type: 'string', analyzer: 'keyword' } } },
 
-            id:                 { type: 'string', index: :not_analyzed, include_in_all: false },
             source:             { type: 'string', analyzer: 'keyword' },
           },
         },

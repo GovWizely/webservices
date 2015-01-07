@@ -13,6 +13,8 @@ shared_context 'a working Mock model class' do
         },
       }
     end
+    class MockData
+    end
   end
 end
 
@@ -108,5 +110,11 @@ describe Indexable do
         expect(docs_retrieved).to eq([])
       end
     end
+  end
+
+  describe '.importer_class' do
+    include_context 'a working Mock model class'
+    subject { Mock.importer_class }
+    it { is_expected.to eq(MockData) }
   end
 end
