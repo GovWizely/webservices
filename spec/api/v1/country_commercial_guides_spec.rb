@@ -8,7 +8,7 @@ describe 'Country Commercial Guide API V1', type: :request do
 
   let(:search_path) { '/country_commercial_guides/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/country_commercial_guides/results_with_content.yaml") }
+  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/country_commercial_guides/results.yaml") }
 
   describe 'GET /country_commercial_guides/search.json' do
 
@@ -20,7 +20,7 @@ describe 'Country Commercial Guide API V1', type: :request do
 
       it 'returns country commercial guide sections' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(23)
+        expect(json_response[:total]).to eq(6)
 
         results = json_response[:results]
         expect(results).to match_array expected_results
@@ -37,17 +37,15 @@ describe 'Country Commercial Guide API V1', type: :request do
 
       it 'returns country commercial guide sections' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(3)
+        expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        expect(results[0]).to eq(expected_results[8])
-        expect(results[1]).to eq(expected_results[2])
-        expect(results[2]).to eq(expected_results[0])
+        expect(results[0]).to eq(expected_results[0])
       end
     end
 
     context 'when countries and topics are specified' do
-      let(:params) { { countries: 'co', topics: 'automotive' } }
+      let(:params) { { countries: 'co', topics: 'defense' } }
       before { get search_path, params, v1_headers }
       subject { response }
 
@@ -58,7 +56,8 @@ describe 'Country Commercial Guide API V1', type: :request do
         expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        expect(results[0]).to eq(expected_results[3])
+        expect(results[0]).to eq(expected_results[5])
+
       end
     end
 

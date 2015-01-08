@@ -2522,7 +2522,7 @@ The extractive sector has been especially hard hit by insurgent attacks. Accordi
 
 The Colombian government and FARC have been in peace negotiations in Havana, Cuba since November 2012. They have agreed in principle on two of the five negotiating topics – agriculture and rural development and political participation – and discussion on a third topic, drugs, is ongoing. The last two agenda items, victims and end of conflict, have yet to be addressed.
 
-<h3 id="corruption">Corruption Return</h3> [Return to top](#chap6)
+<h3 id="corruption">Corruption</h3> [Return to top](#chap6)
 
 UN Anticorruption Convention, OECD Convention on Combatting Bribery Corruption Corruption is a significant challenge in Colombia. According to the World Economic Forum’s Global Competitiveness Index (2013-2014), corruption is the biggest problem for doing business in Colombia. The Colombian Attorney General estimates that corrupt activity drains $2.1 billion per year from the country’s economy. According to the “AmericasBarometer 2013” published by the Latin American Public Opinion Project, the perception of corruption in Colombia reached 81.7 percent, its highest level since the study was first carried out in 2004. Similarly, the latest Survey of Colombian Companies’ Anti-Bribery Practices, carried out in 2012, found that 94 percent of businesspeople believed their peers offered bribes and that 58 percent of companies lacked mechanisms for reporting cases of bribery. Responders said that corruption increases the cost of projects almost 15 percent, particularly for government contracts.
 
@@ -2777,7 +2777,7 @@ The Andean Development Corporation (Corporacion Andina de Fomento) is the only o
 
 **World Bank:** In 1994, Colombia approved through Law 149, its adherence to the Multilateral Investment Guarantee Agency (MIGA), created in 1985 by the World Bank to stimulate the flow of resources for productive ends between member countries and in particular toward developing countries.
 
-<h3 id="web-resources4">Web Resources</h3> [Return to top](#chap7)
+<h3 id="web-resources4">Web Resources Return</h3> [Return to top](#chap7)
 
 Export-Import Bank of the United States: [http://www.exim.gov](http://www.exim.gov)
 

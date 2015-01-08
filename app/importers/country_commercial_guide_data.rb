@@ -21,7 +21,7 @@ class CountryCommercialGuideData
       build_entry_hashes
       entries += @entries
     end
-    #File.open("#{Rails.root}/spec/fixtures/country_commercial_guides/results.yaml", 'w'){|f| f.write(entries.to_yaml)}
+
     CountryCommercialGuide.index entries
   end
 
@@ -29,11 +29,10 @@ class CountryCommercialGuideData
 
   def parse_yaml(hash)
     @md_file = hash['md_file']
-    @title = hash['title']
+    @pdf_title = hash['pdf_title']
     @country = hash['country']
     @pdf_url = hash['pdf_url']
-    @text_path = hash['text_path']
-    #@chapter = hash['break_chapter']
+    @section_url_prefix = hash['section_url_prefix']
     @entries = hash['entries'].map(&:symbolize_keys!)
   end
 
@@ -45,14 +44,12 @@ class CountryCommercialGuideData
       md_content.seek(position)
       md_content.each do |line|
 
-        if line.include?('id="' + entry[:section_url] + '"')
+        if line.include?('id="' + entry[:section_id])
           entry[:content] = line
-        elsif !@entries[index + 1].nil? && line.include?('id="' + @entries[index + 1][:section_url] + '"')
-          position = md_content.pos - line.length
+        elsif !entry[:content].nil? && line.include?('</div>')
+          entry[:content] += line
+          position = md_content.pos
           break
-        #elsif line.include?('id="' + @chapter + '"')
-        #  position = md_content.pos
-        #  break
         elsif !entry[:content].nil?
           entry[:content] += line
         end
@@ -64,19 +61,28 @@ class CountryCommercialGuideData
   end
 
   def set_field_values(entry)
-    entry[:title] = @title
-    entry[:country] = lookup_country(@country)
+    entry[:pdf_title] = @pdf_title
     entry[:pdf_url] = @pdf_url
-    entry[:section_url] = @text_path  + entry[:section_url] + '.html'
+    entry[:pdf_section] = entry.delete(:section)
+    entry[:pdf_chapter] = entry.delete(:chapter)
+
+    entry[:section_title] = entry[:pdf_chapter].dup
+    entry[:section_title].slice!(/Chapter [0-9]*: /)
+    entry[:country] = lookup_country(@country)
+    entry[:section_url] = @section_url_prefix  + entry.delete(:section_id) + '.html'
+    entry[:topic] = entry[:pdf_section]
+
+    entry[:industry] = "" if !entry.key?(:industry)
+
     entry[:content] = Nokogiri::HTML(entry[:content].gsub("\n", ' ')).text
     entry[:content].gsub!("\r", ' ')
     entry[:content].gsub!("\t", ' ')
   end
 
   def write_entry_to_file(entry)
-    file_path = "#{Rails.root}/data/country_commercial_guides/#{@country.downcase}/#{Date.today}-#{entry[:section_url]}.md"
+    file_path = "#{Rails.root}/data/country_commercial_guides/#{@country.downcase}/#{Date.today}-#{entry[:section_id]}.md"
     File.open(file_path, 'w') do |f|
-      f.write("--- \npermalink: '#{entry[:section_url]}.html' \npublished: true \n---\n")
+      f.write("--- \npermalink: '#{@country.downcase}/#{entry[:section_id]}.html' \npublished: true \nlayout: default\n---\n")
       f.write(entry[:content])
     end
   end

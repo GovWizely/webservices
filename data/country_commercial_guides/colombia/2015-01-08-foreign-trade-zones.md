@@ -1,0 +1,10 @@
+--- 
+permalink: 'colombia/foreign-trade-zones.html' 
+published: true 
+layout: default
+---
+<div id="foreign-trade-zones">
+To attract foreign investment and promote the importation of capital goods, the Colombian government uses a number of drawback and duty deferral programs. One example is free trade zones (FTZ), which the government has used to attract more investment and create more jobs. In 2005, Colombia’s Congress passed comprehensive FTZ modernization legislation that opened investment to international companies, allowed one-company/standalone FTZs, and permitted the designation of pre-existing plants as FTZs. This law was updated in 2007 to outline the requirements to be declared a FTZ. As of December 2013 there were 97 FTZs, an almost tenfold increase since 2005. FTZs account for $7.8 billion in investment and provide 47,076 direct jobs and 96,291 indirect ones. While the customs authority, DIAN, oversees requests to establish FTZs, the Colombian government is not involved in their operation.
+
+In 2002, Colombia accepted the WTO Committee on Subsidies and Countervailing Measures’ decision to phase out all export subsidies in FTZs by December 31, 2006. However, FTZs maintain their special customs and foreign exchange regimes, per Law 1004 passed in 2005, which also grants a preferential 15 percent corporate income tax and exemption from customs duties and value-added taxes on imported materials. In January 2013, the new tax reform took effect, grandfathering benefits to existing FTZs while requiring new ones to pay an additional income tax of nine percent until 2015 and eight percent beginning in 2016. In return for these and other incentives, every FTZ project must meet specific investment and job creation commitments. Requirements range from a minimum of $17 million in new investments and 500 jobs for agro-industrial projects, to $34 million in new investment and 150 jobs created for manufacturing projects. Job creation requirements may be lowered by 15 positions for every additional $3 million invested with a minimum requirement of 50 jobs created.
+</div>

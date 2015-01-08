@@ -6,12 +6,12 @@ describe CountryCommercialGuideData do
   let(:importer) { CountryCommercialGuideData.new(resource) }
 
   describe '#import' do
-    let(:entry_hash) { YAML.load_file("#{fixtures_dir}/results_with_content.yaml") }
+    let(:entry_hash) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
     it 'loads country commercial guides from specified resource' do
       expect(CountryCommercialGuide).to receive(:index) do |entries|
 
-        expect(entries.size).to eq(23)
+        expect(entries.size).to eq(6)
         expect(entries).to match_array entry_hash
 
       end

@@ -4,6 +4,7 @@ class CountryCommercialGuideQuery < Query
     @q = options[:q] if options[:q].present?
     @countries = options[:countries].downcase.split(',') if options[:countries].present?
     @topics = options[:topics].downcase.split(',') if options[:topics].present?
+    @industries = options[:industries].downcase.split(',') if options[:industries].present?
   end
 
   private
@@ -24,9 +25,10 @@ class CountryCommercialGuideQuery < Query
       json.bool do
         json.must do
           json.child! { json.terms { json.country @countries } } if @countries
-          json.child! { json.terms  { json.topics @topics }  } if @topics
+          json.child! { json.terms  { json.topic @topics }  } if @topics
+          json.child! { json.terms  { json.industry @industries }  } if @industries
         end
       end
-    end if @countries ||  @topics
+    end if @countries ||  @topics || @industries
   end
 end

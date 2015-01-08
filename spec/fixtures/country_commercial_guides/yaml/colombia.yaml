@@ -1,137 +1,48 @@
 ---
-md_file: 'colombia-ids.md'
+md_file: 'colombia-partial.md'
 title: 'Country Commercial Guides - Colombia'
 country: 'Colombia'
 pdf_url: 'http://www.buyusainfo.net/docs/x_9121404.pdf'
 text_path: 'http://govwizely.github.io/ccg/colombia/'
-break_chapter: 'chap4'
 entries:
-  - chapter: 'Chapter 1: Doing Business In Colombia'
-    section: ''
-    topics:
-      - 'Doing Business In Colombia'
-    section_url: 'chap1'
-  - chapter: 'Chapter 2: Political and Economic Environment'
-    section: ''
-    topics:
-      - 'Political and Economic Environment'
-    section_url: 'chap2'
-  - chapter: 'Chapter 3: Selling U.S. Products and Services'
-    section: ''
-    topics:
-      - 'Selling U.S. Products and Services'
-    section_url: 'chap3'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Automotive'
+    section: ''
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+    section_url: 'chap4'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Automotive'
     section_url: 'automotive'
+
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Defense'
+    section: 'Automotive - Best Prospects/Services'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Opportunities'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-opportunities'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Automotive - Resources'
+    topics:
+      - 'Leading Sectors for U.S. Export and Investment'
+      - 'Automotive'
+    section_url: 'automotive-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Defense - Overview'
     topics:
       - 'Leading Sectors for U.S. Export and Investment'
       - 'Defense'
-    section_url: 'defense'     
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Education'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Education' 
-    section_url: 'education'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Electric Power and Renewable Energy'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Electric Power and Renewable Energy'
-    section_url: 'electric-power-and-renewable-energy' 
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Food Processing Equipment'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Food Processing Equipment' 
-    section_url: 'food-processing-equipment'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Franchising'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Franchising'
-    section_url: 'franchising2'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Information Technology'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Information Technology' 
-    section_url: 'information-technology'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Infrastructure and Construction'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Infrastructure and Construction'
-    section_url: 'infrastructure-and-construction'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Medical Equipment'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Medical Equipment'
-    section_url: 'medical-equipment'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Mining Equipment'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Mining Equipment' 
-    section_url: 'mining-equipment'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Oil and Gas Equipment'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Oil and Gas Equipment' 
-    section_url: 'oil-and-gas-equipment'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Processed Food and Beverages'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Processed Food and Beverages' 
-    section_url: 'processed-food-and-beverages'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Travel and Tourism'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Travel and Tourism' 
-    section_url: 'travel-and-tourism'
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: 'Agricultural Sector'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Agricultural Sector' 
-    section_url: 'agricultural-sector'
-  - chapter: 'Chapter 5: Trade Regulations and Standards'
-    section: ''
-    topics:
-      - 'Trade Regulations and Standards'
-    section_url: 'chap5'
-  - chapter: 'Chapter 6: Investment Climate'
-    section: ''
-    topics:
-      - 'Investment Climate'
-    section_url: 'chap6'
-  - chapter: 'Chapter 7: Trade and Project Financing'
-    section: ''
-    topics:
-      - 'Trade and Project Financing'
-    section_url: 'chap7'
-  - chapter: 'Chapter 8: Business Travel'
-    section: ''
-    topics:
-      - 'Business Travel'
-    section_url: 'chap8'
-  - chapter: 'Chapter 9: Contacts, Market Research, and Trade Events'
-    section: ''
-    topics:
-      - 'Contacts, Market Research and Trade Events'
-    section_url: 'chap9'
-  - chapter: 'Chapter 10: Guide to Our Services'
-    section: ''
-    topics:
-      - 'Guide to Our Services'
-    section_url: 'chap10'
+    section_url: 'defense'
