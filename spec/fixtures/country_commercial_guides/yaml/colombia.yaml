@@ -1,48 +1,37 @@
 ---
-md_file: 'colombia-partial.md'
-title: 'Country Commercial Guides - Colombia'
+md_file: '2014-12-15-colombia.md'
+pdf_title: 'Country Commercial Guides - Colombia'
 country: 'Colombia'
 pdf_url: 'http://www.buyusainfo.net/docs/x_9121404.pdf'
-text_path: 'http://govwizely.github.io/ccg/colombia/'
+section_url_prefix: 'http://govwizely.github.io/ccg/colombia/'
 entries:
 
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
-    section: ''
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-    section_url: 'chap4'
-
-  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
     section: 'Automotive - Overview'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Automotive'
-    section_url: 'automotive'
+    industry: 'Automotive'
+    section_id: 'automotive-overview'
 
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
     section: 'Automotive - Best Prospects/Services'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Automotive'
-    section_url: 'automotive-best-prospects'
+    industry: 'Automotive'
+    section_id: 'automotive-best-prospects'
 
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
     section: 'Automotive - Opportunities'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Automotive'
-    section_url: 'automotive-opportunities'
+    industry: 'Automotive'
+    section_id: 'automotive-opportunities'
 
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
     section: 'Automotive - Resources'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Automotive'
-    section_url: 'automotive-resources'
+    industry: 'Automotive'
+    section_id: 'automotive-resources'
 
   - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
     section: 'Defense - Overview'
-    topics:
-      - 'Leading Sectors for U.S. Export and Investment'
-      - 'Defense'
-    section_url: 'defense'
+    industry: 'Defense'
+    section_id: 'defense-overview'     
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Defense - Best Prospects/Services'
+    industry: 'Defense'
+    section_id: 'defense-best-prospects'

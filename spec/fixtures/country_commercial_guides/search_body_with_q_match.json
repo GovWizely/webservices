@@ -5,9 +5,9 @@
                 {
                     "multi_match": {
                         "fields": [
-                            "title",
-                            "chapter",
-                            "section",
+                            "pdf_title",
+                            "pdf_chapter",
+                            "pdf_section",
                             "content"
                         ],
                         "operator": "and",

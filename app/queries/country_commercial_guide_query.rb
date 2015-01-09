@@ -10,7 +10,7 @@ class CountryCommercialGuideQuery < Query
   private
 
   def generate_query(json)
-    multi_fields = %i(title chapter section content)
+    multi_fields = %i(pdf_title pdf_chapter pdf_section content)
     json.query do
       json.bool do
         json.must do

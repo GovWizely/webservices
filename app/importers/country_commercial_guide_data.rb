@@ -39,15 +39,14 @@ class CountryCommercialGuideData
   def build_entry_hashes
     md_content = open("#{Rails.root}/data/country_commercial_guides/markdown/#{@md_file}")
     position = 0
-    @entries.each_with_index do |entry, index|
+    @entries.each do |entry|
 
       md_content.seek(position)
       md_content.each do |line|
 
         if line.include?('id="' + entry[:section_id])
-          entry[:content] = line
+          entry[:content] = ''
         elsif !entry[:content].nil? && line.include?('</div>')
-          entry[:content] += line
           position = md_content.pos
           break
         elsif !entry[:content].nil?
@@ -71,8 +70,7 @@ class CountryCommercialGuideData
     entry[:country] = lookup_country(@country)
     entry[:section_url] = @section_url_prefix  + entry.delete(:section_id) + '.html'
     entry[:topic] = entry[:pdf_section]
-
-    entry[:industry] = "" if !entry.key?(:industry)
+    entry[:industry] = '' unless entry.key?(:industry)
 
     entry[:content] = Nokogiri::HTML(entry[:content].gsub("\n", ' ')).text
     entry[:content].gsub!("\r", ' ')
