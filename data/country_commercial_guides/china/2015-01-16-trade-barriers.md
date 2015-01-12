@@ -1,0 +1,6 @@
+--- 
+permalink: 'china/trade-barriers.html' 
+published: true 
+layout: default
+---
+Following China's accession to the WTO in 2001, the Chinese Government took significant steps to revise its laws and regulations in a manner consistent with WTO obligations and strengthen its role in the global economy. Nevertheless, despite progress in many areas, significant barriers for U.S. companies still exist. The U.S. Government strives to address these barriers through bilateral dialogue and engagement, active export promotion, and enforcement of U.S. and international trade laws and obligations. For more information on specific barriers, please see the U.S. Government's National Trade Estimate Report on Foreign Trade Barriers at: [http://www.ustr.gov/sites/default/files/uploads/reports/2010/NTE/2010_NTE_China_final.pdf](http://www.ustr.gov/sites/default/files/uploads/reports/2010/NTE/2010_NTE_China_final.pdf). Also, for a full report on China's compliance with WTO rules since joining that organization, please refer to the USTR "2011 Report to Congress on China's WTO Compliance" at: [http://www.ustr.gov/about-us/press-office/reports-and-publications/2011/2010-report-congress-china%E2%80%99s-wto-compliance](http://www.ustr.gov/about-us/press-office/reports-and-publications/2011/2010-report-congress-china%E2%80%99s-wto-compliance).

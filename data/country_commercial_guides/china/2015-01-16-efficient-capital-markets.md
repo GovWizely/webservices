@@ -1,0 +1,10 @@
+--- 
+permalink: 'china/efficient-capital-markets.html' 
+published: true 
+layout: default
+---
+Bank loans continue to provide the vast majority of credit in China, although other sources of capital, such as corporate bonds, equity financing and private equity financing are expanding their scope, reach and sophistication. Regulators use administrative methods, such as lending quotas, to control credit growth, for instance in the aftermath of a government-encouraged dramatic expansion of lending in 2008-2009 to combat the impact of the global financial crisis on China's economy.
+
+The People's Bank of China (PBOC), China's central bank, continues to maintain a floor on lending rates that is 2-3 percentage points above the ceiling on deposit rates, thereby preserving a healthy profit margin on bank loans. The ceiling on deposit interest rates has consistently been below the rate of inflation in recent years, making real interest rates negative. The result is a net flow of capital from depositors to banks. Favored borrowers, particularly SOEs, benefit from what is effectively subsidized capital. Small-and medium-sized enterprises (SMEs), by contrast, experience the most difficulty obtaining bank financing, instead financing investments through retained earnings or informal channels. Many SMEs in China obtain financing from other Chinese firms. Some financial industry think-tanks are investigating ways to formalize and regulate this lending channel.
+
+Non-bank financing has expanded over the last few years, with increasing numbers of Chinese firms opting to seek capitalization by publicly listing their stock, either inside or outside of China. Most foreign portfolio investment in Chinese companies occurs on foreign exchanges, primarily in New York and Hong Kong. In addition, China permits limited access to RMB-denominated markets for portfolio investment by certain foreign institutional investors. Direct portfolio investment by private equity and venture capital firms is also rising rapidly, although from a small base.

@@ -1,0 +1,10 @@
+--- 
+permalink: 'china/standards-overview.html' 
+published: true 
+layout: default
+---
+The Standardization Administration of China (SAC) is the central accrediting body for all activity related to developing and promulgating national standards in China. The China National Certification and Accreditation Administration (CNCA) coordinate compulsory certification and testing, including the China Compulsory Certification (CCC) system. Both SAC and CNCA are administratively under the General Administration of Quality Supervision, Inspection, and Quarantine (AQSIQ).
+
+Standards in China fall into at least one of four broad categories: national standards, industry standards, local or regional standards, and enterprise standards for individual companies. National standards can be either mandatory (technical regulations) or voluntary. In any case, they take precedence over all other types of standards.
+
+In general, exporters to China should be aware of three broad regulatory requirements in the standards and testing area. First, SAC maintains more than 27,000 national standards (known as GB standards, or guobiao in Chinese), of which slightly less than 13 percent are mandatory. It is also important to note that laws and regulations can reference voluntary standards, thereby making the voluntary standard, in effect, mandatory. Second, for products in 23 categories that include some 254 items and 489 HS codes , such as certain electrical products, information technology products, consumer appliances, fire safety equipment and auto parts), China's CNCA requires that a safety and quality certification mark, the aforementioned CCC mark, be obtained by a manufacturer before selling in or importing to China. Please refer to the Commodity List of Products Requiring the China Compulsory Certification for more information at: [http://www.shciq.gov.cn/templates/detail.jsp?id=9577](http://www.shciq.gov.cn/templates/detail.jsp?id=9577). Third, numerous government agencies in China mandate industry-specific standards or testing requirements for products under their jurisdiction in addition to the GB standards and the CCC mark described above.
