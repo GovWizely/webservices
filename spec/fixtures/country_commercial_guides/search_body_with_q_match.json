@@ -1,0 +1,20 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "fields": [
+                            "pdf_title",
+                            "pdf_chapter",
+                            "pdf_section",
+                            "content"
+                        ],
+                        "operator": "and",
+                        "query": "colombia"
+                    }
+                }
+            ]
+        }
+    }
+}
