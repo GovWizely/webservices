@@ -11,7 +11,8 @@ shared_context 'TariffRate::Australia data' do
 
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/australia"
     fixtures_file = "#{fixtures_dir}/australia.csv"
-    s3 = Aws::S3::Client.new(stub_responses: true)
+    s3 = Aws::S3::Client.new(stub_responses: true, access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     s3.stub_responses(:get_object, body: open(fixtures_file))
 
     TariffRate::Australia.recreate_index
@@ -46,7 +47,8 @@ shared_context 'TariffRate::SouthKorea data' do
 
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/south_korea"
     fixtures_file = "#{fixtures_dir}/korea.csv"
-    s3 = Aws::S3::Client.new(stub_responses: true)
+    s3 = Aws::S3::Client.new(stub_responses: true, access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     s3.stub_responses(:get_object, body: open(fixtures_file))
 
     TariffRate::SouthKorea.recreate_index
@@ -81,7 +83,8 @@ shared_context 'TariffRate::CostaRica data' do
 
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica"
     fixtures_file = "#{fixtures_dir}/costa_rica.csv"
-    s3 = Aws::S3::Client.new(stub_responses: true)
+    s3 = Aws::S3::Client.new(stub_responses: true, access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     s3.stub_responses(:get_object, body: open(fixtures_file))
 
     TariffRate::CostaRica.recreate_index
@@ -116,7 +119,8 @@ shared_context 'TariffRate::ElSalvador data' do
 
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador"
     fixtures_file = "#{fixtures_dir}/el_salvador.csv"
-    s3 = Aws::S3::Client.new(stub_responses: true)
+    s3 = Aws::S3::Client.new(stub_responses: true, access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     s3.stub_responses(:get_object, body: open(fixtures_file))
 
     TariffRate::ElSalvador.recreate_index
@@ -151,7 +155,8 @@ shared_context 'TariffRate::Guatemala data' do
 
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/guatemala"
     fixtures_file = "#{fixtures_dir}/guatemala.csv"
-    s3 = Aws::S3::Client.new(stub_responses: true)
+    s3 = Aws::S3::Client.new(stub_responses: true, access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     s3.stub_responses(:get_object, body: open(fixtures_file))
 
     TariffRate::Guatemala.recreate_index
