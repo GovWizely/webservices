@@ -3,7 +3,7 @@ module TariffRate
     include ::Importer
     include TariffRate::Importer
 
-    self.default_endpoint = "#{Rails.root}/data/tariff_rates/el_salvador/el_salvador.csv"
+    self.default_endpoint = 'FTA_El_Salvador_Data.csv'
     self.country_code = 'SV'
   end
 end

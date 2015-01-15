@@ -1,9 +1,14 @@
 require 'spec_helper'
 
 describe TariffRate::CostaRicaData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica" }
-  let(:fixtures_file) { "#{fixtures_dir}/costa_rica.csv" }
-  let(:importer) { described_class.new(fixtures_file) }
+
+  fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica"
+  fixtures_file = "#{fixtures_dir}/costa_rica.csv"
+
+  s3 = Aws::S3::Client.new(stub_responses: true)
+  s3.stub_responses(:get_object, body: open(fixtures_file))
+
+  let(:importer) { described_class.new(fixtures_file, s3) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
   describe '#import' do

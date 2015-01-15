@@ -14,61 +14,78 @@ module TariffRate
     COLUMN_HASH = {
       id:                        :source_id,
       tl:                        :tariff_line,
-      tl_desc:                   :description,
+      tl_desc:                   :subheading_description,
       hs6:                       :hs_6,
-      sector_code:               :sector_code,
       base_rate:                 :base_rate,
       base_rate_alt:             :base_rate_alt,
       final_year:                :final_year,
-      tls_per_6_digit:           :tariff_lines_per_6_digit,
       trq_quota:                 :tariff_rate_quota,
       trq_note:                  :tariff_rate_quota_note,
       tariff_eliminated:         :tariff_eliminated,
-      product_type:              :product_type_id,
-      pending_data:              :pending_data,
       ag_id:                     :ag_id,
       partnername:               :partner_name,
       reportername:              :reporter_name,
       stagingbasket:             :staging_basket,
-      stagingbasketid:           :staging_basket_id,
-      num_mar_columns:           :num_mar_columns,
       partnerstartyear:          :partner_start_year,
       reporterstartyear:         :reporter_start_year,
       partneragreementname:      :partner_agreement_name,
       reporteragreementname:     :reporter_agreement_name,
       partneragreementapproved:  :partner_agreement_approved,
       reporteragreementapproved: :reporter_agreement_approved,
-      rule_text:                 :rule_text,
-      link_text:                 :link_text,
-      link_url:                  :link_url,
       quotaname:                 :quota_name,
-      producttype:               :industry,
     }
 
-    def initialize(resource = nil)
+    def initialize(resource = nil, s3 = nil)
       @resource = resource || self.class.default_endpoint
+      @s3 = s3 || Aws::S3::Client.new(
+          access_key_id: ENV['AWS_ACCESS_KEY_ID_TARIFFS'],
+          secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_TARIFFS'])
     end
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
-      entries = rows.map { |row| process_row row.to_h }.compact
+
+      object = @s3.get_object(bucket: 'tariffs', key: "#{@resource}").body
+      rows = CSV.parse(object.read.force_encoding('utf-8'), headers: true, header_converters: :symbol, encoding: 'UTF-8', quote_char: "'")
+      entries = rows.map { |row| process_row row }.compact
+
       model_class.index(entries)
     end
 
     private
 
     def process_row(row)
-      row.each { |_k, v| row[_k] = nil if v == '(null)' }
+      row_hash = row.to_h
+      row_hash.each { |_k, v| row_hash[_k] = nil if v == '(null)' }
 
-      entry = sanitize_entry(remap_keys(COLUMN_HASH, row))
-      entry[:id] = Digest::SHA1.hexdigest(row.to_s)
+      entry = sanitize_entry(remap_keys(COLUMN_HASH, row_hash))
+      entry = extract_duplicate_fields(row, entry)
 
-      entry.merge!(extract_rate_by_year_fields(row))
+      entry[:id] = Digest::SHA1.hexdigest(row_hash.to_s)
+
+      entry.merge!(extract_rate_by_year_fields(row_hash))
       entry.merge!(extract_country_fields(entry))
 
       entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note])
       entry[:source] = model_class.source[:code]
+      entry
+    end
+
+    def extract_duplicate_fields(row, entry)
+      rule_text_pos = row.index(:rule_text)
+
+      if (row.headers[rule_text_pos + 1] == :link_text) && (row.headers[rule_text_pos + 2] == :link_url) &&
+        (row.headers[rule_text_pos + 3] == :rule_text) && (row.headers[rule_text_pos + 4] == :link_text) &&
+        (row.headers[rule_text_pos + 5] == :link_url)
+
+        entry[:rule_text] = row[rule_text_pos] == '(null)' ? row[rule_text_pos + 3] : row[rule_text_pos]
+        entry[:link_text] = row[rule_text_pos + 1] == '(null)' ? row[rule_text_pos + 4] : row[rule_text_pos + 1]
+        entry[:link_url] = row[rule_text_pos + 2] == '(null)' ? row[rule_text_pos + 5] : row[rule_text_pos + 2]
+      else
+        fail 'Positioning of duplicate columns does not match the expected format: rule_text, link_text, link_url, rule_text, link_text, link_url'
+      end
+
+      entry.each { |_k, v| entry[_k] = nil if v == '(null)' }
       entry
     end
 

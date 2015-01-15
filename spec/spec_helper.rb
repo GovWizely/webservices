@@ -18,6 +18,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.debug_logger = File.open('log/vcr.log', 'w')
   c.configure_rspec_metadata!
+  c.allow_http_connections_when_no_cassette = true
 end
 
 # Requires supporting ruby files with custom matchers and macros, etc,

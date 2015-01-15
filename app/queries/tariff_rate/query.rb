@@ -13,7 +13,7 @@ module TariffRate
     private
 
     def generate_query(json)
-      multi_fields = %i(description tariff_rate_quota_note rule_text tariff_line)
+      multi_fields = %i(subheading_description tariff_rate_quota_note rule_text tariff_line)
       json.query do
         json.bool do
           json.must do

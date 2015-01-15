@@ -5,6 +5,7 @@ gem 'rails', '4.0.1'
 gem 'rails-api'
 
 gem 'airbrake'
+gem 'aws-sdk-core'
 gem 'elasticsearch'
 gem 'iso_country_codes'
 gem 'jbuilder'

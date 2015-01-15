@@ -1,45 +1,53 @@
 ---
-- :id: "5e1e346118da0d11752070154b2e6bcabd207a6f"
-  :source_id: "439058"
-  :tariff_line: "1011000"
-  :description: "Live purebred breeding horses and asses"
-  :hs_6: "10110"
-  :sector_code: "15"
-  :base_rate: "0"
+- :source_id: '439068'
+  :tariff_line: '01011000'
+  :subheading_description: Live purebred breeding horses and asses
+  :hs_6: '010110'
+  :base_rate: '0'
   :base_rate_alt: 
-  :final_year: "2012"
-  :tariff_lines_per_6_digit: "1"
+  :final_year: '2006'
   :tariff_rate_quota: 
-  :tariff_rate_quota_note: "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker."
-  :tariff_eliminated: "true"
-  :product_type_id: "2"
-  :pending_data: "false"
-  :ag_id: "33"
-  :partner_name: "SV"
-  :reporter_name: "US"
-  :staging_basket: "Immediate"
-  :staging_basket_id: "6"
-  :num_mar_columns: "10"
-  :partner_start_year: "2012"
+  :tariff_rate_quota_note: For more information, please see the U.S. Department of
+    Agriculture's Agricultural Tariff Tracker.
+  :tariff_eliminated: 'true'
+  :ag_id: '43'
+  :partner_name: SV
+  :reporter_name: US
+  :staging_basket: Immediate
+  :partner_start_year: '2006'
   :reporter_start_year: 
-  :partner_agreement_name: "SV"
-  :reporter_agreement_name: "US"
-  :partner_agreement_approved: "true"
+  :partner_agreement_name: SV
+  :reporter_agreement_name: US
+  :partner_agreement_approved: 'true'
   :reporter_agreement_approved: 
-  :rule_text: "A change to heading 01.01 through 01.06 from any other chapter."
+  :quota_name: 
+  :rule_text: A change to heading 01.01 through 01.06 from any other chapter.
   :link_text: 
   :link_url: 
-  :quota_name: 
-  :industry: "Agricultural"
+  :id: b382fb7e4f70224c623079d23a25d531d0c76a92
   :annual_rates:
-    y2012: "10"
-    y2013: "20"
-    y2014: "30"
-  :alt_annual_rates:
-    alt_2012: "1"
-    alt_2013: "2"
-    alt_2014: "3"
+    y2006: '0.0000'
+    y2007: '0.0000'
+    y2008: '0.0000'
+    y2009: '0.0000'
+    y2010: '0.0000'
+    y2011: '0.0000'
+    y2012: '0.0000'
+    y2013: '0.0000'
+    y2014: '0.0000'
+    y2015: '0.0000'
+    y2016: '0.0000'
+    y2017: '0.0000'
+    y2018: '0.0000'
+    y2019: '0.0000'
+    y2020: '0.0000'
+    y2021: '0.0000'
+    y2022: '0.0000'
+    y2023: '0.0000'
+    y2024: '0.0000'
+    y2025: '0.0000'
+  :alt_annual_rates: {}
   :countries:
-    - "US"
-    - "SV"
-  :source: "EL_SALVADOR"
+  - US
+  - SV
+  :source: EL_SALVADOR
