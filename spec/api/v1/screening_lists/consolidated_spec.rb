@@ -31,19 +31,19 @@ describe 'Consolidated Screening List API V1', type: :request do
     end
 
     context 'when name is specified' do
-      let(:params) { { name: 'banco' } }
+      let(:params) { { name: 'banco nacional de cuba' } }
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco"'
+      it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [ScreeningList::Sdn] }
       end
 
       context 'and fuzziness is specified' do
-        let(:params) { { name: 'mohammed', fuzziness: '1' } }
+        let(:params) { { name: 'SALEH Jamal', fuzziness: '1' } }
         subject { response }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Plc results that math "mohammed" with fuzziness of 1'
+        it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with fuzziness of 1'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Plc] }
         end
@@ -62,7 +62,7 @@ describe 'Consolidated Screening List API V1', type: :request do
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'banco' } }
-        it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco"'
+        it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Sdn] }
         end

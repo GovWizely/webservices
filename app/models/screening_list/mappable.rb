@@ -31,12 +31,16 @@ module ScreeningList
           properties: {
             id:                      { type: 'integer', index: :not_analyzed, include_in_all: false },
 
-            name:                    { type:   'multi_field',
+            name:                    { type:   'string',
+                                       analyzer: 'standard_asciifolding_nostop',
                                        fields: {
-                                         name: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-                                         sort: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_names:               { type:   'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields: {
+                                         keyword:      { type: 'string', analyzer: 'keyword_lowercase' } } },
+
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 

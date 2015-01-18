@@ -5,8 +5,8 @@
                 {
                     "multi_match": {
                         "fields": [
-                            "name",
-                            "alt_names"
+                            "name.keyword",
+                            "alt_names.keyword"
                         ],
                         "operator": "and",
                         "query": "mohamed"
@@ -15,8 +15,8 @@
                 {
                     "multi_match": {
                         "fields":[
-                            "name",
-                            "alt_names"
+                            "name.keyword",
+                            "alt_names.keyword"
                         ],
                         "query": "mohamed",
                         "fuzziness": 0

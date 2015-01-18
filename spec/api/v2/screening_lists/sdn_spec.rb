@@ -23,7 +23,7 @@ describe 'OFAC Specially Designated Nationals API V2', type: :request do
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'banco' } }
-        it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco"'
+        it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"'
       end
 
       context 'when search term exists only in alt_names' do

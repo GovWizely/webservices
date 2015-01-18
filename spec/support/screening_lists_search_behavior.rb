@@ -34,7 +34,7 @@ shared_examples 'it contains all ScreeningList::Sdn results that match "cuba"' d
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::Sdn results that match "banco"' do
+shared_examples 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"' do
   let(:source) { ScreeningList::Sdn }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
@@ -428,9 +428,9 @@ shared_context 'ScreeningList::Plc data' do
   end
 end
 
-shared_examples 'it contains all ScreeningList::Plc results that math "mohammed" with fuzziness of 1' do
+shared_examples 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with fuzziness of 1' do
   let(:source) { ScreeningList::Plc }
-  let(:expected) { [3, 4] }
+  let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
