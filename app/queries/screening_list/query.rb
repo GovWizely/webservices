@@ -25,7 +25,7 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_name_queries(json, %w(name alt_names), @name)
+            generate_name_queries(json, %w(name.sort alt_names.sort), @name)
           end
 
         end

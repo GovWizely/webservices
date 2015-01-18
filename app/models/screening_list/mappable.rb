@@ -36,7 +36,11 @@ module ScreeningList
                                          name: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
                                          sort: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_names:               { type:   'multi_field',
+                                       fields: {
+                                         alt_names: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+                                         sort:      { type: 'string', analyzer: 'keyword_lowercase' } } },
+
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
