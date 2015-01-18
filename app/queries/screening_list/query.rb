@@ -8,7 +8,7 @@ module ScreeningList
       @type = options[:type].downcase if options[:type].present?
       @countries = options[:countries].upcase.split(',') if options[:countries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
-      @sort = '_score,name.sort'
+      @sort = '_score,name.keyword'
       @name = options[:name] if options[:name].present?
       @fuzziness = options[:fuzziness].to_i if options[:fuzziness].present?
     end
@@ -25,7 +25,7 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_name_queries(json, %w(name.sort alt_names.sort), @name)
+            generate_name_queries(json, %w(name.keyword alt_names.keyword), @name)
           end
 
         end

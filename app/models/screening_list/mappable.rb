@@ -34,12 +34,12 @@ module ScreeningList
             name:                    { type:   'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields: {
-                                         sort: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             alt_names:               { type:   'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields: {
-                                         sort:      { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                         keyword:      { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
