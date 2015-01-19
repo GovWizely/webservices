@@ -31,30 +31,31 @@ module Importer
 
   def lookup_country(country_str)
     normalized_country_str = normalize_country(country_str)
-    IsoCountryCodes.search_by_name(normalized_country_str).first.alpha2
-  rescue IsoCountryCodes::UnknownCodeError => e
+    IsoCountryCodes.search_by_name(normalized_country_str).first.alpha2 if normalized_country_str
+  rescue IsoCountryCodes::UnknownCodeError
     Rails.logger.error "Could not find a country code for #{country_str}"
     nil
   end
 
+  def country_name_mappings
+    @@country_name_mappings ||= YAML::load_file(File.join(__dir__, 'country_mappings.yaml'))
+  end
+
   def normalize_country(country_str)
-    case country_str
-    when /\ABurma \(Myanmar\)\Z/i then 'Myanmar'
-    when /Congo, Democratic Rep\. of the/i then 'Congo, the Democratic Republic of the'
-    when /\ADemocratic Republic of (?:the )?Congo\Z/i then 'Congo, the Democratic Republic of the'
-    when /Congo, Republic of the/i then 'Congo'
-    when /Republic of the Congo/i then 'Congo'
-    when /\ACote d'Ivoire\Z/i then "Côte d'Ivoire"
-    when /\A(South Korea|Korea \(South\))\Z/i then 'Korea, Republic of'
-    when /\AVietnam\Z/i then 'Viet Nam'
-    when /\AKyrgyz Republic\Z/i then 'Kyrgyzstan'
-    when /\AKosovo\Z/i then 'Serbia'
-    when /\ALaos\Z/i then "Lao People's Democratic Republic"
-    when /\ASt\. Lucia\Z/i then 'Saint Lucia'
-    when /\ASão Tomé & Príncipe\Z/i then 'Sao Tome and Principe'
-    when /\AU\.?S\.?(A\.?)?\Z/i then 'United States'
-    else country_str
+    country_str = country_str.strip
+
+    mapping = country_name_mappings.find do |_, regexes|
+      regexes.any?{ |r| r.match country_str }
     end
+
+    if mapping
+      name = mapping.first
+      # avoid error logs on names we don't have a coutry to map it to
+      name == '<undetermined>' ? nil : name
+    else
+      country_str
+    end
+
   end
 
   def normalize_industry(industry)

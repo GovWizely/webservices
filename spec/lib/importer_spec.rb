@@ -40,21 +40,36 @@ describe Importer do
   end
 
   describe '#lookup_country' do
-    it 'finds alpha2 code' do
-      country_names = ['burma (Myanmar)',
-                       "cote d'Ivoire",
-                       'congo, Democratic Rep. of the',
-                       'congo, Republic of the',
-                       'Democratic Republic of Congo',
-                       'korea (South)',
-                       'kosovo',
-                       'Republic of the Congo',
-                       'São Tomé & Príncipe',
-                       'south Korea',
-                       'St. Lucia',
-                       'vietnam']
-      country_names.each do |country_name|
-        expect(MockData.new.lookup_country(country_name)).not_to be_nil
+    context 'when there is country code' do
+      it 'finds alpha2 code' do
+        country_names = ['burma (Myanmar)',
+                         "cote d'Ivoire",
+                         'congo, Democratic Rep. of the',
+                         'congo, Republic of the',
+                         'Democratic Republic of Congo',
+                         'korea (South)',
+                         'kosovo',
+                         'Republic of the Congo',
+                         'São Tomé & Príncipe',
+                         'south Korea',
+                         'St. Lucia',
+                         'vietnam']
+        country_names.each do |country_name|
+          expect(MockData.new.lookup_country(country_name)).not_to be_nil
+        end
+      end
+    end
+    context 'when there is no country code but name is whitelisted' do
+      it 'returns nil without logging' do
+        expect(Rails.logger).not_to receive(:error)
+        expect(MockData.new.lookup_country('undetermined')).to be_nil
+
+      end
+    end
+    context 'when there is no country code' do
+      it 'returns nil and generate an error log' do
+        expect(Rails.logger).to receive(:error).with(/Could not find a country code for nowhere republic/)
+        expect(MockData.new.lookup_country('nowhere republic')).to be_nil
       end
     end
   end
