@@ -3,15 +3,14 @@ class TradeArticle
 
   self.settings = {}
   self.mappings = {
-    trade_article: {
-      dynamic:    false,
+    name.typeize => {
+      dynamic:    'false',
       properties: {
         content:     { type: 'string', analyzer: 'snowball' },
         title:       { type: 'string', analyzer: 'snowball' },
         evergreen:   { type: 'boolean' },
-        pub_date:    { type: 'date' },
-        update_date: { type: 'date' },
-        id:          { type: 'string', index: :not_analyzed, include_in_all: false },
+        pub_date:    { type: 'date', format: 'YYYY-MM-dd' },
+        update_date: { type: 'date', format: 'YYYY-MM-dd' },
       },
     },
   }.freeze

@@ -76,6 +76,10 @@ module Indexable
     timestamp_field && timestamp_field[:enabled] && timestamp_field[:store]
   end
 
+  def importer_class
+    "#{name}Data".constantize
+  end
+
   private
 
   def prepare_record_for_indexing(record)

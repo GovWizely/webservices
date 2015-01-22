@@ -69,18 +69,23 @@ module Importer
     self.class.name.sub(/Data$/, '').constantize
   end
 
-  def import_then_purge_old
-    fail 'Underlying model is unable to purge old documents' unless can_purge_old?
-    start_time = Time.now
-    import
-    model_class.purge_old(start_time)
+  def import_and_if_possible_purge_old
+    can_purge_old? ? import_and_purge_old : import
+  end
+
+  def lookup_state(state_str)
+    State.normalize state_str
   end
 
   def can_purge_old?
     model_class.can_purge_old?
   end
 
-  def lookup_state(state_str)
-    State.normalize state_str
+  private
+
+  def import_and_purge_old
+    start_time = Time.now
+    import
+    model_class.purge_old(start_time)
   end
 end

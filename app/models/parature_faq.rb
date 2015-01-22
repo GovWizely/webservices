@@ -20,12 +20,12 @@ class ParatureFaq
   }.freeze
 
   self.mappings = {
-    parature_faq: {
+    name.typeize => {
       _timestamp: {
         enabled: true,
         store:   true,
       },
-      dynamic:    false,
+      dynamic:    'false',
       properties: {
         question:    { type: 'string', analyzer: 'custom_analyzer' },
         answer:      { type: 'string', analyzer: 'custom_analyzer' },
@@ -33,7 +33,6 @@ class ParatureFaq
         topic:       { type: 'string', analyzer: 'phrase_match_analyzer' },
         industry:    { type: 'string', analyzer: 'phrase_match_analyzer' },
         country:     { type: 'string' },
-        id:          { type: 'integer' },
       },
     },
   }.freeze

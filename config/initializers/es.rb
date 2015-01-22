@@ -1,6 +1,5 @@
 unless Rails.env.test?
-  Dir[Rails.root.join('app/models/**/*.rb').to_s].each do |filename|
-    klass = filename.gsub(/(^.+models\/|\.rb$)/, '').camelize.constantize
-    klass.create_index if klass.is_a?(Indexable) && !klass.index_exists?
+  Webservices::Application.model_classes.each do |model_class|
+    model_class.create_index unless model_class.index_exists?
   end
 end
