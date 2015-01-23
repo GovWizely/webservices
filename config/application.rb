@@ -42,6 +42,8 @@ module Webservices
 
     config.exceptions_app = routes
 
+    config.cache_store = :memory_store
+
     def model_classes
       Dir[Rails.root.join('app/models/**/*.rb').to_s].map do |filename|
         klass = filename.gsub(/(^.+models\/|\.rb$)/, '').camelize.constantize

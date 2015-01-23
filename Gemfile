@@ -17,6 +17,8 @@ gem 'sanitize', '~> 2.0.6'
 gem 'htmlentities'
 gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 
+gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
+
 group :production do
   gem 'newrelic_rpm'
 end
@@ -36,6 +38,8 @@ group :development do
 end
 
 group :test do
+  gem 'webmock'
+  gem 'vcr'
   gem 'codeclimate-test-reporter', require: false
   gem 'simplecov', require: false
 end

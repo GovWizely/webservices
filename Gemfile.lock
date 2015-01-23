@@ -4,6 +4,13 @@ GIT
   specs:
     us_states (0.1.1)
 
+GIT
+  remote: git://github.com/GovWizely/industry_mapping_client.git
+  revision: 1528d2deed80ae948bd114da6b118a2f5322cfbf
+  specs:
+    industry_mapping_client (0.0.1)
+      httparty
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -31,6 +38,7 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
+    addressable (2.3.6)
     airbrake (4.1.0)
       builder
       multi_json
@@ -54,6 +62,8 @@ GEM
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     columnize (0.8.9)
+    crack (0.4.2)
+      safe_yaml (~> 1.0.0)
     daemons (1.1.9)
     debugger-linecache (1.2.0)
     diff-lcs (1.2.5)
@@ -73,6 +83,9 @@ GEM
     highline (1.6.21)
     hike (1.2.3)
     htmlentities (4.3.2)
+    httparty (0.13.3)
+      json (~> 1.8)
+      multi_xml (>= 0.5.2)
     i18n (0.6.11)
     iso_country_codes (0.4.2)
     jbuilder (2.1.3)
@@ -91,6 +104,7 @@ GEM
     money (6.2.1)
       i18n (>= 0.6.4, <= 0.7.0.dev)
     multi_json (1.10.1)
+    multi_xml (0.5.5)
     multipart-post (2.0.0)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
@@ -164,6 +178,7 @@ GEM
       rainbow (>= 1.99.1, < 3.0)
       ruby-progressbar (~> 1.4)
     ruby-progressbar (1.6.0)
+    safe_yaml (1.0.4)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
     shoulda-matchers (2.7.0)
@@ -201,6 +216,10 @@ GEM
       polyglot
       polyglot (>= 0.3.1)
     tzinfo (0.3.41)
+    vcr (2.9.3)
+    webmock (1.20.4)
+      addressable (>= 2.3.6)
+      crack (>= 0.3.2)
 
 PLATFORMS
   ruby
@@ -211,6 +230,7 @@ DEPENDENCIES
   codeclimate-test-reporter
   elasticsearch
   htmlentities
+  industry_mapping_client!
   iso_country_codes
   jbuilder
   monetize
@@ -231,3 +251,5 @@ DEPENDENCIES
   thin
   transpec
   us_states!
+  vcr
+  webmock

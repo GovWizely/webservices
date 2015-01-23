@@ -3,8 +3,18 @@
     "bool": {
       "must": [
         {
-          "match": {
-            "industries": "fishing"
+          "nested": {
+            "path": "industries",
+            "query": {
+              "multi_match": {
+                "fields": [
+                  "industries.original",
+                  "industries.mapped"
+                ],
+                "operator": "and",
+                "query": "fishing"
+              }
+            }
           }
         }
       ]
