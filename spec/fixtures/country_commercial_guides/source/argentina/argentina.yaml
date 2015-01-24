@@ -1,0 +1,39 @@
+--- 
+md_file: argentina/2015-01-19-argentina.md
+country: Argentina
+pdf_title: "Country Commercial Guide for Argentina"
+pdf_url: "http://www.buyusainfo.net/docs/x_9234444.pdf"
+section_url_prefix: "http://govwizely.github.io/ccg/argentina/"
+entries: 
+  - 
+    chapter: "Chapter 4: Trade Regulations and Standards in Argentina"
+    section: "Minimum Import Prices"
+    section_id: minimum-import-prices
+  - 
+    chapter: "Chapter 4: Trade Regulations and Standards in Argentina"
+    section: "Tariff Barriers"
+    section_id: tariff-barriers
+  - 
+    chapter: "Chapter 4: Trade Regulations and Standards in Argentina"
+    section: "Standards Overview"
+    section_id: standards-overview
+  - 
+    chapter: "Chapter 8: Business Travel in Argentina"
+    section: "Business Customs"
+    section_id: business-customs
+  - 
+    chapter: "Chapter 9: Top US Industry Exports"
+    section: "Food Ingredients (Natural Origin)"
+    section_id: food-ingredients-natural-origin
+  - 
+    chapter: "Chapter 10: Additional Resources"
+    section: "Industry Sectors, Sector Specialists, & Phone Numbers"
+    section_id: industry-sectors-sector-specialists-and-phone-numbers
+  - 
+    chapter: "Chapter 10: Additional Resources"
+    section: "Councils and Trade Associations in Argentina"
+    section_id: councils-and-trade-associations-in-argentina
+  - 
+    chapter: "Chapter 10: Additional Resources"
+    section: Couriers
+    section_id: additional-resources-couriers

@@ -16,6 +16,8 @@ gem 'rake'
 gem 'sanitize', '~> 2.0.6'
 gem 'htmlentities'
 gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
+gem 'git'
+gem 'rdiscount'
 
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 
