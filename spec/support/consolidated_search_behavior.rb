@@ -32,3 +32,14 @@ end
 def source_full_name(source)
   (source.source.is_a?(Hash) && source.source[:full_name]) || source.source[:code]
 end
+
+shared_examples 'it contains all expected results' do
+  let(:got) do
+    JSON.parse(response.body, symbolize_names: true)[:results].map do |r|
+      @all_possible_full_results.index(r)
+    end
+  end
+  it 'contains them all' do
+    expect(got).to match_array(expected)
+  end
+end

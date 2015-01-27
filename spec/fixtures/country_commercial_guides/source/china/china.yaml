@@ -1,0 +1,74 @@
+---
+md_file: china/2015-01-12-china.md
+pdf_title: 'Country Commercial Guides - China'
+country: 'China'
+pdf_url: 'http://export.gov/china/build/groups/public/@eg_cn/documents/webcontent/eg_cn_025684.pdf'
+section_url_prefix: 'http://govwizely.github.io/ccg/china/'
+entries:
+
+  - chapter: 'Chapter 3: Selling U.S. Products and Services'
+    section: 'Using an Agent or Distributor'
+    section_id: 'using-an-agent-or-distributor'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Avation - Sub-Sector Best Prospects'
+    industry: 'Aviation'
+    section_id: 'aviation-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Air Pollution Control Equipment - Overview'
+    industry: 'Air Pollution Control Equipment'
+    section_id: 'air-pollution-overview'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Air Pollution Control Equipment - Sub-Sector Best Prospects'
+    industry: 'Air Pollution Control Equipment'
+    section_id: 'air-pollution-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'ICT Equipment and Software - Best Prospects'
+    industry: 'ICT Equipment and Software'
+    section_id: 'ict-equipment-best-prospects'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Green Building - Web Resources'
+    industry: 'Green Building'
+    section_id: 'green-building-web-resources'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sectors - Overview'
+    industry: 'Agriculture'
+    section_id: 'agricultural-overview'
+
+  - chapter: 'Chapter 4: Leading Sectors for U.S. Export and Investment'
+    section: 'Agricultural Sectors - Web Resources'
+    industry: 'Agriculture'
+    section_id: 'agricultural-web-resources'
+
+  - chapter: 'Chapter 5: Trade Regulations, Customs and Standards'
+    section: 'Standards - Conformity Assessment'
+    section_id: 'standards-conformity-assessment'
+
+  - chapter: 'Chapter 5: Trade Regulations, Customs and Standards [I DONT EXIST]'
+    section: 'Standards - Conformity Assessment [I DONT EXIST]'
+    section_id: 'standards-conformity-assessment-psst-i-dont-exist'
+
+  - chapter: 'Chapter 5: Trade Regulations, Customs and Standards'
+    section: 'Standards - Contacts'
+    section_id: 'standards-contacts'
+
+  - chapter: 'Chapter 7: Trade and Project Financing'
+    section: 'How Does the Banking System Operate'
+    section_id: 'how-does-banking-system-operate'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Visa Requirements'
+    section_id: 'visa-requirements'
+
+  - chapter: 'Chapter 8: Business Travel'
+    section: 'Health'
+    section_id: 'health'
+
+  - chapter: 'Chapter 10: Guide to Our Services'
+    section: ''
+    section_id: 'guide-to-our-services'
