@@ -1,0 +1,60 @@
+---
+Bahamas:
+- !ruby/regexp /\ABahamas, The\Z/i
+Cabo Verde:
+- !ruby/regexp /\ACabo Verde\. Previously Cape Verde\.\Z/i
+Congo, the Democratic Republic of the:
+- !ruby/regexp /\ACongo, Democratic Rep(?:\.|ublic) of the\Z/i
+- !ruby/regexp /\ADemocratic Republic of (?:the )?Congo\Z/i
+Congo:
+- !ruby/regexp /\ACongo, Republic of the\Z/i
+- !ruby/regexp /\ARepublic of the Congo\Z/i
+Côte d'Ivoire:
+- !ruby/regexp /\ACote d[' ]Ivoire\Z/i
+Gambia:
+- !ruby/regexp /\AThe Gambia\Z/i
+Georgia:
+- !ruby/regexp /\AGeorgian\Z/i
+Isle of Man:
+- !ruby/regexp /\AMan, Isle of\Z/i
+Korea, Republic of:
+- !ruby/regexp /\A(South Korea|Korea \(South\)|Korea, South)\Z/i
+Korea, Democratic People's Republic of:
+- !ruby/regexp /\AKorea, North\Z/i
+Kyrgyzstan:
+- !ruby/regexp /\AKyrgyz Republic\Z/i
+Lao People's Democratic Republic:
+- !ruby/regexp /\ALaos\Z/i
+Mali:
+- !ruby/regexp '/\ARegion: Northern Mali\Z/i'
+Micronesia, Federated States of:
+- !ruby/regexp /\AMicrnesia\Z/i
+Myanmar:
+- !ruby/regexp /\ABurma \(Myanmar\)\Z/i
+- !ruby/regexp /\ABurma\Z/i
+Palestine, State of:
+- !ruby/regexp /\APalestinian\Z/i
+Saint Lucia:
+- !ruby/regexp /\ASt\. Lucia\Z/i
+Saint Vincent and the Grenadines:
+- !ruby/regexp /\ASt\. Vincent and the Grenadines\Z/i
+Sao Tome and Principe:
+- !ruby/regexp /\ASão Tomé & Príncipe\Z/i
+Serbia:
+- !ruby/regexp /\AKosovo\Z/i
+United Arab Emirates:
+- !ruby/regexp /\AU\.A\.E\.\Z/i
+- !ruby/regexp /\AUnited Arab Emirates \(UAE\)\Z/i
+United Kingdom:
+- !ruby/regexp /\AScotland, United Kingdom\Z/i
+United States:
+- !ruby/regexp /\AU\.?S\.?(A\.?)?\Z/i
+Vietnam:
+- !ruby/regexp /\AViet Nam\Z/i
+# iso_country_codes-0.6.1 lists Vietnam as one word but the next release has
+# it updated to 'Viet Nam'. I'm leaving this here to avoid having to debug it
+# again a second time.
+#Viet Nam:
+#- !ruby/regexp /\AVietnam\Z/i
+"<undetermined>":
+- !ruby/regexp /\Aundetermined\Z/i
