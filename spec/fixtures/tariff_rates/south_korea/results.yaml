@@ -1,45 +1,53 @@
 ---
-- :id: "61e849d0e5361ab0d1b6e490c35cf2f4d1309b70"
-  :source_id: "439058"
-  :tariff_line: "1011000"
-  :description: "Live purebred breeding horses and asses"
-  :hs_6: "10110"
-  :sector_code: "15"
-  :base_rate: "0"
-  :base_rate_alt:   
-  :final_year: "2012"
-  :tariff_lines_per_6_digit: "1"
-  :tariff_rate_quota:   
-  :tariff_rate_quota_note: "For more information, please see the U.S. Department of Agriculture's Agricultural Tariff Tracker."
-  :tariff_eliminated: "true"
-  :product_type_id: "2"
-  :pending_data: "false"
-  :ag_id: "33"
-  :partner_name: "KR"
-  :reporter_name: "US"
-  :staging_basket: "Immediate"
-  :staging_basket_id: "6"
-  :num_mar_columns: "10"
-  :partner_start_year: "2012"
-  :reporter_start_year:   
-  :partner_agreement_name: "KR"
-  :reporter_agreement_name: "US"
-  :partner_agreement_approved: "true"
-  :reporter_agreement_approved:   
-  :rule_text: "A change to heading 01.01 through 01.06 from any other chapter."
-  :link_text:   
-  :link_url:   
-  :quota_name:   
-  :industry: "Agricultural"
+- :source_id: '439058'
+  :tariff_line: '01011000'
+  :subheading_description: Live purebred breeding horses and asses
+  :hs_6: '010110'
+  :base_rate: '0'
+  :base_rate_alt: 
+  :final_year: '2012'
+  :tariff_rate_quota: 
+  :tariff_rate_quota_note: For more information, please see the U.S. Department of
+    Agriculture's Agricultural Tariff Tracker.
+  :tariff_eliminated: 'true'
+  :ag_id: '33'
+  :partner_name: KP
+  :reporter_name: US
+  :staging_basket: Immediate
+  :partner_start_year: '2012'
+  :reporter_start_year: 
+  :partner_agreement_name: KP
+  :reporter_agreement_name: US
+  :partner_agreement_approved: 'true'
+  :reporter_agreement_approved: 
+  :quota_name: 
+  :rule_text: A change to heading 01.01 through 01.06 from any other chapter.
+  :link_text: 
+  :link_url: 
+  :id: 2677214155e102d8cff7baa37a3698854ba6f21c
   :annual_rates:
-    y2012: "10"
-    y2013: "20"
-    y2014: "30"
-  :alt_annual_rates:
-    alt_2012: "1"
-    alt_2013: "2"
-    alt_2014: "3"
+    y2012: '0.0000'
+    y2013: '0.0000'
+    y2014: '0.0000'
+    y2015: '0.0000'
+    y2016: '0.0000'
+    y2017: '0.0000'
+    y2018: '0.0000'
+    y2019: '0.0000'
+    y2020: '0.0000'
+    y2021: '0.0000'
+    y2022: '0.0000'
+    y2023: '0.0000'
+    y2024: '0.0000'
+    y2025: '0.0000'
+    y2026: '0.0000'
+    y2027: '0.0000'
+    y2028: '0.0000'
+    y2029: '0.0000'
+    y2030: '0.0000'
+    y2031: '0.0000'
+  :alt_annual_rates: {}
   :countries:
-    - "US"
-    - "KR"
-  :source: "SOUTH_KOREA"
+  - US
+  - KR
+  :source: SOUTH_KOREA

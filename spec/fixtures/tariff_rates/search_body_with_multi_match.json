@@ -5,7 +5,7 @@
                 {
                     "multi_match": {
                         "fields": [
-                            "description",
+                            "subheading_description",
                             "tariff_rate_quota_note",
                             "rule_text",
                             "tariff_line"
