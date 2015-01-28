@@ -43,9 +43,6 @@ Webservices::Application.routes.draw do
 
     scope '/tariff_rates' do
       get '/search', to: 'tariff_rates/consolidated#search'
-      %w(australia costa_rica el_salvador guatemala south_korea).each do |source|
-        get "/#{source}/search", to: "tariff_rates/#{source}#search"
-      end
     end
 
     scope '/trade_leads' do

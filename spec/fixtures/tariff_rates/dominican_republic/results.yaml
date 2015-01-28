@@ -1,0 +1,50 @@
+---
+- :source_id: '439064'
+  :tariff_line: '01011000'
+  :subheading_description: Live purebred breeding horses and asses
+  :hs_6: '010110'
+  :base_rate: '0'
+  :base_rate_alt: 
+  :final_year: '2006'
+  :tariff_rate_quota: 
+  :tariff_rate_quota_note: For more information, please see the U.S. Department of
+    Agriculture's Agricultural Tariff Tracker.
+  :tariff_eliminated: 'true'
+  :ag_id: '39'
+  :partner_name: DO
+  :reporter_name: US
+  :staging_basket: Immediate
+  :partner_start_year: '2006'
+  :reporter_start_year: 
+  :partner_agreement_name: DO
+  :reporter_agreement_name: US
+  :partner_agreement_approved: 'true'
+  :reporter_agreement_approved: 
+  :quota_name: 
+  :rule_text: A change to heading 01.01 through 01.06 from any other chapter.
+  :link_text: 
+  :link_url: 
+  :id: 7923ab53d2362d72da3f71ee7f913228ba930f6e
+  :annual_rates:
+    y2006: '0.0000'
+    y2007: '0.0000'
+    y2008: '0.0000'
+    y2009: '0.0000'
+    y2010: '0.0000'
+    y2011: '0.0000'
+    y2012: '0.0000'
+    y2013: '0.0000'
+    y2014: '0.0000'
+    y2015: '0.0000'
+    y2016: '0.0000'
+    y2017: '0.0000'
+    y2018: '0.0000'
+    y2019: '0.0000'
+    y2020: '0.0000'
+    y2021: '0.0000'
+    y2022: '0.0000'
+    y2023: '0.0000'
+    y2024: '0.0000'
+    y2025: '0.0000'
+  :alt_annual_rates: {}
+  :source: DO

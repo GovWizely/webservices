@@ -48,10 +48,6 @@
     },
     "alt_annual_rates": {
     },
-    "countries": [
-      "US",
-      "KR"
-    ],
-    "source": "SOUTH_KOREA"
+    "source": "KR"
   }
 ]

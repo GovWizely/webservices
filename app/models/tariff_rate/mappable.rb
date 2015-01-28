@@ -45,7 +45,6 @@ module TariffRate
             link_text:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop', include_in_all: false },
             link_url:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop', include_in_all: false },
             quota_name:                  { type: 'string', analyzer: 'keyword', include_in_all: false },
-            countries:                   { type: 'string', analyzer: 'keyword' },
             source:                      { type: 'string', analyzer: 'keyword' },
           },
         },

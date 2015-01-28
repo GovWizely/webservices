@@ -1,11 +1,10 @@
 module TariffRate
   class Query < ::Query
-    attr_reader :countries, :sources
+    attr_reader :sources
 
     def initialize(options = {})
       super
       @q = options[:q] if options[:q].present?
-      @countries = options[:countries].upcase.split(',') if options[:countries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,source_id'
     end
@@ -28,10 +27,9 @@ module TariffRate
         json.bool do
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
-            json.child! { json.terms { json.countries @countries } } if @countries
           end
         end
-      end if @countries || @sources.any?
+      end if @sources.any?
     end
   end
 end

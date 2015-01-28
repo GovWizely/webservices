@@ -23,13 +23,6 @@
         {
           "terms": {
             "source": [
-              "AUSTRALIA"
-            ]
-          }
-        },
-        {
-          "terms": {
-            "countries": [
               "US",
               "AU"
             ]

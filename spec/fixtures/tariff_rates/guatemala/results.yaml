@@ -24,7 +24,7 @@
   :rule_text: A change to heading 01.01 through 01.06 from any other chapter.
   :link_text: 
   :link_url: 
-  :id: c1b0fb7582bd88f1727faaf864713875f3eb1b10
+  :id: 3400ddf92cf78fd02e8f9ebaf9a95975f56e4874
   :annual_rates:
     y2006: '0.0000'
     y2007: '0.0000'
@@ -47,7 +47,4 @@
     y2024: '0.0000'
     y2025: '0.0000'
   :alt_annual_rates: {}
-  :countries:
-  - US
-  - GT
-  :source: GUATEMALA
+  :source: GT

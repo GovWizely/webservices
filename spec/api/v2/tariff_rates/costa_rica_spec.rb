@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe 'FTA Costa Rica Tariff Rates API V2', type: :request do
   include_context 'TariffRate::CostaRica data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
+  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
-  describe 'GET /tariff_rates/costa_rica/search' do
-    let(:params) { {} }
-    before { get '/tariff_rates/costa_rica/search', params, v2_headers }
+  describe 'GET /tariff_rates/search?sources=CR' do
+    let(:params) { { sources: 'cr' } }
+    before { get '/tariff_rates/search', params, v1_headers }
 
     context 'when search parameters are empty' do
       subject { response }
@@ -15,12 +15,13 @@ describe 'FTA Costa Rica Tariff Rates API V2', type: :request do
     end
 
     context 'when q is specified' do
-      let(:params) { { q: 'horses' } }
+      let(:params) { { sources: 'cr', q: 'horses' } }
 
       subject { response }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TariffRate::CostaRica results that match "horses"'
       it_behaves_like "an empty result when a query doesn't match any documents"
+
     end
   end
 end

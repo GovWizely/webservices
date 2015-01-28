@@ -4,9 +4,9 @@ describe 'FTA Guatemala Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Guatemala data'
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
-  describe 'GET /tariff_rates/guatemala/search' do
-    let(:params) { {} }
-    before { get '/tariff_rates/guatemala/search', params, v1_headers }
+  describe 'GET /tariff_rates/search?sources=GT' do
+    let(:params) { { sources: 'gt' } }
+    before { get '/tariff_rates/search', params, v1_headers }
 
     context 'when search parameters are empty' do
       subject { response }
@@ -15,7 +15,7 @@ describe 'FTA Guatemala Tariff Rates API V1', type: :request do
     end
 
     context 'when q is specified' do
-      let(:params) { { q: 'horses' } }
+      let(:params) { { sources: 'gt', q: 'horses' } }
 
       subject { response }
       it_behaves_like 'a successful search request'

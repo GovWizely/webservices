@@ -48,10 +48,6 @@
     },
     "alt_annual_rates": {
     },
-    "countries": [
-      "US",
-      "CR"
-    ],
-    "source": "COSTA_RICA"
+    "source": "CR"
   }
 ]

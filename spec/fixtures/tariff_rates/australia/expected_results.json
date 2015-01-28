@@ -40,11 +40,7 @@
     },
     "alt_annual_rates": {
     },
-    "countries": [
-      "US",
-      "AU"
-    ],
-    "source": "AUSTRALIA"
+    "source": "AU"
   },
   {
     "source_id": "439054",
@@ -93,11 +89,7 @@
     },
     "alt_annual_rates": {
     },
-    "countries": [
-      "US",
-      "AU"
-    ],
-    "source": "AUSTRALIA"
+    "source": "AU"
   },
   {
     "source_id": "439078",
@@ -140,10 +132,6 @@
     },
     "alt_annual_rates": {
     },
-    "countries": [
-      "US",
-      "AU"
-    ],
-    "source": "AUSTRALIA"
+    "source": "AU"
   }
 ]

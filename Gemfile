@@ -19,6 +19,7 @@ gem 'htmlentities'
 gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'git'
 gem 'rdiscount'
+gem 'smarter_csv'
 
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 
