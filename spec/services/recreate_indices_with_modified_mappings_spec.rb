@@ -62,6 +62,12 @@ describe RecreateIndicesWithModifiedMappings do
         expect(subject).to be_empty
       end
     end
-  end
 
+    context '.same?' do
+      let(:a) { {foo: :bar} }
+      let(:b) { nil }
+      subject { described_class.same?(a, b) }
+      it { is_expected.to eq(false) }
+    end
+  end
 end

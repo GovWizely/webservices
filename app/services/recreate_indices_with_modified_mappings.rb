@@ -19,8 +19,6 @@ class RecreateIndicesWithModifiedMappings
       end
     end
 
-    private
-
     # Due to the fact that in ES you don't have to explicitly define mappings for
     # every field that a document may have, we cannot just do a straight-up "=="
     # comparison here. ES may add property mappings for fields that don't have a
@@ -36,6 +34,8 @@ class RecreateIndicesWithModifiedMappings
     # model* is different from how it is defined in the DB, which is what we're
     # looking for.
     def same?(model_entity, db_entity)
+      return false if model_entity.class != db_entity.class
+
       if model_entity.is_a?(Hash)
         model_entity.each do |k, v|
           return false unless same?(v, db_entity[k])
