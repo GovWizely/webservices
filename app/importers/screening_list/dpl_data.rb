@@ -39,38 +39,49 @@ module ScreeningList
 
     def import
       Rails.logger.info "Importing #{@resource}"
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t")
-
-      ensure_expected_headers(rows.first)
-
-      docs = group_rows(rows).map do |id, grouped|
-        process_grouped_rows(id, grouped)
-      end
-
-      model_class.index(docs)
+      model_class.index entries
     end
 
     private
 
-    def process_grouped_rows(id, rows)
-      doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
+    def rows
+      r = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t").map(&:to_h)
 
-      doc[:id] = id
-      doc[:source] = model_class.source
-      doc[:source_list_url] =
+      ensure_expected_headers(r.first)
+      r
+    end
+
+    def entries
+      group_rows(rows).map do |id, grouped|
+        process_grouped_rows(id, grouped)
+      end.compact
+    end
+
+    def empty_entry?(entry)
+      entry.values.all?(&:empty?)
+    end
+
+    def process_grouped_rows(id, rows)
+      entry = remap_keys(COLUMN_HASH, rows.first)
+
+      return nil if empty_entry?(entry)
+
+      entry[:id] = id
+      entry[:source] = model_class.source
+      entry[:source_list_url] =
         'http://www.bis.doc.gov/index.php/the-denied-persons-list'
-      doc[:source_information_url] =
+      entry[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
       %i(start_date end_date).each do |field|
-        doc[field] &&= parse_american_date(doc[field])
+        entry[field] &&= parse_american_date(entry[field])
       end
 
-      doc[:addresses] = rows.map do |row|
-        remap_keys(ADDRESS_HASH, row.to_hash)
+      entry[:addresses] = rows.map do |row|
+        remap_keys(ADDRESS_HASH, row)
       end
 
-      doc
+      entry
     end
   end
 end
