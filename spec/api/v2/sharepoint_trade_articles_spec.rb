@@ -2,15 +2,22 @@ require 'spec_helper'
 
 describe 'Sharepoint Trade Article API V2', type: :request do
   before(:all) do
+    fixtures_dir = "#{Rails.root}/spec/fixtures/sharepoint_trade_articles"
+    fixtures_files = Dir["#{fixtures_dir}/articles/*"].map { |file| open(file) }
+
+    s3 = stubbed_s3_client('sharepoint_trade_article')
+    s3.stub_responses(:list_objects, contents: [{ key: '116.xml' }, { key: '117.xml' }, { key: '118.xml' }, { key: '119.xml' }])
+    s3.stub_responses(:get_object, { body: fixtures_files[0] }, { body: fixtures_files[1] }, { body: fixtures_files[2] }, body: fixtures_files[3])
+
     SharepointTradeArticle.recreate_index
-    SharepointTradeArticleData.new("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*").import
+    SharepointTradeArticleData.new(s3).import
   end
 
-  let(:search_path) { '/ita_articles/search' }
+  let(:search_path) { '/trade_articles/search' }
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/results.yaml") }
 
-  describe 'GET /ita_articles/search.json' do
+  describe 'GET /trade_articles/search.json' do
 
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, v2_headers }

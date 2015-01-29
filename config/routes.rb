@@ -12,6 +12,14 @@ Webservices::Application.routes.draw do
       get "/#{path}/search(.json)" => 'trade_leads/consolidated#search', format: false, defaults: { sources: source }
     end
 
+    get '/trade_articles/search(.json)' => 'trade_articles#search'
+
+  end
+
+  concern :api_v2_routable do
+
+    get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
+
   end
 
   concern :api_routable do
@@ -19,8 +27,6 @@ Webservices::Application.routes.draw do
     path = { 'market_researches'         => 'market_research_library',
              'parature_faq'              => 'faqs',
              'ita_office_locations'      => 'ita_office_locations',
-             'trade_articles'            => 'trade_articles',
-             'sharepoint_trade_articles' => 'ita_articles',
              'country_commercial_guides' => 'country_commercial_guides',
      }
 
@@ -58,6 +64,7 @@ Webservices::Application.routes.draw do
 
   scope 'v2', module: 'api/v2', defaults: { format: :json } do
     concerns :api_routable
+    concerns :api_v2_routable
   end
 
   scope 'v1', module: 'api/v1', defaults: { format: :json } do
@@ -67,6 +74,7 @@ Webservices::Application.routes.draw do
 
   scope module: 'api/v2', constraints: ApiConstraint.new(default: false, version: 2), defaults: { format: :json } do
     concerns :api_routable
+    concerns :api_v2_routable
   end
 
   scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do

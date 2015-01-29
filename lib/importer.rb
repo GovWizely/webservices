@@ -38,14 +38,14 @@ module Importer
   end
 
   def country_name_mappings
-    @@country_name_mappings ||= YAML::load_file(File.join(__dir__, 'country_mappings.yaml'))
+    @@country_name_mappings ||= YAML.load_file(File.join(__dir__, 'country_mappings.yaml'))
   end
 
   def normalize_country(country_str)
     country_str = country_str.strip
 
     mapping = country_name_mappings.find do |_, regexes|
-      regexes.any?{ |r| r.match country_str }
+      regexes.any? { |r| r.match country_str }
     end
 
     if mapping
@@ -55,7 +55,6 @@ module Importer
     else
       country_str
     end
-
   end
 
   def normalize_industry(industry)

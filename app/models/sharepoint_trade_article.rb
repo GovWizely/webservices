@@ -19,7 +19,12 @@ class SharepointTradeArticle
   }.freeze
 
   self.mappings = {
-    name.typeize => {
+
+    sharepoint_trade_article: {
+      _timestamp: {
+        enabled: true,
+        store:   true,
+      },
       properties: {
         title:                    { type: 'string', analyzer: 'custom_analyzer' },
         short_title:              { type: 'string', analyzer: 'custom_analyzer' },

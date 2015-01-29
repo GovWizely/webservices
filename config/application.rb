@@ -50,5 +50,16 @@ module Webservices
         klass.is_a?(Indexable) ? klass : nil
       end.compact
     end
+
+    config.sharepoint_trade_article = {
+      aws: {
+        region:            ENV['AWS_REGION'],
+        access_key_id:     ENV['SHAREPOINT_TRADE_ARTICLE_AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['SHAREPOINT_TRADE_ARTICLE_AWS_SECRET_ACCESS_KEY'] } }
+    config.tariff_rate = {
+      aws: {
+        region:            ENV['AWS_REGION'],
+        access_key_id:     ENV['TARIFF_RATE_AWS_ACCESS_KEY_ID'],
+        secret_access_key: ENV['TARIFF_RATE_AWS_SECRET_ACCESS_KEY'] } }
   end
 end

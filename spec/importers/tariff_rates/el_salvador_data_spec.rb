@@ -5,7 +5,7 @@ describe TariffRate::ElSalvadorData do
   fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador"
   fixtures_file = "#{fixtures_dir}/el_salvador.csv"
 
-  s3 = Aws::S3::Client.new(stub_responses: true)
+  s3 = stubbed_s3_client('tariff_rate')
   s3.stub_responses(:get_object, body: open(fixtures_file))
 
   let(:importer) { described_class.new(fixtures_file, s3) }

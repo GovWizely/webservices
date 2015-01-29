@@ -2,7 +2,6 @@ require 'open-uri'
 
 class SharepointTradeArticleData
   include Importer
-  ENDPOINT = "#{Rails.root}/data/sharepoint_trade_articles/*"
 
   SINGLE_VALUE_XPATHS = {
     id:                       '//id',
@@ -44,23 +43,39 @@ class SharepointTradeArticleData
     trade_url:             [],
   }.freeze
 
-  def initialize(resource = ENDPOINT)
-    @resource = resource
+  def initialize(s3 = nil)
+    @s3 = s3 || Aws::S3::Client.new(
+                  region:      Rails.configuration.sharepoint_trade_article[:aws][:region],
+                  credentials: Aws::Credentials.new(
+                                Rails.configuration.sharepoint_trade_article[:aws][:access_key_id],
+                                Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key]))
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
 
-    articles = Dir[@resource].map do |resource|
-      xml = Nokogiri::XML(open(resource))
+    resp = @s3.list_objects(bucket: 'ngn-bluebox')
+    keys = get_object_keys(resp)
+
+    articles = keys.map do |key|
+      object = @s3.get_object(bucket: 'ngn-bluebox', key: "#{key}").body
+      xml = Nokogiri::XML(object.read)
       article_hash = extract_article_fields(xml)
       process_article_info(article_hash)
-    end.compact
+    end
 
     SharepointTradeArticle.index(articles)
   end
 
   private
+
+  def get_object_keys(resp)
+    resp.contents.map do |object|
+      if object.key.end_with?('.xml')
+        object.key
+      end
+    end.compact
+  end
 
   def extract_article_fields(article)
     article_info = article.xpath('//article')
