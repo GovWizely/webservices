@@ -33,4 +33,15 @@ Webservices::Application.configure do
 
   # Print deprecation notices to the stderr.
   config.active_support.deprecation = :stderr
+
+  config.sharepoint_trade_article = {
+    aws: {
+      region:            'us-east-1',
+      access_key_id:     'FAKE',
+      secret_access_key: 'FAKE' } }
+  config.tariff_rate = {
+    aws: {
+      region:            'us-east-1',
+      access_key_id:     'FAKE',
+      secret_access_key: 'FAKE' } }
 end

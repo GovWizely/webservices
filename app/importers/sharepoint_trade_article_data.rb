@@ -45,8 +45,10 @@ class SharepointTradeArticleData
 
   def initialize(s3 = nil)
     @s3 = s3 || Aws::S3::Client.new(
-      access_key_id:     ENV['AWS_ACCESS_KEY_ID_ARTICLES'],
-      secret_access_key: ENV['AWS_SECRET_ACCESS_KEY_ARTICLES'])
+                  region:      Rails.configuration.sharepoint_trade_article[:aws][:region],
+                  credentials: Aws::Credentials.new(
+                                Rails.configuration.sharepoint_trade_article[:aws][:access_key_id],
+                                Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key]))
   end
 
   def import
