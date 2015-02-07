@@ -14,6 +14,7 @@ VCR.configure do |c|
   c.ignore_request do |request|
     URI(request.uri).port == 9200
   end
+  c.ignore_hosts 'codeclimate.com'
   c.cassette_library_dir = 'spec/cassettes'
   c.hook_into :webmock
   c.debug_logger = File.open('log/vcr.log', 'w')

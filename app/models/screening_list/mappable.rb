@@ -17,6 +17,10 @@ module ScreeningList
                 tokenizer: 'keyword',
                 filter:    %w(lowercase asciifolding),
               },
+              keyword_uppercase:            {
+                tokenizer: 'keyword',
+                filter:    %w(uppercase asciifolding),
+              },
             },
           },
         },
@@ -47,7 +51,14 @@ module ScreeningList
                                                      code:      { type: 'string', analyzer: 'keyword' } } },
             federal_register_notice: { type: 'string', analyzer: 'keyword' },
 
-            addresses:               { properties: { country:         { type: 'string', analyzer: 'keyword' } } },
+            ### Note to self: (I went back and forth so many times that I need a note to break me out of this loop)
+            # uppercase is relevant here because
+            addresses:               { properties: { country:         { type: 'string', analyzer: 'keyword_uppercase' } } },
+            # we currently use both filter/term and query/match on this field using different parameters (countries and address,
+            # respectively) and we want the query/match not to care about casing.
+            # This ensures the query gets analyzed and uppercased during search and the existing terms filter can remain as is.
+            # I could mention that I intend to move those filter to use the filter/query but I won't. That might never happen :-P
+            ###
             ids:                     { properties: { country:         { type: 'string', analyzer: 'keyword' },
                                                      issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
                                                      expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },

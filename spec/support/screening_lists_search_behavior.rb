@@ -268,6 +268,12 @@ shared_examples 'it contains all ScreeningList::Dpl results that match "katsuta"
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all ScreeningList::Dpl results with address "MINATOKU"' do
+  let(:source) { ScreeningList::Dpl }
+  let(:expected) { [6] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_examples 'it contains all ScreeningList::Dpl results that match "agnese"' do
   let(:source) { ScreeningList::Dpl }
   let(:expected) { [4] }
