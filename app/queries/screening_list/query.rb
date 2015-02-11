@@ -4,13 +4,14 @@ module ScreeningList
 
     def initialize(options = {})
       super
-      @q = options[:q] if options[:q].present?
-      @type = options[:type].downcase if options[:type].present?
-      @countries = options[:countries].upcase.split(',') if options[:countries].present?
-      @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
+      @q = options[:q]
+      @type = options[:type].try(:downcase)
+      @countries = options[:countries].try { |c| c.upcase.split(',') }
+      @sources   = options[:sources].try { |s| s.upcase.split(',') } || []
       @sort = '_score,name.keyword'
-      @name = options[:name] if options[:name].present?
-      @fuzziness = options[:fuzziness].to_i if options[:fuzziness].present?
+      @name = options[:name]
+      @address = options[:address]
+      @fuzziness = options[:fuzziness].try(:to_i)
     end
 
     private
@@ -25,14 +26,17 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_name_queries(json, %w(name.keyword alt_names.keyword), @name)
+            generate_fuzzy_queries(json, %w(name.keyword alt_names.keyword), @name)
+          end
+          if @address
+            generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
           end
 
         end
-      end if @q || @name || @fuzziness
+      end if [@q, @name, @fuzziness, @address].any?
     end
 
-    def generate_name_queries(json, fields, value)
+    def generate_fuzzy_queries(json, fields, value)
       json.set! 'should' do
         json.child! { generate_multi_match(json, fields, value) }
 
@@ -40,10 +44,10 @@ module ScreeningList
           json.multi_match do
             json.fields fields
             json.query value
-            json.fuzziness @fuzziness if @fuzziness
+            json.fuzziness @fuzziness
           end
-        end
-      end if @name || @fuzziness
+        end if @fuzziness
+      end
     end
 
     def generate_filter(json)

@@ -50,6 +50,27 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
     end
 
+    context 'when address is specified' do
+      context 'by address' do
+        let(:params) { { address: 'miNATOKU' } }
+        subject { response }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all ScreeningList::Dpl results with address "MINATOKU"'
+      end
+      context 'by country' do
+        let(:params) { { address: 'jp' } }
+        subject { response }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all ScreeningList::Dpl results with address "MINATOKU"'
+      end
+      context 'by city' do
+        let(:params) { { address: 'tokyo' } }
+        subject { response }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all ScreeningList::Dpl results with address "MINATOKU"'
+      end
+    end
+
     context 'when q is specified' do
       let(:params) { { q: 'cuba' } }
 

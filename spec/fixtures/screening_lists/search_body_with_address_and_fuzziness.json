@@ -1,0 +1,34 @@
+{
+    "query": {
+        "bool": {
+            "should": [
+                {
+                    "multi_match": {
+                        "fields": [
+                          "addresses.address",
+                          "addresses.city",
+                          "addresses.state",
+                          "addresses.postal_code",
+                          "addresses.country"
+                        ],
+                        "operator": "and",
+                        "query": "Avenida Bady Bassitt"
+                    }
+                },
+                {
+                    "multi_match": {
+                        "fields": [
+                          "addresses.address",
+                          "addresses.city",
+                          "addresses.state",
+                          "addresses.postal_code",
+                          "addresses.country"
+                        ],
+                        "fuzziness": 2,
+                        "query": "Avenida Bady Bassitt"
+                    }
+                }
+            ]
+        }
+    }
+}
