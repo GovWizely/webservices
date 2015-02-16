@@ -1,5 +1,6 @@
 ---
-- :countries:
+- :id: '14271735'
+  :countries:
   - BR
   :description: The Brazilian rodeo industry is now far more popular in terms of physical
     spectators than Brazilian soccer. It is an emerging market with plenty of opportunities
@@ -7,14 +8,16 @@
     but also, to attract Brazilian tourists to U.S destinations with major rodeos
     and related events.
   :expiration_date: '2018-01-01'
-  :id: '14271735'
   :industries:
-  - Services
+    :original:
+    - Services
+    :mapped: []
   :report_type: Market Research Report
   :title: Brazilian Rodeo Industry and Potential for U.S. Companies and U.S. Travel
     and Tourism Destinations to Engage
   :url: http://mr.export.gov/docs/x_9678533.pdf
-- :countries:
+- :id: '14271734'
+  :countries:
   - AF
   - BD
   - CN
@@ -37,12 +40,14 @@
     government tenders. This report covers advance and ongoing procurement, as well
     as recruitment of consultants for projects that are funded by the ADB.
   :expiration_date: '2014-11-26'
-  :id: '14271734'
-  :industries: []
+  :industries:
+    :original: []
+    :mapped: []
   :report_type: Market Research Report
   :title: ADVANCE Procurement Notices, October 2013
   :url: http://mr.export.gov/docs/x_9944661.pdf
-- :countries: []
+- :id: '14271733'
+  :countries: []
   :description: The Government of the Republic of Kenya has received financing from
     the International Development Association (IDA), and Kenya Airports Authority
     has received financing from Agence Française de Développement (AFD) towards the
@@ -51,14 +56,16 @@
     Information Technology Systems (ITS) for the new Passenger Terminal Building at
     JKIA, Nairobi.
   :expiration_date: '2013-12-31'
-  :id: '14271733'
   :industries:
-  - Aerospace & Defense
+    :original:
+    - Aerospace & Defense
+    :mapped: []
   :report_type: Market Research Report
   :title: 'Kenya: Renovation and Expansion of Passenger Terminal Facilities at Jomo
     Kenyatta International Airport - Information Technology Systems'
   :url: http://mr.export.gov/docs/x_4660043.pdf
-- :countries:
+- :id: '14271731'
+  :countries:
   - AR
   :description: Argentina remains a key market for U.S. exports to Latin America.
     However, recent controls have made exporting goods from any country to Argentina
@@ -70,50 +77,55 @@
     before shipping any goods as conditions and restrictions can change suddenly.
     Please see the contact information at the end of this report.
   :expiration_date: '2014-12-30'
-  :id: '14271731'
   :industries:
-  - Aerospace & Defense
-  - Agribusiness
-  - Apparel & Textiles
-  - Automotive & Ground Transportation
-  - Chemicals, Petrochemicals & Composites
-  - Construction, Building & Heavy Equipment
-  - Consumer Goods & Home Furnishings
-  - Energy & Mining
-  - Environmental Industries
-  - Food Processing & Packaging
-  - Health Technologies
-  - Industrial Equipment & Supplies
-  - Information & Communication
-  - Marine Industries
-  - Paper, Printing, Graphic Arts
-  - Security & Safety
-  - Services
-  - Used & Reconditioned Equipment
-  :title: Process Obstacles to Exporting to Argentina
+    :original:
+    - Aerospace & Defense
+    - Agribusiness
+    - Apparel & Textiles
+    - Automotive & Ground Transportation
+    - Chemicals, Petrochemicals & Composites
+    - Construction, Building & Heavy Equipment
+    - Consumer Goods & Home Furnishings
+    - Energy & Mining
+    - Environmental Technologies
+    - Food Processing & Packaging
+    - Health Technologies
+    - Industrial Equipment & Supplies
+    - Information & Communication
+    - Marine Industries
+    - Paper, Printing, Graphic Arts
+    - Security & Safety
+    - Services
+    - Used & Reconditioned Equipment
+    :mapped:
+    - Environmental Industries
   :report_type: Market Research Report
+  :title: Process Obstacles to Exporting to Argentina
   :url: http://mr.export.gov/docs/x_4268342.pdf
-- :countries:
+- :id: '14272199'
+  :countries:
   - IN
-  :id: '14272199'
   :description: The Commercial Aviation_ India market research report (2014), assists
     the U.S. exporters (especially New To Market firms) to understand Indian Government's
-    role & policies for the civil aviation industry, current market size, trends, business
-    opportunities and the prevailing challenges in the Indian aviation market.
+    role & policies for the civil aviation industry, current market size, trends,
+    business opportunities and the prevailing challenges in the Indian aviation market.
   :expiration_date: '2015-03-31'
   :industries:
-  - Aerospace & Defense
+    :original:
+    - Aerospace & Defense
+    :mapped: []
   :report_type: Best Market Research
   :title: Commercial Aviation in India
   :url: http://mr.export.gov/docs/x_813718.pdf
-- :countries:
+- :id: '14272168'
+  :countries:
   - BA
-  :id: '14272168'
-  :description: Bosnia and Herzogovina Country Commercial Guide is a primer on
-    doing business in the country.
+  :description: Bosnia and Herzogovina Country Commercial Guide is a primer on doing
+    business in the country.
   :expiration_date: '2016-01-01'
-  :industries: []
+  :industries:
+    :original: []
+    :mapped: []
   :report_type: Country Commercial Guide
   :title: Bosnia and Herzogovina Country Commercial Guide
   :url: http://mr.export.gov/docs/x_3092299.pdf
-
