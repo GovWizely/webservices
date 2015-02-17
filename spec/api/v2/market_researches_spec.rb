@@ -3,8 +3,6 @@ require 'spec_helper'
 describe 'Market Researches API V2', type: :request do
   include_context 'MarketResearch data'
 
-pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
-
   let(:search_path) { '/market_research_library/search' }
   let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/market_researches/results_v2.json").read }
@@ -102,7 +100,5 @@ pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
       end
     end
   end
-
-end
 
 end

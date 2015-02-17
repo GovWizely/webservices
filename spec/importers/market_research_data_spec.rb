@@ -2,8 +2,6 @@ require 'spec_helper'
 
 describe MarketResearchData do
 
-pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
-
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
   let(:resource) { "#{fixtures_dir}/market_researches.txt" }
   let(:importer) { MarketResearchData.new(resource) }
@@ -26,7 +24,5 @@ pending 'NEED FEEDBACK ON V2 INDUSTRY-MAPPING FORMAT' do
       importer.import
     end
   end
-
-end
 
 end
