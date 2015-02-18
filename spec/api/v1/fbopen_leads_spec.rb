@@ -4,7 +4,7 @@ describe 'Fbopen Leads API V1', type: :request do
   before(:all) do
     TradeLead::Fbopen.recreate_index
     TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import('no_purge')
   end
 
   let(:search_path) { '/fbopen_leads/search' }

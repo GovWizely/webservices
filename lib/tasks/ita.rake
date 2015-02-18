@@ -1,8 +1,8 @@
 namespace :ita do
   desc 'Import data for a given module containing models, or a given model class'
-  task :import, [:module_or_model_class] => :environment do |_t, args|
+  task :import, [:module_or_model_class, :no_purge] => :environment do |_t, args|
     importers(args.module_or_model_class.constantize).each do |i|
-      i.new.import_and_if_possible_purge_old
+      i.new.import_and_if_possible_purge_old(args.no_purge)
     end
   end
 

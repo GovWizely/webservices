@@ -82,7 +82,7 @@ shared_context 'TradeLead::Fbopen data' do
   before(:all) do
     TradeLead::Fbopen.recreate_index
     TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import('no_purge')
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Fbopen] = JSON.parse(open(

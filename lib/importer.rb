@@ -76,8 +76,12 @@ module Importer
     self.class.name.sub(/Data$/, '').constantize
   end
 
-  def import_and_if_possible_purge_old
-    can_purge_old? ? import_and_purge_old : import
+  def import_and_if_possible_purge_old(no_purge = nil)
+    if no_purge == 'no_purge'
+      import(no_purge)
+    else
+      can_purge_old? ? import_and_purge_old : import
+    end
   end
 
   def lookup_state(state_str)

@@ -20,7 +20,7 @@ describe Importer do
         @docs = docs
       end
 
-      def import
+      def import(_no_purge = nil)
         model_class.index(@docs)
       end
     end
@@ -145,6 +145,11 @@ describe Importer do
 
       MockData.new(batch_3).import_and_if_possible_purge_old
       expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
+    end
+
+    it 'does not purge when no_purge is specified' do
+      MockData.new(batch_1).import_and_if_possible_purge_old('no_purge')
+      expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
     end
 
     def stored_docs

@@ -3,17 +3,26 @@ require 'spec_helper'
 describe TradeLead::FbopenData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
   let(:resource)     { "#{fixtures_dir}/example_input" }
-  let(:importer)     { described_class.new(resource) }
+  let(:resource_full) { "#{fixtures_dir}/input_full_xml.xml" }
+  let(:importer)     { described_class.new(resource, resource_full) }
 
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    it 'loads leads from specified resource' do
+    it 'loads leads from partial resource' do
       expect(TradeLead::Fbopen).to receive(:index) do |fbo|
-        expect(fbo.size).to eq(2)
+        expect(fbo.size).to eq(3)
+      end
+      importer.import('no_purge')
+    end
+
+    it 'loads leads from partial resource and full xml' do
+      expect(TradeLead::Fbopen).to receive(:index) do |fbo|
+        expect(fbo.size).to eq(6)
       end
       importer.import
     end
+
   end
 
   describe '#leads' do
