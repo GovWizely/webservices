@@ -81,8 +81,8 @@ end
 shared_context 'TradeLead::Fbopen data' do
   before(:all) do
     TradeLead::Fbopen.recreate_index
-    TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    TradeLead::FbopenImporter::PatchData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Fbopen] = JSON.parse(open(
@@ -92,13 +92,13 @@ end
 
 shared_examples 'it contains all TradeLead::Fbopen results' do
   let(:source) { TradeLead::Fbopen }
-  let(:expected) { [0, 1, 2, 3, 4, 5] }
+  let(:expected) { [0, 1, 2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeLead::Fbopen results that match "equipment"' do
   let(:source) { TradeLead::Fbopen }
-  let(:expected) { [4] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 

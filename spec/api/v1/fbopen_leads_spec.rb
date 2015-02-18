@@ -3,8 +3,8 @@ require 'spec_helper'
 describe 'Fbopen Leads API V1', type: :request do
   before(:all) do
     TradeLead::Fbopen.recreate_index
-    TradeLead::FbopenData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/short_input").import
+    TradeLead::FbopenImporter::PatchData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
   end
 
   let(:search_path) { '/fbopen_leads/search' }
@@ -23,7 +23,7 @@ describe 'Fbopen Leads API V1', type: :request do
 
       it 'returns fbopen leads' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(6)
+        expect(json_response['total']).to eq(3)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
@@ -44,13 +44,13 @@ describe 'Fbopen Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[5])
+        expect(results[0]).to eq(expected_results[2])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
     context 'when industry is specified' do
-      let(:params) { { industries: '337920' } }
+      let(:params) { { industries: '812320' } }
       before { get search_path, params, v1_headers }
       subject { response }
 
@@ -58,12 +58,11 @@ describe 'Fbopen Leads API V1', type: :request do
 
       it 'returns matching leads' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(2)
+        expect(json_response['total']).to eq(1)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results).to include(expected_results[1])
-        expect(results).to include(expected_results[2])
+        expect(results).to include(expected_results[0])
       end
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end

@@ -6,5 +6,9 @@ module TradeLead
     self.source = {
       code: 'FBO',
     }
+
+    def self.importer_class
+      TradeLead::FbopenImporter::FullData
+    end
   end
 end
