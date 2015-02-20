@@ -5,7 +5,8 @@ describe TradeEvent::SbaData do
   let(:resource) { "#{fixtures_dir}/new_events_listing.xml?offset=0" }
   let(:importer) do
     described_class.new(resource,
-                        reject_if_ends_before: Date.parse('2013-01-11'))
+                        { reject_if_ends_before: Date.parse('2013-01-11') },
+                        'r')
   end
 
   it_behaves_like 'an importer which can purge old documents'

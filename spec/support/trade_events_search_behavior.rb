@@ -85,7 +85,7 @@ shared_context 'TradeEvent::Sba data' do
     TradeEvent::Sba.recreate_index
     TradeEvent::SbaData.new(
       "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
-      reject_if_ends_before: Date.parse('2013-01-11'),
+      { reject_if_ends_before: Date.parse('2013-01-11') }, 'r'
     ).import
 
     @all_possible_full_results ||= {}
@@ -103,7 +103,7 @@ shared_context 'TradeEvent::Sba data v2' do
     TradeEvent::Sba.recreate_index
     TradeEvent::SbaData.new(
       "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
-      reject_if_ends_before: Date.parse('2013-01-11'),
+      { reject_if_ends_before: Date.parse('2013-01-11') }, 'r'
     ).import
 
     @all_possible_full_results ||= {}

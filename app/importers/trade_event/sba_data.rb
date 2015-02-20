@@ -6,11 +6,13 @@ module TradeEvent
 
     attr_accessor :html_entities_coder, :reject_if_ends_before
 
-    ENDPOINT = 'https://www.sba.gov/event-list/views/new_events_listing.xml?display_id=services_1&filters[event_topic][value]=6&limit=100&offset=0'
+    ENDPOINT = 'https://www.sba.gov/event-list/views/new_events_listing?display_id=services_1&filters[event_topic][value]=6&limit=100&offset=0'
+    HEADER = { 'Accept' => 'application/xml' }
 
-    def initialize(resource = ENDPOINT, options = {})
+    def initialize(resource = ENDPOINT, options = {}, header = HEADER)
       @resource = resource
       self.reject_if_ends_before = options.fetch(:reject_if_ends_before, Date.current)
+      @header = header
     end
 
     def import
@@ -58,7 +60,7 @@ module TradeEvent
 
     def import_single(url)
       Rails.logger.info "Importing #{url}"
-      xml = Nokogiri::XML(open(url))
+      xml = Nokogiri::XML(open(url, @header))
       xml.xpath('//result/item').map { |item| process_item(item) }
     end
 
