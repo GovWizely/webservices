@@ -1,4 +1,4 @@
-require 'open-uri'
+require 'net/https'
 
 module TradeEvent
   class SbaData
@@ -60,9 +60,20 @@ module TradeEvent
 
     def import_single(url)
       Rails.logger.info "Importing #{url}"
-      xml = Nokogiri::XML(open(url, @header))
+      body = (url =~ /^http/) ? open_with_tlsv1(url) : File.open(url).read
+      xml = Nokogiri::XML(body)
       xml.xpath('//result/item').map { |item| process_item(item) }
     end
+
+    # :nocov:
+    def open_with_tlsv1(url)
+      uri = URI(url)
+      Net::HTTP.start(uri.host, uri.port, use_ssl: true, ssl_version: :TLSv1) do |http|
+        request = Net::HTTP::Get.new(uri, @header)
+        http.request(request).body
+      end
+    end
+    # :nocov:
 
     def process_item(item)
       doc = extract_fields(item, SINGLE_VALUED_XPATHS)
