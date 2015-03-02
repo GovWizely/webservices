@@ -1,0 +1,97 @@
+#body-content {
+  min-height: 500px;
+
+  nav {
+    text-align: right;
+  }
+
+  p {
+    margin-left: 2.5rem;
+
+    &.api-key {
+      font-size: x-large;
+      margin: 4rem 0 0;
+      text-align: center;
+      span {
+        font-size: small;
+      }
+    }
+  }
+
+  .form-wrapper {
+    width: 24rem;
+    margin: 0 auto;
+
+    form {
+      width: 14rem;
+      margin: 2rem auto 0;
+      .field {
+        clear: both;
+        min-height: 2rem;
+
+        label {
+          float: left;
+          width: 5rem;
+          line-height: 1.6em;
+        }
+        input {
+          float: left;
+          width: 8rem;
+          line-height: 1.6em;
+        }
+        &.top-of-group {
+          margin-top: 1.5rem;
+        }
+      }
+      .actions {
+        clear: both;
+        margin: 0.5rem 0 2rem 5rem;
+      }
+      p.note {
+        clear: both;
+        font-size: small;
+        font-style: italic;
+        margin: 0;
+      }
+
+      &#new_registration, &#edit_registration, &#edit_password {
+        width: 19rem;
+        .field {
+          label {
+            width: 10rem;
+          }
+        }
+        .actions {
+          margin-left: 10rem;
+        }
+      }
+    }
+  }
+
+  p.alert {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #fee;
+    color: red;
+  }
+  p.notice {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #efe;
+    color: green;
+  }
+
+  div#error_explanation {
+    margin: 1rem 0;
+    padding: 0.5rem;
+    background: #fee;
+    color: red;
+    h2 {
+      display: none;
+    }
+    ul {
+      margin-bottom: 0;
+    }
+  }
+}
+

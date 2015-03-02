@@ -1,0 +1,31 @@
+<header>
+  <%= link_to(image_tag("trade_url_white2.png", width: 210, alt: 'logo'), Rails.configuration.developerportal_url) %>
+  <br/><br/>
+  <h3>API Key</h3>
+  <p class="view"><%= link_to('Get an API Key', authenticated_root_path, :class => 'current') %></p>
+  <br/>
+  <h3>Available APIs</h3>
+  <p class="view"><%= link_to('Market Research Library', "#{Rails.configuration.developerportal_url}/market-research-library.html") %></p>
+  <p class="view"><%= link_to('Consolidated Screening List', "#{Rails.configuration.developerportal_url}/consolidated-screening-list.html") %></p>
+  <p class="view"><%= link_to('Trade Events', "#{Rails.configuration.developerportal_url}/trade-events.html") %></p>
+  <p class="view"><%= link_to('Trade Leads', "#{Rails.configuration.developerportal_url}/trade-leads.html") %></p>
+  <p class="view"><%= link_to('Tariff Rates', "#{Rails.configuration.developerportal_url}/tariff-rates.html") %></p>
+
+  <div id="demo-simplest" >
+    <a class="expander" style="text-indent: 50px;">More</a>
+    <div class="content">
+      <p class="view"><%= link_to('Country Commercial Guides', "#{Rails.configuration.developerportal_url}/ccg.html") %></p>
+      <p class="view"><%= link_to('FAQs on Exporting', "#{Rails.configuration.developerportal_url}/faqs-exporting.html") %></p>
+      <p class="view"><%= link_to('ITA Offices & Centers', "#{Rails.configuration.developerportal_url}/ita-office-locations.html") %></p>
+      <p class="view"><%= link_to('Trade News & Articles', "#{Rails.configuration.developerportal_url}/ita-trade-articles.html") %></p>
+    </div>
+  </div>
+  <br/>
+  <h3>Additional Resources</h3>
+  <p class="view"><%= link_to('Guidance', "#{Rails.configuration.developerportal_url}/guidance.html") %></p>
+  <p class="view"><%= link_to('App Gallery', "#{Rails.configuration.developerportal_url}/app-gallery.html") %></p>
+  <p class="view"><%= link_to('API FAQs', "#{Rails.configuration.developerportal_url}/api-faqs.html") %></p>
+  <p class="view"><%= link_to('Change Log', "#{Rails.configuration.developerportal_url}/change-log.html") %></p>
+  <p class="view"><%= link_to('Terms of Service', "#{Rails.configuration.developerportal_url}/tos.html") %></p>
+  <p class="view"><%= link_to('Contact Us', "#{Rails.configuration.developerportal_url}/contact-us.html") %>
+</header>

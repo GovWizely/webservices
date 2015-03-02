@@ -1,4 +1,4 @@
-class Api::V2::TradeEvents::EximController < ApplicationController
+class Api::V2::TradeEvents::EximController < Api::V2Controller
   include Searchable
   search_by :countries, :industry, :q
 end

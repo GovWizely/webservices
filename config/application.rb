@@ -3,13 +3,15 @@ require File.expand_path('../boot', __FILE__)
 # Pick the frameworks you want:
 # require "active_record/railtie"
 require 'action_controller/railtie'
-# require "action_mailer/railtie"
-# require "sprockets/railtie"
+require 'action_mailer/railtie'
+require 'sprockets/railtie'
 require 'rails/test_unit/railtie'
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
 Bundler.require(:default, Rails.env)
+
+ENV['SITE_DOMAIN'] ||= 'govwizely.com'
 
 module Webservices
   class Application < Rails::Application
@@ -62,5 +64,27 @@ module Webservices
         region:            ENV['AWS_REGION'],
         access_key_id:     ENV['TARIFF_RATE_AWS_ACCESS_KEY_ID'],
         secret_access_key: ENV['TARIFF_RATE_AWS_SECRET_ACCESS_KEY'] } }
+
+    config.developerportal_url =
+      if ENV['SITE_DOMAIN'] == 'govwizely.com'
+        'http://govwizely.github.io/developerportal'
+      else
+        "http://developer.#{ENV['SITE_DOMAIN']}"
+      end
+
+    config.mailer_sender = "No-Reply@#{ENV['SITE_DOMAIN']}"
+    config.action_mailer.default_url_options = { host: "https://api.#{ENV['SITE_DOMAIN']}" }
+
+    config.action_mailer.delivery_method = :smtp
+    smtp_settings = {
+      address:              ENV['SMTP_ADDRESS'],
+      enable_starttls_auto: true,
+    }
+    smtp_settings[:user_name] = ENV['SMTP_USER_NAME'] if ENV['SMTP_USER_NAME']
+    smtp_settings[:password] = ENV['SMTP_PASSWORD'] if ENV['SMTP_PASSWORD']
+    smtp_settings[:authentication] = ENV['SMTP_AUTHENTICATION'] if ENV['SMTP_AUTHENTICATION']
+    config.action_mailer.smtp_settings = smtp_settings
+
+    config.filter_parameters += [:current_password, :password, :password_confirmation]
   end
 end

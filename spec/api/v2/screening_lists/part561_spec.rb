@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'Part 561 List API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'ScreeningList::Part561 data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /consolidated_screening_list/search?sources=561' do
     let(:params) { { sources: '561' } }
-    before { get '/consolidated_screening_list/search', params, v2_headers }
+    before { get '/consolidated_screening_list/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }

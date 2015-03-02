@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'FTA Singapore Tariff Rates API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'TariffRate::Singapore data'
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /tariff_rates/search?sources=SG' do
     let(:params) { { sources: 'sg' } }
-    before { get '/tariff_rates/search', params, v1_headers }
+    before { get '/tariff_rates/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }

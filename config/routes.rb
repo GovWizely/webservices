@@ -1,4 +1,16 @@
 Webservices::Application.routes.draw do
+  devise_for :users, controllers: { registrations: 'registrations' }
+
+  devise_scope :user do
+    authenticated :user do
+      root 'home#index', as: :authenticated_root
+    end
+    unauthenticated do
+      root 'devise/sessions#new', as: :unauthenticated_root
+    end
+    get '/regenerate_api_key', to: 'registrations#regenerate_api_key'
+  end
+
   concern :api_v1_routable do
     path = {
       'australian_trade_leads' => 'AUSTRALIA',
@@ -79,5 +91,5 @@ Webservices::Application.routes.draw do
     concerns :api_routable
   end
 
-  match '404', via: :all, to: 'application#not_found'
+  match '404', via: :all, to: 'api#not_found'
 end

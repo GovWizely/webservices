@@ -55,6 +55,16 @@ After running your tests, view the report by opening `coverage/index.html`.
 
 Click around on the files that have < 100% coverage to see what lines weren't exercised.
 
+### Mailcatcher
+
+We use [Mailcatcher](http://mailcatcher.me/) to test emails sent from dev environments. Their advice is not to add the gem to your Gemfile, so in order
+to use it please do:
+
+    gem install mailcatcher
+    mailcatcher
+
+If you use [RVM](https://rvm.io/), you should follow their [specific instructions](http://mailcatcher.me/) (search for "RVM") on how to install the gem.
+
 ### Code Status
 
 * [![Build Status](https://travis-ci.org/GovWizely/webservices.svg?branch=master)](https://travis-ci.org/GovWizely/webservices/)

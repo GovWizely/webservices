@@ -1,19 +1,19 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V2', type: :request do
+  include_context 'V2 headers'
   before(:all) do
     ParatureFaq.recreate_index
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
   end
 
   let(:search_path) { '/faqs/search' }
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml") }
 
   describe 'GET /faqs/search.json' do
 
     context 'when search parameters are empty' do
-      before { get search_path, { size: 50 }, v2_headers }
+      before { get search_path, { size: 50 }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +30,7 @@ describe 'Parature Faq API V2', type: :request do
 
     context 'when q is specified' do
       let(:params) { { q: 'tpcc' } }
-      before { get search_path, params, v2_headers }
+      before { get search_path, params, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -47,7 +47,7 @@ describe 'Parature Faq API V2', type: :request do
     end
 
     context 'when question is specified' do
-      before { get search_path, { question: 'eu' }, v2_headers }
+      before { get search_path, { question: 'eu' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -63,7 +63,7 @@ describe 'Parature Faq API V2', type: :request do
     end
 
     context 'when answer is specified' do
-      before { get search_path, { answer: 'nafta' }, v2_headers }
+      before { get search_path, { answer: 'nafta' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -80,7 +80,7 @@ describe 'Parature Faq API V2', type: :request do
 
     context 'when countries is specified' do
       let(:params) { { countries: 'tr,cr' } }
-      before { get search_path, params, v2_headers }
+      before { get search_path, params, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -102,7 +102,7 @@ describe 'Parature Faq API V2', type: :request do
 
     context 'when industries is specified' do
       let(:params) { { industries: 'importing' } }
-      before { get search_path, params, v2_headers }
+      before { get search_path, params, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -119,7 +119,7 @@ describe 'Parature Faq API V2', type: :request do
     end
 
     context 'when topics is specified' do
-      before { get search_path, { topics: 'cafta-dr' }, v2_headers }
+      before { get search_path, { topics: 'cafta-dr' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -135,7 +135,7 @@ describe 'Parature Faq API V2', type: :request do
     end
 
     context 'when update_date_start or update_date_end is specified' do
-      before { get search_path, { update_date_start: '2013-03-20', update_date_end: '2013-04-19' }, v2_headers }
+      before { get search_path, { update_date_start: '2013-03-20', update_date_end: '2013-04-19' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

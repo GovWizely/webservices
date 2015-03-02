@@ -1,4 +1,4 @@
-class Api::V2::SharepointTradeArticlesController < ApplicationController
+class Api::V2::SharepointTradeArticlesController < Api::V2Controller
   include Searchable
   search_by :creation_date_start, :creation_date_end, :release_date_start, :release_date_end,
             :expiration_date_start, :expiration_date_end, :export_phases, :industries, :trade_regions,

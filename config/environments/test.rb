@@ -44,4 +44,6 @@ Webservices::Application.configure do
       region:            'us-east-1',
       access_key_id:     'FAKE',
       secret_access_key: 'FAKE' } }
+
+  config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 end

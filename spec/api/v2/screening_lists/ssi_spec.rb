@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'Sectoral Sanctions Identifications List API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'ScreeningList::Ssi data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /consolidated_screening_list/ssi/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/ssi/search', params, v2_headers }
+    before { get '/consolidated_screening_list/ssi/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }
