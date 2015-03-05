@@ -60,7 +60,8 @@ module TradeEvent
       event = sanitize_entry remap_keys(COLUMN_HASH, entry)
 
       %i(start_date end_date).each do |field|
-        event[field] = Date.strptime(event[field], '%m/%d/%Y').iso8601 rescue nil if event[field]
+        format = (event[field] =~ /\/\d{2}$/) ? '%m/%d/%y' : '%m/%d/%Y'
+        event[field] = Date.strptime(event[field], format).iso8601 rescue nil if event[field]
       end
 
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
