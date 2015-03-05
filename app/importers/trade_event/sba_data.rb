@@ -85,6 +85,7 @@ module TradeEvent
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
       doc[:id] = generate_id(doc)
+      doc[:cost] &&= doc[:cost].gsub(/\s+/, '')
 
       sanitize_entry(doc)
     end
