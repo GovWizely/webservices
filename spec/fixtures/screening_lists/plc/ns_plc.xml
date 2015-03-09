@@ -4,7 +4,7 @@
 		<Publish_Date>04/12/2006</Publish_Date>
 		<Record_Count>6</Record_Count>
 	</publshInformation>
-	<nspEntry>
+	<sdnEntry>
 		<uid>9639</uid>
 		<firstName>Ismail Abdul Salah</firstName>
 		<lastName>HANIYA</lastName>
@@ -42,8 +42,8 @@
 				<mainEntry>true</mainEntry>
 			</placeOfBirthItem>
 		</placeOfBirthList>
-	</nspEntry>
-	<nspEntry>
+	</sdnEntry>
+	<sdnEntry>
 		<uid>9674</uid>
 		<firstName>Hatem</firstName>
 		<lastName>QFEISHEH</lastName>
@@ -82,8 +82,8 @@
 				<mainEntry>true</mainEntry>
 			</dateOfBirthItem>
 		</dateOfBirthList>
-	</nspEntry>
-	<nspEntry>
+	</sdnEntry>
+	<sdnEntry>
 		<uid>9688</uid>
 		<firstName>Khaled Abed</firstName>
 		<lastName>YAHIA</lastName>
@@ -116,8 +116,8 @@
 				<mainEntry>true</mainEntry>
 			</dateOfBirthItem>
 		</dateOfBirthList>
-	</nspEntry>
-	<nspEntry>
+	</sdnEntry>
+	<sdnEntry>
 		<uid>9705</uid>
 		<firstName>Jamal</firstName>
 		<lastName>SALEH</lastName>
@@ -156,8 +156,8 @@
 				<mainEntry>true</mainEntry>
 			</placeOfBirthItem>
 		</placeOfBirthList>
-	</nspEntry>
-	<nspEntry>
+	</sdnEntry>
+	<sdnEntry>
 		<uid>9712</uid>
 		<firstName>Mohammed</firstName>
 		<lastName>SHIHAB</lastName>
@@ -182,8 +182,8 @@
 				<mainEntry>true</mainEntry>
 			</dateOfBirthItem>
 		</dateOfBirthList>
-	</nspEntry>
-	<nspEntry>
+	</sdnEntry>
+	<sdnEntry>
 		<uid>9715</uid>
 		<firstName>Khaledah</firstName>
 		<lastName>JARRAR</lastName>
@@ -192,5 +192,5 @@
 		<programList>
 			<program>NS-PLC</program>
 		</programList>
-	</nspEntry>
+	</sdnEntry>
 </nsplc>

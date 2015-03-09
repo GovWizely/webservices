@@ -4,11 +4,87 @@ shared_context 'all CSL fixture data' do
   include_context 'ScreeningList::El data'
   include_context 'ScreeningList::Dpl data'
   include_context 'ScreeningList::Uvl data'
+  include_context 'ScreeningList::Isa data'
   include_context 'ScreeningList::Isn data'
   include_context 'ScreeningList::Dtc data'
+  include_context 'ScreeningList::Part561 data'
   include_context 'ScreeningList::Plc data'
   include_context 'ScreeningList::Ssi data'
 end
+
+shared_context 'ScreeningList::Part561 data' do
+  before(:all) do
+    ScreeningList::Part561.recreate_index
+    ScreeningList::Part561Data.new(
+      "#{Rails.root}/spec/fixtures/screening_lists/part561/part561.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[ScreeningList::Part561] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/screening_lists/part561/expected_results.json").read)
+  end
+end
+
+shared_examples 'it contains all ScreeningList::Part561 results' do
+  let(:source) { ScreeningList::Part561 }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Part561 results that match "kunlun"' do
+  let(:source) { ScreeningList::Part561 }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Part561 results that match countries "CN"' do
+  let(:source) { ScreeningList::Part561 }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Part561 results that match type "Entity"' do
+  let(:source) { ScreeningList::Part561 }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+
+shared_context 'ScreeningList::Isa data' do
+  before(:all) do
+    ScreeningList::Isa.recreate_index
+    ScreeningList::IsaData.new(
+      "#{Rails.root}/spec/fixtures/screening_lists/isa/isa.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[ScreeningList::Isa] = JSON.parse(open(
+      "#{Rails.root}/spec/fixtures/screening_lists/isa/expected_results.json").read)
+  end
+end
+
+shared_examples 'it contains all ScreeningList::Isa results' do
+  let(:source) { ScreeningList::Isa }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Isa results that match "kuo"' do
+  let(:source) { ScreeningList::Isa }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Isa results that match countries "AE"' do
+  let(:source) { ScreeningList::Isa }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Isa results that match type "Entity"' do
+  let(:source) { ScreeningList::Isa }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 
 shared_context 'ScreeningList::Sdn data' do
   before(:all) do

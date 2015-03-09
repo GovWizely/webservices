@@ -1,11 +1,11 @@
 module ScreeningList
-  class PlcData
+  class Part561Data
     include ::Importer
     include ScreeningList::TreasuryListImporter
     self.default_endpoint =
       'http://www.treasury.gov/ofac/downloads/consolidated/consolidated.xml'
     self.source_information_url =
-      'http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx'
-    self.program_id = 'NS-PLC'
+      'http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx'
+    self.program_id = '561List'
   end
 end
