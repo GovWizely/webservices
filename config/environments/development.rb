@@ -20,4 +20,11 @@ Webservices::Application.configure do
   config.active_support.deprecation = :log
 
   config.action_dispatch.default_headers.merge!('Access-Control-Allow-Origin' => '*')
+
+  begin
+    # Running on docker?
+    es_url = Resolv.getaddress('elasticsearch_1')
+    ES.default_url = es_url
+  rescue
+  end
 end
