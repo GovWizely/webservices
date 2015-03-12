@@ -14,13 +14,12 @@ describe Api::V1::TradeEvents::ItaController, type: :controller do
     before do
       expect(TradeEvent::Ita).to receive(:search_for).with(search_params).and_return(search)
       get :search,
-          bogus_param: 'bogus value',
-          countries:   'MX',
-          format:      :json,
-          industry:    'fishing',
-          offset:      '1',
-          q:           'trade',
-          size:        '15'
+          countries: 'MX',
+          format:    :json,
+          industry:  'fishing',
+          offset:    '1',
+          q:         'trade',
+          size:      '15'
     end
 
     it { is_expected.to respond_with(:success) }

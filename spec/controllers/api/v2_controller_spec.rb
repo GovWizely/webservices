@@ -1,9 +1,22 @@
 require 'spec_helper'
 
+shared_context 'user with API Key' do
+  before do
+    user
+    User.gateway.refresh_index!
+  end
+  let(:user) { create_user }
+  after do
+    user.destroy
+    User.gateway.refresh_index!
+  end
+end
+
 describe Api::V2Controller, type: :controller do
 
   class InheritsFromApiV2Controller < described_class
     def foo
+      ActionController::Parameters.new(params).permit([:q, :api_key])
       render text: 'ok', status: :ok
     end
   end
@@ -12,7 +25,6 @@ describe Api::V2Controller, type: :controller do
 
     before do
       Rails.application.routes.draw do
-        # devise_for :users, controllers: { registrations: 'registrations' }
         get '/foo' => 'inherits_from_api_v2#foo'
       end
     end
@@ -35,15 +47,7 @@ describe Api::V2Controller, type: :controller do
       end
 
       context 'with known API Key' do
-        before do
-          user
-          User.gateway.refresh_index!
-        end
-        let(:user) { create_user }
-        after do
-          user.destroy
-          User.gateway.refresh_index!
-        end
+        include_context 'user with API Key'
 
         context 'when given via params' do
           it 'responds with 200 ok' do
@@ -59,6 +63,16 @@ describe Api::V2Controller, type: :controller do
             expect(response.status).to eq(200)
           end
         end
+      end
+    end
+
+    describe 'bad request' do
+      include_context 'user with API Key'
+
+      it 'responds with 400 error' do
+        request.headers['Api-Key'] = user.api_key
+        get :foo, not_a: :valid_paramter
+        expect(response.status).to eq(400)
       end
     end
 

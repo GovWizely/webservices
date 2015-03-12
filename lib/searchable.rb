@@ -3,7 +3,7 @@ require 'active_support/concern'
 module Searchable
   extend ActiveSupport::Concern
 
-  COMMON_PARAMS = [:format, :size, :offset].freeze
+  COMMON_PARAMS = [:format, :size, :offset, :api_key].freeze
 
   included do
     class_eval do
@@ -25,6 +25,7 @@ module Searchable
   end
 
   def search
+    ActionController::Parameters.new(params).permit(search_params)
     @search = search_klass.search_for params.permit(search_params).except(:format)
     render
   end

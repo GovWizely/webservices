@@ -30,7 +30,7 @@ describe 'Palestinian Legislative Council List API V1', type: :request do
 
     context 'when type is specified' do
       subject { response }
-      let(:params) { { nsp_type: 'Individual' } }
+      let(:params) { { type: 'Individual' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all ScreeningList::Plc results that match type "Individual"'
     end
