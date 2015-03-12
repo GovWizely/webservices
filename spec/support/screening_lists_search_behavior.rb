@@ -16,7 +16,7 @@ shared_context 'ScreeningList::Part561 data' do
   before(:all) do
     ScreeningList::Part561.recreate_index
     ScreeningList::Part561Data.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/part561/part561.xml").import
+      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Part561] = JSON.parse(open(
@@ -48,12 +48,11 @@ shared_examples 'it contains all ScreeningList::Part561 results that match type 
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'ScreeningList::Isa data' do
   before(:all) do
     ScreeningList::Isa.recreate_index
     ScreeningList::IsaData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/isa/isa.xml").import
+      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isa] = JSON.parse(open(
@@ -84,7 +83,6 @@ shared_examples 'it contains all ScreeningList::Isa results that match type "Ent
   let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
-
 
 shared_context 'ScreeningList::Sdn data' do
   before(:all) do
@@ -186,7 +184,7 @@ shared_context 'ScreeningList::Fse data' do
   before(:all) do
     ScreeningList::Fse.recreate_index
     ScreeningList::FseData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/fse/fse.xml").import
+      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Fse] = JSON.parse(open(
@@ -502,7 +500,7 @@ shared_context 'ScreeningList::Plc data' do
   before(:all) do
     ScreeningList::Plc.recreate_index
     ScreeningList::PlcData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/plc/ns_plc.xml").import
+      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Plc] = JSON.parse(open(
@@ -544,7 +542,7 @@ shared_context 'ScreeningList::Ssi data' do
   before(:all) do
     ScreeningList::Ssi.recreate_index
     ScreeningList::SsiData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/ssi/ssi.xml").import
+      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Ssi] = JSON.parse(open(

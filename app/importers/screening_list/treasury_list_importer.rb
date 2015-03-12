@@ -21,9 +21,7 @@ module ScreeningList
       source = Nokogiri::XML(open(@resource))
 
       docs = source.xpath(document_node_xpath).map do |node|
-        if @program_id == 'SDN' || node.xpath('.//xmlns:program').map(&:text).compact.any?{|p| p.include?(@program_id)}
-          process_node(node)
-        end
+        process_node(node) if should_process?(node)
       end.compact
 
       model_class.index docs
@@ -31,8 +29,12 @@ module ScreeningList
 
     private
 
+    def should_process?(node)
+      @program_id == 'SDN' || node.xpath('.//xmlns:program').map(&:text).compact.any? { |p| p.include?(@program_id) }
+    end
+
     def document_node_xpath
-      "//xmlns:sdnEntry"
+      '//xmlns:sdnEntry'
     end
 
     SINGLE_VALUED_XPATHS = {

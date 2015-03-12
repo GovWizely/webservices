@@ -1,0 +1,874 @@
+<?xml version="1.0" standalone="yes"?>
+<sdnList xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns="http://tempuri.org/sdnList.xsd">
+  <publshInformation>
+    <Publish_Date>12/17/2014</Publish_Date>
+    <Record_Count>115</Record_Count>
+  </publshInformation>
+  <sdnEntry>
+    <uid>17013</uid>
+    <lastName>VTB BANK OAO</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.</remarks>
+    <programList>
+      <program>UKRAINE-EO13662</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9477</uid>
+        <idType>Registration ID</idType>
+        <idNumber>1027739609391</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>9478</uid>
+        <idType>Government Gazette Number</idType>
+        <idNumber>00032520</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>9483</uid>
+        <idType>Tax ID No.</idType>
+        <idNumber>7702070139</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>9486</uid>
+        <idType>License</idType>
+        <idNumber>1000</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>115745</uid>
+        <idType>Website</idType>
+        <idNumber>www.vtb.com</idNumber>
+      </id>
+      <id>
+        <uid>115744</uid>
+        <idType>SWIFT/BIC</idType>
+        <idNumber>VTBRRUMM</idNumber>
+      </id>
+      <id>
+        <uid>116142</uid>
+        <idType>Executive Order 13662 Directive Determination -</idType>
+        <idNumber>Subject to Directive 1</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>26072</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JSC VTB BANK</lastName>
+      </aka>
+      <aka>
+        <uid>26073</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VTB, OPEN JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26074</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>VNESHTORGBANK</lastName>
+      </aka>
+      <aka>
+        <uid>26075</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VNESHNEY TORGOVLI, OPEN JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26076</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VNESHNEY TORGOVLI, JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26077</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VNESHNEY TORGOVLI RSFSR</lastName>
+      </aka>
+      <aka>
+        <uid>26078</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII, CLOSED JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26079</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>VNESHTORGBANK ROSSII, CLOSED JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26080</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>VTB BANK, OPEN JOINT-STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26081</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>BANK VTB OAO</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>25798</uid>
+        <address1>29, Bolshaya Morskaya str.</address1>
+        <city>St. Petersburg</city>
+        <postalCode>190000</postalCode>
+        <country>Russia</country>
+      </address>
+      <address>
+        <uid>25799</uid>
+        <address1>37 Plyushchikha ul.</address1>
+        <city>Moscow</city>
+        <postalCode>119121</postalCode>
+        <country>Russia</country>
+      </address>
+      <address>
+        <uid>25800</uid>
+        <address1>43, Vorontsovskaya str.</address1>
+        <city>Moscow</city>
+        <postalCode>109044</postalCode>
+        <country>Russia</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>17017</uid>
+    <lastName>BANK OF MOSCOW</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.</remarks>
+    <programList>
+      <program>UKRAINE-EO13662</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9498</uid>
+        <idType>Registration ID</idType>
+        <idNumber>1027700159497</idNumber>
+      </id>
+      <id>
+        <uid>9499</uid>
+        <idType>Government Gazette Number</idType>
+        <idNumber>29292940</idNumber>
+      </id>
+      <id>
+        <uid>115752</uid>
+        <idType>SWIFT/BIC</idType>
+        <idNumber>MOSW RU MM</idNumber>
+      </id>
+      <id>
+        <uid>115753</uid>
+        <idType>Website</idType>
+        <idNumber>www.bm.ru</idNumber>
+      </id>
+      <id>
+        <uid>115754</uid>
+        <idType>Email Address</idType>
+        <idNumber>holmogorov_ss@mmbank.ru</idNumber>
+      </id>
+      <id>
+        <uid>115755</uid>
+        <idType>Email Address</idType>
+        <idNumber>info@mmbank.ru</idNumber>
+      </id>
+      <id>
+        <uid>115819</uid>
+        <idType>BIK (RU)</idType>
+        <idNumber>044525219</idNumber>
+      </id>
+      <id>
+        <uid>116145</uid>
+        <idType>Executive Order 13662 Directive Determination -</idType>
+        <idNumber>Subject to Directive 1</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>26099</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY</lastName>
+      </aka>
+      <aka>
+        <uid>26100</uid>
+        <type>f.k.a.</type>
+        <category>strong</category>
+        <lastName>AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY, OTKRYTOE AKTSIONERNOE OBSCHCHESTVO</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>25810</uid>
+        <address1>8/15 Korp. 3 ul. Rozhdestvenka</address1>
+        <city>Moscow</city>
+        <postalCode>107996</postalCode>
+        <country>Russia</country>
+      </address>
+      <address>
+        <uid>25811</uid>
+        <address1>Bld 3 8/15</address1>
+        <address2>Rozhdestvenka St.</address2>
+        <city>Moscow</city>
+        <postalCode>107996</postalCode>
+        <country>Russia</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>17254</uid>
+    <lastName>AK TRANSNEFT OAO</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.</remarks>
+    <programList>
+      <program>UKRAINE-EO13662</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9691</uid>
+        <idType>Registration ID</idType>
+        <idNumber>1027700049486</idNumber>
+      </id>
+      <id>
+        <uid>9692</uid>
+        <idType>Tax ID No.</idType>
+        <idNumber>7706061801</idNumber>
+      </id>
+      <id>
+        <uid>9693</uid>
+        <idType>Government Gazette Number</idType>
+        <idNumber>00044463</idNumber>
+      </id>
+      <id>
+        <uid>116119</uid>
+        <idType>Email Address</idType>
+        <idNumber>transneft@ak.transneft.ru</idNumber>
+      </id>
+      <id>
+        <uid>116120</uid>
+        <idType>Website</idType>
+        <idNumber>www.transneft.ru</idNumber>
+      </id>
+      <id>
+        <uid>116143</uid>
+        <idType>Executive Order 13662 Directive Determination -</idType>
+        <idNumber>Subject to Directive 2</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>26558</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>OAO AK TRANSNEFT</lastName>
+      </aka>
+      <aka>
+        <uid>26559</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO</lastName>
+      </aka>
+      <aka>
+        <uid>26560</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT</lastName>
+      </aka>
+      <aka>
+        <uid>26561</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>TRANSNEFT, JSC</lastName>
+      </aka>
+      <aka>
+        <uid>26562</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>TRANSNEFT OJSC</lastName>
+      </aka>
+      <aka>
+        <uid>26563</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>TRANSNEFT</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>26306</uid>
+        <address1>57 B. Polyanka ul.</address1>
+        <city>Moscow</city>
+        <postalCode>119180</postalCode>
+        <country>Russia</country>
+      </address>
+      <address>
+        <uid>26307</uid>
+        <address1>57 Bolshaya. Polyanka</address1>
+        <city>Moscow</city>
+        <postalCode>119180</postalCode>
+        <country>Russia</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>17260</uid>
+    <lastName>ROSTEC</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.</remarks>
+    <programList>
+      <program>UKRAINE-EO13662</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9699</uid>
+        <idType>Registration ID</idType>
+        <idNumber>1077799030847</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>9700</uid>
+        <idType>Tax ID No.</idType>
+        <idNumber>7704274402</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>9701</uid>
+        <idType>Government Gazette Number</idType>
+        <idNumber>94137372</idNumber>
+        <idCountry>Russia</idCountry>
+      </id>
+      <id>
+        <uid>116130</uid>
+        <idType>Email Address</idType>
+        <idNumber>info@rostec.ru</idNumber>
+      </id>
+      <id>
+        <uid>116131</uid>
+        <idType>Website</idType>
+        <idNumber>www.rostec.ru</idNumber>
+      </id>
+      <id>
+        <uid>116150</uid>
+        <idType>Executive Order 13662 Directive Determination -</idType>
+        <idNumber>Subject to Directive 3</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>26591</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII</lastName>
+      </aka>
+      <aka>
+        <uid>26592</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>STATE CORPORATION ROSTEKHNOLOGII</lastName>
+      </aka>
+      <aka>
+        <uid>26593</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>ROSTEC STATE CORPORATION</lastName>
+      </aka>
+      <aka>
+        <uid>26594</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT</lastName>
+      </aka>
+      <aka>
+        <uid>26595</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>RUSSIAN TECHNOLOGIES</lastName>
+      </aka>
+      <aka>
+        <uid>26596</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>STATE CORPORATION ROSTECHNOLOGII</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>26319</uid>
+        <address1>24 Usacheva ul.</address1>
+        <city>Moscow</city>
+        <postalCode>119048</postalCode>
+        <country>Russia</country>
+      </address>
+      <address>
+        <uid>26320</uid>
+        <address1>21 Gogolevsky Blvd.</address1>
+        <city>Moscow</city>
+        <postalCode>119991</postalCode>
+        <country>Russia</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9639</uid>
+    <firstName>Ismail Abdul Salah</firstName>
+    <lastName>HANIYA</lastName>
+    <nspType>Individual</nspType>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>9150</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HANIYA</lastName>
+        <firstName>Ismail</firstName>
+      </aka>
+      <aka>
+        <uid>9151</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HANIYYA</lastName>
+        <firstName>Ismaeel</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>4696</uid>
+        <dateOfBirth>1962</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+    <placeOfBirthList>
+      <placeOfBirthItem>
+        <uid>4697</uid>
+        <placeOfBirth>Shati</placeOfBirth>
+        <mainEntry>true</mainEntry>
+      </placeOfBirthItem>
+    </placeOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9674</uid>
+    <firstName>Hatem</firstName>
+    <lastName>QFEISHEH</lastName>
+    <nspType>Individual</nspType>
+    <remarks>HAMAS - Hebron</remarks>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>9178</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>KAFEESHEH</lastName>
+        <firstName>Hatem Rabah</firstName>
+      </aka>
+      <aka>
+        <uid>9179</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>QEFEISHA</lastName>
+        <firstName>Hatem</firstName>
+      </aka>
+      <aka>
+        <uid>9180</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>ABU ANED</lastName>
+        <firstName>Hadj Hatem</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>4740</uid>
+        <dateOfBirth>1960</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9688</uid>
+    <firstName>Khaled Abed</firstName>
+    <lastName>YAHIA</lastName>
+    <nspType>Individual</nspType>
+    <remarks>HAMAS - Jenin</remarks>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>9196</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>YEHIA</lastName>
+        <firstName>Khaled Said</firstName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>12150</uid>
+        <city>Jenin</city>
+        <stateOrProvince>West Bank</stateOrProvince>
+        <country>Palestinian</country>
+      </address>
+    </addressList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>4756</uid>
+        <dateOfBirth>1959</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9705</uid>
+    <firstName>Jamal</firstName>
+    <lastName>SALEH</lastName>
+    <nspType>Individual</nspType>
+    <remarks>HAMAS - Gaza</remarks>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>9219</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>NASSER</lastName>
+        <firstName>Jamal Talab Mohammad Saleh</firstName>
+      </aka>
+      <aka>
+        <uid>9220</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SALEH</lastName>
+        <firstName>Jamal Talab</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>4778</uid>
+        <dateOfBirth>1958</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+    <placeOfBirthList>
+      <placeOfBirthItem>
+        <uid>4779</uid>
+        <placeOfBirth>Gaza</placeOfBirth>
+        <mainEntry>true</mainEntry>
+      </placeOfBirthItem>
+    </placeOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9712</uid>
+    <firstName>Mohammed</firstName>
+    <lastName>SHIHAB</lastName>
+    <nspType>Individual</nspType>
+    <remarks>HAMAS - Northern Gaza</remarks>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+    <akaList>
+      <aka>
+        <uid>9229</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SHEHAB</lastName>
+        <firstName>Mohamed Abed Hadi Rahman</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>4786</uid>
+        <dateOfBirth>1956</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>9715</uid>
+    <firstName>Khaledah</firstName>
+    <lastName>JARRAR</lastName>
+    <nspType>Individual</nspType>
+    <remarks>PFLP</remarks>
+    <programList>
+      <program>NS-PLC</program>
+    </programList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>15268</uid>
+    <lastName>BANK OF KUNLUN CO LTD</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>United States financial institutions are prohibited from opening or maintaining a correspondent account or a payable-through account for the foreign financial institution listed here, pursuant to 31 C.F.R. section 561.201(c)</remarks>
+    <programList>
+        <program>561List</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>111843</uid>
+        <idType>SWIFT/BIC</idType>
+        <idNumber>CKLB CN BJ</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>22509</uid>
+        <type>f.k.a. </type>
+        <category>strong</category>
+        <lastName>KARAMAY URBAN CREDIT COOPERATIVES</lastName>
+      </aka>
+      <aka>
+        <uid>22510</uid>
+        <type>f.k.a. </type>
+        <category>strong</category>
+        <lastName>KARAMAY CITY COMMERCIAL BANK CO LTD. </lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>22761</uid>
+        <address1>172 Xibin Rd</address1>
+        <address2>Ranghulu District</address2>
+        <address3>(Daqing, Heilongjiang Branch)</address3>
+        <city>Daqing</city>
+        <postalCode>163453</postalCode>
+        <country>China</country>
+      </address>
+      <address>
+        <uid>22762</uid>
+        <address1>9 Dongzhimen North Street</address1>
+        <address2>Dongcheng District</address2>
+        <address3>(Head Office)</address3>
+        <city>Beijing</city>
+        <postalCode>100007</postalCode>
+        <country>China</country>
+      </address>
+      <address>
+        <uid>22763</uid>
+        <address1>No. 7 Century Ave</address1>
+        <address3>(Registered Office)</address3>
+        <city>Xinjiang</city>
+        <stateOrProvince>Karamay</stateOrProvince>
+        <postalCode>834000</postalCode>
+        <country>China</country>
+      </address>
+      <address>
+        <uid>22764</uid>
+        <address1>No. 68 Zhongya South Rd</address1>
+        <address2>Economic and Technological Development Zone</address2>
+        <address3>(Urumqi, Xinjiang Branch)</address3>
+        <city>Urumqi</city>
+        <postalCode>830026</postalCode>
+        <country>China</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>13042</uid>
+    <lastName>KUO OIL (S) PTE. LIMITED</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>Telephone: 6563184677; Fax: 6562243040; United States financial institutions are prohibited from making loans or providing credits totaling more than $10,000,000 in any 12-month period to the person listed here unless such person is engaged in activities to relieve human suffering and the loans or credits are provided for such activities</remarks>
+    <programList>
+      <program>NS-ISA</program>
+    </programList>
+    <addressList>
+      <address>
+        <uid>20782</uid>
+        <address1>200 Cantonment Road</address1>
+        <address2>#15-00 Southpoint</address2>
+        <city>Singapore</city>
+        <postalCode>089763</postalCode>
+        <country>Singapore</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>13043</uid>
+    <lastName>FAL OIL COMPANY LTD.</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>Telephone: 97165029999; Telephone: 97165280861; Telephone: 97165286666; Telephone: 97165283334; Telephone: 97165283323; Telephone: 97165022234; Telephone: 97165029999; Telephone: 97165029804; Telephone: 97165029914; Telephone: 97165029824; Telephone: 97165281737; Telephone: 97165029814; Telephone: 97165029825; Telephone: 97165029840; Telephone: 97165029863; Telephone: 97165029842; Telephone: 97165029819; Telephone: 97165029836; Telephone: 97168029939; Fax: 97165281437; Fax: 97165280861; United States financial institutions are prohibited from making loans or providing credits totaling more than $10,000,000 in any 12-month period to the person listed here unless such person is engaged in activities to relieve human suffering and the loans or credits are provided for such activities</remarks>
+    <programList>
+      <program>NS-ISA</program>
+    </programList>
+    <addressList>
+      <address>
+        <uid>20784</uid>
+        <address1>Sultan Al Awal Street (Sheikh Sultan Bin Awal Road)</address1>
+        <address2>Near Mina Sea Port, Near Mina Khalid Road</address2>
+        <address3>Al Khan Area</address3>
+        <city>Sharjah</city>
+        <stateOrProvince>Sharjah</stateOrProvince>
+        <country>United Arab Emirates</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>15987</uid>
+    <lastName>FERLAND COMPANY LIMITED</lastName>
+    <sdnType>Entity</sdnType>
+    <remarks>(Linked To: NATIONAL IRANIAN TANKER COMPANY)</remarks>
+    <programList>
+      <program>FSE-IR</program>
+      <program>ISA</program>
+      <program>EO13645</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>114827</uid>
+        <idType>Executive Order 13645 Determination -</idType>
+        <idNumber>Material Support</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>23962</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>FERLAND CO. LTD</lastName>
+      </aka>
+    </akaList>
+    <addressList>
+      <address>
+        <uid>24030</uid>
+        <address1>29 A Anna Komnini St.</address1>
+        <address2>PO Box 2303</address2>
+        <city>Nicosia</city>
+        <country>Cyprus</country>
+      </address>
+      <address>
+        <uid>24049</uid>
+        <address1>5/7 Sabaneyev Most.</address1>
+        <city>Odessa</city>
+        <country>Ukraine</country>
+      </address>
+    </addressList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>16422</uid>
+    <firstName>Vitaly</firstName>
+    <lastName>SOKOLENKO</lastName>
+    <title>General Manager of Ferland Company Limited</title>
+    <sdnType>Individual</sdnType>
+    <remarks>(Linked To: FERLAND COMPANY LIMITED)</remarks>
+    <programList>
+      <program>EO13645</program>
+      <program>FSE-IR</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9026</uid>
+        <idType>Passport</idType>
+        <idNumber>EH354160</idNumber>
+      </id>
+      <id>
+        <uid>9027</uid>
+        <idType>Passport</idType>
+        <idNumber>P0329907</idNumber>
+      </id>
+      <id>
+        <uid>114826</uid>
+        <idType>Executive Order 13645 Determination -</idType>
+        <idNumber>Material Support</idNumber>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>24750</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SOKOLENKO</lastName>
+        <firstName>Vitalii</firstName>
+      </aka>
+      <aka>
+        <uid>24751</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>SOKOLENKO</lastName>
+        <firstName>Vitaliy</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>14774</uid>
+        <dateOfBirth>16 Jun 1968</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+  </sdnEntry>
+  <sdnEntry>
+    <uid>16531</uid>
+    <firstName>Houshang</firstName>
+    <lastName>HOSSEINPOUR</lastName>
+    <sdnType>Individual</sdnType>
+    <programList>
+      <program>FSE-IR</program>
+    </programList>
+    <idList>
+      <id>
+        <uid>9133</uid>
+        <idType>Passport</idType>
+        <idNumber>R17550559</idNumber>
+        <idCountry>Iran</idCountry>
+        <expirationDate>11 Jul 2015</expirationDate>
+      </id>
+    </idList>
+    <akaList>
+      <aka>
+        <uid>25075</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HOSSEINPOUR</lastName>
+        <firstName>Houshang Shahali</firstName>
+      </aka>
+      <aka>
+        <uid>25077</uid>
+        <type>a.k.a.</type>
+        <category>strong</category>
+        <lastName>HOSEIN-PUR</lastName>
+        <firstName>Houshang</firstName>
+      </aka>
+    </akaList>
+    <dateOfBirthList>
+      <dateOfBirthItem>
+        <uid>15021</uid>
+        <dateOfBirth>21 Mar 1967</dateOfBirth>
+        <mainEntry>true</mainEntry>
+      </dateOfBirthItem>
+    </dateOfBirthList>
+    <placeOfBirthList>
+      <placeOfBirthItem>
+        <uid>15022</uid>
+        <placeOfBirth>Tehran, Iran</placeOfBirth>
+        <mainEntry>true</mainEntry>
+      </placeOfBirthItem>
+    </placeOfBirthList>
+        <nationalityList>
+      <nationality>
+        <uid>8962</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </nationality>
+    </nationalityList>
+    <citizenshipList>
+      <citizenship>
+        <uid>8960</uid>
+        <country>Somalia</country>
+        <mainEntry>true</mainEntry>
+      </citizenship>
+      <citizenship>
+        <uid>8961</uid>
+        <country>Djibouti</country>
+        <mainEntry>false</mainEntry>
+      </citizenship>
+    </citizenshipList>
+  </sdnEntry>
+
+</sdnList>

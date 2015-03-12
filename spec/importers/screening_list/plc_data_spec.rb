@@ -2,10 +2,10 @@ require 'spec_helper'
 
 describe ScreeningList::PlcData do
   before { ScreeningList::Plc.recreate_index }
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists/plc" }
-  let(:fixtures_file) { "#{fixtures_dir}/ns_plc.xml" }
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists" }
+  let(:fixtures_file) { "#{fixtures_dir}/treasury_consolidated/consolidated.xml" }
   let(:importer) { described_class.new(fixtures_file) }
-  let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
+  let(:expected) { YAML.load_file("#{fixtures_dir}/plc/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 
