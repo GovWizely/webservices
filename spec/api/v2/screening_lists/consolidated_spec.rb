@@ -236,7 +236,7 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
 
       context 'and is set to "Part561" source' do
-        let(:params) { { sources: 'part561' } }
+        let(:params) { { sources: '561' } }
         it_behaves_like 'it contains all ScreeningList::Part561 results'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Part561] }

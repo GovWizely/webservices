@@ -4,7 +4,7 @@ module ScreeningList
     include ScreeningList::Mappable
     self.source = {
       full_name: 'Part 561 List (561) - Treasury Department',
-      code:      'PART561',
+      code:      '561',
     }
   end
 end
