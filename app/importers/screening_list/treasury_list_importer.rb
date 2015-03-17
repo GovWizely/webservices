@@ -6,23 +6,22 @@ module ScreeningList
     def self.included(base)
       base.class_eval do
         class << self
-          attr_accessor :default_endpoint
-          attr_accessor :source_information_url
+          attr_accessor :default_endpoint, :source_information_url, :program_id
         end
       end
     end
 
     def initialize(resource = nil)
       @resource = resource || self.class.default_endpoint
+      @program_id = self.class.program_id
     end
 
     def import
       Rails.logger.info "Importing #{@resource}"
-
       source = Nokogiri::XML(open(@resource))
 
       docs = source.xpath(document_node_xpath).map do |node|
-        process_node(node)
+        process_node(node) if should_process?(node)
       end.compact
 
       model_class.index docs
@@ -30,8 +29,12 @@ module ScreeningList
 
     private
 
+    def should_process?(node)
+      @program_id == 'SDN' || node.xpath('.//xmlns:program').map(&:text).compact.any? { |p| p.include?(@program_id) }
+    end
+
     def document_node_xpath
-      "//xmlns:#{model_class.source[:code] == 'PLC' ? 'nsp' : 'sdn'}Entry"
+      '//xmlns:sdnEntry'
     end
 
     SINGLE_VALUED_XPATHS = {

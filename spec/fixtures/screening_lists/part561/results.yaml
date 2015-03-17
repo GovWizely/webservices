@@ -1,0 +1,57 @@
+---
+- :entity_number: '15268'
+  :title: 
+  :call_sign: 
+  :vessel_type: 
+  :gross_tonnage: 
+  :gross_registered_tonnage: 
+  :vessel_flag: 
+  :vessel_owner: 
+  :remarks: United States financial institutions are prohibited from opening or maintaining
+    a correspondent account or a payable-through account for the foreign financial
+    institution listed here, pursuant to 31 C.F.R. section 561.201(c)
+  :id: '15268'
+  :source:
+    :full_name: Part 561 List (561) - Treasury Department
+    :code: "561"
+  :source_list_url:
+  :source_information_url: http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561
+  :name: BANK OF KUNLUN CO LTD
+  :type: Entity
+  :alt_names:
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK CO LTD.
+  :programs:
+  - 561List
+  :nationalities: []
+  :citizenships: []
+  :dates_of_birth: []
+  :places_of_birth: []
+  :addresses:
+  - :city: Daqing
+    :country: CN
+    :postal_code: '163453'
+    :state: 
+    :address: 172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch)
+  - :city: Beijing
+    :country: CN
+    :postal_code: '100007'
+    :state: 
+    :address: 9 Dongzhimen North Street, Dongcheng District, (Head Office)
+  - :city: Xinjiang
+    :country: CN
+    :postal_code: '834000'
+    :state: Karamay
+    :address: No. 7 Century Ave, (Registered Office)
+  - :city: Urumqi
+    :country: CN
+    :postal_code: '830026'
+    :state: 
+    :address: No. 68 Zhongya South Rd, Economic and Technological Development Zone,
+      (Urumqi, Xinjiang Branch)
+  :ids:
+  - :country: 
+    :expiration_date: 
+    :issue_date: 
+    :number: CKLB CN BJ
+    :type: SWIFT/BIC

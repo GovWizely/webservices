@@ -1,18 +1,18 @@
 require 'spec_helper'
 
-describe ScreeningList::PlcData do
-  before { ScreeningList::Plc.recreate_index }
+describe ScreeningList::IsaData do
+  before { ScreeningList::Isa.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists" }
   let(:fixtures_file) { "#{fixtures_dir}/treasury_consolidated/consolidated.xml" }
   let(:importer) { described_class.new(fixtures_file) }
-  let(:expected) { YAML.load_file("#{fixtures_dir}/plc/results.yaml") }
+  let(:expected) { YAML.load_file("#{fixtures_dir}/isa/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    it 'loads PLC from specified resource' do
-      expect(ScreeningList::Plc).to receive(:index) do |plc|
-        expect(plc).to eq(expected)
+    it 'loads ISA from specified resource' do
+      expect(ScreeningList::Isa).to receive(:index) do |isa|
+        expect(isa).to eq(expected)
       end
       importer.import
     end

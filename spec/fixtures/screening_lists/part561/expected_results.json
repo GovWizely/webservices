@@ -1,0 +1,62 @@
+[
+    {
+        "addresses": [
+            {
+                "address": "172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch)",
+                "city": "Daqing",
+                "country": "CN",
+                "postal_code": "163453",
+                "state": null
+            },
+            {
+                "address": "9 Dongzhimen North Street, Dongcheng District, (Head Office)",
+                "city": "Beijing",
+                "country": "CN",
+                "postal_code": "100007",
+                "state": null
+            },
+            {
+                "address": "No. 7 Century Ave, (Registered Office)",
+                "city": "Xinjiang",
+                "country": "CN",
+                "postal_code": "834000",
+                "state": "Karamay"
+            },
+            {
+                "address": "No. 68 Zhongya South Rd, Economic and Technological Development Zone, (Urumqi, Xinjiang Branch)",
+                "city": "Urumqi",
+                "country": "CN",
+                "postal_code": "830026",
+                "state": null
+            }
+        ],
+        "alt_names": [
+            "KARAMAY URBAN CREDIT COOPERATIVES",
+            "KARAMAY CITY COMMERCIAL BANK CO LTD."
+        ],
+        "citizenships": [],
+        "dates_of_birth": [],
+        "entity_number": "15268",
+        "ids": [
+            {
+                "country": null,
+                "expiration_date": null,
+                "issue_date": null,
+                "number": "CKLB CN BJ",
+                "type": "SWIFT/BIC"
+            }
+        ],
+        "name": "BANK OF KUNLUN CO LTD",
+        "nationalities": [],
+        "places_of_birth": [],
+        "programs": [
+            "561List"
+        ],
+        "remarks": "United States financial institutions are prohibited from opening or maintaining a correspondent account or a payable-through account for the foreign financial institution listed here, pursuant to 31 C.F.R. section 561.201(c)",
+        "source": "Part 561 List (561) - Treasury Department",
+        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561",
+        "source_list_url": null,
+        "title": null,
+        "type": "Entity"
+    }
+]
