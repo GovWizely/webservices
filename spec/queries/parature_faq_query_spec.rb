@@ -68,7 +68,7 @@ describe ParatureFaqQuery do
     end
 
     context 'when options include update_date filter' do
-      let(:query) { ParatureFaqQuery.new(update_date_start: '2013-01-11', update_date_end: '2013-03-18') }
+      let(:query) { ParatureFaqQuery.new(update_date: '2013-01-11 TO 2013-03-18') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/filter_date.json").read }
 
       it 'generates search body with filters' do

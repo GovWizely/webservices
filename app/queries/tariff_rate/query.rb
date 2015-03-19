@@ -7,6 +7,9 @@ module TariffRate
       @q = options[:q] if options[:q].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
       @sort = '_score,source_id'
+      @final_year = options[:final_year] if options[:final_year].present?
+      @partner_start_year = options[:partner_start_year] if options[:partner_start_year].present?
+      @reporter_start_year = options[:reporter_start_year] if options[:reporter_start_year].present?
     end
 
     private
@@ -27,9 +30,12 @@ module TariffRate
         json.bool do
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
+            generate_date_range(json, 'final_year', @final_year) if @final_year
+            generate_date_range(json, 'partner_start_year', @partner_start_year) if @partner_start_year
+            generate_date_range(json, 'reporter_start_year', @reporter_start_year) if @reporter_start_year
           end
         end
-      end if @sources.any?
+      end if @sources.any? || @final_year || @partner_start_year || @reporter_start_year
     end
   end
 end

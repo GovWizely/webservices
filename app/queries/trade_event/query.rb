@@ -6,6 +6,8 @@ module TradeEvent
       super
       @sources = options[:sources].upcase.split(',') rescue []
       @sort = '_score,start_date'
+      @start_date = options[:start_date] if options[:start_date].present?
+      @end_date = options[:end_date] if options[:end_date].present?
     end
 
     private
@@ -27,9 +29,11 @@ module TradeEvent
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
+            generate_date_range(json, 'start_date', @start_date) if @start_date
+            generate_date_range(json, 'end_date', @end_date) if @end_date
           end
         end
-      end if @sources.any? || @countries
+      end if @sources.any? || @countries || @start_date || @end_date
     end
   end
 end
