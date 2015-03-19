@@ -1,0 +1,53 @@
+---
+- :source_id: '439061'
+  :tariff_line: '01011000'
+  :subheading_description: Live purebred breeding horses and asses
+  :hs_6: '010110'
+  :base_rate: '0'
+  :base_rate_alt: 
+  :final_year: '2006'
+  :tariff_rate_quota: 
+  :tariff_rate_quota_note: 
+  :tariff_eliminated: 'true'
+  :ag_id: '36'
+  :partner_name: MA
+  :reporter_name: US
+  :staging_basket: Immediate
+  :partner_start_year: '2006'
+  :reporter_start_year: 
+  :partner_agreement_name: MA
+  :reporter_agreement_name: US
+  :partner_agreement_approved: 'true'
+  :reporter_agreement_approved: 
+  :quota_name: 
+  :rule_text: The good is new or different article of commerce that has been grown,
+    produced or manufactured in the territory of one or both of the Parties; and the
+    sum of (i) the value of materials produced in the territory of one or both of
+    the Parties,  plus (ii) the direct costs of processing operations performed in
+    the territory of one or both of the Parties is not less than 35 percent of the
+    appraised value of the good at the time it is imported into the territory of the
+    Party.
+  :link_text: 
+  :link_url: 
+  :id: 611f6e198f42589e0e7ef9828b4e56009a2c5a18
+  :annual_rates:
+    y2006: '0.0000'
+    y2007: '0.0000'
+    y2008: '0.0000'
+    y2009: '0.0000'
+    y2010: '0.0000'
+    y2011: '0.0000'
+    y2012: '0.0000'
+    y2013: '0.0000'
+    y2014: '0.0000'
+    y2015: '0.0000'
+    y2016: '0.0000'
+    y2017: '0.0000'
+    y2018: '0.0000'
+    y2019: '0.0000'
+    y2020: '0.0000'
+    y2021: '0.0000'
+    y2022: '0.0000'
+    y2023: '0.0000'
+  :alt_annual_rates: {}
+  :source: MA

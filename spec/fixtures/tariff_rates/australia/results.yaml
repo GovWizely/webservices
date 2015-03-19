@@ -23,7 +23,7 @@
   :rule_text: A change to heading 0101 through 0106 from any other chapter.
   :link_text: 
   :link_url: 
-  :id: 74ccdcebcb161f7ceab48ee6c3de6f832017cc1e
+  :id: 17f99a9aa3eaf442c17c712a377911a469a21cd6
   :annual_rates:
     y2005: '0.0000'
     y2006: '0.0000'
@@ -38,10 +38,7 @@
     y2015: '0.0000'
     y2016: '0.0000'
   :alt_annual_rates: {}
-  :countries:
-  - US
-  - AU
-  :source: AUSTRALIA
+  :source: AU
 - :source_id: '439054'
   :tariff_line: '01011000'
   :subheading_description: Live purebred breeding horses and asses
@@ -66,7 +63,7 @@
   :rule_text: A change to heading 0101 through 0106 from any other chapter.
   :link_text: 
   :link_url: 
-  :id: b713ec905340a619e982ec44b829a0d122f7ca56
+  :id: 6bbc2e3ee81b9e7e447bcf8d2a656a531f8bfe3b
   :annual_rates:
     y2005: '0.0000'
     y2006: '0.0000'
@@ -87,10 +84,7 @@
     y2021: '0.0000'
     y2022: '0.0000'
   :alt_annual_rates: {}
-  :countries:
-  - US
-  - AU
-  :source: AUSTRALIA
+  :source: AU
 - :source_id: '439078'
   :tariff_line: 01019000
   :subheading_description: Other
@@ -115,7 +109,7 @@
   :rule_text: A change to heading 0101 through 0106 from any other chapter.
   :link_text: 
   :link_url: 
-  :id: 8e693b7e7f20e83c2ec39cd043aded3e8f5cc42a
+  :id: 721f1e0764e863b0ed740ace117a500daf4ef80f
   :annual_rates:
     y2005: '0.0000'
     y2006: '0.0000'
@@ -130,7 +124,4 @@
     y2015: '0.0000'
     y2016: '0.0000'
   :alt_annual_rates: {}
-  :countries:
-  - US
-  - AU
-  :source: AUSTRALIA
+  :source: AU
