@@ -4,9 +4,9 @@
       "must": [
         {
           "range": {
-            "expiration_date": {
-              "from": "2014-08-27",
-              "to": "2014-08-28"
+            "final_year": {
+              "from": "2014",
+              "to": "2015"
             }
           }
         }

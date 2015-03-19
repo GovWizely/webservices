@@ -12,6 +12,10 @@ module ScreeningList
       @name = options[:name]
       @address = options[:address]
       @fuzziness = options[:fuzziness].try(:to_i)
+      @end_date = options[:end_date] if options[:end_date].present?
+      @start_date = options[:start_date] if options[:start_date].present?
+      @issue_date = options[:issue_date] if options[:issue_date].present?
+      @expiration_date = options[:expiration_date] if options[:expiration_date].present?
     end
 
     private
@@ -56,7 +60,11 @@ module ScreeningList
           json.must do
             json.child! { json.term { json.type @type } } if @type
             json.child! { json.terms { json.set! 'source.code', @sources } } if @sources.any?
-          end if @type || @sources.any?
+            generate_date_range(json, 'start_date', @start_date) if @start_date
+            generate_date_range(json, 'end_date', @end_date) if @end_date
+            generate_date_range(json, 'ids.issue_date', @issue_date) if @issue_date
+            generate_date_range(json, 'ids.expiration_date', @expiration_date) if @expiration_date
+          end if @type || @sources.any? || @start_date || @end_date || @issue_date || @expiration_date
           json.set! 'should' do
             json.child! { json.terms { json.set! 'addresses.country', @countries } }
             json.child! { json.terms { json.set! 'ids.country', @countries } }
@@ -64,7 +72,7 @@ module ScreeningList
             json.child! { json.terms { json.citizenships @countries } }
           end if @countries
         end
-      end if @countries || @type || @sources.any?
+      end if @countries || @type || @sources.any? || @start_date || @end_date || @issue_date || @expiration_date
     end
   end
 end
