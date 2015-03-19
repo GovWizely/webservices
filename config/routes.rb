@@ -37,7 +37,7 @@ Webservices::Application.routes.draw do
   concern :api_routable do
 
     path = { 'market_researches'         => 'market_research_library',
-             'parature_faq'              => 'faqs',
+             'parature_faq'              => 'ita_faqs',
              'ita_office_locations'      => 'ita_office_locations',
              'country_commercial_guides' => 'country_commercial_guides',
      }

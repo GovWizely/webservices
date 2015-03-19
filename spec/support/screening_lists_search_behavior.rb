@@ -180,6 +180,18 @@ shared_examples 'it contains all ScreeningList::Sdn results that match type "Ind
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all ScreeningList::Sdn results that match expiration_date "2010-01-01 TO 2011-01-23"' do
+  let(:source) { ScreeningList::Sdn }
+  let(:expected) { [2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Sdn results that match issue_date "2001-12-25 TO 2002-12-31"' do
+  let(:source) { ScreeningList::Sdn }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'ScreeningList::Fse data' do
   before(:all) do
     ScreeningList::Fse.recreate_index
@@ -318,6 +330,12 @@ shared_examples 'it contains all ScreeningList::El results that match countries 
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all ScreeningList::El results that match start_date "2011-11-21"' do
+  let(:source) { ScreeningList::El }
+  let(:expected) { [0, 3, 4] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'ScreeningList::Dpl data' do
   before(:all) do
     ScreeningList::Dpl.recreate_index
@@ -381,6 +399,12 @@ end
 shared_examples 'it contains all ScreeningList::Dpl results that match countries "FR,DE"' do
   let(:source) { ScreeningList::Dpl }
   let(:expected) { [3, 4] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Dpl results that match end_date "2005-06-05"' do
+  let(:source) { ScreeningList::Dpl }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 

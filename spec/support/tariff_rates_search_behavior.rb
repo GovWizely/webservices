@@ -53,6 +53,24 @@ shared_examples 'it contains all TariffRate::Australia results that match countr
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TariffRate::Australia results that match final_year "2005"' do
+  let(:source) { TariffRate::Australia }
+  let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TariffRate::Australia results that match partner_start_year "2005"' do
+  let(:source) { TariffRate::Australia }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TariffRate::Australia results that match reporter_start_year "2005"' do
+  let(:source) { TariffRate::Australia }
+  let(:expected) { [0, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TariffRate::Bahrain data' do
   before(:all) do
 

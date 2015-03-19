@@ -116,7 +116,23 @@ describe 'Market Researches API V2', type: :request do
           expect(results[0]).to eq(expected_results[4])
         end
       end
-    end
 
+      context 'when expiration_date is specified' do
+        let(:params) { { expiration_date: '2016-01-01 TO 2016-01-01' } }
+        before { get search_path, params, v2_headers }
+        subject { response }
+
+        it_behaves_like 'a successful search request'
+
+        it 'returns market researches' do
+          json_response = JSON.parse(response.body)
+          expect(json_response['total']).to eq(1)
+
+          results = json_response['results']
+          expect(results[0]).to eq(expected_results[1])
+        end
+      end
+
+    end
   end
 end

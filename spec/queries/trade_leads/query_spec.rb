@@ -63,7 +63,7 @@ describe TradeLead::Query do
       end
     end
 
-    context 'when options include all possible fields' do
+    context 'when options include all possible non-date fields' do
       let(:query) do
         described_class.new(countries:  'ca,au',
                             q:          'women',
@@ -75,5 +75,33 @@ describe TradeLead::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+
+    context 'when options include publish_date_start or publish_date_end' do
+      let(:query) { described_class.new(publish_date: '2015-08-27 TO 2015-08-28') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_publish_date.json").read }
+
+      it 'generates search body with publish_date filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include end_date_start or end_date_end' do
+      let(:query) { described_class.new(end_date: '2015-08-27 TO 2015-08-28') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_end_date.json").read }
+
+      it 'generates search body with end_date filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include publish_date_amended_start or publish_date_amended_end' do
+      let(:query) { described_class.new(publish_date_amended: '2015-08-27 TO 2015-08-28') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_publish_date_amended.json").read }
+
+      it 'generates search body with publish_date_amended filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
   end
 end

@@ -98,6 +98,25 @@ class Query
     filter_from_fields(json, query_fields)
   end
 
+  def generate_date_range(json, field_name, range)
+    valid_date_range?(range)
+    terms = range.split(' ')
+    json.child! do
+      json.range do
+        json.set! field_name do
+          json.from terms[0]
+          json.to terms[2]
+        end
+      end
+    end
+  end
+
+  def valid_date_range?(range)
+    if !(range =~ /\A[0-9]{4}-[0-9]{2}-[0-9]{2} TO [0-9]{4}-[0-9]{2}-[0-9]{2}\z/) && !(range =~ /\A[0-9]{4} TO [0-9]{4}\z/)
+      fail 'Invalid date range format'
+    end
+  end
+
   private
 
   def cleanup_invalid_bytes(obj, fields)

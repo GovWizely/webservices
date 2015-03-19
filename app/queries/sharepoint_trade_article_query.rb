@@ -1,9 +1,4 @@
 class SharepointTradeArticleQuery < Query
-  SINGLE_VALUE_TERMS = [
-    :creation_date_start, :creation_date_end,
-    :release_date_start, :release_date_end, :expiration_date_start, :expiration_date_end, :q
-  ]
-
   MULTI_VALUE_TERMS = [
     :export_phases, :industries, :trade_regions, :trade_programs, :trade_initiatives,
     :countries, :topics, :sub_topics, :geo_regions, :geo_subregions
@@ -11,9 +6,10 @@ class SharepointTradeArticleQuery < Query
 
   def initialize(options)
     super
-    SINGLE_VALUE_TERMS.each do |term|
-      instance_variable_set("@#{term}", options[term].downcase) if options[term].present?
-    end
+    @q = options[:q].downcase if options[:q].present?
+    @creation_date = options[:creation_date] if options[:creation_date].present?
+    @release_date = options[:release_date] if options[:release_date].present?
+    @expiration_date = options[:expiration_date] if options[:expiration_date].present?
     MULTI_VALUE_TERMS.each do |term|
       instance_variable_set("@#{term}", options[term].downcase.split(',')) if options[term].present?
     end
@@ -35,8 +31,7 @@ class SharepointTradeArticleQuery < Query
   private
 
   def has_filter_options?
-    @creation_date_start || @creation_date_end || @release_date_start || @release_date_end ||
-    @expiration_date_start || @expiration_date_end || @countries || @export_phases ||
+    @countries || @export_phases || @creation_date || @release_date || @expiration_date ||
     @industries || @trade_regions || @trade_programs || @trade_initiatives ||
     @topics || @sub_topics || @geo_regions || @geo_subregions
   end
@@ -52,27 +47,12 @@ class SharepointTradeArticleQuery < Query
   def generate_sp_filter(json, filter_terms)
     json.bool do
       json.must do
-        generate_date_range(json, 'creation_date')
-        generate_date_range(json, 'release_date')
-        generate_date_range(json, 'expiration_date')
         filter_terms.each do |term|
           json.child! { json.terms { json.set! term, instance_variable_get("@#{term}") } } if instance_variable_get("@#{term}")
         end
-      end
-    end
-  end
-
-  def generate_date_range(json, date_str)
-    date_start = instance_variable_get("@#{date_str}_start")
-    date_end = instance_variable_get("@#{date_str}_end")
-    if date_start || date_end
-      json.child! do
-        json.range do
-          json.set! date_str.to_sym do
-            json.from date_start if date_start
-            json.to date_end if date_end
-          end
-        end
+        generate_date_range(json, 'creation_date', @creation_date) if @creation_date
+        generate_date_range(json, 'release_date', @release_date) if @release_date
+        generate_date_range(json, 'expiration_date', @expiration_date) if @expiration_date
       end
     end
   end

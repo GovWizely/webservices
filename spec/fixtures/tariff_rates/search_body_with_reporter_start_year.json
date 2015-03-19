@@ -4,9 +4,9 @@
       "must": [
         {
           "range": {
-            "expiration_date": {
-              "from": "2014-08-27",
-              "to": "2014-08-28"
+            "reporter_start_year": {
+              "from": "2014",
+              "to": "2015"
             }
           }
         }

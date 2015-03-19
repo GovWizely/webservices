@@ -5,8 +5,7 @@ class ParatureFaqQuery < Query
     @answer = options[:answer].downcase if options[:answer].present?
     @q = options[:q].downcase if options[:q].present?
 
-    @update_date_start = options[:update_date_start] if options[:update_date_start].present?
-    @update_date_end = options[:update_date_end] if options[:update_date_end].present?
+    @update_date = options[:update_date] if options[:update_date].present?
 
     @countries = options[:countries].downcase.split(',') if options[:countries].present?
     @industries = options[:industries].downcase.split(',') if options[:industries].present?
@@ -33,22 +32,9 @@ class ParatureFaqQuery < Query
           json.child! { json.terms { json.country @countries } } if @countries
           json.child! { json.terms  { json.industry @industries }  } if @industries
           json.child! { json.terms  { json.topic @topics }  } if @topics
-          generate_date_range(json)
+          generate_date_range(json, 'update_date', @update_date) if @update_date
         end
       end
-    end if @countries || @update_date_start || @update_date_end || @industries || @topics
-  end
-
-  def generate_date_range(json)
-    if @update_date_start || @update_date_end
-      json.child! do
-        json.range do
-          json.update_date do
-            json.from @update_date_start if @update_date_start
-            json.to @update_date_end if @update_date_end
-          end
-        end
-      end
-    end
+    end if @countries || @industries || @topics || @update_date
   end
 end

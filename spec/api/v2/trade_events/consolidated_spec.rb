@@ -171,5 +171,23 @@ describe 'Consolidated Trade Events API V2', type: :request do
         let(:sources) { [TradeEvent::Ita] }
       end
     end
+
+    context 'when start_date is specified' do
+      let(:params) { { sources: 'ITA', start_date: '2020-10-10 TO 2020-12-31' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match start_date [2020-10-10 TO 2020-12-31]'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeEvent::Ita] }
+      end
+    end
+
+    context 'when end_date is specified' do
+      let(:params) { { sources: 'SBA', end_date: '2014-01-08 TO 2014-01-08' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeEvent::Sba results that match end_date [2014-01-08 TO 2014-01-08]'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeEvent::Sba] }
+      end
+    end
   end
 end
