@@ -1,4 +1,7 @@
 module Importer
+  # The module provides functionality useful for importing source data, and
+  # can be included into any class that will do so.
+
   def extract_fields(parent_node, path_hash)
     Hash[path_hash.map { |key, path| [key, extract_node(parent_node.xpath(path).first)] }]
   end

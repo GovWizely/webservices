@@ -7,7 +7,7 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::Fbopen.recreate_index
     TradeLead::State.recreate_index
     TradeLead::Uk.recreate_index
-    TradeLead::FbopenData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/input_presol").import
+    TradeLead::FbopenImporter::PatchData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_input_presol").import
     TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
     TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
     TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import

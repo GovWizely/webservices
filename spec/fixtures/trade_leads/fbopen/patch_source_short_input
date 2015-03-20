@@ -23,6 +23,8 @@ STE 200 FAIRCHILD AFB WA 99011-8568
 <POPADDRESS>
 Fairchild AFB, WA
 </PRESOL>
+
+
 <PRESOL>
 <DATE>0726
 <YEAR>14
@@ -52,6 +54,8 @@ Fairchild AFB, WA
 <POPZIP>00000-000
 <POPADDRESS>TBD TBD TBD NH
 </PRESOL>
+
+
 <PRESOL>
 <DATE>0307
 <YEAR>14
@@ -81,6 +85,8 @@ Fairchild AFB, WA
 <POPZIP>01434
 <POPADDRESS>Central Receiving Point DOL Supply IPBO Warehouse, Buidg 3574, 12 Feinber Devens MA
 </PRESOL>
+
+
 <COMBINE>
 <DATE>0726
 <YEAR>14
@@ -102,6 +108,8 @@ Fairchild AFB, WA
 <DESC>Link To Document
 <SETASIDE>N/A
 </COMBINE>
+
+
 <COMBINE>
 <DATE>0726
 <YEAR>14
@@ -123,6 +131,8 @@ Fairchild AFB, WA
 <DESC>Link To Document
 <SETASIDE>N/A
 </COMBINE>
+
+
 <COMBINE>
 <DATE>0726
 <YEAR>14

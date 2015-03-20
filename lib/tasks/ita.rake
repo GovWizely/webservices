@@ -1,15 +1,19 @@
 namespace :ita do
-  desc 'Import data for a given module containing models, or a given model class'
-  task :import, [:module_or_model_class] => :environment do |_t, args|
-    importers(args.module_or_model_class.constantize).each do |i|
-      i.new.import_and_if_possible_purge_old
+  desc 'Import data for a given comma-separated list of modules containing importers, or importer classes.'
+  task :import, [:arg] => :environment do |_t, args|
+    args.to_a.each do |module_or_importer_class_name|
+      importers(module_or_importer_class_name).each do |i|
+        i.new.import_and_if_possible_purge_old
+      end
     end
   end
 
-  desc 'Recreate indices for a given module containing models, or a given model class'
-  task :recreate_index, [:module_or_model_class] => :environment do |_t, args|
-    importers(args.module_or_model_class.constantize).each do |i|
-      i.new.model_class.recreate_index
+  desc 'Recreate indices for a given comma-separated list of modules containing importers, or importer classes.'
+  task :recreate_index, [:arg] => :environment do |_t, args|
+    args.to_a.each do |module_or_importer_class_name|
+      importers(module_or_importer_class_name).each do |i|
+        i.new.model_class.recreate_index
+      end
     end
   end
 
@@ -23,19 +27,12 @@ namespace :ita do
     ImportEmptyIndices.call
   end
 
-  def importers(module_or_model_class)
-    if module_or_model_class.is_a?(Indexable)
-      model_class = module_or_model_class
-      [model_class.importer_class]
+  def importers(module_or_importer_class_name)
+    module_or_importer_class = module_or_importer_class_name.constantize
+    if module_or_importer_class.include?(Importer)
+      [module_or_importer_class]
     else
-      modu1e = module_or_model_class
-      module_importer_files =
-        "#{Rails.root}/app/importers/#{modu1e.name.typeize}/*"
-      Dir[module_importer_files].each { |f| require f }
-
-      modu1e.constants
-        .map { |constant| modu1e.const_get(constant) }
-        .select { |klass| klass.include?(Importer) }
+      module_or_importer_class.importers
     end
   end
 end

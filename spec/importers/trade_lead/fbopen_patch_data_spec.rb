@@ -1,18 +1,28 @@
 require 'spec_helper'
 
-describe TradeLead::FbopenData do
+describe TradeLead::FbopenImporter::PatchData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
-  let(:resource)     { "#{fixtures_dir}/example_input" }
+  let(:resource)     { "#{fixtures_dir}/patch_source_example_input" }
   let(:importer)     { described_class.new(resource) }
 
-  it_behaves_like 'an importer which can purge old documents'
-
   describe '#import' do
-    it 'loads leads from specified resource' do
+    it 'loads leads from partial resource' do
       expect(TradeLead::Fbopen).to receive(:index) do |fbo|
         expect(fbo.size).to eq(2)
       end
       importer.import
+    end
+  end
+
+  describe '#model_class' do
+    it 'returns correct model_class' do
+      expect(importer.model_class).to match(TradeLead::Fbopen)
+    end
+  end
+
+  describe '#can_purge_old?' do
+    it 'always returns false' do
+      expect(importer.can_purge_old?).to match(false)
     end
   end
 
