@@ -110,14 +110,14 @@ describe 'Consolidated Trade Events API V2', type: :request do
     end
 
     context 'when industry is specified' do
-      let(:params) { { industry: 'DENTALS mining' } }
+      let(:params) { { industries: "Dental Eq.,Energy \u0026 Mining" } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
       it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "mining"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita, TradeEvent::Ustda] }
       end
-      it_behaves_like "an empty result when an industry search doesn't match any documents"
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when sources is specified' do

@@ -8,7 +8,7 @@
               "registration_title",
               "description",
               "event_name",
-              "industries.tokenized",
+              "industries.keyword",
               "city",
               "venues.city",
               "venues.state",

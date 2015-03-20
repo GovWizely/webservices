@@ -9,7 +9,8 @@ module Consolidated
   end
 
   def search_for(options)
-    query = query_class.new(options)
+    klass = "V#{options[:api_version]}::#{query_class.name}".constantize rescue query_class
+    query = klass.new(options)
     hits = ES.client.search(
         index: index_names(query.sources),
         body:  query.generate_search_body,

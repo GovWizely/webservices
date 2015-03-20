@@ -3,11 +3,13 @@ require 'spec_helper'
 describe Api::V1::TradeEvents::ItaController, type: :controller do
   describe '#search' do
     let(:search_params) do
-      { 'countries' => 'MX',
-        'industry'  => 'fishing',
-        'offset'    => '1',
-        'q'         => 'trade',
-        'size'      => '15' }
+      { 'countries'   => 'MX',
+        'industry'    => 'fishing',
+        'offset'      => '1',
+        'q'           => 'trade',
+        'size'        => '15',
+        'api_version' => '1',
+      }
     end
     let(:search) { double('search') }
 
