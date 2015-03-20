@@ -6,8 +6,8 @@ class CountryIndustryQuery < Query
     if options[:countries].present?
       @countries = options[:countries].upcase.split(',').map(&:strip)
     end
-    @industry = options[:industry] if options[:industry].present?
-    @q = options[:q] if options[:q].present?
+    @industry = options[:industry]
+    @q = options[:q]
   end
 
   private
