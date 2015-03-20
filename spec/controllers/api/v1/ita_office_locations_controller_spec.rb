@@ -4,11 +4,13 @@ describe Api::V1::ItaOfficeLocationsController, type: :controller do
   describe '#search' do
     let(:search_params) do
       {
-        'countries' => 'US',
-        'country'   => 'US',
-        'state'     => 'DC',
-        'city'      => 'Washington',
-        'q'         => 'national' }
+        'countries'   => 'US',
+        'country'     => 'US',
+        'state'       => 'DC',
+        'city'        => 'Washington',
+        'q'           => 'national',
+        'api_version' => '1',
+      }
     end
     let(:search) { double('search') }
 

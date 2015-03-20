@@ -29,7 +29,12 @@ module TradeLead
             description:              { type: 'string', analyzer: 'custom_analyzer' },
             contract_number:          { type: 'string', index: 'not_analyzed' },
             reference_number:         { type: 'string', index: 'not_analyzed' },
-            industry:                 { type: 'string', analyzer: 'custom_analyzer' },
+            industry:                 { type:   'string',
+                                        fields: {
+                                          tokenized: { type: 'string', analyzer: 'custom_analyzer' },
+                                          keyword:   { type: 'string', analyzer: 'keyword' },
+                                        },
+                                      },
             title:                    {
               type: 'string', analyzer: 'custom_analyzer',
               fields: {

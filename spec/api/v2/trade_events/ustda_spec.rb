@@ -31,7 +31,7 @@ describe 'Trade Events API V2', type: :request do
       it_behaves_like 'it contains all TradeEvent::Ustda results that match countries "US"'
     end
     context 'when industry is specified' do
-      let(:params) { { industry: 'mining' } }
+      let(:params) { { industries: "Energy \u0026 Mining" } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "mining"'
     end
