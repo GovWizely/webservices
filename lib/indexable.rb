@@ -39,7 +39,7 @@ module Indexable
   end
 
   def search_for(options)
-    klass = "#{name}Query".constantize
+    klass = "V#{options[:api_version]}::#{name}Query".constantize rescue "#{name}Query".constantize
     query = klass.new(options)
     hits = ES.client.search(
       index: index_name,
