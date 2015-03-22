@@ -2,8 +2,9 @@ class V2::MarketResearchQuery < CountryIndustryQuery
   def initialize(options = {})
     super
     @sort = @q ? nil : 'title.keyword'
-    @industry ||= options[:industries].try{|o| o.split(',').map(&:strip) }
-    @countries &&= @countries.try{|c| c.join(' ')}
+    @industries = options[:industries].try{|o| o.split(',').map(&:strip) }
+    @industry = nil # Just to be sure, at this point, that no
+                    # filtering/sorting/scoring is being done on @industry
   end
 
   private
@@ -24,17 +25,23 @@ class V2::MarketResearchQuery < CountryIndustryQuery
     json.filter do
       json.bool do
         json.must do
-          json.child! { json.query { json.match { json.countries @countries } } } if @countries
-          Array(@industry).each{ |ind|
-            json.child! {
-              json.query {
-                generate_multi_match(json, %w(industries.original industries.mapped), ind)
-              }
+          json.child! { json.terms { json.countries @countries } } if @countries
+          json.child! {
+            json.bool {
+              json.set! 'should' do
+                Array(@industries).each{ |ind|
+                  json.child! {
+                    json.query {
+                      generate_multi_match(json, %w(industries.original.keyword industries.mapped.keyword), ind)
+                    }
+                  }
+                }
+              end
             }
-          }
+          } if @industries
         end
       end
-    end if @countries or @industry
+    end if @countries or @industries
   end
 end
 

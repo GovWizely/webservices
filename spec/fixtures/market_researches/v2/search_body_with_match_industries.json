@@ -1,0 +1,39 @@
+{
+   "filter" : {
+      "bool" : {
+         "must" : [
+            {
+               "bool" : {
+                  "should" : [
+                     {
+                        "query" : {
+                           "multi_match" : {
+                              "operator" : "and",
+                              "fields" : [
+                                 "industries.original.keyword",
+                                 "industries.mapped.keyword"
+                              ],
+                              "query" : "fishing"
+                           }
+                        }
+                     },
+                     {
+                        "query" : {
+                           "multi_match" : {
+                              "operator" : "and",
+                              "fields" : [
+                                 "industries.original.keyword",
+                                 "industries.mapped.keyword"
+                              ],
+                              "query" : "swimming"
+                           }
+                        }
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}
+

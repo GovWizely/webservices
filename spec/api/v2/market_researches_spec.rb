@@ -66,6 +66,20 @@ describe 'Market Researches API V2', type: :request do
       end
 
       context 'when industries is specified' do
+        context 'and no match' do
+          # TODO: use the it_behaves_like instead of this block. I got stuck when trying to do it.
+          let(:params) { { industries: 'gibberish' } }
+          before { get search_path, params, v2_headers }
+          subject { response }
+
+          it_behaves_like 'a successful search request'
+
+          it 'returns empty result' do
+            json_response = JSON.parse(response.body)
+            expect(json_response['total']).to eq(0)
+          end
+          it_behaves_like "an empty result when an industries search doesn't match any documents"
+        end
         context 'as single entry' do
           let(:params) { { industries: 'Aerospace & Defense' } }
           before { get search_path, params, v2_headers }
@@ -83,6 +97,7 @@ describe 'Market Researches API V2', type: :request do
             expect(results[1]).to eq(expected_results[4])
             expect(results[2]).to eq(expected_results[5])
           end
+          it_behaves_like "an empty result when an industries search doesn't match any documents"
         end
         context 'as multiple entries' do
           let(:params) { { industries: 'Aerospace & Defense, Services' } }
@@ -93,14 +108,13 @@ describe 'Market Researches API V2', type: :request do
 
           it 'returns market researches' do
             json_response = JSON.parse(response.body)
-            expect(json_response['total']).to eq(9)
+            expect(json_response['total']).to eq(4)
             expect(json_response['offset']).to eq(0)
 
             results = json_response['results']
-            expect(results[0]).to eq(expected_results[5])
+            expect(results).to include *expected_results.values_at(2,3,4,5)
           end
         end
-        it_behaves_like "an empty result when an industries search doesn't match any documents"
       end
 
       context 'when searching for field with non ascii characters using ascii characters' do
