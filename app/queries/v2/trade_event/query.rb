@@ -1,5 +1,13 @@
 module V2::TradeEvent
   class Query < ::CountryIndustryQuery
+    #
+    # NOTE: This is mostly duplicated code.
+    #       Given the fact we'll remove V1 soon after V2 becomes default it might
+    #       not make sense to work on unifying just now.
+    #       ... I should know better. You can make fun of me when you read this comment
+    #       years later.
+    #
+
     attr_reader :sources
 
     def initialize(options = {})
