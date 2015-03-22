@@ -4,10 +4,10 @@ module TradeLead
 
     def initialize(options = {})
       super
-      @q = options[:q] if options[:q].present?
-      @countries = options[:countries].upcase.split(',') if options[:countries].present?
-      @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
-      @industry = options[:industries] if options[:industries].present?
+      @countries = options[:countries].try { |c| c.upcase.split(',') }
+      @sources   = options[:sources].upcase.split(',') rescue []
+      @industry  = options[:industries]
+      @q    = options[:q]
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'
     end
 
