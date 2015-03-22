@@ -1,5 +1,33 @@
 require 'spec_helper'
 
+describe V2::TradeEvent::Query do
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/" }
+
+  describe '#new' do
+    it_behaves_like 'a paginated query'
+
+    context 'when options include countries' do
+      let(:query) { described_class.new(countries: 'us,ca') }
+
+      describe '#countries' do
+        subject { query.countries }
+        it { is_expected.to eq(%w(US CA)) }
+      end
+    end
+  end
+
+  describe '#generate_search_body' do
+    context 'when options include industry' do
+      let(:query) { described_class.new(industries: 'fishing,hunting') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_industries_v2.json").read }
+
+      it 'generates search body with queries' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+  end
+end
+
 describe TradeEvent::Query do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/" }
 
