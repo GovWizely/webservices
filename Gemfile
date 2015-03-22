@@ -39,8 +39,6 @@ group :development do
   gem 'capistrano',  '~> 2.15'
   gem 'rubocop', require: false
   gem 'transpec'
-  gem 'guard'
-  gem 'guard-rspec'
 end
 
 group :test do
