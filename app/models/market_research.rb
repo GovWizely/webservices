@@ -22,7 +22,6 @@ class MarketResearch
         countries:   { type: 'string', analyzer: 'keyword' },
         description: { type: 'string', analyzer: 'custom_analyzer' },
         industries:  {
-          type:       'object',
           properties: {
             original: {
               type: 'string',
