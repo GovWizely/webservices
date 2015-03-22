@@ -14,7 +14,7 @@ module TradeEvent
       generate_multi_query(
         json,
         %i(
-          registration_title description event_name industries city
+          registration_title description event_name industries.tokenized city
           venues.city venues.state venues.country
           contacts.first_name contacts.last_name contacts.person_title
         ),
@@ -31,5 +31,6 @@ module TradeEvent
         end
       end if @sources.any? || @countries
     end
+
   end
 end
