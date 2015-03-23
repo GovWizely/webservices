@@ -364,7 +364,7 @@ shared_context 'ScreeningList::Plc data' do
   end
 end
 
-shared_examples 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with fuzziness of 1' do
+shared_examples 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with distance of 1' do
   let(:source) { ScreeningList::Plc }
   let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'

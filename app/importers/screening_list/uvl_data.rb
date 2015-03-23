@@ -12,6 +12,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
     def initialize(resource = ENDPOINT)
@@ -58,6 +60,8 @@ module ScreeningList
         .flatten
         .uniq
         .delete_if { |alt_name| alt_name == doc[:name] }
+
+      make_names(doc)
 
       doc
     end

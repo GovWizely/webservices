@@ -86,11 +86,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
   },
   {
     "addresses": [
@@ -189,11 +189,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
   },
   {
     "addresses": [
@@ -282,11 +282,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
   },
   {
     "addresses": [
@@ -393,10 +393,10 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
   }
 ]

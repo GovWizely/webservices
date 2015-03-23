@@ -16,6 +16,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name start_date federal_register_notice)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
     def initialize(resource = ENDPOINT)
@@ -34,7 +36,7 @@ module ScreeningList
     private
 
     def process_row(row)
-      entry = {
+      doc = {
         name:                    extract_name(row),
         alt_names:               extract_alt_names(row),
         start_date:              parse_american_date(row[:eff_date]),
@@ -43,12 +45,14 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
-      entry[:source_list_url] = row[:type] == 'Administrative' ?
+      make_names(doc)
+
+      doc[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
         'http://www.pmddtc.state.gov/compliance/debar.html'
 
-      entry[:id] = generate_id(entry)
-      sanitize_entry(entry)
+      doc[:id] = generate_id(doc)
+      sanitize_entry(doc)
     end
 
     def extract_name(row)
