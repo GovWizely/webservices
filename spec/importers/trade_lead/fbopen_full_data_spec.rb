@@ -11,7 +11,7 @@ describe TradeLead::FbopenImporter::FullData do
   describe '#import' do
     it 'loads leads from full xml' do
       expect(TradeLead::Fbopen).to receive(:index) do |fbo|
-        expect(fbo.size).to eq(4)
+        expect(fbo.size).to eq(3)
         expect(fbo).to match(expected_results)
       end
       importer.import
