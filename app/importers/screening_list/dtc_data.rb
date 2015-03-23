@@ -48,6 +48,7 @@ module ScreeningList
         'http://www.pmddtc.state.gov/compliance/debar.html'
 
       entry[:id] = generate_id(entry)
+      entry[:phonetic_names] = [entry[:name]] + entry[:alt_names]
       sanitize_entry(entry)
     end
 

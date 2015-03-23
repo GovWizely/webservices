@@ -58,7 +58,7 @@ module ScreeningList
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
-
+      doc[:phonetic_names] = [doc[:name]]
       doc[:type] = doc[:sdn_type] || doc[:nsp_type]
       doc.delete(:sdn_type)
       doc.delete(:nsp_type)
