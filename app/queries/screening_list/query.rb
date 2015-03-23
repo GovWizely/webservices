@@ -19,6 +19,11 @@ module ScreeningList
       @sources   = options[:sources].try { |s| s.upcase.split(',') } || []
       @sort = '_score,name.keyword'
       @fuzziness = options[:fuzziness].try(:to_i)
+      @end_date = options[:end_date] if options[:end_date].present?
+      @start_date = options[:start_date] if options[:start_date].present?
+      @issue_date = options[:issue_date] if options[:issue_date].present?
+      @expiration_date = options[:expiration_date] if options[:expiration_date].present?
+      @phonetics = options[:phonetics] if options[:phonetics].present?
     end
 
     def generate_query(json)
@@ -30,24 +35,28 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_fuzzy_queries(json, %w(name.keyword alt_names.keyword), @name)
+            #generate_fuzzy_queries(json, %w(name.keyword alt_names.keyword), @name)
+            generate_fuzzy_queries(json, %w(name alt_names), @name)
+          end
+          if @phonetics == "1"
+            generate_fuzzy_queries(json, ['phonetic_names'], @name)
           end
           if @address
             generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
           end
         end
-      end if [@q, @name, @fuzziness, @address].any?
+      end if [@q, @name, @fuzziness, @address, @phonetics].any?
     end
 
     def generate_fuzzy_queries(json, fields, value)
       json.set! 'should' do
         json.child! { generate_multi_match(json, fields, value) }
-
         json.child! do
           json.multi_match do
             json.fields fields
             json.query value
             json.fuzziness @fuzziness
+            json.prefix_length 1
           end
         end if @fuzziness
       end

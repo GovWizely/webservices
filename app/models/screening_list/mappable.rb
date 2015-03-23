@@ -21,6 +21,17 @@ module ScreeningList
                 tokenizer: 'keyword',
                 filter:    %w(uppercase asciifolding),
               },
+              double_metaphone_analyzer:             {
+                tokenizer: 'standard',
+                filter:    %w(standard lowercase double_metaphone_filter),
+              },
+            },
+            filter:   {
+              double_metaphone_filter: {
+                type:    'phonetic',
+                encoder: 'double_metaphone',
+                replace: false,
+              },
             },
           },
         },
@@ -35,6 +46,7 @@ module ScreeningList
           properties: {
             name:                    { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
+                                       boost: 4,
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
@@ -42,7 +54,7 @@ module ScreeningList
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
+            phonetic_names:          { type: 'string', analyzer: 'double_metaphone_analyzer' },
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
