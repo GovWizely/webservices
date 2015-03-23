@@ -98,7 +98,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     end
 
     context "when industries is set to 'Medical'" do
-      let(:params) { { industries: 'health care medical' } }
+      let(:params) { { industries: 'Health Care and Social Assistance,G009E: Medical/Dental Clinic Services' } }
       it_behaves_like 'it contains all TradeLead::Australia results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Fbopen results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::State results that match industries "Health Care Medical"'
