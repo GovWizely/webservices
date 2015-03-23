@@ -46,7 +46,7 @@ module ScreeningList
           properties: {
             name:                    { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
-                                       boost: 4.0,
+                                       boost:    1.0,
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
