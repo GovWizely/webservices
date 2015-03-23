@@ -28,11 +28,11 @@ module TradeEvent
             description:        { type: 'string', analyzer: 'custom_analyzer' },
             event_name:         { type: 'string', analyzer: 'custom_analyzer' },
             registration_title: { type: 'string', analyzer: 'custom_analyzer' },
-            industries:         { type: 'string',
+            industries:         { type:   'string',
                                   fields: {
                                     tokenized: { type: 'string', analyzer: 'custom_analyzer' },
                                     keyword:   { type: 'string', analyzer: 'keyword' },
-                                  }
+                                  },
                                 },
 
             venues:             { properties: { venue:   { type: 'string', analyzer: 'custom_analyzer' },

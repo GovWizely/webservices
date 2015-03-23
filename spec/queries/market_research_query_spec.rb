@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe V2::MarketResearchQuery do
-  # TODO: moove me to a separate file, add more scenarios.
+  # TODO: move me to a separate file, add more scenarios.
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
 
   describe '#generate_search_body' do

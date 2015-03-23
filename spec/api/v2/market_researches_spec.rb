@@ -112,7 +112,7 @@ describe 'Market Researches API V2', type: :request do
             expect(json_response['offset']).to eq(0)
 
             results = json_response['results']
-            expect(results).to include *expected_results.values_at(2,3,4,5)
+            expect(results).to include *expected_results.values_at(2, 3, 4, 5)
           end
         end
       end

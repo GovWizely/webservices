@@ -31,6 +31,5 @@ module TradeEvent
         end
       end if @sources.any? || @countries
     end
-
   end
 end

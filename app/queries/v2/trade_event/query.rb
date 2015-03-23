@@ -36,21 +36,20 @@ module V2::TradeEvent
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
-            json.child! {
-              json.bool {
+            json.child! do
+              json.bool do
                 json.set! 'should' do
-                  Array(@industries).each{ |ind|
-                    json.child! {
+                  Array(@industries).each do |ind|
+                    json.child! do
                       json.query { json.match { json.set! 'industries.keyword', ind } }
-                    }
-                  }
+                    end
+                  end
                 end
-              }
-            } if @industries
+              end
+            end if @industries
           end
         end
       end if @sources.any? || @countries || @industries
     end
-
   end
 end

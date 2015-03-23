@@ -28,7 +28,7 @@ describe 'SBA Trade Events API V2', type: :request do
     end
 
     xcontext 'when industries is specified' do
-      pending "All fixtures have no industry :-("
+      pending 'All fixtures have no industry :-('
       let(:params) { { industries: 'abc,def' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Sba results that match countries "fr,de"'
