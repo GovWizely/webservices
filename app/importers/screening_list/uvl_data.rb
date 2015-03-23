@@ -59,7 +59,7 @@ module ScreeningList
           .flatten
           .uniq
           .delete_if { |alt_name| alt_name == doc[:name] }
-
+      doc[:phonetic_names] = [doc[:name]] + doc[:alt_names]
       doc
     end
   end

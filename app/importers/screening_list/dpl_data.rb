@@ -80,7 +80,7 @@ module ScreeningList
       entry[:addresses] = rows.map do |row|
         remap_keys(ADDRESS_HASH, row)
       end
-
+      entry[:phonetic_names] = [entry[:name]]
       entry
     end
   end
