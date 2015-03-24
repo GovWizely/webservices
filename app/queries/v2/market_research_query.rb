@@ -2,9 +2,10 @@ class V2::MarketResearchQuery < CountryIndustryQuery
   def initialize(options = {})
     super
     @sort = @q ? nil : 'title.keyword'
-    @industries = options[:industries].try { |o| o.split(',').map(&:strip) }
-    @industry = nil # Just to be sure, at this point, that no
+    @industries = options[:industries].split(',').map(&:strip) rescue nil
+    # Just to be sure, at this point, that no
     # filtering/sorting/scoring is being done on @industry
+    @industry = nil
   end
 
   private

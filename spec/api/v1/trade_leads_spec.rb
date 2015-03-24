@@ -76,7 +76,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns trade leads sorted by id in descending order' do
+      it 'returns trade leads for matching industries' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(1)
         expect(json_response['offset']).to eq(0)
@@ -84,7 +84,7 @@ describe 'Trade Leads API V1', type: :request do
         results = json_response['results']
         expect(results).to include *expected_results.values_at(0)
       end
-      it_behaves_like "an empty result when a countries search doesn't match any documents"
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when q matches a title' do
