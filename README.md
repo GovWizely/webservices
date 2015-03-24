@@ -24,7 +24,7 @@ Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to 
 
 Fire up a server and try it all out.
 
-    bundle exec rake ita:import[TradeEvent::Ita] ita:import[ItaOfficeLocation]
+    bundle exec rake ita:import[ScreeningList,MarketResearchData]
     bundle exec rails s
 
 <http://127.0.0.1:3000/trade_events/ita/search?size=5&offset=8>
@@ -45,7 +45,7 @@ Fire up a server and try it all out.
 
 These require an [ElasticSearch](http://www.elasticsearch.org/) server to be running.
 
-    bundle exec rake
+    bundle exec rspec
 
 ### Code Coverage
 
