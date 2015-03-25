@@ -11,6 +11,7 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :phonetic_names: ["7thÿof Tir"]
 - :name: Aerospace Industries Organization (AIO)
   :federal_register_notice: Vol. 70, No. 126, 07/01/05
   :start_date: '2005-06-28'
@@ -21,6 +22,7 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :phonetic_names: ["Aerospace Industries Organization (AIO)"]
 - :name: Aerospace Logistics Services
   :federal_register_notice: Vol. 72, No. 77, 4/23/07
   :start_date: '2007-04-17'
@@ -32,6 +34,7 @@
   :programs:
   - INKSNA
   - ISNA
+  :phonetic_names: ["Aerospace Logistics Services"]
 - :name: Ahmad Derakhshandeh
   :federal_register_notice: Vol. 72, No. 34, 02/21/07
   :start_date: '2007-01-09'
@@ -42,6 +45,7 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :phonetic_names: ["Ahmad Derakhshandeh"]
 - :name: Ahmad Vahid Dastjerdi
   :federal_register_notice: Vol. 72, No. 213, 11/05/07
   :start_date: '2007-10-25'
@@ -52,3 +56,5 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :phonetic_names: ["Ahmad Vahid Dastjerdi"]
+  

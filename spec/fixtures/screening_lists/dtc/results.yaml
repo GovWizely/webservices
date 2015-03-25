@@ -9,6 +9,7 @@
   :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: 1857dfc050bc7adea46922f09996649de18495d7
+  :phonetic_names: ["Juwhan Yun"]
 - :name: Dilligas Trading Co., Inc.
   :alt_names: []
   :start_date: '1991-12-13'
@@ -17,6 +18,7 @@
   :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: afd9dbfe97d679d161eaed68203399296abf631c
+  :phonetic_names: [" Dilligas Trading Co., Inc."]
 - :name: Brian Joseph Fleming
   :alt_names:
   - Brian Joseph McSulla
@@ -26,6 +28,7 @@
   :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: ba449382749d0c16fd862d7b3da698fb65b5d7aa
+  :phonetic_names: ["Brian Joseph Fleming", "Brian Joseph McSulla"]
 - :name: John Smith
   :alt_names:
   - Brian Smith
@@ -35,3 +38,4 @@
   :source_list_url: http://www.pmddtc.state.gov/compliance/debar_admin.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :id: 5989fe6f23c0b7b07aade5e4782acbbceb57be71
+  :phonetic_names: ["John Smith", "Brian Smith"]

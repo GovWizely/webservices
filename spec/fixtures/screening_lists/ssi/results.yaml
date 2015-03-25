@@ -16,6 +16,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: VTB BANK OAO
+  :phonetic_names: ["VTB BANK OAO"]
   :type: Entity
   :alt_names:
   - JSC VTB BANK
@@ -101,6 +102,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: BANK OF MOSCOW
+  :phonetic_names: ["BANK OF MOSCOW"]
   :type: Entity
   :alt_names:
   - JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY
@@ -178,6 +180,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: AK TRANSNEFT OAO
+  :phonetic_names: ["AK TRANSNEFT OAO"]
   :type: Entity
   :alt_names:
   - OAO AK TRANSNEFT
@@ -249,6 +252,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: ROSTEC
+  :phonetic_names: ["ROSTEC"]
   :type: Entity
   :alt_names:
   - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED

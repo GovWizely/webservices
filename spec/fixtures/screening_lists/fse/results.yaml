@@ -15,6 +15,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: FERLAND COMPANY LIMITED
+  :phonetic_names: ["FERLAND COMPANY LIMITED"]
   :type: Entity
   :alt_names:
   - FERLAND CO. LTD
@@ -57,6 +58,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: SOKOLENKO, Vitaly
+  :phonetic_names: ["SOKOLENKO, Vitaly"]
   :type: Individual
   :alt_names:
   - SOKOLENKO, Vitalii
@@ -100,6 +102,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: HOSSEINPOUR, Houshang
+  :phonetic_names: ["HOSSEINPOUR, Houshang"]
   :type: Individual
   :alt_names:
   - HOSSEINPOUR, Houshang Shahali
