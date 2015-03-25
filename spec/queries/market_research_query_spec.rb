@@ -1,5 +1,29 @@
 require 'spec_helper'
 
+describe V2::MarketResearchQuery do
+  # TODO: move me to a separate file, add more scenarios.
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
+
+  describe '#generate_search_body' do
+    context 'when options is an empty hash' do
+      let(:query) { described_class.new }
+
+      it 'generates search body with default options' do
+        expect(JSON.parse(query.generate_search_body)).to eq({})
+      end
+    end
+
+    context 'when options include industry' do
+      let(:query) { described_class.new(industries: 'fishing, swimming') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/v2/search_body_with_match_industries.json").read }
+
+      it 'generates search body with queries' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+  end
+end
+
 describe MarketResearchQuery do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
 

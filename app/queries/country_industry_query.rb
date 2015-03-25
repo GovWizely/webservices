@@ -3,11 +3,9 @@ class CountryIndustryQuery < Query
 
   def initialize(options = {})
     super
-    if options[:countries].present?
-      @countries = options[:countries].upcase.split(',').map(&:strip)
-    end
-    @industry = options[:industry] if options[:industry].present?
-    @q = options[:q] if options[:q].present?
+    @countries = options[:countries].upcase.split(',').map(&:strip) rescue nil
+    @industry = options[:industry]
+    @q = options[:q]
   end
 
   private
@@ -16,7 +14,7 @@ class CountryIndustryQuery < Query
     json.query do
       json.bool do
         json.must do |must_json|
-          must_json.child! { must_json.match { must_json.industries @industry } } if @industry
+          must_json.child! { must_json.match { must_json.set! 'industries.tokenized', @industry } } if @industry
           must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
         end
       end
