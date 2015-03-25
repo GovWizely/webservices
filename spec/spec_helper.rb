@@ -22,6 +22,8 @@ VCR.configure do |c|
   c.configure_rspec_metadata!
 end
 
+Webservices::Application.model_classes.each { |c| c.recreate_index }
+
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
