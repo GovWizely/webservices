@@ -26,6 +26,7 @@
     :full_name: Entity List (EL) - Bureau of Industry and Security
     :code: EL
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Fazal Rahim Farid", "Fazel Rahim Farid", "Farid", "Engineer Idris"]
 - :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -44,6 +45,7 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Fazel Khalil Construction Company"]
 - :name: Zurmat Construction Company offices
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -73,7 +75,7 @@
     :city: Gardez
     :country: AF
     :postal_code: 
-    :state: 
+    :state:
   - :address: House No. 01, Street No. 01, Muhaqeq Road (Behind Pakistan and Turkish
       Embassies)
     :city: Mazar-e-Sharif
@@ -92,6 +94,7 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Zurmat Construction Company offices"]
 - :name: Murat Peker
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'
@@ -109,6 +112,7 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Murat Peker"]
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
@@ -127,6 +131,7 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Qazi Abdallah", "Jawid, Said Jan Abd-al-Salam"]
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 10001
   :start_date: '2011-11-21'
@@ -145,6 +150,7 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Qazi Abdallah", "Jawid, Said Jan Abd-al-Salam"]
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-22'
@@ -163,3 +169,4 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :phonetic_names: ["Qazi Abdallah", "Jawid, Said Jan Abd-al-Salam"]

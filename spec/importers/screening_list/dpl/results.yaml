@@ -16,7 +16,8 @@
     :city: COPENHAGEN
     :state: 
     :country: DK
-    :postal_code: 
+    :postal_code:
+  :phonetic_names: ["SEMICONDUCTOR SYSTEMS INTL., INC. (SSI)"]
 - :name: KAL TEK LABS
   :start_date: '1988-08-26'
   :end_date: '2008-08-26'
@@ -33,7 +34,8 @@
     :city: CHULA VISTA
     :state: CA
     :country: US
-    :postal_code: 
+    :postal_code:
+  :phonetic_names: ["KAL TEK LABS"]
 - :name: KATSUTA KEISUKE
   :start_date: '1993-08-02'
   :end_date: '2003-03-03'
@@ -50,6 +52,7 @@
     :state: 
     :country: JP
     :postal_code: 
+  :phonetic_names: ["KATSUTA KEISUKE"]
 - :name: KINTRACO
   :start_date: '1987-03-19'
   :end_date: '2007-03-19'
@@ -66,6 +69,7 @@
     :state: 
     :country: NL
     :postal_code: 1822 BH
+  :phonetic_names: ["KINTRACO"]
 - :name: ABELAIRAS, AMANCIO J.
   :start_date: '1995-06-05'
   :end_date: '2005-06-05'
@@ -82,6 +86,7 @@
     :state: FL
     :country: US
     :postal_code: '33144'
+  :phonetic_names: ["ABELAIRAS, AMANCIO J."]
 - :name: ABRISHAMI, ELHAM
   :start_date: '1998-08-03'
   :end_date: '2007-08-29'
@@ -98,6 +103,7 @@
     :state: OH
     :country: US
     :postal_code: '43017'
+  :phonetic_names: ["ABRISHAMI, ELHAM"]
 - :name: ACE, IAN
   :start_date: '1997-08-08'
   :end_date: '2017-08-08'
@@ -113,7 +119,8 @@
     :city: PINELANDS
     :state: 
     :country: ZA
-    :postal_code: 
+    :postal_code:
+  :phonetic_names: ["ACE, IAN"]
 - :name: ADT ANALOG AND DIGITAL TECHNIK
   :start_date: '1981-09-10'
   :end_date: 
@@ -129,7 +136,8 @@
     :city: 
     :state: 
     :country: DE
-    :postal_code: 
+    :postal_code:
+  :phonetic_names: ["ADT ANALOG AND DIGITAL TECHNIK"]
 - :name: AGNESE, ANDREE
   :start_date: '1985-07-11'
   :end_date: 
@@ -145,4 +153,5 @@
     :city: PANTIN
     :state: 
     :country: FR
-    :postal_code: 
+    :postal_code:
+  :phonetic_names: ["AGNESE, ANDREE"]
