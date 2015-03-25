@@ -15,6 +15,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: BANCO NACIONAL DE CUBA
+  :phonetic_names: ["BANCO NACIONAL DE CUBA"]
   :type: Entity
   :alt_names:
   - BNC
@@ -61,6 +62,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: JIM'ALE, Ahmed Nur Ali
+  :phonetic_names: ["JIM'ALE, Ahmed Nur Ali"]
   :type: Individual
   :alt_names:
   - JUMALI, Ahmed Ali
@@ -119,6 +121,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: PARSHAN
+  :phonetic_names: ["PARSHAN"]
   :type: Vessel
   :alt_names:
   - IRAN BRIGHTNESS
@@ -151,6 +154,7 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
   :name: CHAO, Lazaro R.
+  :phonetic_names: ["CHAO, Lazaro R."]
   :type: Individual
   :alt_names: []
   :programs:
