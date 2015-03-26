@@ -119,7 +119,7 @@ describe 'Market Researches API V2', type: :request do
 
       context 'when expiration_date is specified' do
         let(:params) { { expiration_date: '2016-01-01 TO 2016-01-01' } }
-        before { get search_path, params, v2_headers }
+        before { get search_path, params, @v2_headers }
         subject { response }
 
         it_behaves_like 'a successful search request'

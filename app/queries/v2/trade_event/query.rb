@@ -15,6 +15,8 @@ module V2::TradeEvent
       @industries = options[:industries].split(',').map(&:strip) rescue nil
       @sources = options[:sources].upcase.split(',') rescue []
       @sort = '_score,start_date'
+      @start_date = options[:start_date] if options[:start_date].present?
+      @end_date = options[:end_date] if options[:end_date].present?
       # Just to be sure, at this point, that no
       # filtering/sorting/scoring is being done on @industry
       @industry = nil
@@ -39,6 +41,8 @@ module V2::TradeEvent
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
+            generate_date_range(json, 'start_date', @start_date) if @start_date
+            generate_date_range(json, 'end_date', @end_date) if @end_date
             json.child! do
               json.bool do
                 json.set! 'should' do

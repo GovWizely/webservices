@@ -13,19 +13,14 @@ module TradeEvent
     private
 
     def generate_query(json)
-      multi_fields = %i(
-        registration_title description event_name industries.tokenized city
-        venues.city venues.state venues.country
-        contacts.first_name contacts.last_name contacts.person_title
+      generate_multi_query(
+        json,
+        %i(
+          registration_title description event_name industries.tokenized city
+          venues.city venues.state venues.country
+          contacts.first_name contacts.last_name contacts.person_title
+        ),
       )
-      json.query do
-        json.bool do
-          json.must do |must_json|
-            must_json.child! { must_json.match { must_json.industries @industry } } if @industry
-            must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
-          end
-        end
-      end if @industry || @q
     end
 
     def generate_filter(json)
