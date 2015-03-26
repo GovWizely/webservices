@@ -118,5 +118,26 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Canada results'
     end
 
+    context 'when publish_date_amended_start or publish_date_amended_end is specified' do
+      subject { response }
+      let(:params) { { sources: 'Australia', publish_date_amended: '2013-01-04 TO 2013-01-04' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04'
+    end
+
+    context 'when publish_date_start or publish_date_end is specified' do
+      subject { response }
+      let(:params) { { sources: 'Canada', publish_date: '2014-03-20 TO 2014-03-20' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Canada results where publish_date is 2014-03-20'
+    end
+
+    context 'when end_date_start or end_date_end is specified' do
+      subject { response }
+      let(:params) { { sources: 'State', end_date: '2014-03-06 TO 2014-03-06' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::State results where end_date is 2014-03-06'
+    end
+
   end
 end

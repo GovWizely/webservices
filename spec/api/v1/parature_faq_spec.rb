@@ -6,11 +6,11 @@ describe 'Parature Faq API V1', type: :request do
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
   end
 
-  let(:search_path) { '/faqs/search' }
+  let(:search_path) { '/ita_faqs/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml") }
 
-  describe 'GET /faqs/search.json' do
+  describe 'GET /ita_faqs/search.json' do
 
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, v1_headers }
@@ -135,8 +135,8 @@ describe 'Parature Faq API V1', type: :request do
       end
     end
 
-    context 'when update_date_start or update_date_end is specified' do
-      before { get search_path, { update_date_start: '2013-03-20', update_date_end: '2013-04-19' }, v1_headers }
+    context 'when update_date is specified' do
+      before { get search_path, { update_date: '2013-03-20 TO 2013-04-19' }, v1_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
