@@ -27,4 +27,20 @@ describe Query do
       end
     end
   end
+
+  describe '#valid_date_range?' do
+    include_context 'with MockChildQuery child class'
+    let(:query) { MockChildQuery.new }
+    context 'when a date range is invalid' do
+      it 'raises an exception' do
+        expect { query.valid_date_range?('2015-01-1 TO 2015-12-31') }.to raise_error('Invalid date range format')
+      end
+    end
+
+    context 'when a date range is valid' do
+      it 'executes without error' do
+        expect(query.valid_date_range?('2015-01-01 TO 2015-12-31')).to eq(nil)
+      end
+    end
+  end
 end
