@@ -113,7 +113,7 @@ class Query
 
   def valid_date_range?(range)
     unless range =~ /\A[0-9]{4}-[0-9]{2}-[0-9]{2} TO [0-9]{4}-[0-9]{2}-[0-9]{2}\z/ || range =~ /\A[0-9]{4} TO [0-9]{4}\z/
-      fail 'Invalid date range format'
+      fail Exceptions::InvalidDateRangeFormat
     end
   end
 

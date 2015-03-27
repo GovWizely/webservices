@@ -8,6 +8,11 @@ class Api::V2Controller < ApiController
            status: :bad_request
   end
 
+  rescue_from(Exceptions::InvalidDateRangeFormat) do |_e|
+    render json:   { error:  'Invalid Date Range Format' },
+           status: :bad_request
+  end
+
   private
 
   def authenticate_by_api_key

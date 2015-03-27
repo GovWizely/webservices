@@ -33,7 +33,7 @@ describe Query do
     let(:query) { MockChildQuery.new }
     context 'when a date range is invalid' do
       it 'raises an exception' do
-        expect { query.valid_date_range?('2015-01-1 TO 2015-12-31') }.to raise_error('Invalid date range format')
+        expect { query.valid_date_range?('2015-01-1 TO 2015-12-31') }.to raise_error(Exceptions::InvalidDateRangeFormat)
       end
     end
 
