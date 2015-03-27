@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'ITA Trade Events API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'TradeEvent::Ita data v2'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /trade_events/ita/search' do
     let(:params) { {} }
-    before { get '/trade_events/ita/search', params, v2_headers }
+    before { get '/trade_events/ita/search', params, @v2_headers }
     subject { response }
 
     context 'when search parameters are empty' do

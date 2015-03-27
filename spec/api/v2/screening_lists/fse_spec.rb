@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'BISN Foreign Sanctions Evaders API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'ScreeningList::Fse data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /consolidated_screening_list/fse/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/fse/search', params, v2_headers }
+    before { get '/consolidated_screening_list/fse/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }

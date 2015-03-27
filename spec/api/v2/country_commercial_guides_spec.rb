@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Country Commercial Guide API V2', type: :request do
+  include_context 'V2 headers'
 
   before(:all) do
     CountryCommercialGuide.recreate_index
@@ -11,14 +12,13 @@ describe 'Country Commercial Guide API V2', type: :request do
   end
 
   let(:search_path) { '/country_commercial_guides/search' }
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:params) { { size: 100 } }
   subject { response }
 
   describe 'GET /country_commercial_guides/search.json' do
 
     context 'when search parameters are empty' do
-      before { get search_path, params, v2_headers }
+      before { get search_path, params, @v2_headers }
 
       it_behaves_like 'a successful search request'
 
@@ -34,7 +34,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "defense"' do
         before do
           params[:q] = 'defense'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [5] }
         it_behaves_like 'a successful search request'
@@ -44,7 +44,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "sector"' do
         before do
           params[:q] = 'sector'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [1, 2, 4, 5, 9, 10, 11, 12, 13, 14, 15, 18] }
         it_behaves_like 'a successful search request'
@@ -56,7 +56,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "AR"' do
         before do
           params[:countries] = 'AR'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7] }
         it_behaves_like 'a successful search request'
@@ -66,7 +66,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "CN"' do
         before do
           params[:countries] = 'CN'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [8, 9, 10, 11, 12, 13, 14, 15, 16, 17, 18, 19, 20] }
         it_behaves_like 'a successful search request'
@@ -76,7 +76,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "GB"' do
         before do
           params[:countries] = 'GB'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [] }
         it_behaves_like 'a successful search request'
@@ -88,7 +88,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "Business Customs"' do
         before do
           params[:topics] = 'Business Customs'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [3] }
         it_behaves_like 'a successful search request'
@@ -98,7 +98,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "Business"' do
         before do
           params[:topics] = 'Business'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [] }  # i.e. topics search does an exact match.
         it_behaves_like 'a successful search request'
@@ -108,7 +108,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to find multiple topics' do
         before do
           params[:topics] = 'Visa Requirements,Standards Overview'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [2, 19] }
         it_behaves_like 'a successful search request'
@@ -120,7 +120,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "Green Building"' do
         before do
           params[:industries] = 'Green Building'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [13] }
         it_behaves_like 'a successful search request'
@@ -130,7 +130,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to "Building"' do
         before do
           params[:industries] = 'Building'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [] }  # i.e. industries search does an exact match.
         it_behaves_like 'a successful search request'
@@ -140,7 +140,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       context 'and is set to find multiple industries' do
         before do
           params[:industries] = 'Agriculture,ICT Equipment and Software'
-          get search_path, params, v2_headers
+          get search_path, params, @v2_headers
         end
         let(:expected) { [12, 14, 15] }
         it_behaves_like 'a successful search request'

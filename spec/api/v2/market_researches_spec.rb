@@ -1,15 +1,15 @@
 require 'spec_helper'
 
 describe 'Market Researches API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'MarketResearch data'
 
   let(:search_path) { '/market_research_library/search' }
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
   let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/market_researches/results_v2.json").read }
 
   describe 'GET /market_research_library/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, {}, v2_headers }
+      before { get search_path, {}, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +30,7 @@ describe 'Market Researches API V2', type: :request do
 
       context 'when q is specified' do
         let(:params) { { q: '2013' } }
-        before { get search_path, params, v2_headers }
+        before { get search_path, params, @v2_headers }
         subject { response }
 
         it_behaves_like 'a successful search request'
@@ -48,7 +48,7 @@ describe 'Market Researches API V2', type: :request do
 
       context 'when countries is specified' do
         let(:params) { { countries: 'ar,br' } }
-        before { get search_path, params, v2_headers }
+        before { get search_path, params, @v2_headers }
         subject { response }
 
         it_behaves_like 'a successful search request'
@@ -67,7 +67,7 @@ describe 'Market Researches API V2', type: :request do
 
       context 'when industry is specified' do
         let(:params) { { industry: 'chemicals' } }
-        before { get search_path, params, v2_headers }
+        before { get search_path, params, @v2_headers }
         subject { response }
 
         it_behaves_like 'a successful search request'
@@ -84,7 +84,7 @@ describe 'Market Researches API V2', type: :request do
       end
 
       context 'when searching for field with non ascii characters using ascii characters' do
-        before { get search_path, { q: 'Developpement' }, v2_headers }
+        before { get search_path, { q: 'Developpement' }, @v2_headers }
         subject { response }
 
         it_behaves_like 'a successful search request'

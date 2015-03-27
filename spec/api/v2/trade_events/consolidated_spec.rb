@@ -1,12 +1,12 @@
 require 'spec_helper'
 
 describe 'Consolidated Trade Events API V2', type: :request do
+  include_context 'V2 headers'
   include_context 'all Trade Events v2 fixture data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
 
   describe 'GET /trade_events/search' do
     let(:params) { { size: 100 } }
-    before { get '/trade_events/search', params, v2_headers }
+    before { get '/trade_events/search', params, @v2_headers }
     subject { response }
 
     context 'when search parameters are empty' do

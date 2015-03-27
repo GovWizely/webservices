@@ -2,11 +2,11 @@ require 'spec_helper'
 
 describe 'Consolidated Screening List API V2', type: :request do
   include_context 'all CSL fixture data'
-  let(:v2_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v2' } }
+  include_context 'V2 headers'
 
   describe 'GET /consolidated_screening_list/search' do
     let(:params) { { size: 100 } }
-    before { get '/consolidated_screening_list/search', params, v2_headers }
+    before { get '/consolidated_screening_list/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }

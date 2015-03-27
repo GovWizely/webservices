@@ -2,11 +2,12 @@ source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.1'
-gem 'rails-api'
 
 gem 'airbrake'
 gem 'aws-sdk-core'
+gem 'devise'
 gem 'elasticsearch'
+gem 'elasticsearch-persistence'
 gem 'iso_country_codes'
 gem 'jbuilder'
 gem 'monetize'
@@ -21,6 +22,9 @@ gem 'git'
 gem 'rdiscount'
 gem 'smarter_csv'
 
+gem 'sass'
+gem 'jquery-rails'
+
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 
 group :production do
@@ -29,7 +33,7 @@ end
 
 group :development, :test do
   gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers'
+  gem 'shoulda-matchers', require: false
   gem 'thin'
   gem 'pry-rails'
   gem 'pry-byebug'
@@ -38,7 +42,8 @@ end
 group :development do
   gem 'capistrano',  '~> 2.15'
   gem 'rubocop', require: false
-  gem 'transpec'
+  gem 'better_errors'
+  gem 'binding_of_caller'
 end
 
 group :test do
