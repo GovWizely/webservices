@@ -19,9 +19,10 @@ class MarketResearch
   self.mappings = {
     name.typeize => {
       properties: {
-        countries:   { type: 'string', analyzer: 'keyword' },
-        description: { type: 'string', analyzer: 'custom_analyzer' },
-        industries:  {
+        expiration_date: { type: 'date', format: 'YYYY-MM-dd' },
+        countries:       { type: 'string', analyzer: 'keyword' },
+        description:     { type: 'string', analyzer: 'custom_analyzer' },
+        industries:      {
           properties: {
             original: {
               type:   'string',
@@ -39,7 +40,7 @@ class MarketResearch
             },
           },
         },
-        title:       {
+        title:           {
           type: 'string', analyzer: 'custom_analyzer',
           fields: {
             keyword: { type: 'string', analyzer: 'title_keyword_analyzer' },

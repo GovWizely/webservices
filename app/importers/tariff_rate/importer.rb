@@ -76,7 +76,7 @@ module TariffRate
 
     def process_row(row_hash)
       row_hash.symbolize_keys!
-      row_hash.each { |_k, v| row_hash[_k] = nil if v == '(null)' }
+      row_hash.each { |_k, v| row_hash[_k] = nil if v == '(null)' || v == 'N/A' }
 
       entry = sanitize_entry(remap_keys(COLUMN_HASH, row_hash))
       entry.merge!(extract_duplicate_fields(row_hash))

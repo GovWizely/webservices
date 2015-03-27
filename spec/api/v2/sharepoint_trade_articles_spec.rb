@@ -53,8 +53,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
-    context 'when creation_date_start or creation_date_end is specified' do
-      before { get search_path, { creation_date_start: '2014-08-27', creation_date_end: '2014-08-28' }, @v2_headers }
+    context 'when creation_date is specified' do
+      before { get search_path, { creation_date: '2014-08-27 TO 2014-08-28' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -71,8 +71,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       end
     end
 
-    context 'when release_date_start or release_date_end is specified' do
-      before { get search_path, { release_date_start: '2014-08-27', release_date_end: '2014-08-28' }, @v2_headers }
+    context 'when release_date is specified' do
+      before { get search_path, { release_date: '2014-08-27 TO 2014-08-28' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -85,8 +85,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       end
     end
 
-    context 'when expiration_date_start or expiration_date_end is specified' do
-      before { get search_path, { expiration_date_start: '2014-08-27', expiration_date_end: '2014-08-28' }, @v2_headers }
+    context 'when expiration_date is specified' do
+      before { get search_path, { expiration_date: '2014-08-27 TO 2014-08-28' }, @v2_headers }
       subject { response }
 
       it_behaves_like 'a successful search request'

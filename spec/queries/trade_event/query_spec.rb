@@ -56,5 +56,23 @@ describe TradeEvent::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+
+    context 'when options include start_date' do
+      let(:query) { described_class.new(start_date: '2015-08-27 TO 2015-08-28') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_start_date.json").read }
+
+      it 'generates search body with start_date filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include end_date_start or end_date_end' do
+      let(:query) { described_class.new(end_date: '2015-08-27 TO 2015-08-28') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_end_date.json").read }
+
+      it 'generates search body with end_date filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
   end
 end

@@ -14,7 +14,7 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include creation_date filter' do
-      let(:query) { SharepointTradeArticleQuery.new(creation_date_start: '2014-08-27', creation_date_end: '2014-08-28') }
+      let(:query) { SharepointTradeArticleQuery.new(creation_date: '2014-08-27 TO 2014-08-28') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/creation_date_filter.json").read }
 
       it 'generates search body with filters' do
@@ -23,7 +23,7 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include release_date filter' do
-      let(:query) { SharepointTradeArticleQuery.new(release_date_start: '2014-08-27', release_date_end: '2014-08-28') }
+      let(:query) { SharepointTradeArticleQuery.new(release_date: '2014-08-27 TO 2014-08-28') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/release_date_filter.json").read }
 
       it 'generates search body with filters' do
@@ -32,7 +32,7 @@ describe SharepointTradeArticleQuery do
     end
 
     context 'when options include expiration_date filter' do
-      let(:query) { SharepointTradeArticleQuery.new(expiration_date_start: '2014-08-27', expiration_date_end: '2014-08-28') }
+      let(:query) { SharepointTradeArticleQuery.new(expiration_date: '2014-08-27 TO 2014-08-28') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/queries/expiration_date_filter.json").read }
 
       it 'generates search body with filters' do
