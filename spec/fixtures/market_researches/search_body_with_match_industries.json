@@ -2,21 +2,16 @@
   "query": {
     "bool": {
       "must": [
-        {
-          "nested": {
-            "path": "industries",
-            "query": {
-              "multi_match": {
-                "fields": [
-                  "industries.original",
-                  "industries.mapped"
-                ],
-                "operator": "and",
-                "query": "fishing"
-              }
-            }
-          }
+      {
+        "multi_match": {
+          "fields": [
+            "industries.original.tokenized",
+            "industries.mapped.tokenized"
+            ],
+          "operator": "and",
+          "query": "fishing"
         }
+      }
       ]
     }
   }

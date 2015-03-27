@@ -21,12 +21,22 @@ class MarketResearch
       properties: {
         countries:   { type: 'string', analyzer: 'keyword' },
         description: { type: 'string', analyzer: 'custom_analyzer' },
-        industries:  { type: 'string', analyzer: 'custom_analyzer' },
         industries:  {
-          type:       'nested',
           properties: {
-            original: { type: 'string', analyzer: 'custom_analyzer' },
-            mapped:   { type: 'string', analyzer: 'custom_analyzer' },
+            original: {
+              type:   'string',
+              fields: {
+                tokenized: { type: 'string', analyzer: 'custom_analyzer' },
+                keyword:   { type: 'string', analyzer: 'title_keyword_analyzer' },
+              },
+            },
+            mapped:   {
+              type:   'string',
+              fields: {
+                tokenized: { type: 'string', analyzer: 'custom_analyzer' },
+                keyword:   { type: 'string', analyzer: 'title_keyword_analyzer' },
+              },
+            },
           },
         },
         title:       {
