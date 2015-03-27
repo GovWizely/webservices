@@ -26,6 +26,12 @@ Webservices::Application.routes.draw do
 
     get '/trade_articles/search(.json)' => 'trade_articles#search'
 
+    scope '/consolidated_screening_list' do
+      %w(dtc dpl el fse isn plc sdn ssi uvl).each do |source|
+        get "/#{source}/search", to: "screening_lists/#{source}#search"
+      end
+    end
+
   end
 
   concern :api_v2_routable do
@@ -48,9 +54,6 @@ Webservices::Application.routes.draw do
 
     scope '/consolidated_screening_list' do
       get '/search', to: 'screening_lists/consolidated#search'
-      %w(dtc dpl el fse isn plc sdn ssi uvl).each do |source|
-        get "/#{source}/search", to: "screening_lists/#{source}#search"
-      end
     end
 
     scope '/tariff_rates' do
