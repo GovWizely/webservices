@@ -1,0 +1,28 @@
+{
+   "filter" : {
+      "bool" : {
+         "must" : [
+            {
+               "bool" : {
+                  "should" : [
+                     {
+                        "query" : {
+                           "match" : {
+                              "industries.keyword" : "fishing"
+                           }
+                        }
+                     },
+                     {
+                        "query" : {
+                           "match" : {
+                              "industries.keyword" : "hunting"
+                           }
+                        }
+                     }
+                  ]
+               }
+            }
+         ]
+      }
+   }
+}

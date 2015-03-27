@@ -4,7 +4,7 @@ module TradeEvent
 
     def initialize(options = {})
       super
-      @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
+      @sources = options[:sources].upcase.split(',') rescue []
       @sort = '_score,start_date'
     end
 
@@ -14,7 +14,7 @@ module TradeEvent
       generate_multi_query(
         json,
         %i(
-          registration_title description event_name industries city
+          registration_title description event_name industries.tokenized city
           venues.city venues.state venues.country
           contacts.first_name contacts.last_name contacts.person_title
         ),
