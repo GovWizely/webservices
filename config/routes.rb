@@ -32,6 +32,14 @@ Webservices::Application.routes.draw do
       end
     end
 
+    namespace :trade_events do
+      get 'ita/search'
+      get 'sba/search'
+      get 'exim/search'
+      get 'dl/search'
+      get 'ustda/search'
+    end
+
   end
 
   concern :api_v2_routable do
@@ -66,11 +74,6 @@ Webservices::Application.routes.draw do
 
     namespace :trade_events do
       get 'search', to: 'consolidated#search'
-      get 'ita/search'
-      get 'sba/search'
-      get 'exim/search'
-      get 'dl/search'
-      get 'ustda/search'
     end
   end
 
