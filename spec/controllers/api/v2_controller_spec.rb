@@ -19,6 +19,10 @@ describe Api::V2Controller, type: :controller do
       ActionController::Parameters.new(params).permit([:q, :api_key])
       render text: 'ok', status: :ok
     end
+
+    def bad_date_range
+      fail Exceptions::InvalidDateRangeFormat
+    end
   end
 
   describe InheritsFromApiV2Controller do
@@ -26,6 +30,7 @@ describe Api::V2Controller, type: :controller do
     before do
       Rails.application.routes.draw do
         get '/foo' => 'inherits_from_api_v2#foo'
+        get '/bad_date_range' => 'inherits_from_api_v2#bad_date_range'
       end
     end
     after { Rails.application.reload_routes! }
@@ -69,10 +74,20 @@ describe Api::V2Controller, type: :controller do
     describe 'bad request' do
       include_context 'user with API Key'
 
-      it 'responds with 400 error' do
-        request.headers['Api-Key'] = user.api_key
-        get :foo, not_a: :valid_paramter
-        expect(response.status).to eq(400)
+      context 'with unpermitted parameter' do
+        it 'responds with 400 error' do
+          request.headers['Api-Key'] = user.api_key
+          get :foo, not_a: :valid_paramter
+          expect(response.status).to eq(400)
+        end
+      end
+
+      context 'with invalid date range exception' do
+        it 'responds with 400 error' do
+          request.headers['Api-Key'] = user.api_key
+          get :bad_date_range
+          expect(response.status).to eq(400)
+        end
       end
     end
 

@@ -98,6 +98,28 @@ class Query
     filter_from_fields(json, query_fields)
   end
 
+  def generate_date_range(json, field_name, range)
+    valid_date_range?(range)
+    terms = range.split(' TO ')
+    json.child! do
+      json.range do
+        json.set! field_name do
+          json.from terms[0]
+          json.to terms[1]
+        end
+      end
+    end
+  end
+
+  def valid_date_range?(range)
+    match = /^(\d{4}(?:\-\d{2}\-\d{2})?) TO (\d{4}(?:\-\d{2}\-\d{2})?)$/.match(range)
+    fail Exceptions::InvalidDateRangeFormat if match.nil?
+    [match[1], match[2]].each { |date| /^\d{4}$/.match(date) || Date.parse(date) }
+    true
+  rescue
+    raise Exceptions::InvalidDateRangeFormat
+  end
+
   private
 
   def cleanup_invalid_bytes(obj, fields)

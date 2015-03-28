@@ -80,6 +80,12 @@ shared_examples 'it contains all TradeEvent::Ita results that match "Sao"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeEvent::Ita results that match start_date [2020-10-10 TO 2020-12-31]' do
+  let(:source) { TradeEvent::Ita }
+  let(:expected) { [3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TradeEvent::Sba data' do
   before(:all) do
     TradeEvent::Sba.recreate_index
@@ -143,6 +149,12 @@ end
 shared_examples 'it contains all TradeEvent::Sba results that match countries "US"' do
   let(:source) { TradeEvent::Sba }
   let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Sba results that match end_date [2014-01-08 TO 2014-01-08]' do
+  let(:source) { TradeEvent::Sba }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 

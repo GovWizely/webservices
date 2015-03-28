@@ -170,5 +170,29 @@ describe 'Consolidated Tariff Rates API v2', type: :request do
       end
     end
 
+    context 'when final_year is specified' do
+      let(:params) { { sources: 'AU', final_year: '2005 TO 2005' } }
+      it_behaves_like 'it contains all TariffRate::Australia results that match final_year "2005"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TariffRate::Australia] }
+      end
+    end
+
+    context 'when partner_start_year is specified' do
+      let(:params) { { sources: 'AU', partner_start_year: '2005 TO 2005' } }
+      it_behaves_like 'it contains all TariffRate::Australia results that match partner_start_year "2005"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TariffRate::Australia] }
+      end
+    end
+
+    context 'when reporter_start_year is specified' do
+      let(:params) { { sources: 'AU', reporter_start_year: '2005 TO 2005' } }
+      it_behaves_like 'it contains all TariffRate::Australia results that match reporter_start_year "2005"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TariffRate::Australia] }
+      end
+    end
+
   end
 end

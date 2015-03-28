@@ -32,7 +32,7 @@ describe TariffRate::Query do
       end
     end
 
-    context 'when options include all possible fields' do
+    context 'when options include sources and q' do
       let(:query) do
         described_class.new(sources: 'us,au',
                             q:       'horses')
@@ -42,5 +42,33 @@ describe TariffRate::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+
+    context 'when options include only final_year' do
+      let(:query) { described_class.new(final_year: '2014 TO 2015') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_final_year.json").read }
+
+      it 'generates search body with sources filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include only partner_start_year' do
+      let(:query) { described_class.new(partner_start_year: '2014 TO 2015') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_partner_start_year.json").read }
+
+      it 'generates search body with sources filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include only reporter_start_year' do
+      let(:query) { described_class.new(reporter_start_year: '2014 TO 2015') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_reporter_start_year.json").read }
+
+      it 'generates search body with sources filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
   end
 end

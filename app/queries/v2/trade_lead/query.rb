@@ -9,6 +9,10 @@ module V2::TradeLead
       @industries  = options[:industries].split(',').map(&:strip) rescue nil
       @q    = options[:q]
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'
+
+      @publish_date = options[:publish_date] if options[:publish_date].present?
+      @end_date = options[:end_date] if options[:end_date].present?
+      @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
     end
 
     private
@@ -31,6 +35,10 @@ module V2::TradeLead
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.country @countries } } if @countries
 
+            generate_date_range(json, 'publish_date', @publish_date) if @publish_date
+            generate_date_range(json, 'publish_date_amended', @publish_date_amended) if @publish_date_amended
+            generate_date_range(json, 'end_date', @end_date) if @end_date
+
             json.child! do
               json.bool do
                 json.set! 'should' do
@@ -45,7 +53,7 @@ module V2::TradeLead
 
           end
         end
-      end if @countries || @sources.any? || @industries
+      end if @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended
     end
   end
 end

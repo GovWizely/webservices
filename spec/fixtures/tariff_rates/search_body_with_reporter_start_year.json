@@ -1,0 +1,16 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "range": {
+            "reporter_start_year": {
+              "from": "2014",
+              "to": "2015"
+            }
+          }
+        }
+      ]
+    }
+  }
+}

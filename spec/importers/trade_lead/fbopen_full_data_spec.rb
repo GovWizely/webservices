@@ -9,9 +9,12 @@ describe TradeLead::FbopenImporter::FullData do
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
+    before do
+      allow(Date).to receive(:today).and_return(Date.parse('2015-01-01'))
+    end
     it 'loads leads from full xml' do
       expect(TradeLead::Fbopen).to receive(:index) do |fbo|
-        expect(fbo.size).to eq(3)
+        expect(fbo.size).to eq(4)
         expect(fbo).to match(expected_results)
       end
       importer.import

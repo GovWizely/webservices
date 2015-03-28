@@ -3,6 +3,7 @@ class V2::MarketResearchQuery < CountryIndustryQuery
     super
     @sort = @q ? nil : 'title.keyword'
     @industries = options[:industries].split(',').map(&:strip) rescue nil
+    @expiration_date = options[:expiration_date] if options[:expiration_date].present?
     # Just to be sure, at this point, that no
     # filtering/sorting/scoring is being done on @industry
     @industry = nil
@@ -27,6 +28,7 @@ class V2::MarketResearchQuery < CountryIndustryQuery
       json.bool do
         json.must do
           json.child! { json.terms { json.countries @countries } } if @countries
+          generate_date_range(json, 'expiration_date', @expiration_date) if @expiration_date
           json.child! do
             json.bool do
               json.set! 'should' do
@@ -42,6 +44,6 @@ class V2::MarketResearchQuery < CountryIndustryQuery
           end if @industries
         end
       end
-    end if @countries || @industries
+    end if @countries || @industries || @expiration_date
   end
 end
