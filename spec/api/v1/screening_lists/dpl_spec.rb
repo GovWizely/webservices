@@ -19,16 +19,23 @@ describe 'BIS Denied Persons API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Dpl results that match "katsuta"'
+
+      let(:source) { ScreeningList::Dpl }
+      let(:expected) { [6] }
+      it_behaves_like 'it contains all expected results of source'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'agnese' } }
-        it_behaves_like 'it contains all ScreeningList::Dpl results that match "agnese"'
+        let(:source) { ScreeningList::Dpl }
+        let(:expected) { [4] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in remarks' do
         let(:params) { { q: 'corrected' } }
-        it_behaves_like 'it contains all ScreeningList::Dpl results that match "corrected"'
+        let(:source) { ScreeningList::Dpl }
+        let(:expected) { [5, 7] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 
@@ -38,14 +45,18 @@ describe 'BIS Denied Persons API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'za' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Dpl results that match countries "ZA"'
+        let(:source) { ScreeningList::Dpl }
+        let(:expected) { [2] }
+        it_behaves_like 'it contains all expected results of source'
         it_behaves_like "an empty result when a countries search doesn't match any documents"
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'fr,de' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Dpl results that match countries "FR,DE"'
+        let(:source) { ScreeningList::Dpl }
+        let(:expected) { [3, 4] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

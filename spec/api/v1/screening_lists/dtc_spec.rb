@@ -19,16 +19,22 @@ describe 'DDTC ITAR Debarred Parties API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Dtc results that match "brian"'
+      let(:source) { ScreeningList::Dtc }
+      let(:expected) { [0, 2] }
+      it_behaves_like 'it contains all expected results of source'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'john' } }
-        it_behaves_like 'it contains all ScreeningList::Dtc results that match "john"'
+        let(:source) { ScreeningList::Dtc }
+        let(:expected) { [2] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in alt_names' do
         let(:params) { { q: 'mcsulla' } }
-        it_behaves_like 'it contains all ScreeningList::Dtc results that match "mcsulla"'
+        let(:source) { ScreeningList::Dtc }
+        let(:expected) { [0] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

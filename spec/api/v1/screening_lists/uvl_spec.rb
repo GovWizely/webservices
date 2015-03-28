@@ -23,7 +23,9 @@ describe 'BIS Unverified Parties API V1', type: :request do
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'brilliance' } }
-        it_behaves_like 'it contains all ScreeningList::Uvl results that match "brilliance"'
+        let(:source) { ScreeningList::Uvl }
+        let(:expected) { [1] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 
@@ -33,13 +35,17 @@ describe 'BIS Unverified Parties API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'CN' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Uvl results that match countries "CN"'
+        let(:source) { ScreeningList::Uvl }
+        let(:expected) { [2] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'hk,cn' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Uvl results that match countries "HK,CN"'
+        let(:source) { ScreeningList::Uvl }
+        let(:expected) { (1..7).to_a }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

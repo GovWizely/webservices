@@ -210,63 +210,9 @@ shared_examples 'it contains all ScreeningList::Fse results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::Fse results that match "ferland"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [0, 2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match "vitaly"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match "shahali"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match "manager"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match "tanker"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match countries "CY"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_examples 'it contains all ScreeningList::Fse results that match countries "SO"' do
   let(:source) { ScreeningList::Fse }
   let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match countries "IR"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match countries "DJ"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Fse results that match countries "UA,DJ"' do
-  let(:source) { ScreeningList::Fse }
-  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -300,36 +246,6 @@ shared_examples 'it contains all ScreeningList::El results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::El results that match "fazel"' do
-  let(:source) { ScreeningList::El }
-  let(:expected) { [0, 1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::El results that match "construction"' do
-  let(:source) { ScreeningList::El }
-  let(:expected) { [1, 6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::El results that match "farid"' do
-  let(:source) { ScreeningList::El }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::El results that match countries "AF"' do
-  let(:source) { ScreeningList::El }
-  let(:expected) { [0, 1, 3, 4, 5, 6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::El results that match countries "AF,TR"' do
-  let(:source) { ScreeningList::El }
-  let(:expected) { [0, 1, 2, 3, 4, 5, 6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_examples 'it contains all ScreeningList::El results that match start_date "2011-11-21"' do
   let(:source) { ScreeningList::El }
   let(:expected) { [0, 3, 4] }
@@ -354,36 +270,6 @@ shared_examples 'it contains all ScreeningList::Dpl results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::Dpl results that match "katsuta"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dpl results with address "MINATOKU"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dpl results that match "agnese"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [4] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dpl results that match "corrected"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [5, 7] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dpl results that match countries "ZA"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_examples 'it contains all ScreeningList::Dpl results that match countries "FR"' do
   let(:source) { ScreeningList::Dpl }
   let(:expected) { [4] }
@@ -393,12 +279,6 @@ end
 shared_examples 'it contains all ScreeningList::Dpl results that match countries "JP"' do
   let(:source) { ScreeningList::Dpl }
   let(:expected) { [6] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dpl results that match countries "FR,DE"' do
-  let(:source) { ScreeningList::Dpl }
-  let(:expected) { [3, 4] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -436,24 +316,6 @@ shared_examples 'it contains all ScreeningList::Uvl results that match "technolo
   end
 end
 
-shared_examples 'it contains all ScreeningList::Uvl results that match "brilliance"' do
-  let(:source) { ScreeningList::Uvl }
-  let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Uvl results that match countries "CN"' do
-  let(:source) { ScreeningList::Uvl }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Uvl results that match countries "HK,CN"' do
-  let(:source) { ScreeningList::Uvl }
-  let(:expected) { (1..7).to_a }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_context 'ScreeningList::Isn data' do
   before(:all) do
     ScreeningList::Isn.recreate_index
@@ -472,18 +334,6 @@ shared_examples 'it contains all ScreeningList::Isn results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::Isn results that match "ahmad"' do
-  let(:source) { ScreeningList::Isn }
-  let(:expected) { [3, 4] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Isn results that match "aerospace"' do
-  let(:source) { ScreeningList::Isn }
-  let(:expected) { [1, 2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_context 'ScreeningList::Dtc data' do
   before(:all) do
     ScreeningList::Dtc.recreate_index
@@ -499,24 +349,6 @@ end
 shared_examples 'it contains all ScreeningList::Dtc results' do
   let(:source) { ScreeningList::Dtc }
   let(:expected) { [0, 1, 2, 3] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dtc results that match "brian"' do
-  let(:source) { ScreeningList::Dtc }
-  let(:expected) { [0, 2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dtc results that match "john"' do
-  let(:source) { ScreeningList::Dtc }
-  let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Dtc results that match "mcsulla"' do
-  let(:source) { ScreeningList::Dtc }
-  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -550,12 +382,6 @@ shared_examples 'it contains all ScreeningList::Plc results that match "heBron"'
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all ScreeningList::Plc results that match countries "PS"' do
-  let(:source) { ScreeningList::Plc }
-  let(:expected) { [5] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_examples 'it contains all ScreeningList::Plc results that match type "Individual"' do
   let(:source) { ScreeningList::Plc }
   let(:expected) { (0..5).to_a }
@@ -583,18 +409,6 @@ end
 shared_examples 'it contains all ScreeningList::Ssi results that match "transneft"' do
   let(:source) { ScreeningList::Ssi }
   let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Ssi results that match countries "RU"' do
-  let(:source) { ScreeningList::Ssi }
-  let(:expected) { (0..3).to_a }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all ScreeningList::Ssi results that match countries "UA,DJ"' do
-  let(:source) { ScreeningList::Ssi }
-  let(:expected) { [] }
   it_behaves_like 'it contains all expected results of source'
 end
 

@@ -19,26 +19,36 @@ describe 'BISN Foreign Sanctions Evaders API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Fse results that match "ferland"'
+      let(:source) { ScreeningList::Fse }
+      let(:expected) { [0, 2] }
+      it_behaves_like 'it contains all expected results of source'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'vitaly' } }
-        it_behaves_like 'it contains all ScreeningList::Fse results that match "vitaly"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [2] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in alt_names' do
         let(:params) { { q: 'shahali' } }
-        it_behaves_like 'it contains all ScreeningList::Fse results that match "shahali"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [1] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in title' do
         let(:params) { { q: 'manager' } }
-        it_behaves_like 'it contains all ScreeningList::Fse results that match "manager"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [2] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in remarks' do
         let(:params) { { q: 'tanker' } }
-        it_behaves_like 'it contains all ScreeningList::Fse results that match "tanker"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [0] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 
@@ -48,7 +58,9 @@ describe 'BISN Foreign Sanctions Evaders API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'CY' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Fse results that match countries "CY"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [0] }
+        it_behaves_like 'it contains all expected results of source'
 
         context 'which is present in nationalities' do
           let(:params) { { countries: 'SO' } }
@@ -57,19 +69,25 @@ describe 'BISN Foreign Sanctions Evaders API V1', type: :request do
 
         context 'which is present in citizenships' do
           let(:params) { { countries: 'DJ' } }
-          it_behaves_like 'it contains all ScreeningList::Fse results that match countries "DJ"'
+          let(:source) { ScreeningList::Fse }
+          let(:expected) { [1] }
+          it_behaves_like 'it contains all expected results of source'
         end
 
         context 'which is present in id.country' do
           let(:params) { { countries: 'IR' } }
-          it_behaves_like 'it contains all ScreeningList::Fse results that match countries "IR"'
+          let(:source) { ScreeningList::Fse }
+          let(:expected) { [1] }
+          it_behaves_like 'it contains all expected results of source'
         end
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'ua,dj' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Fse results that match countries "UA,DJ"'
+        let(:source) { ScreeningList::Fse }
+        let(:expected) { [0, 1] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

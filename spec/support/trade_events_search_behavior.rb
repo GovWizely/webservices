@@ -316,9 +316,3 @@ shared_examples 'it contains all TradeEvent::Dl results' do
   let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
-
-shared_examples 'it contains all TradeEvent::Dl results that match "Bangladesh"' do
-  let(:source) { TradeEvent::Dl }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
