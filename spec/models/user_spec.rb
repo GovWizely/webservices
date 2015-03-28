@@ -47,17 +47,27 @@ describe User do
       end
 
       context 'when same' do
-        subject { build_user(password: 'a', password_confirmation: 'a') }
+        subject { build_user(password: 'a1aaaaaa', password_confirmation: 'a1aaaaaa') }
         it { is_expected.to be_valid }
       end
 
       context 'when different' do
-        subject { build_user(password: 'a', password_confirmation: 'b') }
+        subject { build_user(password: 'a1aaaaaa', password_confirmation: 'a1aaaaab') }
         it 'is not valid' do
           expect(subject).not_to be_valid
           expect(subject.errors.count).to eq(1)
           expect(subject.errors.messages)
             .to eq(password: ["Password and Password Confirmation don't match"])
+        end
+      end
+
+      context 'when not strong enough' do
+        subject { build_user(password: 'a', password_confirmation: 'a') }
+        it 'is not valid' do
+          expect(subject).not_to be_valid
+          expect(subject.errors.count).to eq(1)
+          expect(subject.errors.messages)
+            .to eq(password: ['must contain a digit and be at least 8 characters long'])
         end
       end
     end
@@ -91,8 +101,12 @@ describe User do
 
     it 'updates encrypted_password when password given' do
       expect do
-        subject.update_attributes(password: 'lalu', password_confirmation: 'lalu')
+        subject.update_attributes(password: 'lalu8888', password_confirmation: 'lalu8888')
       end.to change { subject.encrypted_password }
+    end
+
+    it "doesn't update if given password is invalid" do
+      expect(subject.update_attributes(password: 'lalu', password_confirmation: 'lalu')).to be_falsey
     end
   end
 

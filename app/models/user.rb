@@ -46,6 +46,8 @@ class User
     end
     attributes[:encrypted_password] = encrypted_password
 
+    return false unless valid?
+
     super(attributes, options)
   end
 
@@ -107,7 +109,7 @@ class User
   validates_presence_of :password, if: proc { !self.persisted? }
   validates_presence_of :password_confirmation, if: proc { !self.persisted? }
 
-  validate :passwords_must_match
+  validate :passwords_must_match_and_be_strong
   validate :email_must_be_unique
 
   def self.generate_api_key
@@ -116,9 +118,11 @@ class User
 
   private
 
-  def passwords_must_match
+  def passwords_must_match_and_be_strong
     if password != password_confirmation
       errors.add(:password, "Password and Password Confirmation don't match")
+    elsif password && (password.length < 8 || password !~ /\d/)
+      errors.add(:password, 'must contain a digit and be at least 8 characters long')
     end
   end
 

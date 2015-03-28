@@ -59,7 +59,7 @@ describe Query do
       it_behaves_like 'a query that was given an invalid date range'
     end
 
-    context "when range has dates that are not in YYYY-MM-DD format" do
+    context 'when range has dates that are not in YYYY-MM-DD format' do
       let(:range) { '3 Apr 2013 TO 4 Apr 2013' }
       it_behaves_like 'a query that was given an invalid date range'
     end
