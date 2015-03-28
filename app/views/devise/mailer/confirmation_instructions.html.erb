@@ -1,5 +1,10 @@
-<p>Welcome <%= @email %>,</p>
+<p>Welcome <%= @email %> to ITA's Data Services Platform, your registration is complete. You can confirm your account email through this link:<br/>
+<%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %>.</p>
 
-<p>You can confirm your account email through the link below:</p>
+<p>Once you've confirmed your account please visit the <%= link_to 'Developer Portal', Rails.configuration.developerportal_url %> to learn <%= link_to('how the APIs work', "#{Rails.configuration.developerportal_url}/guidance.html") %>, to see examples in our <%= link_to('App Gallery', "#{Rails.configuration.developerportal_url}/app-gallery.html") %>, and to get <%= link_to('answers to frequently asked questions', "#{Rails.configuration.developerportal_url}/api-faqs.html") %>. If you have an immediate need or question about your API key please <%= link_to('contact us', "#{Rails.configuration.developerportal_url}/contact-us.html") %>.</p>
 
-<p><%= link_to 'Confirm my account', confirmation_url(@resource, confirmation_token: @token) %>.</p>
+<p>We look forward to working with you.</p>
+
+<p>The Data Services Team<br/>
+International Trade Administration<br/>
+<%= link_to Rails.configuration.developerportal_url, Rails.configuration.developerportal_url %></p>
