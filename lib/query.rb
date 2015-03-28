@@ -112,9 +112,12 @@ class Query
   end
 
   def valid_date_range?(range)
-    unless range =~ /\A[0-9]{4}-[0-9]{2}-[0-9]{2} TO [0-9]{4}-[0-9]{2}-[0-9]{2}\z/ || range =~ /\A[0-9]{4} TO [0-9]{4}\z/
-      fail Exceptions::InvalidDateRangeFormat
-    end
+    match = /^(\d{4}(?:\-\d{2}\-\d{2})?) TO (\d{4}(?:\-\d{2}\-\d{2})?)$/.match(range)
+    fail Exceptions::InvalidDateRangeFormat if match.nil?
+    [match[1], match[2]].each { |date| /^\d{4}$/.match(date) || Date.parse(date) }
+    true
+  rescue
+    raise Exceptions::InvalidDateRangeFormat
   end
 
   private

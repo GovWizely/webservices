@@ -4,7 +4,7 @@ describe Query do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/base_query" }
 
   shared_context 'with MockChildQuery child class' do
-    before(:each) do
+    before do
       class MockChildQuery < Query
         setup_query(
           q:      %i(title description),
@@ -14,6 +14,7 @@ describe Query do
         )
       end
     end
+    after { Object.send(:remove_const, :MockChildQuery) }
   end
 
   describe '#generate_search_body' do
@@ -30,17 +31,47 @@ describe Query do
 
   describe '#valid_date_range?' do
     include_context 'with MockChildQuery child class'
-    let(:query) { MockChildQuery.new }
-    context 'when a date range is invalid' do
-      it 'raises an exception' do
-        expect { query.valid_date_range?('2015-01-1 TO 2015-12-31') }.to raise_error(Exceptions::InvalidDateRangeFormat)
+
+    subject { MockChildQuery.new.valid_date_range?(range) }
+
+    shared_examples 'a query that was given an invalid date range' do
+      it 'raises an InvalidDateRangeFormat error' do
+        expect { subject }.to raise_error(Exceptions::InvalidDateRangeFormat)
       end
     end
 
-    context 'when a date range is valid' do
-      it 'executes without error' do
-        expect(query.valid_date_range?('2015-01-01 TO 2015-12-31')).to eq(nil)
-      end
+    shared_examples 'a query that was given a valid date range' do
+      it { is_expected.to be_truthy }
+    end
+
+    context 'when date has month but no day' do
+      let(:range) { '2015-01 TO 2015-12-31' }
+      it_behaves_like 'a query that was given an invalid date range'
+    end
+
+    context 'when one of the dates has correct format but is not an actual date' do
+      let(:range) { '2015-01-32 TO 2015-02-01' }
+      it_behaves_like 'a query that was given an invalid date range'
+    end
+
+    context "when range doesn't contain any obvious dates" do
+      let(:range) { 'monkey' }
+      it_behaves_like 'a query that was given an invalid date range'
+    end
+
+    context "when range has dates that are not in YYYY-MM-DD format" do
+      let(:range) { '3 Apr 2013 TO 4 Apr 2013' }
+      it_behaves_like 'a query that was given an invalid date range'
+    end
+
+    context 'when range contains two YYYY-MM-DD dates' do
+      let(:range) { '2015-01-01 TO 2015-12-31' }
+      it_behaves_like 'a query that was given a valid date range'
+    end
+
+    context 'when range contains two YYYY years' do
+      let(:range) { '2015 TO 2016' }
+      it_behaves_like 'a query that was given a valid date range'
     end
   end
 end
