@@ -56,7 +56,7 @@ module V2::TradeEvent
             end if @industries
           end
         end
-      end if @sources.any? || @countries || @industries
+      end if @sources.any? || @countries || @industries || @start_date || @end_date
     end
   end
 end
