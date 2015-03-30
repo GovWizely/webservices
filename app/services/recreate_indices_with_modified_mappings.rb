@@ -9,7 +9,15 @@ class RecreateIndicesWithModifiedMappings
     end
 
     def model_classes_which_need_recreating
-      Webservices::Application.model_classes.select do |model_class|
+      Webservices::Application.model_classes.sort do |a, b|
+        if a.name.include?('TariffRate') && !b.name.include?('TariffRate')
+          1
+        elsif b.name.include?('TariffRate') && !a.name.include?('TariffRate')
+          -1
+        else
+          0
+        end
+      end.select do |model_class|
         index = model_class.index_name
 
         model_mapping = model_class.mappings
