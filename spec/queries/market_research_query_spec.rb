@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe MarketResearchQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/market_researches" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/market_research" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'

@@ -5,7 +5,7 @@ describe 'Market Researches API V2', type: :request do
   include_context 'MarketResearch data'
 
   let(:search_path) { '/market_research_library/search' }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/market_researches/results_v2.json").read }
+  let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/expected_results.json").read }
 
   describe 'GET /market_research_library/search.json' do
     context 'when search parameters are empty' do
