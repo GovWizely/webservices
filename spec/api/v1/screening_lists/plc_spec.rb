@@ -25,7 +25,9 @@ describe 'Palestinian Legislative Council List API V1', type: :request do
       subject { response }
       let(:params) { { countries: 'PS' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Plc results that match countries "PS"'
+      let(:source) { ScreeningList::Plc }
+      let(:expected) { [5] }
+      it_behaves_like 'it contains all expected results of source'
     end
 
     context 'when type is specified' do

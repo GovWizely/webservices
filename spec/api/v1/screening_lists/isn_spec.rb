@@ -19,11 +19,15 @@ describe 'BISN Nonproliferation Sanctions API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Isn results that match "ahmad"'
+      let(:source) { ScreeningList::Isn }
+      let(:expected) { [3, 4] }
+      it_behaves_like 'it contains all expected results of source'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'aerospace' } }
-        it_behaves_like 'it contains all ScreeningList::Isn results that match "aerospace"'
+        let(:source) { ScreeningList::Isn }
+        let(:expected) { [1, 2] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

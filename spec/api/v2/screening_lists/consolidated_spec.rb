@@ -53,6 +53,12 @@ describe 'Consolidated Screening List API V2', type: :request do
     end
 
     context 'when address is specified' do
+      shared_examples 'it contains all ScreeningList::Dpl results with address "MINATOKU"' do
+        let(:source) { ScreeningList::Dpl }
+        let(:expected) { [6] }
+        it_behaves_like 'it contains all expected results of source'
+      end
+
       context 'by address' do
         let(:params) { { address: 'miNATOKU' } }
         subject { response }

@@ -17,7 +17,9 @@ describe 'DL Trade Events API V1', type: :request do
     context 'when q is specified' do
       let(:params) { { q: 'Bangladesh' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Dl results that match "Bangladesh"'
+      let(:source) { TradeEvent::Dl }
+      let(:expected) { [0] }
+      it_behaves_like 'it contains all expected results of source'
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
   end

@@ -26,13 +26,17 @@ describe 'Sectoral Sanctions Identifications List API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'RU' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Ssi results that match countries "RU"'
+        let(:source) { ScreeningList::Ssi }
+        let(:expected) { (0..3).to_a }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'ua,dj' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Ssi results that match countries "UA,DJ"'
+        let(:source) { ScreeningList::Ssi }
+        let(:expected) { [] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 

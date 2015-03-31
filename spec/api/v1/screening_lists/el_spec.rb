@@ -19,16 +19,22 @@ describe 'BIS Entities API V1', type: :request do
 
       subject { response }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::El results that match "fazel"'
+      let(:source) { ScreeningList::El }
+      let(:expected) { [0, 1] }
+      it_behaves_like 'it contains all expected results of source'
 
       context 'when search term exists only in name' do
         let(:params) { { q: 'construction' } }
-        it_behaves_like 'it contains all ScreeningList::El results that match "construction"'
+        let(:source) { ScreeningList::El }
+        let(:expected) { [1, 6] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'when search term exists only in alt_names' do
         let(:params) { { q: 'farid' } }
-        it_behaves_like 'it contains all ScreeningList::El results that match "farid"'
+        let(:source) { ScreeningList::El }
+        let(:expected) { [0] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 
@@ -38,13 +44,17 @@ describe 'BIS Entities API V1', type: :request do
       context 'and one country is searched for' do
         let(:params) { { countries: 'AF' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::El results that match countries "AF"'
+        let(:source) { ScreeningList::El }
+        let(:expected) { [0, 1, 3, 4, 5, 6] }
+        it_behaves_like 'it contains all expected results of source'
       end
 
       context 'two countries searched for' do
         let(:params) { { countries: 'af,tr' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::El results that match countries "AF,TR"'
+        let(:source) { ScreeningList::El }
+        let(:expected) { [0, 1, 2, 3, 4, 5, 6] }
+        it_behaves_like 'it contains all expected results of source'
       end
     end
 
