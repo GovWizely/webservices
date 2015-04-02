@@ -3,7 +3,7 @@ require 'active_support/concern'
 module Searchable
   extend ActiveSupport::Concern
 
-  COMMON_PARAMS = [:format, :size, :offset, :api_key].freeze
+  COMMON_PARAMS = %i(api_key callback format offset size).freeze
 
   included do
     class_eval do
