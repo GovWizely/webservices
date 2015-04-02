@@ -9,21 +9,9 @@ class RecreateIndicesWithModifiedMappings
     end
 
     def model_classes_which_need_recreating
-      Webservices::Application.model_classes.sort do |a, b|
-        if a.name.include?('TariffRate') && !b.name.include?('TariffRate')
-          1
-        elsif b.name.include?('TariffRate') && !a.name.include?('TariffRate')
-          -1
-        else
-          0
-        end
-      end.select do |model_class|
-        index = model_class.index_name
-
-        model_mapping = model_class.mappings
-        db_mapping = ES.client.indices.get_mapping(index: index)[index]['mappings']
-
-        !same?(model_mapping.deep_stringify, db_mapping.deep_stringify)
+      sorted_model_classes.select do |model_class|
+        !same?(model_class.mappings.deep_stringify,
+               db_mapping(model_class.index_name).deep_stringify)
       end
     end
 
@@ -52,6 +40,21 @@ class RecreateIndicesWithModifiedMappings
       else
         return model_entity == db_entity
       end
+    end
+
+    private
+
+    def sorted_model_classes
+      Webservices::Application.model_classes.sort do |a, b|
+        comparison = 0
+        comparison += 1 if a.name.include?('TariffRate')
+        comparison -= 1 if b.name.include?('TariffRate')
+        comparison
+      end
+    end
+
+    def db_mapping(index)
+      ES.client.indices.get_mapping(index: index)[index]['mappings']
     end
   end
 end
