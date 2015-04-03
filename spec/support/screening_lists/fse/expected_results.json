@@ -48,12 +48,11 @@
       "EO13645"
     ],
     "remarks": "(Linked To: NATIONAL IRANIAN TANKER COMPANY)",
-    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Entity",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
+    "title": null,
+    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department"
   },
   {
     "addresses": [
@@ -91,12 +90,11 @@
       "FSE-IR"
     ],
     "remarks": null,
-    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Individual",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
+    "title": null,
+    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department"
   },
   {
     "addresses": [
@@ -148,11 +146,10 @@
       "FSE-IR"
     ],
     "remarks": "(Linked To: FERLAND COMPANY LIMITED)",
-    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
-    "source_list_url": null,
-    "title": "General Manager of Ferland Company Limited",
     "type": "Individual",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx",
+    "title": "General Manager of Ferland Company Limited",
+    "source": "Foreign Sanctions Evaders (FSE) - Treasury Department"
   }
 ]
