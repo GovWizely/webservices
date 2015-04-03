@@ -21,6 +21,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
       "Shati"
     ],
@@ -28,12 +29,10 @@
       "NS-PLC"
     ],
     "remarks": null,
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -56,6 +55,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -63,12 +63,10 @@
       "NS-PLC"
     ],
     "remarks": "PFLP",
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -93,6 +91,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -100,12 +99,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Hebron",
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -129,6 +126,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
       "Gaza"
     ],
@@ -136,12 +134,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Gaza",
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -164,6 +160,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -171,12 +168,10 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Northern Gaza",
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   },
   {
     "addresses": [
@@ -205,6 +200,7 @@
     "nationalities": [
 
     ],
+    "type": "Individual",
     "places_of_birth": [
 
     ],
@@ -212,11 +208,9 @@
       "NS-PLC"
     ],
     "remarks": "HAMAS - Jenin",
-    "source": "Palestinian Legislative Council List (PLC) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
     "title": null,
-    "type": "Individual",
-    "score": 1.0
+    "source": "Palestinian Legislative Council List (PLC) - Treasury Department"
   }
 ]
