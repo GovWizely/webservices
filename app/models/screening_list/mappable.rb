@@ -21,7 +21,7 @@ module ScreeningList
                 tokenizer: 'keyword',
                 filter:    %w(uppercase asciifolding),
               },
-              double_metaphone_analyzer:             {
+              double_metaphone_analyzer:    {
                 tokenizer: 'standard',
                 filter:    %w(standard lowercase double_metaphone_filter),
               },
