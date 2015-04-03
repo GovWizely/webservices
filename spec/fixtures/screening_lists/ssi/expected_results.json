@@ -76,6 +76,7 @@
       }
     ],
     "name": "AK TRANSNEFT OAO",
+    "phonetic_names": "AK TRANSNEFT OAO",
     "nationalities": [
 
     ],
@@ -86,12 +87,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Entity",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -180,6 +180,7 @@
       }
     ],
     "name": "BANK OF MOSCOW",
+    "phonetic_names": "BANK OF MOSCOW",
     "nationalities": [
 
     ],
@@ -190,12 +191,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Entity",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -274,6 +274,7 @@
       }
     ],
     "name": "ROSTEC",
+    "phonetic_names": "ROSTEC",
     "nationalities": [
 
     ],
@@ -284,12 +285,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Entity",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   },
   {
     "addresses": [
@@ -386,6 +386,7 @@
       }
     ],
     "name": "VTB BANK OAO",
+    "phonetic_names": "VTB BANK OAO",
     "nationalities": [
 
     ],
@@ -396,11 +397,10 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "source_list_url": null,
-    "title": null,
     "type": "Entity",
-    "score": 1.0
+    "source_list_url": null,
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "title": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
   }
 ]
