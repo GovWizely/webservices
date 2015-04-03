@@ -22,15 +22,14 @@
       "Engineer Idris"
     ],
     "federal_register_notice": "76 FR 71867",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Fazal Rahim Farid",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21",
-    "score": 1.0
+    "start_date": "2011-11-21"
   },
   {
     "addresses": [
@@ -46,15 +45,14 @@
 
     ],
     "federal_register_notice": "77 FR 25055",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Fazel Khalil Construction Company",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2012-04-27",
-    "score": 1.0
+    "start_date": "2012-04-27"
   },
   {
     "addresses": [
@@ -70,15 +68,14 @@
 
     ],
     "federal_register_notice": "78 FR 75485 ",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Murat Peker",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2013-12-12",
-    "score": 1.0
+    "start_date": "2013-12-12"
   },
   {
     "addresses": [
@@ -94,39 +91,14 @@
       "Jawid, Said Jan Abd-al-Salam"
     ],
     "federal_register_notice": "76 FR 71867",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Qazi Abdallah",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
-    "standard_order": null,
-    "start_date": "2011-11-22",
-    "score": 1.0
-  },
-  {
-    "addresses": [
-      {
-        "address": "Microrayan 3rd Apt. 45, block #21",
-        "city": "Kabul",
-        "state": null,
-        "postal_code": null,
-        "country": "AF"
-      }
-    ],
-    "alt_names": [
-      "Jawid, Said Jan Abd-al-Salam"
-    ],
-    "federal_register_notice": "76 FR 71867",
-    "license_policy": "Presumption of denial.",
-    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
-    "name": "Qazi Abdallah",
-    "source": "Entity List (EL) - Bureau of Industry and Security",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
-    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21",
-    "score": 1.0
+    "start_date": "2011-11-21"
   },
   {
     "addresses": [
@@ -142,15 +114,37 @@
       "Jawid, Said Jan Abd-al-Salam"
     ],
     "federal_register_notice": "76 FR 10001",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Qazi Abdallah",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21",
-    "score": 1.0
+    "start_date": "2011-11-21"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Microrayan 3rd Apt. 45, block #21",
+        "city": "Kabul",
+        "state": null,
+        "postal_code": null,
+        "country": "AF"
+      }
+    ],
+    "alt_names": [
+      "Jawid, Said Jan Abd-al-Salam"
+    ],
+    "federal_register_notice": "76 FR 71867",
+    "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
+    "name": "Qazi Abdallah",
+    "source": "Entity List (EL) - Bureau of Industry and Security",
+    "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "standard_order": null,
+    "start_date": "2011-11-22"
   },
   {
     "addresses": [
@@ -208,14 +202,13 @@
 
     ],
     "federal_register_notice": "77 FR 25055",
-    "license_policy": "Presumption of denial.",
     "license_requirement": "For all items subject to the EAR. (See Â§744.11 of the EAR).",
+    "license_policy": "Presumption of denial.",
     "name": "Zurmat Construction Company offices",
     "source": "Entity List (EL) - Bureau of Industry and Security",
-    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+    "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2012-04-27",
-    "score": 1.0
+    "start_date": "2012-04-27"
   }
 ]
