@@ -55,11 +55,12 @@
       "CUBA"
     ],
     "remarks": null,
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Specially Designated Nationals (SDN) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Specially Designated Nationals (SDN) - Treasury Department"
+    "type": "Entity",
+    "score": 1.0
   },
   {
     "addresses": [
@@ -101,11 +102,12 @@
       "CUBA"
     ],
     "remarks": "Might have something to do with Cuba.",
-    "type": "Individual",
-    "source_list_url": null,
+    "source": "Specially Designated Nationals (SDN) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "source_list_url": null,
     "title": "Executive Director, Havana International Bank",
-    "source": "Specially Designated Nationals (SDN) - Treasury Department"
+    "type": "Individual",
+    "score": 1.0
   },
   {
     "addresses": [
@@ -170,11 +172,12 @@
       "SDGT"
     ],
     "remarks": "Additional Djiboutian passport issued in 2010.",
-    "type": "Individual",
-    "source_list_url": null,
+    "source": "Specially Designated Nationals (SDN) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Specially Designated Nationals (SDN) - Treasury Department"
+    "type": "Individual",
+    "score": 1.0
   },
   {
     "addresses": [
@@ -203,13 +206,14 @@
       "NPWMD"
     ],
     "remarks": null,
-    "type": "Vessel",
-    "source_list_url": null,
+    "source": "Specially Designated Nationals (SDN) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+    "source_list_url": null,
     "title": null,
+    "type": "Vessel",
     "vessel_flag": "Iran",
     "vessel_owner": "IRISL",
     "vessel_type": "General Cargo",
-    "source": "Specially Designated Nationals (SDN) - Treasury Department"
+    "score": 1.0
   }
 ]

@@ -8,7 +8,8 @@
     "source": "ITAR Debarred (DTC) - State Department",
     "source_information_url": "http://www.pmddtc.state.gov/compliance/debar_intro.html",
     "source_list_url": "http://www.pmddtc.state.gov/compliance/debar.html",
-    "start_date": "1990-07-03"
+    "start_date": "1990-07-03",
+    "score": 1.0
   },
   {
     "alt_names": [
@@ -19,7 +20,8 @@
     "source": "ITAR Debarred (DTC) - State Department",
     "source_information_url": "http://www.pmddtc.state.gov/compliance/debar_intro.html",
     "source_list_url": "http://www.pmddtc.state.gov/compliance/debar.html",
-    "start_date": "1991-12-13"
+    "start_date": "1991-12-13",
+    "score": 1.0
   },
   {
     "alt_names": [
@@ -30,7 +32,8 @@
     "source": "ITAR Debarred (DTC) - State Department",
     "source_information_url": "http://www.pmddtc.state.gov/compliance/debar_intro.html",
     "source_list_url": "http://www.pmddtc.state.gov/compliance/debar_admin.html",
-    "start_date": "1990-12-01"
+    "start_date": "1990-12-01",
+    "score": 1.0
   },
   {
     "alt_names": [
@@ -41,6 +44,7 @@
     "source": "ITAR Debarred (DTC) - State Department",
     "source_information_url": "http://www.pmddtc.state.gov/compliance/debar_intro.html",
     "source_list_url": "http://www.pmddtc.state.gov/compliance/debar.html",
-    "start_date": "1989-09-18"
+    "start_date": "1989-09-18",
+    "score": 1.0
   }
 ]
