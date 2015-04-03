@@ -24,7 +24,7 @@
                           "addresses.postal_code",
                           "addresses.country"
                         ],
-                        "fuzziness": 2,
+                        "distance": 2,
                         "prefix_length": 1,
                         "query": "Avenida Bady Bassitt"
                     }

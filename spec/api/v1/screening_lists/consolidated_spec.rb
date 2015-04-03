@@ -41,11 +41,11 @@ describe 'Consolidated Screening List API V1', type: :request do
         let(:sources) { [ScreeningList::Sdn] }
       end
 
-      context 'and fuzziness is specified' do
-        let(:params) { { name: 'SALEH Jamal', fuzziness: '1' } }
+      context 'and distance is specified' do
+        let(:params) { { name: 'SALEH Jamal', distance: '1' } }
         subject { response }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with fuzziness of 1'
+        it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with distance of 1'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Plc] }
         end

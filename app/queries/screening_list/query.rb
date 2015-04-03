@@ -11,7 +11,7 @@ module ScreeningList
       @sort = '_score,name.keyword'
       @name = options[:name]
       @address = options[:address]
-      @fuzziness = options[:fuzziness].try(:to_i)
+      @distance = options[:distance].try(:to_i)
       @end_date = options[:end_date] if options[:end_date].present?
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
@@ -42,7 +42,7 @@ module ScreeningList
           end
 
         end
-      end if [@q, @name, @fuzziness, @address, @phonetics].any?
+      end if [@q, @name, @distance, @address, @phonetics].any?
     end
 
     def generate_fuzzy_queries(json, fields, value)
@@ -52,10 +52,10 @@ module ScreeningList
           json.multi_match do
             json.fields fields
             json.query value
-            json.fuzziness @fuzziness
+            json.fuzziness @distance
             json.prefix_length 1
           end
-        end if @fuzziness
+        end if @distance
       end
     end
 
