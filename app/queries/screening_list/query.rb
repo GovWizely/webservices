@@ -17,7 +17,6 @@ module ScreeningList
       @type = options[:type].try(:downcase)
       @countries = options[:countries].try { |c| c.upcase.split(',') }
       @sources   = options[:sources].try { |s| s.upcase.split(',') } || []
-      @sort = '_score,name.keyword'
       @name = options[:name]
       @address = options[:address]
       @distance = options[:distance].try(:to_i)
@@ -37,7 +36,6 @@ module ScreeningList
           end if @q
 
           if @name
-            # generate_fuzzy_queries(json, %w(name.keyword alt_names.keyword), @name)
             generate_fuzzy_queries(json, %w(name alt_names), @name)
           end
           if @phonetics == 'true'
