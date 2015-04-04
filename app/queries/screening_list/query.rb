@@ -40,7 +40,7 @@ module ScreeningList
             # generate_fuzzy_queries(json, %w(name.keyword alt_names.keyword), @name)
             generate_fuzzy_queries(json, %w(name alt_names), @name)
           end
-          if @phonetics == '1'
+          if @phonetics == 'true'
             generate_fuzzy_queries(json, ['phonetic_names'], @name)
           end
           if @address
