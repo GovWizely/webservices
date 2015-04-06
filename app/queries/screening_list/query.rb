@@ -30,22 +30,22 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_fuzzy_queries(json, %w(name alt_names), @name)
+            generate_fuzzy_queries(json, %w(name alt_names), @name, operator = :or)
           end
           if @phonetics == 'true'
-            generate_fuzzy_queries(json, ['phonetic_names'], @name)
+            generate_fuzzy_queries(json, ['phonetic_names'], @name, operator = :or)
           end
           if @address
-            generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
+            generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address, operator = :and)
           end
 
         end
       end if [@q, @name, @distance, @address, @phonetics].any?
     end
 
-    def generate_fuzzy_queries(json, fields, value)
+    def generate_fuzzy_queries(json, fields, value, operator)
       json.set! 'should' do
-        json.child! { generate_multi_match(json, fields, value) }
+        json.child! { generate_multi_match(json, fields, value, operator) }
         json.child! do
           json.multi_match do
             json.fields fields
