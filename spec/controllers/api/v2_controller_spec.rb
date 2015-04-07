@@ -16,7 +16,6 @@ describe Api::V2Controller, type: :controller do
 
   class InheritsFromApiV2Controller < described_class
     def foo
-      ActionController::Parameters.new(params).permit([:q, :api_key])
       render text: 'ok', status: :ok
     end
 
@@ -68,27 +67,15 @@ describe Api::V2Controller, type: :controller do
             expect(response.status).to eq(200)
           end
         end
-      end
-    end
-
-    describe 'bad request' do
-      include_context 'user with API Key'
-
-      context 'with unpermitted parameter' do
-        it 'responds with 400 error' do
-          request.headers['Api-Key'] = user.api_key
-          get :foo, not_a: :valid_paramter
-          expect(response.status).to eq(400)
+        context 'with invalid date range exception' do
+          it 'responds with 400 error' do
+            request.headers['Api-Key'] = user.api_key
+            get :bad_date_range
+            expect(response.status).to eq(400)
+          end
         end
       end
 
-      context 'with invalid date range exception' do
-        it 'responds with 400 error' do
-          request.headers['Api-Key'] = user.api_key
-          get :bad_date_range
-          expect(response.status).to eq(400)
-        end
-      end
     end
 
   end
