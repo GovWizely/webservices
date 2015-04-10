@@ -4,7 +4,8 @@ describe ParatureFaqData do
   before { ParatureFaq.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs" }
   let(:resource) { "#{fixtures_dir}/articles/article%d.xml" }
-  let(:importer) { ParatureFaqData.new(resource) }
+  let(:folders_resource) { "#{fixtures_dir}/folders.xml" }
+  let(:importer) { ParatureFaqData.new(resource, folders_resource) }
 
   it_behaves_like 'an importer which can purge old documents'
 
@@ -13,10 +14,8 @@ describe ParatureFaqData do
 
     it 'loads parature faqs from specified resource' do
       expect(ParatureFaq).to receive(:index) do |entries|
-
         expect(entries.size).to eq(29)
         expect(entries).to match_array entry_hash
-
       end
       importer.import
     end

@@ -2,9 +2,11 @@ require 'spec_helper'
 
 describe 'Parature Faq API V2', type: :request do
   include_context 'V2 headers'
+
   before(:all) do
     ParatureFaq.recreate_index
-    ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml").import
+    ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml",
+                        "#{Rails.root}/spec/fixtures/parature_faqs/folders.xml").import
   end
 
   let(:search_path) { '/ita_faqs/search' }
@@ -110,10 +112,7 @@ describe 'Parature Faq API V2', type: :request do
       it 'returns parature faqs' do
 
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(1)
-
-        results = json_response[:results]
-        expect(results[0]).to eq(expected_results[27])
+        expect(json_response[:total]).to eq(0)
       end
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
