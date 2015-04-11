@@ -59,7 +59,15 @@ class User
     run_callbacks callbacks do
       # Devise can throw a :validate key at us, which ES doesn't like.
       options.delete(:validate)
-      super(options)
+
+      result = super(options)
+
+      # Prevent Devise after_* callbacks from sending out confirmation emails
+      # when save failed. I'm not happy with the hackiness of this, but I can't
+      # find a better way.
+      @skip_confirmation_notification = true unless result
+
+      result
     end
   end
 
