@@ -51,6 +51,12 @@ class User
     super(attributes, options)
   end
 
+  def valid?
+    run_callbacks :validation do
+      super
+    end
+  end
+
   # We define a save method so that we can fire off update or create callbacks.
   # This causes Devise to send out related emails etc.
   def save(options = {})
