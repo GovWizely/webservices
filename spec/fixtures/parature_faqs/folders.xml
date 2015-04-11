@@ -1,0 +1,877 @@
+<Entities total="88" results="88" page="1" page-size="100" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/?_pageSize_=100">
+  <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Answers</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+  </ArticleFolder>
+  <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Categories</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Topics</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Industries</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Countries</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="5" uid="28023/28026/ArticleFolder/5" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/5">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Glossary</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="2" uid="28023/28026/ArticleFolder/2" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/2">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Inbox - Email</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">true</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="4" uid="28023/28026/ArticleFolder/4" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/4">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Inbox - Ticket</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">true</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="3" uid="28023/28026/ArticleFolder/3" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/3">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trash</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">true</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="1" uid="28023/28026/ArticleFolder/1" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/1">
+        <Name display-name="Name">Answers</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="8" uid="28023/28026/ArticleFolder/8" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/8">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">About Export.gov</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="9" uid="28023/28026/ArticleFolder/9" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/9">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">CE Marking</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="99" uid="28023/28026/ArticleFolder/99" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/99">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Doing Business in Africa</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="10" uid="28023/28026/ArticleFolder/10" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/10">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Expand Your Exports</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="11" uid="28023/28026/ArticleFolder/11" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/11">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Export Assistance</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="14" uid="28023/28026/ArticleFolder/14" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/14">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Export Basics</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="19" uid="28023/28026/ArticleFolder/19" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/19">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Export Licenses</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="15" uid="28023/28026/ArticleFolder/15" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/15">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Free Trade Agreements</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="21" uid="28023/28026/ArticleFolder/21" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/21">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Finance Your Exports</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="84" uid="28023/28026/ArticleFolder/84" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/84">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">GKC Content Training</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000">This folder is for training purposes</Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="12" uid="28023/28026/ArticleFolder/12" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/12">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Importing</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="23" uid="28023/28026/ArticleFolder/23" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/23">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">International Logistics</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="16" uid="28023/28026/ArticleFolder/16" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/16">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">International Sales and Marketing</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="24" uid="28023/28026/ArticleFolder/24" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/24">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Legal Assistance</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="17" uid="28023/28026/ArticleFolder/17" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/17">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Market Research</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="92" uid="28023/28026/ArticleFolder/92" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/92">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">National Export Initiative</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="28" uid="28023/28026/ArticleFolder/28" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/28">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Safe Harbor - U.S.-European Union</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="27" uid="28023/28026/ArticleFolder/27" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/27">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Safe Harbor - U.S.-Swiss</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="22" uid="28023/28026/ArticleFolder/22" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/22">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Selling Online</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="13" uid="28023/28026/ArticleFolder/13" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/13">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trade Barriers</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="26" uid="28023/28026/ArticleFolder/26" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/26">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trade Leads</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="18" uid="28023/28026/ArticleFolder/18" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/18">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trade Regulations</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="107" uid="28023/28026/ArticleFolder/107" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/107">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trade Missions</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="7" uid="28023/28026/ArticleFolder/7" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/7">
+        <Name display-name="Name">Categories</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="30" uid="28023/28026/ArticleFolder/30" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/30">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">TPCC</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="31" uid="28023/28026/ArticleFolder/31" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/31">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Export Documents and Forms</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="32" uid="28023/28026/ArticleFolder/32" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/32">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Business Matchmaking</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="33" uid="28023/28026/ArticleFolder/33" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/33">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Trade Data</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="34" uid="28023/28026/ArticleFolder/34" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/34">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Insurance</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="108" uid="28023/28026/ArticleFolder/108" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/108">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">International Buyer Program</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="35" uid="28023/28026/ArticleFolder/35" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/35">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Loans</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="36" uid="28023/28026/ArticleFolder/36" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/36">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">CAFTA-DR</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="37" uid="28023/28026/ArticleFolder/37" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/37">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">NAFTA</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="38" uid="28023/28026/ArticleFolder/38" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/38">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Getting Paid</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="39" uid="28023/28026/ArticleFolder/39" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/39">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Shipping</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="40" uid="28023/28026/ArticleFolder/40" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/40">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Incoterms</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="41" uid="28023/28026/ArticleFolder/41" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/41">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Schedule B and HS Number</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="42" uid="28023/28026/ArticleFolder/42" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/42">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Tariffs and Import Fees</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="43" uid="28023/28026/ArticleFolder/43" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/43">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Personal Shipments</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="44" uid="28023/28026/ArticleFolder/44" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/44">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Freight Forwarder</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="45" uid="28023/28026/ArticleFolder/45" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/45">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Sales and Promotion</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="49" uid="28023/28026/ArticleFolder/49" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/49">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Product Labeling</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="29" uid="28023/28026/ArticleFolder/29" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/29">
+        <Name display-name="Name">Topics</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="52" uid="28023/28026/ArticleFolder/52" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/52">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Agribusiness</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="53" uid="28023/28026/ArticleFolder/53" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/53">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Education</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="54" uid="28023/28026/ArticleFolder/54" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/54">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Finance</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="55" uid="28023/28026/ArticleFolder/55" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/55">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Health Technologies</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="56" uid="28023/28026/ArticleFolder/56" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/56">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Information &amp; Communication</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="57" uid="28023/28026/ArticleFolder/57" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/57">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Travel</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="58" uid="28023/28026/ArticleFolder/58" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/58">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Textiles</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="59" uid="28023/28026/ArticleFolder/59" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/59">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Apparel &amp; Sporting Goods</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="106" uid="28023/28026/ArticleFolder/106" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/106">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Automotive &amp; Ground Transportation</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="51" uid="28023/28026/ArticleFolder/51" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/51">
+        <Name display-name="Name">Industries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="73" uid="28023/28026/ArticleFolder/73" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/73">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Australia</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="66" uid="28023/28026/ArticleFolder/66" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/66">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Bahrain</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="80" uid="28023/28026/ArticleFolder/80" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/80">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Brazil</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="76" uid="28023/28026/ArticleFolder/76" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/76">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Canada</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="100" uid="28023/28026/ArticleFolder/100" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/100">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Chile</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="79" uid="28023/28026/ArticleFolder/79" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/79">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">China</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="67" uid="28023/28026/ArticleFolder/67" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/67">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Costa Rica</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="101" uid="28023/28026/ArticleFolder/101" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/101">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Columbia</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="68" uid="28023/28026/ArticleFolder/68" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/68">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Dominican Republic</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="69" uid="28023/28026/ArticleFolder/69" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/69">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">El Salvador</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="61" uid="28023/28026/ArticleFolder/61" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/61">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">European Union</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="70" uid="28023/28026/ArticleFolder/70" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/70">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Guatemala</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="71" uid="28023/28026/ArticleFolder/71" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/71">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Honduras</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="81" uid="28023/28026/ArticleFolder/81" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/81">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">India</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="105" uid="28023/28026/ArticleFolder/105" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/105">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Japan</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="65" uid="28023/28026/ArticleFolder/65" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/65">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Jordan</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="63" uid="28023/28026/ArticleFolder/63" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/63">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Israel</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="77" uid="28023/28026/ArticleFolder/77" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/77">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Mexico</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="74" uid="28023/28026/ArticleFolder/74" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/74">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Morocco</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="72" uid="28023/28026/ArticleFolder/72" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/72">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Nicuragua</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="102" uid="28023/28026/ArticleFolder/102" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/102">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Oman</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="103" uid="28023/28026/ArticleFolder/103" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/103">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Panama</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="104" uid="28023/28026/ArticleFolder/104" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/104">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Peru</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="78" uid="28023/28026/ArticleFolder/78" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/78">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Singapore</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="64" uid="28023/28026/ArticleFolder/64" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/64">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">South Korea</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="82" uid="28023/28026/ArticleFolder/82" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/82">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Spain</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="62" uid="28023/28026/ArticleFolder/62" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/62">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">Turkey</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="83" uid="28023/28026/ArticleFolder/83" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/83">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">United States</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+  <ArticleFolder id="75" uid="28023/28026/ArticleFolder/75" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/75">
+    <Name display-name="Name" field-type="text" required="true" editable="true" data-type="string" max-length="64000">West Bank</Name>
+    <Description display-name="Description" field-type="text" required="false" editable="true" data-type="string" max-length="64000"></Description>
+    <Is_Private display-name="Is private" field-type="checkbox" required="false" editable="true" data-type="boolean" max-length="64000">false</Is_Private>
+    <Parent_Folder display-name="Parent Folder" required="true" editable="true" data-type="entity" field-type="entity">
+      <ArticleFolder id="60" uid="28023/28026/ArticleFolder/60" href="https://g1.parature.com/api/v1/28023/28026/ArticleFolder/60">
+        <Name display-name="Name">Countries</Name>
+      </ArticleFolder>
+    </Parent_Folder>
+  </ArticleFolder>
+</Entities>

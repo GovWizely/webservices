@@ -13,16 +13,20 @@ class ParatureFaqData
     Folders:      :folders,
   }.freeze
 
-  # The PARATURE_API_ACCESS_TOKEN environment variable must be set correctly for this source to be valid
+  # The PARATURE_API_ACCESS_TOKEN environment variable must be set correctly for these sources to be valid
   ENDPOINT = "https://g1.parature.com/api/v1/28023/28026/Article/%d/?_token_=#{ENV['PARATURE_API_ACCESS_TOKEN']}"
+  FOLDER_ENDPOINT = "https://g1.parature.com/api/v1/28023/28026/ArticleFolder/?_token_=#{ENV['PARATURE_API_ACCESS_TOKEN']}&_pageSize_=100"
 
-  def initialize(resource = ENDPOINT)
+  def initialize(resource = ENDPOINT, folder_resource = FOLDER_ENDPOINT)
     @resource = resource
-    @folder_source = "#{Rails.root}/data/parature_faqs/folders.csv"
+    @folder_resource = folder_resource
   end
 
   def import
     Rails.logger.info "Importing #{@resource}"
+
+    # Grab folder info to ensure up-to-date controlled terms are getting assigned to FAQs
+    @folder_info = get_folder_info
 
     data = Array(1..379).map do |id|
       sleep 10 if id % 10 == 0 && should_throttle
@@ -61,16 +65,13 @@ class ParatureFaqData
   end
 
   def process_faq_info(faq_hash)
-    @folder_hash = get_folder_info
-
     faq = remap_keys COLUMN_HASH, faq_hash[:Article]
     return nil if faq[:published] != 'true'
     faq.delete :published
-    faq[:topic] = []
-    faq[:industry] = []
-    faq[:country] = []
+    faq[:topic], faq[:industry], faq[:country] = [], [], []
 
     faq = process_folder_fields(faq)
+    return nil if faq[:topic].include?('GKC Content Training')
 
     faq.delete :folders
     faq[:country] = faq[:country].map { |country| lookup_country(country) }.compact
@@ -85,14 +86,14 @@ class ParatureFaqData
   def process_folder_fields(faq)
     if faq[:folders]['ArticleFolder'].class == Hash
       id = faq[:folders]['ArticleFolder']['id']
-      if @folder_hash[id][:type] != 'n/a'
+      if @folder_info[id][:type] != 'n/a'
         faq = replace_folder_fields(faq, id)
       end
 
     elsif faq[:folders]['ArticleFolder'].class == Array
       faq[:folders]['ArticleFolder'].each do |folder|
         id = folder['id']
-        if @folder_hash[id][:type] != 'n/a'
+        if @folder_info[id][:type] != 'n/a'
           faq = replace_folder_fields(faq, id)
         end
       end
@@ -101,21 +102,36 @@ class ParatureFaqData
   end
 
   def replace_folder_fields(faq, id)
-    type_symbol = @folder_hash[id][:type].to_sym
-    faq[type_symbol] << @folder_hash[id][:name]
+    type_symbol = @folder_info[id][:type].to_sym
+    faq[type_symbol] << @folder_info[id][:name]
     faq
   end
 
   def get_folder_info
-    keys = [:id, :name, :type]
-    file = File.open(@folder_source, 'rb')
-    folder_hash = {}
-    folder_array = CSV.parse(file.read).map { |a| Hash[keys.zip(a)] }
-
-    folder_array.each do |folder|
-      folder_hash[folder[:id]] = folder
+    folder_hash = Hash.from_xml(open(@folder_resource))
+    folders = folder_hash['Entities']['ArticleFolder']
+    folder_info = {}
+    folders.each do |folder|
+      if folder['Parent_Folder']
+        type = extract_type(folder['Parent_Folder']['ArticleFolder']['Name'])
+      else
+        type = 'n/a'
+      end
+      folder_info[folder['id']] = { id: folder['id'], name: folder['Name'], type: type }
     end
-    folder_hash
+    folder_info
+  end
+
+  def extract_type(folder_name)
+    if folder_name == 'Topics' || folder_name == 'Categories'
+      'topic'
+    elsif folder_name == 'Industries'
+      'industry'
+    elsif folder_name == 'Countries'
+      'country'
+    else
+      'n/a'
+    end
   end
 
   def strip_nonascii(str)
