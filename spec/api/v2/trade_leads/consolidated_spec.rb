@@ -20,9 +20,15 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
           [TradeLead::Australia, TradeLead::Fbopen, TradeLead::State,
-           TradeLead::Uk, TradeLead::Canada]
+           TradeLead::Uk, TradeLead::Canada, TradeLead::Mca]
         end
       end
+    end
+
+    context 'contains all TradeLead::Mca results' do
+      let(:source) { TradeLead::Mca }
+      let(:expected) { [0, 1, 2] }
+      it_behaves_like 'it contains all expected results of source'
     end
 
     context 'when source is specified' do
