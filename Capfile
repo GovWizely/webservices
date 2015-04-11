@@ -9,3 +9,4 @@ if File.directory?(cap_dir) || File.symlink?(cap_dir)
   # load 'deploy/assets'
   load 'capistrano/deploy' # remove this line to skip loading any of the default tasks
 end
+
