@@ -123,4 +123,12 @@ describe User do
       expect(subject.email_changed?).to eq(false)
     end
   end
+
+  describe '#valid?' do
+    subject { build_user(email: 'CaLuM@example.com') }
+    it 'downcases the email address' do
+      subject.valid?
+      expect(subject.email).to eq('calum@example.com')
+    end
+  end
 end
