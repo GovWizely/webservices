@@ -4,21 +4,22 @@ module ScreeningList
 
     def initialize(options = {})
       super
-      @q = options[:q]
+      %i( q name address ).each { |f| instance_variable_set("@#{f}", options[f]) }
+      %i( end_date start_date issue_date expiration_date ).each do |f|
+        instance_variable_set("@#{f}", options[f]) if options[f].present?
+      end
+      extract_other_options(options)
+    end
+
+    private
+
+    def extract_other_options(options)
       @type = options[:type].try(:downcase)
       @countries = options[:countries].try { |c| c.upcase.split(',') }
       @sources   = options[:sources].try { |s| s.upcase.split(',') } || []
       @sort = '_score,name.keyword'
-      @name = options[:name]
-      @address = options[:address]
       @fuzziness = options[:fuzziness].try(:to_i)
-      @end_date = options[:end_date] if options[:end_date].present?
-      @start_date = options[:start_date] if options[:start_date].present?
-      @issue_date = options[:issue_date] if options[:issue_date].present?
-      @expiration_date = options[:expiration_date] if options[:expiration_date].present?
     end
-
-    private
 
     def generate_query(json)
       multi_fields = %i(alt_names name remarks title)
