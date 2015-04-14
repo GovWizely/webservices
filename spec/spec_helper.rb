@@ -32,6 +32,11 @@ RSpec.configure do |config|
   config.before(:suite) do
     Webservices::Application.model_classes.each(&:recreate_index)
     User.create_index!
+
+    # Since create_index! is asynchronous, and since specs may immediately
+    # attempt to communicate with the user index, give ES a little time to
+    # complete the index creation.
+    sleep 1
   end
 
   config.after(:suite) do
