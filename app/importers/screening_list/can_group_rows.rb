@@ -23,7 +23,7 @@ module ScreeningList
     end
 
     def generate_id(row)
-      Digest::SHA1.hexdigest(group_by.map { |f| row[f] }.join)
+      Utils.generate_id(row, group_by)
     end
   end
 end

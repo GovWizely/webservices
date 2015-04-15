@@ -43,6 +43,7 @@ module TradeLead
       end
       item_hash[:funding_source] = FUNDING_SOURCE
       item_hash[:source] = TradeLead::Mca.source[:code]
+      item_hash[:id] = Utils.generate_id(item_hash, %i(url description title id))
       item_hash
     end
 
