@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe TradeArticleQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_articles" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/trade_article" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'
