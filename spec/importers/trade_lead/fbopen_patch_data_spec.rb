@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe TradeLead::FbopenImporter::PatchData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
-  let(:resource)     { "#{fixtures_dir}/patch_source_example_input" }
+  let(:resource)     { "#{fixtures_dir}/complete_source" }
   let(:importer)     { described_class.new(resource) }
 
   describe '#import' do
