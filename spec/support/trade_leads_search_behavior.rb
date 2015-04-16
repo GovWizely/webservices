@@ -4,6 +4,7 @@ shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::Canada data'
   include_context 'TradeLead::State data'
   include_context 'TradeLead::Uk data'
+  include_context 'TradeLead::Mca data'
 end
 
 shared_context 'TradeLead::Australia data' do
@@ -54,6 +55,7 @@ shared_context 'TradeLead::Canada data' do
   end
 
 end
+
 shared_examples 'it contains all TradeLead::Canada results' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [0, 1, 2, 3, 4] }
@@ -214,4 +216,19 @@ shared_examples 'it contains all TradeLead::Uk results that match industries "He
   let(:source) { TradeLead::Uk }
   let(:expected) { [] }
   it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TradeLead::Mca data' do
+  before do
+    TradeLead::Mca.recreate_index
+    TradeLead::McaData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[TradeLead::Mca] = JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/mca/results.json").read)
+  end
+end
+
+shared_examples 'it contains all TradeLead::Mca results' do
+
 end

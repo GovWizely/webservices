@@ -84,7 +84,8 @@ module TradeEvent
       doc[:source] = model_class.source[:code]
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
-      doc[:id] = generate_id(doc)
+      doc[:id] = Utils.generate_id(doc, %i(city cost country event_name event_type start_date
+                                           start_time end_date end_time time_zone))
       doc[:cost] &&= doc[:cost].gsub(/\s+/, '')
 
       sanitize_entry(doc)
@@ -118,13 +119,6 @@ module TradeEvent
       venue[:country] &&= lookup_country(venue[:country])
       venue[:state] &&= lookup_state(venue[:state]) rescue venue[:state]
       [sanitize_entry(venue)]
-    end
-
-    def generate_id(doc)
-      Digest::SHA1.hexdigest(
-        %i(city cost country event_name event_type start_date
-           start_time end_date end_time time_zone)
-          .map { |f| doc[f] }.join)
     end
 
     def remove_invalid(docs)

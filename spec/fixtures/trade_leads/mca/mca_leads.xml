@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rss version="2.0">
+  <channel>
+    <title>dgMarket - Procurement notices</title>
+    <link>http://www.dgmarket.com</link>
+    <description><![CDATA[Tenders and procurement opportunities worldwide]]></description>
+    <generator>dgf rss generator</generator>
+    <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+    <item>
+      <title>Acquisition of Inputs (Seeds, Fertilizers &amp; Pesticides) &amp; Small Farm Equipment</title>
+      <link>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12529030</link>
+      <description><![CDATA[Buyer: <a href="http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6882157">Millennium Challenge Account</a>]]></description>
+      <category>type/spn</category>
+      <category>country/sn - Senegal</category>
+      <category>CPV/24400000</category>
+      <category>CPV/24451000</category>
+      <category>CPV/16100000</category>
+      <category>CPV/03130000</category>
+      <category>deadline/2015/Apr/30</category>
+      <guid>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12529030</guid>
+      <pubDate>Fri, 3 Apr 2015 21:09:55 EDT</pubDate>
+    </item>
+    <item>
+      <title>Consultancy Services for Preparation &amp; Implementation of a Survey Origin/Destination (O/D) &amp; Counting on the Campaign N6, N4 of the RN21 &amp; RN2</title>
+      <link>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12529042</link>
+      <description><![CDATA[Buyer: <a href="http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6882157">Millennium Challenge Account</a>]]></description>
+      <category>type/spn</category>
+      <category>country/sn - Senegal</category>
+      <category>CPV/72221000</category>
+      <category>CPV/79310000</category>
+      <category>deadline/2015/May/05</category>
+      <guid>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12529042</guid>
+      <pubDate>Fri, 3 Apr 2015 21:09:57 EDT</pubDate>
+    </item>
+    <item>
+      <title>Bombay Drainage Project</title>
+      <link>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12281937</link>
+      <description><![CDATA[Buyer: <a href="http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6614069">MCA-Zambia</a>]]></description>
+      <category>type/spn</category>
+      <category>country/zm - Zambia</category>
+      <category>CPV/45232450</category>
+      <category>deadline/2015/Apr/28</category>
+      <guid>http://www.dgmarket.com/tenders/np-notice.do?noticeId=12281937</guid>
+      <pubDate>Fri, 3 Apr 2015 01:49:58 EDT</pubDate>
+    </item>
+  </channel>
+</rss>

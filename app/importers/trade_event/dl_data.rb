@@ -33,13 +33,8 @@ module TradeEvent
     def process_event_info(event_info)
       event_hash = extract_fields(event_info, XPATHS)
       event_hash[:source] = model_class.source[:code]
-      event_hash[:id] = generate_id(event_hash)
+      event_hash[:id] = Utils.generate_id(event_hash, %i(event_name description url id))
       sanitize_entry(event_hash)
-    end
-
-    def generate_id(event_hash)
-      Digest::SHA1.hexdigest(
-        %i(event_name description url id).map { |f| event_hash[f] }.join)
     end
   end
 end

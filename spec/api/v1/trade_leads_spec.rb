@@ -11,6 +11,7 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
     TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
     TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
@@ -25,7 +26,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it 'returns trade leads sorted by published_date:desc, country: asc' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(13)
+        expect(json_response['total']).to eq(16)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
@@ -41,7 +42,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it 'returns up to the specified size' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(13)
+        expect(json_response['total']).to eq(16)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
@@ -62,9 +63,9 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[1])
-        expect(results[1]).to eq(expected_results[2])
-        expect(results[2]).to eq(expected_results[3])
+        expect(results[0]).to eq(expected_results[4])
+        expect(results[1]).to eq(expected_results[5])
+        expect(results[2]).to eq(expected_results[6])
       end
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
@@ -82,7 +83,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results).to include *expected_results.values_at(0)
+        expect(results).to include *expected_results.values_at(3)
       end
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
@@ -100,7 +101,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[0])
+        expect(results[0]).to eq(expected_results[3])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -117,7 +118,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[7])
+        expect(results[0]).to eq(expected_results[10])
       end
     end
   end
