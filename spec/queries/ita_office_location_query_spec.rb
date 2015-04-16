@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ItaOfficeLocationQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_office_locations" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/ita_office_location" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'
