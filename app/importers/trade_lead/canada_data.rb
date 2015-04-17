@@ -35,8 +35,7 @@ module TradeLead
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
-      TradeLead::Canada.index leads
+      TradeLead::Canada.index(leads)
     end
 
     def leads

@@ -19,7 +19,6 @@ module ScreeningList
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       rows = CSV.parse(open(@resource).read, encoding: 'UTF-8').map do |row|
         { country: row[0],
           name:    row[1],

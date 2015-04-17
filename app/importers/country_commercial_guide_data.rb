@@ -11,7 +11,6 @@ class CountryCommercialGuideData
 
   def import
     setup
-    Rails.logger.info "Importing #{@resource}"
 
     docs = Dir["#{@path}/source/**/*.yaml"].map do |yaml_file|
       country_level_info = extract_country_level_info(yaml_file)

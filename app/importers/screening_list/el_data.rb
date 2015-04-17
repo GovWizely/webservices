@@ -36,8 +36,6 @@ module ScreeningList
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
-
       rows = CSV.parse(open(@resource, 'r:iso-8859-1:utf-8').read,
                        headers:           true,
                        header_converters: :symbol)

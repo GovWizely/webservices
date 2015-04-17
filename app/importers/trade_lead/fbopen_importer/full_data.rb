@@ -33,9 +33,8 @@ module TradeLead
       end
 
       def import
-        Rails.logger.info "Importing #{@resource}"
         entries = import_full_xml.map { |entry| process_xml_entry(entry) }.compact
-        TradeLead::Fbopen.index entries
+        TradeLead::Fbopen.index(entries)
       end
 
       def model_class

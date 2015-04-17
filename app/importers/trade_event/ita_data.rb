@@ -38,13 +38,12 @@ module TradeEvent
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       doc = Nokogiri::XML(open(@resource))
       trade_events = doc.xpath('//EVENTINFO').map do |event_info|
         trade_event = process_event_info(event_info)
         trade_event
       end.compact
-      Ita.index trade_events
+      Ita.index(trade_events)
     end
 
     private

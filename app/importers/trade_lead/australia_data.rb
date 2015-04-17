@@ -25,10 +25,9 @@ module TradeLead
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       rows = CSV.read(@resource, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
       entries = rows.map { |row| process_row row.to_h }.compact
-      TradeLead::Australia.index entries
+      TradeLead::Australia.index(entries)
     end
 
     private

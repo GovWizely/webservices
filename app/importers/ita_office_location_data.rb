@@ -30,7 +30,6 @@ class ItaOfficeLocationData
 
   def import
     @resources.each do |resource|
-      Rails.logger.info "Importing #{resource}"
       doc = Nokogiri::XML(open(resource))
       ita_office_locations = doc.xpath('//POSTINFO')
           .map { |location_info| process_location_info(location_info) }

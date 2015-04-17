@@ -16,3 +16,4 @@
 .*.swp
 /tags
 /capistrano
+dump.rdb

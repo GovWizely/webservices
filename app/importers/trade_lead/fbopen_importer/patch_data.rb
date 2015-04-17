@@ -57,8 +57,7 @@ module TradeLead
       end
 
       def import
-        Rails.logger.info "Importing #{@resource}"
-        TradeLead::Fbopen.index leads
+        TradeLead::Fbopen.index(leads)
       end
 
       def leads

@@ -30,7 +30,6 @@ module TradeLead
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       file = open @resource
       file.readline # hack to remove first line from csv
       rows = CSV.parse(file, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
@@ -39,7 +38,7 @@ module TradeLead
         next if %w(archived retracted).include? row[:status].downcase
         entries << process_row(row.to_h)
       end
-      TradeLead::Uk.index entries
+      TradeLead::Uk.index(entries)
     end
 
     private
