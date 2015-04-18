@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ScreeningList::Query do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/screening_lists" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/query" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'
