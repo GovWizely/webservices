@@ -1,10 +1,9 @@
 require 'spec_helper'
 
 describe TradeLead::FbopenImporter::FullData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
-  let(:resource) { "#{fixtures_dir}/full_source_input.xml" }
+  let(:resource) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/full_source_input.xml" }
   let(:importer)     { described_class.new(resource) }
-  let(:expected_results) { YAML.load_file("#{fixtures_dir}/full_source_results.yaml") }
+  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/full_source_results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 
