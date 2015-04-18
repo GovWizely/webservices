@@ -5,7 +5,7 @@ describe CountryCommercialGuideData do
   let(:importer) { described_class.new(fixtures_dir) }
 
   describe '#import' do
-    let(:entry_hash) { YAML.load_file("#{fixtures_dir}/results.yaml") }
+    let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/country_commercial_guide/results.yaml") }
 
     it 'loads country commercial guides from specified resource' do
       expect(CountryCommercialGuide).to receive(:index) do |entries|
