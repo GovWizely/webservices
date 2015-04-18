@@ -14,7 +14,7 @@ module TradeLead
     }.freeze
 
     MULTI_VALUED_XPATHS = {
-      category: './category',
+      categories: './category',
     }
     def initialize(resource = ENDPOINT)
       @resource = resource
@@ -33,7 +33,7 @@ module TradeLead
       item_hash = extract_fields(item, SINGLE_VALUED_XPATHS)
       item_hash.reverse_merge! extract_multi_valued_fields(item, MULTI_VALUED_XPATHS)
       item_hash[:url].gsub!(/www\./, 'mcc.')
-      country = item_hash[:category].delete_at(item_hash[:category].find_index { |e| /country\// =~ e })
+      country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
       item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
 
       begin

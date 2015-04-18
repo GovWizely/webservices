@@ -18,7 +18,7 @@ field_lists = {
   uk:        [:country, :reference_number, :publish_date, :min_contract_value, :max_contract_value,
               :status, :url, :procurement_organization, :contact, :title, :description, :notice_type,
               :industry, :specific_location, :source],
-  mca:       [:country, :publish_date, :url, :category, :title, :description, :funding_source, :source],
+  mca:       [:country, :publish_date, :url, :categories, :title, :description, :funding_source, :source],
 }
 
 json.call(@search, :total, :offset)

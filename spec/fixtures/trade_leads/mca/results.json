@@ -3,7 +3,7 @@
     "country":"SN",
     "publish_date":"2015-04-03",
     "url":"http://mcc.dgmarket.com/tenders/np-notice.do?noticeId=12529030",
-    "category":[
+    "categories":[
       "type/spn",
       "CPV/24400000",
       "CPV/24451000",
@@ -20,7 +20,7 @@
     "country":"SN",
     "publish_date":"2015-04-03",
     "url":"http://mcc.dgmarket.com/tenders/np-notice.do?noticeId=12529042",
-    "category":[
+    "categories":[
       "type/spn",
       "CPV/72221000",
       "CPV/79310000",
@@ -35,7 +35,7 @@
     "country":"ZM",
     "publish_date":"2015-04-03",
     "url":"http://mcc.dgmarket.com/tenders/np-notice.do?noticeId=12281937",
-    "category":[
+    "categories":[
       "type/spn",
       "CPV/45232450",
       "deadline/2015/Apr/28"
