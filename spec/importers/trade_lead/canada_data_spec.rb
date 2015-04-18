@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe TradeLead::CanadaData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/canada" }
-  let(:resource)     { "#{fixtures_dir}/canada_leads.csv" }
+  let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
 
   it_behaves_like 'an importer which can purge old documents'
@@ -17,7 +16,7 @@ describe TradeLead::CanadaData do
   end
 
   describe '#leads' do
-    let(:expected_lead_data) { YAML.load_file("#{fixtures_dir}/expected_canada_leads.yaml") }
+    let(:expected_lead_data) { YAML.load_file("#{File.dirname(__FILE__)}/canada/expected_canada_leads.yaml") }
     it 'correctly transform leads from csv' do
       canada_leads = importer.leads
       expected_lead_data.each_with_index { |expected_lead, index| expect(canada_leads[index]).to eq(expected_lead) }
