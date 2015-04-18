@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe TradeEvent::UstdaData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/ustda" }
-  let(:resource)     { "#{fixtures_dir}/events.csv" }
+  let(:resource)     { "#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv" }
   let(:importer)     { TradeEvent::UstdaData.new(resource) }
 
   it_behaves_like 'an importer which can purge old documents'
@@ -17,7 +16,7 @@ describe TradeEvent::UstdaData do
   end
 
   describe '#events' do
-    let(:expected_event_data) { YAML.load_file("#{fixtures_dir}/expected_ustda_events.yaml") }
+    let(:expected_event_data) { YAML.load_file("#{File.dirname(__FILE__)}/ustda/expected_ustda_events.yaml") }
     it 'correctly transform events from csv' do
       events = importer.events
       expected_event_data.each_with_index { |expected_event, index| expect(events[index]).to eq(expected_event) }
