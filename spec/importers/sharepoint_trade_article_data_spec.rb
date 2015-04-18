@@ -2,8 +2,8 @@ require 'spec_helper'
 
 describe SharepointTradeArticleData do
 
-  fixtures_dir = "#{Rails.root}/spec/fixtures/sharepoint_trade_articles"
-  fixtures_files = Dir["#{fixtures_dir}/articles/*"].map { |file| open(file) }
+  fixtures_dir = "#{File.dirname(__FILE__)}/sharepoint_trade_article"
+  fixtures_files = Dir["#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/*"].map { |file| open(file) }
 
   s3 = stubbed_s3_client('sharepoint_trade_article')
   s3.stub_responses(:list_objects, contents: [{ key: '116.xml' }, { key: '117.xml' }, { key: '118.xml' }, { key: '119.xml' }])
