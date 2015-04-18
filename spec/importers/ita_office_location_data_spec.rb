@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe ItaOfficeLocationData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_office_locations" }
+  let(:resources_dir) { "#{File.dirname(__FILE__)}/ita_office_location" }
 
   it_behaves_like 'an importer which cannot purge old documents'
 
@@ -9,7 +10,7 @@ describe ItaOfficeLocationData do
     context 'when importing domestic data' do
       let(:domestic_resource) { "#{fixtures_dir}/odo.xml" }
       let(:domestic_importer) { ItaOfficeLocationData.new(domestic_resource) }
-      let(:odo_hash) { YAML.load_file("#{fixtures_dir}/odo.yaml") }
+      let(:odo_hash) { YAML.load_file("#{resources_dir}/odo.yaml") }
 
       it 'loads domestic office locations from specified resource' do
         expect(ItaOfficeLocation).to receive(:index) do |ita_office_locations|
@@ -23,7 +24,7 @@ describe ItaOfficeLocationData do
     context 'when importing foreign data' do
       let(:foreign_resource) { "#{fixtures_dir}/oio.xml" }
       let(:foreign_importer) { ItaOfficeLocationData.new(foreign_resource) }
-      let(:oio_hash) { YAML.load_file("#{fixtures_dir}/oio.yaml") }
+      let(:oio_hash) { YAML.load_file("#{resources_dir}/oio.yaml") }
 
       it 'loads foreign office locations from specified resource' do
         expect(ItaOfficeLocation).to receive(:index) do |ita_office_locations|
