@@ -1,14 +1,13 @@
 require 'spec_helper'
 
 describe TradeEvent::ItaData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/ita/" }
-  let(:resource) { "#{fixtures_dir}/trade_events.xml" }
+  let(:resource) { "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml" }
   let(:importer) { described_class.new(resource) }
 
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    let(:expected) { YAML.load_file("#{fixtures_dir}/trade_events.yaml") }
+    let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/ita/results.yaml") }
 
     before { allow(Date).to receive(:current).and_return(Date.parse('2013-10-07')) }
 
