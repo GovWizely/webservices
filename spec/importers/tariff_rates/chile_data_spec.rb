@@ -1,14 +1,14 @@
 require 'spec_helper'
 
 describe TariffRate::ChileData do
-  fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/chile"
-  fixtures_file = "#{fixtures_dir}/chile.csv"
+
+  fixtures_file = "#{Rails.root}/spec/fixtures/tariff_rates/chile/chile.csv"
 
   s3 = stubbed_s3_client('tariff_rate')
   s3.stub_responses(:get_object, body: open(fixtures_file))
 
   let(:importer) { described_class.new(fixtures_file, s3) }
-  let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
+  let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/chile/results.yaml") }
 
   describe '#import' do
     it 'loads CHILE tariff rates from specified resource' do
