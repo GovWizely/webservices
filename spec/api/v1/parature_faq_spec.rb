@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V1', type: :request do
+
   before(:all) do
     ParatureFaq.recreate_index
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml",

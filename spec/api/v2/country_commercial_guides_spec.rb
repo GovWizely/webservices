@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe 'Country Commercial Guide API V2', type: :request do
-  include_context 'V2 headers'
 
+  include_context 'V2 headers'
   before(:all) do
     CountryCommercialGuide.recreate_index
     CountryCommercialGuideData.new(

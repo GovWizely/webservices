@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V2', type: :request do
+
   include_context 'V2 headers'
 
   before(:all) do

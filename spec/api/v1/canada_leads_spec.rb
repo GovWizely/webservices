@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Canada Leads API V1', type: :request do
+
   before(:all) do
     TradeLead::Canada.recreate_index
     TradeLead::CanadaData.new(
@@ -10,7 +11,7 @@ describe 'Canada Leads API V1', type: :request do
 
   let(:search_path) { '/canada_leads/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/trade_leads/canada/results_v1.json").read }
+  let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read }
 
   describe 'GET /canada_leads/search.json' do
     context 'when search parameters are empty' do

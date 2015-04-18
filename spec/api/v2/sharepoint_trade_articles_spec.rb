@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe 'Sharepoint Trade Article API V2', type: :request do
+
   include_context 'V2 headers'
-  fixtures_dir = "#{File.dirname(__FILE__)}/sharepoint_trade_article"
   fixtures_files_dir = "#{Rails.root}/spec/fixtures/sharepoint_trade_articles"
   before(:all) do
     fixtures_files = Dir["#{fixtures_files_dir}/articles/*"].map { |file| open(file) }
@@ -16,7 +16,7 @@ describe 'Sharepoint Trade Article API V2', type: :request do
   end
 
   let(:search_path) { '/trade_articles/search' }
-  let(:expected_results) { YAML.load_file("#{fixtures_dir}/results.yaml") }
+  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/sharepoint_trade_article/results.yaml") }
 
   describe 'GET /trade_articles/search.json' do
 

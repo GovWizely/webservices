@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'ITA Office Locations API V2', type: :request do
+
   include_context 'V2 headers'
   before(:all) do
     ItaOfficeLocation.recreate_index
@@ -8,7 +9,7 @@ describe 'ITA Office Locations API V2', type: :request do
     ItaOfficeLocationData.new(["#{fixtures_dir}/odo.xml", "#{fixtures_dir}/oio.xml"]).import
   end
 
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/ita_office_locations/results.json").read }
+  let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_office_locations/results.json").read }
 
   describe 'GET /ita_office_locations/search.json' do
 
