@@ -31,7 +31,7 @@ shared_context 'TariffRate::Australia data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Australia] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/australia/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/australia/expected_results.json").read)
   end
 end
 
@@ -84,7 +84,7 @@ shared_context 'TariffRate::Bahrain data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Bahrain] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/bahrain/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/bahrain/expected_results.json").read)
   end
 end
 
@@ -119,7 +119,7 @@ shared_context 'TariffRate::Chile data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Chile] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/chile/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/chile/expected_results.json").read)
   end
 end
 
@@ -154,7 +154,7 @@ shared_context 'TariffRate::Colombia data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Colombia] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/colombia/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/colombia/expected_results.json").read)
   end
 end
 
@@ -189,7 +189,7 @@ shared_context 'TariffRate::CostaRica data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::CostaRica] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/costa_rica/expected_results.json").read)
   end
 end
 
@@ -224,7 +224,7 @@ shared_context 'TariffRate::DominicanRepublic data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::DominicanRepublic] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/dominican_republic/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/dominican_republic/expected_results.json").read)
   end
 end
 
@@ -259,7 +259,7 @@ shared_context 'TariffRate::ElSalvador data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::ElSalvador] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/el_salvador/expected_results.json").read)
   end
 end
 
@@ -294,7 +294,7 @@ shared_context 'TariffRate::Guatemala data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Guatemala] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/guatemala/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/guatemala/expected_results.json").read)
   end
 end
 
@@ -329,7 +329,7 @@ shared_context 'TariffRate::Honduras data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Honduras] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/honduras/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/honduras/expected_results.json").read)
   end
 end
 
@@ -364,7 +364,7 @@ shared_context 'TariffRate::Morocco data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Morocco] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/morocco/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/morocco/expected_results.json").read)
   end
 end
 
@@ -399,7 +399,7 @@ shared_context 'TariffRate::Nicaragua data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Nicaragua] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/nicaragua/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/nicaragua/expected_results.json").read)
   end
 end
 
@@ -434,7 +434,7 @@ shared_context 'TariffRate::Oman data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Oman] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/oman/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/oman/expected_results.json").read)
   end
 end
 
@@ -469,7 +469,7 @@ shared_context 'TariffRate::Panama data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Panama] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/panama/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/panama/expected_results.json").read)
   end
 end
 
@@ -504,7 +504,7 @@ shared_context 'TariffRate::Peru data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Peru] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/peru/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/peru/expected_results.json").read)
   end
 end
 
@@ -539,7 +539,7 @@ shared_context 'TariffRate::Singapore data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::Singapore] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/singapore/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/singapore/expected_results.json").read)
   end
 end
 
@@ -574,7 +574,7 @@ shared_context 'TariffRate::SouthKorea data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TariffRate::SouthKorea] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/tariff_rates/south_korea/expected_results.json").read)
+                   "#{File.dirname(__FILE__)}/tariff_rates/south_korea/expected_results.json").read)
   end
 end
 

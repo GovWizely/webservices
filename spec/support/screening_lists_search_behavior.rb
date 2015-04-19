@@ -20,7 +20,7 @@ shared_context 'ScreeningList::Part561 data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Part561] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/part561/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/part561/expected_results.json").read)
   end
 end
 
@@ -56,7 +56,7 @@ shared_context 'ScreeningList::Isa data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isa] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/isa/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/isa/expected_results.json").read)
   end
 end
 
@@ -92,7 +92,7 @@ shared_context 'ScreeningList::Sdn data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Sdn] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/sdn/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/sdn/expected_results.json").read)
   end
 end
 
@@ -200,7 +200,7 @@ shared_context 'ScreeningList::Fse data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Fse] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/fse/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/fse/expected_results.json").read)
   end
 end
 
@@ -236,7 +236,7 @@ shared_context 'ScreeningList::El data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::El] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/el/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/el/expected_results.json").read)
   end
 end
 
@@ -260,7 +260,7 @@ shared_context 'ScreeningList::Dpl data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dpl] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/dpl/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/dpl/expected_results.json").read)
   end
 end
 
@@ -296,7 +296,7 @@ shared_context 'ScreeningList::Uvl data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Uvl] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/uvl/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/uvl/expected_results.json").read)
   end
 end
 
@@ -324,7 +324,7 @@ shared_context 'ScreeningList::Isn data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isn] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/isn/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/isn/expected_results.json").read)
   end
 end
 
@@ -342,7 +342,7 @@ shared_context 'ScreeningList::Dtc data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dtc] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/dtc/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/dtc/expected_results.json").read)
   end
 end
 
@@ -360,7 +360,7 @@ shared_context 'ScreeningList::Plc data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Plc] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/plc/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/plc/expected_results.json").read)
   end
 end
 
@@ -396,7 +396,7 @@ shared_context 'ScreeningList::Ssi data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Ssi] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/screening_lists/ssi/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/ssi/expected_results.json").read)
   end
 end
 
