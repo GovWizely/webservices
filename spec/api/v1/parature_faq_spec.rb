@@ -10,7 +10,7 @@ describe 'Parature Faq API V1', type: :request do
 
   let(:search_path) { '/ita_faqs/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faq/results.yaml") }
+  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faqs/results.yaml") }
 
   describe 'GET /ita_faqs/search.json' do
 

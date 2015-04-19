@@ -709,9 +709,9 @@
   :question: How do I import products into the United States?
   :answer: Please contact U.S. Customs and Border Protection.
   :update_date: '2013-01-11'
-  :topic: []
-  :industry:
+  :topic:
   - Importing
+  :industry: []
   :country: []
 - :id: '73'
   :question: Does a North American Free Trade Agreement (NAFTA) Certificate of Origin

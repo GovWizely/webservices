@@ -11,7 +11,7 @@ describe 'Parature Faq API V2', type: :request do
   end
 
   let(:search_path) { '/ita_faqs/search' }
-  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faq/results.yaml") }
+  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faqs/results.yaml") }
 
   describe 'GET /ita_faqs/search.json' do
 
