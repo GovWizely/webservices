@@ -4,7 +4,7 @@ describe TradeLead::StateData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/state" }
   let(:fixtures_file) { "#{fixtures_dir}/state_trade_leads.json" }
   let(:importer) { described_class.new(fixtures_file) }
-  let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
+  let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/state/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 

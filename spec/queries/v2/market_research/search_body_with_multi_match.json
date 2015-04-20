@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["description", "title"],
+            "operator": "and",
+            "query": "workboat"
+          }
+        }
+      ]
+    }
+  }
+}

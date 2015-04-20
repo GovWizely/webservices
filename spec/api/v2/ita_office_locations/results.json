@@ -1,0 +1,40 @@
+[
+    {
+        "id": "US:SanJoseCA",
+        "post": "San Jose CA",
+        "office_name": "San Jose (Silicon Valley) U.S. Export Assistance Center",
+        "country": "US",
+        "state": "CA",
+        "city": "San Jose",
+        "address": [
+            "San Jose (Silicon Valley) U.S. Export Assistance Center",
+            "55 South Market St., Suite 1040",
+            "San Jose, CA 95113",
+            "http://www.buyusa.gov/siliconvalley"
+        ],
+        "email": "Joanne.Vliet@trade.gov",
+        "fax": "408-535-2758",
+        "mail_instructions": null,
+        "phone": "408-535-2757",
+        "post_type": "D"
+    },
+    {
+        "id": "CR:SanJose",
+        "post": "San Jose",
+        "office_name": "San Jose",
+        "country": "CR",
+        "state": null,
+        "city": "San Jose",
+        "address": [
+            "Embajada de Estados Unidos FCS",
+            "Carretera a Pavas",
+            "Frente al Centro Commercial del Oeste",
+            "Pavas, San Jose"
+        ],
+        "email": "Office.SanJose@trade.gov",
+        "fax": "506-2231-4783",
+        "mail_instructions": "If sent via UPS or Fedex, please write down \"Diplomatic Cargo\" (to avoid import duties and waiting time on delivery)",
+        "phone": "506 2519-2000 or 2220-2454",
+        "post_type": "F"
+    }
+]

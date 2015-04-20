@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe CountryCommercialGuideQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/country_commercial_guides" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/country_commercial_guide" }
 
   describe '#generate_search_body' do
 

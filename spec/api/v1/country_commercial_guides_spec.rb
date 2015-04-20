@@ -7,7 +7,7 @@ describe 'Country Commercial Guide API V1', type: :request do
     CountryCommercialGuideData.new(
       "#{Rails.root}/spec/fixtures/country_commercial_guides").import
     @all_possible_full_results =
-      YAML.load_file("#{Rails.root}/spec/fixtures/country_commercial_guides/results.yaml")
+      YAML.load_file("#{File.dirname(__FILE__)}/country_commercial_guide/results.yaml")
   end
 
   let(:search_path) { '/country_commercial_guides/search' }

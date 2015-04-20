@@ -1,8 +1,7 @@
 require 'spec_helper'
 
 describe TradeLead::FbopenImporter::PatchData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
-  let(:resource)     { "#{fixtures_dir}/patch_source_example_input" }
+  let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
 
   describe '#import' do
@@ -27,7 +26,7 @@ describe TradeLead::FbopenImporter::PatchData do
   end
 
   describe '#leads' do
-    let(:expected_lead_data) { YAML.load_file("#{fixtures_dir}/expected_leads.yaml") }
+    let(:expected_lead_data) { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
     it 'correctly transform leads from dump' do
       leads = importer.leads
       expected_lead_data.each_with_index { |expected_lead, index| expect(leads[index]).to eq(expected_lead) }

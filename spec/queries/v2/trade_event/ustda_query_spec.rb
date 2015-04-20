@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe V2::TradeEvent::UstdaQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_events/ustda" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/ustda" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'
@@ -33,7 +33,7 @@ describe V2::TradeEvent::UstdaQuery do
 
     context 'when options include industries' do
       let(:query) { described_class.new(industries: 'fishing,swimming') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_industries_v2.json").read }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_match_industries.json").read }
 
       it 'generates search body with queries' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)

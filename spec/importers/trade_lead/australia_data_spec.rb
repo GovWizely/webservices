@@ -1,10 +1,10 @@
 require 'spec_helper'
 
 describe TradeLead::AustraliaData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/australia" }
-  let(:fixtures_file) { "#{fixtures_dir}/trade_leads.csv" }
+  let(:fixtures_dir) { '' }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv" }
   let(:importer) { described_class.new(fixtures_file) }
-  let(:trade_leads_hash) { YAML.load_file("#{fixtures_dir}/trade_leads.yaml") }
+  let(:trade_leads_hash) { YAML.load_file("#{File.dirname(__FILE__)}/australia/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 

@@ -1,8 +1,8 @@
 require 'spec_helper'
 
 describe TradeArticleData do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_articles" }
-  let(:fixtures_file) { "#{fixtures_dir}/trade_articles.json" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/trade_article" }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/trade_articles/trade_articles.json" }
   let(:importer) { TradeArticleData.new(fixtures_file) }
   let(:trade_articles_hash) { YAML.load_file("#{fixtures_dir}/trade_articles.yaml") }
 

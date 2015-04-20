@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ParatureFaqQuery do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/parature_faq" }
 
   describe '#generate_search_body' do
 

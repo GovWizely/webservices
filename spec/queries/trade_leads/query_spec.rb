@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe TradeLead::Query do
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads" }
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/query" }
 
   describe '#new' do
     it_behaves_like 'a paginated query'

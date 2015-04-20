@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V1', type: :request do
+
   before(:all) do
     ParatureFaq.recreate_index
     ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml",
@@ -9,7 +10,7 @@ describe 'Parature Faq API V1', type: :request do
 
   let(:search_path) { '/ita_faqs/search' }
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { YAML.load_file("#{Rails.root}/spec/fixtures/parature_faqs/importer_output.yaml") }
+  let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faqs/results.yaml") }
 
   describe 'GET /ita_faqs/search.json' do
 

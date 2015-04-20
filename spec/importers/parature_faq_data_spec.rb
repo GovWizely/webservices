@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe ParatureFaqData do
   before { ParatureFaq.recreate_index }
-  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs" }
+  let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs/" }
   let(:resource) { "#{fixtures_dir}/articles/article%d.xml" }
   let(:folders_resource) { "#{fixtures_dir}/folders.xml" }
   let(:importer) { ParatureFaqData.new(resource, folders_resource) }
@@ -10,7 +10,7 @@ describe ParatureFaqData do
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    let(:entry_hash) { YAML.load_file("#{fixtures_dir}/importer_output.yaml") }
+    let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faq/results.yaml") }
 
     it 'loads parature faqs from specified resource' do
       expect(ParatureFaq).to receive(:index) do |entries|

@@ -22,7 +22,7 @@ shared_context 'TradeEvent::Ita data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v1/ita/results.json").read)
   end
 end
 
@@ -34,7 +34,7 @@ shared_context 'TradeEvent::Ita data v2' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/results_v2.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v2/ita/results.json").read)
   end
 end
 
@@ -96,7 +96,7 @@ shared_context 'TradeEvent::Sba data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/sba/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v1/sba/results.json").read)
   end
 
   before do
@@ -114,7 +114,7 @@ shared_context 'TradeEvent::Sba data v2' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/sba/results_v2.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v2/sba/results.json").read)
   end
 
   before do
@@ -168,7 +168,7 @@ shared_context 'TradeEvent::Exim data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Exim] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/exim/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v1/exim/results.json").read)
   end
 
   before do
@@ -186,7 +186,7 @@ shared_context 'TradeEvent::Exim data v2' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Exim] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/exim/results_v2.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v2/exim/results.json").read)
   end
 
   before do
@@ -219,7 +219,7 @@ shared_context 'TradeEvent::Ustda data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/ustda/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v1/ustda/results.json").read)
   end
 
   before do
@@ -234,7 +234,7 @@ shared_context 'TradeEvent::Ustda data v2' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/ustda/results_v2.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v2/ustda/results.json").read)
   end
 
   before do
@@ -286,7 +286,7 @@ shared_context 'TradeEvent::Dl data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Dl] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/dl/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v1/dl/results.json").read)
   end
 
   before do
@@ -303,7 +303,7 @@ shared_context 'TradeEvent::Dl data v2' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Dl] = JSON.parse(open(
-      "#{Rails.root}/spec/fixtures/trade_events/dl/results_v2.json").read)
+      "#{File.dirname(__FILE__)}/trade_events/v2/dl/results.json").read)
   end
 
   before do

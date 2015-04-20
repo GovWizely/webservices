@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe 'ITA Office Locations API V1', type: :request do
+
   before(:all) do
     ItaOfficeLocation.recreate_index
     fixtures_dir = "#{Rails.root}/spec/fixtures/ita_office_locations"
@@ -8,7 +9,7 @@ describe 'ITA Office Locations API V1', type: :request do
   end
 
   let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
-  let(:expected_results) { JSON.parse open("#{Rails.root}/spec/fixtures/ita_office_locations/results.json").read }
+  let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_office_locations/results.json").read }
 
   describe 'GET /ita_office_locations/search.json' do
 

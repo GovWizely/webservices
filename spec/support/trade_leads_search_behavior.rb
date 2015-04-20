@@ -15,7 +15,7 @@ shared_context 'TradeLead::Australia data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Australia] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/trade_leads/australia/results.json").read)
+                   "#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read)
   end
 end
 
@@ -51,7 +51,7 @@ shared_context 'TradeLead::Canada data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Canada] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/trade_leads/canada/results.json").read)
+                   "#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read)
   end
 
 end
@@ -100,7 +100,7 @@ shared_context 'TradeLead::Fbopen data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Fbopen] = JSON.parse(open(
-                   "#{Rails.root}/spec/fixtures/trade_leads/fbopen/results.json").read)
+                   "#{File.dirname(__FILE__)}/trade_leads/fbopen/results.json").read)
   end
 end
 
@@ -136,7 +136,7 @@ shared_context 'TradeLead::State data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::State] = JSON.parse(open(
-    "#{Rails.root}/spec/fixtures/trade_leads/state/results.json").read)
+    "#{File.dirname(__FILE__)}/trade_leads/state/results.json").read)
   end
 end
 
@@ -190,7 +190,7 @@ shared_context 'TradeLead::Uk data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Uk] = JSON.parse(open(
-    "#{Rails.root}/spec/fixtures/trade_leads/uk/results.json").read)
+    "#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read)
   end
 end
 

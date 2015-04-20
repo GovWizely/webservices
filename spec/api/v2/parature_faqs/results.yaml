@@ -1,0 +1,733 @@
+---
+- :id: '1'
+  :question: Sample Reference
+  :answer: Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris eu risus
+    in leo bibendum sodales in ac dui. Class aptent taciti sociosqu ad litora torquent
+    per conubia nostra, per inceptos himenaeos. Mauris aliquam lectus ut odio commodo
+    at vestibulum mauris posuere. Nulla facilisi. Fusce at nunc mauris. Sed nec augue
+    quis elit rutrum vehicula ut at eros. Pellentesque mattis posuere elit sed condimentum.
+    Aenean mi nisi, aliquam non porttitor ut, euismod suscipit quam. Aliquam sit amet
+    nulla et velit accumsan adipiscing eget vitae mauris. Phasellus ut arcu mauris.
+    Ut ut dolor neque. Ut mauris orci, congue mattis dictum quis, pharetra at risus.
+    Nulla pretium arcu eu arcu porttitor at rutrum est placerat. Suspendisse dignissim
+    tincidunt ipsum a vulputate. Fusce tincidunt, felis ac luctus sodales, elit tellus
+    tempus magna, quis vestibulum tortor dolor hendrerit mi. Aenean libero metus,
+    bibendum at commodo id, fringilla quis nisl. Vivamus erat lorem, suscipit vitae
+    venenatis sed, vulputate nec est. Nunc quam sem, ultricies eu rutrum sit amet,
+    posuere convallis est. Vestibulum iaculis neque metus, blandit commodo lorem.
+    Etiam imperdiet diam a quam feugiat non fermentum libero posuere. Lorem ipsum
+    dolor sit amet, consectetur adipiscing elit. Nullam non magna nec velit ornare
+    convallis non a lacus. Suspendisse justo sapien, gravida tempor consequat eget,
+    suscipit in mauris. Curabitur id quam eu velit varius varius vitae ut arcu. Curabitur
+    congue sollicitudin nisi. Mauris et dolor quam. Ut feugiat velit vitae libero
+    facilisis a iaculis mi malesuada. Aliquam urna erat, mollis et mollis et, imperdiet
+    nec odio. Fusce egestas neque a ante semper semper. Vivamus lacinia, neque sit
+    amet gravida facilisis, lectus augue aliquam neque, a placerat neque nibh ac leo.
+    Fusce nulla dui, volutpat eget ullamcorper a, mattis gravida neque. Morbi pretium,
+    augue a convallis pharetra, enim ante lobortis arcu, ac varius massa sem ut ligula.
+    Quisque nibh tellus, porta rhoncus ullamcorper sit amet, ultrices sed sem. Phasellus
+    rutrum odio sit amet turpis dignissim laoreet. Quisque varius interdum tempor.
+    Nulla placerat posuere tortor, ac aliquam metus lacinia vitae. Donec pharetra,
+    mauris et placerat luctus, augue odio rhoncus nunc, eget ornare sapien lacus at
+    magna. Vivamus massa odio, bibendum ut mollis eu, sagittis vel nibh. Aliquam sit
+    amet erat tellus, quis pharetra dolor. Vestibulum et velit felis. Donec dui elit,
+    venenatis sed laoreet eu, lacinia sed purus. Nullam mollis elit eget augue pharetra
+    mollis. Cras ante dolor, semper et euismod vel, aliquam eu neque. Maecenas posuere
+    rhoncus justo in mollis. Suspendisse consequat varius odio id fringilla. Etiam
+    purus orci, feugiat sit amet vestibulum et, sagittis quis risus. Cum sociis natoque
+    penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nam lorem orci,
+    adipiscing sed pellentesque at, scelerisque ut elit. Nulla sed dui erat, id faucibus
+    urna. Sed ultricies mollis nisl, a lobortis purus adipiscing vitae.
+  :update_date: '2013-01-03'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '2'
+  :question: What is the TPCC ?
+  :answer: 'The Trade Promotion Coordinating Committee (TPCC) is an inter-agency task
+    force that ensures the coordination and development of a government-wide export
+    promotion plan. It is made up of 20 agencies with a core of 7 agencies: Department
+    of Commerce (DOC) Export-Import Bank Overseas Private Investment Corporation (OPIC)
+    U.S. Trade and Development Agency (USTDA) Small Business Administration (SBA)
+    Department of State Department of Agriculture (USDA) This committee is chaired
+    by the Secretary of Commerce and the Under Secretary of Commerce for International
+    Trade. The TPCC has four main customer service initiatives: Training Trade specialists
+    are trained as account managers that are aware of all TPCC agency programs and
+    can assist in guiding you to the agency that can best assist you. Marketing Export
+    information is disseminated through a variety of programs, such as Export.gov,
+    USA export pavilion and the Ex-Im/SBA joint outreach program. Program Integration
+    The TPCC agencies work together in providing services to US companies, such as
+    Ex-IM/SBA Working Capital Co-guarantee and the Joint CS-State Partner Post Program.
+    Information Sharing Agency databases are shared with other TPCC agencies through
+    system integration, allowing the TPCC to provide U.S. companies with the most
+    accurate and relevant information quickly.'
+  :update_date: '2013-03-28'
+  :topic:
+  - About Export.gov
+  - TPCC
+  :industry: []
+  :country: []
+- :id: '3'
+  :question: Can U.S. companies self-certify for the CE Marking?
+  :answer: 'Most products covered by New Approach Directives can be self-certified
+    by the manufacturer and do not require the intervention of an EU-authorized testing/certifying
+    company called a notified body. To self-certify, the manufacturer must assess
+    the conformity of the products to the applicable directives and standards. While
+    the use of EU harmonized standards is voluntary in theory, in practice the use
+    of European standards is the best way to meet the requirements of the CE marking
+    directives, especially in the case of the Electromagnetic Compatibility (EMC)
+    and Low Voltage Directives. (The word "harmonized" means that the standards have
+    been approved by all 27 European Union countries). The standards offer specific
+    guidelines and tests to meet safety requirements, while the directives are more
+    general and do not, in most cases, offer detailed specifications on how to meet
+    safety requirements. The Machine Directive, however, does offer more detailed
+    information on how to meet safety requirements than most other CE marking directives.
+    U.S. companies can self-certify to the CE marking requirements of the Machine
+    Directive by meeting the provisions of the directive whether they use European,
+    international or U.S. standards. The manufacturer may affix the CE marking to
+    his product once he''s prepared a declaration of conformity, the certificate which
+    shows the product conforms to the applicable requirements. He must maintain a
+    technical file to prove conformity. The manufacturer or his authorized representative
+    must be able to provide this certificate together with the technical file at any
+    time, if requested by the appropriate member state authorities. There is no specific
+    form for the declaration of conformity but specific information is required. The
+    declaration must include the following: the manufacturer''s name and address;
+    the product description; the CE marking directives that apply to the product the
+    European standards used; and, the signature of a company official for purposes
+    of the company assuming liability for the safety of its product in the European
+    market.'
+  :update_date: '2013-03-19'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '4'
+  :question: Despite my CE marking why does my importer ask for an A.TR-1 Certificate?
+    What is the A.TR-1-Certificate?
+  :answer: In the early stages of EU directives implementation, the Government of
+    Turkey exhibited a bias towards CE marked products originating in Europe. The
+    Government was suspicious of certificates of conformity originating outside of
+    the European Union. The A.TR-1 Certificate is a document that establishes that
+    goods are freely allowed to be sold to Turkey within the scope of Turkey's Customs
+    Union with the European Union. Initially, companies were able to clear Turkish
+    Customs easily by providing the Certificate of Conformity and the A.TR-1. Companies
+    asked to ship via the European Union or are asked to acquire an A.TR-1 Certificate
+    should contact the U.S. Embassy's Commercial Section for resolution of this matter.
+    Any U.S. company providing evidence of directives conformity should be allowed
+    access to the Turkish market without having to transship via the European continent.
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '5'
+  :question: Do Turkish manufacturers need to confirm conformity of the EU New Approach
+    (CE) Directives?
+  :answer: In April 2004, the Government of Turkey announced the adoption of the CE
+    marking for imported products only. The Government of Turkey (Ministry of Industry,
+    the Ministry of Labor and Social Security and the Ministry of Health) will need
+    to promulgate regulations and legislation to have local companies also produce
+    in compliance to the CE marking. At this time, the European Commission has not
+    approved a Notified Body in Turkey. Therefore, Turkish companies requiring Notified
+    Body conformity assessments must have products tested outside of Republic of Turkey.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country:
+  - TR
+- :id: '6'
+  :question: Does Turkey now require the CE Marking?
+  :answer: '1. My importer informed me that products being exported to Turkey require
+    CE marking - is that true? On April 2004, The Government of Turkey''s Undersecretariat
+    for Foreign Trade announced the implementation of twenty-three European Union
+    industrial directives, which would affect an estimated 70% of the manufactured
+    products imported into Turkey. The Undersecretariat for Foreign Trade has adopted
+    the EU''s Low Voltage Directive, the Simple Pressure Vessels Directive, the Gas
+    Appliances Directive, the Hot Water Boilers Directive, the EMC, the Machinery
+    Directive, the Civil Explosives Directive, the Weighing Instruments Directive,
+    the Equipment and Protective Systems Intended in Explosive Atmospheres Directive,
+    the Lifts Directive (elevators), the Household Refrigerator/Freezer Directive,
+    the Pressure Equipment Directive, the Noise Emission Directive, the Energy Efficiency
+    for Ballast for Fluorescent Lighting Directive, the Active Implantable Medical
+    Device Directive, the Medical Device Directive, the In Vitro Diagnostics Device
+    Directive, the Toy Directive, the Recreational Water Craft Directive, the Construction
+    Equipment Directive, the Personal Protective Equipment Directive, the Radio and
+    Telecommunications Terminal Equipment Directive and the Cableway Directive (ski
+    lifts and gondolas). All products that are deemed to fall within the European
+    Union (EU) directives would need to conform to the directives in order to be sold
+    in Turkey. 2. My importer informed me that I need a Certificate of Conformity
+    issued by a Notified Body/Laboratory, is this true? Equipment meeting the directive
+    definition of products needing to conform to EU technical regulations must have
+    evidence of meeting the requirements either through verified laboratory testing
+    conducted by an EU approved notified body or by manufacturer''s self-declaration
+    if the directive dictates. Companies selling to the Turkish market must submit
+    evidence of conformity compliance (CE Marking) either by providing a notarized/consularized
+    conformity certificate from a notified body or a corporate issued certificate
+    of conformity, which declares compliance of all relevant standards and directive
+    annexes. If the EU directives allow for company or self-declaration of conformity,
+    then this would need to be accepted by the Republic of Turkey as well. For companies
+    having difficulty in having its corporate declaration approved by the Government
+    of Turkey, please contact Commercial Assistant Ms. Ozge Cirika at Ozge.Cirika@mail.doc.gov.
+    3. I supplied a corporate certificate of conformity with my shipping documents,
+    why are my goods still detained at Turkish Customs? As Turkey has adopted the
+    European Union New Approach Directives, it is still undergoing a learning process
+    as to what are the Directives and what is CE marking. Exporters and importers
+    are often asked for Certificates of Conformity prepared by EU recognized Notified
+    Bodies. If a customs detainment takes place for companies that are allowed to
+    self certify conformity based on the EU directives (i.e. low voltage, electromagnetic
+    compatibility, portions of the machinery directive etc.), you would only need
+    to contact Ms. Ozge Cirika at Ozge.Cirika@mail.doc.gov, and the Undersecretariat
+    for Foreign Trade will be notified and a request to have the shipment released
+    would be made. 5. I have been selling to the European Union without CE marking,
+    why am I required to have CE marking for Turkey? As Turkey implemented the New
+    Approach (CE marking) directives, it is still undergoing a learning process. Given
+    that there is a full range of products not falling under the CE marking regulations,
+    not all products are required to be CE marked or need to conform to EU standards.
+    If companies find that the Government of Turkey asks for CE marking when none
+    is required, please contact Ms. Cirika at Ozge.Cirika@mail.doc.gov immediately.
+    The Commercial Section will request that the Undersecretariat for Foreign Trade
+    inform both Turkish Customs and the appropriate ministries to have the shipment
+    released. 6. My importer informs me that my CE marked product would need to be
+    inspected by the Turkish Standards Institute-is this true? When Turkey adopted
+    the European New Approach Directive, products that are deemed to conform to the
+    directives would not need to be inspected by the Turkish Standards Institute.
+    As is the case in the EU, if Customs officers or the Government of Turkey believe
+    that a product bearing CE marking may not be in conformity with the EU regulations,
+    Turkish testing could be authorized. For U.S. companies being asked to have its
+    products undergo additional Turkish Standards Institute testing despite evidence
+    of directives conformity, please contact the Commercial Service in Ankara immediately.
+    7. Despite my CE marking why does my importer ask for an A.TR-1 Certificate? What
+    is the A.TR-1-Certificate? In the early stages of EU directives implementation,
+    the Government of Turkey exhibited a bias towards CE marked products originating
+    in Europe. The Government was suspicious of certificates of conformity originating
+    outside of the European Union. The A.TR-1 Certificate is a document that establishes
+    that goods are freely allowed to be sold to Turkey within the scope of Turkey''s
+    Customs Union with the European Union. Initially, companies were able to clear
+    Turkish Customs easily by providing the Certificate of Conformity and the A.TR-1.
+    Companies asked to ship via the European Union or are asked to acquire an A.TR-1
+    Certificate should contact the U.S. Embassy''s Commercial Section for resolution
+    of this matter. Any U.S. company providing evidence of directives conformity should
+    be allowed access to the Turkish market without having to transship via the European
+    continent. 8. Do Turkish manufacturers need to confirm conformity of the EU New
+    Approach (CE) Directives? In April 2004, the Government of Turkey announced the
+    adoption of the CE marking for imported products only. The Government of Turkey
+    (Ministry of Industry, the Ministry of Labor and Social Security and the Ministry
+    of Health) will need to promulgate regulations and legislation to have local companies
+    also produce in compliance to the CE marking. At this time, the European Commission
+    has not approved a Notified Body in Turkey. Therefore, Turkish companies requiring
+    Notified Body conformity assessments must have products tested outside of Republic
+    of Turkey. 9. Who can I call on if I have a standards problem in Turkey? The United
+    States Embassy''s Commercial Section has been assisting U.S. companies, which
+    meet EU directives conformity, in having products clear Turkish Customs as expeditiously
+    as possible. The Commercial Section is also working to have the Government of
+    Turkey accept CE conformity certification from U.S. corporations or Notified Bodies,
+    without having U.S. companies face additional bureaucratic delays at customs and
+    additional testing at the Turkish Standards Institute. For additional assistance
+    in navigating the CE Marking regulations in Turkey, please contact our Commercial
+    Assistant at Ozge.Cirika@mail.doc.gov. 10. Where can I find information on the
+    CE Marking on the Internet? For additional information on the European Union Directives
+    and European standards, please check the websites listed below: http://ts.nist.gov/Standards/Conformity/export-eu.cfm
+    www.buyusa.gov/europeanunion http://ec.europa.eu/enterprise/index_en.htm www.newapproach.org'
+  :update_date: '2013-03-19'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '7'
+  :question: How do European standards relate to the CE Marking?
+  :answer: 'Prior to the harmonization of standards under the New Approach, each European
+    country developed its own standards through a national standards body. The new
+    system provides for three standards bodies to create standards on a Europe-wide
+    scale: The European Committee for Standardization (CEN) in Brussels, Belgium;
+    the European Committee for Electrotechnical Standardization (CENELEC) in Brussels;
+    3) the European Telecommunications Standards Institute (ETSI) in Sophia Antipolis,
+    France. CENELEC activities are in the electrotechnical sector, while ETSI specializes
+    in telecommunications. CEN covers all other sectors. CEN and CENELEC''s principal
+    members are national standards bodies, while ETSI''s membership incorporates a
+    wider range of interested parties. These three are the only bodies that can develop
+    a European standard (EN). When work on a European standard begins in one of these
+    standards bodies, work on a corresponding national standard must stop. European
+    standards, like European laws and European conformity assessment procedures, preempt
+    and replace national (member state) standards. The European standards (ENs) that
+    play a role in New Approach Directives are known as "harmonized standards." These
+    standards supporting European legislation: are mandated by the European Commission;
+    have been developed by the European standards bodies listed above, and address
+    essential requirements of the New Approach Directives. These standards become
+    officially recognized as harmonized standards when they are cited in the Official
+    Journal of the European Communities. There is a vast body of European standards
+    that is not mandated by the European Commission. These standards are not directed
+    towards either the Old Approach or the New Approach Directives. While the use
+    of these standards is in theory voluntary, they can support claims of a product''s
+    quality either for marketing or legal purposes. These standards cover such products
+    as furniture, household appliances (non-electrical), sports equipment, carpeting,
+    footwear and small hand-held tools (which are not covered by the Machinery Directive).
+    They define characteristics such as durability, appearance, and quality.'
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '8'
+  :question: I have been selling to the European Union without CE marking, why am
+    I required to have CE marking for Turkey?
+  :answer: As Turkey implemented the New Approach (CE marking) directives, it is still
+    undergoing a learning process. Given that there is a full range of products not
+    falling under the CE marking regulations, not all products are required to be
+    CE marked or need to conform to EU standards. If companies find that the Government
+    of Turkey asks for CE marking when none is required, please contact Ms. Cirika
+    at Ozge.Cirika@mail.doc.gov immediately. The Commercial Section will request that
+    the Undersecretariat for Foreign Trade inform both Turkish Customs and the appropriate
+    ministries to have the shipment released.
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '9'
+  :question: I supplied a corporate certificate of conformity with my shipping documents,
+    why are my goods still detained at Turkish Customs?
+  :answer: As Turkey has adopted the European Union New Approach Directives, it is
+    still undergoing a learning process as to what are the Directives and what is
+    CE marking. Exporters and importers are often asked for Certificates of Conformity
+    prepared by EU recognized Notified Bodies. If a customs detainment takes place
+    for companies that are allowed to self certify conformity based on the EU directives
+    (i.e. low voltage, electromagnetic compatibility, portions of the machinery directive
+    etc.), you would only need to contact Ms. Ozge Cirika at Ozge.Cirika@mail.doc.gov,
+    and the Undersecretariat for Foreign Trade will be notified and a request to have
+    the shipment released would be made.
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '10'
+  :question: Is ISO 9000 required in order to get the CE Marking?
+  :answer: ISO 9000 registration (or EN 29000 certification) is used widely in Europe
+    on a voluntary basis as a condition of acceptance of a manufacturer's product
+    or as a way of recognizing the manufacturer's credibility. While a quality system
+    such as ISO 9000 indicates that a company has an efficient organization structure
+    and has low failure costs, it does not always certify conformity with the CE marking
+    directives. However, some directives require use of a quality management system
+    as part of the conformity assessment. For example, the Machine Directive requires
+    manufacturers to set up a quality control system to make sure that future products
+    coming off an assembly line meet CE marking requirements. However, the quality
+    control system does not have to be ISO 9000, although ISO 9000 is a good choice,
+    since it is widely recognized. The Medical Device Directive does require ISO 9000
+    (EN 13485) as part of the conformity assessment process.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '11'
+  :question: My importer informed me that I need a Certificate of Conformity issued
+    by a Notified Body/Laboratory, is this true?
+  :answer: Equipment meeting the directive definition of products needing to conform
+    to EU technical regulations must have evidence of meeting the requirements either
+    through verified laboratory testing conducted by an EU approved notified body
+    or by manufacturer's self-declaration if the directive dictates. Companies selling
+    to the Turkish market must submit evidence of conformity compliance (CE Marking)
+    either by providing a notarized/consularized conformity certificate from a notified
+    body or a corporate issued certificate of conformity, which declares compliance
+    of all relevant standards and directive annexes. If the EU directives allow for
+    company or self-declaration of conformity, then this would need to be accepted
+    by the Republic of Turkey as well. For companies having difficulty in having its
+    corporate declaration approved by the Government of Turkey, please contact Commercial
+    Assistant Ms. Ozge Cirika at Ozge.Cirika@mail.doc.gov.
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '12'
+  :question: My importer informed me that products being exported to Turkey require
+    CE marking - is that true?
+  :answer: On April 2004, The Government of Turkey's Undersecretariat for Foreign
+    Trade announced the implementation of twenty-three European Union industrial directives,
+    which would affect an estimated 70% of the manufactured products imported into
+    Turkey. The Undersecretariat for Foreign Trade has adopted the EU's Low Voltage
+    Directive, the Simple Pressure Vessels Directive, the Gas Appliances Directive,
+    the Hot Water Boilers Directive, the EMC, the Machinery Directive, the Civil Explosives
+    Directive, the Weighing Instruments Directive, the Equipment and Protective Systems
+    Intended in Explosive Atmospheres Directive, the Lifts Directive (elevators),
+    the Household Refrigerator/Freezer Directive, the Pressure Equipment Directive,
+    the Noise Emission Directive, the Energy Efficiency for Ballast for Fluorescent
+    Lighting Directive, the Active Implantable Medical Device Directive, the Medical
+    Device Directive, the In Vitro Diagnostics Device Directive, the Toy Directive,
+    the Recreational Water Craft Directive, the Construction Equipment Directive,
+    the Personal Protective Equipment Directive, the Radio and Telecommunications
+    Terminal Equipment Directive and the Cableway Directive (ski lifts and gondolas).
+    All products that are deemed to fall within the European Union (EU) directives
+    would need to conform to the directives in order to be sold in Turkey.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country:
+  - TR
+- :id: '13'
+  :question: My importer informs me that my CE marked product would need to be inspected
+    by the Turkish Standards Institute-is this true?
+  :answer: When Turkey adopted the European New Approach Directive, products that
+    are deemed to conform to the directives would not need to be inspected by the
+    Turkish Standards Institute. As is the case in the EU, if Customs officers or
+    the Government of Turkey believe that a product bearing CE marking may not be
+    in conformity with the EU regulations, Turkish testing could be authorized. For
+    U.S. companies being asked to have its products undergo additional Turkish Standards
+    Institute testing despite evidence of directives conformity, please contact the
+    Commercial Service in Ankara immediately.
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '14'
+  :question: Once a U.S. company has certified its product with the CE Marking, is
+    its work done?
+  :answer: No, a major challenge for U.S. firms that have CE-certified their products
+    is to stay current on new standards coming on stream for their products. For example,
+    the European standards bodies have developed some 900 standards for the Low Voltage
+    Directive and around 185 standards for the Electromagnetic Compatibility Directive
+    (EMC). Not only are new standards being issued, but these new standards in some
+    cases have replaced standards that companies may have met earlier. European customs
+    may look for reference numbers of widely-used standards on the Declaration of
+    Conformity to assure compliance of products entering Europe. U.S. companies that
+    use EMC or low voltage standards that have been replaced are considered to be
+    noncompliant with CE marking requirements. Germany is one of the stricter countries
+    for enforcing CE marking requirements. In a recent year the European Commission
+    brought some 200 cases against companies, many in Asia, for noncompliance with
+    the Low Voltage Directive. Some of these cases resulted in bans from the European
+    market. U.S. companies and test houses must keep up-to-date on these new standards
+    that will force changes in their testing and design plans.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '15'
+  :question: Under what conditions are U.S. companies unable to self-certify for the
+    CE Marking?
+  :answer: While manufacturers can self-certify many products under the New Approach
+    Directives, certain high-risk products cannot be self-certified. These higher
+    risk products require the services of a "notified body" within the European Economic
+    Area (EEA). The EEA consists of the EU plus the European Free Trade Association
+    countries of Iceland, Norway, and Liechtenstein, excluding Switzerland. Notified
+    bodies are independent testing houses or laboratories authorized by the EU member
+    states to perform the conformity assessment tasks specified in the directives.
+    A notified body may use a subcontractor to perform part(s) of a conformity assessment
+    procedure. Many U.S. testing houses act as subcontractors to the EU notified bodies.
+    However, the notified body is the ultimate authority, and a company must gain
+    notified body approval in order to claim CE marking compliance for its project.
+    For information on how to obtain a list of notified bodies, look at http://ec.europa.eu/enterprise/newapproach/nando.
+    For a list of U.S. companies that subcontract to EU notified bodies, go to Testing/Certifying
+    Labs on this website.
+  :update_date: '2013-03-19'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '16'
+  :question: What have the Europeans done to enforce the CE Marking requirements and
+    what are the penalties for non-compliance?
+  :answer: 'European national agencies, such as Customs authorities and/or the Departments
+    of Health, Industry and Labor, have been appointed to conduct market surveillance
+    for CE marking. The purpose of this surveillance is to ensure that the provisions
+    of the New Approach Directives have been met for products marketed within the
+    European Union. In pursuit of this goal, surveillance authorities will: visit
+    commercial, industrial and storage premises on a regular basis; visit work places
+    and other premises where products are put into service and used; organize random
+    checks; and, take samples of products for examination and testing. The surveillance
+    authority can ask for the manufacturer''s declaration of conformity and technical
+    file after making a random check. The manufacturer, his authorized representative
+    or the importer must be able to provide the technical file within seven to 10
+    days after the surveillance authority makes the request. If the product is found
+    to be noncompliant, corrective action will depend on and be appropriate to the
+    level of noncompliance. The surveillance authority will hold accountable the person
+    responsible for affixing the CE marking to the noncompliant product. Others responsible
+    for the noncompliance of the product will be held accountable as well. Penalties,
+    which may include imprisonment, are determined by national law.'
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '17'
+  :question: What is the advantage of using European Standards?
+  :answer: Products that meet the applicable technical standards developed by the
+    three standards organizations are presumed to conform to the requirements of EU
+    directives and are allowed to circulate freely within the European Union. Use
+    of European standards is seen as a "fast track" for gaining CE marking compliance
+    for a product. For many products, though, a manufacturer can choose not to comply
+    with the CEN, CENELEC, or ETSI standards, if the firm can demonstrate that its
+    product satisfies the essential safety and health requirements of the directives.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '18'
+  :question: What is the CE Marking, and what is its purpose?
+  :answer: The European Commission describes the CE marking (an acronym for the French
+    phrase "Conformite Europeenne") as a "passport" that allows manufacturers to circulate
+    industrial products freely within the internal market of the EU. The CE marking
+    certifies that the products have met EU health, safety and environmental requirements
+    that ensure consumer and workplace safety. All manufacturers in the EU and abroad
+    must affix the CE marking to those products covered by the "New Approach" directives
+    in order to market their products in Europe. Once a product receives the CE marking,
+    it can be marketed throughout the EU without having to undergo further product
+    modification.
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '19'
+  :question: What is the EU's New Approach to product certification?
+  :answer: 'The European Union (EU) developed "New Approach" Directives to streamline
+    product approvals for a broad range of goods in order to facilitate trade within
+    the EU single internal market. The "Old Approach" Directives contained a high
+    degree of technical detail. EU member states introduced national standards or
+    regulations at a faster pace than the European Commission could finalize these
+    "Old Approach" Directives. These national specifications often proved to be trade
+    barriers. New Approach Directives are limited to essential health and safety requirements
+    for sectors such as machinery, electrical products, or medical devices. They do
+    not cover specific products such as motor vehicles, cosmetics, or chemicals, which
+    are still covered under the Old Approach Directives. The main difference between
+    the New and Old Approach Directives is that under the New Approach, the technical
+    details outlining the minimum requirements a product must meet are usually not
+    found in the directive itself. The New Approach Directives are more general. Technical
+    details on how to meet these minimum health and safety requirements are left to
+    the following three groups: 1) Manufacturers who self-certify products by meeting
+    the requirements of the applicable directives, in some cases by using appropriate
+    European standards; 2) the three regional European standards organizations (CEN,
+    CENELEC and ETSI), which now develop Europe-wide standards covering product sectors
+    falling under the New Approach Directives; and, 3) government-appointed product
+    certification bodies (called notified bodies), which provide testing and product
+    approvals. Under the New Approach, the European Commission gives mandates to the
+    European standards organizations to develop technical standards that meet the
+    essential health and safety requirements of CE Marking directives. The New Approach
+    Directives are designed to facilitate product certification, to maintain a high
+    level of consumer and workplace safety, and to expand intra-European trade.'
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '20'
+  :question: What is the significant impact of the radio and telecommunications terminal
+    (R&TTE) Directive?
+  :answer: 'This directive shows how not only standards but directives can change
+    as a result of the CE marking program. The R&TTE Directive (1999/5/EC) went into
+    force on April 8, 2000 and replaces the previous directive on telecommunications
+    terminal equipment (98/13/EC). The purpose of the new directive is to cover both
+    radio and telecommunications terminal equipment. The new R&TTE Directive allows
+    manufacturers of telecommunications terminal equipment to self-certify, an option
+    they didn''t have in the past, by adhering to the appropriate European standards
+    and getting a test result from a qualified laboratory, preferably an EU-affiliate
+    lab. (There are EU-affiliate labs in the United States.) Types of equipment for
+    which manufacturers can now self-certify include fax machines, phones, modems,
+    and digital telecom equipment. Manufacturers of radio communications and wireless
+    equipment will still need to get their product certified at an EU-affiliate lab
+    authorized by a notified body. Under the U.S.-EU Mutual Recognition Agreement
+    (MRA) on telecom, there are now U.S. labs that are certified to do testing and
+    certification for the R&TTE Directive. For a list of these labs, consult the website:
+    http://ts.nist.gov/mra. Manufacturers who have already complied with the old directive
+    (1999/5/EC), and whose product has been put in service will not need to re-certify
+    their products, but they will have to take off the old marking, put on the CE
+    marking, and be able to back up the CE marking with technical documentation. Manufacturers
+    who have products in inventory certified under the old directive will have until
+    April 2001 to sell their products. After that, only products certified under the
+    R&TTE Directive will be allowed to enter the European market. For more information
+    on the R&TTE Directive, consult the website: http://ec.europa.eu/enterprise/rtte/index_en.htm.'
+  :update_date: '2013-01-11'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '21'
+  :question: Where can I find information on the CE Marking on the Internet?
+  :answer: 'For additional information on the European Union Directives and European
+    standards, please check the websites listed below: http://ts.nist.gov/Standards/Conformity/export-eu.cfm
+    www.buyusa.gov/europeanunion http://ec.europa.eu/enterprise/index_en.htm www.newapproach.org'
+  :update_date: '2013-01-11'
+  :topic: []
+  :industry: []
+  :country: []
+- :id: '22'
+  :question: Which product groups are covered by the New Approach Directives?
+  :answer: 'The New Approach Directives are listed on the website: www.newapproach.org.
+    There are New Approach Directives for electronic and electrical products, machinery,
+    medical devices, radio and telecommunications terminal equipment, recreational
+    craft, pressure equipment, equipment for use in potentially explosive atmospheres,
+    personal protective equipment, toys, simple pressure vessels, and others. A company
+    affixes CE marking to its product once the essential health and safety requirements
+    of the applicable New Approach Directive(s) have been met. These directives came
+    about as a way of eliminating trade barriers and facilitating the EU Single Internal
+    Market. Not all products fall under the New Approach Directives. There are essentially
+    three levels of regulatory control: Old Approach - The Old Approach Directives
+    apply to the foodstuff, motor vehicle, chemical, cosmetic, detergents, biocides,
+    and pharmaceutical sectors. These regulations have technical specifications written
+    into the annexes. New Approach - These directives make references to harmonized
+    standards and apply to broad product sectors such as machinery, electrical and
+    electronic products, medical devices, and radio and telecommunications equipment.
+    The directives usually set down general health and safety requirements, and the
+    specifications for meeting these general requirements are found in the standards
+    applicable to the manufacturer''s product. Conformity assessment procedures (the
+    system and responsibilities for testing and certification which should lie with
+    the manufacturer and, where applicable, accredited test laboratories) are also
+    contained in these directives. The General Product Safety Directive (GPSD) covers
+    all products not specifically covered by CE marking directives but which do require
+    some level of safety regulation. These products may also be regulated at the national
+    level by member states. The role of standards in New Approach, Old Approach and
+    GPSD: There is a vast body of European standards. Voluntary industry standards
+    are known as European harmonized standards whenever they are linked to European
+    new approach legislation. European harmonized standards are developed by one of
+    three European standards organizations based on a mandate from the European Commission.
+    Products meeting the applicable technical standards developed by the European
+    standards organizations are presumed to conform to the requirements of EU new
+    approach directives and are allowed to circulate freely within the European Union.
+    Use of the European harmonized standards is seen as a "fast track" for gaining
+    CE marking compliance for a product. For many products, though, a manufacturer
+    can choose not to comply with the CEN, CENELEC, or ETSI standards, if the company
+    can demonstrate that its product satisfies the essential safety and performance
+    requirements of the directives. Old approach legislation may refer to existing
+    standards in the text or annexes, thus becoming mandatory. Technical annexes often
+    are standards in their own right. As for the general product safety directive,
+    safety of products can be demonstrated by using existing standards which have
+    been referenced in the Official Journal, the EU equivalent of the U.S. Federal
+    Register. These standards cover products such as furniture, household appliances
+    (non-electrical), sports equipment, childcare articles, and small hand-held tools.
+    The standards define characteristics such as durability, appearance, and quality.'
+  :update_date: '2013-03-25'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country: []
+- :id: '23'
+  :question: Are there resources in Turkey for dealing with standards problems?
+  :answer: The United States Embassy's Commercial Section has been assisting U.S.
+    companies, which meet EU directives conformity, in having products clear Turkish
+    Customs as expeditiously as possible. The Commercial Section is also working to
+    have the Government of Turkey accept CE conformity certification from U.S. corporations
+    or Notified Bodies, without having U.S. companies face additional bureaucratic
+    delays at customs and additional testing at the Turkish Standards Institute. For
+    additional assistance in navigating the CE Marking regulations in Turkey, please
+    contact our Commercial Assistant at Ozge.Cirika@mail.doc.gov.
+  :update_date: '2013-03-19'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country:
+  - TR
+- :id: '24'
+  :question: Why does the Turkish Customs Authority not accept a Notified Body issued
+    Certificate(s) of Conformity?
+  :answer: Companies selling to the Turkish market must submit evidence of conformity
+    compliance (CE Marking) either by providing a notarized/consularized conformity
+    certificate from a notified body or a corporate issued certificate of conformity,
+    which declares compliance of all relevant standards and directive annexes. Turkish
+    Customs may on occasion question if the certificates are original. In such cases,
+    the company may wish to have the Notified Body Certificate of Conformity or the
+    corporate issued Certificate of Conformity notarized/consularized to confirm document
+    authenticity. For U.S. companies having difficulty in having documents recognized
+    for authenticity, the Commercial Attach can assist in having a consular stamp
+    affixed to your Certificate of Conformity that would be accepted by the Turkish
+    Customs service.
+  :update_date: '2013-03-19'
+  :topic:
+  - CE Marking
+  :industry: []
+  :country:
+  - TR
+- :id: '25'
+  :question: What fish and agricultural opportunities are available to an exporter?
+  :answer: 'The National Marine Fisheries Service (NMFS) is part of the U.S. Department
+    of Commerce''s National Oceanic and Atmospheric Administration (NOAA). NMFS, otherwise
+    known as NOAA Fisheries, works with fishing industry representatives and organizations
+    to facilitate access to foreign markets. In cooperation with the Department of
+    Commerce''s International Trade Administration, NMFS assists exporters seeking
+    information on export inspection services for fishery exports and issues U.S.
+    government certifications. The NMFS can be contacted at: Seafood Inspection Services
+    Division:(301) 713-2355 for information on export inspection services and foreign
+    country requirements. Or visit them online at http://seafood.nmfs.noaa.gov/ National
+    Marine Fisheries Service website: http://www.nmfs.noaa.gov/ The U.S. Department
+    of Agriculture Foreign Agriculture Service (FAS) is the first point of contact
+    for agricultural export advice and information on USDA export and marketing programs,
+    foreign market research, trade data by country and commodity, trade policy and
+    regulations, export sales, and trade leads. The FAS can be contacted at: Office
+    of Trade Programs: (202) 690-3576 Email: USTHelp@fas.usda.gov Internet: http://www.fas.usda.gov
+    The FAS website contains many useful research materials, including World Production,
+    Trade and Market Reports, and Attach Reports.'
+  :update_date: '2013-03-28'
+  :topic:
+  - Expand Your Exports
+  :industry:
+  - Agribusiness
+  :country: []
+- :id: '26'
+  :question: How do I get export assistance?
+  :answer: 'The Global Knowledge Center and USA Trade Center services: Tel: 1-800-USA-TRAD(E)
+    (1-800-872-8723) (Select appropriate menu option) Fax: (202) 482-4473 ~ Email:
+    tic@ita.doc.gov ~ Web: http://www.export.gov/ Free Trade Agreements (FTA) Compliance
+    Team: Tel: 1-800-USA-TRAD(E) (1-800-872-8723) (Select appropriate "regional" option)
+    Fax: (202) 482-4473 ~ Email: tic@ita.doc.gov ~ Web: http://www.export.gov/fta
+    China Business Information Center (China BIC): Tel: 1-800-USA-TRAD(E) (1-800-872-8723)
+    (select "China" regional option) Fax: (202) 482-4473 ~ Email: chinabic@mail.doc.gov
+    ~ Web: http://www.export.gov/china Middle East & North Africa Business Information
+    Center (MENABIC): Tel: 1-800-USA-TRAD(E) (1-800-872-8723) (select "Mid-East" regional
+    option) Fax: (202) 482-4473 ~ Email: menabic@mail.doc.gov ~ Web: http://www.export.gov/middleeast
+    Business Information Service for the Newly Independent States (BISNIS): Tel: 1-800-USA-TRAD(E)
+    (1-800-872-8723) or (202) 482-4655 (select "NIS" option) Fax: (202) 482-2293 ~
+    Email: bisnis@ita.doc.gov ~ Web: http://www.bisnis.doc.gov/'
+  :update_date: '2013-03-28'
+  :topic:
+  - Export Assistance
+  :industry: []
+  :country: []
+- :id: '27'
+  :question: What is the Global Knowledge Center (GKC)? How do I get export assistance?
+  :answer: 'The Global Knowledge Center (GKC) is the first stop for companies seeking
+    export assistance from the U.S. Government. GKC international trade specialists:
+    Advise exporters on how to locate and use government export programs Guide businesses
+    through the export process Direct businesses to market research, statistics, and
+    trade leads Provide information on domestic and overseas trade events and activities
+    Explain sources of public and private export financing Refer businesses to U.S.
+    Export Assistance Centers as-well-as state and local trade organizations that
+    can provide additional ongoing assistance. The GKC also provides export counseling
+    for the Americas (including NAFTA), Europe, the Middle East, Africa, and Asia.
+    GKC international trade specialists can help exporters with questions about: Import
+    tariffs, taxes, and customs procedures, especially for free trade agreements Commercial
+    standards, regulations and practices and intellectual property rights Distribution
+    channels, business travel, and other market information Opportunities and best
+    prospects for U.S. companies in individual markets Difficulties encountered on
+    specific commercial transactions. The GKC is located in the Department of Commerce''s
+    USA Trade Center in Washington, D.C. The USA Trade Center offers specialized services,
+    including counseling on free trade agreements, export licensing, and focus centers
+    for China, the Middle East and North Africa, and the Newly Independent States
+    (Russia and former Soviet republics).'
+  :update_date: '2013-03-28'
+  :topic:
+  - Export Assistance
+  :industry: []
+  :country: []
+- :id: '28'
+  :question: How do I import products into the United States?
+  :answer: Please contact U.S. Customs and Border Protection.
+  :update_date: '2013-01-11'
+  :topic:
+  - Importing
+  :industry: []
+  :country: []
+- :id: '73'
+  :question: Does a North American Free Trade Agreement (NAFTA) Certificate of Origin
+    help declare that products qualify for preferential duty treatment under the CAFTA-DR?
+  :answer: No. The CAFTA-DR differs from NAFTA. Under the CAFTA-DR, there is no standard
+    certificate of origin document to be completed and the rules of origin are different.
+    Each free trade agreement to which the United States is a party has its own unique
+    requirements.
+  :update_date: '2013-04-11'
+  :topic:
+  - Free Trade Agreements
+  - CAFTA-DR
+  :industry: []
+  :country:
+  - CR
+  - DO
+  - SV
+  - GT
+  - HN
