@@ -51,6 +51,7 @@ module TradeLead
             procurement_organization: { type: 'string', analyzer: 'custom_analyzer' },
             source_lead:              { type: 'string', analyzer: 'keyword' },
             source:                   { type: 'string', analyzer: 'keyword' },
+            categories:               { type: 'string', analyzer: 'keyword' },
           },
         },
       }.freeze
