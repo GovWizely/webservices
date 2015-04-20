@@ -241,7 +241,7 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
+                json.fields ['name.keyword', 'alt_names.keyword']
               end
             end
             json.functions do
