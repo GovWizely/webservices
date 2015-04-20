@@ -56,7 +56,6 @@ module ScreeningList
       end
 
       doc[:programs] = rows.map { |row| row[:programs] }
-      doc[:phonetic_names] = [doc[:name]]
       doc
     end
 
