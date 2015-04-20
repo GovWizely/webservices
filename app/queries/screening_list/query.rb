@@ -36,7 +36,7 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_fuzzy_queries(json, %w(name alt_names), @name, operator = :or)
+            generate_score_query(json)
           end
           if @phonetics == 'true'
             generate_fuzzy_queries(json, ['phonetic_names'], @name, operator = :or)
@@ -46,6 +46,78 @@ module ScreeningList
           end
         end
       end if [@q, @name, @distance, @address, @phonetics].any?
+    end
+
+
+    def generate_score_query(json)
+
+      json.set! 'should' do
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'alt_names.keyword']
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+                json.fuzziness 1
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+                json.fuzziness 2
+              end
+            end
+            json.functions do
+              json.child! { json.weight 70 }
+            end
+          end
+        end
+
+      end
     end
 
     def generate_fuzzy_queries(json, fields, value, operator)
