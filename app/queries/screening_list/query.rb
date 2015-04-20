@@ -38,14 +38,14 @@ module ScreeningList
 
           if @name
             case @score
-              when '70'
-                generate_score_query(json)
               when '80'
                 generate_score_query_2(json)
               when '90'
                 generate_score_query_3(json)
               when '100'
                 generate_score_query_4(json)
+              else
+                generate_score_query(json)
             end
           end
 
