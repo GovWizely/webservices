@@ -51,6 +51,7 @@ module ScreeningList
 
     def generate_score_query(json)
 
+      json.disable_coord true
       json.set! 'should' do
         json.child! do
           json.function_score do
