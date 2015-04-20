@@ -87,6 +87,7 @@ module ScreeningList
                 json.query @name
                 json.fields ['name', 'alt_names']
                 json.prefix_length 1
+                json.operator :and
               end
             end
             json.functions do
@@ -101,9 +102,10 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
                 json.prefix_length 1
                 json.fuzziness 1
+                json.operator :and
               end
             end
             json.functions do
@@ -118,9 +120,10 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
                 json.prefix_length 1
                 json.fuzziness 2
+                json.operator :and
               end
             end
             json.functions do
@@ -157,8 +160,9 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
                 json.prefix_length 1
+                json.operator :and
               end
             end
             json.functions do
@@ -173,9 +177,10 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
                 json.prefix_length 1
                 json.fuzziness 1
+                json.operator :and
               end
             end
             json.functions do
@@ -212,8 +217,9 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'alt_names']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
                 json.prefix_length 1
+                json.operator :and
               end
             end
             json.functions do
@@ -235,7 +241,7 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
+                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
               end
             end
             json.functions do
@@ -288,6 +294,7 @@ module ScreeningList
                 json.query @name
                 json.fields ['phonetic_names']
                 json.prefix_length 1
+                json.operator :and
               end
             end
             json.functions do
@@ -298,8 +305,6 @@ module ScreeningList
 
       end
     end
-
-
 
     def generate_fuzzy_queries(json, fields, value, operator)
       json.set! 'should' do
