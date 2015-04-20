@@ -25,6 +25,7 @@ module ScreeningList
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
       @phonetics = options[:phonetics] if options[:phonetics].present?
+      @score = options[:score] if options[:score].present?
     end
 
     def generate_query(json)
@@ -36,8 +37,18 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_score_query(json)
+            case @score
+              when '70'
+                generate_score_query(json)
+              when '80'
+                generate_score_query_2(json)
+              when '90'
+                generate_score_query_3(json)
+              when '100'
+                generate_score_query_4(json)
+            end
           end
+
           if @phonetics == 'true'
             generate_fuzzy_queries(json, ['phonetic_names'], @name, operator = :or)
           end
@@ -47,7 +58,6 @@ module ScreeningList
         end
       end if [@q, @name, @distance, @address, @phonetics].any?
     end
-
 
     def generate_score_query(json)
 
@@ -118,6 +128,120 @@ module ScreeningList
           end
         end
 
+      end
+    end
+
+    def generate_score_query_2(json)
+
+      json.disable_coord true
+      json.set! 'should' do
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'alt_names.keyword']
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+                json.fuzziness 1
+              end
+            end
+            json.functions do
+              json.child! { json.weight 80 }
+            end
+          end
+        end
+
+      end
+    end
+
+    def generate_score_query_3(json)
+
+      json.disable_coord true
+      json.set! 'should' do
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'alt_names.keyword']
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
+
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'alt_names']
+                json.prefix_length 1
+              end
+            end
+            json.functions do
+              json.child! { json.weight 90 }
+            end
+          end
+        end
+
+      end
+    end
+
+    def generate_score_query_4(json)
+
+      json.disable_coord true
+      json.set! 'should' do
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'alt_names.keyword']
+              end
+            end
+            json.functions do
+              json.child! { json.weight 10 }
+            end
+          end
+        end
       end
     end
 
