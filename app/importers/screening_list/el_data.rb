@@ -67,7 +67,6 @@ module ScreeningList
       doc[:source_list_url] =
         doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
-      doc[:phonetic_names] = [doc[:name]] + doc[:alt_names]
       doc
     end
 

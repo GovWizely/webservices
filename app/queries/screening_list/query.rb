@@ -24,7 +24,6 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @phonetics = options[:phonetics] if options[:phonetics].present?
       @score = options[:score] if options[:score].present?
     end
 
@@ -49,15 +48,11 @@ module ScreeningList
             end
           end
 
-          if @phonetics == 'true'
-            # generate_fuzzy_queries(json, ['phonetic_names'], @name, operator = :or)
-            generate_score_query_phonetics(json)
-          end
           if @address
             generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address, operator = :and)
           end
         end
-      end if [@q, @name, @distance, @address, @phonetics].any?
+      end if [@q, @name, @distance, @address].any?
     end
 
     def generate_score_query(json)
@@ -245,64 +240,10 @@ module ScreeningList
               end
             end
             json.functions do
-              json.child! { json.weight 10 }
+              json.child! { json.weight 100 }
             end
           end
         end
-      end
-    end
-
-    def generate_score_query_phonetics(json)
-      json.disable_coord true
-      json.set! 'should' do
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
-              end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
-            end
-          end
-        end
-
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names']
-                json.prefix_length 1
-              end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
-            end
-          end
-        end
-
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['phonetic_names']
-                json.prefix_length 1
-                json.operator :and
-              end
-            end
-            json.functions do
-              json.child! { json.weight 80 }
-            end
-          end
-        end
-
       end
     end
 
