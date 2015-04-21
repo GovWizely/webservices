@@ -6,8 +6,6 @@ describe User do
       is_expected.to validate_presence_of(:email)
       is_expected.to validate_presence_of(:password)
       is_expected.to validate_presence_of(:password_confirmation)
-      is_expected.to validate_presence_of(:full_name)
-      is_expected.to validate_presence_of(:company)
     end
 
     context 'on email' do
@@ -76,7 +74,7 @@ describe User do
 
   describe '#save' do
     context 'when user is invalid' do
-      subject { build_user(company: nil).save }
+      subject { build_user(email: nil).save }
       it { is_expected.to eq(false) }
     end
   end

@@ -1,6 +1,8 @@
+<h1>Log in</h1>
 <div class="form-wrapper">
-  <h2>Log in</h2>
   <%= form_for(resource, as: resource_name, url: session_path(resource_name)) do |f| %>
+
+    <%= devise_error_messages! %>
 
     <div class="field">
       <%= f.label :email %>
