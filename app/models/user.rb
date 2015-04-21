@@ -116,10 +116,7 @@ class User
   attribute :confirmed_at, DateTime
   attribute :confirmation_sent_at, DateTime
 
-  %i(email full_name company).each do |attr|
-    validates_presence_of attr
-  end
-
+  validates_presence_of :email
   validates_presence_of :password, if: proc { !self.persisted? }
   validates_presence_of :password_confirmation, if: proc { !self.persisted? }
 
