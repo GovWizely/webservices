@@ -18,7 +18,7 @@ describe TradeLead::McaData do
     end
 
     it 'loads when date format is not correct' do
-      Date.stub(:parse).and_raise(ArgumentError)
+      allow(Date).to receive(:parse).and_raise(ArgumentError)
       expect(TradeLead::Mca).to receive(:index) do |trade_leads|
         expect(trade_leads.size).to eq(3)
       end
@@ -26,7 +26,7 @@ describe TradeLead::McaData do
     end
 
     it 'loads when country is not correct' do
-      IsoCountryCodes.stub(:find).and_raise(IsoCountryCodes::UnknownCodeError)
+      allow(IsoCountryCodes).to receive(:find).and_raise(IsoCountryCodes::UnknownCodeError)
 
       expect(TradeLead::Mca).to receive(:index) do |trade_leads|
         expect(trade_leads.size).to eq(3)
