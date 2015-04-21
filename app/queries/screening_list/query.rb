@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @score = options[:score] if options[:score].present?
+      @score = options[:score].try(:to_i) if options[:score].present?
     end
 
     def generate_query(json)
@@ -36,16 +36,7 @@ module ScreeningList
           end if @q
 
           if @name
-            case @score
-              when '80'
-                generate_score_query_2(json)
-              when '90'
-                generate_score_query_3(json)
-              when '100'
-                generate_score_query_4(json)
-              else
-                generate_score_query(json)
-            end
+            generate_score_query(json, @score)
           end
 
           if @address
@@ -55,195 +46,92 @@ module ScreeningList
       end if [@q, @name, @distance, @address].any?
     end
 
-    def generate_score_query(json)
+    def generate_score_query(json, score)
+
+      base_score = 10
+      score ||= 0
 
       json.disable_coord true
       json.set! 'should' do
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
+        if score <= 100
+          base_score = 100 if score == 100
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name.keyword', 'alt_names.keyword']
+                end
               end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
+              json.functions do
+                json.child! { json.weight base_score }
+              end
             end
           end
         end
 
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names']
-                json.prefix_length 1
-                json.operator :and
+        if score <= 90
+          base_score = 90 if score == 90
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name', 'alt_names']
+                  json.prefix_length 1
+                  json.operator :and
+                end
               end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
+              json.functions do
+                json.child! { json.weight base_score }
+              end
+          end
+        end
+        end
+
+        if score <= 80
+          base_score = 80 if score == 80
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
+                  json.prefix_length 1
+                  json.fuzziness 1
+                  json.operator :and
+                end
+              end
+              json.functions do
+                json.child! { json.weight base_score }
+              end
             end
           end
         end
 
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
-                json.prefix_length 1
-                json.fuzziness 1
-                json.operator :and
+        if score <= 70
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
+                  json.prefix_length 1
+                  json.fuzziness 2
+                  json.operator :and
+                end
               end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
+              json.functions do
+                json.child! { json.weight 70 }
+              end
             end
           end
         end
 
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
-                json.prefix_length 1
-                json.fuzziness 2
-                json.operator :and
-              end
-            end
-            json.functions do
-              json.child! { json.weight 70 }
-            end
-          end
-        end
-
-      end
-    end
-
-    def generate_score_query_2(json)
-
-      json.disable_coord true
-      json.set! 'should' do
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
-              end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
-            end
-          end
-        end
-
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
-                json.prefix_length 1
-                json.operator :and
-              end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
-            end
-          end
-        end
-
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
-                json.prefix_length 1
-                json.fuzziness 1
-                json.operator :and
-              end
-            end
-            json.functions do
-              json.child! { json.weight 80 }
-            end
-          end
-        end
-
-      end
-    end
-
-    def generate_score_query_3(json)
-
-      json.disable_coord true
-      json.set! 'should' do
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
-              end
-            end
-            json.functions do
-              json.child! { json.weight 10 }
-            end
-          end
-        end
-
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
-                json.prefix_length 1
-                json.operator :and
-              end
-            end
-            json.functions do
-              json.child! { json.weight 90 }
-            end
-          end
-        end
-
-      end
-    end
-
-    def generate_score_query_4(json)
-
-      json.disable_coord true
-      json.set! 'should' do
-        json.child! do
-          json.function_score do
-            json.boost_mode 'replace'
-            json.query do
-              json.multi_match do
-                json.query @name
-                json.fields ['name.keyword', 'alt_names.keyword']
-              end
-            end
-            json.functions do
-              json.child! { json.weight 100 }
-            end
-          end
-        end
       end
     end
 
