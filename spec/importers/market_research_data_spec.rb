@@ -7,7 +7,7 @@ describe MarketResearchData do
 
   it_behaves_like 'an importer which cannot purge old documents'
 
-  describe '#import', :vcr do
+  describe '#import' do
     let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/market_research/expected_indexed_data.yaml") }
 
     it 'loads market research library from specified resource' do
@@ -20,7 +20,11 @@ describe MarketResearchData do
         expect(entries[4]).to eq(entry_hash[4])
         expect(entries[5]).to eq(entry_hash[5])
       end
-      importer.import
+
+      VCR.use_cassette('industry_mapping_client/market_research.yml', record: :none) do
+        importer.import
+      end
+
     end
   end
 
