@@ -62,7 +62,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 5 }
               end
             end
           end
@@ -79,7 +79,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 5 }
               end
             end
           end
@@ -97,7 +97,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 5 }
               end
             end
           end
@@ -115,7 +115,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 5 }
               end
             end
           end
@@ -133,7 +133,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 5 }
               end
             end
           end
@@ -151,7 +151,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 1 }
+                json.child! { json.weight 75 }
               end
             end
           end
