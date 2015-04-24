@@ -48,7 +48,7 @@ module ScreeningList
 
     def generate_score_query(json, score)
 
-      base_score = 10
+      base_score = 5
       score ||= 0
 
       json.disable_coord true
@@ -71,6 +71,26 @@ module ScreeningList
           end
         end
 
+        if score <= 95
+          base_score = 95 if score == 95
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name', 'alt_names', 'name.keyword', 'alt_names.keyword']
+                  json.prefix_length 1
+                  json.operator :and
+                end
+              end
+              json.functions do
+                json.child! { json.weight base_score }
+              end
+            end
+          end
+        end
+
         if score <= 90
           base_score = 90 if score == 90
           json.child! do
@@ -79,20 +99,21 @@ module ScreeningList
               json.query do
                 json.multi_match do
                   json.query @name
-                  json.fields ['name', 'alt_names']
+                  json.fields ['name.keyword', 'alt_names.keyword']
                   json.prefix_length 1
+                  json.fuzziness 1
                   json.operator :and
                 end
               end
               json.functions do
                 json.child! { json.weight base_score }
               end
+            end
           end
         end
-        end
 
-        if score <= 80
-          base_score = 80 if score == 80
+        if score <= 85
+          base_score = 85 if score == 85
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -112,7 +133,28 @@ module ScreeningList
           end
         end
 
-        if score <= 70
+        if score <= 80
+          base_score = 80 if score == 80
+          json.child! do
+            json.function_score do
+              json.boost_mode 'replace'
+              json.query do
+                json.multi_match do
+                  json.query @name
+                  json.fields ['name.keyword', 'alt_names.keyword']
+                  json.prefix_length 1
+                  json.fuzziness 2
+                  json.operator :and
+                end
+              end
+              json.functions do
+                json.child! { json.weight base_score }
+              end
+            end
+          end
+        end
+
+        if score <= 75
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -126,7 +168,7 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 70 }
+                json.child! { json.weight 75 }
               end
             end
           end
