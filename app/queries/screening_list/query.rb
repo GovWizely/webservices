@@ -48,13 +48,10 @@ module ScreeningList
 
     def generate_score_query(json, score)
 
-      base_score = 5
       score ||= 0
 
       json.disable_coord true
       json.set! 'should' do
-        if score <= 100
-          base_score = 100 if score == 100
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -65,14 +62,11 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight base_score }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
-        if score <= 95
-          base_score = 95 if score == 95
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -85,14 +79,11 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight base_score }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
-        if score <= 90
-          base_score = 90 if score == 90
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -106,14 +97,11 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight base_score }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
-        if score <= 85
-          base_score = 85 if score == 85
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -127,14 +115,11 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight base_score }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
-        if score <= 80
-          base_score = 80 if score == 80
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -148,13 +133,11 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight base_score }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
-        if score <= 75
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -168,11 +151,10 @@ module ScreeningList
                 end
               end
               json.functions do
-                json.child! { json.weight 75 }
+                json.child! { json.weight 1 }
               end
             end
           end
-        end
 
       end
     end
