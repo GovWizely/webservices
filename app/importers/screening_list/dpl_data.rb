@@ -75,6 +75,7 @@ module ScreeningList
       entry[:reversed_name] = entry[:name].split.reverse.join(' ')
       entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
 
+
       %i(start_date end_date).each do |field|
         entry[field] &&= parse_american_date(entry[field])
       end

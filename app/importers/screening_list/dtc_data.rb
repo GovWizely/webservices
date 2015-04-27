@@ -43,6 +43,9 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
+      entry[:reversed_name] = entry[:name].split.reverse.join(' ')
+      entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
+
       entry[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
         'http://www.pmddtc.state.gov/compliance/debar.html'
@@ -61,9 +64,6 @@ module ScreeningList
     def extract_alt_names(row)
       row[:alias] ? row[:alias].split(';') : []
     end
-
-    entry[:reversed_name] = entry[:name].split.reverse.join(' ')
-    entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
 
   end
 end
