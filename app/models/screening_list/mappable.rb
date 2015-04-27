@@ -46,7 +46,7 @@ module ScreeningList
           properties: {
             name:                    { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
-                                       boost:    1.0,
+                                       # norms:    { enabled: false },
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
@@ -54,6 +54,18 @@ module ScreeningList
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            reversed_name:           { type:     'string',
+                                       norms:    { enabled: false },
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            trimmed_name:           { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 

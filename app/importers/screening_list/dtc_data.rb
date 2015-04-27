@@ -61,5 +61,9 @@ module ScreeningList
     def extract_alt_names(row)
       row[:alias] ? row[:alias].split(';') : []
     end
+
+    entry[:reversed_name] = entry[:name].split.reverse.join(' ')
+    entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
+
   end
 end

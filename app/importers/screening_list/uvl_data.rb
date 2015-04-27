@@ -53,6 +53,9 @@ module ScreeningList
           country:     lookup_country(row[:country]) }
       end.uniq
 
+      doc[:reversed_name] = doc[:name].split.reverse.join(' ')
+      doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
+
       doc[:alt_names] =
         rows.map { |row| row[:name].split(', a.k.a. ') }
         .flatten

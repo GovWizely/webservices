@@ -72,6 +72,9 @@ module ScreeningList
       entry[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
+      entry[:reversed_name] = entry[:name].split.reverse.join(' ')
+      entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
+
       %i(start_date end_date).each do |field|
         entry[field] &&= parse_american_date(entry[field])
       end
