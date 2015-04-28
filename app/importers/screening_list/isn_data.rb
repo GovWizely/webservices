@@ -56,9 +56,17 @@ module ScreeningList
       end
 
       doc[:programs] = rows.map { |row| row[:programs] }
-      doc[:name] = doc[:name].gsub(/,/, '')
-      doc[:reversed_name] = doc[:name].split.reverse.join(' ')
-      doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
+
+      stops  =  ['co','company','corp','corporation','inc','incorporated',
+                 'limited','ltd','mr','mrs','ms','organization',
+                 'sa','sas','llc', 'and', 'the', 'los']
+
+      doc[:name] = doc[:name].gsub(/[.,]/, '')
+      doc[:name_nostop] = doc[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
+
+      doc[:rev_name] = doc[:name].split.reverse.join(' ')
+      doc[:trim_name] = doc[:name].gsub(/\s+/, '')
+      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
 
       doc
     end

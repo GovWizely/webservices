@@ -47,136 +47,135 @@ module ScreeningList
     end
 
     def generate_score_query(json, score)
-
       score ||= 0
 
       json.disable_coord true
       json.set! 'should' do
-          # 100
-          json.explain
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword',
-                               'reversed_name.keyword', 'trimmed_name.keyword',
-                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                end
-              end
-              json.functions do
-                json.child! { json.weight 5 }
+        # 100
+        json.explain
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                             'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
+                             'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
               end
             end
+            json.functions do
+              json.child! { json.weight 5 }
+            end
           end
+        end
 
-          # 95
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'reversed_alt_names', 'trimmed_alt_names',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
-                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                  json.prefix_length 1
-                  json.operator :and
-                end
-              end
-              json.functions do
-                json.child! { json.weight 5 }
+        # 95
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                             'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
+                json.prefix_length 1
+                json.operator :and
               end
             end
+            json.functions do
+              json.child! { json.weight 5 }
+            end
           end
+        end
 
-          # 90
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword',
-                               'reversed_name.keyword', 'trimmed_name.keyword',
-                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                  json.prefix_length 1
-                  json.fuzziness 1
-                  json.operator :and
-                end
-              end
-              json.functions do
-                json.child! { json.weight 5 }
+        # 90
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                             'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
+                             'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
+                json.prefix_length 1
+                json.fuzziness 1
+                json.operator :and
               end
             end
+            json.functions do
+              json.child! { json.weight 5 }
+            end
           end
+        end
 
-          # 85
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'reversed_alt_names', 'trimmed_alt_names',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
-                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                  json.prefix_length 1
-                  json.fuzziness 1
-                  json.operator :and
-                end
-              end
-              json.functions do
-                json.child! { json.weight 5 }
+        # 85
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                             'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
+                json.prefix_length 1
+                json.fuzziness 1
+                json.operator :and
               end
             end
+            json.functions do
+              json.child! { json.weight 5 }
+            end
           end
+        end
 
-          # 80
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword',
-                               'reversed_name.keyword', 'trimmed_name.keyword',
-                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                  json.prefix_length 1
-                  json.fuzziness 2
-                  json.operator :and
-                end
-              end
-              json.functions do
-                json.child! { json.weight 5 }
+        # 80
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                             'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
+                             'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
+                json.prefix_length 1
+                json.fuzziness 2
+                json.operator :and
               end
             end
+            json.functions do
+              json.child! { json.weight 5 }
+            end
           end
+        end
 
-          # 75
-          json.child! do
-            json.function_score do
-              json.boost_mode 'replace'
-              json.query do
-                json.multi_match do
-                  json.query @name
-                  json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'reversed_alt_names', 'trimmed_alt_names',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
-                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
-                  json.prefix_length 1
-                  json.fuzziness 2
-                  json.operator :and
-                end
-              end
-              json.functions do
-                json.child! { json.weight 75 }
+        # 75
+        json.child! do
+          json.function_score do
+            json.boost_mode 'replace'
+            json.query do
+              json.multi_match do
+                json.query @name
+                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                             'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
+                json.prefix_length 1
+                json.fuzziness 2
+                json.operator :and
               end
             end
+            json.functions do
+              json.child! { json.weight 75 }
+            end
           end
+        end
 
       end
     end

@@ -43,12 +43,21 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
-      entry[:name] = entry[:name].gsub(/,/, '')
-      entry[:reversed_name] = entry[:name].split.reverse.join(' ')
-      entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
+      stops  =  ['co','company','corp','corporation','inc','incorporated',
+                 'limited','ltd','mr','mrs','ms','organization',
+                 'sa','sas','llc', 'and', 'the', 'los']
+
+      entry[:name] = entry[:name].gsub(/[.,]/, '')
+      entry[:name_nostop] = entry[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
+
+      entry[:rev_name] = entry[:name].split.reverse.join(' ')
+      entry[:trim_name] = entry[:name].gsub(/\s+/, '')
+      entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
+
       entry[:alt_names] = entry[:alt_names].map{ |name| name.gsub(/,/, '') }
-      entry[:reversed_alt_names] = entry[:alt_names].map{ |name| name.split.reverse.join(' ') }
-      entry[:trimmed_alt_names] = entry[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+      entry[:rev_alt_names] = entry[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      entry[:trim_alt_names] = entry[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+      entry[:trim_rev_alt_names] = entry[:rev_alt_names].map{ |name| name.gsub(/\s+/, '') }
 
       entry[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
