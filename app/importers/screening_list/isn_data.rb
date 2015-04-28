@@ -56,7 +56,7 @@ module ScreeningList
       end
 
       doc[:programs] = rows.map { |row| row[:programs] }
-
+      doc[:name] = doc[:name].gsub(/,/, '')
       doc[:reversed_name] = doc[:name].split.reverse.join(' ')
       doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
 

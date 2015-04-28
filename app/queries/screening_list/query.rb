@@ -52,13 +52,17 @@ module ScreeningList
 
       json.disable_coord true
       json.set! 'should' do
+          # 100
+          json.explain
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
               json.query do
                 json.multi_match do
                   json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                  json.fields ['name.keyword', 'alt_names.keyword',
+                               'reversed_name.keyword', 'trimmed_name.keyword',
+                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                 end
               end
               json.functions do
@@ -67,6 +71,7 @@ module ScreeningList
             end
           end
 
+          # 95
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -74,7 +79,9 @@ module ScreeningList
                 json.multi_match do
                   json.query @name
                   json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                               'reversed_alt_names', 'trimmed_alt_names',
+                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
+                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                   json.prefix_length 1
                   json.operator :and
                 end
@@ -85,13 +92,16 @@ module ScreeningList
             end
           end
 
+          # 90
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
               json.query do
                 json.multi_match do
                   json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                  json.fields ['name.keyword', 'alt_names.keyword',
+                               'reversed_name.keyword', 'trimmed_name.keyword',
+                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                   json.prefix_length 1
                   json.fuzziness 1
                   json.operator :and
@@ -103,6 +113,7 @@ module ScreeningList
             end
           end
 
+          # 85
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -110,7 +121,9 @@ module ScreeningList
                 json.multi_match do
                   json.query @name
                   json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                               'reversed_alt_names', 'trimmed_alt_names',
+                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
+                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                   json.prefix_length 1
                   json.fuzziness 1
                   json.operator :and
@@ -122,13 +135,16 @@ module ScreeningList
             end
           end
 
+          # 80
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
               json.query do
                 json.multi_match do
                   json.query @name
-                  json.fields ['name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                  json.fields ['name.keyword', 'alt_names.keyword',
+                               'reversed_name.keyword', 'trimmed_name.keyword',
+                               'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                   json.prefix_length 1
                   json.fuzziness 2
                   json.operator :and
@@ -140,6 +156,7 @@ module ScreeningList
             end
           end
 
+          # 75
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -147,7 +164,9 @@ module ScreeningList
                 json.multi_match do
                   json.query @name
                   json.fields ['name', 'alt_names', 'reversed_name', 'trimmed_name',
-                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword', 'trimmed_name.keyword']
+                               'reversed_alt_names', 'trimmed_alt_names',
+                               'name.keyword', 'alt_names.keyword', 'reversed_name.keyword',
+                               'trimmed_name.keyword', 'reversed_alt_names.keyword', 'trimmed_alt_names.keyword']
                   json.prefix_length 1
                   json.fuzziness 2
                   json.operator :and

@@ -43,8 +43,12 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
+      entry[:name] = entry[:name].gsub(/,/, '')
       entry[:reversed_name] = entry[:name].split.reverse.join(' ')
       entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
+      entry[:alt_names] = entry[:alt_names].map{ |name| name.gsub(/,/, '') }
+      entry[:reversed_alt_names] = entry[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      entry[:trimmed_alt_names] = entry[:alt_names].map{ |name| name.gsub(/\s+/, '') }
 
       entry[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :

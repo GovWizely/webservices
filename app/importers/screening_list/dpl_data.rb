@@ -72,6 +72,7 @@ module ScreeningList
       entry[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
+      entry[:name] = entry[:name].gsub(/,/, '')
       entry[:reversed_name] = entry[:name].split.reverse.join(' ')
       entry[:trimmed_name] = entry[:name].gsub(/\s+/, '')
 

@@ -13,6 +13,13 @@ module ScreeningList
                 tokenizer: 'standard',
                 filter:    %w(standard asciifolding lowercase),
               },
+              # standard_asciifolding_stop: {
+              #   tokenizer: 'standard',
+              #   filter:    %w(standard asciifolding lowercase),
+              #   stopwords: ['co','company','corp','corporation','inc','incorporated',
+              #               'limited','ltd','mr','mrs','ms','organization',
+              #               'sa','sas','llc', 'and', 'the', 'los'],
+              # },
               keyword_lowercase:            {
                 tokenizer: 'keyword',
                 filter:    %w(lowercase asciifolding),
@@ -61,10 +68,22 @@ module ScreeningList
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trimmed_name:           { type:     'string',
+            trimmed_name:            { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            reversed_alt_names:      { type:     'string',
+                                       norms:    { enabled: false },
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            trimmed_alt_names:       { type:     'string',
+                                      analyzer: 'standard_asciifolding_nostop',
+                                      fields:   {
+                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

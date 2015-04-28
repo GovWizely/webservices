@@ -68,8 +68,13 @@ module ScreeningList
         doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
 
+
+      doc[:name] = doc[:name].gsub(/,/, '')
       doc[:reversed_name] = doc[:name].split.reverse.join(' ')
       doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
+      doc[:alt_names] = doc[:alt_names].map{ |name| name.gsub(/,/, '') }
+      doc[:reversed_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      doc[:trimmed_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
 
       doc
     end
