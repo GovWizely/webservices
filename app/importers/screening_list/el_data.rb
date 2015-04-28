@@ -68,14 +68,21 @@ module ScreeningList
         doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
 
+      stops  =  ['co','company','corp','corporation','inc','incorporated',
+                 'limited','ltd','mr','mrs','ms','organization',
+                 'sa','sas','llc', 'and', 'the', 'los']
 
-      doc[:name] = doc[:name].gsub(/,/, '')
-      doc[:reversed_name] = doc[:name].split.reverse.join(' ')
-      doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
+      doc[:name] = doc[:name].gsub(/[.,]/, '')
+      doc[:name_nostop] = doc[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
+
+      doc[:rev_name] = doc[:name].split.reverse.join(' ')
+      doc[:trim_name] = doc[:name].gsub(/\s+/, '')
+      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
+
       doc[:alt_names] = doc[:alt_names].map{ |name| name.gsub(/,/, '') }
-      doc[:reversed_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
-      doc[:trimmed_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
-
+      doc[:rev_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      doc[:trim_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+      doc[:trim_rev_alt_names] = doc[:rev_alt_names].map{ |name| name.gsub(/\s+/, '') }
       doc
     end
 

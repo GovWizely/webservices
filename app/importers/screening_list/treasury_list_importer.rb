@@ -58,9 +58,6 @@ module ScreeningList
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
-      doc[:name] = doc[:name].gsub(/,/, '')
-      doc[:reversed_name] = doc[:name].split.reverse.join(' ')
-      doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
       doc[:type] = doc[:sdn_type] || doc[:nsp_type]
       doc.delete(:sdn_type)
       doc.delete(:nsp_type)
@@ -68,9 +65,21 @@ module ScreeningList
       doc.merge!(extract_simple_nested_fields(node))
       doc.merge!(extract_complex_nested_fields(node))
 
+      stops  =  ['co','company','corp','corporation','inc','incorporated',
+                 'limited','ltd','mr','mrs','ms','organization',
+                 'sa','sas','llc', 'and', 'the', 'los']
+
+      doc[:name] = doc[:name].gsub(/[.,]/, '')
+      doc[:name_nostop] = doc[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
+
+      doc[:rev_name] = doc[:name].split.reverse.join(' ')
+      doc[:trim_name] = doc[:name].gsub(/\s+/, '')
+      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
+
       doc[:alt_names] = doc[:alt_names].map{ |name| name.gsub(/,/, '') }
-      doc[:reversed_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
-      doc[:trimmed_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+      doc[:rev_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      doc[:trim_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+      doc[:trim_rev_alt_names] = doc[:rev_alt_names].map{ |name| name.gsub(/\s+/, '') }
 
       doc
     end
