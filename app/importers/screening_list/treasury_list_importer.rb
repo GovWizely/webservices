@@ -58,6 +58,7 @@ module ScreeningList
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
+      doc[:name] = doc[:name].gsub(/,/, '')
       doc[:reversed_name] = doc[:name].split.reverse.join(' ')
       doc[:trimmed_name] = doc[:name].gsub(/\s+/, '')
       doc[:type] = doc[:sdn_type] || doc[:nsp_type]
@@ -66,6 +67,11 @@ module ScreeningList
 
       doc.merge!(extract_simple_nested_fields(node))
       doc.merge!(extract_complex_nested_fields(node))
+
+      doc[:alt_names] = doc[:alt_names].map{ |name| name.gsub(/,/, '') }
+      doc[:reversed_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
+      doc[:trimmed_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
+
       doc
     end
 
