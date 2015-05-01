@@ -1,5 +1,8 @@
 module ScreeningList
   module Mappable
+
+    STOPWORDS = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
+
     def self.included(klass)
       klass.settings = {
         index: {
@@ -23,15 +26,13 @@ module ScreeningList
               },
               lowercase_stop:               {
                 tokenizer: 'keyword',
-                filter:    %w(lowercase asciifolding mystop),
+                filter:    %w(lowercase asciifolding stopword),
               },
-
             },
             filter:   {
-              mystop: {
-                type:      'stop',
-                stopwords: %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los),
-              },
+              stopword: { type:        'stop',
+                          ignore_case: true,
+                          stopwords:   STOPWORDS.join(',') },
             },
           },
         },
