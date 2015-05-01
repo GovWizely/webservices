@@ -59,7 +59,7 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword',
                              'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
                              'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
               end
@@ -77,9 +77,9 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                json.fields ['name', 'name_nostop', 'alt_names', 'alt_names_no_stops', 'rev_name', 'trim_name', 'trim_rev_name',
                              'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
-                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword', 'rev_name.keyword',
                              'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
                 json.prefix_length 1
                 json.operator :and
@@ -98,7 +98,7 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword',
                              'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
                              'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
                 json.prefix_length 1
@@ -119,9 +119,9 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                json.fields ['name', 'name_nostop', 'alt_names', 'alt_names_no_stops', 'rev_name', 'trim_name', 'trim_rev_name',
                              'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
-                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword', 'rev_name.keyword',
                              'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
                 json.prefix_length 1
                 json.fuzziness 1
@@ -141,7 +141,7 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword',
+                json.fields ['name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword',
                              'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
                              'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
                 json.prefix_length 1
@@ -162,9 +162,9 @@ module ScreeningList
             json.query do
               json.multi_match do
                 json.query @name
-                json.fields ['name', 'name_nostop', 'alt_names', 'rev_name', 'trim_name', 'trim_rev_name',
+                json.fields ['name', 'name_nostop', 'alt_names', 'alt_names_no_stops', 'rev_name', 'trim_name', 'trim_rev_name',
                              'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names',
-                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'rev_name.keyword',
+                             'name.keyword', 'name_nostop.keyword', 'alt_names.keyword', 'alt_names_no_stops.keyword', 'rev_name.keyword',
                              'trim_name.keyword', 'trim_rev_name.keyword', 'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
                 json.prefix_length 1
                 json.fuzziness 2

@@ -47,7 +47,7 @@ module ScreeningList
                  'limited','ltd','mr','mrs','ms','organization',
                  'sa','sas','llc', 'and', 'the', 'los']
 
-      entry[:name] = entry[:name].gsub(/[.,]/, '')
+      entry[:name] = entry[:name].gsub(/,/, '')
       entry[:name_nostop] = entry[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
 
       entry[:rev_name] = entry[:name].split.reverse.join(' ')
