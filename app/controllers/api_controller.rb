@@ -6,6 +6,11 @@ class ApiController < ActionController::Base
            status: :bad_request
   end
 
+  rescue_from(Query::InvalidParamsException) do |e|
+    render json:   { errors: e.errors },
+           status: :bad_request
+  end
+
   def not_found
     render json: { error: 'Not Found' }, status: :not_found
   end

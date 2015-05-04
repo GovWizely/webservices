@@ -1,7 +1,15 @@
 class Query
+  include ActiveModel::Validations
+
+  class InvalidParamsException < Exception
+    attr_accessor :errors
+  end
+
   DEFAULT_SIZE = 10.freeze
   MAX_SIZE = 100.freeze
-  attr_reader :offset, :size, :sort, :q
+  attr_accessor :offset, :size, :sort, :q
+
+  validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
 
   def self.query_fields=(value)
     class_variable_set('@@fields', value)
@@ -29,6 +37,12 @@ class Query
     @size   = [options[:size].to_i, MAX_SIZE].min
     @q      = options[:q]
     initialize_search_fields(options)
+
+    unless valid?
+      e = InvalidParamsException.new
+      e.errors = errors.to_a
+      fail e
+    end
   end
 
   def initialize_search_fields(options)

@@ -7,6 +7,10 @@ describe ApiController, type: :controller do
       ActionController::Parameters.new(params).permit([:q])
       render text: 'ok', status: :ok
     end
+
+    def new_query
+      Query.new(params)
+    end
   end
 
   describe InheritsFromApiController do
@@ -14,6 +18,7 @@ describe ApiController, type: :controller do
       Rails.application.routes.draw do
         get '/foo' => 'inherits_from_api#foo'
         get '/not_found' => 'inherits_from_api#not_found'
+        get '/new_query' => 'inherits_from_api#new_query'
       end
     end
     after  { Rails.application.reload_routes! }
@@ -36,6 +41,12 @@ describe ApiController, type: :controller do
           get :foo, a: :b
           expect(response.status).to eq(400)
         end
+      end
+
+      context 'query with negative offset' do
+        before { get :new_query, offset: -1 }
+        it { expect(response.status).to eq(400) }
+        it { expect(response.body).to include('Offset must be greater than or equal to 0') }
       end
     end
 
