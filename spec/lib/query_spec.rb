@@ -16,6 +16,24 @@ describe Query do
     after { Object.send(:remove_const, :MockChildQuery) }
   end
 
+  describe 'validations' do
+    it do
+      is_expected.to validate_numericality_of(:offset)
+                      .is_greater_than_or_equal_to(0)
+                      .allow_nil
+    end
+  end
+
+  describe '#new' do
+    context 'when given an invalid offset' do
+      let(:offset) { -50 }
+      subject { described_class.new(offset: offset) }
+      it 'raises an InvalidParamsException' do
+        expect { subject }.to raise_error(Query::InvalidParamsException)
+      end
+    end
+  end
+
   describe '#generate_search_body' do
     context 'when setup_query all possible options' do
       include_context 'with MockChildQuery child class'

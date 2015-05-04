@@ -7,7 +7,7 @@ class Query
 
   DEFAULT_SIZE = 10.freeze
   MAX_SIZE = 100.freeze
-  attr_reader :offset, :size, :sort, :q
+  attr_accessor :offset, :size, :sort, :q
 
   validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
 
