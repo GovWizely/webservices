@@ -1,6 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :configure_sign_up_parameters, only: :create
   before_filter :configure_account_update_parameters, only: :update
+  before_filter :authenticate_user!, only: :regenerate_api_key
 
   def regenerate_api_key
     current_user.api_key = User.generate_api_key
@@ -11,6 +12,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   protected
 
+  # :nocov:
   def configure_sign_up_parameters
     devise_parameter_sanitizer.for(:sign_up) do |u|
       u.permit(:email, :password, :password_confirmation, :full_name, :company)
@@ -20,6 +22,13 @@ class RegistrationsController < Devise::RegistrationsController
   def configure_account_update_parameters
     devise_parameter_sanitizer.for(:account_update) do |u|
       u.permit(:email, :password, :password_confirmation, :full_name, :company, :current_password)
+    end
+  end
+  # :nocov:
+
+  def authenticate_user!
+    unless current_user
+      render json: { error: 'Unauthorized' }, status: :unauthorized
     end
   end
 end
