@@ -46,9 +46,9 @@ module ScreeningList
     def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = id
-      doc[:source] = model_class.source
-      doc[:source_list_url] = 'http://www.state.gov/t/isn/c15231.htm'
+      doc[:id]                     = id
+      doc[:source]                 = model_class.source
+      doc[:source_list_url]        = 'http://www.state.gov/t/isn/c15231.htm'
       doc[:source_information_url] = 'http://www.state.gov/t/isn/c15231.htm'
 
       %i(start_date end_date).each do |field|
@@ -57,15 +57,12 @@ module ScreeningList
 
       doc[:programs] = rows.map { |row| row[:programs] }
 
-      stops  =  ['co','company','corp','corporation','inc','incorporated',
-                 'limited','ltd','mr','mrs','ms','organization',
-                 'sa','sas','llc', 'and', 'the', 'los']
+      stops = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
 
-      doc[:name] = doc[:name].gsub(/,/, '')
-      doc[:name_nostop] = doc[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
-
-      doc[:rev_name] = doc[:name].split.reverse.join(' ')
-      doc[:trim_name] = doc[:name].gsub(/\s+/, '')
+      doc[:name_idx]    = doc[:name].gsub(/[.,]/, ' ')
+      doc[:name_nostop] = doc[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
+      doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
+      doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
       doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
 
       doc
