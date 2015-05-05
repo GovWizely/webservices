@@ -43,21 +43,20 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
-      stops  =  ['co','company','corp','corporation','inc','incorporated',
-                 'limited','ltd','mr','mrs','ms','organization',
-                 'sa','sas','llc', 'and', 'the', 'los']
+      stops = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
 
-      entry[:name] = entry[:name].gsub(/,/, '')
-      entry[:name_nostop] = entry[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
-
-      entry[:rev_name] = entry[:name].split.reverse.join(' ')
-      entry[:trim_name] = entry[:name].gsub(/\s+/, '')
+      entry[:name_idx]    = entry[:name].gsub(/[.,]/, ' ')
+      entry[:name_nostop] = entry[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
+      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
+      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
       entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
 
-      entry[:alt_names] = entry[:alt_names].map{ |name| name.gsub(/,/, '') }
-      entry[:rev_alt_names] = entry[:alt_names].map{ |name| name.split.reverse.join(' ') }
-      entry[:trim_alt_names] = entry[:alt_names].map{ |name| name.gsub(/\s+/, '') }
-      entry[:trim_rev_alt_names] = entry[:rev_alt_names].map{ |name| name.gsub(/\s+/, '') }
+      if entry[:alt_names].present?
+        entry[:alt_names_idx]          = entry[:alt_names].map { |name| name.gsub(/[.,]/, ' ') }
+        entry[:rev_alt_names_idx]      = entry[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
+        entry[:trim_alt_names_idx]     = entry[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+        entry[:trim_rev_alt_names_idx] = entry[:rev_alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+      end
 
       entry[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
@@ -77,6 +76,5 @@ module ScreeningList
     def extract_alt_names(row)
       row[:alias] ? row[:alias].split(';') : []
     end
-
   end
 end

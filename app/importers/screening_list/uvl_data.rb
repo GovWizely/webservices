@@ -60,24 +60,23 @@ module ScreeningList
         .delete_if { |alt_name| alt_name == doc[:name] }
           .delete_if { |alt_name| alt_name == doc[:name] }
 
-      stops  =  ['co','company','corp','corporation','inc','incorporated',
-                 'limited','ltd','mr','mrs','ms','organization',
-                 'sa','sas','llc', 'and', 'the', 'los']
+      stops  =  %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
 
-      doc[:name] = doc[:name].gsub(/,/, '')
-      doc[:name_nostop] = doc[:name].split.delete_if{|x| stops.include?(x.downcase)}.join(' ')
-
-      doc[:rev_name] = doc[:name].split.reverse.join(' ')
-      doc[:trim_name] = doc[:name].gsub(/\s+/, '')
+      doc[:name_idx]      = doc[:name].gsub(/[.,]/, ' ')
+      doc[:name_nostop]   = doc[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
+      doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
+      doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
       doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
 
-      doc[:alt_names] = doc[:alt_names].map{ |name| name.gsub(/,/, '') }
-      doc[:rev_alt_names] = doc[:alt_names].map{ |name| name.split.reverse.join(' ') }
-      doc[:trim_alt_names] = doc[:alt_names].map{ |name| name.gsub(/\s+/, '') }
-      doc[:trim_rev_alt_names] = doc[:rev_alt_names].map{ |name| name.gsub(/\s+/, '') }
+      if doc[:alt_names].present?
+        puts doc[:alt_names_idx]
+        doc[:alt_names_idx]          = doc[:alt_names].map { |name| name.gsub(/[.,]/, ' ') }
+        doc[:rev_alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
+        doc[:trim_alt_names_idx]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+        doc[:trim_rev_alt_names_idx] = doc[:rev_alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+      end
 
       doc
-
     end
   end
 end
