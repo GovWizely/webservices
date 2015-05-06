@@ -20,12 +20,16 @@ We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fullte
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
+### Redis
+
+You'll need to have redis installed on your machine. `brew install redis`, `apt-get install redis-server`, etc.
+
 ### Running it
 
 Fire up a server and try it all out.
 
+    foreman start -f Procfile.dev
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
-    bundle exec rails s
 
 <http://127.0.0.1:3000/trade_events/ita/search?size=5&offset=8>
 

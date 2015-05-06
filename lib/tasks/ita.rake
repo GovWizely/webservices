@@ -3,7 +3,7 @@ namespace :ita do
   task :import, [:arg] => :environment do |_t, args|
     args.to_a.each do |module_or_importer_class_name|
       importers(module_or_importer_class_name).each do |i|
-        i.new.import_and_if_possible_purge_old
+        ImportWorker.perform_async(i.name)
       end
     end
   end

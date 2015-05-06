@@ -52,8 +52,6 @@ class SharepointTradeArticleData
   end
 
   def import
-    Rails.logger.info "Importing #{@resource}"
-
     resp = @s3.list_objects(bucket: 'ngn-bluebox')
     keys = get_object_keys(resp)
 

@@ -21,6 +21,8 @@ gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'git'
 gem 'rdiscount'
 gem 'smarter_csv'
+gem 'sidekiq'
+gem 'sinatra', require: nil
 
 gem 'sass'
 gem 'jquery-rails'
@@ -41,9 +43,10 @@ end
 
 group :development do
   gem 'capistrano',  '~> 2.15'
-  gem 'rubocop', require: false
   gem 'better_errors'
   gem 'binding_of_caller'
+  gem 'foreman'
+  gem 'rubocop', require: false
 end
 
 group :test do

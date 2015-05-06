@@ -123,7 +123,7 @@ describe Importer do
     it { is_expected.to eq Mock }
   end
 
-  describe '#import_and_if_possible_purge_old' do
+  describe "#import's purge-old logic" do
     let(:batch_1) do
       [{ id: 1, content: 'foo' },
        { id: 2, content: 'bar' }]
@@ -137,13 +137,13 @@ describe Importer do
     end
 
     it 'purges correct documents' do
-      MockData.new(batch_1).import_and_if_possible_purge_old
+      MockData.new(batch_1).import
       expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
 
-      MockData.new(batch_2).import_and_if_possible_purge_old
+      MockData.new(batch_2).import
       expect(stored_docs).to match_array(batch_2.map { |d| d.except(:id) })
 
-      MockData.new(batch_3).import_and_if_possible_purge_old
+      MockData.new(batch_3).import
       expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
     end
 

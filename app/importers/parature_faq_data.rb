@@ -23,8 +23,6 @@ class ParatureFaqData
   end
 
   def import
-    Rails.logger.info "Importing #{@resource}"
-
     # Grab folder info to ensure up-to-date controlled terms are getting assigned to FAQs
     @folder_info = get_folder_info
 

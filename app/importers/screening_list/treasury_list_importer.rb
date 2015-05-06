@@ -17,7 +17,6 @@ module ScreeningList
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       source = Nokogiri::XML(open(@resource))
 
       docs = source.xpath(document_node_xpath).map do |node|

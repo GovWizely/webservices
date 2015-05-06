@@ -59,7 +59,6 @@ module TradeEvent
     }.freeze
 
     def import_single(url)
-      Rails.logger.info "Importing #{url}"
       body = (url =~ /^http/) ? open_with_tlsv1(url) : File.open(url).read
       xml = Nokogiri::XML(body)
       xml.xpath('//result/item').map { |item| process_item(item) }

@@ -28,7 +28,6 @@ class TradeArticleData
   end
 
   def import
-    Rails.logger.info "Importing #{@resource}"
     doc = JSON.parse(open(@resource).read, symbolize_names: true)
     articles = doc.map { |article_hash| process_article_info article_hash }
     TradeArticle.index articles

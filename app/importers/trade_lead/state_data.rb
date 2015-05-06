@@ -34,7 +34,6 @@ module TradeLead
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       doc = JSON.parse(open(@resource).read, symbolize_names: true)
 
       entries = []

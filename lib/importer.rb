@@ -2,6 +2,24 @@ module Importer
   # The module provides functionality useful for importing source data, and
   # can be included into any class that will do so.
 
+  def self.included(base)
+    base.class_eval do
+      base.send(:prepend, ParentInstanceMethods)
+    end
+  end
+
+  module ParentInstanceMethods
+    def import
+      Rails.logger.info "#{self.class.name}: import starting."
+
+      start_time = Time.now if can_purge_old?
+      super
+      model_class.purge_old(start_time) if can_purge_old?
+
+      Rails.logger.info "#{self.class.name}: import finished."
+    end
+  end
+
   def extract_fields(parent_node, path_hash)
     Hash[path_hash.map { |key, path| [key, extract_node(parent_node.xpath(path).first)] }]
   end
@@ -79,23 +97,11 @@ module Importer
     self.class.name.sub(/Data$/, '').constantize
   end
 
-  def import_and_if_possible_purge_old
-    can_purge_old? ? import_and_purge_old : import
-  end
-
   def lookup_state(state_str)
     State.normalize state_str
   end
 
   def can_purge_old?
     model_class.can_purge_old?
-  end
-
-  private
-
-  def import_and_purge_old
-    start_time = Time.now
-    import
-    model_class.purge_old(start_time)
   end
 end

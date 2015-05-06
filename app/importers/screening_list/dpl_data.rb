@@ -38,8 +38,7 @@ module ScreeningList
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
-      model_class.index entries
+      model_class.index(entries)
     end
 
     private

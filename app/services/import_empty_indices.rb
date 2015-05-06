@@ -10,7 +10,7 @@ class ImportEmptyIndices
 
         if search['hits']['total'] == 0
           Rails.logger.info("Importing #{model_class} as its index is empty")
-          model_class.importer_class.new.import_and_if_possible_purge_old unless dry_run
+          ImportWorker.perform_async(model_class.importer_class.name) unless dry_run
           true
         else
           false

@@ -58,8 +58,6 @@ module TariffRate
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
-
       object = @s3.get_object(bucket: 'tariffs', key: "#{@resource}").body
 
       options = {

@@ -1,3 +1,5 @@
+require 'sidekiq/web'
+
 Webservices::Application.routes.draw do
   devise_for :users, controllers: { registrations: 'registrations' }
 
@@ -9,6 +11,10 @@ Webservices::Application.routes.draw do
       root 'devise/sessions#new', as: :unauthenticated_root
     end
     get '/regenerate_api_key', to: 'registrations#regenerate_api_key'
+  end
+
+  authenticate :user, lambda { |u| u.staff? } do
+    mount Sidekiq::Web => '/sidekiq'
   end
 
   concern :api_v1_routable do

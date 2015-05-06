@@ -25,7 +25,6 @@ class MarketResearchData
   end
 
   def import
-    Rails.logger.info "Importing #{@resource}"
     entries = []
     MrlParser.foreach(@resource) do |source_hash|
       entries << process_source_hash(source_hash)

@@ -43,8 +43,7 @@ module TradeEvent
     end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
-      Ustda.index events
+      Ustda.index(events)
     end
 
     def events
