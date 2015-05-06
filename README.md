@@ -31,19 +31,15 @@ Fire up a server and try it all out.
     foreman start -f Procfile.dev
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
 
-<http://127.0.0.1:3000/trade_events/ita/search?size=5&offset=8>
+<http://127.0.0.1:3000/consolidated_screening_list/search?size=5&offset=8>
 
-<http://127.0.0.1:3000/trade_events/ita/search?q=electrical>
+<http://127.0.0.1:3000/consolidated_screening_list/search?q=john>
 
-<http://127.0.0.1:3000/trade_events/ita/search?countries=US,CA>
+<http://127.0.0.1:3000/consolidated_screening_list/search?sources=SDN,EL>
 
-<http://127.0.0.1:3000/trade_events/ita/search?industry=agriculture>
+<http://127.0.0.1:3000/market_research_library/search?q=oil>
 
-<http://127.0.0.1:3000/ita_office_locations/search?q=new>
-
-<http://127.0.0.1:3000/ita_office_locations/search?country=BR>
-
-<http://127.0.0.1:3000/ita_office_locations/search?country=US&state=DC&q=national>
+<http://127.0.0.1:3000/market_research_library/search?countries=HU,CA>
 
 ### Tests
 
