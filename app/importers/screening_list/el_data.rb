@@ -82,6 +82,8 @@ module ScreeningList
         doc[:trim_alt_names_idx]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
         doc[:trim_rev_alt_names_idx] = doc[:rev_alt_names_idx].map { |name| name.gsub(/\s+/, '') }
       end
+
+      doc
     end
 
     def strip_nonascii(str)
