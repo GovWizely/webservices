@@ -24,7 +24,7 @@ shared_context 'TariffRate::Australia data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/australia"
     fixtures_file = "#{fixtures_dir}/australia.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Australia.recreate_index
     TariffRate::AustraliaData.new(fixtures_file, s3).import
@@ -77,7 +77,7 @@ shared_context 'TariffRate::Bahrain data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/bahrain"
     fixtures_file = "#{fixtures_dir}/bahrain.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Bahrain.recreate_index
     TariffRate::BahrainData.new(fixtures_file, s3).import
@@ -112,7 +112,7 @@ shared_context 'TariffRate::Chile data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/chile"
     fixtures_file = "#{fixtures_dir}/chile.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Chile.recreate_index
     TariffRate::ChileData.new(fixtures_file, s3).import
@@ -147,7 +147,7 @@ shared_context 'TariffRate::Colombia data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/colombia"
     fixtures_file = "#{fixtures_dir}/colombia.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Colombia.recreate_index
     TariffRate::ColombiaData.new(fixtures_file, s3).import
@@ -182,7 +182,7 @@ shared_context 'TariffRate::CostaRica data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica"
     fixtures_file = "#{fixtures_dir}/costa_rica.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::CostaRica.recreate_index
     TariffRate::CostaRicaData.new(fixtures_file, s3).import
@@ -217,7 +217,7 @@ shared_context 'TariffRate::DominicanRepublic data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/dominican_republic"
     fixtures_file = "#{fixtures_dir}/dominican_republic.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::DominicanRepublic.recreate_index
     TariffRate::DominicanRepublicData.new(fixtures_file, s3).import
@@ -252,7 +252,7 @@ shared_context 'TariffRate::ElSalvador data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/el_salvador"
     fixtures_file = "#{fixtures_dir}/el_salvador.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::ElSalvador.recreate_index
     TariffRate::ElSalvadorData.new(fixtures_file, s3).import
@@ -287,7 +287,7 @@ shared_context 'TariffRate::Guatemala data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/guatemala"
     fixtures_file = "#{fixtures_dir}/guatemala.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Guatemala.recreate_index
     TariffRate::GuatemalaData.new(fixtures_file, s3).import
@@ -322,7 +322,7 @@ shared_context 'TariffRate::Honduras data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/honduras"
     fixtures_file = "#{fixtures_dir}/honduras.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Honduras.recreate_index
     TariffRate::HondurasData.new(fixtures_file, s3).import
@@ -357,7 +357,7 @@ shared_context 'TariffRate::Morocco data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/morocco"
     fixtures_file = "#{fixtures_dir}/morocco.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Morocco.recreate_index
     TariffRate::MoroccoData.new(fixtures_file, s3).import
@@ -392,7 +392,7 @@ shared_context 'TariffRate::Nicaragua data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/nicaragua"
     fixtures_file = "#{fixtures_dir}/nicaragua.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Nicaragua.recreate_index
     TariffRate::NicaraguaData.new(fixtures_file, s3).import
@@ -427,7 +427,7 @@ shared_context 'TariffRate::Oman data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/oman"
     fixtures_file = "#{fixtures_dir}/oman.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Oman.recreate_index
     TariffRate::OmanData.new(fixtures_file, s3).import
@@ -462,7 +462,7 @@ shared_context 'TariffRate::Panama data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/panama"
     fixtures_file = "#{fixtures_dir}/panama.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Panama.recreate_index
     TariffRate::PanamaData.new(fixtures_file, s3).import
@@ -497,7 +497,7 @@ shared_context 'TariffRate::Peru data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/peru"
     fixtures_file = "#{fixtures_dir}/peru.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Peru.recreate_index
     TariffRate::PeruData.new(fixtures_file, s3).import
@@ -532,7 +532,7 @@ shared_context 'TariffRate::Singapore data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/singapore"
     fixtures_file = "#{fixtures_dir}/singapore.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::Singapore.recreate_index
     TariffRate::SingaporeData.new(fixtures_file, s3).import
@@ -567,7 +567,7 @@ shared_context 'TariffRate::SouthKorea data' do
     fixtures_dir = "#{Rails.root}/spec/fixtures/tariff_rates/south_korea"
     fixtures_file = "#{fixtures_dir}/korea.csv"
     s3 = stubbed_s3_client('tariff_rate')
-    s3.stub_responses(:get_object, body: open(fixtures_file))
+    s3.stub_responses(:get_object, body: open(fixtures_file).read)
 
     TariffRate::SouthKorea.recreate_index
     TariffRate::SouthKoreaData.new(fixtures_file, s3).import

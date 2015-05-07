@@ -38,7 +38,7 @@ json.results do
       end
     end
 
-    json.id hit['_id'] if %w(state uk).include?(source)
+    json.id hit[:_id] if %w(state uk).include?(source)
     json.source entry[:_source][:lead_source] if source == 'state'
     json.call(entry[:_source], *field_lists[source.to_sym])
   end

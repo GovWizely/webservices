@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'Sharepoint Trade Article API V2', type: :request do
-
   include_context 'V2 headers'
   fixtures_files_dir = "#{Rails.root}/spec/fixtures/sharepoint_trade_articles"
   before(:all) do
-    fixtures_files = Dir["#{fixtures_files_dir}/articles/*"].map { |file| open(file) }
+    fixtures_files = Dir["#{fixtures_files_dir}/articles/*"].map { |file| open(file).read }
 
     s3 = stubbed_s3_client('sharepoint_trade_article')
     s3.stub_responses(:list_objects, contents: [{ key: '116.xml' }, { key: '117.xml' }, { key: '118.xml' }, { key: '119.xml' }])

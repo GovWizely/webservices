@@ -8,10 +8,9 @@ describe ItaOfficeLocation, type: :model do
   end
 
   describe '.search_for' do
-
     it 'should return results sorted by post' do
       alphabetized_posts = ['Belo Horizonte', 'Brasilia', 'Recife', 'Rio De Janeiro', 'Sao Paulo']
-      expect(ItaOfficeLocation.search_for(countries: 'BR')[:hits].map { |h| h['_source']['post'] }).to eq(alphabetized_posts)
+      expect(ItaOfficeLocation.search_for(countries: 'BR')[:hits].map { |h| h[:_source][:post] }).to eq(alphabetized_posts)
     end
 
     context 'when options is an empty hash' do
@@ -63,9 +62,8 @@ describe ItaOfficeLocation, type: :model do
       end
 
       it 'should still have common terms in result entries' do
-        expect(ItaOfficeLocation.search_for(q: 'European')[:hits].first['_source']['office_name']).to eq('U.S. Mission to the European Union')
+        expect(ItaOfficeLocation.search_for(q: 'European')[:hits].first[:_source][:office_name]).to eq('U.S. Mission to the European Union')
       end
     end
-
   end
 end

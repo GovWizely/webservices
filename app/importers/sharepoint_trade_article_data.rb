@@ -57,7 +57,7 @@ class SharepointTradeArticleData
 
     articles = keys.map do |key|
       object = @s3.get_object(bucket: 'ngn-bluebox', key: "#{key}").body
-      xml = Nokogiri::XML(object.read)
+      xml = Nokogiri::XML(object)
       article_hash = extract_article_fields(xml)
       process_article_info(article_hash)
     end

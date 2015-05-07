@@ -63,7 +63,6 @@ describe Importer do
       it 'returns nil without logging' do
         expect(Rails.logger).not_to receive(:error)
         expect(MockData.new.lookup_country('undetermined')).to be_nil
-
       end
     end
     context 'when there is no country code' do
@@ -148,7 +147,7 @@ describe Importer do
     end
 
     def stored_docs
-      Mock.search_for({})[:hits].map { |h| h['_source'].deep_symbolize_keys }
+      Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
     end
   end
 end
