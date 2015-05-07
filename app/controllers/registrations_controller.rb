@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
   before_filter :configure_sign_up_parameters, only: :create
   before_filter :configure_account_update_parameters, only: :update
-  before_filter :authenticate_user!, only: :regenerate_api_key
+  before_filter :ensure_user_authenticated, only: :regenerate_api_key
 
   def regenerate_api_key
     current_user.api_key = User.generate_api_key
@@ -26,7 +26,7 @@ class RegistrationsController < Devise::RegistrationsController
   end
   # :nocov:
 
-  def authenticate_user!
+  def ensure_user_authenticated
     unless current_user
       render json: { error: 'Unauthorized' }, status: :unauthorized
     end

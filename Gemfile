@@ -1,7 +1,7 @@
 source 'https://rubygems.org'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
-gem 'rails', '4.0.1'
+gem 'rails', '4.0.9'
 
 gem 'airbrake'
 gem 'aws-sdk-core'
@@ -27,7 +27,7 @@ gem 'sinatra', require: nil
 gem 'sass'
 gem 'jquery-rails'
 
-gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
+gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git', tag: 'v0.0.1'
 
 group :production do
   gem 'newrelic_rpm'
