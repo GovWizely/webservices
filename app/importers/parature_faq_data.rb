@@ -48,7 +48,7 @@ class ParatureFaqData
       '500 Internal Server Error',
       'No such file or directory',
     ]
-    @permitted_error_messages.select { |m| error.message =~ /#{m}/ }.count > 0
+    @permitted_error_messages.count { |m| error.message =~ /#{m}/ } > 0
   end
 
   def extract_hash_from_resource(id)
@@ -66,7 +66,9 @@ class ParatureFaqData
     faq = remap_keys COLUMN_HASH, faq_hash[:Article]
     return nil if faq[:published] != 'true'
     faq.delete :published
-    faq[:topic], faq[:industry], faq[:country] = [], [], []
+    faq[:topic] = []
+    faq[:industry] = []
+    faq[:country] = []
 
     faq = process_folder_fields(faq)
     return nil if faq[:topic].include?('GKC Content Training')
@@ -84,16 +86,12 @@ class ParatureFaqData
   def process_folder_fields(faq)
     if faq[:folders]['ArticleFolder'].class == Hash
       id = faq[:folders]['ArticleFolder']['id']
-      if @folder_info[id][:type] != 'n/a'
-        faq = replace_folder_fields(faq, id)
-      end
+      faq = replace_folder_fields(faq, id) if @folder_info[id][:type] != 'n/a'
 
     elsif faq[:folders]['ArticleFolder'].class == Array
       faq[:folders]['ArticleFolder'].each do |folder|
         id = folder['id']
-        if @folder_info[id][:type] != 'n/a'
-          faq = replace_folder_fields(faq, id)
-        end
+        faq = replace_folder_fields(faq, id) if @folder_info[id][:type] != 'n/a'
       end
     end
     faq

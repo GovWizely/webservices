@@ -4,7 +4,6 @@ describe SharepointTradeArticleQuery do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/sharepoint_trade_articles" }
 
   describe '#generate_search_body' do
-
     context 'when options is an empty hash' do
       let(:query) { SharepointTradeArticleQuery.new({}) }
 
@@ -119,6 +118,5 @@ describe SharepointTradeArticleQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

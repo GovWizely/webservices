@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe MarketResearchData do
-
   let(:resource) { "#{Rails.root}/spec/fixtures/market_research/source.txt" }
   let(:importer) { MarketResearchData.new(resource) }
 
@@ -24,8 +23,6 @@ describe MarketResearchData do
       VCR.use_cassette('industry_mapping_client/market_research.yml', record: :none) do
         importer.import
       end
-
     end
   end
-
 end

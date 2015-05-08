@@ -13,7 +13,7 @@ Webservices::Application.routes.draw do
     get '/regenerate_api_key', to: 'registrations#regenerate_api_key'
   end
 
-  authenticate :user, lambda { |u| u.staff? } do
+  authenticate :user, ->(u) { u.staff? } do
     mount Sidekiq::Web => '/sidekiq'
   end
 
@@ -45,17 +45,13 @@ Webservices::Application.routes.draw do
       get 'dl/search'
       get 'ustda/search'
     end
-
   end
 
   concern :api_v2_routable do
-
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
-
   end
 
   concern :api_routable do
-
     path = { 'market_researches'         => 'market_research_library',
              'parature_faq'              => 'ita_faqs',
              'ita_office_locations'      => 'ita_office_locations',

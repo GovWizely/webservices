@@ -13,7 +13,6 @@ describe TariffRate::Query do
   end
 
   describe '#generate_search_body' do
-
     context 'when options include only q' do
       let(:query) { described_class.new(q: 'horses') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
@@ -69,6 +68,5 @@ describe TariffRate::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

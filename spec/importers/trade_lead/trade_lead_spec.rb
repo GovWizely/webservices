@@ -15,5 +15,4 @@ describe TradeLead do
       expect(described_class.importers).to match(importers)
     end
   end
-
 end

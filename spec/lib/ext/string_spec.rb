@@ -48,12 +48,12 @@ describe String do
 
     context 'of "BisDeniedPerson"' do
       let(:operand) { 'BisDeniedPerson' }
-      it { is_expected.to eq :'bis_denied_person' }
+      it { is_expected.to eq :bis_denied_person }
     end
 
     context 'of "AustralianTradeLead"' do
       let(:operand) { 'AustralianTradeLead' }
-      it { is_expected.to eq :'australian_trade_lead' }
+      it { is_expected.to eq :australian_trade_lead }
     end
   end
 end

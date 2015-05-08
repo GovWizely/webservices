@@ -115,5 +115,4 @@ describe TradeEvent::UstdaData do
                         source:             'USTDA')
     end
   end
-
 end

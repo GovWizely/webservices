@@ -21,7 +21,6 @@ describe 'FTA Honduras Tariff Rates API V2', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like "an empty result when a query doesn't match any documents"
       it_behaves_like 'it contains all TariffRate::Honduras results that match "horses"'
-
     end
   end
 end

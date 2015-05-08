@@ -12,10 +12,10 @@ json.call(entry[:_source],
           :url,
           :contacts,
           :source,
-)
+         )
 json.call(entry[:_source][:venues][0].deep_symbolize_keys,
           :venue,
           :city,
           :state,
           :country,
-)
+         )

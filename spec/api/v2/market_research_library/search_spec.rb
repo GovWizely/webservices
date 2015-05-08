@@ -132,7 +132,6 @@ describe 'Market Researches API V2', type: :request do
           expect(results[0]).to eq(expected_results[1])
         end
       end
-
     end
   end
 end

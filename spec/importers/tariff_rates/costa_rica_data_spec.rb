@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe TariffRate::CostaRicaData do
-
   fixtures_file = "#{Rails.root}/spec/fixtures/tariff_rates/costa_rica/costa_rica.csv"
 
   s3 = stubbed_s3_client('tariff_rate')

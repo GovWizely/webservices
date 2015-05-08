@@ -4,4 +4,4 @@ json.call(entry[:_source],
           :description,
           :url,
           :source,
-)
+         )

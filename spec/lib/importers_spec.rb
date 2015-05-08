@@ -11,5 +11,4 @@ describe Importers do
       expect(TradeEvent.importers).to match_array(importers)
     end
   end
-
 end

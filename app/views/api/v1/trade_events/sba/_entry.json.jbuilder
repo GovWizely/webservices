@@ -13,11 +13,11 @@ json.call(entry[:_source],
           :industries,
           :contacts,
           :source,
-)
+         )
 json.call(entry[:_source][:venues][0].deep_symbolize_keys,
           :venue,
           :address,
           :city,
           :state,
           :country,
-)
+         )

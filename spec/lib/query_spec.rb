@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe Query do
-
   shared_context 'with MockChildQuery child class' do
     before do
       class MockChildQuery < Query
@@ -19,8 +18,8 @@ describe Query do
   describe 'validations' do
     it do
       is_expected.to validate_numericality_of(:offset)
-                      .is_greater_than_or_equal_to(0)
-                      .allow_nil
+        .is_greater_than_or_equal_to(0)
+        .allow_nil
     end
   end
 

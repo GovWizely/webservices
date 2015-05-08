@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ScreeningList::DplData do
-
   before { ScreeningList::Dpl.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt" }
   let(:importer) { described_class.new(fixtures_file) }
@@ -25,7 +24,7 @@ describe ScreeningList::DplData do
                           country: '', postal_code: '', effective_date: '',
                           expiration_date: '', standard_order: '',
                           last_update: '', action: '', fr_citation: '' }],
-      )
+                       )
       expect(r).to eq(nil)
     end
     it 'returns correctly mapped data when entry is not empty' do

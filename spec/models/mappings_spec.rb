@@ -33,7 +33,6 @@ describe 'Model field mappings' do
                                                          'modify your mapping'
         end
       end
-
     end
   end
 end

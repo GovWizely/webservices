@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ScreeningList::DtcData do
-
   before { ScreeningList::Dtc.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv" }
   let(:importer) { described_class.new(fixtures_file) }

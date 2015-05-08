@@ -15,10 +15,8 @@ describe SharepointTradeArticleData do
 
     it 'loads sharepoint trade articles from specified resource' do
       expect(SharepointTradeArticle).to receive(:index) do |entries|
-
         expect(entries.size).to eq(4)
         expect(entries).to match_array entry_hash
-
       end
       importer.import
     end

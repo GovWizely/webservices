@@ -13,7 +13,6 @@ shared_context 'with an adjusted MarketResearch.mappings' do
 end
 
 describe RecreateIndicesWithModifiedMappings do
-
   before(:all) { Webservices::Application.model_classes.each(&:recreate_index) }
 
   describe '.call' do

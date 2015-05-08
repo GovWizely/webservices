@@ -4,7 +4,6 @@ describe CountryCommercialGuideQuery do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/country_commercial_guide" }
 
   describe '#generate_search_body' do
-
     context 'when options is an empty hash' do
       let(:query) { CountryCommercialGuideQuery.new({}) }
       it 'generates search body with default options' do
@@ -43,6 +42,5 @@ describe CountryCommercialGuideQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

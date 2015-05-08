@@ -51,10 +51,10 @@ module TariffRate
     def initialize(resource = nil, s3 = nil)
       @resource = resource || self.class.default_endpoint
       @s3 = s3 || Aws::S3::Client.new(
-                    region:      Rails.configuration.tariff_rate[:aws][:region],
-                    credentials: Aws::Credentials.new(
-                                  Rails.configuration.tariff_rate[:aws][:access_key_id],
-                                  Rails.configuration.tariff_rate[:aws][:secret_access_key]))
+        region:      Rails.configuration.tariff_rate[:aws][:region],
+        credentials: Aws::Credentials.new(
+          Rails.configuration.tariff_rate[:aws][:access_key_id],
+          Rails.configuration.tariff_rate[:aws][:secret_access_key]))
     end
 
     def import

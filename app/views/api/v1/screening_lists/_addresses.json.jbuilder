@@ -6,6 +6,6 @@ json.addresses do
               :state,
               :postal_code,
               :country,
-    )
+             )
   end
 end

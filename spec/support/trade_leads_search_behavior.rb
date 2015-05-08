@@ -11,11 +11,11 @@ shared_context 'TradeLead::Australia data' do
   before(:all) do
     TradeLead::Australia.recreate_index
     TradeLead::AustraliaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv").import
+      "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Australia] = JSON.parse(open(
-                   "#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read)
   end
 end
 
@@ -47,13 +47,12 @@ shared_context 'TradeLead::Canada data' do
   before(:all) do
     TradeLead::Canada.recreate_index
     TradeLead::CanadaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
+      "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Canada] = JSON.parse(open(
-                   "#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read)
   end
-
 end
 
 shared_examples 'it contains all TradeLead::Canada results' do
@@ -96,11 +95,11 @@ shared_context 'TradeLead::Fbopen data' do
   before(:all) do
     TradeLead::Fbopen.recreate_index
     TradeLead::FbopenImporter::PatchData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
+      "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Fbopen] = JSON.parse(open(
-                   "#{File.dirname(__FILE__)}/trade_leads/fbopen/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_leads/fbopen/results.json").read)
   end
 end
 
@@ -132,11 +131,11 @@ shared_context 'TradeLead::State data' do
   before(:all) do
     TradeLead::State.recreate_index
     TradeLead::StateData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+      "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::State] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/trade_leads/state/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_leads/state/results.json").read)
   end
 end
 
@@ -186,11 +185,11 @@ shared_context 'TradeLead::Uk data' do
   before(:all) do
     TradeLead::Uk.recreate_index
     TradeLead::UkData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+      "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Uk] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read)
+      "#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read)
   end
 end
 
@@ -222,7 +221,7 @@ shared_context 'TradeLead::Mca data' do
   before do
     TradeLead::Mca.recreate_index
     TradeLead::McaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+      "#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Mca] = JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/mca/results.json").read)
@@ -230,5 +229,4 @@ shared_context 'TradeLead::Mca data' do
 end
 
 shared_examples 'it contains all TradeLead::Mca results' do
-
 end

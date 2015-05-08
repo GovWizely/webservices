@@ -169,6 +169,5 @@ describe 'Consolidated Tariff Rates API V1', type: :request do
         let(:sources) { [TariffRate::SouthKorea] }
       end
     end
-
   end
 end

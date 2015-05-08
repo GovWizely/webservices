@@ -35,13 +35,11 @@ describe User do
     end
 
     context 'on password' do
-
       context 'when user not persisted' do
         context 'and given password is blank' do
           subject { create_user(password: nil, password_confirmation: nil) }
           it { is_expected.not_to be_valid }
         end
-
       end
 
       context 'when same' do
@@ -69,7 +67,6 @@ describe User do
         end
       end
     end
-
   end
 
   describe '#save' do

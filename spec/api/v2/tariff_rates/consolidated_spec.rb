@@ -193,6 +193,5 @@ describe 'Consolidated Tariff Rates API v2', type: :request do
         let(:sources) { [TariffRate::Australia] }
       end
     end
-
   end
 end

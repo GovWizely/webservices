@@ -11,4 +11,4 @@ json.call(entry[:_source],
           :source_list_url,
           :standard_order,
           :start_date,
-)
+         )

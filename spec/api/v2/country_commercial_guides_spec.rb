@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Country Commercial Guide API V2', type: :request do
-
   include_context 'V2 headers'
   before(:all) do
     CountryCommercialGuide.recreate_index
@@ -16,7 +15,6 @@ describe 'Country Commercial Guide API V2', type: :request do
   subject { response }
 
   describe 'GET /country_commercial_guides/search.json' do
-
     context 'when search parameters are empty' do
       before { get search_path, params, @v2_headers }
 
@@ -147,6 +145,5 @@ describe 'Country Commercial Guide API V2', type: :request do
         it_behaves_like 'it contains all expected results'
       end
     end
-
   end
 end

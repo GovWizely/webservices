@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'Fbopen Leads API V1', type: :request do
-
   before(:all) do
     TradeLead::Fbopen.recreate_index
     TradeLead::FbopenImporter::PatchData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
+      "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
   end
 
   let(:search_path) { '/fbopen_leads/search' }

@@ -165,9 +165,7 @@ module ActionController
     #       include mod
     #     end
 
-    if Rails::VERSION::MAJOR == 4
-      include StrongParameters
-    end
+    include StrongParameters if Rails::VERSION::MAJOR == 4
 
     ActiveSupport.run_load_hooks(:action_controller, self)
   end

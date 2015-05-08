@@ -82,17 +82,17 @@ module ScreeningList
     def extract_simple_nested_fields(node)
       fields = {}
       fields[:alt_names] = node.xpath('.//xmlns:aka')
-        .map { |n| extract_name(n) }.compact
+                           .map { |n| extract_name(n) }.compact
       fields[:programs] = node.xpath('.//xmlns:program')
-        .map(&:text).compact
+                          .map(&:text).compact
       fields[:nationalities] = node.xpath('.//xmlns:nationality')
-        .map { |n| extract_nationality(n) }.compact
+                               .map { |n| extract_nationality(n) }.compact
       fields[:citizenships] = node.xpath('.//xmlns:citizenship')
-        .map { |n| extract_citizenship(n) }.compact
+                              .map { |n| extract_citizenship(n) }.compact
       fields[:dates_of_birth] = node.xpath('.//xmlns:dateOfBirthItem')
-        .map { |n| extract_dob(n) }.compact
+                                .map { |n| extract_dob(n) }.compact
       fields[:places_of_birth] = node.xpath('.//xmlns:placeOfBirthItem')
-        .map { |n| extract_pob(n) }.compact
+                                 .map { |n| extract_pob(n) }.compact
       fields
     end
 

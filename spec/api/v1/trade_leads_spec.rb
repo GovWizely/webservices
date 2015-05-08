@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Trade Leads API V1', type: :request do
-
   before(:all) do
     TradeLead::Australia.recreate_index
     TradeLead::Canada.recreate_index

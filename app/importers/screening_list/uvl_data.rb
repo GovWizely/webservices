@@ -55,9 +55,9 @@ module ScreeningList
 
       doc[:alt_names] =
         rows.map { |row| row[:name].split(', a.k.a. ') }
-          .flatten
-          .uniq
-          .delete_if { |alt_name| alt_name == doc[:name] }
+        .flatten
+        .uniq
+        .delete_if { |alt_name| alt_name == doc[:name] }
 
       doc
     end

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe TariffRate::GuatemalaData do
-
   fixtures_file = "#{Rails.root}/spec/fixtures/tariff_rates/guatemala/guatemala.csv"
 
   s3_good = stubbed_s3_client('tariff_rate')
@@ -18,5 +17,4 @@ describe TariffRate::GuatemalaData do
       importer.import
     end
   end
-
 end

@@ -137,7 +137,7 @@ class Query
   private
 
   def cleanup_invalid_bytes(obj, fields)
-    fields.each do | f |
+    fields.each do |f|
       obj[f] = obj[f].encode('UTF-8', 'UTF-8', invalid: :replace, undef: :replace, replace: '') if obj[f]
     end
   end

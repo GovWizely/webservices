@@ -24,21 +24,20 @@ class FbopenParser < Parslet::Parser
   end
 
   rule(:datum) do
-    link  |
-    email |
-    datum_name >> datum_value.as(:value)
+    link | email |
+      datum_name >> datum_value.as(:value)
   end
 
   rule(:link) do
     str('<') >> str('LINK').as(:name) >> str('>') >> newline >>
       str('<URL>') >> datum_value.as(:value) >>
-        str('<DESC>') >> datum_value.as(:desc)
+      str('<DESC>') >> datum_value.as(:desc)
   end
 
   rule(:email) do
     str('<') >> str('EMAIL').as(:name) >> str('>') >> newline >>
       str('<EMAIL>') >> datum_value.as(:value) >>
-        str('<DESC>') >> datum_value.as(:desc)
+      str('<DESC>') >> datum_value.as(:desc)
   end
 
   rule(:datum_name) do
@@ -72,7 +71,7 @@ class FbopenParser < Parslet::Parser
     acc = Parslet::Accelerator
     optimized = acc.apply(self,
                           acc.rule((acc.str(:x).absent? >> acc.any).repeat(1)) { GobbleUp.new(x, 1) },
-    )
+                         )
   end
 
   def convert(input)
