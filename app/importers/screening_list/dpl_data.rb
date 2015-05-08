@@ -72,12 +72,14 @@ module ScreeningList
       entry[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
-      stops  =  %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
+      stopwords   = %w(and the los)
+      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
 
-      entry[:name_idx] = entry[:name].gsub(/[.,]/, ' ')
-      entry[:name_nostop] = entry[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
-      entry[:rev_name] = entry[:name_idx].split.reverse.join(' ')
-      entry[:trim_name] = entry[:name_idx].gsub(/\s+/, '')
+      entry[:name_idx]      = entry[:name].gsub(/[.,]/, '')
+      entry[:name_idx]      = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      entry[:name_nostop]   = entry[:name_idx].split(' ').map { |name| common_words.include?(name.downcase) ? '#' : name }.join(' ')
+      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
+      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
       entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
 
       %i(start_date end_date).each do |field|

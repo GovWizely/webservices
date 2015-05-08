@@ -68,19 +68,23 @@ module ScreeningList
         doc[:source_information_url] =
           'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
 
-      stops = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
+      stopwords   = %w(and the los)
+      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
 
-      doc[:name_idx]      = doc[:name].gsub(/[.,]/, ' ')
-      doc[:name_nostop]   = doc[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
+      doc[:name_idx]      = doc[:name].gsub(/[.,]/, '')
+      doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      doc[:name_nostop]   = doc[:name_idx].split(' ').map { |name| common_words.include?(name.downcase) ? '#' : name }.join(' ')
       doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
       doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
       doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
 
       if doc[:alt_names].present?
-        doc[:alt_names_idx]          = doc[:alt_names].map { |name| name.gsub(/[.,]/, ' ') }
-        doc[:rev_alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
-        doc[:trim_alt_names_idx]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
-        doc[:trim_rev_alt_names_idx] = doc[:rev_alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+        doc[:alt_names_idx]      = doc[:alt_names].map { |name| name.gsub(/[.,]/, '') }
+        doc[:alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.delete_if { |x| stopwords.include?(x.downcase) }.join(' ') }
+        doc[:alt_names_nostop]   = doc[:alt_names_idx].map { |name| common_words.include?(name.downcase) ? '#' : name }.join(' ')
+        doc[:rev_alt_names]      = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
+        doc[:trim_alt_names]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
+        doc[:trim_rev_alt_names] = doc[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
       end
 
       doc

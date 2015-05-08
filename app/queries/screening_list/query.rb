@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @score = options[:score].try(:to_i) if options[:score].present?
+      @fuzzy = options[:fuzzy]
     end
 
     def generate_query(json)
@@ -49,19 +49,19 @@ module ScreeningList
     def generate_score_query(json)
       keyword_fields = [
         'name_idx.keyword', 'name_nostop.keyword',
-        'alt_names_idx.keyword', 'alt_names_no_stops.keyword',
+        'alt_names_idx.keyword', 'alt_names_nostop.keyword',
         'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
         'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
 
       non_keyword_fields = [
         'name_idx', 'name_nostop',
-        'alt_names_idx', 'alt_names_no_stops',
+        'alt_names_idx', 'alt_names_nostop',
         'rev_name', 'trim_name', 'trim_rev_name',
         'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names']
 
       all_fields = keyword_fields + non_keyword_fields
 
-      h = {
+      score_hash = {
         score_100: { fields: keyword_fields, fuzziness: 0, weight: 5 },
         score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
         score_90:  { fields: keyword_fields, fuzziness: 1, weight: 5 },
@@ -73,7 +73,7 @@ module ScreeningList
       json.disable_coord true
       json.set! 'should' do
 
-        h.each { |key, value|
+        score_hash.each { |key, value|
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
