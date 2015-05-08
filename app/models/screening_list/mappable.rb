@@ -1,7 +1,7 @@
 module ScreeningList
   module Mappable
 
-    STOPWORDS = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
+    STOPWORDS = %w(and the los)
 
     def self.included(klass)
       klass.settings = {

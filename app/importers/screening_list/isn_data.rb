@@ -57,8 +57,6 @@ module ScreeningList
 
       doc[:programs] = rows.map { |row| row[:programs] }
 
-      stops = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
-
       stopwords   = %w(and the los)
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
 
