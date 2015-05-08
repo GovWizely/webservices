@@ -59,8 +59,12 @@ module ScreeningList
 
       stops = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc and the los)
 
-      doc[:name_idx]    = doc[:name].gsub(/[.,]/, ' ')
-      doc[:name_nostop] = doc[:name_idx].split.delete_if { |x| stops.include?(x.downcase) }.join(' ')
+      stopwords   = %w(and the los)
+      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
+
+      doc[:name_idx]      = doc[:name].gsub(/[.,]/, '')
+      doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      doc[:name_nostop]   = doc[:name_idx].split(' ').map { |name| common_words.include?(name.downcase) ? '#' : name }.join(' ')
       doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
       doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
       doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')

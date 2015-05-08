@@ -51,6 +51,12 @@ module ScreeningList
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' },
                                          stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
 
+            name_idx:                { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' },
+                                         stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
+
             name_nostop:             { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
@@ -61,6 +67,17 @@ module ScreeningList
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            alt_names_idx:           { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            alt_names_nostop:        { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' },
+                                         stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
 
             rev_name:                { type:     'string',
                                        norms:    { enabled: false },
