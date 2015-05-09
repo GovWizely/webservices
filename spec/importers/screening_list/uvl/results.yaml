@@ -13,7 +13,11 @@
     :postal_code: 
     :country: CN
   :alt_names: []
-  :phonetic_names: [China National Plant Import/Export Co.]
+  :name_idx: China National Plant Import/Export Co
+  :name_nostop: 'China National Plant Import/Export #'
+  :rev_name: Co Import/Export Plant National China
+  :trim_name: ChinaNationalPlantImport/ExportCo
+  :trim_rev_name: CoImport/ExportPlantNationalChina
 - :name: Brilliance Technology Ltd
   :id: cc91dc115ff25e9f2e3cab1b9d8adf75f5956982
   :source: *1
@@ -31,7 +35,11 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: [Brilliance Technology Ltd]
+  :name_idx: Brilliance Technology Ltd
+  :name_nostop: 'Brilliance Technology #'
+  :rev_name: Ltd Technology Brilliance
+  :trim_name: BrillianceTechnologyLtd
+  :trim_rev_name: LtdTechnologyBrilliance
 - :name: Dynasense Photonics Co., Limited
   :id: 91b38427499bf36988a61096f665301b890c9ec2
   :source: *1
@@ -44,14 +52,18 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: ["Dynasense Photonics Co., Limited"]
+  :name_idx: Dynasense Photonics Co Limited
+  :name_nostop: 'Dynasense Photonics # #'
+  :rev_name: Limited Co Photonics Dynasense
+  :trim_name: DynasensePhotonicsCoLimited
+  :trim_rev_name: LimitedCoPhotonicsDynasense
 - :name: Hi-Shine Technology (HK) Limited
   :id: 6e18b2585a002248ecb071d5fa8b26cdfd2f4144
   :source: *1
   :source_list_url: http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list
   :addresses:
-  - :address: Flat D12, 11/F, King Yip Factory Bldg, 59 King Yip Street, Kwun Tong,
+  - :address: Flat D12, 11/F, King Yip Factory Bldg, 59 King Yip Street, Kwun Tong
       Kowloon
     :city:
     :state:
@@ -64,7 +76,11 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: [Hi-Shine Technology (HK) Limited]
+  :name_idx: Hi-Shine Technology (HK) Limited
+  :name_nostop: 'Hi-Shine Technology (HK) #'
+  :rev_name: Limited (HK) Technology Hi-Shine
+  :trim_name: Hi-ShineTechnology(HK)Limited
+  :trim_rev_name: Limited(HK)TechnologyHi-Shine
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
   :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
   :source: *1
@@ -77,7 +93,11 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: [Hong Kong Haimao Info-Tec Development Co Ltd]
+  :name_idx: Hong Kong Haimao Info-Tec Development Co Ltd
+  :name_nostop: 'Hong Kong Haimao Info-Tec Development # #'
+  :rev_name: Ltd Co Development Info-Tec Haimao Kong Hong
+  :trim_name: HongKongHaimaoInfo-TecDevelopmentCoLtd
+  :trim_rev_name: LtdCoDevelopmentInfo-TecHaimaoKongHong
 - :name: Lianqi (HK) Electronics Co Ltd
   :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
   :source: *1
@@ -90,7 +110,11 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: [Lianqi (HK) Electronics Co Ltd]
+  :name_idx: Lianqi (HK) Electronics Co Ltd
+  :name_nostop: 'Lianqi (HK) Electronics # #'
+  :rev_name: Ltd Co Electronics (HK) Lianqi
+  :trim_name: Lianqi(HK)ElectronicsCoLtd
+  :trim_rev_name: LtdCoElectronics(HK)Lianqi
 - :name: Lion Chip Electronics Ltd
   :id: f117b1dab0d802e5f6c3a02113f67f3f72893a6e
   :source: *1
@@ -103,7 +127,11 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :phonetic_names: [Lion Chip Electronics Ltd]
+  :name_idx: Lion Chip Electronics Ltd
+  :name_nostop: 'Lion Chip Electronics #'
+  :rev_name: Ltd Electronics Chip Lion
+  :trim_name: LionChipElectronicsLtd
+  :trim_rev_name: LtdElectronicsChipLion
 - :name: Security 2 Business Academy
   :id: 5b5a164dd0e4ca3acb6397dbeb2d5713c4f13f90
   :source: *1
@@ -121,7 +149,11 @@
     :postal_code:
     :country: RU
   :alt_names: []
-  :phonetic_names: [Security 2 Business Academy]
+  :name_idx: Security 2 Business Academy
+  :name_nostop: Security 2 Business Academy
+  :rev_name: Academy Business 2 Security
+  :trim_name: Security2BusinessAcademy
+  :trim_rev_name: AcademyBusiness2Security
 - :name: S2BA
   :id: 8cc44eee211bbc678fa468cfa5d44065b4c5d749
   :source: *1
@@ -139,7 +171,11 @@
     :postal_code:
     :country: RU
   :alt_names: []
-  :phonetic_names: [S2BA]
+  :name_idx: S2BA
+  :name_nostop: S2BA
+  :rev_name: S2BA
+  :trim_name: S2BA
+  :trim_rev_name: S2BA
 - :name: Academy of Business Security
   :id: b5f1189bc3a5d4a969a9980d946f30c9dd74ea84
   :source: *1
@@ -157,7 +193,11 @@
     :postal_code:
     :country: RU
   :alt_names: []
-  :phonetic_names: [Academy of Business Security]
+  :name_idx: Academy of Business Security
+  :name_nostop: Academy of Business Security
+  :rev_name: Security Business of Academy
+  :trim_name: AcademyofBusinessSecurity
+  :trim_rev_name: SecurityBusinessofAcademy
 - :name: T2BA
   :id: c46ba5ffd6da15f8e524b58f59123894bb63e2f8
   :source: *1
@@ -170,7 +210,11 @@
     :postal_code: 
     :country: RU
   :alt_names: []
-  :phonetic_names: [T2BA]
+  :name_idx: T2BA
+  :name_nostop: T2BA
+  :rev_name: T2BA
+  :trim_name: T2BA
+  :trim_rev_name: T2BA
 - :name: Training 2 Business Academy, a.k.a. T2BA, a.k.a. Academy of Business Training
   :id: 385c6ccf9a8683027c6a981a8467a1ee357a4ee2
   :source: *1
@@ -191,8 +235,32 @@
   - Training 2 Business Academy
   - T2BA
   - Academy of Business Training
-  :phonetic_names: [
-  "Training 2 Business Academy, a.k.a. T2BA, a.k.a. Academy of Business Training",
-  "Training 2 Business Academy",
-  "T2BA",
-  "Academy of Business Training"]
+  :name_idx: 
+   Training 2 Business Academy aka T2BA aka Academy of Business Training
+  :name_nostop: 
+   Training 2 Business Academy aka T2BA aka Academy of Business Training
+  :rev_name: 
+   Training Business of Academy aka T2BA aka Academy Business 2 Training
+  :trim_name: Training2BusinessAcademyakaT2BAakaAcademyofBusinessTraining
+  :trim_rev_name: 
+   TrainingBusinessofAcademyakaT2BAakaAcademyBusiness2Training
+  :alt_names_idx: 
+  - Training 2 Business Academy
+  - T2BA
+  - Academy of Business Training
+  :alt_names_nostop: 
+  - Training 2 Business Academy
+  - T2BA
+  - Academy of Business Training
+  :rev_alt_names: 
+  - Academy Business 2 Training
+  - T2BA
+  - Training Business of Academy
+  :trim_alt_names: 
+  - Training2BusinessAcademy
+  - T2BA
+  - AcademyofBusinessTraining
+  :trim_rev_alt_names: 
+  - AcademyBusiness2Training
+  - T2BA
+  - TrainingBusinessofAcademy

@@ -56,7 +56,7 @@ module ScreeningList
       if entry[:alt_names].present?
         entry[:alt_names_idx]      = entry[:alt_names].map { |name| name.gsub(/[.,]/, '') }
         entry[:alt_names_idx]      = entry[:alt_names_idx].map { |name| name.split.delete_if { |x| stopwords.include?(x.downcase) }.join(' ') }
-        entry[:alt_names_nostop]   = entry[:alt_names_idx].map { |name| common_words.include?(name.downcase) ? '#' : name }.join(' ')
+        entry[:alt_names_nostop]   = entry[:alt_names_idx].map { |name| name.split { |x| common_words.include?(x.downcase) ? '#' : x }.join(' ') }
         entry[:rev_alt_names]      = entry[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
         entry[:trim_alt_names]     = entry[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
         entry[:trim_rev_alt_names] = entry[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
