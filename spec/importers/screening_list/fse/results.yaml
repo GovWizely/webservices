@@ -7,7 +7,7 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: "(Linked To: NATIONAL IRANIAN TANKER COMPANY)"
+  :remarks: (Linked To: NATIONAL IRANIAN TANKER COMPANY)
   :id: '15987'
   :source: &1
     :full_name: Foreign Sanctions Evaders (FSE) - Treasury Department
@@ -15,7 +15,6 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: FERLAND COMPANY LIMITED
-  :phonetic_names: ["FERLAND COMPANY LIMITED"]
   :type: Entity
   :alt_names:
   - FERLAND CO. LTD
@@ -44,6 +43,16 @@
     :issue_date: 
     :number: Material Support
     :type: Executive Order 13645 Determination -
+  :name_idx: FERLAND COMPANY LIMITED
+  :name_nostop: 'FERLAND # #'
+  :rev_name: LIMITED COMPANY FERLAND
+  :trim_name: FERLANDCOMPANYLIMITED
+  :trim_rev_name: LIMITEDCOMPANYFERLAND
+  :alt_names_idx: [FERLAND CO LTD]
+  :alt_names_nostop: [FERLAND CO LTD]
+  :rev_alt_names: [LTD CO FERLAND]
+  :trim_alt_names: [FERLANDCOLTD]
+  :trim_rev_alt_names: [LTDCOFERLAND],    
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 
@@ -52,13 +61,12 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: "(Linked To: FERLAND COMPANY LIMITED)"
+  :remarks: (Linked To: FERLAND COMPANY LIMITED)
   :id: '16422'
   :source: *1
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: SOKOLENKO, Vitaly
-  :phonetic_names: ["SOKOLENKO, Vitaly"]
   :type: Individual
   :alt_names:
   - SOKOLENKO, Vitalii
@@ -88,6 +96,16 @@
     :issue_date: 
     :number: Material Support
     :type: Executive Order 13645 Determination -
+  :name_idx: SOKOLENKO Vitaly
+  :name_nostop: SOKOLENKO Vitaly
+  :rev_name: Vitaly SOKOLENKO
+  :trim_name: SOKOLENKOVitaly
+  :trim_rev_name: VitalySOKOLENKO
+  :alt_names_idx: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
+  :alt_names_nostop: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
+  :rev_alt_names: [Vitalii SOKOLENKO, Vitaliy SOKOLENKO]
+  :trim_alt_names: [SOKOLENKOVitalii, SOKOLENKOVitaliy]
+  :trim_rev_alt_names: [VitaliiSOKOLENKO, VitaliySOKOLENKO]
 - :entity_number: '16531'
   :title: 
   :call_sign: 
@@ -102,7 +120,6 @@
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/fse_list.aspx
   :name: HOSSEINPOUR, Houshang
-  :phonetic_names: ["HOSSEINPOUR, Houshang"]
   :type: Individual
   :alt_names:
   - HOSSEINPOUR, Houshang Shahali
@@ -125,3 +142,13 @@
     :issue_date: 
     :number: R17550559
     :type: Passport
+  :name_idx: HOSSEINPOUR Houshang
+  :name_nostop: HOSSEINPOUR Houshang
+  :rev_name: Houshang HOSSEINPOUR
+  :trim_name: HOSSEINPOURHoushang
+  :trim_rev_name: HoushangHOSSEINPOUR
+  :alt_names_idx: [HOSSEINPOUR Houshang Shahali, HOSEIN-PUR Houshang]
+  :alt_names_nostop: [HOSSEINPOUR Houshang Shahali, HOSEIN-PUR Houshang]
+  :rev_alt_names: [Shahali Houshang HOSSEINPOUR, Houshang HOSEIN-PUR]
+  :trim_alt_names: [HOSSEINPOURHoushangShahali, HOSEIN-PURHoushang]
+  :trim_rev_alt_names: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEIN-PUR]    

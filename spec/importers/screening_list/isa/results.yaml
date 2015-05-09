@@ -19,7 +19,6 @@
   :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#isa
   :name: KUO OIL (S) PTE. LIMITED
-  :phonetic_names: ["KUO OIL (S) PTE. LIMITED"]
   :type: Entity
   :alt_names: []
   :programs:
@@ -35,6 +34,11 @@
     :state: 
     :address: '200 Cantonment Road, #15-00 Southpoint'
   :ids: []
+  :name_idx: KUO OIL (S) PTE LIMITED
+  :name_nostop: 'KUO OIL (S) PTE #'
+  :rev_name: LIMITED PTE (S) OIL KUO
+  :trim_name: KUOOIL(S)PTELIMITED
+  :trim_rev_name: LIMITEDPTE(S)OILKUO
 - :entity_number: '13043'
   :title: 
   :call_sign: 
@@ -58,7 +62,6 @@
   :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#isa
   :name: FAL OIL COMPANY LTD.
-  :phonetic_names: ["FAL OIL COMPANY LTD."]
   :type: Entity
   :alt_names: []
   :programs:
@@ -75,3 +78,8 @@
     :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port,
       Near Mina Khalid Road, Al Khan Area
   :ids: []
+  :name_idx: FAL OIL COMPANY LTD
+  :name_nostop: 'FAL OIL # #'
+  :rev_name: LTD COMPANY OIL FAL
+  :trim_name: FALOILCOMPANYLTD
+  :trim_rev_name: LTDCOMPANYOILFAL

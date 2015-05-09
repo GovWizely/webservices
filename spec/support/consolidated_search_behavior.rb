@@ -17,15 +17,6 @@ end
 shared_examples 'it contains all expected results of source' do
   include_context 'full results from response'
   it 'contains them all' do
-
-    # 1. Add a `binding.pry` here:
-    # binding.pry
-
-    # 2. Run: rspec spec/api/v1/screening_lists/consolidated_spec.rb -e 'empty behaves like it contains all ScreeningList::[RELEVANT SOURCE HERE]'
-
-    # 3. On the pry console, run:
-    # File.write("#{Rails.root}/spec/fixtures/screening_lists/[RELEVANT SOURCE HERE]/expected_results.json", JSON.pretty_generate(full_results))
-
     expect(got).to match_array(expected)
   end
 end

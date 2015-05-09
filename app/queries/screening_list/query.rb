@@ -48,16 +48,13 @@ module ScreeningList
 
     def generate_score_query(json)
       keyword_fields = [
-        'name_idx.keyword', 'name_nostop.keyword',
-        'alt_names_idx.keyword', 'alt_names_nostop.keyword',
+        'name_idx.keyword', 'name_nostop.keyword', 'alt_names_idx.keyword', 'alt_names_nostop.keyword',
         'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
         'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
 
       non_keyword_fields = [
-        'name_idx', 'name_nostop',
-        'alt_names_idx', 'alt_names_nostop',
-        'rev_name', 'trim_name', 'trim_rev_name',
-        'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names']
+        'name_idx', 'name_nostop', 'alt_names_idx', 'alt_names_nostop',
+        'rev_name', 'trim_name', 'trim_rev_name', 'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names']
 
       all_fields = keyword_fields + non_keyword_fields
 

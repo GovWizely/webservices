@@ -17,7 +17,6 @@
   :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561
   :name: BANK OF KUNLUN CO LTD
-  :phonetic_names: ["BANK OF KUNLUN CO LTD"]
   :type: Entity
   :alt_names:
   - KARAMAY URBAN CREDIT COOPERATIVES
@@ -51,8 +50,26 @@
     :address: No. 68 Zhongya South Rd, Economic and Technological Development Zone,
       (Urumqi, Xinjiang Branch)
   :ids:
-  - :country: 
+  - :country:
     :expiration_date: 
     :issue_date: 
     :number: CKLB CN BJ
     :type: SWIFT/BIC
+  :name_idx: BANK OF KUNLUN CO LTD
+  :name_nostop: 'BANK OF KUNLUN # #'
+  :rev_name: LTD CO KUNLUN OF BANK
+  :trim_name: BANKOFKUNLUNCOLTD
+  :trim_rev_name: LTDCOKUNLUNOFBANK
+  :alt_names_idx:
+   [KARAMAY URBAN CREDIT COOPERATIVES,
+    KARAMAY CITY COMMERCIAL BANK CO LTD]
+  :alt_names_nostop:
+   [KARAMAY URBAN CREDIT COOPERATIVES,
+   KARAMAY CITY COMMERCIAL BANK CO LTD]
+  :rev_alt_names:
+   [COOPERATIVES CREDIT URBAN KARAMAY,
+    LTD CO BANK COMMERCIAL CITY KARAMAY]
+  :trim_alt_names:
+   [KARAMAYURBANCREDITCOOPERATIVES, KARAMAYCITYCOMMERCIALBANKCOLTD]
+  :trim_rev_alt_names:
+   [COOPERATIVESCREDITURBANKARAMAY, LTDCOBANKCOMMERCIALCITYKARAMAY]

@@ -35,9 +35,18 @@ describe ScreeningList::DplData do
         last_update: '', action: '', fr_citation: ''
       }
       expected = {
-        name: 'Santos Dumont', start_date: nil, end_date: nil, standard_order: '',
-        phonetic_names: ['Santos Dumont'],
-        remarks: '', federal_register_notice: '', id: '000abc',
+        name: 'Santos Dumont',
+        name_idx: 'Santos Dumont',
+        name_nostop: 'Santos Dumont',
+        start_date: nil,
+        trim_name: 'SantosDumont',
+        trim_rev_name: 'DumontSantos',
+        end_date: nil,
+        standard_order: '',
+        remarks: '',
+        rev_name: 'Dumont Santos',
+        federal_register_notice: '',
+        id: '000abc',
         source: { full_name: 'Denied Persons List (DPL) - Bureau of Industry and Security', code: 'DPL' },
         source_list_url: 'http://www.bis.doc.gov/index.php/the-denied-persons-list',
         source_information_url: 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list',
