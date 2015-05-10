@@ -32,25 +32,25 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
     end
 
-    context 'when name is specified' do
-      let(:params) { { name: 'banco nacional de cuba' } }
-      subject { response }
-      it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"'
-      it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [ScreeningList::Sdn] }
-      end
-
-      context 'and distance is specified' do
-        let(:params) { { name: 'SALEH Jamal', distance: '1' } }
-        subject { response }
-        it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with distance of 1'
-        it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [ScreeningList::Plc] }
-        end
-      end
-    end
+    # context 'when name is specified' do
+    #   let(:params) { { name: 'banco nacional de cuba' } }
+    #   subject { response }
+    #   it_behaves_like 'a successful search request'
+    #   it_behaves_like 'it contains all ScreeningList::Sdn results that match "banco nacional de cuba"'
+    #   it_behaves_like 'it contains only results with sources' do
+    #     let(:sources) { [ScreeningList::Sdn] }
+    #   end
+    #
+    #   context 'and distance is specified' do
+    #     let(:params) { { name: 'SALEH Jamal', distance: '1' } }
+    #     subject { response }
+    #     it_behaves_like 'a successful search request'
+    #     it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with distance of 1'
+    #     it_behaves_like 'it contains only results with sources' do
+    #       let(:sources) { [ScreeningList::Plc] }
+    #     end
+    #   end
+    # end
 
     context 'when address is specified' do
       shared_examples 'it contains all ScreeningList::Dpl results with address "MINATOKU"' do
