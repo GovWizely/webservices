@@ -28,9 +28,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     context 'contains all TradeLead::Mca results' do
       let(:source) { TradeLead::Mca }
       let(:expected) { [0, 1, 2] }
-      pending 'until MCA is re-enabled' do
-        it_behaves_like 'it contains all expected results of source'
-      end
+      it_behaves_like 'it contains all expected results of source'
     end
 
     context 'when source is specified' do

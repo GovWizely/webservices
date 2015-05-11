@@ -25,7 +25,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      xit 'returns trade leads sorted by published_date:desc, country: asc' do
+      it 'returns trade leads sorted by published_date:desc, country: asc' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(16)
         expect(json_response['offset']).to eq(0)
@@ -41,7 +41,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it_behaves_like 'a successful search request'
 
-      xit 'returns up to the specified size' do
+      it 'returns up to the specified size' do
         json_response = JSON.parse(response.body)
         expect(json_response['total']).to eq(16)
         expect(json_response['offset']).to eq(0)
