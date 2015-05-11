@@ -96,7 +96,7 @@ class User
   end
   # -- END OF STUFF THAT DIRECTLY SUPPORTS ES + DEVISE ------------------------
 
-  # TODO can I reuse code from Indexable?
+  # TODO: can I reuse code from Indexable?
   index_name [ES::INDEX_PREFIX, name.indexize].join(':')
 
   devise :registerable, :database_authenticatable, :recoverable, :confirmable

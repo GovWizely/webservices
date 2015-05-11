@@ -30,6 +30,5 @@ describe 'BISN Nonproliferation Sanctions API V1', type: :request do
         it_behaves_like 'it contains all expected results of source'
       end
     end
-
   end
 end

@@ -32,8 +32,8 @@ class SharepointTradeArticleQuery < Query
 
   def has_filter_options?
     @countries || @export_phases || @creation_date || @release_date || @expiration_date ||
-    @industries || @trade_regions || @trade_programs || @trade_initiatives ||
-    @topics || @sub_topics || @geo_regions || @geo_subregions
+      @industries || @trade_regions || @trade_programs || @trade_initiatives ||
+      @topics || @sub_topics || @geo_regions || @geo_subregions
   end
 
   def generate_sp_query(q_terms, json)

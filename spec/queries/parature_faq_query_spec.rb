@@ -4,7 +4,6 @@ describe ParatureFaqQuery do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/parature_faq" }
 
   describe '#generate_search_body' do
-
     context 'when options is an empty hash' do
       let(:query) { ParatureFaqQuery.new({}) }
 
@@ -75,6 +74,5 @@ describe ParatureFaqQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

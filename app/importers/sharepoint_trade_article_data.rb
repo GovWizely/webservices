@@ -45,10 +45,10 @@ class SharepointTradeArticleData
 
   def initialize(s3 = nil)
     @s3 = s3 || Aws::S3::Client.new(
-                  region:      Rails.configuration.sharepoint_trade_article[:aws][:region],
-                  credentials: Aws::Credentials.new(
-                                Rails.configuration.sharepoint_trade_article[:aws][:access_key_id],
-                                Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key]))
+      region:      Rails.configuration.sharepoint_trade_article[:aws][:region],
+      credentials: Aws::Credentials.new(
+        Rails.configuration.sharepoint_trade_article[:aws][:access_key_id],
+        Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key]))
   end
 
   def import
@@ -57,7 +57,7 @@ class SharepointTradeArticleData
 
     articles = keys.map do |key|
       object = @s3.get_object(bucket: 'ngn-bluebox', key: "#{key}").body
-      xml = Nokogiri::XML(object.read)
+      xml = Nokogiri::XML(object)
       article_hash = extract_article_fields(xml)
       process_article_info(article_hash)
     end
@@ -69,9 +69,7 @@ class SharepointTradeArticleData
 
   def get_object_keys(resp)
     resp.contents.map do |object|
-      if object.key.end_with?('.xml')
-        object.key
-      end
+      object.key if object.key.end_with?('.xml')
     end.compact
   end
 
@@ -129,18 +127,14 @@ class SharepointTradeArticleData
 
   def remove_duplicates(hash)
     hash.each do |_k, v|
-      if v.class == Array
-        v.uniq!
-      end
+      v.uniq! if v.class == Array
     end
     hash
   end
 
   def replace_nulls(hash)
     hash.each do |k, v|
-      if v.nil? && is_date?(k) == false
-        hash[k] = ''
-      end
+      hash[k] = '' if v.nil? && is_date?(k) == false
     end
   end
 

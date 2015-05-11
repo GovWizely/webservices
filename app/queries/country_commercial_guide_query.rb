@@ -29,6 +29,6 @@ class CountryCommercialGuideQuery < Query
           json.child! { json.terms  { json.industry @industries }  } if @industries
         end
       end
-    end if @countries ||  @topics || @industries
+    end if @countries || @topics || @industries
   end
 end

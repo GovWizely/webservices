@@ -25,7 +25,6 @@ module ScreeningList
       multi_fields = %i(alt_names name remarks title)
       json.query do
         json.bool do
-
           json.must do
             json.child! { generate_multi_match(json, multi_fields, @q) } if @q
           end if @q
@@ -36,7 +35,6 @@ module ScreeningList
           if @address
             generate_fuzzy_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
           end
-
         end
       end if [@q, @name, @fuzziness, @address].any?
     end

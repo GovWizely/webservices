@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ImportEmptyIndices do
-
   before(:all) { Webservices::Application.model_classes.each(&:recreate_index) }
   subject { described_class.call(dry_run: true) }
 
@@ -16,5 +15,4 @@ describe ImportEmptyIndices do
       it { is_expected.not_to include(ScreeningList::Dpl) }
     end
   end
-
 end

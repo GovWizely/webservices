@@ -52,9 +52,7 @@ module TradeEvent
       event_hash = extract_from_event_info(event_info)
       process_required_fields(event_hash)
 
-      if event_invalid?(event_hash)
-        return nil
-      end
+      return nil if event_invalid?(event_hash)
 
       process_optional_fields(event_hash)
 
@@ -96,8 +94,8 @@ module TradeEvent
 
     def event_invalid?(event_hash)
       event_hash[:venues].first[:country].nil? ||
-          event_hash[:end_date].nil? || event_hash[:start_date].nil? ||
-          event_hash[:end_date] < Date.current
+        event_hash[:end_date].nil? || event_hash[:start_date].nil? ||
+        event_hash[:end_date] < Date.current
     end
   end
 end

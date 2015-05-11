@@ -271,6 +271,5 @@ describe 'Consolidated Screening List API V1', type: :request do
         end
       end
     end
-
   end
 end

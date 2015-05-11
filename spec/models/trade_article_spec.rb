@@ -8,10 +8,9 @@ describe TradeArticle, type: :model do
   end
 
   describe '.search_for' do
-
     it 'should return results sorted by pub_date' do
       ids = %w(447 446 501)
-      expect(TradeArticle.search_for(update_date_start: '2013-01-01')[:hits].map { |h| h['_id'] }).to eq(ids)
+      expect(TradeArticle.search_for(update_date_start: '2013-01-01')[:hits].map { |h| h[:_id] }).to eq(ids)
     end
 
     context 'when options is an empty hash' do
@@ -50,6 +49,5 @@ describe TradeArticle, type: :model do
         expect(TradeArticle.search_for(update_date_end: '2013-05-07')[:total]).to eq(2)
       end
     end
-
   end
 end

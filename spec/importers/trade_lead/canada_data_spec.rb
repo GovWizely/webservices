@@ -73,8 +73,7 @@ describe TradeLead::CanadaData do
                         urls:                                 ['https://example.net/123/abc.pdf'],
                         country:                              'CA',
                         source:                               'CANADA',
-                        )
+                       )
     end
   end
-
 end

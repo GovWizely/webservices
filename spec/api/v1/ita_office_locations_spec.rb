@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'ITA Office Locations API V1', type: :request do
-
   before(:all) do
     ItaOfficeLocation.recreate_index
     fixtures_dir = "#{Rails.root}/spec/fixtures/ita_office_locations"
@@ -12,7 +11,6 @@ describe 'ITA Office Locations API V1', type: :request do
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_office_locations/results.json").read }
 
   describe 'GET /ita_office_locations/search.json' do
-
     context 'when q is specified' do
       let(:params) { { q: 'san jose' } }
       before { get '/ita_office_locations/search', params, v1_headers }
@@ -44,7 +42,6 @@ describe 'ITA Office Locations API V1', type: :request do
         results = json_response['results']
         expect(results[0]).to eq(expected_results[1])
       end
-
     end
 
     context 'when USA and state is specified' do
@@ -105,6 +102,5 @@ describe 'ITA Office Locations API V1', type: :request do
       end
       it_behaves_like "an empty result when a country search doesn't match any documents"
     end
-
   end
 end

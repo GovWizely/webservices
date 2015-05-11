@@ -19,6 +19,6 @@ json.results do
               :geo_subregion,
               :country,
               :keyword,
-       )
+             )
   end
 end

@@ -80,7 +80,7 @@ module TradeLead
         return unless %w(PRESOL COMBINE MOD).include?(entry['ntype'])
         return if !(entry['POPCOUNTRY'].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry['POPCOUNTRY'] == 'US'
 
-        entry['DATE']     &&= Date.strptime("#{entry['YEAR']}#{entry['DATE']}", '%y%m%d').iso8601
+        entry['DATE'] &&= Date.strptime("#{entry['YEAR']}#{entry['DATE']}", '%y%m%d').iso8601
         entry['RESPDATE'] &&= Date.strptime(entry['RESPDATE'], '%m%d%y').iso8601
         entry['ARCHDATE'] &&= Date.strptime(entry['ARCHDATE'], '%m%d%Y').iso8601
 

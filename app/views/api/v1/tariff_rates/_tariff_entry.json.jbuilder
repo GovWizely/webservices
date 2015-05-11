@@ -7,4 +7,4 @@ json.call(entry[:_source],
           :reporter_agreement_name, :partner_agreement_approved,
           :reporter_agreement_approved, :quota_name, :rule_text, :link_text, :link_url,
           :annual_rates, :alt_annual_rates, :source
-)
+         )

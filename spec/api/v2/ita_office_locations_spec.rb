@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'ITA Office Locations API V2', type: :request do
-
   include_context 'V2 headers'
   before(:all) do
     ItaOfficeLocation.recreate_index
@@ -12,7 +11,6 @@ describe 'ITA Office Locations API V2', type: :request do
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_office_locations/results.json").read }
 
   describe 'GET /ita_office_locations/search.json' do
-
     context 'when q is specified' do
       let(:params) { { q: 'san jose' } }
       before { get '/ita_office_locations/search', params, @v2_headers }
@@ -105,6 +103,5 @@ describe 'ITA Office Locations API V2', type: :request do
 
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
-
   end
 end

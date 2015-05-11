@@ -2,7 +2,6 @@ require 'spec_helper'
 require 'elasticsearch/persistence/model'
 
 describe OrmAdapter::Elasticsearch do
-
   before do
     class ThingModel
       include Elasticsearch::Persistence::Model

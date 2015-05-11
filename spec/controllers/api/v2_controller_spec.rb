@@ -13,7 +13,6 @@ shared_context 'user with API Key' do
 end
 
 describe Api::V2Controller, type: :controller do
-
   class InheritsFromApiV2Controller < described_class
     def foo
       render text: 'ok', status: :ok
@@ -25,7 +24,6 @@ describe Api::V2Controller, type: :controller do
   end
 
   describe InheritsFromApiV2Controller do
-
     before do
       Rails.application.routes.draw do
         get '/foo' => 'inherits_from_api_v2#foo'
@@ -55,7 +53,6 @@ describe Api::V2Controller, type: :controller do
 
         context 'when given via params' do
           it 'responds with 200 ok' do
-
             get :foo, api_key: user.api_key
             expect(response.status).to eq(200)
           end
@@ -75,8 +72,6 @@ describe Api::V2Controller, type: :controller do
           end
         end
       end
-
     end
-
   end
 end

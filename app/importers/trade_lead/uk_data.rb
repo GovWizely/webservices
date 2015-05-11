@@ -31,7 +31,7 @@ module TradeLead
 
     def import
       file = open @resource
-      file.readline # hack to remove first line from csv
+      file.readline # HACK: to remove first line from csv
       rows = CSV.parse(file, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
       entries = []
       rows.each do |row|

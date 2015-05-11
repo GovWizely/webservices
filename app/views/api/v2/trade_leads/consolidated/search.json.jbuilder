@@ -26,7 +26,7 @@ json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys
     source = entry[:_source][:source].downcase
-    json.id hit['_id'] if %(state uk).include?(source)
+    json.id hit[:_id] if %(state uk).include?(source)
     json.call(entry[:_source], *field_lists[source.to_sym])
   end
 end

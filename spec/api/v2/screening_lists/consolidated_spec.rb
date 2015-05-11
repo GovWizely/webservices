@@ -341,6 +341,5 @@ describe 'Consolidated Screening List API V2', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all ScreeningList::Dpl results that match end_date "2005-06-05"'
     end
-
   end
 end

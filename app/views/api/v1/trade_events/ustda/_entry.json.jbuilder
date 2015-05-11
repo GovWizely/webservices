@@ -18,4 +18,4 @@ json.call(entry[:_source][:venues][0].deep_symbolize_keys,
           :city,
           :state,
           :country,
-)
+         )

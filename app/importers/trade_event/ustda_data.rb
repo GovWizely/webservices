@@ -49,7 +49,7 @@ module TradeEvent
     def events
       fh = open(@resource, 'r:UTF-8')
       content = fh.read.encode('UTF-16le', invalid: :replace, replace: '', universal_newline: true).encode('UTF-8')
-      doc = CSV.parse(content, headers: true, header_converters: :symbol, encoding: 'UTF-8', skip_lines: %r{^"Last updated})
+      doc = CSV.parse(content, headers: true, header_converters: :symbol, encoding: 'UTF-8', skip_lines: /^"Last updated/)
       doc.map { |entry| process_entry entry.to_h }.compact
     end
 
@@ -91,12 +91,12 @@ module TradeEvent
       (1..6).map do|id|
         fields = %w(country state city venue).map { |fname| "#{fname}#{id}".to_sym }
         venue = entry
-                  .slice(*fields)
-                  .map do |k, v|
-                    { k.to_s.chop => v.blank? ? '' : v.strip }
-                  end
-                  .reduce(:merge)
-                  .symbolize_keys
+                .slice(*fields)
+                .map do |k, v|
+          { k.to_s.chop => v.blank? ? '' : v.strip }
+        end
+                .reduce(:merge)
+                .symbolize_keys
         venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
         venue.values.all?(&:blank?) ? nil : venue
       end.compact

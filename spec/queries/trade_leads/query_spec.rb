@@ -17,7 +17,6 @@ describe TradeLead::Query do
   end
 
   describe '#generate_search_body' do
-
     context 'when options are empty' do
       let(:query) { described_class.new }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_default_options.json").read }
@@ -102,6 +101,5 @@ describe TradeLead::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

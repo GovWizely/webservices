@@ -1,12 +1,10 @@
 require 'spec_helper'
 
 describe 'Canada Leads API V1', type: :request do
-
   before(:all) do
     TradeLead::Canada.recreate_index
     TradeLead::CanadaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-
+      "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
   end
 
   let(:search_path) { '/canada_leads/search' }

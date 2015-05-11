@@ -88,7 +88,7 @@ describe TradeLead::FbopenImporter::PatchData do
                         url:                              'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
-                        )
+                       )
     end
 
     it 'ignores US records' do
@@ -99,5 +99,4 @@ describe TradeLead::FbopenImporter::PatchData do
       expect(importer.__send__(:process_entry, us_record)).to be_nil
     end
   end
-
 end

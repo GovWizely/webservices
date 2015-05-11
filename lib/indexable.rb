@@ -18,8 +18,8 @@ module Indexable
 
   def create_index
     ES.client.indices.create(
-        index: index_name,
-        body:  { settings: settings, mappings: mappings })
+      index: index_name,
+      body:  { settings: settings, mappings: mappings })
   end
 
   def index_exists?

@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'UK Trade Leads API V1', type: :request do
-
   before(:all) do
     TradeLead::Uk.recreate_index
     TradeLead::UkData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+      "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
   end
   let(:expected_results) do
     JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read,
@@ -70,6 +69,5 @@ describe 'UK Trade Leads API V1', type: :request do
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
-
   end
 end

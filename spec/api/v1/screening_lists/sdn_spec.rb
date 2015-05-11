@@ -90,6 +90,5 @@ describe 'OFAC Specially Designated Nationals API V1', type: :request do
         it_behaves_like 'it contains all ScreeningList::Sdn results that match type "Individual"'
       end
     end
-
   end
 end

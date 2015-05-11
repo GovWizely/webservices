@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe RegistrationsController, type: :controller do
   describe 'GET regenerate_api_key' do
-
     # Get an 'Could not find devise mapping for path "/regenerate_api_key".'
     # error without this.
     before { @request.env['devise.mapping'] = Devise.mappings[:user] }

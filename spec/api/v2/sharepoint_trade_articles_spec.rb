@@ -1,11 +1,10 @@
 require 'spec_helper'
 
 describe 'Sharepoint Trade Article API V2', type: :request do
-
   include_context 'V2 headers'
   fixtures_files_dir = "#{Rails.root}/spec/fixtures/sharepoint_trade_articles"
   before(:all) do
-    fixtures_files = Dir["#{fixtures_files_dir}/articles/*"].map { |file| open(file) }
+    fixtures_files = Dir["#{fixtures_files_dir}/articles/*"].map { |file| open(file).read }
 
     s3 = stubbed_s3_client('sharepoint_trade_article')
     s3.stub_responses(:list_objects, contents: [{ key: '116.xml' }, { key: '117.xml' }, { key: '118.xml' }, { key: '119.xml' }])
@@ -19,7 +18,6 @@ describe 'Sharepoint Trade Article API V2', type: :request do
   let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/sharepoint_trade_article/results.yaml") }
 
   describe 'GET /trade_articles/search.json' do
-
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, @v2_headers }
       subject { response }
@@ -32,7 +30,6 @@ describe 'Sharepoint Trade Article API V2', type: :request do
 
         results = json_response[:results]
         expect(results).to match_array expected_results
-
       end
     end
 
@@ -49,7 +46,6 @@ describe 'Sharepoint Trade Article API V2', type: :request do
 
         results = json_response[:results]
         expect(results[0]).to eq(expected_results[2])
-
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -61,7 +57,6 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns sharepoint trade articles' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(3)
 
@@ -79,10 +74,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns sharepoint trade articles' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(0)
-
       end
     end
 
@@ -93,10 +86,8 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns sharepoint trade articles' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(0)
-
       end
     end
 
@@ -140,7 +131,6 @@ describe 'Sharepoint Trade Article API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns sharepoint trade articles' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(1)
 
@@ -224,7 +214,5 @@ describe 'Sharepoint Trade Article API V2', type: :request do
         expect(results[0]).to eq(expected_results[0])
       end
     end
-
   end
-
 end

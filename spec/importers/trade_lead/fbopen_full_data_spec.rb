@@ -25,5 +25,4 @@ describe TradeLead::FbopenImporter::FullData do
       expect(importer.model_class).to match(TradeLead::Fbopen)
     end
   end
-
 end

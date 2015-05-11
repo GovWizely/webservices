@@ -32,8 +32,8 @@ class ItaOfficeLocationData
     @resources.each do |resource|
       doc = Nokogiri::XML(open(resource))
       ita_office_locations = doc.xpath('//POSTINFO')
-          .map { |location_info| process_location_info(location_info) }
-          .sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
+                             .map { |location_info| process_location_info(location_info) }
+                             .sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
       ItaOfficeLocation.index ita_office_locations.compact
     end
   end

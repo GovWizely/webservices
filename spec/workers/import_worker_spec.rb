@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ImportWorker do
-
   before do
     class MockData
       def import

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe ApiController, type: :controller do
-
   class InheritsFromApiController < described_class
     def foo
       ActionController::Parameters.new(params).permit([:q])
@@ -49,6 +48,5 @@ describe ApiController, type: :controller do
         it { expect(response.body).to include('Offset must be greater than or equal to 0') }
       end
     end
-
   end
 end

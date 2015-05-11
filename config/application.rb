@@ -15,7 +15,6 @@ ENV['SITE_DOMAIN'] ||= 'govwizely.com'
 
 module Webservices
   class Application < Rails::Application
-
     config.eager_load_paths += Dir["#{config.root}/lib/**/"]
     config.eager_load_paths += Dir["#{config.root}/app/importers/"]
     config.eager_load_paths += Dir["#{config.root}/app/workers/"]

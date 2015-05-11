@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe 'Parature Faq API V2', type: :request do
-
   include_context 'V2 headers'
 
   before(:all) do
@@ -14,7 +13,6 @@ describe 'Parature Faq API V2', type: :request do
   let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faqs/results.yaml") }
 
   describe 'GET /ita_faqs/search.json' do
-
     context 'when search parameters are empty' do
       before { get search_path, { size: 50 }, @v2_headers }
       subject { response }
@@ -27,7 +25,6 @@ describe 'Parature Faq API V2', type: :request do
 
         results = json_response[:results]
         expect(results).to match_array expected_results
-
       end
     end
 
@@ -44,7 +41,6 @@ describe 'Parature Faq API V2', type: :request do
 
         results = json_response[:results]
         expect(results[0]).to eq(expected_results[1])
-
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -89,7 +85,6 @@ describe 'Parature Faq API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns parature faqs' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(5)
 
@@ -111,7 +106,6 @@ describe 'Parature Faq API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns parature faqs' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(0)
       end
@@ -125,7 +119,6 @@ describe 'Parature Faq API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns parature faqs' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(1)
 
@@ -141,7 +134,6 @@ describe 'Parature Faq API V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns parature faqs' do
-
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(6)
 
@@ -155,5 +147,4 @@ describe 'Parature Faq API V2', type: :request do
       end
     end
   end
-
 end

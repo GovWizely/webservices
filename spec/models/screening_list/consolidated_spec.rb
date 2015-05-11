@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe ScreeningList::Consolidated, type: :model do
   describe '.index_names' do
-
     subject { described_class.index_names(sources) }
 
     let(:all_index_names) do

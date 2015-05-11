@@ -60,6 +60,5 @@ describe TradeArticleQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
   end
 end

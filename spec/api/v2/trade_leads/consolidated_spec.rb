@@ -144,6 +144,5 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeLead::State results where end_date is 2014-03-06'
     end
-
   end
 end
