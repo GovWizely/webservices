@@ -51,6 +51,10 @@ class User
     super(attributes, options)
   end
 
+  def update_attribute(name, value)
+    update_attributes(name => value)
+  end
+
   def valid?
     run_callbacks :validation do
       super
@@ -99,7 +103,7 @@ class User
   # TODO: can I reuse code from Indexable?
   index_name [ES::INDEX_PREFIX, name.indexize].join(':')
 
-  devise :registerable, :database_authenticatable, :recoverable, :confirmable
+  devise :registerable, :database_authenticatable, :recoverable, :confirmable, :lockable
 
   attribute :email, String, mapping: { type: 'string', index: 'not_analyzed' }
   attribute :encrypted_password, String
@@ -115,6 +119,10 @@ class User
   attribute :confirmation_token, String
   attribute :confirmed_at, DateTime
   attribute :confirmation_sent_at, DateTime
+  attribute :locked_at, DateTime
+
+  attribute :failed_attempts, Integer, default: 0, mapping: { type: 'integer' }
+  attribute :unlock_token, String
 
   validates_presence_of :email
   validates_presence_of :password, if: proc { !self.persisted? }
