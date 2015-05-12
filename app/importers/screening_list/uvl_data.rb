@@ -58,7 +58,6 @@ module ScreeningList
         .flatten
         .uniq
         .delete_if { |alt_name| alt_name == doc[:name] }
-          .delete_if { |alt_name| alt_name == doc[:name] }
 
       stopwords   = %w(and the los)
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
