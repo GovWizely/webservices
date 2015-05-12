@@ -1,0 +1,37 @@
+---
+- :name: Construction
+  :id: http://webprotege.stanford.edu/R9zaGPZ9yjWv1UeRtk8gzKh
+  :parent_names: []
+  :taxonomy: Industries
+- :name: Building Products and Equipment
+  :id: http://webprotege.stanford.edu/RFpJ9Jx8KyK6bKHhZ41gVv
+  :parent_names:
+  - Construction
+  :taxonomy: Industries
+- :name: Metals
+  :id: http://webprotege.stanford.edu/RCnQO85UVNFVpG5gKxQ0i7r
+  :parent_names:
+  - Building Products and Equipment
+  - Industrial Materials
+  :taxonomy: Industries
+- :name: Iron and Steel
+  :id: http://webprotege.stanford.edu/RFgDQ06dZosq2WuYpVyKDP
+  :parent_names:
+  - Metals
+  :taxonomy: Industries
+- :name: Industrial Materials
+  :id: http://webprotege.stanford.edu/RcLCin3PUe26tSDvI7dXDh
+  :parent_names: []
+  :taxonomy: Industries
+- :name: South America
+  :id: http://webprotege.stanford.edu/RDXeNHoFixnGOD5YGB1qcUW
+  :parent_names: []
+  :taxonomy: World Regions
+- :name: Chile
+  :id: http://webprotege.stanford.edu/RBnyPrFDx37HXBDZF6TBabH
+  :parent_names: []
+  :taxonomy: Countries
+- :name: Look South
+  :id: http://webprotege.stanford.edu/R9t9rQuC16WMg86VUoGJisX
+  :parent_names: []
+  :taxonomy: Initiatives

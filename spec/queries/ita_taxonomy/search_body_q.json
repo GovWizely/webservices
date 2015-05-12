@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["name", "parent_names"],
+            "operator": "and",
+            "query": "algeria"
+          }
+        }
+      ]
+    }
+  }
+}

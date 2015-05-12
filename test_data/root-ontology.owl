@@ -1,0 +1,180 @@
+<?xml version="1.0"?>
+<rdf:RDF xmlns="http://webprotege.stanford.edu/project/8d7jJti80hv7jiFvWv7uX7#"
+     xml:base="http://webprotege.stanford.edu/project/8d7jJti80hv7jiFvWv7uX7"
+     xmlns:webprotege="http://52.4.82.207:8080/webprotege/"
+     xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+     xmlns:owl="http://www.w3.org/2002/07/owl#"
+     xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+     xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#">
+    <owl:Ontology rdf:about="http://webprotege.stanford.edu/project/8d7jJti80hv7jiFvWv7uX7"/>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Annotation properties
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R9YxrST9CI89pxBXrFtPSEb -->
+
+    <owl:AnnotationProperty rdf:about="http://52.4.82.207:8080/webprotege/R9YxrST9CI89pxBXrFtPSEb">
+        <rdfs:label>type</rdfs:label>
+    </owl:AnnotationProperty>
+    
+
+
+    <!-- 
+    ///////////////////////////////////////////////////////////////////////////////////////
+    //
+    // Classes
+    //
+    ///////////////////////////////////////////////////////////////////////////////////////
+     -->
+
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R7ApsGr3xCfTUlUDi7B8u9i -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R7ApsGr3xCfTUlUDi7B8u9i">
+        <rdfs:label>Industry</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R7s2LF4imglFRAAlHTWa9j6 -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R7s2LF4imglFRAAlHTWa9j6">
+        <rdfs:label>Aerospace and Defense</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R7ApsGr3xCfTUlUDi7B8u9i"/>
+        <rdfs:comment>Industry</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R8E8ntlLqMJ6FIdUxY56e5d -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R8E8ntlLqMJ6FIdUxY56e5d">
+        <rdfs:label>Export Assistance</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R8NFBeFu9MRBwjaDitNN7r2"/>
+        <rdfs:comment>Topic</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R8NFBeFu9MRBwjaDitNN7r2 -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R8NFBeFu9MRBwjaDitNN7r2">
+        <rdfs:label>Topic</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R8P9bdk6z1grATCNnq5xoQZ -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R8P9bdk6z1grATCNnq5xoQZ">
+        <rdfs:label>Africa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/RJHO2ALLD3ST9JGEeE1ZKy"/>
+        <rdfs:comment>Geo Region</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R8tcHQairUb3oaPsMQO97WI -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R8tcHQairUb3oaPsMQO97WI">
+        <rdfs:label>Foreign-Offered Incentives</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R8E8ntlLqMJ6FIdUxY56e5d"/>
+        <rdfs:comment>Subtopic 1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R8wZSaGlxjyj7Jvf2KgDDZc -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R8wZSaGlxjyj7Jvf2KgDDZc">
+        <rdfs:label>North Africa</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R8P9bdk6z1grATCNnq5xoQZ"/>
+        <rdfs:comment>Geo Subregion</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R99MXeYb4OHyLrCo2YCf7vJ -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R99MXeYb4OHyLrCo2YCf7vJ">
+        <rdfs:label>Trade Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/R99RRZ0KcJrEarvPrj9ePuJ -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/R99RRZ0KcJrEarvPrj9ePuJ">
+        <rdfs:label>Algeria</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R8wZSaGlxjyj7Jvf2KgDDZc"/>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/RBNlyJ5ryZ4uyuzchwW5L8S"/>
+        <rdfs:comment>Country</rdfs:comment>
+    </owl:Class>
+    
+    
+
+    <!-- http://52.4.82.207:8080/webprotege/RBNlyJ5ryZ4uyuzchwW5L8S -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/RBNlyJ5ryZ4uyuzchwW5L8S">
+        <rdfs:label>Global System of Trade Preferences among Developing Countries</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R99MXeYb4OHyLrCo2YCf7vJ"/>
+        <rdfs:comment>Trade Region</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/RDyFfCfl6C1dz1uiG9wjOCk -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/RDyFfCfl6C1dz1uiG9wjOCk">
+        <rdfs:label>Feed-In Tariffs</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R8tcHQairUb3oaPsMQO97WI"/>
+        <rdfs:comment>Subtopic 2</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/RJHO2ALLD3ST9JGEeE1ZKy -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/RJHO2ALLD3ST9JGEeE1ZKy">
+        <rdfs:label>Geo Region</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2002/07/owl#Thing"/>
+    </owl:Class>
+    
+
+    <!-- http://52.4.82.207:8080/webprotege/RYrkZhhNwzYQOEbcr3Cn5a -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/RYrkZhhNwzYQOEbcr3Cn5a">
+        <rdfs:label>Space</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/R7s2LF4imglFRAAlHTWa9j6"/>
+        <rdfs:comment>Sector 1</rdfs:comment>
+    </owl:Class>
+    
+
+
+    <!-- http://52.4.82.207:8080/webprotege/RbNIY0Angp7SHRCH01GmLg -->
+
+    <owl:Class rdf:about="http://52.4.82.207:8080/webprotege/RbNIY0Angp7SHRCH01GmLg">
+        <rdfs:label>Satellites</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://52.4.82.207:8080/webprotege/RYrkZhhNwzYQOEbcr3Cn5a"/>
+        <rdfs:comment>Sector 2</rdfs:comment>
+    </owl:Class>
+    
+
+
+<!-- Generated by the OWL API (version 3.5.0) http://owlapi.sourceforge.net -->
+
