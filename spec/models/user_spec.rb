@@ -105,6 +105,15 @@ describe User do
     end
   end
 
+  describe '#update_attributes' do
+    let(:subject) { create_user }
+    it 'behaves as expected' do
+      subject.update_attribute(:full_name, 'John Snow')
+      expect(subject.full_name).to eq('John Snow')
+      expect(subject).to be_valid
+    end
+  end
+
   describe '#email_changed?' do
     subject { build_user }
     it 'behaves as expected' do
