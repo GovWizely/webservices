@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @fuzzy = options[:fuzzy]
+      @fuzzy = options[:fuzzy] if options[:fuzzy].present?
     end
 
     def generate_query(json)
@@ -36,7 +36,13 @@ module ScreeningList
           end if @q
 
           if @name
-            generate_score_query(json)
+            if @fuzzy == 'true'
+              generate_fuzzy_name_query(json)
+            else
+              json.must do
+                json.child! { generate_multi_match(json, multi_fields, @name) } if @name
+              end
+            end
           end
 
           if @address
@@ -46,13 +52,19 @@ module ScreeningList
       end if [@q, @name, @distance, @address].any?
     end
 
-    def generate_score_query(json)
+    def generate_fuzzy_name_query(json)
       keyword_fields = [
-        'name_idx.keyword', 'name_nostop.keyword', 'alt_names_idx.keyword', 'alt_names_nostop.keyword',
-        'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
+        'name_idx.keyword', 'rev_name.keyword', 'trim_name.keyword', 'trim_rev_name.keyword',
+        'name_no_common.keyword', 'rev_no_common.keyword', 'trim_no_common.keyword', 'trim_rev_no_common.keyword',
+        
+        # fix below
+        'alt_names_idx.keyword', 'alt_names_nostop.keyword',
         'rev_alt_names.keyword', 'trim_alt_names.keyword', 'trim_rev_alt_names.keyword']
 
       non_keyword_fields = [
+        'name_idx', 'rev_name', 'trim_name', 'trim_rev_name',
+        'name_no_common', 'rev_no_common', 'trim_no_common', 'trim_rev_no_common',
+
         'name_idx', 'name_nostop', 'alt_names_idx', 'alt_names_nostop',
         'rev_name', 'trim_name', 'trim_rev_name', 'rev_alt_names', 'trim_alt_names', 'trim_rev_alt_names']
 
@@ -77,7 +89,6 @@ module ScreeningList
               json.query do
                 json.multi_match do
                   json.query @name
-                  json.prefix_length 1
                   json.operator :and
                   json.fields value[:fields]
                   json.fuzziness value[:fuzziness]
