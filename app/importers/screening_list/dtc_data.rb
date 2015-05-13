@@ -44,7 +44,7 @@ module ScreeningList
       }
 
       stopwords   = %w(and the los)
-      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
+      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc Inc)
 
       ##
       # index 2 forms of each name for both "name" and "alt_names",
@@ -58,26 +58,32 @@ module ScreeningList
       #     3) reversed with white space removed
       #
 
-      entry[:name_idx]                = entry[:name].gsub(/[[:punct:]]/, '').squeeze(' ')
-      entry[:name_idx]                = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-      entry[:rev_name]                = entry[:name_idx].split.reverse.join(' ')
-      entry[:rev_no_common]           = entry[:name_no_common].split.reverse.join(' ')
-      entry[:trim_name]               = entry[:name_idx].gsub(/\s+/, '')
-      entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
-      entry[:trim_rev_name]           = entry[:rev_name].gsub(/\s+/, '')
-      entry[:trim_rev_name_no_common] = entry[:rev_no_common].gsub(/\s+/, '')
+      entry[:name_idx]      = entry[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
+      entry[:name_idx]      = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
+      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
+      entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
+
+      if !(entry[:name_idx].downcase.split & common_words).empty?
+        entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
+        entry[:rev_name_no_common]      = entry[:name_no_common].split.reverse.join(' ')
+        entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
+        entry[:trim_rev_name_no_common] = entry[:rev_name_no_common].gsub(/\s+/, '')
+      end
 
       if entry[:alt_names].present?
         entry[:alt_names_idx]          = entry[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '').squeeze(' ') }
         entry[:alt_names_idx]          = entry[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
-        entry[:alt_names_no_common]    = entry[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
         entry[:rev_alt_names]          = entry[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
-        entry[:rev_alt_no_common]      = entry[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
         entry[:trim_alt_names]         = entry[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
-        entry[:trim_alt_no_common]     = entry[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
         entry[:trim_rev_alt_names]     = entry[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
-        entry[:trim_rev_alt_no_common] = entry[:rev_alt_no_common].map { |name| name.gsub(/\s+/, '') }
+
+        if !(entry[:alt_names_idx].map!(&:downcase).join(' ').split & common_words).empty?
+          entry[:alt_names_no_common]    = entry[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
+          entry[:rev_alt_no_common]      = entry[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
+          entry[:trim_alt_no_common]     = entry[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
+          entry[:trim_rev_alt_no_common] = entry[:rev_alt_no_common].map { |name| name.gsub(/\s+/, '') }
+        end
       end
 
       entry[:source_list_url] = row[:type] == 'Administrative' ?

@@ -53,15 +53,16 @@ module ScreeningList
     end
 
     def generate_fuzzy_name_query(json)
+
       keyword_fields = [
         'name_idx.keyword', 'name_no_common.keyword', 'alt_names_idx.keyword', 'alt_names_no_common.keyword',
-        'rev_name.keyword', 'rev_no_common.keyword', 'rev_alt_names.keyword', 'rev_alt_no_common.keyword',
+        'rev_name.keyword', 'rev_name_no_common.keyword', 'rev_alt_names.keyword', 'rev_alt_no_common.keyword',
         'trim_name.keyword', 'trim_name_no_common.keyword', 'trim_alt_names.keyword', 'trim_alt_no_common.keyword',
         'trim_rev_name.keyword', 'trim_rev_name_no_common.keyword', 'trim_rev_alt_names.keyword', 'trim_rev_alt_no_common.keyword']
 
       non_keyword_fields = [
-        'name_idx', 'name_no_common', 'alt_names_idx ', 'alt_names_no_common ',
-        'rev_name', 'rev_no_common', 'rev_alt_names ', 'rev_alt_no_common',
+        'name_idx', 'name_no_common', 'alt_names_idx', 'alt_names_no_common',
+        'rev_name', 'rev_name_no_common', 'rev_alt_names', 'rev_alt_no_common',
         'trim_name', 'trim_name_no_common', 'trim_alt_names', 'trim_alt_no_common',
         'trim_rev_name', 'trim_rev_name_no_common', 'trim_rev_alt_names', 'trim_rev_alt_no_common']
 
