@@ -65,9 +65,9 @@ module ScreeningList
 
       return nil if empty_entry?(entry)
 
-      entry[:id] = id
-      entry[:source] = model_class.source
-      entry[:source_list_url] =
+      entry[:id]                     = id
+      entry[:source]                 = model_class.source
+      entry[:source_list_url]        =
         'http://www.bis.doc.gov/index.php/the-denied-persons-list'
       entry[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
@@ -76,7 +76,7 @@ module ScreeningList
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
 
       ##
-      # index 2 forms of each name for "name",
+      # index 2 forms of each name for both "name" and "alt_names",
       # one with punctuation and "stopwords" removed and
       # one the above plus "common" words removed.
       #
@@ -87,15 +87,18 @@ module ScreeningList
       #     3) reversed with white space removed
       #
 
-      entry[:name_idx]                = entry[:name].gsub(/[[:punct:]]/, '').squeeze(' ')
-      entry[:name_idx]                = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-      entry[:rev_name]                = entry[:name_idx].split.reverse.join(' ')
-      entry[:rev_no_common]           = entry[:name_no_common].split.reverse.join(' ')
-      entry[:trim_name]               = entry[:name_idx].gsub(/\s+/, '')
-      entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
-      entry[:trim_rev_name]           = entry[:rev_name].gsub(/\s+/, '')
-      entry[:trim_rev_name_no_common] = entry[:rev_no_common].gsub(/\s+/, '')
+      entry[:name_idx]      = entry[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
+      entry[:name_idx]      = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
+      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
+      entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
+
+      if !(entry[:name_idx].downcase.split & common_words).empty?
+        entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
+        entry[:rev_name_no_common]      = entry[:name_no_common].split.reverse.join(' ')
+        entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
+        entry[:trim_rev_name_no_common] = entry[:rev_name_no_common].gsub(/\s+/, '')
+      end
 
       %i(start_date end_date).each do |field|
         entry[field] &&= parse_american_date(entry[field])

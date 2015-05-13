@@ -83,26 +83,32 @@ module ScreeningList
       #     3) reversed with white space removed
       #
 
-      doc[:name_idx]                = doc[:name].gsub(/[[:punct:]]/, '').squeeze(' ')
-      doc[:name_idx]                = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      doc[:name_no_common]          = doc[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-      doc[:rev_name]                = doc[:name_idx].split.reverse.join(' ')
-      doc[:rev_no_common]           = doc[:name_no_common].split.reverse.join(' ')
-      doc[:trim_name]               = doc[:name_idx].gsub(/\s+/, '')
-      doc[:trim_name_no_common]     = doc[:name_no_common].gsub(/\s+/, '')
-      doc[:trim_rev_name]           = doc[:rev_name].gsub(/\s+/, '')
-      doc[:trim_rev_name_no_common] = doc[:rev_no_common].gsub(/\s+/, '')
+      doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
+      doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
+      doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
+      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
+
+      if !(doc[:name_idx].downcase.split & common_words).empty?
+        doc[:name_no_common]          = doc[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
+        doc[:rev_name_no_common]      = doc[:name_no_common].split.reverse.join(' ')
+        doc[:trim_name_no_common]     = doc[:name_no_common].gsub(/\s+/, '')
+        doc[:trim_rev_name_no_common] = doc[:rev_name_no_common].gsub(/\s+/, '')
+      end
 
       if doc[:alt_names].present?
         doc[:alt_names_idx]          = doc[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '').squeeze(' ') }
         doc[:alt_names_idx]          = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
-        doc[:alt_names_no_common]    = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
         doc[:rev_alt_names]          = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
-        doc[:rev_alt_no_common]      = doc[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
         doc[:trim_alt_names]         = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
-        doc[:trim_alt_no_common]     = doc[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
         doc[:trim_rev_alt_names]     = doc[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
-        doc[:trim_rev_alt_no_common] = doc[:rev_alt_no_common].map { |name| name.gsub(/\s+/, '') }
+
+        if !(doc[:alt_names_idx].map!(&:downcase).join(' ').split & common_words).empty?
+          doc[:alt_names_no_common]    = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
+          doc[:rev_alt_no_common]      = doc[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
+          doc[:trim_alt_no_common]     = doc[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
+          doc[:trim_rev_alt_no_common] = doc[:rev_alt_no_common].map { |name| name.gsub(/\s+/, '') }
+        end
       end
 
       doc

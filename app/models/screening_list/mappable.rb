@@ -24,15 +24,6 @@ module ScreeningList
                 tokenizer: 'keyword',
                 filter:    %w(uppercase asciifolding),
               },
-              lowercase_stop:               {
-                tokenizer: 'keyword',
-                filter:    %w(lowercase asciifolding stopword),
-              },
-            },
-            filter:   {
-              stopword: { type:        'stop',
-                          ignore_case: true,
-                          stopwords:   STOPWORDS.join(',') },
             },
           },
         },
@@ -49,20 +40,17 @@ module ScreeningList
             name:                   { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' },
-                                        stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
+                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             name_idx:               { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' },
-                                        stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
+                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             name_no_common:         { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' },
-                                        stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
+                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             alt_names:              { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
@@ -74,11 +62,10 @@ module ScreeningList
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_no_common:         { type:     'string',
+            alt_names_no_common:         { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' },
-                                        stop:    { type: 'string', analyzer: 'lowercase_stop' } } },
+                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # reversed
             rev_name:               { type:     'string',
@@ -86,7 +73,7 @@ module ScreeningList
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_no_common:          { type:     'string',
+            rev_name_no_common:          { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
@@ -107,7 +94,7 @@ module ScreeningList
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_no_common:         { type:     'string',
+            trim_name_no_common:         { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
@@ -128,7 +115,7 @@ module ScreeningList
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_rev_no_common:     { type:     'string',
+            trim_rev_name_no_common:     { type:     'string',
                                       analyzer: 'standard_asciifolding_nostop',
                                       fields:   {
                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
