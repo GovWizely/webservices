@@ -1,0 +1,59 @@
+<nav class="navbar navbar-default navbar-static-top">
+  <div class="container">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <%= link_to(image_tag("trade_developer.png", alt: 'logo'), Rails.configuration.developerportal_url, class: 'navbar-brand') %>
+    </div>
+    <div id="navbar" class="navbar-collapse collapse">
+      <ul class="nav navbar-nav navbar-right">
+        <li id="box-menu"><%= link_to('Guidance', "#{Rails.configuration.developerportal_url}/guidance.html") %></li>
+        <li id="box-menu"><%= link_to('Contact', "#{Rails.configuration.developerportal_url}/contact.html") %></li>
+        <li class="dropdown">
+          <%= link_to(image_tag('grid-icon.png', alt: 'logo'), '#', role: 'button', id: 'box-menu', class: 'dropdown-toggle', 'data-toggle' => 'dropdown', 'aria-expanded' => 'false') %>
+          <ul class="dropdown-menu" role="menu">
+            <h3 id="additional-resources">Additional Resources</h3>
+            <li><%= link_to('App Gallery', "#{Rails.configuration.developerportal_url}/app-gallery.html") %></li>
+            <li><%= link_to('API FAQs', "#{Rails.configuration.developerportal_url}/api-faqs.html") %></li>
+            <li><%= link_to('Change Log', "#{Rails.configuration.developerportal_url}/change-log.html") %></li>
+            <li><%= link_to('Terms of Service', "#{Rails.configuration.developerportal_url}/tos.html") %></li>
+          </ul>
+        </li>
+        <li>
+          <div class="imageBox">
+            <div class="imageinn">
+              <div class="item">
+                <%= image_tag('github-blue.png', alt: 'github-light') %>
+              </div>
+            </div>
+            <div class="hoverImg">
+              <div class="item">
+                <%= link_to(image_tag('github-dark.png', alt: 'github-grey'), 'https://github.com/InternationalTradeAdministration/developerportal') %>
+                <span class="caption">ITA on Github</span>
+              </div>
+            </div>
+          </div>
+        </li>
+
+        <header id="mob" class="navbar-toggle collapsed" aria-expanded="false">
+          <h3>API Key</h3>
+          <p class="view"><%= link_to('Get an API Key', authenticated_root_path, :class => 'current') %></p>
+          <h3>Available APIs</h3>
+          <% available_apis.each do |text, path| %>
+            <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
+          <% end %>
+          <h3>Additional Resources</h3>
+          <% additional_resources.each do |text, path| %>
+            <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
+          <% end %>
+          <p class="view"><a href="https://github.com/InternationalTradeAdministration/developerportal">ITA on Github</a></p>
+        </header>
+
+      </ul>
+    </div><!--/.nav-collapse -->
+  </div>
+</nav>

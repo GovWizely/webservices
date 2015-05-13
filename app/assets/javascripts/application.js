@@ -1,7 +1,11 @@
 //= require jquery
 //= require jquery_ujs
-//= require simple-expand
+//= require_tree .
 
-$(function () {
-  $('.expander').simpleexpand({'keepStateInCookie': false, 'cookieName': 'simple-expand'});
+$(function(){
+  $('a').each(function() {
+    if ($(this).prop('href') == window.location.href) {
+      $(this).addClass('current');
+    }
+  });
 });

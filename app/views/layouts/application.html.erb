@@ -10,44 +10,44 @@
 
     <title>Trade.gov Developer Portal | Trade.gov Developer Portal</title>
     <%= stylesheet_link_tag :application, media: 'all' %>
-    <%= javascript_include_tag :application %>
 
     <!--[if lt IE 9]> <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script> <![endif]-->
   </head>
 
   <body>
-    <div class="wrapper">
-      <%= render "layouts/header" %>
-      <section>
-        <div id="body-content">
+    <%= render "layouts/topbar" %>
+    <div class="container">
+      <div class="wrapper">
+        <%= render "layouts/header" %>
+        <section>
+          <div id="body-content">
 
-          <nav>
-            <% if user_signed_in? %>
-              <em><%= "Signed in as #{current_user.full_name}" %></em> |
-              <%= current_page?(authenticated_root_path) ? 'API Key' : link_to('API Key', authenticated_root_path) %> |
-              <%= current_page?(edit_user_registration_path) ? 'Account' : link_to('Account', edit_user_registration_path) %> |
-              <%= link_to('Logout', destroy_user_session_path) %>
-            <% else %>
-              <%= current_page?(new_user_session_path) || current_page?(unauthenticated_root_path) ? 'Login' : link_to('Login', new_user_session_path) %> |
-              <%= current_page?(new_user_registration_path) ? 'Sign Up' : link_to('Sign Up', new_user_registration_path) %>
+            <nav>
+              <% if user_signed_in? %>
+                <em><%= "Signed in as #{current_user.full_name}" %></em> |
+                <%= current_page?(authenticated_root_path) ? 'API Key' : link_to('API Key', authenticated_root_path) %> |
+                <%= current_page?(edit_user_registration_path) ? 'Account' : link_to('Account', edit_user_registration_path) %> |
+                <%= link_to('Logout', destroy_user_session_path) %>
+              <% else %>
+                <%= current_page?(new_user_session_path) || current_page?(unauthenticated_root_path) ? 'Login' : link_to('Login', new_user_session_path) %> |
+                <%= current_page?(new_user_registration_path) ? 'Sign Up' : link_to('Sign Up', new_user_registration_path) %>
+              <% end %>
+            </nav>
+
+            <% if notice %>
+              <p class="notice"><%= notice %></p>
             <% end %>
-          </nav>
+            <% if alert %>
+              <p class="alert"><%= alert %></p>
+            <% end %>
 
-          <% if notice %>
-            <p class="notice"><%= notice %></p>
-          <% end %>
-          <% if alert %>
-            <p class="alert"><%= alert %></p>
-          <% end %>
+            <%= yield %>
 
-          <%= yield %>
-
-        </div>
-      </section>
-
-      <%= render "layouts/footer" %>
-
+          </div>
+        </section>
+        <%= render "layouts/footer" %>
+        <%= javascript_include_tag :application %>
+      </div>
     </div>
   </body>
 </html>
-
