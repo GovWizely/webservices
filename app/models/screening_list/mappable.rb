@@ -1,8 +1,5 @@
 module ScreeningList
   module Mappable
-
-    STOPWORDS = %w(and the los)
-
     def self.included(klass)
       klass.settings = {
         index: {
@@ -13,6 +10,7 @@ module ScreeningList
                 filter:    %w(standard asciifolding lowercase snowball),
               },
               standard_asciifolding_nostop: {
+                analyzer: 'standard',
                 tokenizer: 'standard',
                 filter:    %w(standard asciifolding lowercase),
               },
@@ -37,104 +35,104 @@ module ScreeningList
           },
           properties: {
             # name variants
-            name:                   { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name:                    { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_idx:               { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_idx:                { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_no_common:         { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_no_common:          { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:              { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_names:               { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names_idx:          { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_names_idx:           { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names_no_common:         { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_names_no_common:     { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # reversed
-            rev_name:               { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            rev_name:                { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_name_no_common:          { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            rev_name_no_common:      { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_alt_names:          { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            rev_alt_names:           { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_alt_no_common:      { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            rev_alt_no_common:       { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed
-            trim_name:              { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_name:               { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_name_no_common:         { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_name_no_common:     { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_alt_names:         { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_alt_names:          { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_alt_no_common:     { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_alt_no_common:      { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed and reversed
-            trim_rev_name:          { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_rev_name:           { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_rev_name_no_common:     { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_rev_name_no_common: { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_rev_alt_names:     { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_rev_alt_names:      { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            trim_rev_alt_no_common: { type:     'string',
-                                      analyzer: 'standard_asciifolding_nostop',
-                                      fields:   {
-                                        keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            trim_rev_alt_no_common:  { type:     'string',
+                                       analyzer: 'standard_asciifolding_nostop',
+                                       fields:   {
+                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            remarks:                { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            type:                   { type: 'string', analyzer: 'keyword_lowercase' },
-            source:                 { properties: { full_name: { type: 'string', index: 'no' },
+            type:                    { type: 'string', analyzer: 'keyword_lowercase' },
+            source:                  { properties: { full_name: { type: 'string', index: 'no' },
                                                      code:      { type: 'string', analyzer: 'keyword' } } },
             federal_register_notice: { type: 'string', analyzer: 'keyword' },
 
