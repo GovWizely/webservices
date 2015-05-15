@@ -14,6 +14,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name beginning_date ending_date fr_citation)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
 
     COLUMN_HASH = {
@@ -61,53 +63,27 @@ module ScreeningList
     end
 
     def process_grouped_rows(id, rows)
-      entry = remap_keys(COLUMN_HASH, rows.first)
+      doc = remap_keys(COLUMN_HASH, rows.first)
 
-      return nil if empty_entry?(entry)
+      return nil if empty_entry?(doc)
 
-      entry[:id]                     = id
-      entry[:source]                 = model_class.source
-      entry[:source_list_url]        =
+      doc[:id]                     = id
+      doc[:source]                 = model_class.source
+      doc[:source_list_url]        =
         'http://www.bis.doc.gov/index.php/the-denied-persons-list'
-      entry[:source_information_url] =
+      doc[:source_information_url] =
         'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list'
 
-      stopwords   = %w(and the los)
-      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
-
-      ##
-      # index 2 forms of each name for both "name" and "alt_names",
-      # one with punctuation and "stopwords" removed and
-      # one the above plus "common" words removed.
-      #
-      # then store additional modified versions of the two in the following ways:
-      #
-      #     1) reversed
-      #     2) with white space removed
-      #     3) reversed with white space removed
-      #
-
-      entry[:name_idx]      = entry[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
-      entry[:name_idx]      = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
-      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
-      entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
-
-      if !(entry[:name_idx].downcase.split & common_words).empty?
-        entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-        entry[:rev_name_no_common]      = entry[:name_no_common].split.reverse.join(' ')
-        entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
-        entry[:trim_rev_name_no_common] = entry[:rev_name_no_common].gsub(/\s+/, '')
-      end
+      make_names(doc)
 
       %i(start_date end_date).each do |field|
-        entry[field] &&= parse_american_date(entry[field])
+        doc[field] &&= parse_american_date(doc[field])
       end
 
-      entry[:addresses] = rows.map do |row|
+      doc[:addresses] = rows.map do |row|
         remap_keys(ADDRESS_HASH, row)
       end
-      entry
+      doc
     end
   end
 end

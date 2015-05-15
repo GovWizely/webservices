@@ -16,6 +16,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name start_date federal_register_notice)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
     def initialize(resource = ENDPOINT)
@@ -34,7 +36,7 @@ module ScreeningList
     private
 
     def process_row(row)
-      entry = {
+      doc = {
         name:                    extract_name(row),
         alt_names:               extract_alt_names(row),
         start_date:              parse_american_date(row[:eff_date]),
@@ -43,55 +45,14 @@ module ScreeningList
         source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
       }
 
-      stopwords   = %w(and the los)
-      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc Inc)
+      make_names(doc)
 
-      ##
-      # index 2 forms of each name for both "name" and "alt_names",
-      # one with punctuation and "stopwords" removed and
-      # one the above plus "common" words removed.
-      #
-      # then store additional modified versions of the two in the following ways:
-      #
-      #     1) reversed
-      #     2) with white space removed
-      #     3) reversed with white space removed
-      #
-
-      entry[:name_idx]      = entry[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
-      entry[:name_idx]      = entry[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      entry[:rev_name]      = entry[:name_idx].split.reverse.join(' ')
-      entry[:trim_name]     = entry[:name_idx].gsub(/\s+/, '')
-      entry[:trim_rev_name] = entry[:rev_name].gsub(/\s+/, '')
-
-      if !(entry[:name_idx].downcase.split & common_words).empty?
-        entry[:name_no_common]          = entry[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-        entry[:rev_name_no_common]      = entry[:name_no_common].split.reverse.join(' ')
-        entry[:trim_name_no_common]     = entry[:name_no_common].gsub(/\s+/, '')
-        entry[:trim_rev_name_no_common] = entry[:rev_name_no_common].gsub(/\s+/, '')
-      end
-
-      if entry[:alt_names].present?
-        entry[:alt_names_idx]          = entry[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '').squeeze(' ') }
-        entry[:alt_names_idx]          = entry[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
-        entry[:rev_alt_names]          = entry[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
-        entry[:trim_alt_names]         = entry[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
-        entry[:trim_rev_alt_names]     = entry[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
-
-        if !(entry[:alt_names_idx].map!(&:downcase).join(' ').split & common_words).empty?
-          entry[:alt_names_no_common]    = entry[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
-          entry[:rev_alt_no_common]      = entry[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
-          entry[:trim_alt_no_common]     = entry[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
-          entry[:trim_rev_alt_no_common] = entry[:rev_alt_no_common].map { |name| name.gsub(/\s+/, '') }
-        end
-      end
-
-      entry[:source_list_url] = row[:type] == 'Administrative' ?
+      doc[:source_list_url] = row[:type] == 'Administrative' ?
         'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
         'http://www.pmddtc.state.gov/compliance/debar.html'
 
-      entry[:id] = generate_id(entry)
-      sanitize_entry(entry)
+      doc[:id] = generate_id(doc)
+      sanitize_entry(doc)
     end
 
     def extract_name(row)

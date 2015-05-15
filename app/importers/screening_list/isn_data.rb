@@ -14,6 +14,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name effective_date federal_register_notice)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = "#{Rails.root}/data/screening_lists/isn/isn.csv"
 
     COLUMN_HASH = {
@@ -57,33 +59,7 @@ module ScreeningList
 
       doc[:programs] = rows.map { |row| row[:programs] }
 
-      stopwords   = %w(and the los)
-      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
-
-      ##
-      # index 2 forms of each name for "name",
-      # one with punctuation and "stopwords" removed and
-      # one the above plus "common" words removed.
-      #
-      # then store additional modified versions of the two in the following ways:
-      #
-      #     1) reversed
-      #     2) with white space removed
-      #     3) reversed with white space removed
-      #
-
-      doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
-      doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
-      doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
-      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
-
-      if !(doc[:name_idx].downcase.split & common_words).empty?
-        doc[:name_no_common]          = doc[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-        doc[:rev_name_no_common]      = doc[:name_no_common].split.reverse.join(' ')
-        doc[:trim_name_no_common]     = doc[:name_no_common].gsub(/\s+/, '')
-        doc[:trim_rev_name_no_common] = doc[:rev_name_no_common].gsub(/\s+/, '')
-      end
+      make_names(doc)
 
       doc
     end
