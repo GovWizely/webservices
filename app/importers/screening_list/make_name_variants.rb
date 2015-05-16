@@ -36,7 +36,7 @@ module ScreeningList
         doc[:trim_alt_names]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
         doc[:trim_rev_alt_names] = doc[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
 
-        unless (doc[:alt_names_idx].map!(&:downcase).join(' ').split & common_words).empty?
+        unless (doc[:alt_names_idx].map(&:downcase).join(' ').split & common_words).empty?
           doc[:alt_names_no_common]    = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
           doc[:rev_alt_no_common]      = doc[:alt_names_no_common].map { |name| name.split.reverse.join(' ') }
           doc[:trim_alt_no_common]     = doc[:alt_names_no_common].map { |name| name.gsub(/\s+/, '') }
