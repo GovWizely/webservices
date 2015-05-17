@@ -7,7 +7,7 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: (Linked To: NATIONAL IRANIAN TANKER COMPANY)
+  :remarks: '(Linked To: NATIONAL IRANIAN TANKER COMPANY)'
   :id: '15987'
   :source: &1
     :full_name: Foreign Sanctions Evaders (FSE) - Treasury Department
@@ -44,15 +44,21 @@
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: FERLAND COMPANY LIMITED
-  :name_nostop: 'FERLAND # #'
   :rev_name: LIMITED COMPANY FERLAND
   :trim_name: FERLANDCOMPANYLIMITED
   :trim_rev_name: LIMITEDCOMPANYFERLAND
+  :name_no_common: "FERLAND"
+  :rev_name_no_common: "FERLAND"
+  :trim_name_no_common: "FERLAND"
+  :trim_rev_name_no_common: "FERLAND"
   :alt_names_idx: [FERLAND CO LTD]
-  :alt_names_nostop: [FERLAND CO LTD]
   :rev_alt_names: [LTD CO FERLAND]
   :trim_alt_names: [FERLANDCOLTD]
-  :trim_rev_alt_names: [LTDCOFERLAND],    
+  :trim_rev_alt_names: ["LTDCOFERLAND"]
+  :alt_names_no_common: ["FERLAND"]
+  :rev_alt_no_common: ["FERLAND"]
+  :trim_alt_no_common: ["FERLAND"]
+  :trim_rev_alt_no_common: ["FERLAND"]
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 
@@ -61,7 +67,7 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: (Linked To: FERLAND COMPANY LIMITED)
+  :remarks: '(Linked To: FERLAND COMPANY LIMITED)'
   :id: '16422'
   :source: *1
   :source_list_url: 
@@ -97,12 +103,10 @@
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: SOKOLENKO Vitaly
-  :name_nostop: SOKOLENKO Vitaly
   :rev_name: Vitaly SOKOLENKO
   :trim_name: SOKOLENKOVitaly
   :trim_rev_name: VitalySOKOLENKO
   :alt_names_idx: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
-  :alt_names_nostop: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
   :rev_alt_names: [Vitalii SOKOLENKO, Vitaliy SOKOLENKO]
   :trim_alt_names: [SOKOLENKOVitalii, SOKOLENKOVitaliy]
   :trim_rev_alt_names: [VitaliiSOKOLENKO, VitaliySOKOLENKO]
@@ -143,12 +147,10 @@
     :number: R17550559
     :type: Passport
   :name_idx: HOSSEINPOUR Houshang
-  :name_nostop: HOSSEINPOUR Houshang
   :rev_name: Houshang HOSSEINPOUR
   :trim_name: HOSSEINPOURHoushang
   :trim_rev_name: HoushangHOSSEINPOUR
-  :alt_names_idx: [HOSSEINPOUR Houshang Shahali, HOSEIN-PUR Houshang]
-  :alt_names_nostop: [HOSSEINPOUR Houshang Shahali, HOSEIN-PUR Houshang]
-  :rev_alt_names: [Shahali Houshang HOSSEINPOUR, Houshang HOSEIN-PUR]
-  :trim_alt_names: [HOSSEINPOURHoushangShahali, HOSEIN-PURHoushang]
-  :trim_rev_alt_names: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEIN-PUR]    
+  :alt_names_idx: ["HOSSEINPOUR Houshang Shahali", "HOSEINPUR Houshang"]
+  :rev_alt_names: ["Shahali Houshang HOSSEINPOUR", "Houshang HOSEINPUR"]
+  :trim_alt_names: ["HOSSEINPOURHoushangShahali", "HOSEINPURHoushang"]
+  :trim_rev_alt_names: ["ShahaliHoushangHOSSEINPOUR", "HoushangHOSEINPUR"]    
