@@ -34,11 +34,14 @@
     :state: 
     :address: '200 Cantonment Road, #15-00 Southpoint'
   :ids: []
-  :name_idx: KUO OIL (S) PTE LIMITED
-  :name_nostop: 'KUO OIL (S) PTE #'
-  :rev_name: LIMITED PTE (S) OIL KUO
-  :trim_name: KUOOIL(S)PTELIMITED
-  :trim_rev_name: LIMITEDPTE(S)OILKUO
+  :name_idx: "KUO OIL S PTE LIMITED"
+  :rev_name: "LIMITED PTE S OIL KUO"
+  :trim_name: "KUOOILSPTELIMITED"
+  :trim_rev_name: "LIMITEDPTESOILKUO"
+  :name_no_common: "KUO OIL S PTE"
+  :rev_name_no_common: "PTE S OIL KUO"
+  :trim_name_no_common: "KUOOILSPTE"
+  :trim_rev_name_no_common: "PTESOILKUO"
 - :entity_number: '13043'
   :title: 
   :call_sign: 
@@ -75,11 +78,13 @@
     :country: AE
     :postal_code: 
     :state: Sharjah
-    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port,
-      Near Mina Khalid Road, Al Khan Area
+    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port, Near Mina Khalid Road, Al Khan Area
   :ids: []
   :name_idx: FAL OIL COMPANY LTD
-  :name_nostop: 'FAL OIL # #'
   :rev_name: LTD COMPANY OIL FAL
   :trim_name: FALOILCOMPANYLTD
-  :trim_rev_name: LTDCOMPANYOILFAL
+  :trim_rev_name: "LTDCOMPANYOILFAL"
+  :name_no_common: "FAL OIL"
+  :rev_name_no_common: "OIL FAL"
+  :trim_name_no_common: "FALOIL"
+  :trim_rev_name_no_common: "OILFAL"
