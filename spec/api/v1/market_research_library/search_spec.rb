@@ -4,12 +4,11 @@ describe 'Market Researches API V1', type: :request do
   include_context 'MarketResearch data'
 
   let(:search_path) { '/market_research_library/search' }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/results.json").read }
 
   describe 'GET /market_research_library/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, {}, v1_headers }
+      before { get search_path, {} }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -31,7 +30,7 @@ describe 'Market Researches API V1', type: :request do
 
     context 'when q is specified' do
       let(:params) { { q: '2013' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -49,7 +48,7 @@ describe 'Market Researches API V1', type: :request do
 
     context 'when countries is specified' do
       let(:params) { { countries: 'ar,br' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -68,7 +67,7 @@ describe 'Market Researches API V1', type: :request do
 
     context 'when industry is specified' do
       let(:params) { { industry: 'chemicals' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -85,7 +84,7 @@ describe 'Market Researches API V1', type: :request do
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do
-      before { get search_path, { q: 'Developpement' }, v1_headers }
+      before { get search_path, { q: 'Developpement' } }
       subject { response }
 
       it_behaves_like 'a successful search request'

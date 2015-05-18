@@ -8,12 +8,11 @@ describe 'Canada Leads API V1', type: :request do
   end
 
   let(:search_path) { '/canada_leads/search' }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read }
 
   describe 'GET /canada_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { size: 100 }, v1_headers }
+      before { get search_path, { size: 100 } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +29,7 @@ describe 'Canada Leads API V1', type: :request do
 
     context 'when q is specified' do
       let(:params) { { q: 'engineer' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -48,7 +47,7 @@ describe 'Canada Leads API V1', type: :request do
 
     context 'when industry is specified' do
       let(:params) { { industries: 'dental' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -65,7 +64,7 @@ describe 'Canada Leads API V1', type: :request do
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do
-      before { get search_path, { q: 'Montée' }, v1_headers }
+      before { get search_path, { q: 'Montée' } }
       subject { response }
 
       it_behaves_like 'a successful search request'

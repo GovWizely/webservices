@@ -14,7 +14,7 @@ describe 'Sharepoint Trade Article API V2', type: :request do
     SharepointTradeArticleData.new(s3).import
   end
 
-  let(:search_path) { '/trade_articles/search' }
+  let(:search_path) { '/v2/trade_articles/search' }
   let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/sharepoint_trade_article/results.yaml") }
 
   describe 'GET /trade_articles/search.json' do

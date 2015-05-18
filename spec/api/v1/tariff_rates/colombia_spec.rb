@@ -2,11 +2,10 @@ require 'spec_helper'
 
 describe 'FTA Colombia Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Colombia data'
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /tariff_rates/search?sources=CO' do
     let(:params) { { sources: 'co' } }
-    before { get '/tariff_rates/search', params, v1_headers }
+    before { get '/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

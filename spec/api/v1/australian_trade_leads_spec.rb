@@ -8,11 +8,10 @@ describe 'Australian Trade Leads API V1', type: :request do
   end
 
   let(:expected_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /australian_trade_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get '/australian_trade_leads/search', {}, v1_headers }
+      before { get '/australian_trade_leads/search', {} }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -31,7 +30,7 @@ describe 'Australian Trade Leads API V1', type: :request do
   describe 'GET /australian_trade_leads/search.json' do
     context 'when q is populated' do
       let(:params) { { q: 'motor' } }
-      before { get '/australian_trade_leads/search', params, v1_headers }
+      before { get '/australian_trade_leads/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'

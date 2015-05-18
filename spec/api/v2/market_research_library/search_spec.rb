@@ -4,7 +4,7 @@ describe 'Market Researches API V2', type: :request do
   include_context 'V2 headers'
   include_context 'MarketResearch data'
 
-  let(:search_path) { '/market_research_library/search' }
+  let(:search_path) { '/v2/market_research_library/search' }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/expected_results.json").read }
 
   describe 'GET /market_research_library/search.json' do

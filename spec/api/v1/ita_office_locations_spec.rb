@@ -7,13 +7,12 @@ describe 'ITA Office Locations API V1', type: :request do
     ItaOfficeLocationData.new(["#{fixtures_dir}/odo.xml", "#{fixtures_dir}/oio.xml"]).import
   end
 
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_office_locations/results.json").read }
 
   describe 'GET /ita_office_locations/search.json' do
     context 'when q is specified' do
       let(:params) { { q: 'san jose' } }
-      before { get '/ita_office_locations/search', params, v1_headers }
+      before { get '/ita_office_locations/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +29,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when country is specified' do
-      before { get '/ita_office_locations/search', { q: 'saN Jose', country: 'Cr' }, v1_headers }
+      before { get '/ita_office_locations/search', { q: 'saN Jose', country: 'Cr' } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -45,7 +44,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when USA and state is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose', country: 'US', state: 'CA' }, v1_headers }
+      before { get '/ita_office_locations/search', { q: 'san jose', country: 'US', state: 'CA' } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -60,7 +59,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when just US state is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose', state: 'CA' }, v1_headers }
+      before { get '/ita_office_locations/search', { q: 'san jose', state: 'CA' } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -75,7 +74,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when country and city are specified' do
-      before { get '/ita_office_locations/search', { country: 'cr', city: 'san jose' }, v1_headers }
+      before { get '/ita_office_locations/search', { country: 'cr', city: 'san jose' } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -91,7 +90,7 @@ describe 'ITA Office Locations API V1', type: :request do
 
     context 'when multiple countries are specified' do
       let(:params) { { country: 'RU,CN' } }
-      before { get '/ita_office_locations/search', params, v1_headers }
+      before { get '/ita_office_locations/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'

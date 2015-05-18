@@ -8,14 +8,13 @@ describe 'Fbopen Leads API V1', type: :request do
   end
 
   let(:search_path) { '/fbopen_leads/search' }
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
   let(:expected_results) do
     JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/fbopen/results.json").read)
   end
 
   describe 'GET /fbopen_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { size: 100 }, v1_headers }
+      before { get search_path, { size: 100 } }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -32,7 +31,7 @@ describe 'Fbopen Leads API V1', type: :request do
 
     context 'when q is specified' do
       let(:params) { { q: 'toilETs' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -50,7 +49,7 @@ describe 'Fbopen Leads API V1', type: :request do
 
     context 'when industry is specified' do
       let(:params) { { industries: '812320' } }
-      before { get search_path, params, v1_headers }
+      before { get search_path, params }
       subject { response }
 
       it_behaves_like 'a successful search request'

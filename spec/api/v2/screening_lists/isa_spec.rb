@@ -7,7 +7,7 @@ describe 'NS-ISA List API V2', type: :request do
 
   describe 'GET /consolidated_screening_list/search?sources=ISA' do
     let(:params) { { sources: 'isa' } }
-    before { get '/consolidated_screening_list/search', params, @v2_headers }
+    before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }
