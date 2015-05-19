@@ -48,7 +48,7 @@ module ScreeningList
           if @address
             generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address, operator = :and)
           end
-        end
+        eid
       end if [@q, @name, @distance, @address].any?
     end
 
@@ -56,7 +56,7 @@ module ScreeningList
       name_fields           = %w(name_idx alt_names_idx rev_name rev_alt_names)
       trim_fields           = %w(trim_name trim_alt_names trim_rev_name trim_rev_alt_names)
       no_common_fields      = %w(name_no_common alt_names_no_common rev_name_no_common rev_alt_no_common )
-      trim_no_common_fields = %w(trim_name_no_common trim_alt_no_common rim_rev_alt_no_common)
+      trim_no_common_fields = %w(trim_name_no_common trim_alt_no_common trim_rev_alt_no_common)
 
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc Inc)
 
