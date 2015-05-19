@@ -10,7 +10,7 @@ describe 'Country Commercial Guide API V2', type: :request do
       YAML.load_file("#{File.dirname(__FILE__)}/country_commercial_guide/results.yaml")
   end
 
-  let(:search_path) { '/country_commercial_guides/search' }
+  let(:search_path) { '/v2/country_commercial_guides/search' }
   let(:params) { { size: 100 } }
   subject { response }
 

@@ -6,7 +6,7 @@ describe 'FTA Nicaragua Tariff Rates API V2', type: :request do
 
   describe 'GET /tariff_rates/search?sources=NI' do
     let(:params) { { sources: 'ni' } }
-    before { get '/tariff_rates/search', params, @v2_headers }
+    before { get '/v2/tariff_rates/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }

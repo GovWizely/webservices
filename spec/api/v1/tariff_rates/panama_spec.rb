@@ -2,11 +2,10 @@ require 'spec_helper'
 
 describe 'FTA Panama Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Panama data'
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /tariff_rates/search?sources=PA' do
     let(:params) { { sources: 'pa' } }
-    before { get '/tariff_rates/search', params, v1_headers }
+    before { get '/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

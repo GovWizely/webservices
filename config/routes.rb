@@ -89,12 +89,7 @@ Webservices::Application.routes.draw do
     concerns :api_routable
   end
 
-  scope module: 'api/v2', constraints: ApiConstraint.new(default: false, version: 2), defaults: { format: :json } do
-    concerns :api_routable
-    concerns :api_v2_routable
-  end
-
-  scope module: 'api/v1', constraints: ApiConstraint.new(default: true, version: 1), defaults: { format: :json } do
+  scope module: 'api/v1', defaults: { format: :json } do
     concerns :api_v1_routable
     concerns :api_routable
   end

@@ -10,11 +10,10 @@ describe 'UK Trade Leads API V1', type: :request do
     JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read,
                symbolize_names: true)
   end
-  let(:v1_headers) { { 'Accept' => 'application/vnd.tradegov.webservices.v1' } }
 
   describe 'GET /uk_trade_leads/search' do
     let(:params) { {} }
-    before { get '/uk_trade_leads/search', params, v1_headers }
+    before { get '/uk_trade_leads/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

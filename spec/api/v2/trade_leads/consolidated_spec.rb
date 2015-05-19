@@ -6,7 +6,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
   describe 'GET /trade_leads/search' do
     let(:params) { { size: 100 } }
-    before { get '/trade_leads/search', params, @v2_headers }
+    before { get 'v2/trade_leads/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
       subject { response }
