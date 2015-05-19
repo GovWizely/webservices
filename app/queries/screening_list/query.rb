@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @fuzzy = options[:fuzzy] if options[:fuzzy].present?
+      @fuzzy = true if options[:fuzzy].present?
     end
 
     def generate_query(json)
@@ -32,15 +32,15 @@ module ScreeningList
       json.query do
         json.bool do
           json.must do
-            json.child! { generate_multi_match(json, multi_fields, @q) } if @q
+            json.child! { generate_multi_match(json, multi_fields, @q) }
           end if @q
 
           if @name
-            if @fuzzy == 'true'
+            if @fuzzy
               generate_fuzzy_name_query(json)
             else
               json.must do
-                json.child! { generate_multi_match(json, multi_fields, @name) } if @name
+                json.child! { generate_multi_match(json, multi_fields, @name) }
               end
             end
           end
