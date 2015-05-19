@@ -53,7 +53,6 @@ module ScreeningList
     end
 
     def generate_fuzzy_name_query(json)
-
       name_fields           = %w(name_idx alt_names_idx rev_name rev_alt_names)
       trim_fields           = %w(trim_name trim_alt_names trim_rev_name trim_rev_alt_names)
       no_common_fields      = %w(name_no_common alt_names_no_common rev_name_no_common rev_alt_no_common )
@@ -75,13 +74,12 @@ module ScreeningList
         score_90:  { fields: keyword_fields, fuzziness: 1, weight: 5 },
         score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
         score_80:  { fields: keyword_fields, fuzziness: 2, weight: 5 },
-        score_75:  { fields: all_fields, fuzziness: 2, weight: 75 }
+        score_75:  { fields: all_fields, fuzziness: 2, weight: 75 },
       }
 
       json.disable_coord true
       json.set! 'should' do
-
-        score_hash.each { |key, value|
+        score_hash.each do |_key, value|
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -98,8 +96,7 @@ module ScreeningList
               end
             end
           end
-        }
-
+        end
       end
     end
 
