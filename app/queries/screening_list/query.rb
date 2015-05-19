@@ -54,16 +54,29 @@ module ScreeningList
 
     def generate_fuzzy_name_query(json)
       
-      non_keyword_fields = %w(
-        name_idx name_no_common alt_names_idx alt_names_no_common
-        rev_name rev_name_no_common rev_alt_names rev_alt_no_common
-        trim_name trim_name_no_common trim_alt_names trim_alt_no_common
-        trim_rev_name trim_rev_name_no_common trim_rev_alt_names trim_rev_alt_no_common
+      name_fields = %w(
+        name_idx alt_names_idx
+        rev_name rev_alt_names
+        trim_name trim_alt_names
+        trim_rev_name trim_rev_alt_names
       )
 
-      keyword_fields = non_keyword_fields.map { |field| "#{field}.keyword" }
-      
-      all_fields = keyword_fields + non_keyword_fields
+      no_common_fields = %w(
+        name_no_common alt_names_no_common
+        rev_name_no_common rev_alt_no_common
+        trim_name_no_common trim_alt_no_common
+        trim_rev_name_no_common trim_rev_alt_no_common
+      )
+
+      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc Inc)
+
+      if (@name.downcase.split & common_words).empty?
+        keyword_fields = name_fields.map { |field| "#{field}.keyword" }
+        all_fields     = name_fields + keyword_fields
+      else
+        keyword_fields = name_fields.map { |field| "#{field}.keyword" } + no_common_fields.map { |field| "#{field}.keyword" }
+        all_fields     = name_fields + no_common_fields + keyword_fields
+      end
 
       score_hash = {
         score_100: { fields: keyword_fields, fuzziness: 0, weight: 5 },
