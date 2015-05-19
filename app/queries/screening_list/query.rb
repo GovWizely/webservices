@@ -48,7 +48,7 @@ module ScreeningList
           if @address
             generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address, operator = :and)
           end
-        eid
+        end
       end if [@q, @name, @distance, @address].any?
     end
 
