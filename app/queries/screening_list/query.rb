@@ -60,13 +60,13 @@ module ScreeningList
 
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc Inc)
 
-      if (@name.downcase.split & common_words).empty?
-        keyword_fields = name_fields.map { |field| "#{field}.keyword" } + trim_fields
-        all_fields     = name_fields + keyword_fields + trim_fields
-      else
-        keyword_fields = name_fields.map { |field| "#{field}.keyword" } + no_common_fields.map { |field| "#{field}.keyword" } + trim_no_common_fields
-        all_fields     = name_fields + no_common_fields + keyword_fields + trim_no_common_fields
-      end
+      #if (@name.downcase.split & common_words).empty?
+      #  keyword_fields = name_fields.map { |field| "#{field}.keyword" } + trim_fields
+      #  all_fields     = name_fields + keyword_fields + trim_fields
+      #else
+      keyword_fields = name_fields.map { |field| "#{field}.keyword" } + no_common_fields.map { |field| "#{field}.keyword" } + trim_no_common_fields
+      all_fields     = name_fields + no_common_fields + keyword_fields + trim_no_common_fields
+      #end
 
       score_hash = {
         score_100: { fields: keyword_fields, fuzziness: 0, weight: 5 },
