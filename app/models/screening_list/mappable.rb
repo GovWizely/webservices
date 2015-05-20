@@ -10,11 +10,7 @@ module ScreeningList
                 filter:    %w(standard asciifolding lowercase snowball),
               },
               standard_asciifolding_nostop: {
-<<<<<<< HEAD
-                analyzer: 'standard',
-=======
                 analyzer:  'standard',
->>>>>>> c0fe7cc5c434ffd189c1baf209efb47506473381
                 tokenizer: 'standard',
                 filter:    %w(standard asciifolding lowercase),
               },
@@ -92,47 +88,6 @@ module ScreeningList
 
             # whitespace removed
             trim_name:               { type:     'string',
-<<<<<<< HEAD
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_name_no_common:     { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_alt_names:          { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_alt_no_common:      { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            # whitespace removed and reversed
-            trim_rev_name:           { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_rev_name_no_common: { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_rev_alt_names:      { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            trim_rev_alt_no_common:  { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-=======
                                        analyzer: 'keyword_lowercase' },
 
             trim_name_no_common:     { type:     'string',
@@ -156,7 +111,6 @@ module ScreeningList
 
             trim_rev_alt_no_common:  { type:     'string',
                                        analyzer: 'keyword_lowercase' },
->>>>>>> c0fe7cc5c434ffd189c1baf209efb47506473381
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

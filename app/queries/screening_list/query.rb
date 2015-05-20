@@ -57,13 +57,16 @@ module ScreeningList
       non_keyword_fields = %w(
         name_idx name_no_common alt_names_idx alt_names_no_common
         rev_name rev_name_no_common rev_alt_names rev_alt_no_common
-        trim_name trim_name_no_common trim_alt_names trim_alt_no_common
-        trim_rev_name trim_rev_name_no_common trim_rev_alt_names trim_rev_alt_no_common
       )
 
-      keyword_fields = non_keyword_fields.map { |field| "#{field}.keyword" }
+     trim_fields = %w(
+        trim_name trim_name_no_common trim_alt_names trim_alt_no_common
+        trim_rev_name trim_rev_name_no_common trim_rev_alt_names trim_rev_alt_no_common
+     )
+
+      keyword_fields = non_keyword_fields.map { |field| "#{field}.keyword" } + trim_fields
       
-      all_fields = keyword_fields + non_keyword_fields
+      all_fields = keyword_fields + non_keyword_fields + trim_fields
 
       score_hash = {
         score_100: { fields: keyword_fields, fuzziness: 0, weight: 5 },
