@@ -101,7 +101,5 @@ module Importer
     State.normalize state_str
   end
 
-  def can_purge_old?
-    model_class.can_purge_old?
-  end
+  delegate :can_purge_old?, to: :model_class
 end

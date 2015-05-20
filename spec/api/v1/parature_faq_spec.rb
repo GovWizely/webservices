@@ -12,7 +12,7 @@ describe 'Parature Faq API V1', type: :request do
 
   describe 'GET /ita_faqs/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { size: 50 } }
+      before { get search_path, size: 50 }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -44,7 +44,7 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when question is specified' do
-      before { get search_path, { question: 'eu' } }
+      before { get search_path, question: 'eu' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -60,7 +60,7 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when answer is specified' do
-      before { get search_path, { answer: 'nafta' } }
+      before { get search_path, answer: 'nafta' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -112,7 +112,7 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when topics is specified' do
-      before { get search_path, { topics: 'cafta-dr' } }
+      before { get search_path, topics: 'cafta-dr' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -127,7 +127,7 @@ describe 'Parature Faq API V1', type: :request do
     end
 
     context 'when update_date is specified' do
-      before { get search_path, { update_date: '2013-03-20 TO 2013-04-19' } }
+      before { get search_path, update_date: '2013-03-20 TO 2013-04-19' }
       subject { response }
 
       it_behaves_like 'a successful search request'

@@ -12,7 +12,7 @@ describe 'Canada Leads API V1', type: :request do
 
   describe 'GET /canada_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { size: 100 } }
+      before { get search_path, size: 100 }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -64,7 +64,7 @@ describe 'Canada Leads API V1', type: :request do
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do
-      before { get search_path, { q: 'Montée' } }
+      before { get search_path, q: 'Montée' }
       subject { response }
 
       it_behaves_like 'a successful search request'

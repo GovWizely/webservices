@@ -14,7 +14,7 @@ describe 'Fbopen Leads API V1', type: :request do
 
   describe 'GET /fbopen_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get search_path, { size: 100 } }
+      before { get search_path, size: 100 }
       subject { response }
 
       it_behaves_like 'a successful search request'

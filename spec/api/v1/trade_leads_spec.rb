@@ -34,7 +34,7 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when size is specified' do
-      before { get '/trade_leads/search', { size: 100 } }
+      before { get '/trade_leads/search', size: 100 }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -106,7 +106,7 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when q matches a description' do
-      before { get '/trade_leads/search', { q: 'ambulatory' } }
+      before { get '/trade_leads/search', q: 'ambulatory' }
       subject { response }
 
       it_behaves_like 'a successful search request'

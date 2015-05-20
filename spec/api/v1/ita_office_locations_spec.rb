@@ -29,7 +29,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when country is specified' do
-      before { get '/ita_office_locations/search', { q: 'saN Jose', country: 'Cr' } }
+      before { get '/ita_office_locations/search', q: 'saN Jose', country: 'Cr' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -44,7 +44,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when USA and state is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose', country: 'US', state: 'CA' } }
+      before { get '/ita_office_locations/search', q: 'san jose', country: 'US', state: 'CA' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -59,7 +59,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when just US state is specified' do
-      before { get '/ita_office_locations/search', { q: 'san jose', state: 'CA' } }
+      before { get '/ita_office_locations/search', q: 'san jose', state: 'CA' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -74,7 +74,7 @@ describe 'ITA Office Locations API V1', type: :request do
     end
 
     context 'when country and city are specified' do
-      before { get '/ita_office_locations/search', { country: 'cr', city: 'san jose' } }
+      before { get '/ita_office_locations/search', country: 'cr', city: 'san jose' }
       subject { response }
 
       it_behaves_like 'a successful search request'

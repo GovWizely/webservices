@@ -1,7 +1,7 @@
 class RegistrationsController < Devise::RegistrationsController
-  before_filter :configure_sign_up_parameters, only: :create
-  before_filter :configure_account_update_parameters, only: :update
-  before_filter :ensure_user_authenticated, only: :regenerate_api_key
+  before_action :configure_sign_up_parameters, only: :create
+  before_action :configure_account_update_parameters, only: :update
+  before_action :ensure_user_authenticated, only: :regenerate_api_key
 
   def regenerate_api_key
     current_user.api_key = User.generate_api_key

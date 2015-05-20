@@ -84,7 +84,7 @@ describe 'Market Researches API V1', type: :request do
     end
 
     context 'when searching for field with non ascii characters using ascii characters' do
-      before { get search_path, { q: 'Developpement' } }
+      before { get search_path, q: 'Developpement' }
       subject { response }
 
       it_behaves_like 'a successful search request'
