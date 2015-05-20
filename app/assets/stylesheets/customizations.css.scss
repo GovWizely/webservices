@@ -20,7 +20,7 @@
     margin: 0 auto;
 
     form {
-      width: 14rem;
+      width: 18rem;
       margin: 2rem auto 0;
       .field {
         clear: both;
@@ -30,11 +30,12 @@
           float: left;
           width: 5rem;
           line-height: 1.6em;
+          font-weight: 100;
         }
         input {
           float: left;
-          width: 8rem;
-          line-height: 1.6em;
+          width: 12rem;
+          line-height: 1em;
         }
         &.top-of-group {
           margin-top: 1.5rem;
@@ -52,7 +53,7 @@
       }
 
       &#new_registration, &#edit_registration, &#edit_password {
-        width: 19rem;
+        width: 23rem;
         .field {
           label {
             width: 10rem;

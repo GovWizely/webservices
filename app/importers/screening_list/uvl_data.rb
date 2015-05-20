@@ -63,6 +63,8 @@ module ScreeningList
 
       make_names(doc)
 
+      make_names(doc)
+
       doc
     end
   end
