@@ -87,30 +87,16 @@ module ScreeningList
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed
-            trim_name:               { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_name_no_common:     { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_alt_names:          { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_alt_no_common:      { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
+            trim_name:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_name_no_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_alt_names:          { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_alt_no_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             # whitespace removed and reversed
-            trim_rev_name:           { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_rev_name_no_common: { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_rev_alt_names:      { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
-
-            trim_rev_alt_no_common:  { type:     'string',
-                                       analyzer: 'keyword_lowercase' },
+            trim_rev_name:           { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_rev_name_no_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_rev_alt_names:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_rev_alt_no_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
