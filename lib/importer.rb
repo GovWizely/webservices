@@ -8,16 +8,34 @@ module Importer
     end
   end
 
+  def available_version
+    nil
+  end
+
+  def stored_version
+    model_class.stored_metadata[:version]
+  end
+
   module ParentInstanceMethods
     def import
       Rails.logger.info "#{self.class.name}: import starting."
 
       start_time = Time.now if can_purge_old?
-      super
+
+      if resource_changed?
+        super
+        update_metadata available_version
+      end
+
       model_class.purge_old(start_time) if can_purge_old?
 
       Rails.logger.info "#{self.class.name}: import finished."
     end
+  end
+
+  def resource_changed?
+    return true unless available_version
+    stored_version != available_version
   end
 
   def extract_fields(parent_node, path_hash)
@@ -108,4 +126,5 @@ module Importer
   end
 
   delegate :can_purge_old?, to: :model_class
+  delegate :stored_metadata, :update_metadata, to: :model_class
 end
