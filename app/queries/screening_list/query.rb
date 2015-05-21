@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @fuzzy = options[:fuzzy] if options[:fuzzy].present?
+      @fuzzy = true if options[:fuzzy].present?
     end
 
     def generate_query(json)
@@ -32,15 +32,15 @@ module ScreeningList
       json.query do
         json.bool do
           json.must do
-            json.child! { generate_multi_match(json, multi_fields, @q) } if @q
+            json.child! { generate_multi_match(json, multi_fields, @q) }
           end if @q
 
           if @name
-            if @fuzzy == 'true'
+            if @fuzzy
               generate_fuzzy_name_query(json)
             else
               json.must do
-                json.child! { generate_multi_match(json, multi_fields, @name) } if @name
+                json.child! { generate_multi_match(json, multi_fields, @name) }
               end
             end
           end
@@ -53,20 +53,39 @@ module ScreeningList
     end
 
     def generate_fuzzy_name_query(json)
-
       keyword_fields = [
         'name_idx.keyword', 'name_no_common.keyword', 'alt_names_idx.keyword', 'alt_names_no_common.keyword',
-        'rev_name.keyword', 'rev_no_common.keyword', 'rev_alt_names.keyword', 'rev_alt_no_common.keyword',
-        'trim_name', 'trim_name_no_common', 'trim_alt_names', 'trim_alt_no_common',
-        'trim_rev_name', 'trim_rev_name_no_common', 'trim_rev_alt_names.keyword', 'trim_rev_alt_no_common']
+        'rev_name.keyword', 'rev_no_common.keyword', 'rev_alt_names.keyword', 'rev_alt_no_common.keyword'
+      ]
 
       non_keyword_fields = [
         'name_idx', 'name_no_common', 'alt_names_idx ', 'alt_names_no_common ',
         'rev_name', 'rev_no_common', 'rev_alt_names ', 'rev_alt_no_common',
         'trim_name', 'trim_name_no_common', 'trim_alt_names', 'trim_alt_no_common',
-        'trim_rev_name', 'trim_rev_name_no_common', 'trim_rev_alt_names', 'trim_rev_alt_no_common']
+        'trim_rev_name', 'trim_rev_name_no_common', 'trim_rev_alt_names', 'trim_rev_alt_no_common'
+      ]
 
-      all_fields = keyword_fields + non_keyword_fields
+      all_fields = non_keyword_fields + keyword_fields
+
+      # common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
+      #
+      # # name variants
+      # names         = %w( name_idx alt_names_idx rev_name rev_alt_names )
+      # names_kw      = %w( name_idx.keyword alt_names_idx.keyword rev_name.keyword rev_alt_names.keyword )
+      # trim_names    = %w( trim_name trim_rev_name trim_alt_names trim_rev_alt_names )
+      #
+      # # name variants with 'common' words stripped
+      # names_nc      = %w( name_no_common alt_names_no_common rev_name_no_common rev_alt_name_no_common )
+      # names_nc_kw   = %w( name_no_common.keyword alt_names_no_common.keyword rev_name_no_common.keyword rev_alt_name_no_common.keyword)
+      # trim_names_nc = %w( trim_name_no_common trim_rev_name_no_common trim_alt_no_common trim_rev_alt_no_common )
+      #
+      # if (@name.downcase.split & common_words).empty?
+      #   keyword_fields = names_kw + trim_names
+      #   all_fields     = keyword_fields + names
+      # else
+      #   keyword_fields = names_kw + names_nc_kw + trim_names + trim_names_nc
+      #   all_fields     = keyword_fields + names + names_nc
+      # end
 
       score_hash = {
         score_100: { fields: keyword_fields, fuzziness: 0, weight: 5 },
@@ -79,8 +98,7 @@ module ScreeningList
 
       json.disable_coord true
       json.set! 'should' do
-
-        score_hash.each { |key, value|
+        score_hash.each do |_key, value|
           json.child! do
             json.function_score do
               json.boost_mode 'replace'
@@ -97,8 +115,7 @@ module ScreeningList
               end
             end
           end
-        }
-
+        end
       end
     end
 
