@@ -1,0 +1,93 @@
+{"bsps": {
+    "xml:lang": "en",
+    "xmlns": "https://emenuapps.ita.doc.gov/tms/ns",
+    "bsp": [
+        {
+            "site": "El Salvador",
+            "pid": 8868,
+            "company": {
+                "contact": {
+                    "title": "General Manager",
+                    "name": "Lic. Benjamin Sancho"
+                },
+                "cs-contact": "sandra.hernandez@trade.gov",
+                "name": "STB COMPUTER, S.A. DE C.V.",
+                "logo": {
+                    "alt": "STB COMPUTER",
+                    "url": "http://emenuapps.ita.doc.gov/images/bsp/LOCALBSP_8868.jpg"
+                },
+                "phone": "(503) 2121-8102",
+                "url": "http://emenuapps.ita.doc.gov/bsp/elsalvador/en/bsp.xml?bsp_cat=32000000&bsp_id=9804",
+                "address": "57 Ave. Norte y Alameda Roosevelt No. 2490&#13;",
+                "id": 9804,
+                "website": "http://www.stbgroup.com.sv",
+                "description": "STB computer was founded on January 1998 in order to meet the informatics needs in the student sector. STB is committed to provide computer equipment and technology with high quality, maintenance, repair and consulting on IT, in order to provide solutions to the needs of the Salvadorean market in the areas of computers. STB Computer Provides advice and solutions for the needs for the Central America market in the area of information technology, through professional management with quality products and value added services that we offer.",
+                "email": "bsancho@stbcomputer.com",
+                "fax": "(503) 2121-8121",
+                "category": {
+                    "title": "Electronic Components and Supplies",
+                    "id": 32000000
+                }
+            },
+            "url": "http://emenuapps.ita.doc.gov/bsp/elsalvador/en/bsp.xml"
+        },
+        {
+            "site": "Egypt",
+            "pid": 1223,
+            "company": {
+                "contact": {
+                    "title": "Chairman",
+                    "name": "Eng. Adel Adib"
+                },
+                "cs-contact": "cherine.maher@trade.gov",
+                "name": "Alfa Electronics",
+                "logo": {
+                    "alt": "Alfa Electronics - 88 x 200",
+                    "url": "http://emenuapps.ita.doc.gov/images/bsp/LOCALBSP_1223.jpeg"
+                },
+                "phone": "+20(2) 2266-9881; 2266-0184; 2267-2816",
+                "url": "http://emenuapps.ita.doc.gov/bsp/egypt/en/bsp.xml?bsp_cat=32000000&bsp_id=1223",
+                "address": "5 Misr Development Buildings, Second Stage, airport road, Heliopolis, Cairo - Egypt",
+                "id": 1223,
+                "website": "http://www.alfa-electronix.com",
+                "description": "ALFA ELECTRONICS Designs, Manufactures, Assembles, Markets and Serves Electronic Equipments and Systems for Hospitality, Public services establishments, Industrial firms and Educational sectors.\r\nMain Alfa products:\r\nEnergy Saving, Sound Distribution, Public Address, Access Control, Wireless Waiter Caller, Temperature and Humidity displays, Currency Exchange Boards, Queuing Systems, Ink Jet Industrial Printers, Large Display Boards, Educational Electronics, Programmable School Bell, Universal Programmable Controller, Nurse Calling Systems and Nursing Stations, School Bus Indicator (SCHOOBI), Alfa RFID E-Wallet (AREW), TRANSPASS, Event Data Recorder (EDR).",
+                "email": "alfainfo@alfa-electronix.com, madib@alfa-electronix.com",
+                "fax": "+20(2) 2266-1267",
+                "category": {
+                    "title": "Engineering Services",
+                    "id": 32000000
+                }
+            },
+            "url": "http://emenuapps.ita.doc.gov/bsp/egypt/en/bsp.xml"
+        },
+        {
+            "site": "United Kingdom",
+            "pid": 5345,
+            "company": {
+                "contact": {
+                    "title": "Dr",
+                    "name": "Aidan Turnbull"
+                },
+                "cs-contact": "Stephanie.Mulot@trade.gov",
+                "name": "ENVIRON International",
+                "logo": {
+                    "alt": "Environ Logo",
+                    "url": "http://emenuapps.ita.doc.gov/images/bsp/LOCALBSP_5345.JPG"
+                },
+                "phone": "+44 (0)1225 748420",
+                "url": "http://emenuapps.ita.doc.gov/bsp/uk/en/bsp.xml?bsp_cat=32000000&bsp_id=5345",
+                "address": "Box House - Box - Wiltshire, SN13 8AA",
+                "id": 5345,
+                "website": "http://www.b2bweee.com",
+                "description": "ENVIRON is a leading international Environmental and Life Sciences consultancy. Our Product Compliance Services manage producer compliance with WEEE, Packaging, Batteries, REACH and RoHS legislation, including: assessment of company legal exposure to EU WEEE, Batteries and Packaging Regulations; a web-based solution to manage EU B2B WEEE compliance; and managing WEEE, Batteries and Packaging compliance scheme membership.&#13;\r\n&#13;\r\n- Managing supply chain substance declarations for REACH, RoHS, Batteries and Packaging compliance&#13;\r\n&#13;\r\n- Regular updates to EU WEEE, Batteries and Packaging law",
+                "email": "aturnbull@environcorp.com",
+                "fax": "+44 (0)1225 748421",
+                "category": {
+                    "title": "$ NO SUCH CATEGORY $",
+                    "id": 32000000
+                }
+            },
+            "url": "http://emenuapps.ita.doc.gov/bsp/uk/en/bsp.xml"
+        }
+    ]
+}}
