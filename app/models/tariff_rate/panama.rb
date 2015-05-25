@@ -1,6 +1,6 @@
 module TariffRate
   class Panama
-    extend ::Indexable
+    include Indexable
     include TariffRate::Mappable
     self.source = {
       code: 'PA',

@@ -1,5 +1,5 @@
 class SharepointTradeArticle
-  extend Indexable
+  include Indexable
 
   self.settings = {
     index: {

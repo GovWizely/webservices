@@ -1,6 +1,6 @@
 module TradeLead
   class Mca
-    extend ::Indexable
+    include Indexable
     include TradeLead::Mappable
     self.source = {
       code: 'MCA',

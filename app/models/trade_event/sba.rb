@@ -1,6 +1,6 @@
 module TradeEvent
   class Sba
-    extend ::Indexable
+    include Indexable
     include TradeEvent::Mappable
     self.source = {
       code: 'SBA',

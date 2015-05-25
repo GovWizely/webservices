@@ -1,7 +1,6 @@
 module ScreeningList
   class Consolidated
-    extend ::Consolidated
-    self.query_class   = ScreeningList::Query
+    include Searchable
     self.model_classes = [ScreeningList::Dpl,
                           ScreeningList::Dtc,
                           ScreeningList::El,

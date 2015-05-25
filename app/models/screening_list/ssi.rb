@@ -1,6 +1,6 @@
 module ScreeningList
   class Ssi
-    extend ::Indexable
+    include Indexable
     include ScreeningList::Mappable
     self.source = {
       full_name: 'Sectoral Sanctions Identifications List (SSI) - Treasury Department',

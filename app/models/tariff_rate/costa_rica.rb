@@ -1,6 +1,6 @@
 module TariffRate
   class CostaRica
-    extend ::Indexable
+    include Indexable
     include TariffRate::Mappable
     self.source = {
       code: 'CR',

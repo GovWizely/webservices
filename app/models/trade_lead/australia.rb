@@ -1,6 +1,6 @@
 module TradeLead
   class Australia
-    extend ::Indexable
+    include Indexable
     include TradeLead::Mappable
     self.source = {
       code: 'AUSTRALIA',

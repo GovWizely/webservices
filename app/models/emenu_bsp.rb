@@ -1,5 +1,5 @@
 class EmenuBsp
-  extend Indexable
+  include Indexable
 
   self.settings = {
     index: {

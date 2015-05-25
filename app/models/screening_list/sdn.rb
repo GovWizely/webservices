@@ -1,6 +1,6 @@
 module ScreeningList
   class Sdn
-    extend ::Indexable
+    include Indexable
     include ScreeningList::Mappable
     self.source = {
       full_name: 'Specially Designated Nationals (SDN) - Treasury Department',

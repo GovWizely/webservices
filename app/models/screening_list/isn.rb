@@ -1,6 +1,6 @@
 module ScreeningList
   class Isn
-    extend ::Indexable
+    include Indexable
     include ScreeningList::Mappable
     self.source = {
       full_name: 'Nonproliferation Sanctions (ISN) - State Department',

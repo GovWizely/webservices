@@ -3,7 +3,7 @@ require 'spec_helper'
 describe Importer do
   before do
     class Mock
-      extend Indexable
+      include Indexable
       self.mappings = {
         name.typeize => {
           _timestamp: {

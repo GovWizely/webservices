@@ -1,7 +1,6 @@
 module TariffRate
   class Consolidated
-    extend ::Consolidated
-    self.query_class   = TariffRate::Query
+    include Searchable
     self.model_classes = [TariffRate::Australia,
                           TariffRate::Bahrain,
                           TariffRate::Chile,

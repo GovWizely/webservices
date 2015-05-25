@@ -1,5 +1,5 @@
 class ParatureFaq
-  extend Indexable
+  include Indexable
 
   self.settings = {
     index: {

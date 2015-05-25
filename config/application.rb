@@ -38,10 +38,13 @@ module Webservices
     config.cache_store = :memory_store
 
     def model_classes
-      Dir[Rails.root.join('app/models/**/*.rb').to_s].map do |filename|
+      filenames = Dir[Rails.root.join('app/models/**/*.rb').to_s]
+      filenames.select { |filename|
+        filename !~ /\/concerns\//
+      }.map { |filename|
         klass = filename.gsub(/(^.+models\/|\.rb$)/, '').camelize.constantize
-        klass.is_a?(Indexable) ? klass : nil
-      end.compact
+        klass.ancestors.include?(Indexable) ? klass : nil
+      }.compact
     end
 
     config.sharepoint_trade_article = {

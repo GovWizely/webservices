@@ -1,5 +1,5 @@
 class CountryCommercialGuide
-  extend Indexable
+  include Indexable
 
   self.settings = {
     index: {

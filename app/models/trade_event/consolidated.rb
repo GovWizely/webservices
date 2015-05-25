@@ -1,7 +1,6 @@
 module TradeEvent
   class Consolidated
-    extend ::Consolidated
-    self.query_class   = TradeEvent::Query
+    include Searchable
     self.model_classes = [TradeEvent::Ita,
                           TradeEvent::Sba,
                           TradeEvent::Exim,
