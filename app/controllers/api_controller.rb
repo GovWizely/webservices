@@ -23,8 +23,15 @@ class ApiController < ActionController::Base
   def search
     s = params.permit(search_params).except(:format)
     s.merge!(api_version: api_version)
-    @search = search_class.search_for s
-    render
+
+    respond_to do |format|
+      format.csv { render_sv('csv') }
+      format.tsv { render_sv('tsv') }
+      format.json do
+        @search = search_class.search_for(s)
+        render
+      end
+    end
   end
 
   def not_found
@@ -41,5 +48,13 @@ class ApiController < ActionController::Base
     parts = self.class.name.gsub(/Controller|Api::V\d+::/, '').split('::')
     parts[0] = parts[0].singularize
     parts.join('::').constantize
+  end
+
+  def render_sv(format)
+    search = search_class.fetch_all
+    send_data(
+      search_class.send("as_#{format}", search),
+      type:        "Mime::#{format.upcase}".constantize,
+      disposition: "attachment; filename=search.#{format}")
   end
 end

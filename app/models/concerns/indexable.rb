@@ -1,5 +1,8 @@
 module Indexable
   extend ActiveSupport::Concern
+
+  # We include Searchable as a dependency, which provides the ability to search
+  # for docs via the index defined by is module.
   include Searchable
 
   included do
@@ -87,7 +90,7 @@ module Indexable
 
     # This overwrites index_names in Searchable, making searches by classes
     # which include Indexable focus only on the index defined by the class.
-    def index_names(_sources)
+    def index_names(_sources = nil)
       [index_name]
     end
   end

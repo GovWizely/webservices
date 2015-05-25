@@ -18,6 +18,7 @@ describe ApiController, type: :controller do
         get '/foo' => 'inherits_from_api#foo'
         get '/not_found' => 'inherits_from_api#not_found'
         get '/new_query' => 'inherits_from_api#new_query'
+        get '/search' => 'inherits_from_api#search'
       end
     end
     after  { Rails.application.reload_routes! }
