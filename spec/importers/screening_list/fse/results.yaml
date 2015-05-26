@@ -17,7 +17,7 @@
   :name: FERLAND COMPANY LIMITED
   :type: Entity
   :alt_names:
-  - FERLAND CO. LTD
+  - FERLAND
   :programs:
   - FSE-IR
   - ISA
@@ -43,22 +43,22 @@
     :issue_date: 
     :number: Material Support
     :type: Executive Order 13645 Determination -
-  :name_idx: FERLAND COMPANY LIMITED
-  :rev_name: LIMITED COMPANY FERLAND
-  :trim_name: FERLANDCOMPANYLIMITED
-  :trim_rev_name: LIMITEDCOMPANYFERLAND
-  :name_no_common: "FERLAND"
-  :rev_name_no_common: "FERLAND"
-  :trim_name_no_common: "FERLAND"
-  :trim_rev_name_no_common: "FERLAND"
+  :name_idx: FERLAND
+  :name_with_common: FERLAND COMPANY LIMITED
+  :rev_name_with_common: LIMITED COMPANY FERLAND
+  :trim_name_with_common: FERLANDCOMPANYLIMITED
+  :trim_rev_name_with_common: LIMITEDCOMPANYFERLAND
+  :rev_name: FERLAND
+  :trim_name: FERLAND
+  :trim_rev_name: FERLAND
   :alt_names_idx: [FERLAND CO LTD]
+  :alt_names_with_common: [FERLAND CO LTD]
+  :rev_alt_with_common: [FERLAND CO LTD]
+  :trim_alt_with_common: [FERLANDCOLTD]
+  :trim_rev_alt_with_common: [FERLANDCOLTD]
   :rev_alt_names: [LTD CO FERLAND]
   :trim_alt_names: [FERLANDCOLTD]
-  :trim_rev_alt_names: ["LTDCOFERLAND"]
-  :alt_names_no_common: ["FERLAND"]
-  :rev_alt_no_common: ["FERLAND"]
-  :trim_alt_no_common: ["FERLAND"]
-  :trim_rev_alt_no_common: ["FERLAND"]
+  :trim_rev_alt_names: [LTDCOFERLAND]
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 
@@ -150,7 +150,7 @@
   :rev_name: Houshang HOSSEINPOUR
   :trim_name: HOSSEINPOURHoushang
   :trim_rev_name: HoushangHOSSEINPOUR
-  :alt_names_idx: ["HOSSEINPOUR Houshang Shahali", "HOSEINPUR Houshang"]
-  :rev_alt_names: ["Shahali Houshang HOSSEINPOUR", "Houshang HOSEINPUR"]
-  :trim_alt_names: ["HOSSEINPOURHoushangShahali", "HOSEINPURHoushang"]
-  :trim_rev_alt_names: ["ShahaliHoushangHOSSEINPOUR", "HoushangHOSEINPUR"]    
+  :alt_names_idx: [HOSSEINPOUR Houshang Shahali, HOSEINPUR Houshang]
+  :rev_alt_names: [Shahali Houshang HOSSEINPOUR, Houshang HOSEINPUR]
+  :trim_alt_names: [HOSSEINPOURHoushangShahali, HOSEINPURHoushang]
+  :trim_rev_alt_names: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEINPUR]    

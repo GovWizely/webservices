@@ -12,13 +12,14 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: SEMICONDUCTOR SYSTEMS INTL INC SSI
-  :rev_name: SSI INC INTL SYSTEMS SEMICONDUCTOR
-  :trim_name: SEMICONDUCTORSYSTEMSINTLINCSSI
-  :trim_rev_name: SSIINCINTLSYSTEMSSEMICONDUCTOR
-  :name_no_common: "SEMICONDUCTOR SYSTEMS INTL SSI"
-  :rev_name_no_common: "SSI INTL SYSTEMS SEMICONDUCTOR"
-  :trim_name_no_common: "SEMICONDUCTORSYSTEMSINTLSSI"
-  :trim_rev_name_no_common: SSIINTLSYSTEMSSEMICONDUCTOR
+  :name_idx: SEMICONDUCTOR SYSTEMS INTL SSI
+  :name_with_common: SEMICONDUCTOR SYSTEMS INTL INC SSI
+  :rev_name_with_common: SSI INC INTL SYSTEMS SEMICONDUCTOR
+  :trim_name_with_common: SEMICONDUCTORSYSTEMSINTLINCSSI
+  :trim_rev_name_with_common: SSIINCINTLSYSTEMSSEMICONDUCTOR
+  :rev_name: SSI INTL SYSTEMS SEMICONDUCTOR
+  :trim_name: SEMICONDUCTORSYSTEMSINTLSSI
+  :trim_rev_name: SSIINTLSYSTEMSSEMICONDUCTOR  
   :addresses:
   - :address: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
     :city: COPENHAGEN

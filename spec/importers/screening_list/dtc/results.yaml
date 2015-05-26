@@ -19,14 +19,14 @@
   :federal_register_notice: 57 FR 37184
   :source: *1
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
-  :name_idx: 'Dilligas Trading Co Inc'
-  :rev_name: 'Inc Co Trading Dilligas'
-  :trim_name: 'DilligasTradingCoInc'
-  :trim_rev_name: 'IncCoTradingDilligas'
-  :name_no_common: 'Dilligas Trading'
-  :rev_name_no_common: 'Trading Dilligas'
-  :trim_name_no_common: 'DilligasTrading'
-  :trim_rev_name_no_common: 'TradingDilligas'
+  :name_idx: Dilligas Trading
+  :name_with_common: Dilligas Trading Co Inc
+  :rev_name_with_common: Inc Co Trading Dilligas
+  :trim_name_with_common: DilligasTradingCoInc
+  :trim_rev_name_with_common: IncCoTradingDilligas
+  :rev_name: Trading Dilligas
+  :trim_name: DilligasTrading
+  :trim_rev_name: TradingDilligas  
   :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
   :id: 'afd9dbfe97d679d161eaed68203399296abf631c'
 - :name: Brian Joseph Fleming

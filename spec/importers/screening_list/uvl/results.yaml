@@ -13,14 +13,14 @@
     :postal_code:
     :country: CN
   :alt_names: []
-  :name_idx: China National Plant Import Export Co
-  :rev_name: Co Export Import Plant National China
-  :trim_name: ChinaNationalPlantImportExportCo
-  :trim_rev_name: CoExportImportPlantNationalChina
-  :name_no_common: China National Plant Import Export
-  :rev_name_no_common: Export Import Plant National China
-  :trim_name_no_common: ChinaNationalPlantImportExport
-  :trim_rev_name_no_common: ExportImportPlantNationalChina
+  :name_idx: China National Plant Import Export
+  :name_with_common: China National Plant Import Export Co
+  :rev_name_with_common: Co Export Import Plant National China
+  :trim_name_with_common: ChinaNationalPlantImportExportCo
+  :trim_rev_name_with_common: CoExportImportPlantNationalChina
+  :rev_name: Export Import Plant National China
+  :trim_name: ChinaNationalPlantImportExport
+  :trim_rev_name: ExportImportPlantNationalChina
 - :name: Brilliance Technology Ltd
   :id: cc91dc115ff25e9f2e3cab1b9d8adf75f5956982
   :source: *1
@@ -38,34 +38,34 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Brilliance Technology Ltd
-  :rev_name: Ltd Technology Brilliance
-  :trim_name: BrillianceTechnologyLtd
-  :trim_rev_name: LtdTechnologyBrilliance
-  :name_no_common: Brilliance Technology
-  :rev_name_no_common: Technology Brilliance
-  :trim_name_no_common: BrillianceTechnology
-  :trim_rev_name_no_common: TechnologyBrilliance
+  :name_idx: Brilliance Technology
+  :name_with_common: Brilliance Technology Ltd
+  :rev_name_with_common: Ltd Technology Brilliance
+  :trim_name_with_common: BrillianceTechnologyLtd
+  :trim_rev_name_with_common: LtdTechnologyBrilliance
+  :rev_name: Technology Brilliance
+  :trim_name: BrillianceTechnology
+  :trim_rev_name: TechnologyBrilliance
 - :name: Dynasense Photonics Co., Limited
   :id: 91b38427499bf36988a61096f665301b890c9ec2
   :source: *1
   :source_list_url: http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list
   :addresses:
-  - :address: "Unit 2209, 22/F, Wu Chung House, 213 Queen's Road East, Wanchai"
+  - :address: Unit 2209, 22/F, Wu Chung House, 213 Queen's Road East, Wanchai
     :city:
     :state:
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Dynasense Photonics Co Limited
-  :rev_name: Limited Co Photonics Dynasense
-  :trim_name: DynasensePhotonicsCoLimited
-  :trim_rev_name: LimitedCoPhotonicsDynasense
-  :name_no_common: Dynasense Photonics
-  :rev_name_no_common: Photonics Dynasense
-  :trim_name_no_common: DynasensePhotonics
-  :trim_rev_name_no_common: PhotonicsDynasense
+  :name_idx: Dynasense Photonics
+  :name_with_common: Dynasense Photonics Co Limited
+  :rev_name_with_common: Limited Co Photonics Dynasense
+  :trim_name_with_common: DynasensePhotonicsCoLimited
+  :trim_rev_name_with_common: LimitedCoPhotonicsDynasense
+  :rev_name: Photonics Dynasense
+  :trim_name: DynasensePhotonics
+  :trim_rev_name: PhotonicsDynasense
 - :name: Hi-Shine Technology (HK) Limited
   :id: 6e18b2585a002248ecb071d5fa8b26cdfd2f4144
   :source: *1
@@ -84,14 +84,14 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Hi Shine Technology HK Limited
-  :rev_name: Limited HK Technology Shine Hi
-  :trim_name: HiShineTechnologyHKLimited
-  :trim_rev_name: LimitedHKTechnologyShineHi
-  :name_no_common: Hi Shine Technology HK
-  :rev_name_no_common: HK Technology Shine Hi
-  :trim_name_no_common: HiShineTechnologyHK
-  :trim_rev_name_no_common: HKTechnologyShineHi
+  :name_idx: Hi Shine Technology HK
+  :name_with_common: Hi Shine Technology HK Limited
+  :rev_name_with_common: Limited HK Technology Shine Hi
+  :trim_name_with_common: HiShineTechnologyHKLimited
+  :trim_rev_name_with_common: LimitedHKTechnologyShineHi
+  :rev_name: HK Technology Shine Hi
+  :trim_name: HiShineTechnologyHK
+  :trim_rev_name: HKTechnologyShineHi
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
   :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
   :source: *1
@@ -104,14 +104,14 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Hong Kong Haimao Info Tec Development Co Ltd
-  :rev_name: Ltd Co Development Tec Info Haimao Kong Hong
-  :trim_name: HongKongHaimaoInfoTecDevelopmentCoLtd
-  :trim_rev_name: LtdCoDevelopmentTecInfoHaimaoKongHong
-  :name_no_common: Hong Kong Haimao Info Tec Development
-  :rev_name_no_common: Development Tec Info Haimao Kong Hong
-  :trim_name_no_common: HongKongHaimaoInfoTecDevelopment
-  :trim_rev_name_no_common: DevelopmentTecInfoHaimaoKongHong
+  :name_idx: Hong Kong Haimao Info Tec Development
+  :name_with_common: Hong Kong Haimao Info Tec Development Co Ltd
+  :rev_name_with_common: Ltd Co Development Tec Info Haimao Kong Hong
+  :trim_name_with_common: HongKongHaimaoInfoTecDevelopmentCoLtd
+  :trim_rev_name_with_common: LtdCoDevelopmentTecInfoHaimaoKongHong
+  :rev_name: Development Tec Info Haimao Kong Hong
+  :trim_name: HongKongHaimaoInfoTecDevelopment
+  :trim_rev_name: DevelopmentTecInfoHaimaoKongHong
 - :name: Lianqi (HK) Electronics Co Ltd
   :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
   :source: *1
@@ -124,14 +124,14 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Lianqi HK Electronics Co Ltd
-  :rev_name: Ltd Co Electronics HK Lianqi
-  :trim_name: LianqiHKElectronicsCoLtd
-  :trim_rev_name: LtdCoElectronicsHKLianqi
-  :name_no_common: Lianqi HK Electronics
-  :rev_name_no_common: Electronics HK Lianqi
-  :trim_name_no_common: LianqiHKElectronics
-  :trim_rev_name_no_common: ElectronicsHKLianqi
+  :name_idx: Lianqi HK Electronics
+  :name_with_common: Lianqi HK Electronics Co Ltd
+  :rev_name_with_common: Ltd Co Electronics HK Lianqi
+  :trim_name_with_common: LianqiHKElectronicsCoLtd
+  :trim_rev_name_with_common: LtdCoElectronicsHKLianqi
+  :rev_name: Electronics HK Lianqi
+  :trim_name: LianqiHKElectronics
+  :trim_rev_name: ElectronicsHKLianqi
 - :name: Lion Chip Electronics Ltd
   :id: f117b1dab0d802e5f6c3a02113f67f3f72893a6e
   :source: *1
@@ -144,14 +144,14 @@
     :postal_code:
     :country: HK
   :alt_names: []
-  :name_idx: Lion Chip Electronics Ltd
-  :rev_name: Ltd Electronics Chip Lion
-  :trim_name: LionChipElectronicsLtd
-  :trim_rev_name: LtdElectronicsChipLion
-  :name_no_common: Lion Chip Electronics
-  :rev_name_no_common: Electronics Chip Lion
-  :trim_name_no_common: LionChipElectronics
-  :trim_rev_name_no_common: ElectronicsChipLion
+  :name_idx: Lion Chip Electronics
+  :name_with_common: Lion Chip Electronics Ltd
+  :rev_name_with_common: Ltd Electronics Chip Lion
+  :trim_name_with_common: LionChipElectronicsLtd
+  :trim_rev_name_with_common: LtdElectronicsChipLion
+  :rev_name: Electronics Chip Lion
+  :trim_name: LionChipElectronics
+  :trim_rev_name: ElectronicsChipLion
 - :name: Security 2 Business Academy
   :id: 5b5a164dd0e4ca3acb6397dbeb2d5713c4f13f90
   :source: *1

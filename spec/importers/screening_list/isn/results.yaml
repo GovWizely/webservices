@@ -25,14 +25,14 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
-  :name_idx: Aerospace Industries Organization AIO
-  :rev_name: AIO Organization Industries Aerospace
-  :trim_name: AerospaceIndustriesOrganizationAIO
-  :trim_rev_name: AIOOrganizationIndustriesAerospace
-  :name_no_common: Aerospace Industries AIO
-  :rev_name_no_common: AIO Industries Aerospace
-  :trim_name_no_common: AerospaceIndustriesAIO
-  :trim_rev_name_no_common: AIOIndustriesAerospace
+  :name_idx: Aerospace Industries AIO
+  :name_with_common: Aerospace Industries Organization AIO
+  :rev_name_with_common: AIO Organization Industries Aerospace
+  :trim_name_with_common: AerospaceIndustriesOrganizationAIO
+  :trim_rev_name_with_common: AIOOrganizationIndustriesAerospace
+  :rev_name: AIO Industries Aerospace
+  :trim_name: AerospaceIndustriesAIO
+  :trim_rev_name: AIOIndustriesAerospace
 - :name: Aerospace Logistics Services
   :federal_register_notice: Vol. 72, No. 77, 4/23/07
   :start_date: '2007-04-17'

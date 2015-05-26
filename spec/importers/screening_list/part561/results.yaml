@@ -20,7 +20,7 @@
   :type: Entity
   :alt_names:
   - KARAMAY URBAN CREDIT COOPERATIVES
-  - KARAMAY CITY COMMERCIAL BANK CO LTD.
+  - KARAMAY CITY COMMERCIAL BANK
   :programs:
   - 561List
   :nationalities: []
@@ -55,17 +55,29 @@
     :issue_date: 
     :number: CKLB CN BJ
     :type: SWIFT/BIC
-  :name_idx: BANK OF KUNLUN CO LTD
-  :rev_name: LTD CO KUNLUN OF BANK
-  :trim_name: BANKOFKUNLUNCOLTD
-  :trim_rev_name: LTDCOKUNLUNOFBANK
-  :name_no_common: BANK OF KUNLUN
-  :rev_name_no_common: KUNLUN OF BANK
-  :trim_name_no_common: BANKOFKUNLUN
-  :trim_rev_name_no_common: KUNLUNOFBANK
+  :name_idx: BANK OF KUNLUN
+  :name_with_common: BANK OF KUNLUN CO LTD
+  :rev_name_with_common: LTD CO KUNLUN OF BANK
+  :trim_name_with_common: BANKOFKUNLUNCOLTD
+  :trim_rev_name_with_common: LTDCOKUNLUNOFBANK
+  :rev_name: KUNLUN OF BANK
+  :trim_name: BANKOFKUNLUN
+  :trim_rev_name: KUNLUNOFBANK  
   :alt_names_idx:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK CO LTD
+  :alt_names_with_common: 
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK CO LTD
+  :rev_alt_with_common: 
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK CO LTD
+  :trim_alt_with_common: 
+  - KARAMAYURBANCREDITCOOPERATIVES
+  - KARAMAYCITYCOMMERCIALBANKCOLTD
+  :trim_rev_alt_with_common: 
+  - KARAMAYURBANCREDITCOOPERATIVES
+  - KARAMAYCITYCOMMERCIALBANKCOLTD
   :rev_alt_names:
   - COOPERATIVES CREDIT URBAN KARAMAY
   - LTD CO BANK COMMERCIAL CITY KARAMAY
@@ -75,15 +87,3 @@
   :trim_rev_alt_names:
   - COOPERATIVESCREDITURBANKARAMAY
   - LTDCOBANKCOMMERCIALCITYKARAMAY
-  :alt_names_no_common:
-  - KARAMAY URBAN CREDIT COOPERATIVES
-  - KARAMAY CITY COMMERCIAL BANK
-  :rev_alt_no_common: 
-  - COOPERATIVES CREDIT URBAN KARAMAY
-  - BANK COMMERCIAL CITY KARAMAY
-  :trim_alt_no_common: 
-  - KARAMAYURBANCREDITCOOPERATIVES
-  - KARAMAYCITYCOMMERCIALBANK
-  :trim_rev_alt_no_common: 
-  - COOPERATIVESCREDITURBANKARAMAY
-  - BANKCOMMERCIALCITYKARAMAY

@@ -1,42 +1,64 @@
 [
     {
+        "entity_number": "15268",
+        "title": null,
+        "call_sign": null,
+        "vessel_type": null,
+        "gross_tonnage": null,
+        "gross_registered_tonnage": null,
+        "vessel_flag": null,
+        "vessel_owner": null,
+        "remarks": "United States financial institutions are prohibited from opening or maintaining a correspondent account or a payable-through account for the foreign financial institution listed here, pursuant to 31 C.F.R. section 561.201(c)",
+        "id": "15268",
+        "source": {
+            "full_name": "Part 561 List (561) - Treasury Department",
+            "code": "561"
+        },
+        "source_list_url": null,
+        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561",
+        "name": "BANK OF KUNLUN CO LTD",
+        "type": "Entity",
+        "alt_names": [
+            "KARAMAY URBAN CREDIT COOPERATIVES",
+            "KARAMAY CITY COMMERCIAL BANK"
+        ],
+        "programs": [
+            "561List"
+        ],
+        "nationalities": [],
+        "citizenships": [],
+        "dates_of_birth": [],
+        "places_of_birth": [],
         "addresses": [
             {
-                "address": "172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch)",
                 "city": "Daqing",
                 "country": "CN",
                 "postal_code": "163453",
-                "state": null
+                "state": null,
+                "address": "172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch)"
             },
             {
-                "address": "9 Dongzhimen North Street, Dongcheng District, (Head Office)",
                 "city": "Beijing",
                 "country": "CN",
                 "postal_code": "100007",
-                "state": null
+                "state": null,
+                "address": "9 Dongzhimen North Street, Dongcheng District, (Head Office)"
             },
             {
-                "address": "No. 7 Century Ave, (Registered Office)",
                 "city": "Xinjiang",
                 "country": "CN",
                 "postal_code": "834000",
-                "state": "Karamay"
+                "state": "Karamay",
+                "address": "No. 7 Century Ave, (Registered Office)"
             },
             {
-                "address": "No. 68 Zhongya South Rd, Economic and Technological Development Zone, (Urumqi, Xinjiang Branch)",
                 "city": "Urumqi",
                 "country": "CN",
                 "postal_code": "830026",
-                "state": null
+                "state": null,
+                "address": "No. 68 Zhongya South Rd, Economic and Technological Development Zone, (Urumqi, Xinjiang Branch)"
             }
         ],
-        "alt_names": [
-            "KARAMAY URBAN CREDIT COOPERATIVES",
-            "KARAMAY CITY COMMERCIAL BANK CO LTD."
-        ],
-        "citizenships": [],
-        "dates_of_birth": [],
-        "entity_number": "15268",
         "ids": [
             {
                 "country": null,
@@ -46,17 +68,45 @@
                 "type": "SWIFT/BIC"
             }
         ],
-        "name": "BANK OF KUNLUN CO LTD",
-        "nationalities": [],
-        "places_of_birth": [],
-        "programs": [
-            "561List"
+        "name_idx": "BANK OF KUNLUN",
+        "name_with_common": "BANK OF KUNLUN CO LTD",
+        "rev_name_with_common": "LTD CO KUNLUN OF BANK",
+        "trim_name_with_common": "BANKOFKUNLUNCOLTD",
+        "trim_rev_name_with_common": "LTDCOKUNLUNOFBANK",
+        "rev_name": "KUNLUN OF BANK",
+        "trim_name": "BANKOFKUNLUN",
+        "trim_rev_name": "KUNLUNOFBANK",
+        "alt_names_idx": [
+            "KARAMAY URBAN CREDIT COOPERATIVES",
+            "KARAMAY CITY COMMERCIAL BANK CO LTD"
         ],
-        "remarks": "United States financial institutions are prohibited from opening or maintaining a correspondent account or a payable-through account for the foreign financial institution listed here, pursuant to 31 C.F.R. section 561.201(c)",
-        "source": "Part 561 List (561) - Treasury Department",
-        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561",
-        "source_list_url": null,
-        "title": null,
-        "type": "Entity"
+        "alt_names_with_common": [
+            "KARAMAY URBAN CREDIT COOPERATIVES",
+            "KARAMAY CITY COMMERCIAL BANK CO LTD"
+        ],
+        "rev_alt_with_common": [
+            "KARAMAY URBAN CREDIT COOPERATIVES",
+            "KARAMAY CITY COMMERCIAL BANK CO LTD"
+        ],
+        "trim_alt_with_common": [
+            "KARAMAYURBANCREDITCOOPERATIVES",
+            "KARAMAYCITYCOMMERCIALBANKCOLTD"
+        ],
+        "trim_rev_alt_with_common": [
+            "KARAMAYURBANCREDITCOOPERATIVES",
+            "KARAMAYCITYCOMMERCIALBANKCOLTD"
+        ],
+        "rev_alt_names": [
+            "COOPERATIVES CREDIT URBAN KARAMAY",
+            "LTD CO BANK COMMERCIAL CITY KARAMAY"
+        ],
+        "trim_alt_names": [
+            "KARAMAYURBANCREDITCOOPERATIVES",
+            "KARAMAYCITYCOMMERCIALBANKCOLTD"
+        ],
+        "trim_rev_alt_names": [
+            "COOPERATIVESCREDITURBANKARAMAY",
+            "LTDCOBANKCOMMERCIALCITYKARAMAY"
+        ]
     }
 ]

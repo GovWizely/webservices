@@ -45,7 +45,7 @@ module ScreeningList
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_no_common:          { type:     'string',
+            name_with_common:          { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
@@ -60,7 +60,7 @@ module ScreeningList
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names_no_common:     { type:     'string',
+            alt_names_with_common:     { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
@@ -71,7 +71,7 @@ module ScreeningList
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_name_no_common:      { type:     'string',
+            rev_name_with_common:      { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
@@ -81,22 +81,22 @@ module ScreeningList
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_alt_no_common:       { type:     'string',
+            rev_alt_with_common:       { type:     'string',
                                        analyzer: 'standard_asciifolding_nostop',
                                        fields:   {
                                          keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed
             trim_name:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_name_no_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_name_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
             trim_alt_names:          { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_alt_no_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_alt_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             # whitespace removed and reversed
             trim_rev_name:           { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_rev_name_no_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_rev_name_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
             trim_rev_alt_names:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_rev_alt_no_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            trim_rev_alt_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
