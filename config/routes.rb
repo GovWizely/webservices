@@ -56,6 +56,7 @@ Webservices::Application.routes.draw do
              'parature_faq'              => 'ita_faqs',
              'ita_office_locations'      => 'ita_office_locations',
              'country_commercial_guides' => 'country_commercial_guides',
+             'emenu_bsp'                 => 'emenu_bsps',
      }
 
     path.each do |controller, path|
