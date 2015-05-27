@@ -6,7 +6,7 @@ describe EmenuBspData do
   let(:importer) { EmenuBspData.new(fixtures_file) }
   let(:articles_hash) { YAML.load_file("#{fixtures_dir}/emenu_bsp_articles.yaml") }
 
-  it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
     it 'loads trade articles from specified resource' do

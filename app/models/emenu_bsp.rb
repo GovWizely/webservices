@@ -18,6 +18,10 @@ class EmenuBsp
 
   self.mappings = {
     name.typeize => {
+      _timestamp: {
+        enabled: true,
+        store:   true,
+      },
       dynamic:    'false',
       properties: {
         ita_contact_email:   { type: 'string', index: 'not_analyzed' },
