@@ -2,6 +2,7 @@ require 'open-uri'
 
 class TradeArticleData
   include Importer
+  include VersionableResource
   ENDPOINT = 'https://new.export.gov/community/posts/content.json'
 
   COLUMN_HASH = {
@@ -23,12 +24,8 @@ class TradeArticleData
     keyword_tags:       :keyword,
   }.freeze
 
-  def initialize(resource = ENDPOINT)
-    @resource = resource
-  end
-
   def import
-    doc = JSON.parse(open(@resource).read, symbolize_names: true)
+    doc = JSON.parse(loaded_resource, symbolize_names: true)
     articles = doc.map { |article_hash| process_article_info article_hash }
     TradeArticle.index articles
   end

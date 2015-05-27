@@ -7,6 +7,7 @@ describe TradeArticleData do
   let(:trade_articles_hash) { YAML.load_file("#{fixtures_dir}/trade_articles.yaml") }
 
   it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     it 'loads trade articles from specified resource' do
