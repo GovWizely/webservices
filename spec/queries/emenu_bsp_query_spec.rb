@@ -4,10 +4,9 @@ describe EmenuBspQuery do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/emenu_bsp" }
   let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
   let(:query) do
-    EmenuBspQuery.new( {
-      q: 'hospitality alfa',
-      ita_offices: 'egypt,bulgaria',
-      categories: 'electronic components and supplies,advertising'} )
+    EmenuBspQuery.new(q:           'hospitality alfa',
+                      ita_offices: 'egypt,bulgaria',
+                      categories:  'electronic components and supplies,advertising')
   end
 
   describe '#new' do

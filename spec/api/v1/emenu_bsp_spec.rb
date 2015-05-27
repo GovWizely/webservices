@@ -7,7 +7,6 @@ describe 'Australian Trade Leads API V1', type: :request do
       "#{Rails.root}/spec/fixtures/emenu_bsp_articles/emenu_bsp_articles.json").import
   end
 
-
   describe 'GET /emenu_bsps/search.json' do
     context 'when search parameters are empty' do
       let(:all_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/emenu_bsps/all_results.json").read }
