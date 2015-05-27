@@ -27,7 +27,7 @@ gem 'sinatra', require: nil
 gem 'sass'
 gem 'jquery-rails'
 
-gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git', tag: 'v0.0.1'
+gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 
 group :production do
   gem 'newrelic_rpm'
