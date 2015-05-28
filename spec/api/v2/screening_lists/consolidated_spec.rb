@@ -42,7 +42,7 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
 
       xcontext 'and fuzzy is specified' do
-        let(:params) { { name: 'SALEH Jamal', fuzzy: true } }
+        let(:params) { { name: 'SALEH Jamal', fuzzy_name: true } }
         subject { response }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all ScreeningList::Plc results that match "SALEH, Jamal" with distance of 1'
