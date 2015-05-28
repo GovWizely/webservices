@@ -1,0 +1,41 @@
+{
+    "query": {
+        "bool": {
+            "must": [
+                {
+                    "multi_match": {
+                        "operator": "and",
+                        "query": "hospitality alfa",
+                        "fields": [
+                            "company_description",
+                            "company_name"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "filter": {
+        "bool": {
+            "must": [
+                {
+                    "terms": {
+                        "ita_office": [
+                            "egypt",
+                            "bulgaria"
+                        ]
+                    }
+                },
+                {
+                    "terms": {
+                        "category": [
+                            "electronic components and supplies",
+                            "advertising"
+                        ]
+                    }
+                }
+            ]
+        }
+    }
+}
+
