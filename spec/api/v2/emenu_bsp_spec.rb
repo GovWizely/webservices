@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'Australian Trade Leads API V1', type: :request do
+describe 'Emenu BSP API V2', type: :request do
   include_context 'V2 headers'
   before(:all) do
     EmenuBsp.recreate_index
