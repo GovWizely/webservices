@@ -58,13 +58,15 @@ module ScreeningList
       doc[:source_list_url] = @resource =~ URI.regexp ? @resource : nil
       doc[:source_information_url] = self.class.source_information_url
       doc[:name] = extract_name(node)
-
       doc[:type] = doc[:sdn_type] || doc[:nsp_type]
       doc.delete(:sdn_type)
       doc.delete(:nsp_type)
 
       doc.merge!(extract_simple_nested_fields(node))
       doc.merge!(extract_complex_nested_fields(node))
+
+      make_names(doc)
+
       doc
     end
 

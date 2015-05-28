@@ -29,18 +29,26 @@
   - Shati
   :addresses: []
   :ids: []
+  :name_idx: HANIYA Ismail Abdul Salah
+  :rev_name: Salah Abdul Ismail HANIYA
+  :trim_name: HANIYAIsmailAbdulSalah
+  :trim_rev_name: SalahAbdulIsmailHANIYA
+  :alt_names_idx: [HANIYA Ismail, HANIYYA Ismaeel]
+  :rev_alt_names: [Ismail HANIYA, Ismaeel HANIYYA]
+  :trim_alt_names: [HANIYAIsmail, HANIYYAIsmaeel]
+  :trim_rev_alt_names: [IsmailHANIYA, IsmaeelHANIYYA]
 - :entity_number: '9674'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: HAMAS - Hebron
   :id: '9674'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: QFEISHEH, Hatem
   :type: Individual
@@ -57,18 +65,30 @@
   :places_of_birth: []
   :addresses: []
   :ids: []
+  :name_idx: QFEISHEH Hatem
+  :rev_name: Hatem QFEISHEH
+  :trim_name: QFEISHEHHatem
+  :trim_rev_name: HatemQFEISHEH
+  :alt_names_idx: 
+   [KAFEESHEH Hatem Rabah, QEFEISHA Hatem, ABU ANED Hadj Hatem]
+  :rev_alt_names: 
+   [Rabah Hatem KAFEESHEH, Hatem QEFEISHA, Hatem Hadj ANED ABU]
+  :trim_alt_names: 
+   [KAFEESHEHHatemRabah, QEFEISHAHatem, ABUANEDHadjHatem]
+  :trim_rev_alt_names: 
+   [RabahHatemKAFEESHEH, HatemQEFEISHA, HatemHadjANEDABU]  
 - :entity_number: '9688'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: HAMAS - Jenin
   :id: '9688'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: YAHIA, Khaled Abed
   :type: Individual
@@ -84,22 +104,30 @@
   :addresses:
   - :city: Jenin
     :country: PS
-    :postal_code: 
+    :postal_code:
     :state: West Bank
-    :address: 
+    :address:
   :ids: []
+  :name_idx: YAHIA Khaled Abed
+  :rev_name: Abed Khaled YAHIA
+  :trim_name: YAHIAKhaledAbed
+  :trim_rev_name: AbedKhaledYAHIA
+  :alt_names_idx: [YEHIA Khaled Said]
+  :rev_alt_names: [Said Khaled YEHIA]
+  :trim_alt_names: [YEHIAKhaledSaid]
+  :trim_rev_alt_names: [SaidKhaledYEHIA]  
 - :entity_number: '9705'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: HAMAS - Gaza
   :id: '9705'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: SALEH, Jamal
   :type: Individual
@@ -116,18 +144,26 @@
   - Gaza
   :addresses: []
   :ids: []
+  :name_idx: SALEH Jamal
+  :rev_name: Jamal SALEH
+  :trim_name: SALEHJamal
+  :trim_rev_name: JamalSALEH
+  :alt_names_idx: [NASSER Jamal Talab Mohammad Saleh, SALEH Jamal Talab]
+  :rev_alt_names: [Saleh Mohammad Talab Jamal NASSER, Talab Jamal SALEH]
+  :trim_alt_names: [NASSERJamalTalabMohammadSaleh, SALEHJamalTalab]
+  :trim_rev_alt_names: [SalehMohammadTalabJamalNASSER, TalabJamalSALEH]  
 - :entity_number: '9712'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: HAMAS - Northern Gaza
   :id: '9712'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: SHIHAB, Mohammed
   :type: Individual
@@ -142,18 +178,26 @@
   :places_of_birth: []
   :addresses: []
   :ids: []
+  :name_idx: SHIHAB Mohammed
+  :rev_name: Mohammed SHIHAB
+  :trim_name: SHIHABMohammed
+  :trim_rev_name: MohammedSHIHAB
+  :alt_names_idx: [SHEHAB Mohamed Abed Hadi Rahman]
+  :rev_alt_names: [Rahman Hadi Abed Mohamed SHEHAB]
+  :trim_alt_names: [SHEHABMohamedAbedHadiRahman]
+  :trim_rev_alt_names: [RahmanHadiAbedMohamedSHEHAB]  
 - :entity_number: '9715'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: PFLP
   :id: '9715'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx
   :name: JARRAR, Khaledah
   :type: Individual
@@ -166,3 +210,7 @@
   :places_of_birth: []
   :addresses: []
   :ids: []
+  :name_idx: JARRAR Khaledah
+  :rev_name: Khaledah JARRAR
+  :trim_name: JARRARKhaledah
+  :trim_rev_name: KhaledahJARRAR  

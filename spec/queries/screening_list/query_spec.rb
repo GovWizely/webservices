@@ -17,10 +17,10 @@ describe ScreeningList::Query do
   end
 
   describe '#generate_search_body' do
-    context 'when options include name and fuzziness' do
-      let(:query) { described_class.new(name: 'mohamed', fuzziness: '0') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_name_and_fuzziness.json").read }
-      it 'generates search body with name and fuzziness' do
+    context 'when options include name' do
+      let(:query) { described_class.new(name: 'mohamed') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_name.json").read }
+      it 'generates search body with name' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
@@ -68,9 +68,9 @@ describe ScreeningList::Query do
       end
     end
 
-    context 'when options include address and fuzziness' do
-      let(:query) { described_class.new(address: 'Avenida Bady Bassitt', fuzziness: 2) }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_address_and_fuzziness.json").read }
+    context 'when options include address and distance' do
+      let(:query) { described_class.new(address: 'Avenida Bady Bassitt', distance: 2) }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_address_and_distance.json").read }
 
       it 'generates search body with type filter' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
