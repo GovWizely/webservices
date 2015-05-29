@@ -408,7 +408,7 @@ end
 
 shared_examples 'it contains all ScreeningList::Ssi results that match "transneft"' do
   let(:source) { ScreeningList::Ssi }
-  let(:expected) { [0] }
+  let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 

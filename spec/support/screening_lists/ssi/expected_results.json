@@ -1,682 +1,402 @@
 [
-    {
-        "entity_number": "17013",
-        "title": null,
-        "call_sign": null,
-        "vessel_type": null,
-        "gross_tonnage": null,
-        "gross_registered_tonnage": null,
-        "vessel_flag": null,
-        "vessel_owner": null,
-        "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-        "id": "17013",
-        "source": {
-            "full_name": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-            "code": "SSI"
-        },
-        "source_list_url": null,
-        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-        "name": "VTB BANK OAO",
-        "type": "Entity",
-        "alt_names": [
-            "JSC VTB BANK",
-            "BANK VTB OPEN JOINTSTOCK",
-            "VNESHTORGBANK",
-            "BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK",
-            "BANK VNESHNEY TORGOVLI JOINTSTOCK",
-            "BANK VNESHNEY TORGOVLI RSFSR",
-            "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK",
-            "VNESHTORGBANK ROSSII CLOSED JOINTSTOCK",
-            "VTB BANK OPEN JOINTSTOCK",
-            "BANK VTB OAO"
-        ],
-        "programs": [
-            "UKRAINE-EO13662"
-        ],
-        "nationalities": [],
-        "citizenships": [],
-        "dates_of_birth": [],
-        "places_of_birth": [],
-        "addresses": [
-            {
-                "city": "St. Petersburg",
-                "country": "RU",
-                "postal_code": "190000",
-                "state": null,
-                "address": "29, Bolshaya Morskaya str."
-            },
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "119121",
-                "state": null,
-                "address": "37 Plyushchikha ul."
-            },
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "109044",
-                "state": null,
-                "address": "43, Vorontsovskaya str."
-            }
-        ],
-        "ids": [
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "1027739609391",
-                "type": "Registration ID"
-            },
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "00032520",
-                "type": "Government Gazette Number"
-            },
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "7702070139",
-                "type": "Tax ID No."
-            },
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "1000",
-                "type": "License"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "www.vtb.com",
-                "type": "Website"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "VTBRRUMM",
-                "type": "SWIFT/BIC"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "Subject to Directive 1",
-                "type": "Executive Order 13662 Directive Determination -"
-            }
-        ],
-        "name_idx": "VTB BANK OAO",
-        "rev_name": "OAO BANK VTB",
-        "trim_name": "VTBBANKOAO",
-        "trim_rev_name": "OAOBANKVTB",
-        "alt_names_idx": [
-            "JSC VTB BANK",
-            "BANK VTB OPEN JOINTSTOCK COMPANY",
-            "VNESHTORGBANK",
-            "BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI RSFSR",
-            "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK COMPANY",
-            "VNESHTORGBANK ROSSII CLOSED JOINTSTOCK COMPANY",
-            "VTB BANK OPEN JOINTSTOCK COMPANY",
-            "BANK VTB OAO"
-        ],
-        "alt_names_with_common": [
-            "JSC VTB BANK",
-            "BANK VTB OPEN JOINTSTOCK COMPANY",
-            "VNESHTORGBANK",
-            "BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI RSFSR",
-            "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK COMPANY",
-            "VNESHTORGBANK ROSSII CLOSED JOINTSTOCK COMPANY",
-            "VTB BANK OPEN JOINTSTOCK COMPANY",
-            "BANK VTB OAO"
-        ],
-        "rev_alt_with_common": [
-            "JSC VTB BANK",
-            "BANK VTB OPEN JOINTSTOCK COMPANY",
-            "VNESHTORGBANK",
-            "BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI JOINTSTOCK COMPANY",
-            "BANK VNESHNEY TORGOVLI RSFSR",
-            "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK COMPANY",
-            "VNESHTORGBANK ROSSII CLOSED JOINTSTOCK COMPANY",
-            "VTB BANK OPEN JOINTSTOCK COMPANY",
-            "BANK VTB OAO"
-        ],
-        "trim_alt_with_common": [
-            "JSCVTBBANK",
-            "BANKVTBOPENJOINTSTOCKCOMPANY",
-            "VNESHTORGBANK",
-            "BANKVNESHNEYTORGOVLIOPENJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIRSFSR",
-            "BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCKCOMPANY",
-            "VNESHTORGBANKROSSIICLOSEDJOINTSTOCKCOMPANY",
-            "VTBBANKOPENJOINTSTOCKCOMPANY",
-            "BANKVTBOAO"
-        ],
-        "trim_rev_alt_with_common": [
-            "JSCVTBBANK",
-            "BANKVTBOPENJOINTSTOCKCOMPANY",
-            "VNESHTORGBANK",
-            "BANKVNESHNEYTORGOVLIOPENJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIRSFSR",
-            "BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCKCOMPANY",
-            "VNESHTORGBANKROSSIICLOSEDJOINTSTOCKCOMPANY",
-            "VTBBANKOPENJOINTSTOCKCOMPANY",
-            "BANKVTBOAO"
-        ],
-        "rev_alt_names": [
-            "BANK VTB JSC",
-            "COMPANY JOINTSTOCK OPEN VTB BANK",
-            "VNESHTORGBANK",
-            "COMPANY JOINTSTOCK OPEN TORGOVLI VNESHNEY BANK",
-            "COMPANY JOINTSTOCK TORGOVLI VNESHNEY BANK",
-            "RSFSR TORGOVLI VNESHNEY BANK",
-            "COMPANY JOINTSTOCK CLOSED FEDERATSII ROSSIYSKOY TORGOVLI VNESHNEY BANK",
-            "COMPANY JOINTSTOCK CLOSED ROSSII VNESHTORGBANK",
-            "COMPANY JOINTSTOCK OPEN BANK VTB",
-            "OAO VTB BANK"
-        ],
-        "trim_alt_names": [
-            "JSCVTBBANK",
-            "BANKVTBOPENJOINTSTOCKCOMPANY",
-            "VNESHTORGBANK",
-            "BANKVNESHNEYTORGOVLIOPENJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIJOINTSTOCKCOMPANY",
-            "BANKVNESHNEYTORGOVLIRSFSR",
-            "BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCKCOMPANY",
-            "VNESHTORGBANKROSSIICLOSEDJOINTSTOCKCOMPANY",
-            "VTBBANKOPENJOINTSTOCKCOMPANY",
-            "BANKVTBOAO"
-        ],
-        "trim_rev_alt_names": [
-            "BANKVTBJSC",
-            "COMPANYJOINTSTOCKOPENVTBBANK",
-            "VNESHTORGBANK",
-            "COMPANYJOINTSTOCKOPENTORGOVLIVNESHNEYBANK",
-            "COMPANYJOINTSTOCKTORGOVLIVNESHNEYBANK",
-            "RSFSRTORGOVLIVNESHNEYBANK",
-            "COMPANYJOINTSTOCKCLOSEDFEDERATSIIROSSIYSKOYTORGOVLIVNESHNEYBANK",
-            "COMPANYJOINTSTOCKCLOSEDROSSIIVNESHTORGBANK",
-            "COMPANYJOINTSTOCKOPENBANKVTB",
-            "OAOVTBBANK"
-        ]
-    },
-    {
-        "entity_number": "17017",
-        "title": null,
-        "call_sign": null,
-        "vessel_type": null,
-        "gross_tonnage": null,
-        "gross_registered_tonnage": null,
-        "vessel_flag": null,
-        "vessel_owner": null,
-        "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-        "id": "17017",
-        "source": {
-            "full_name": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-            "code": "SSI"
-        },
-        "source_list_url": null,
-        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-        "name": "BANK OF MOSCOW",
-        "type": "Entity",
-        "alt_names": [
-            "JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK",
-            "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
-        ],
-        "programs": [
-            "UKRAINE-EO13662"
-        ],
-        "nationalities": [],
-        "citizenships": [],
-        "dates_of_birth": [],
-        "places_of_birth": [],
-        "addresses": [
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "107996",
-                "state": null,
-                "address": "8/15 Korp. 3 ul. Rozhdestvenka"
-            },
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "107996",
-                "state": null,
-                "address": "Bld 3 8/15, Rozhdestvenka St."
-            }
-        ],
-        "ids": [
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "1027700159497",
-                "type": "Registration ID"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "29292940",
-                "type": "Government Gazette Number"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "MOSW RU MM",
-                "type": "SWIFT/BIC"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "www.bm.ru",
-                "type": "Website"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "holmogorov_ss@mmbank.ru",
-                "type": "Email Address"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "info@mmbank.ru",
-                "type": "Email Address"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "044525219",
-                "type": "BIK (RU)"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "Subject to Directive 1",
-                "type": "Executive Order 13662 Directive Determination -"
-            }
-        ],
-        "name_idx": "BANK OF MOSCOW",
-        "rev_name": "MOSCOW OF BANK",
-        "trim_name": "BANKOFMOSCOW",
-        "trim_rev_name": "MOSCOWOFBANK",
-        "alt_names_idx": [
-            "JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK COMPANY",
-            "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
-        ],
-        "alt_names_with_common": [
-            "JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK COMPANY",
-            "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
-        ],
-        "rev_alt_with_common": [
-            "JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK COMPANY",
-            "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
-        ],
-        "trim_alt_with_common": [
-            "JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCKCOMPANY",
-            "AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO"
-        ],
-        "trim_rev_alt_with_common": [
-            "JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCKCOMPANY",
-            "AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO"
-        ],
-        "rev_alt_names": [
-            "COMPANY STOCK JOINT OPEN MOSCOW OF BANK BANK COMMERCIAL STOCK JOINT",
-            "OBSCHCHESTVO AKTSIONERNOE OTKRYTOE MOSKVY BANK BANK KOMMERCHESKI AKTSIONERNY"
-        ],
-        "trim_alt_names": [
-            "JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCKCOMPANY",
-            "AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO"
-        ],
-        "trim_rev_alt_names": [
-            "COMPANYSTOCKJOINTOPENMOSCOWOFBANKBANKCOMMERCIALSTOCKJOINT",
-            "OBSCHCHESTVOAKTSIONERNOEOTKRYTOEMOSKVYBANKBANKKOMMERCHESKIAKTSIONERNY"
-        ]
-    },
-    {
-        "entity_number": "17254",
-        "title": null,
-        "call_sign": null,
-        "vessel_type": null,
-        "gross_tonnage": null,
-        "gross_registered_tonnage": null,
-        "vessel_flag": null,
-        "vessel_owner": null,
-        "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-        "id": "17254",
-        "source": {
-            "full_name": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-            "code": "SSI"
-        },
-        "source_list_url": null,
-        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-        "name": "AK TRANSNEFT OAO",
-        "type": "Entity",
-        "alt_names": [
-            "OAO AK TRANSNEFT",
-            "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
-            "OIL TRANSPORTING JOINTSTOCK TRANSNEFT",
-            "TRANSNEFT JSC",
-            "TRANSNEFT OJSC",
-            "TRANSNEFT"
-        ],
-        "programs": [
-            "UKRAINE-EO13662"
-        ],
-        "nationalities": [],
-        "citizenships": [],
-        "dates_of_birth": [],
-        "places_of_birth": [],
-        "addresses": [
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "119180",
-                "state": null,
-                "address": "57 B. Polyanka ul."
-            },
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "119180",
-                "state": null,
-                "address": "57 Bolshaya. Polyanka"
-            }
-        ],
-        "ids": [
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "1027700049486",
-                "type": "Registration ID"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "7706061801",
-                "type": "Tax ID No."
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "00044463",
-                "type": "Government Gazette Number"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "transneft@ak.transneft.ru",
-                "type": "Email Address"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "www.transneft.ru",
-                "type": "Website"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "Subject to Directive 2",
-                "type": "Executive Order 13662 Directive Determination -"
-            }
-        ],
-        "name_idx": "AK TRANSNEFT OAO",
-        "rev_name": "OAO TRANSNEFT AK",
-        "trim_name": "AKTRANSNEFTOAO",
-        "trim_rev_name": "OAOTRANSNEFTAK",
-        "alt_names_idx": [
-            "OAO AK TRANSNEFT",
-            "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
-            "OIL TRANSPORTING JOINTSTOCK COMPANY TRANSNEFT",
-            "TRANSNEFT JSC",
-            "TRANSNEFT OJSC",
-            "TRANSNEFT"
-        ],
-        "alt_names_with_common": [
-            "OAO AK TRANSNEFT",
-            "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
-            "OIL TRANSPORTING JOINTSTOCK COMPANY TRANSNEFT",
-            "TRANSNEFT JSC",
-            "TRANSNEFT OJSC",
-            "TRANSNEFT"
-        ],
-        "rev_alt_with_common": [
-            "OAO AK TRANSNEFT",
-            "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
-            "OIL TRANSPORTING JOINTSTOCK COMPANY TRANSNEFT",
-            "TRANSNEFT JSC",
-            "TRANSNEFT OJSC",
-            "TRANSNEFT"
-        ],
-        "trim_alt_with_common": [
-            "OAOAKTRANSNEFT",
-            "AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO",
-            "OILTRANSPORTINGJOINTSTOCKCOMPANYTRANSNEFT",
-            "TRANSNEFTJSC",
-            "TRANSNEFTOJSC",
-            "TRANSNEFT"
-        ],
-        "trim_rev_alt_with_common": [
-            "OAOAKTRANSNEFT",
-            "AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO",
-            "OILTRANSPORTINGJOINTSTOCKCOMPANYTRANSNEFT",
-            "TRANSNEFTJSC",
-            "TRANSNEFTOJSC",
-            "TRANSNEFT"
-        ],
-        "rev_alt_names": [
-            "TRANSNEFT AK OAO",
-            "OAO TRANSNEFT TRANSPORTUNEFTI PO KOMPANIYA AKTSIONERNAYA",
-            "TRANSNEFT COMPANY JOINTSTOCK TRANSPORTING OIL",
-            "JSC TRANSNEFT",
-            "OJSC TRANSNEFT",
-            "TRANSNEFT"
-        ],
-        "trim_alt_names": [
-            "OAOAKTRANSNEFT",
-            "AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO",
-            "OILTRANSPORTINGJOINTSTOCKCOMPANYTRANSNEFT",
-            "TRANSNEFTJSC",
-            "TRANSNEFTOJSC",
-            "TRANSNEFT"
-        ],
-        "trim_rev_alt_names": [
-            "TRANSNEFTAKOAO",
-            "OAOTRANSNEFTTRANSPORTUNEFTIPOKOMPANIYAAKTSIONERNAYA",
-            "TRANSNEFTCOMPANYJOINTSTOCKTRANSPORTINGOIL",
-            "JSCTRANSNEFT",
-            "OJSCTRANSNEFT",
-            "TRANSNEFT"
-        ]
-    },
-    {
-        "entity_number": "17260",
-        "title": null,
-        "call_sign": null,
-        "vessel_type": null,
-        "gross_tonnage": null,
-        "gross_registered_tonnage": null,
-        "vessel_flag": null,
-        "vessel_owner": null,
-        "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-        "id": "17260",
-        "source": {
-            "full_name": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
-            "code": "SSI"
-        },
-        "source_list_url": null,
-        "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-        "name": "ROSTEC",
-        "type": "Entity",
-        "alt_names": [
-            "STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
-            "STATE ROSTEKHNOLOGII",
-            "ROSTEC STATE",
-            "RUSSIAN TECHNOLOGIES STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
-            "RUSSIAN TECHNOLOGIES",
-            "STATE ROSTECHNOLOGII"
-        ],
-        "programs": [
-            "UKRAINE-EO13662"
-        ],
-        "nationalities": [],
-        "citizenships": [],
-        "dates_of_birth": [],
-        "places_of_birth": [],
-        "addresses": [
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "119048",
-                "state": null,
-                "address": "24 Usacheva ul."
-            },
-            {
-                "city": "Moscow",
-                "country": "RU",
-                "postal_code": "119991",
-                "state": null,
-                "address": "21 Gogolevsky Blvd."
-            }
-        ],
-        "ids": [
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "1077799030847",
-                "type": "Registration ID"
-            },
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "7704274402",
-                "type": "Tax ID No."
-            },
-            {
-                "country": "RU",
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "94137372",
-                "type": "Government Gazette Number"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "info@rostec.ru",
-                "type": "Email Address"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "www.rostec.ru",
-                "type": "Website"
-            },
-            {
-                "country": null,
-                "expiration_date": null,
-                "issue_date": null,
-                "number": "Subject to Directive 3",
-                "type": "Executive Order 13662 Directive Determination -"
-            }
-        ],
-        "name_idx": "ROSTEC",
-        "rev_name": "ROSTEC",
-        "trim_name": "ROSTEC",
-        "trim_rev_name": "ROSTEC",
-        "alt_names_idx": [
-            "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
-            "STATE CORPORATION ROSTEKHNOLOGII",
-            "ROSTEC STATE CORPORATION",
-            "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
-            "RUSSIAN TECHNOLOGIES",
-            "STATE CORPORATION ROSTECHNOLOGII"
-        ],
-        "alt_names_with_common": [
-            "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
-            "STATE CORPORATION ROSTEKHNOLOGII",
-            "ROSTEC STATE CORPORATION",
-            "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
-            "RUSSIAN TECHNOLOGIES",
-            "STATE CORPORATION ROSTECHNOLOGII"
-        ],
-        "rev_alt_with_common": [
-            "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
-            "STATE CORPORATION ROSTEKHNOLOGII",
-            "ROSTEC STATE CORPORATION",
-            "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
-            "RUSSIAN TECHNOLOGIES",
-            "STATE CORPORATION ROSTECHNOLOGII"
-        ],
-        "trim_alt_with_common": [
-            "STATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII",
-            "STATECORPORATIONROSTEKHNOLOGII",
-            "ROSTECSTATECORPORATION",
-            "RUSSIANTECHNOLOGIESSTATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT",
-            "RUSSIANTECHNOLOGIES",
-            "STATECORPORATIONROSTECHNOLOGII"
-        ],
-        "trim_rev_alt_with_common": [
-            "STATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII",
-            "STATECORPORATIONROSTEKHNOLOGII",
-            "ROSTECSTATECORPORATION",
-            "RUSSIANTECHNOLOGIESSTATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT",
-            "RUSSIANTECHNOLOGIES",
-            "STATECORPORATIONROSTECHNOLOGII"
-        ],
-        "rev_alt_names": [
-            "ROSTEKHNOLOGII PRODUCT INDUSTRIAL TECHNOLOGY ADVANCED OF EXPORT PRODUCTION DEVELOPMENT TO ASSISTANCE FOR CORPORATION STATE",
-            "ROSTEKHNOLOGII CORPORATION STATE",
-            "CORPORATION STATE ROSTEC",
-            "PRODUCT INDUSTRIAL TECHNOLOGY ADVANCED OF EXPORT PRODUCTION DEVELOPMENT TO ASSISTANCE FOR CORPORATION STATE TECHNOLOGIES RUSSIAN",
-            "TECHNOLOGIES RUSSIAN",
-            "ROSTECHNOLOGII CORPORATION STATE"
-        ],
-        "trim_alt_names": [
-            "STATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII",
-            "STATECORPORATIONROSTEKHNOLOGII",
-            "ROSTECSTATECORPORATION",
-            "RUSSIANTECHNOLOGIESSTATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT",
-            "RUSSIANTECHNOLOGIES",
-            "STATECORPORATIONROSTECHNOLOGII"
-        ],
-        "trim_rev_alt_names": [
-            "ROSTEKHNOLOGIIPRODUCTINDUSTRIALTECHNOLOGYADVANCEDOFEXPORTPRODUCTIONDEVELOPMENTTOASSISTANCEFORCORPORATIONSTATE",
-            "ROSTEKHNOLOGIICORPORATIONSTATE",
-            "CORPORATIONSTATEROSTEC",
-            "PRODUCTINDUSTRIALTECHNOLOGYADVANCEDOFEXPORTPRODUCTIONDEVELOPMENTTOASSISTANCEFORCORPORATIONSTATETECHNOLOGIESRUSSIAN",
-            "TECHNOLOGIESRUSSIAN",
-            "ROSTECHNOLOGIICORPORATIONSTATE"
-        ]
-    }
+  {
+    "addresses": [
+      {
+        "address": "8/15 Korp. 3 ul. Rozhdestvenka",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "107996",
+        "country": "RU"
+      },
+      {
+        "address": "Bld 3 8/15, Rozhdestvenka St.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "107996",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK",
+      "AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17017",
+    "ids": [
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027700159497",
+        "type": "Registration ID"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "29292940",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "MOSW RU MM",
+        "type": "SWIFT/BIC"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.bm.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "holmogorov_ss@mmbank.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "info@mmbank.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "044525219",
+        "type": "BIK (RU)"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 1",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "BANK OF MOSCOW",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
+  },
+  {
+    "addresses": [
+      {
+        "address": "29, Bolshaya Morskaya str.",
+        "city": "St. Petersburg",
+        "state": null,
+        "postal_code": "190000",
+        "country": "RU"
+      },
+      {
+        "address": "37 Plyushchikha ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119121",
+        "country": "RU"
+      },
+      {
+        "address": "43, Vorontsovskaya str.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "109044",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "JSC VTB BANK",
+      "BANK VTB OPEN JOINTSTOCK",
+      "VNESHTORGBANK",
+      "BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK",
+      "BANK VNESHNEY TORGOVLI JOINTSTOCK",
+      "BANK VNESHNEY TORGOVLI RSFSR",
+      "BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK",
+      "VNESHTORGBANK ROSSII CLOSED JOINTSTOCK",
+      "VTB BANK OPEN JOINTSTOCK",
+      "BANK VTB OAO"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17013",
+    "ids": [
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027739609391",
+        "type": "Registration ID"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "00032520",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7702070139",
+        "type": "Tax ID No."
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1000",
+        "type": "License"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.vtb.com",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "VTBRRUMM",
+        "type": "SWIFT/BIC"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 1",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "VTB BANK OAO",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
+  },
+  {
+    "addresses": [
+      {
+        "address": "24 Usacheva ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119048",
+        "country": "RU"
+      },
+      {
+        "address": "21 Gogolevsky Blvd.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119991",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
+      "STATE ROSTEKHNOLOGII",
+      "ROSTEC STATE",
+      "RUSSIAN TECHNOLOGIES STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
+      "RUSSIAN TECHNOLOGIES",
+      "STATE ROSTECHNOLOGII"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17260",
+    "ids": [
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1077799030847",
+        "type": "Registration ID"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7704274402",
+        "type": "Tax ID No."
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "94137372",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "info@rostec.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.rostec.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 3",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "ROSTEC",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
+  },
+  {
+    "addresses": [
+      {
+        "address": "57 B. Polyanka ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      },
+      {
+        "address": "57 Bolshaya. Polyanka",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "OAO AK TRANSNEFT",
+      "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
+      "OIL TRANSPORTING JOINTSTOCK TRANSNEFT",
+      "TRANSNEFT JSC",
+      "TRANSNEFT OJSC",
+      "TRANSNEFT"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17254",
+    "ids": [
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027700049486",
+        "type": "Registration ID"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7706061801",
+        "type": "Tax ID No."
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "00044463",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "transneft@ak.transneft.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.transneft.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 2",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "AK TRANSNEFT OAO",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
+  }
 ]
