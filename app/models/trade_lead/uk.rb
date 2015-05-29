@@ -1,6 +1,6 @@
 module TradeLead
   class Uk
-    extend ::Indexable
+    include Indexable
     include TradeLead::Mappable
 
     self.source = {

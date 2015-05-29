@@ -342,4 +342,20 @@ describe 'Consolidated Screening List API V2', type: :request do
       it_behaves_like 'it contains all ScreeningList::Dpl results that match end_date "2005-06-05"'
     end
   end
+
+  describe 'GET /consolidated_screening_list/search.csv' do
+    before { get '/v2/consolidated_screening_list/search.csv', {}, @v2_headers }
+    it 'is a CSV' do
+      expect(response.status).to eq(200)
+      expect(response.content_type.symbol).to eq(:csv)
+    end
+  end
+
+  describe 'GET /consolidated_screening_list/search.tsv' do
+    before { get '/v2/consolidated_screening_list/search.tsv', {}, @v2_headers }
+    it 'is a TSV' do
+      expect(response.status).to eq(200)
+      expect(response.content_type.symbol).to eq(:tsv)
+    end
+  end
 end

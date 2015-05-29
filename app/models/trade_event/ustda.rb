@@ -1,6 +1,6 @@
 module TradeEvent
   class Ustda
-    extend ::Indexable
+    include Indexable
     include TradeEvent::Mappable
     self.source = {
       code: 'USTDA',

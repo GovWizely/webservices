@@ -1,6 +1,6 @@
 module TradeLead
   class State
-    extend ::Indexable
+    include Indexable
     include TradeLead::Mappable
     self.source = {
       code: 'STATE',

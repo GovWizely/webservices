@@ -1,5 +1,5 @@
 class MarketResearch
-  extend Indexable
+  include Indexable
 
   self.settings = {
     index: {

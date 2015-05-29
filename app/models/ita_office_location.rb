@@ -1,5 +1,5 @@
 class ItaOfficeLocation
-  extend Indexable
+  include Indexable
 
   SYNONYMS = ['ft, fort', 'st, saint']
   STOPWORDS = %w(US Export Assistance Center USEAC Commercial Service Mission)

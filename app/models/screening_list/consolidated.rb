@@ -1,7 +1,6 @@
 module ScreeningList
   class Consolidated
-    extend ::Consolidated
-    self.query_class   = ScreeningList::Query
+    include Searchable
     self.model_classes = [ScreeningList::Dpl,
                           ScreeningList::Dtc,
                           ScreeningList::El,
@@ -13,5 +12,36 @@ module ScreeningList
                           ScreeningList::Sdn,
                           ScreeningList::Ssi,
                           ScreeningList::Uvl]
+
+    include SeparatedValuesable
+    self.separated_values_config = [
+      { source: [:code] },
+      :entity_number,
+      :type,
+      :programs,
+      :name,
+      :title,
+      { addresses: [:address, :city, :state, :postal_code, :country] },
+      :federal_register_notice,
+      :start_date,
+      :end_date,
+      :standard_order,
+      :license_requirement,
+      :license_policy,
+      :call_sign,
+      :vessel_type,
+      :gross_tonnage,
+      :gross_registered_tonnage,
+      :vessel_flag,
+      :vessel_owner,
+      :remarks,
+      :source_list_url,
+      :alt_names,
+      :citizenships,
+      :dates_of_birth,
+      :nationalities,
+      :places_of_birth,
+      :source_information_url,
+    ]
   end
 end

@@ -1,5 +1,5 @@
 class TradeArticle
-  extend Indexable
+  include Indexable
 
   self.settings = {}
   self.mappings = {

@@ -3,7 +3,7 @@ require 'spec_helper'
 shared_context 'a working Mock model class' do
   before do
     class Mock
-      extend Indexable
+      include Indexable
       self.mappings = {
         name.typeize => {
           _timestamp: {
@@ -55,7 +55,7 @@ describe Indexable do
     context 'with a model that does not have a _timestamp mapping' do
       before do
         class Mock
-          extend Indexable
+          include Indexable
           self.mappings = { name.typeize => {} }
         end
       end

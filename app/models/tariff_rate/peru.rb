@@ -1,6 +1,6 @@
 module TariffRate
   class Peru
-    extend ::Indexable
+    include Indexable
     include TariffRate::Mappable
     self.source = {
       code: 'PE',

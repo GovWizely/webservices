@@ -1,6 +1,6 @@
 module TariffRate
   class DominicanRepublic
-    extend ::Indexable
+    include Indexable
     include TariffRate::Mappable
     self.source = {
       code: 'DO',

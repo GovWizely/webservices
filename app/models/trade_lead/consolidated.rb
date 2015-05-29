@@ -1,7 +1,6 @@
 module TradeLead
   class Consolidated
-    extend ::Consolidated
-    self.query_class   = TradeLead::Query
+    include Searchable
     self.model_classes = [TradeLead::Australia,
                           TradeLead::Canada,
                           TradeLead::Fbopen,
