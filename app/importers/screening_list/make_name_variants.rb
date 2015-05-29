@@ -16,7 +16,7 @@ module ScreeningList
       stopwords    = %w(and the los)
       common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
 
-      doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, ' ').squeeze(' ')
+      doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, '')
       doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
       unless (doc[:name_idx].downcase.split & common_words).empty?
@@ -33,7 +33,7 @@ module ScreeningList
 
       if doc[:alt_names].present?
 
-        doc[:alt_names_idx]      = doc[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '').squeeze(' ') }
+        doc[:alt_names_idx]      = doc[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '') }
         doc[:alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
 
         unless (doc[:alt_names_idx].map(&:downcase).join(' ').split & common_words).empty?

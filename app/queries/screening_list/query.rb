@@ -53,7 +53,7 @@ module ScreeningList
     end
 
     def generate_fuzzy_name_query(json)
-      @name = @name.gsub(/[[:punct:]]/, ' ').squeeze(' ')
+      @name = @name.gsub(/[[:punct:]]/, '').squeeze(' ')
 
       common_words = %w( co company corp corporation inc incorporated
                          limited ltd mr mrs ms organization sa sas llc )
