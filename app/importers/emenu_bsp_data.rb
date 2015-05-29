@@ -87,6 +87,7 @@ class EmenuBspData
     article[:contact_name] = article_hash['company']['contact']['name']
     category = article_hash['company']['category']['title']
     article[:category] = CATEGORIES.include?(category) ? category : nil
-    article
+    article[:id] = Utils.generate_id(article, %i(company_name company_description))
+    sanitize_entry(article)
   end
 end

@@ -1,6 +1,6 @@
 class EmenuBspQuery < Query
   setup_query(
-    q:      %i(company_description company_name),
+    q:      %i(company_description company_name contact_name),
     query:  %i(),
     filter: %i(ita_office category),
     sort:   %i(),
