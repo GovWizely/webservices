@@ -20,14 +20,12 @@ module Importer
     def import
       Rails.logger.info "#{self.class.name}: import starting."
 
-      start_time = Time.now if can_purge_old?
-
       if resource_changed?
+        start_time = Time.now if can_purge_old?
         super
         update_metadata available_version
+        model_class.purge_old(start_time) if can_purge_old?
       end
-
-      model_class.purge_old(start_time) if can_purge_old?
 
       Rails.logger.info "#{self.class.name}: import finished."
     end
