@@ -271,4 +271,11 @@ describe 'Consolidated Screening List API V1', type: :request do
       end
     end
   end
+  describe 'GET /consolidated_screening_list/search.csv' do
+    before { get '/consolidated_screening_list/search.csv' }
+    it 'is a CSV' do
+      expect(response.status).to eq(200)
+      expect(response.content_type.symbol).to eq(:csv)
+    end
+  end
 end

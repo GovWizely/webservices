@@ -55,6 +55,10 @@ class ApiController < ActionController::Base
     send_data(
       search_class.send("as_#{format}", search),
       type:        "Mime::#{format.upcase}".constantize,
-      disposition: "attachment; filename=search.#{format}")
+      disposition: "attachment; filename=#{sv_filename}.#{format}")
+  end
+
+  def sv_filename
+    'search'
   end
 end
