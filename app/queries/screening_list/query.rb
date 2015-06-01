@@ -76,12 +76,12 @@ module ScreeningList
                           trim_name_with_common trim_rev_name_with_common trim_alt_with_common trim_rev_alt_with_common )
 
       # if there is a common word
-      if !(@name.downcase.split & common_words).empty?
-        single_token = names_wc_kw + trim_names
-        all_fields   = single_token + names_wc
-      else
+      if (@name.downcase.split & common_words).empty?
         single_token = names_kw + trim_names
         all_fields   = single_token + names
+      else
+        single_token = names_wc_kw + trim_names
+        all_fields   = single_token + names_wc
       end
 
       score_hash = {
