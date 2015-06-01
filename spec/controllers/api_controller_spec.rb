@@ -18,7 +18,6 @@ describe ApiController, type: :controller do
         get '/foo' => 'inherits_from_api#foo'
         get '/not_found' => 'inherits_from_api#not_found'
         get '/new_query' => 'inherits_from_api#new_query'
-        get '/search' => 'inherits_from_api#search'
       end
     end
     after  { Rails.application.reload_routes! }
@@ -48,6 +47,11 @@ describe ApiController, type: :controller do
         it { expect(response.status).to eq(400) }
         it { expect(response.body).to include('Offset must be greater than or equal to 0') }
       end
+    end
+
+    describe '#sv_header' do
+      subject { @controller.send(:sv_filename) }
+      it { is_expected.to eq('search') }
     end
   end
 end
