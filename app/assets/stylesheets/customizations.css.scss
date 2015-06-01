@@ -97,9 +97,12 @@
   #body-content {
     .form-wrapper {
       form {
+        &#new_registration {
+          width: 100%;
+        }
         .field {
           input {
-            width: 6rem;
+            width: 8rem;
           }
         }
       }
