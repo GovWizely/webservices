@@ -8,7 +8,8 @@
                         "query": "hospitality alfa",
                         "fields": [
                             "company_description",
-                            "company_name"
+                            "company_name",
+                            "contact_name"
                         ]
                     }
                 }

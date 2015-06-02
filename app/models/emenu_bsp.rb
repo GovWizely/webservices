@@ -33,7 +33,7 @@ class EmenuBsp
         company_email:       { type: 'string', index: 'not_analyzed' },
         ita_office:          { type: 'string', analyzer: 'title_keyword_analyzer' },
         contact_title:       { type: 'string', index: 'not_analyzed' },
-        contact_name:        { type: 'string', index: 'not_analyzed' },
+        contact_name:        { type: 'string', analyzer: 'title_keyword_analyzer' },
         category:            { type: 'string', analyzer: 'title_keyword_analyzer' },
       },
     },
