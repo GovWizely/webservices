@@ -76,7 +76,6 @@ module ScreeningList
       @name = @name.gsub(/[[:punct:]]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
-      # if there is a common word
       if (@name.downcase.split & common_words).empty?
         single_token = names_kw + trim_names
         all_fields   = single_token + names

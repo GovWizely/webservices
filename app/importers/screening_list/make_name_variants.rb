@@ -19,6 +19,7 @@ module ScreeningList
       doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, '')
       doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
+      # if there is a common word, make entries to index
       unless (doc[:name_idx].downcase.split & common_words).empty?
         doc[:name_with_common]          = doc[:name_idx]
         doc[:rev_name_with_common]      = doc[:name_with_common].split.reverse.join(' ')
@@ -36,12 +37,13 @@ module ScreeningList
         doc[:alt_names_idx]      = doc[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '') }
         doc[:alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
 
+        # if there is a common word, make entries to index
         unless (doc[:alt_names_idx].map(&:downcase).join(' ').split & common_words).empty?
           doc[:alt_names_with_common]    = doc[:alt_names_idx]
           doc[:rev_alt_with_common]      = doc[:alt_names_with_common]
           doc[:trim_alt_with_common]     = doc[:alt_names_with_common].map { |name| name.gsub(/\s+/, '') }
           doc[:trim_rev_alt_with_common] = doc[:rev_alt_with_common].map { |name| name.gsub(/\s+/, '') }
-          doc[:alt_names]                = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
+          doc[:alt_names_idx]            = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
         end
 
         doc[:rev_alt_names]      = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
