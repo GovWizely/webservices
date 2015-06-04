@@ -17,7 +17,7 @@
   :name: FERLAND COMPANY LIMITED
   :type: Entity
   :alt_names:
-  - FERLAND
+  - FERLAND CO. LTD
   :programs:
   - FSE-IR
   - ISA
@@ -51,14 +51,14 @@
   :rev_name: FERLAND
   :trim_name: FERLAND
   :trim_rev_name: FERLAND
-  :alt_names_idx: [FERLAND CO LTD]
+  :alt_names_idx: [FERLAND]
   :alt_names_with_common: [FERLAND CO LTD]
   :rev_alt_with_common: [FERLAND CO LTD]
   :trim_alt_with_common: [FERLANDCOLTD]
   :trim_rev_alt_with_common: [FERLANDCOLTD]
-  :rev_alt_names: [LTD CO FERLAND]
-  :trim_alt_names: [FERLANDCOLTD]
-  :trim_rev_alt_names: [LTDCOFERLAND]
+  :rev_alt_names: [FERLAND]
+  :trim_alt_names: [FERLAND]
+  :trim_rev_alt_names: [FERLAND]
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 
