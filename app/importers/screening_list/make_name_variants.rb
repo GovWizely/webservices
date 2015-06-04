@@ -13,8 +13,8 @@ module ScreeningList
     #
 
     def make_names(doc)
-      stopwords    = %w(and the los)
-      common_words = %w(co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc)
+      stopwords    = %w( and the los )
+      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
 
       doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, '')
       doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')

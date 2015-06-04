@@ -53,11 +53,9 @@ module ScreeningList
     end
 
     def generate_fuzzy_name_query(json)
-      @name = @name.gsub(/[[:punct:]]/, '').squeeze(' ')
+      stopwords    = %w( and the los )
+      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
 
-      common_words = %w( co company corp corporation inc incorporated
-                         limited ltd mr mrs ms organization sa sas llc )
-      
       # name variants
       names         = %w( name_idx rev_name alt_names_idx rev_alt_names )
       names_kw      = %w( name_idx.keyword alt_names_idx.keyword rev_name.keyword
@@ -74,6 +72,9 @@ module ScreeningList
 
       trim_names    = %w( trim_name trim_rev_name trim_alt_names trim_rev_alt_names
                           trim_name_with_common trim_rev_name_with_common trim_alt_with_common trim_rev_alt_with_common )
+
+      @name = @name.gsub(/[[:punct:]]/, '')
+      @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
       # if there is a common word
       if (@name.downcase.split & common_words).empty?
