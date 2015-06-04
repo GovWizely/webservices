@@ -64,7 +64,7 @@ module ScreeningList
 
       doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 
-      doc[:start_date]      &&= parse_american_date(doc[:start_date])
+      doc[:start_date] &&= parse_american_date(doc[:start_date])
       doc[:source]          = model_class.source
       doc[:source_list_url] =
         doc[:source_information_url] =
