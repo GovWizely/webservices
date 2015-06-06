@@ -2,6 +2,7 @@ require 'open-uri'
 
 class BusinessServiceProviderData
   include Importer
+  include VersionableResource
   ENDPOINT = 'http://emenuapps.ita.doc.gov/ePublic/bsp/alljson/en/bsp.xml'
 
   COLUMN_HASH = {
@@ -14,12 +15,8 @@ class BusinessServiceProviderData
     'email'       => :company_email,
   }.freeze
 
-  def initialize(resource = ENDPOINT)
-    @resource = resource
-  end
-
   def import
-    doc = JSON.parse(open(@resource, 'r:UTF-8').read)
+    doc = JSON.parse(loaded_resource)
     articles = doc['bsps']['bsp'].map { |article_hash| process_article_info article_hash }
     model_class.index(articles)
   end
