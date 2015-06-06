@@ -12,7 +12,7 @@ class MrlParser
 
   def self.foreach(resource, &block)
     parser = nil
-    open(resource, 'r:windows-1252:utf-8').each(ROW_SEPARATOR) do |mrl_row|
+    resource.split(ROW_SEPARATOR).each do |mrl_row|
       stripped_row = mrl_row.strip
       next if stripped_row.blank?
 

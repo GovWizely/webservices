@@ -3,6 +3,9 @@ require 'open-uri'
 
 class MarketResearchData
   include Importer
+  include VersionableResource
+
+  ENDPOINT = 'http://mr.export.gov/nextgen/ng.txt'
 
   COLUMN_HASH = {
     id:       :id,
@@ -20,13 +23,13 @@ class MarketResearchData
     'ccg1'  => 'Country Commercial Guide',
   }
 
-  def initialize(resource = 'http://mr.export.gov/nextgen/ng.txt')
-    @resource = resource
+  def loaded_resource
+    @loaded_resource ||= open(@resource, 'r:windows-1252:utf-8').read
   end
 
   def import
     entries = []
-    MrlParser.foreach(@resource) do |source_hash|
+    MrlParser.foreach(loaded_resource) do |source_hash|
       entries << process_source_hash(source_hash)
     end
     MarketResearch.index entries

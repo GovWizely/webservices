@@ -5,6 +5,7 @@ describe MarketResearchData do
   let(:importer) { MarketResearchData.new(resource) }
 
   it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/market_research/expected_indexed_data.yaml") }
