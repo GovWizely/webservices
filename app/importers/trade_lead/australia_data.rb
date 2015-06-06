@@ -4,6 +4,7 @@ require 'open-uri'
 module TradeLead
   class AustraliaData
     include Importer
+    include VersionableResource
 
     # Original source: http://data.gov.au/dataset/austender-contract-notice-export
     ENDPOINT = "#{Rails.root}/data/australian_trade_leads/trade_leads_full.csv"
@@ -20,12 +21,12 @@ module TradeLead
       status:             :status,
     }
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
+    def loaded_resource
+      @loaded_resource ||= open(@resource, 'r:windows-1252:utf-8').read
     end
 
     def import
-      rows = CSV.read(@resource, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
+      rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
       entries = rows.map { |row| process_row row.to_h }.compact
       TradeLead::Australia.index(entries)
     end
