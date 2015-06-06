@@ -3,6 +3,7 @@ require 'uri'
 
 module ScreeningList
   module TreasuryListImporter
+    include ::VersionableResource
     def self.included(base)
       base.class_eval do
         class << self
@@ -17,7 +18,7 @@ module ScreeningList
     end
 
     def import
-      source = Nokogiri::XML(open(@resource))
+      source = Nokogiri::XML(loaded_resource)
 
       docs = source.xpath(document_node_xpath).map do |node|
         process_node(node) if should_process?(node)

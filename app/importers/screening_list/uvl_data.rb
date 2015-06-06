@@ -5,6 +5,7 @@ require 'digest/md5'
 module ScreeningList
   class UvlData
     include ::Importer
+    include ::VersionableResource
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(address country name)
@@ -16,12 +17,8 @@ module ScreeningList
 
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
-      rows = CSV.parse(open(@resource).read, encoding: 'UTF-8').map do |row|
+      rows = CSV.parse(loaded_resource, encoding: 'UTF-8').map do |row|
         { country: row[0],
           name:    row[1],
           address: row[2] }

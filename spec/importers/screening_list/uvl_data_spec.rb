@@ -7,6 +7,7 @@ describe ScreeningList::UvlData do
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/uvl/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     it 'loads unverified parties from specified resource' do

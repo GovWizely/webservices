@@ -7,6 +7,7 @@ describe ScreeningList::ElData do
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/el/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     it 'loads BIS entities from specified resource' do
