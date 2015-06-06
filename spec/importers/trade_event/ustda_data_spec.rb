@@ -5,6 +5,7 @@ describe TradeEvent::UstdaData do
   let(:importer)     { TradeEvent::UstdaData.new(resource) }
 
   it_behaves_like 'an importer which can purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     it 'loads events from specified resource' do

@@ -8,6 +8,7 @@ describe TradeEvent::EximData do
   end
 
   it_behaves_like 'an importer which can purge old documents'
+  it_behaves_like 'an importer which versions resources'
 
   describe '#import' do
     let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/exim/results.yaml") }

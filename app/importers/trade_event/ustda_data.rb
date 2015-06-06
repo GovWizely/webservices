@@ -4,6 +4,7 @@ require 'csv'
 module TradeEvent
   class UstdaData
     include ::Importer
+    include ::VersionableResource
 
     ENDPOINT = 'http://www.ustda.gov/events/USTDATradeEvents.csv'
 
@@ -38,17 +39,12 @@ module TradeEvent
       source:             '',
     }.freeze
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
       Ustda.index(events)
     end
 
     def events
-      fh = open(@resource, 'r:UTF-8')
-      content = fh.read.encode('UTF-16le', invalid: :replace, replace: '', universal_newline: true).encode('UTF-8')
+      content = loaded_resource.encode('UTF-16le', invalid: :replace, replace: '', universal_newline: true).encode('UTF-8')
       doc = CSV.parse(content, headers: true, header_converters: :symbol, encoding: 'UTF-8', skip_lines: /^"Last updated/)
       doc.map { |entry| process_entry entry.to_h }.compact
     end

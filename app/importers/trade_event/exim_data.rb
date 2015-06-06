@@ -3,6 +3,7 @@ require 'open-uri'
 module TradeEvent
   class EximData
     include ::Importer
+    include ::VersionableResource
 
     attr_accessor :reject_if_ends_before
 
@@ -30,7 +31,7 @@ module TradeEvent
     end
 
     def import
-      doc = Nokogiri::XML(resource_fh)
+      doc = Nokogiri::XML(loaded_resource)
       trade_events = doc.xpath('//item').map do |event_info|
         trade_event = process_event_info(event_info)
         trade_event
@@ -40,11 +41,12 @@ module TradeEvent
 
     private
 
-    def resource_fh
+    def loaded_resource
+      return @loaded_resource if @loaded_resource
       args = URI.parse(@resource).scheme =~ /ftp|http/ ?
         { 'User-Agent' => USER_AGENT } :
         'r:UTF-8'
-      open(@resource, args)
+      @loaded_resource = open(@resource, args).read
     end
 
     def process_event_info(event_info)
