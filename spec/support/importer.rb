@@ -10,6 +10,6 @@ end
 
 shared_examples 'an importer which versions resources' do
   it 'has a non-abstract #available_version method' do
-    expect( described_class.new.method(:available_version).owner ).to_not be(Importer)
+    expect(described_class.new.method(:available_version).owner).to_not be(Importer)
   end
 end
