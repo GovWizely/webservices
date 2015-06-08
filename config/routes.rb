@@ -49,6 +49,7 @@ Webservices::Application.routes.draw do
 
   concern :api_v2_routable do
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
+    get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
   end
 
   concern :api_routable do
@@ -57,7 +58,6 @@ Webservices::Application.routes.draw do
              'ita_office_locations'      => 'ita_office_locations',
              'country_commercial_guides' => 'country_commercial_guides',
              'emenu_bsp'                 => 'emenu_bsps',
-             'ita_zip_codes'             => 'ita_zipcode_to_post',
      }
 
     path.each do |controller, path|
@@ -84,6 +84,10 @@ Webservices::Application.routes.draw do
   scope 'v2', module: 'api/v2', defaults: { format: :json } do
     concerns :api_routable
     concerns :api_v2_routable
+  end
+
+  scope module: 'api/v2', defaults: { format: :json } do
+    get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
   end
 
   scope 'v1', module: 'api/v1', defaults: { format: :json } do
