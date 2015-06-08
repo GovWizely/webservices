@@ -5,7 +5,7 @@ class ItaZipCodeData
   POST_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type=odo'
   ZIP_CODE_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?ZipCode=all'
 
-  SINGLE_VALUED_XPATHS = {
+  POST_SINGLE_VALUED_XPATHS = {
     post:              './POST',
     office_name:       './OFFICENAME',
     country:           './COUNTRYID',
@@ -16,7 +16,7 @@ class ItaZipCodeData
     phone:             './PHONE',
   }.freeze
 
-  MULTI_VALUED_XPATHS = {
+  POST_MULTI_VALUED_XPATHS = {
     address: './ADDRESS',
   }
 
@@ -62,8 +62,8 @@ class ItaZipCodeData
   end
 
   def process_location_info(location_info)
-    event_hash = extract_fields(location_info, SINGLE_VALUED_XPATHS)
-    event_hash.reverse_merge! extract_multi_valued_fields(location_info, MULTI_VALUED_XPATHS)
+    event_hash = extract_fields(location_info, POST_SINGLE_VALUED_XPATHS)
+    event_hash.reverse_merge! extract_multi_valued_fields(location_info, POST_MULTI_VALUED_XPATHS)
     event_hash[:country] = lookup_country_by_id(event_hash[:country])
     assign_city(event_hash)
     event_hash[:state] = event_hash[:state].present? ? lookup_state(event_hash[:state]) : nil
@@ -75,9 +75,6 @@ class ItaZipCodeData
   end
 
   def assign_city(event_hash)
-    city = event_hash[:address].grep(/[A-Z]{2} [0-9]{5}(-\d{4})*$/) do |address_line|
-      address_line.split(',').reverse[1].to_s.squish
-    end.compact.first
-    event_hash[:post_city] = city
+    event_hash[:post_city] = parse_city_from_address(event_hash)
   end
 end
