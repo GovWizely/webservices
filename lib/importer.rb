@@ -25,9 +25,10 @@ module Importer
         super
         update_metadata available_version
         model_class.purge_old(start_time) if can_purge_old?
+        Rails.logger.info "#{self.class.name}: import finished (resource updated, new data indexed)."
+      else
+        Rails.logger.info "#{self.class.name}: import finished (resource unchanged, no new data indexed)."
       end
-
-      Rails.logger.info "#{self.class.name}: import finished."
     end
   end
 
