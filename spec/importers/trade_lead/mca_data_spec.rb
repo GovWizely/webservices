@@ -6,22 +6,15 @@ describe TradeLead::McaData do
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 
-  describe '#import' do
-    it 'loads MCA trade leads from specified resource' do
-      expect(TradeLead::Mca).to receive(:index) do |trade_leads|
-        expect(trade_leads.size).to eq(3)
-        expect(trade_leads[0]).to eq(expected[0])
-        expect(trade_leads[1]).to eq(expected[1])
-        expect(trade_leads[2]).to eq(expected[2])
-      end
-      importer.import
-    end
+  it_behaves_like 'an importer which indexes the correct documents'
 
+  describe '#import' do
     it 'loads when date format is not correct' do
       allow(Date).to receive(:parse).and_raise(ArgumentError)
       expect(TradeLead::Mca).to receive(:index) do |trade_leads|
         expect(trade_leads.size).to eq(3)
       end
+      importer.model_class.recreate_index
       importer.import
     end
 
@@ -31,6 +24,7 @@ describe TradeLead::McaData do
       expect(TradeLead::Mca).to receive(:index) do |trade_leads|
         expect(trade_leads.size).to eq(3)
       end
+      importer.model_class.recreate_index
       importer.import
     end
   end

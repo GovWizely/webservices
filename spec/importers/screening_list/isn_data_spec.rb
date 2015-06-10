@@ -8,13 +8,5 @@ describe ScreeningList::IsnData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
-
-  describe '#import' do
-    it 'loads ISN entries from specified resource' do
-      expect(ScreeningList::Isn).to receive(:index) do |isn|
-        expect(isn).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

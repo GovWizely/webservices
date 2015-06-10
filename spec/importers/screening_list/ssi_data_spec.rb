@@ -8,13 +8,5 @@ describe ScreeningList::SsiData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
-
-  describe '#import' do
-    it 'loads SSI from specified resource' do
-      expect(ScreeningList::Ssi).to receive(:index) do |ssi|
-        expect(ssi).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

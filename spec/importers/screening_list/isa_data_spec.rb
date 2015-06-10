@@ -8,13 +8,5 @@ describe ScreeningList::IsaData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
-
-  describe '#import' do
-    it 'loads ISA from specified resource' do
-      expect(ScreeningList::Isa).to receive(:index) do |isa|
-        expect(isa).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

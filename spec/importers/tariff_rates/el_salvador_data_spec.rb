@@ -9,12 +9,5 @@ describe TariffRate::ElSalvadorData do
   let(:importer) { described_class.new(fixtures_file, s3) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/el_salvador/results.yaml") }
 
-  describe '#import' do
-    it 'loads EL_SALVADOR tariff rates from specified resource' do
-      expect(TariffRate::ElSalvador).to receive(:index) do |res|
-        expect(res).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

@@ -8,15 +8,8 @@ describe ScreeningList::DplData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
+  it_behaves_like 'an importer which indexes the correct documents'
 
-  describe '#import' do
-    it 'loads denied persons from specified resource' do
-      expect(ScreeningList::Dpl).to receive(:index) do |dpl|
-        expect(dpl).to eq(expected)
-      end
-      importer.import
-    end
-  end
   describe '#process_grouped_rows' do
     it 'returns null when entry is empty' do
       r = importer.send(:process_grouped_rows,

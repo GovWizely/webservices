@@ -8,13 +8,5 @@ describe ScreeningList::Part561Data do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
-
-  describe '#import' do
-    it 'loads Part561 from specified resource' do
-      expect(ScreeningList::Part561).to receive(:index) do |part561|
-        expect(part561).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

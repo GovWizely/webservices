@@ -8,13 +8,5 @@ describe ScreeningList::UvlData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which versions resources'
-
-  describe '#import' do
-    it 'loads unverified parties from specified resource' do
-      expect(ScreeningList::Uvl).to receive(:index) do |uvl|
-        expect(uvl).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

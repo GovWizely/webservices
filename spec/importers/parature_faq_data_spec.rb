@@ -6,20 +6,12 @@ describe ParatureFaqData do
   let(:resource) { "#{fixtures_dir}/articles/article%d.xml" }
   let(:folders_resource) { "#{fixtures_dir}/folders.xml" }
   let(:importer) { ParatureFaqData.new(resource, folders_resource) }
+  let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faq/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
+  it_behaves_like 'an importer which indexes the correct documents'
 
   describe '#import' do
-    let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/parature_faq/results.yaml") }
-
-    it 'loads parature faqs from specified resource' do
-      expect(ParatureFaq).to receive(:index) do |entries|
-        expect(entries.size).to eq(29)
-        expect(entries).to match_array entry_hash
-      end
-      importer.import
-    end
-
     context 'when an unexpected error is encountered' do
       before do
         allow(importer).to receive(:extract_hash_from_resource) do
