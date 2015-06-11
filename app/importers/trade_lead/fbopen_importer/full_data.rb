@@ -62,7 +62,7 @@ module TradeLead
         return nil if !(entry[:specific_location].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:specific_location] == 'US'
 
         entry = process_xml_dates(entry)
-        return nil if entry[:end_date] < Date.today unless entry[:end_date].nil?
+        return nil unless entry[:end_date] >= Date.today || entry[:end_date].nil?
 
         entry[:description] &&= Nokogiri::HTML.fragment(entry[:description]).inner_text.squish
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
