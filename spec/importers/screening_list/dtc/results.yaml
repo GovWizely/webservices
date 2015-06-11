@@ -6,32 +6,60 @@
   :source: &1
     :full_name: ITAR Debarred (DTC) - State Department
     :code: DTC
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
-  :id: 1857dfc050bc7adea46922f09996649de18495d7
+  :name_idx: 'Juwhan Yun'
+  :rev_name: 'Yun Juwhan'
+  :trim_name: 'JuwhanYun'
+  :trim_rev_name: 'YunJuwhan'
+  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :id: '1857dfc050bc7adea46922f09996649de18495d7'
 - :name: Dilligas Trading Co., Inc.
   :alt_names: []
   :start_date: '1991-12-13'
   :federal_register_notice: 57 FR 37184
   :source: *1
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
-  :id: afd9dbfe97d679d161eaed68203399296abf631c
+  :name_idx: Dilligas Trading
+  :name_with_common: Dilligas Trading Co Inc
+  :rev_name_with_common: Inc Co Trading Dilligas
+  :trim_name_with_common: DilligasTradingCoInc
+  :trim_rev_name_with_common: IncCoTradingDilligas
+  :rev_name: Trading Dilligas
+  :trim_name: DilligasTrading
+  :trim_rev_name: TradingDilligas  
+  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :id: 'afd9dbfe97d679d161eaed68203399296abf631c'
 - :name: Brian Joseph Fleming
   :alt_names:
   - Brian Joseph McSulla
   :start_date: '1990-07-03'
   :federal_register_notice: 58 FR 6835
   :source: *1
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
-  :id: ba449382749d0c16fd862d7b3da698fb65b5d7aa
+  :name_idx: 'Brian Joseph Fleming'
+  :rev_name: 'Fleming Joseph Brian'
+  :trim_name: 'BrianJosephFleming'
+  :trim_rev_name: 'FlemingJosephBrian'
+  :alt_names_idx: ['Brian Joseph McSulla']
+  :rev_alt_names: ['McSulla Joseph Brian']
+  :trim_alt_names: ['BrianJosephMcSulla']
+  :trim_rev_alt_names: ['McSullaJosephBrian']
+  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :id: 'ba449382749d0c16fd862d7b3da698fb65b5d7aa'
 - :name: John Smith
   :alt_names:
   - Brian Smith
   :start_date: '1990-12-01'
   :federal_register_notice: 57 FR 40000
   :source: *1
-  :source_list_url: http://www.pmddtc.state.gov/compliance/debar_admin.html
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
-  :id: 5989fe6f23c0b7b07aade5e4782acbbceb57be71
+  :name_idx: 'John Smith'
+  :rev_name: 'Smith John'
+  :trim_name: 'JohnSmith'
+  :trim_rev_name: 'SmithJohn'
+  :alt_names_idx: ['Brian Smith']
+  :rev_alt_names: ['Smith Brian']
+  :trim_alt_names: ['BrianSmith']
+  :trim_rev_alt_names: ['SmithBrian']
+  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar_admin.html'
+  :id: '5989fe6f23c0b7b07aade5e4782acbbceb57be71'

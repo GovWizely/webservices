@@ -14,6 +14,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name effective_date federal_register_notice)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = "#{Rails.root}/data/screening_lists/isn/isn.csv"
 
     COLUMN_HASH = {
@@ -46,9 +48,9 @@ module ScreeningList
     def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
 
-      doc[:id] = id
-      doc[:source] = model_class.source
-      doc[:source_list_url] = 'http://www.state.gov/t/isn/c15231.htm'
+      doc[:id]                     = id
+      doc[:source]                 = model_class.source
+      doc[:source_list_url]        = 'http://www.state.gov/t/isn/c15231.htm'
       doc[:source_information_url] = 'http://www.state.gov/t/isn/c15231.htm'
 
       %i(start_date end_date).each do |field|
@@ -56,6 +58,8 @@ module ScreeningList
       end
 
       doc[:programs] = rows.map { |row| row[:programs] }
+
+      make_names(doc)
 
       doc
     end

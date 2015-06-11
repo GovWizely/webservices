@@ -2,7 +2,7 @@
 - :name: 7th of Tir
   :federal_register_notice: Vol. 74, No. 8, 01/13/09
   :start_date: '2008-07-08'
-  :end_date: 
+  :end_date:
   :id: 4b83e057686c5ebce3c50f5f48fb72405755f954
   :source: &1
     :full_name: Nonproliferation Sanctions (ISN) - State Department
@@ -11,20 +11,32 @@
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :name_idx: 7th of Tir
+  :rev_name: Tir of 7th
+  :trim_name: 7thofTir
+  :trim_rev_name: Tirof7th
 - :name: Aerospace Industries Organization (AIO)
   :federal_register_notice: Vol. 70, No. 126, 07/01/05
   :start_date: '2005-06-28'
-  :end_date: 
+  :end_date:
   :id: 96d5a86319756c3a7ce3819d208e636bd59b897e
   :source: *1
   :source_list_url: http://www.state.gov/t/isn/c15231.htm
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :name_idx: Aerospace Industries AIO
+  :name_with_common: Aerospace Industries Organization AIO
+  :rev_name_with_common: AIO Organization Industries Aerospace
+  :trim_name_with_common: AerospaceIndustriesOrganizationAIO
+  :trim_rev_name_with_common: AIOOrganizationIndustriesAerospace
+  :rev_name: AIO Industries Aerospace
+  :trim_name: AerospaceIndustriesAIO
+  :trim_rev_name: AIOIndustriesAerospace
 - :name: Aerospace Logistics Services
   :federal_register_notice: Vol. 72, No. 77, 4/23/07
   :start_date: '2007-04-17'
-  :end_date: 
+  :end_date:
   :id: c145f79067e3d8ad06d859d9042f87963d373925
   :source: *1
   :source_list_url: http://www.state.gov/t/isn/c15231.htm
@@ -32,23 +44,35 @@
   :programs:
   - INKSNA
   - ISNA
+  :name_idx: Aerospace Logistics Services
+  :rev_name: Services Logistics Aerospace
+  :trim_name: AerospaceLogisticsServices
+  :trim_rev_name: ServicesLogisticsAerospace
 - :name: Ahmad Derakhshandeh
   :federal_register_notice: Vol. 72, No. 34, 02/21/07
   :start_date: '2007-01-09'
-  :end_date: 
+  :end_date:
   :id: 3959a59f96c0716f6053f9bc9914c0fda915a8e1
   :source: *1
   :source_list_url: http://www.state.gov/t/isn/c15231.htm
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :name_idx: Ahmad Derakhshandeh
+  :rev_name: Derakhshandeh Ahmad
+  :trim_name: AhmadDerakhshandeh
+  :trim_rev_name: DerakhshandehAhmad  
 - :name: Ahmad Vahid Dastjerdi
   :federal_register_notice: Vol. 72, No. 213, 11/05/07
   :start_date: '2007-10-25'
-  :end_date: 
+  :end_date:
   :id: 93f693f4195d02dc7e8f5cc861ca51512287f2fe
   :source: *1
   :source_list_url: http://www.state.gov/t/isn/c15231.htm
   :source_information_url: http://www.state.gov/t/isn/c15231.htm
   :programs:
   - E.O. 13328 - Iran
+  :name_idx: Ahmad Vahid Dastjerdi
+  :rev_name: Dastjerdi Vahid Ahmad
+  :trim_name: AhmadVahidDastjerdi
+  :trim_rev_name: DastjerdiVahidAhmad

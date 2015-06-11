@@ -7,16 +7,25 @@
   :federal_register_notice: 
   :id: 33002aa2bdc2b177712d2bfd6fa5f7f700e88d23
   :source: &1
-    :full_name: Denied Persons List (DPL) - Bureau of Industry and Security
-    :code: DPL
+   :full_name: Denied Persons List (DPL) - Bureau of Industry and Security
+   :code: DPL
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: SEMICONDUCTOR SYSTEMS INTL INC SSI
+  :name_idx: SEMICONDUCTOR SYSTEMS INTL SSI
+  :name_with_common: SEMICONDUCTOR SYSTEMS INTL INC SSI
+  :rev_name_with_common: SSI INC INTL SYSTEMS SEMICONDUCTOR
+  :trim_name_with_common: SEMICONDUCTORSYSTEMSINTLINCSSI
+  :trim_rev_name_with_common: SSIINCINTLSYSTEMSSEMICONDUCTOR
+  :rev_name: SSI INTL SYSTEMS SEMICONDUCTOR
+  :trim_name: SEMICONDUCTORSYSTEMSINTLSSI
+  :trim_rev_name: SSIINTLSYSTEMSSEMICONDUCTOR  
   :addresses:
   - :address: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
     :city: COPENHAGEN
-    :state: 
+    :state:
     :country: DK
-    :postal_code: 
+    :postal_code:
 - :name: KAL TEK LABS
   :start_date: '1988-08-26'
   :end_date: '2008-08-26'
@@ -24,32 +33,39 @@
   :remarks: NAME CORRECTED
   :federal_register_notice: 65 FR 42664 7/11/00
   :id: ee3245b2ce0d4a6357182bd75ee64fad40e07295
-  :id: ee3245b2ce0d4a6357182bd75ee64fad40e07295
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: KAL TEK LABS
+  :rev_name: LABS TEK KAL
+  :trim_name: KALTEKLABS
+  :trim_rev_name: LABSTEKKAL
   :addresses:
   - :address: '250 BONITA GLEN DRIVE, #3D'
     :city: CHULA VISTA
     :state: CA
     :country: US
-    :postal_code: 
+    :postal_code:
 - :name: KATSUTA KEISUKE
   :start_date: '1993-08-02'
   :end_date: '2003-03-03'
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 58 F.R. 42719 8/11/93
   :id: 2b84aaafe727f7dba5fa3b8606579e2435cc6103
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: KATSUTA KEISUKE
+  :rev_name: KEISUKE KATSUTA
+  :trim_name: KATSUTAKEISUKE
+  :trim_rev_name: KEISUKEKATSUTA
   :addresses:
   - :address: 1-25-4 MINAMI-AZABU, MINATOKU
     :city: TOKYO
-    :state: 
+    :state:
     :country: JP
-    :postal_code: 
+    :postal_code:
 - :name: KINTRACO
   :start_date: '1987-03-19'
   :end_date: '2007-03-19'
@@ -60,22 +76,30 @@
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: KINTRACO
+  :rev_name: KINTRACO
+  :trim_name: KINTRACO
+  :trim_rev_name: KINTRACO
   :addresses:
   - :address: BERENKOOG 29
     :city: ALKMAAR
-    :state: 
+    :state:
     :country: NL
     :postal_code: 1822 BH
 - :name: ABELAIRAS, AMANCIO J.
   :start_date: '1995-06-05'
   :end_date: '2005-06-05'
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 60 F.R. 31140
   :id: dc622b95685f84dffd6e911648836a6801d53ae5
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: ABELAIRAS AMANCIO J
+  :rev_name: J AMANCIO ABELAIRAS
+  :trim_name: ABELAIRASAMANCIOJ
+  :trim_rev_name: JAMANCIOABELAIRAS
   :addresses:
   - :address: 6486 S.W. 9 STREET
     :city: MIAMI
@@ -86,12 +110,16 @@
   :start_date: '1998-08-03'
   :end_date: '2007-08-29'
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 63 F.R. 43370 8/13/98
   :id: 432b23c1cc23bde1d0f4ccbdbb4d130232eda3f5
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: ABRISHAMI ELHAM
+  :rev_name: ELHAM ABRISHAMI
+  :trim_name: ABRISHAMIELHAM
+  :trim_rev_name: ELHAMABRISHAMI
   :addresses:
   - :address: 271 MONSARRAT DRIVE
     :city: DUBLIN
@@ -102,47 +130,59 @@
   :start_date: '1997-08-08'
   :end_date: '2017-08-08'
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 62 F.R. 43503 8/14/97
   :id: b8c54f53ba315aeadddeebe22f0d1ff7b7c245a7
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: ACE IAN
+  :rev_name: IAN ACE
+  :trim_name: ACEIAN
+  :trim_rev_name: IANACE
   :addresses:
   - :address: 4 MIMOSA WAY
     :city: PINELANDS
-    :state: 
+    :state:
     :country: ZA
-    :postal_code: 
+    :postal_code:
 - :name: ADT ANALOG AND DIGITAL TECHNIK
   :start_date: '1981-09-10'
-  :end_date: 
+  :end_date:
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 46 F.R. 46154 9/17/81 and 46 F.R. 19290 3/30/81
   :id: 11e965e5acdd0938d286ed59923a655b3d6bd754
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: ADT ANALOG DIGITAL TECHNIK
+  :rev_name: TECHNIK DIGITAL ANALOG ADT
+  :trim_name: ADTANALOGDIGITALTECHNIK
+  :trim_rev_name: TECHNIKDIGITALANALOGADT
   :addresses:
   - :address: 8019 NIEDERSEEON, HOUSE 21
-    :city: 
-    :state: 
+    :city:
+    :state:
     :country: DE
-    :postal_code: 
+    :postal_code:
 - :name: AGNESE, ANDREE
   :start_date: '1985-07-11'
-  :end_date: 
+  :end_date:
   :standard_order: Y
-  :remarks: 
+  :remarks:
   :federal_register_notice: 50 F.R. 29244 7/18/85
   :id: 11590391080a515022a197f4be7597c0402fe568
   :source: *1
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
+  :name_idx: AGNESE ANDREE
+  :rev_name: ANDREE AGNESE
+  :trim_name: AGNESEANDREE
+  :trim_rev_name: ANDREEAGNESE
   :addresses:
   - :address: 22 RUE DU 11 NOVEMBER 1918
     :city: PANTIN
-    :state: 
+    :state:
     :country: FR
-    :postal_code: 
+    :postal_code:

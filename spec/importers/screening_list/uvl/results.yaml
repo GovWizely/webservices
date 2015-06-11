@@ -13,6 +13,14 @@
     :postal_code: 
     :country: CN
   :alt_names: []
+  :name_idx: China National Plant ImportExport
+  :name_with_common: China National Plant ImportExport Co
+  :rev_name_with_common: Co ImportExport Plant National China
+  :trim_name_with_common: ChinaNationalPlantImportExportCo
+  :trim_rev_name_with_common: CoImportExportPlantNationalChina
+  :rev_name: ImportExport Plant National China
+  :trim_name: ChinaNationalPlantImportExport
+  :trim_rev_name: ImportExportPlantNationalChina
 - :name: Brilliance Technology Ltd
   :id: cc91dc115ff25e9f2e3cab1b9d8adf75f5956982
   :source: *1
@@ -30,6 +38,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: Brilliance Technology
+  :name_with_common: Brilliance Technology Ltd
+  :rev_name_with_common: Ltd Technology Brilliance
+  :trim_name_with_common: BrillianceTechnologyLtd
+  :trim_rev_name_with_common: LtdTechnologyBrilliance
+  :rev_name: Technology Brilliance
+  :trim_name: BrillianceTechnology
+  :trim_rev_name: TechnologyBrilliance
 - :name: Dynasense Photonics Co., Limited
   :id: 91b38427499bf36988a61096f665301b890c9ec2
   :source: *1
@@ -42,6 +58,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: Dynasense Photonics
+  :name_with_common: Dynasense Photonics Co Limited
+  :rev_name_with_common: Limited Co Photonics Dynasense
+  :trim_name_with_common: DynasensePhotonicsCoLimited
+  :trim_rev_name_with_common: LimitedCoPhotonicsDynasense
+  :rev_name: Photonics Dynasense
+  :trim_name: DynasensePhotonics
+  :trim_rev_name: PhotonicsDynasense
 - :name: Hi-Shine Technology (HK) Limited
   :id: 6e18b2585a002248ecb071d5fa8b26cdfd2f4144
   :source: *1
@@ -61,6 +85,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: HiShine Technology HK
+  :name_with_common: HiShine Technology HK Limited
+  :rev_name_with_common: Limited HK Technology HiShine
+  :trim_name_with_common: HiShineTechnologyHKLimited
+  :trim_rev_name_with_common: LimitedHKTechnologyHiShine
+  :rev_name: HK Technology HiShine
+  :trim_name: HiShineTechnologyHK
+  :trim_rev_name: HKTechnologyHiShine
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
   :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
   :source: *1
@@ -73,6 +105,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: Hong Kong Haimao InfoTec Development
+  :name_with_common: Hong Kong Haimao InfoTec Development Co Ltd
+  :rev_name_with_common: Ltd Co Development InfoTec Haimao Kong Hong
+  :trim_name_with_common: HongKongHaimaoInfoTecDevelopmentCoLtd
+  :trim_rev_name_with_common: LtdCoDevelopmentInfoTecHaimaoKongHong
+  :rev_name: Development InfoTec Haimao Kong Hong
+  :trim_name: HongKongHaimaoInfoTecDevelopment
+  :trim_rev_name: DevelopmentInfoTecHaimaoKongHong
 - :name: Lianqi (HK) Electronics Co Ltd
   :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
   :source: *1
@@ -85,6 +125,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: Lianqi HK Electronics
+  :name_with_common: Lianqi HK Electronics Co Ltd
+  :rev_name_with_common: Ltd Co Electronics HK Lianqi
+  :trim_name_with_common: LianqiHKElectronicsCoLtd
+  :trim_rev_name_with_common: LtdCoElectronicsHKLianqi
+  :rev_name: Electronics HK Lianqi
+  :trim_name: LianqiHKElectronics
+  :trim_rev_name: ElectronicsHKLianqi
 - :name: Lion Chip Electronics Ltd
   :id: f117b1dab0d802e5f6c3a02113f67f3f72893a6e
   :source: *1
@@ -97,6 +145,14 @@
     :postal_code: 
     :country: HK
   :alt_names: []
+  :name_idx: Lion Chip Electronics
+  :name_with_common: Lion Chip Electronics Ltd
+  :rev_name_with_common: Ltd Electronics Chip Lion
+  :trim_name_with_common: LionChipElectronicsLtd
+  :trim_rev_name_with_common: LtdElectronicsChipLion
+  :rev_name: Electronics Chip Lion
+  :trim_name: LionChipElectronics
+  :trim_rev_name: ElectronicsChipLion
 - :name: Security 2 Business Academy
   :id: 5b5a164dd0e4ca3acb6397dbeb2d5713c4f13f90
   :source: *1
@@ -114,6 +170,10 @@
     :postal_code: 
     :country: RU
   :alt_names: []
+  :name_idx: Security 2 Business Academy
+  :rev_name: Academy Business 2 Security
+  :trim_name: Security2BusinessAcademy
+  :trim_rev_name: AcademyBusiness2Security
 - :name: S2BA
   :id: 8cc44eee211bbc678fa468cfa5d44065b4c5d749
   :source: *1
@@ -131,6 +191,10 @@
     :postal_code: 
     :country: RU
   :alt_names: []
+  :name_idx: S2BA
+  :rev_name: S2BA
+  :trim_name: S2BA
+  :trim_rev_name: S2BA
 - :name: Academy of Business Security
   :id: b5f1189bc3a5d4a969a9980d946f30c9dd74ea84
   :source: *1
@@ -148,6 +212,10 @@
     :postal_code: 
     :country: RU
   :alt_names: []
+  :name_idx: Academy of Business Security
+  :rev_name: Security Business of Academy
+  :trim_name: AcademyofBusinessSecurity
+  :trim_rev_name: SecurityBusinessofAcademy
 - :name: T2BA
   :id: c46ba5ffd6da15f8e524b58f59123894bb63e2f8
   :source: *1
@@ -160,6 +228,10 @@
     :postal_code: 
     :country: RU
   :alt_names: []
+  :name_idx: T2BA
+  :rev_name: T2BA
+  :trim_name: T2BA
+  :trim_rev_name: T2BA
 - :name: Training 2 Business Academy, a.k.a. T2BA, a.k.a. Academy of Business Training
   :id: 385c6ccf9a8683027c6a981a8467a1ee357a4ee2
   :source: *1
@@ -180,3 +252,23 @@
   - Training 2 Business Academy
   - T2BA
   - Academy of Business Training
+  :name_idx: Training 2 Business Academy aka T2BA aka Academy of Business Training
+  :rev_name: Training Business of Academy aka T2BA aka Academy Business 2 Training
+  :trim_name: Training2BusinessAcademyakaT2BAakaAcademyofBusinessTraining
+  :trim_rev_name: TrainingBusinessofAcademyakaT2BAakaAcademyBusiness2Training
+  :alt_names_idx:
+  - Training 2 Business Academy
+  - T2BA
+  - Academy of Business Training
+  :rev_alt_names:
+  - Academy Business 2 Training
+  - T2BA
+  - Training Business of Academy
+  :trim_alt_names:
+  - Training2BusinessAcademy
+  - T2BA
+  - AcademyofBusinessTraining
+  :trim_rev_alt_names:
+  - AcademyBusiness2Training
+  - T2BA
+  - TrainingBusinessofAcademy

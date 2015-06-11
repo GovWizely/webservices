@@ -13,7 +13,7 @@
   :id: '15268'
   :source:
     :full_name: Part 561 List (561) - Treasury Department
-    :code: "561"
+    :code: '561'
   :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/programs/pages/iran.aspx#part561
   :name: BANK OF KUNLUN CO LTD
@@ -50,8 +50,40 @@
     :address: No. 68 Zhongya South Rd, Economic and Technological Development Zone,
       (Urumqi, Xinjiang Branch)
   :ids:
-  - :country: 
+  - :country:
     :expiration_date: 
     :issue_date: 
     :number: CKLB CN BJ
     :type: SWIFT/BIC
+  :name_idx: BANK OF KUNLUN
+  :name_with_common: BANK OF KUNLUN CO LTD
+  :rev_name_with_common: LTD CO KUNLUN OF BANK
+  :trim_name_with_common: BANKOFKUNLUNCOLTD
+  :trim_rev_name_with_common: LTDCOKUNLUNOFBANK
+  :rev_name: KUNLUN OF BANK
+  :trim_name: BANKOFKUNLUN
+  :trim_rev_name: KUNLUNOFBANK  
+  :alt_names_idx:
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK
+  :alt_names_with_common: 
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK CO LTD
+  :rev_alt_with_common: 
+  - KARAMAY URBAN CREDIT COOPERATIVES
+  - KARAMAY CITY COMMERCIAL BANK CO LTD
+  :trim_alt_with_common: 
+  - KARAMAYURBANCREDITCOOPERATIVES
+  - KARAMAYCITYCOMMERCIALBANKCOLTD
+  :trim_rev_alt_with_common: 
+  - KARAMAYURBANCREDITCOOPERATIVES
+  - KARAMAYCITYCOMMERCIALBANKCOLTD
+  :rev_alt_names:
+  - COOPERATIVES CREDIT URBAN KARAMAY
+  - BANK COMMERCIAL CITY KARAMAY
+  :trim_alt_names:
+  - KARAMAYURBANCREDITCOOPERATIVES
+  - KARAMAYCITYCOMMERCIALBANK
+  :trim_rev_alt_names:
+  - COOPERATIVESCREDITURBANKARAMAY
+  - BANKCOMMERCIALCITYKARAMAY

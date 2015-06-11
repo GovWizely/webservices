@@ -1,0 +1,207 @@
+{
+    "query": {
+        "bool": {
+            "disable_coord": true,
+            "should": [
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 5
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common"
+                                ],
+                                "fuzziness": 0,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 5
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common",
+                                    "name_idx",
+                                    "rev_name",
+                                    "alt_names_idx",
+                                    "rev_alt_names"
+                                ],
+                                "fuzziness": 0,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 5
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common"
+                                ],
+                                "fuzziness": 1,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 5
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common",
+                                    "name_idx",
+                                    "rev_name",
+                                    "alt_names_idx",
+                                    "rev_alt_names"
+                                ],
+                                "fuzziness": 1,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 5
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common"
+                                ],
+                                "fuzziness": 2,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                },
+                {
+                    "function_score": {
+                        "boost_mode": "replace",
+                        "functions": [
+                            {
+                                "weight": 75
+                            }
+                        ],
+                        "query": {
+                            "multi_match": {
+                                "fields": [
+                                    "name_idx.keyword",
+                                    "alt_names_idx.keyword",
+                                    "rev_name.keyword",
+                                    "rev_alt_names.keyword",
+                                    "trim_name",
+                                    "trim_rev_name",
+                                    "trim_alt_names",
+                                    "trim_rev_alt_names",
+                                    "trim_name_with_common",
+                                    "trim_rev_name_with_common",
+                                    "trim_alt_with_common",
+                                    "trim_rev_alt_with_common",
+                                    "name_idx",
+                                    "rev_name",
+                                    "alt_names_idx",
+                                    "rev_alt_names"
+                                ],
+                                "fuzziness": 2,
+                                "operator": "and",
+                                "query": "mohamed"
+                            }
+                        }
+                    }
+                }
+            ]
+        }
+    }
+}

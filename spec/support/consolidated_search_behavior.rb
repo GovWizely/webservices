@@ -1,7 +1,11 @@
 shared_context 'full results from response' do
   let(:full_results) do
-    JSON.parse(response.body)['results']
-      .select { |r| r['source'] == source_full_name(source) }
+    JSON.parse(response.body)['results'].select do |r|
+      r['source'] == source_full_name(source)
+    end.map do |r|
+      r.delete('score')
+      r
+    end
   end
   let(:got) do
     full_results.map do |f|

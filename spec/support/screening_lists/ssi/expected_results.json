@@ -2,99 +2,6 @@
   {
     "addresses": [
       {
-        "address": "57 B. Polyanka ul.",
-        "city": "Moscow",
-        "state": null,
-        "postal_code": "119180",
-        "country": "RU"
-      },
-      {
-        "address": "57 Bolshaya. Polyanka",
-        "city": "Moscow",
-        "state": null,
-        "postal_code": "119180",
-        "country": "RU"
-      }
-    ],
-    "alt_names": [
-      "OAO AK TRANSNEFT",
-      "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
-      "OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT",
-      "TRANSNEFT, JSC",
-      "TRANSNEFT OJSC",
-      "TRANSNEFT"
-    ],
-    "citizenships": [
-
-    ],
-    "dates_of_birth": [
-
-    ],
-    "entity_number": "17254",
-    "ids": [
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "1027700049486",
-        "type": "Registration ID"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "7706061801",
-        "type": "Tax ID No."
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "00044463",
-        "type": "Government Gazette Number"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "transneft@ak.transneft.ru",
-        "type": "Email Address"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "www.transneft.ru",
-        "type": "Website"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "Subject to Directive 2",
-        "type": "Executive Order 13662 Directive Determination -"
-      }
-    ],
-    "name": "AK TRANSNEFT OAO",
-    "nationalities": [
-
-    ],
-    "places_of_birth": [
-
-    ],
-    "programs": [
-      "UKRAINE-EO13662"
-    ],
-    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
-  },
-  {
-    "addresses": [
-      {
         "address": "8/15 Korp. 3 ul. Rozhdestvenka",
         "city": "Moscow",
         "state": null,
@@ -189,104 +96,11 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
-    "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
-  },
-  {
-    "addresses": [
-      {
-        "address": "24 Usacheva ul.",
-        "city": "Moscow",
-        "state": null,
-        "postal_code": "119048",
-        "country": "RU"
-      },
-      {
-        "address": "21 Gogolevsky Blvd.",
-        "city": "Moscow",
-        "state": null,
-        "postal_code": "119991",
-        "country": "RU"
-      }
-    ],
-    "alt_names": [
-      "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
-      "STATE CORPORATION ROSTEKHNOLOGII",
-      "ROSTEC STATE CORPORATION",
-      "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
-      "RUSSIAN TECHNOLOGIES",
-      "STATE CORPORATION ROSTECHNOLOGII"
-    ],
-    "citizenships": [
-
-    ],
-    "dates_of_birth": [
-
-    ],
-    "entity_number": "17260",
-    "ids": [
-      {
-        "country": "RU",
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "1077799030847",
-        "type": "Registration ID"
-      },
-      {
-        "country": "RU",
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "7704274402",
-        "type": "Tax ID No."
-      },
-      {
-        "country": "RU",
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "94137372",
-        "type": "Government Gazette Number"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "info@rostec.ru",
-        "type": "Email Address"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "www.rostec.ru",
-        "type": "Website"
-      },
-      {
-        "country": null,
-        "expiration_date": null,
-        "issue_date": null,
-        "number": "Subject to Directive 3",
-        "type": "Executive Order 13662 Directive Determination -"
-      }
-    ],
-    "name": "ROSTEC",
-    "nationalities": [
-
-    ],
-    "places_of_birth": [
-
-    ],
-    "programs": [
-      "UKRAINE-EO13662"
-    ],
-    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
     "source_list_url": null,
-    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
   },
   {
     "addresses": [
@@ -393,10 +207,196 @@
       "UKRAINE-EO13662"
     ],
     "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
-    "type": "Entity",
-    "source_list_url": null,
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
     "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
     "title": null,
-    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department"
+    "type": "Entity"
+  },
+  {
+    "addresses": [
+      {
+        "address": "24 Usacheva ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119048",
+        "country": "RU"
+      },
+      {
+        "address": "21 Gogolevsky Blvd.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119991",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII",
+      "STATE CORPORATION ROSTEKHNOLOGII",
+      "ROSTEC STATE CORPORATION",
+      "RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT",
+      "RUSSIAN TECHNOLOGIES",
+      "STATE CORPORATION ROSTECHNOLOGII"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17260",
+    "ids": [
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1077799030847",
+        "type": "Registration ID"
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7704274402",
+        "type": "Tax ID No."
+      },
+      {
+        "country": "RU",
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "94137372",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "info@rostec.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.rostec.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 3",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "ROSTEC",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
+  },
+  {
+    "addresses": [
+      {
+        "address": "57 B. Polyanka ul.",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      },
+      {
+        "address": "57 Bolshaya. Polyanka",
+        "city": "Moscow",
+        "state": null,
+        "postal_code": "119180",
+        "country": "RU"
+      }
+    ],
+    "alt_names": [
+      "OAO AK TRANSNEFT",
+      "AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO",
+      "OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT",
+      "TRANSNEFT, JSC",
+      "TRANSNEFT OJSC",
+      "TRANSNEFT"
+    ],
+    "citizenships": [
+
+    ],
+    "dates_of_birth": [
+
+    ],
+    "entity_number": "17254",
+    "ids": [
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "1027700049486",
+        "type": "Registration ID"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "7706061801",
+        "type": "Tax ID No."
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "00044463",
+        "type": "Government Gazette Number"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "transneft@ak.transneft.ru",
+        "type": "Email Address"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "www.transneft.ru",
+        "type": "Website"
+      },
+      {
+        "country": null,
+        "expiration_date": null,
+        "issue_date": null,
+        "number": "Subject to Directive 2",
+        "type": "Executive Order 13662 Directive Determination -"
+      }
+    ],
+    "name": "AK TRANSNEFT OAO",
+    "nationalities": [
+
+    ],
+    "places_of_birth": [
+
+    ],
+    "programs": [
+      "UKRAINE-EO13662"
+    ],
+    "remarks": "For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.",
+    "source": "Sectoral Sanctions Identifications List (SSI) - Treasury Department",
+    "source_information_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx",
+    "source_list_url": null,
+    "title": null,
+    "type": "Entity"
   }
 ]

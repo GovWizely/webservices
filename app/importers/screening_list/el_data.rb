@@ -19,6 +19,8 @@ module ScreeningList
     include ScreeningList::CanGroupRows
     self.group_by = %i(name federal_register_notice effective_date)
 
+    include ScreeningList::MakeNameVariants
+
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
     COLUMN_HASH = {
@@ -63,10 +65,12 @@ module ScreeningList
       doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 
       doc[:start_date] &&= parse_american_date(doc[:start_date])
-      doc[:source] = model_class.source
+      doc[:source]          = model_class.source
       doc[:source_list_url] =
         doc[:source_information_url] =
-        'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
+          'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
+
+      make_names(doc)
 
       doc
     end
@@ -84,7 +88,7 @@ module ScreeningList
     }
 
     def process_address(row)
-      address = remap_keys(ADDRESS_HASH, row.to_hash)
+      address           = remap_keys(ADDRESS_HASH, row.to_hash)
       address[:country] &&= lookup_country(address[:country])
       address
     end

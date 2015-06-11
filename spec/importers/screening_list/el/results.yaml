@@ -26,6 +26,14 @@
     :full_name: Entity List (EL) - Bureau of Industry and Security
     :code: EL
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Fazal Rahim Farid
+  :rev_name: Farid Rahim Fazal
+  :trim_name: FazalRahimFarid
+  :trim_rev_name: FaridRahimFazal
+  :alt_names_idx: [Fazel Rahim Farid, Farid, Engineer Idris]
+  :rev_alt_names: [Farid Rahim Fazel, Farid, Idris Engineer]
+  :trim_alt_names: [FazelRahimFarid, Farid, EngineerIdris]
+  :trim_rev_alt_names: [FaridRahimFazel, Farid, IdrisEngineer]
 - :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -44,10 +52,18 @@
     :state: 
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Fazel Khalil Construction
+  :name_with_common: Fazel Khalil Construction Company
+  :rev_name_with_common: Company Construction Khalil Fazel
+  :trim_name_with_common: FazelKhalilConstructionCompany
+  :trim_rev_name_with_common: CompanyConstructionKhalilFazel
+  :rev_name: Construction Khalil Fazel
+  :trim_name: FazelKhalilConstruction
+  :trim_rev_name: ConstructionKhalilFazel
 - :name: Zurmat Construction Company offices
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
-  :standard_order: 
+  :standard_order:
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
@@ -57,45 +73,53 @@
   - :address: House No. 319, 10th Street Wazeer Akbar Khan
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: Wazir Akbar Khan, District 10, Apartment 319
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
-  - :address: 
+    :postal_code:
+    :state:
+  - :address:
     :city: Tarin Cot City
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: Behind UNAMA Office, Pir Bagh Office
     :city: Gardez
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: House No. 01, Street No. 01, Muhaqeq Road (Behind Pakistan and Turkish
       Embassies)
     :city: Mazar-e-Sharif
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: Hazratan Street (Behind Jalalalabad Teaching Hospital)
     :city: Jalalalabad
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: Aino Mena, Street No. 22 (Blue Color House Left Side of Road)
     :city: Kandahar
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Zurmat Construction offices
+  :name_with_common: Zurmat Construction Company offices
+  :rev_name_with_common: offices Company Construction Zurmat
+  :trim_name_with_common: ZurmatConstructionCompanyoffices
+  :trim_rev_name_with_common: officesCompanyConstructionZurmat
+  :rev_name: offices Construction Zurmat
+  :trim_name: ZurmatConstructionoffices
+  :trim_rev_name: officesConstructionZurmat
 - :name: Murat Peker
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'
-  :standard_order: 
+  :standard_order:
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
@@ -105,14 +129,18 @@
   - :address: Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup
     :city: Istanbul
     :country: TR
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Murat Peker
+  :rev_name: Peker Murat
+  :trim_name: MuratPeker
+  :trim_rev_name: PekerMurat
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
-  :standard_order: 
+  :standard_order:
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
@@ -123,14 +151,22 @@
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Qazi Abdallah
+  :rev_name: Abdallah Qazi
+  :trim_name: QaziAbdallah
+  :trim_rev_name: AbdallahQazi
+  :alt_names_idx: [Jawid Said Jan AbdalSalam]
+  :rev_alt_names: [AbdalSalam Jan Said Jawid]
+  :trim_alt_names: [JawidSaidJanAbdalSalam]
+  :trim_rev_alt_names: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 10001
   :start_date: '2011-11-21'
-  :standard_order: 
+  :standard_order:
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
@@ -141,14 +177,22 @@
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Qazi Abdallah
+  :rev_name: Abdallah Qazi
+  :trim_name: QaziAbdallah
+  :trim_rev_name: AbdallahQazi
+  :alt_names_idx: [Jawid Said Jan AbdalSalam]
+  :rev_alt_names: [AbdalSalam Jan Said Jawid]
+  :trim_alt_names: [JawidSaidJanAbdalSalam]
+  :trim_rev_alt_names: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-22'
-  :standard_order: 
+  :standard_order:
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
@@ -159,7 +203,15 @@
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list
+  :name_idx: Qazi Abdallah
+  :rev_name: Abdallah Qazi
+  :trim_name: QaziAbdallah
+  :trim_rev_name: AbdallahQazi
+  :alt_names_idx: [Jawid Said Jan AbdalSalam]
+  :rev_alt_names: [AbdalSalam Jan Said Jawid]
+  :trim_alt_names: [JawidSaidJanAbdalSalam]
+  :trim_rev_alt_names: [AbdalSalamJanSaidJawid]

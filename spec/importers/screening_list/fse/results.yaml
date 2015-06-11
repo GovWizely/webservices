@@ -7,7 +7,7 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: "(Linked To: NATIONAL IRANIAN TANKER COMPANY)"
+  :remarks: '(Linked To: NATIONAL IRANIAN TANKER COMPANY)'
   :id: '15987'
   :source: &1
     :full_name: Foreign Sanctions Evaders (FSE) - Treasury Department
@@ -43,6 +43,22 @@
     :issue_date: 
     :number: Material Support
     :type: Executive Order 13645 Determination -
+  :name_idx: FERLAND
+  :name_with_common: FERLAND COMPANY LIMITED
+  :rev_name_with_common: LIMITED COMPANY FERLAND
+  :trim_name_with_common: FERLANDCOMPANYLIMITED
+  :trim_rev_name_with_common: LIMITEDCOMPANYFERLAND
+  :rev_name: FERLAND
+  :trim_name: FERLAND
+  :trim_rev_name: FERLAND
+  :alt_names_idx: [FERLAND]
+  :alt_names_with_common: [FERLAND CO LTD]
+  :rev_alt_with_common: [FERLAND CO LTD]
+  :trim_alt_with_common: [FERLANDCOLTD]
+  :trim_rev_alt_with_common: [FERLANDCOLTD]
+  :rev_alt_names: [FERLAND]
+  :trim_alt_names: [FERLAND]
+  :trim_rev_alt_names: [FERLAND]
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 
@@ -51,7 +67,7 @@
   :gross_registered_tonnage: 
   :vessel_flag: 
   :vessel_owner: 
-  :remarks: "(Linked To: FERLAND COMPANY LIMITED)"
+  :remarks: '(Linked To: FERLAND COMPANY LIMITED)'
   :id: '16422'
   :source: *1
   :source_list_url: 
@@ -86,6 +102,14 @@
     :issue_date: 
     :number: Material Support
     :type: Executive Order 13645 Determination -
+  :name_idx: SOKOLENKO Vitaly
+  :rev_name: Vitaly SOKOLENKO
+  :trim_name: SOKOLENKOVitaly
+  :trim_rev_name: VitalySOKOLENKO
+  :alt_names_idx: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
+  :rev_alt_names: [Vitalii SOKOLENKO, Vitaliy SOKOLENKO]
+  :trim_alt_names: [SOKOLENKOVitalii, SOKOLENKOVitaliy]
+  :trim_rev_alt_names: [VitaliiSOKOLENKO, VitaliySOKOLENKO]
 - :entity_number: '16531'
   :title: 
   :call_sign: 
@@ -122,3 +146,11 @@
     :issue_date: 
     :number: R17550559
     :type: Passport
+  :name_idx: HOSSEINPOUR Houshang
+  :rev_name: Houshang HOSSEINPOUR
+  :trim_name: HOSSEINPOURHoushang
+  :trim_rev_name: HoushangHOSSEINPOUR
+  :alt_names_idx: [HOSSEINPOUR Houshang Shahali, HOSEINPUR Houshang]
+  :rev_alt_names: [Shahali Houshang HOSSEINPOUR, Houshang HOSEINPUR]
+  :trim_alt_names: [HOSSEINPOURHoushangShahali, HOSEINPURHoushang]
+  :trim_rev_alt_names: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEINPUR]    

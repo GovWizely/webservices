@@ -1,23 +1,22 @@
 ---
 - :entity_number: '17013'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 'For more information on directives, please visit the following link:
-    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks: 'For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17013'
-  :source: &1
+  :source: 
     :full_name: Sectoral Sanctions Identifications List (SSI) - Treasury Department
     :code: SSI
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: VTB BANK OAO
   :type: Entity
-  :alt_names:
+  :alt_names: 
   - JSC VTB BANK
   - BANK VTB, OPEN JOINT-STOCK COMPANY
   - VNESHTORGBANK
@@ -28,235 +27,416 @@
   - VNESHTORGBANK ROSSII, CLOSED JOINT-STOCK COMPANY
   - VTB BANK, OPEN JOINT-STOCK COMPANY
   - BANK VTB OAO
-  :programs:
+  :programs: 
   - UKRAINE-EO13662
   :nationalities: []
   :citizenships: []
   :dates_of_birth: []
   :places_of_birth: []
-  :addresses:
+  :addresses: 
   - :city: St. Petersburg
     :country: RU
     :postal_code: '190000'
-    :state: 
+    :state:
     :address: 29, Bolshaya Morskaya str.
   - :city: Moscow
     :country: RU
     :postal_code: '119121'
-    :state: 
+    :state:
     :address: 37 Plyushchikha ul.
   - :city: Moscow
     :country: RU
     :postal_code: '109044'
-    :state: 
+    :state:
     :address: 43, Vorontsovskaya str.
-  :ids:
+  :ids: 
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '1027739609391'
     :type: Registration ID
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '00032520'
     :type: Government Gazette Number
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '7702070139'
     :type: Tax ID No.
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '1000'
     :type: License
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: www.vtb.com
     :type: Website
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: VTBRRUMM
     :type: SWIFT/BIC
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
+  :name_idx: VTB BANK OAO
+  :rev_name: OAO BANK VTB
+  :trim_name: VTBBANKOAO
+  :trim_rev_name: OAOBANKVTB
+  :alt_names_idx: 
+  - JSC VTB BANK
+  - BANK VTB OPEN JOINTSTOCK
+  - VNESHTORGBANK
+  - BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK
+  - BANK VNESHNEY TORGOVLI JOINTSTOCK
+  - BANK VNESHNEY TORGOVLI RSFSR
+  - BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK
+  - VNESHTORGBANK ROSSII CLOSED JOINTSTOCK
+  - VTB BANK OPEN JOINTSTOCK
+  - BANK VTB OAO
+  :alt_names_with_common: 
+  - JSC VTB BANK
+  - BANK VTB OPEN JOINTSTOCK COMPANY
+  - VNESHTORGBANK
+  - BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK COMPANY
+  - BANK VNESHNEY TORGOVLI JOINTSTOCK COMPANY
+  - BANK VNESHNEY TORGOVLI RSFSR
+  - BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK COMPANY
+  - VNESHTORGBANK ROSSII CLOSED JOINTSTOCK COMPANY
+  - VTB BANK OPEN JOINTSTOCK COMPANY
+  - BANK VTB OAO
+  :rev_alt_with_common: 
+  - JSC VTB BANK
+  - BANK VTB OPEN JOINTSTOCK COMPANY
+  - VNESHTORGBANK
+  - BANK VNESHNEY TORGOVLI OPEN JOINTSTOCK COMPANY
+  - BANK VNESHNEY TORGOVLI JOINTSTOCK COMPANY
+  - BANK VNESHNEY TORGOVLI RSFSR
+  - BANK VNESHNEY TORGOVLI ROSSIYSKOY FEDERATSII CLOSED JOINTSTOCK COMPANY
+  - VNESHTORGBANK ROSSII CLOSED JOINTSTOCK COMPANY
+  - VTB BANK OPEN JOINTSTOCK COMPANY
+  - BANK VTB OAO
+  :trim_alt_with_common: 
+  - JSCVTBBANK
+  - BANKVTBOPENJOINTSTOCKCOMPANY
+  - VNESHTORGBANK
+  - BANKVNESHNEYTORGOVLIOPENJOINTSTOCKCOMPANY
+  - BANKVNESHNEYTORGOVLIJOINTSTOCKCOMPANY
+  - BANKVNESHNEYTORGOVLIRSFSR
+  - BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCKCOMPANY
+  - VNESHTORGBANKROSSIICLOSEDJOINTSTOCKCOMPANY
+  - VTBBANKOPENJOINTSTOCKCOMPANY
+  - BANKVTBOAO
+  :trim_rev_alt_with_common: 
+  - JSCVTBBANK
+  - BANKVTBOPENJOINTSTOCKCOMPANY
+  - VNESHTORGBANK
+  - BANKVNESHNEYTORGOVLIOPENJOINTSTOCKCOMPANY
+  - BANKVNESHNEYTORGOVLIJOINTSTOCKCOMPANY
+  - BANKVNESHNEYTORGOVLIRSFSR
+  - BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCKCOMPANY
+  - VNESHTORGBANKROSSIICLOSEDJOINTSTOCKCOMPANY
+  - VTBBANKOPENJOINTSTOCKCOMPANY
+  - BANKVTBOAO
+  :rev_alt_names: 
+  - BANK VTB JSC
+  - JOINTSTOCK OPEN VTB BANK
+  - VNESHTORGBANK
+  - JOINTSTOCK OPEN TORGOVLI VNESHNEY BANK
+  - JOINTSTOCK TORGOVLI VNESHNEY BANK
+  - RSFSR TORGOVLI VNESHNEY BANK
+  - JOINTSTOCK CLOSED FEDERATSII ROSSIYSKOY TORGOVLI VNESHNEY BANK
+  - JOINTSTOCK CLOSED ROSSII VNESHTORGBANK
+  - JOINTSTOCK OPEN BANK VTB
+  - OAO VTB BANK
+  :trim_alt_names: 
+  - JSCVTBBANK
+  - BANKVTBOPENJOINTSTOCK
+  - VNESHTORGBANK
+  - BANKVNESHNEYTORGOVLIOPENJOINTSTOCK
+  - BANKVNESHNEYTORGOVLIJOINTSTOCK
+  - BANKVNESHNEYTORGOVLIRSFSR
+  - BANKVNESHNEYTORGOVLIROSSIYSKOYFEDERATSIICLOSEDJOINTSTOCK
+  - VNESHTORGBANKROSSIICLOSEDJOINTSTOCK
+  - VTBBANKOPENJOINTSTOCK
+  - BANKVTBOAO
+  :trim_rev_alt_names: 
+  - BANKVTBJSC
+  - JOINTSTOCKOPENVTBBANK
+  - VNESHTORGBANK
+  - JOINTSTOCKOPENTORGOVLIVNESHNEYBANK
+  - JOINTSTOCKTORGOVLIVNESHNEYBANK
+  - RSFSRTORGOVLIVNESHNEYBANK
+  - JOINTSTOCKCLOSEDFEDERATSIIROSSIYSKOYTORGOVLIVNESHNEYBANK
+  - JOINTSTOCKCLOSEDROSSIIVNESHTORGBANK
+  - JOINTSTOCKOPENBANKVTB
+  - OAOVTBBANK
 - :entity_number: '17017'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 'For more information on directives, please visit the following link:
-    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks: 'For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17017'
-  :source: *1
-  :source_list_url: 
+  :source: &1
+    :full_name: Sectoral Sanctions Identifications List (SSI) - Treasury Department
+    :code: SSI
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: BANK OF MOSCOW
   :type: Entity
-  :alt_names:
+  :alt_names: 
   - JOINT STOCK COMMERCIAL BANK - BANK OF MOSCOW, OPEN JOINT STOCK COMPANY
   - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY, OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
-  :programs:
+  :programs: 
   - UKRAINE-EO13662
   :nationalities: []
   :citizenships: []
   :dates_of_birth: []
   :places_of_birth: []
-  :addresses:
+  :addresses: 
   - :city: Moscow
     :country: RU
     :postal_code: '107996'
-    :state: 
+    :state:
     :address: 8/15 Korp. 3 ul. Rozhdestvenka
   - :city: Moscow
     :country: RU
     :postal_code: '107996'
-    :state: 
+    :state:
     :address: Bld 3 8/15, Rozhdestvenka St.
-  :ids:
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  :ids: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: '1027700159497'
     :type: Registration ID
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: '29292940'
     :type: Government Gazette Number
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: MOSW RU MM
     :type: SWIFT/BIC
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: www.bm.ru
     :type: Website
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: holmogorov_ss@mmbank.ru
     :type: Email Address
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: info@mmbank.ru
     :type: Email Address
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
-    :number: 044525219
+  - :country:
+    :expiration_date:
+    :issue_date:
+    :number: '044525219'
     :type: BIK (RU)
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Subject to Directive 1
     :type: Executive Order 13662 Directive Determination -
+  :name_idx: BANK OF MOSCOW
+  :rev_name: MOSCOW OF BANK
+  :trim_name: BANKOFMOSCOW
+  :trim_rev_name: MOSCOWOFBANK
+  :alt_names_idx:
+  - JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK
+  - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
+  :alt_names_with_common: 
+  - JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK COMPANY
+  - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
+  :rev_alt_with_common: 
+  - JOINT STOCK COMMERCIAL BANK BANK OF MOSCOW OPEN JOINT STOCK COMPANY
+  - AKTSIONERNY KOMMERCHESKI BANK BANK MOSKVY OTKRYTOE AKTSIONERNOE OBSCHCHESTVO
+  :trim_alt_with_common: 
+  - JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCKCOMPANY
+  - AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO
+  :trim_rev_alt_with_common: 
+  - JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCKCOMPANY
+  - AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO
+  :rev_alt_names:
+  - STOCK JOINT OPEN MOSCOW OF BANK BANK COMMERCIAL STOCK JOINT
+  - OBSCHCHESTVO AKTSIONERNOE OTKRYTOE MOSKVY BANK BANK KOMMERCHESKI AKTSIONERNY
+  :trim_alt_names: 
+  - JOINTSTOCKCOMMERCIALBANKBANKOFMOSCOWOPENJOINTSTOCK
+  - AKTSIONERNYKOMMERCHESKIBANKBANKMOSKVYOTKRYTOEAKTSIONERNOEOBSCHCHESTVO
+  :trim_rev_alt_names: 
+  - STOCKJOINTOPENMOSCOWOFBANKBANKCOMMERCIALSTOCKJOINT
+  - OBSCHCHESTVOAKTSIONERNOEOTKRYTOEMOSKVYBANKBANKKOMMERCHESKIAKTSIONERNY
 - :entity_number: '17254'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 'For more information on directives, please visit the following link:
-    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks: 'For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17254'
-  :source: *1
-  :source_list_url: 
+  :source: 
+    :full_name: Sectoral Sanctions Identifications List (SSI) - Treasury Department
+    :code: SSI
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: AK TRANSNEFT OAO
   :type: Entity
-  :alt_names:
+  :alt_names: 
   - OAO AK TRANSNEFT
   - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
   - OIL TRANSPORTING JOINT-STOCK COMPANY TRANSNEFT
   - TRANSNEFT, JSC
   - TRANSNEFT OJSC
   - TRANSNEFT
-  :programs:
+  :programs: 
   - UKRAINE-EO13662
   :nationalities: []
   :citizenships: []
   :dates_of_birth: []
   :places_of_birth: []
-  :addresses:
+  :addresses: 
   - :city: Moscow
     :country: RU
     :postal_code: '119180'
-    :state: 
+    :state:
     :address: 57 B. Polyanka ul.
   - :city: Moscow
     :country: RU
     :postal_code: '119180'
-    :state: 
+    :state:
     :address: 57 Bolshaya. Polyanka
-  :ids:
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  :ids: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: '1027700049486'
     :type: Registration ID
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: '7706061801'
     :type: Tax ID No.
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: '00044463'
     :type: Government Gazette Number
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: transneft@ak.transneft.ru
     :type: Email Address
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: www.transneft.ru
     :type: Website
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Subject to Directive 2
     :type: Executive Order 13662 Directive Determination -
+  :name_idx: AK TRANSNEFT OAO
+  :rev_name: OAO TRANSNEFT AK
+  :trim_name: AKTRANSNEFTOAO
+  :trim_rev_name: OAOTRANSNEFTAK
+  :alt_names_idx: 
+  - OAO AK TRANSNEFT
+  - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
+  - OIL TRANSPORTING JOINTSTOCK TRANSNEFT
+  - TRANSNEFT JSC
+  - TRANSNEFT OJSC
+  - TRANSNEFT
+  :alt_names_with_common: 
+  - OAO AK TRANSNEFT
+  - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
+  - OIL TRANSPORTING JOINTSTOCK COMPANY TRANSNEFT
+  - TRANSNEFT JSC
+  - TRANSNEFT OJSC
+  - TRANSNEFT
+  :rev_alt_with_common: 
+  - OAO AK TRANSNEFT
+  - AKTSIONERNAYA KOMPANIYA PO TRANSPORTUNEFTI TRANSNEFT OAO
+  - OIL TRANSPORTING JOINTSTOCK COMPANY TRANSNEFT
+  - TRANSNEFT JSC
+  - TRANSNEFT OJSC
+  - TRANSNEFT
+  :trim_alt_with_common: 
+  - OAOAKTRANSNEFT
+  - AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO
+  - OILTRANSPORTINGJOINTSTOCKCOMPANYTRANSNEFT
+  - TRANSNEFTJSC
+  - TRANSNEFTOJSC
+  - TRANSNEFT
+  :trim_rev_alt_with_common: 
+  - OAOAKTRANSNEFT
+  - AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO
+  - OILTRANSPORTINGJOINTSTOCKCOMPANYTRANSNEFT
+  - TRANSNEFTJSC
+  - TRANSNEFTOJSC
+  - TRANSNEFT
+  :rev_alt_names: 
+  - TRANSNEFT AK OAO
+  - OAO TRANSNEFT TRANSPORTUNEFTI PO KOMPANIYA AKTSIONERNAYA
+  - TRANSNEFT JOINTSTOCK TRANSPORTING OIL
+  - JSC TRANSNEFT
+  - OJSC TRANSNEFT
+  - TRANSNEFT
+  :trim_alt_names: 
+  - OAOAKTRANSNEFT
+  - AKTSIONERNAYAKOMPANIYAPOTRANSPORTUNEFTITRANSNEFTOAO
+  - OILTRANSPORTINGJOINTSTOCKTRANSNEFT
+  - TRANSNEFTJSC
+  - TRANSNEFTOJSC
+  - TRANSNEFT
+  :trim_rev_alt_names: 
+  - TRANSNEFTAKOAO
+  - OAOTRANSNEFTTRANSPORTUNEFTIPOKOMPANIYAAKTSIONERNAYA
+  - TRANSNEFTJOINTSTOCKTRANSPORTINGOIL
+  - JSCTRANSNEFT
+  - OJSCTRANSNEFT
+  - TRANSNEFT
 - :entity_number: '17260'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 'For more information on directives, please visit the following link:
-    http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks: 'For more information on directives, please visit the following link: http://www.treasury.gov/resource-center/sanctions/Programs/Pages/ukraine.aspx#directives.'
   :id: '17260'
-  :source: *1
-  :source_list_url: 
+  :source: 
+    :full_name: Sectoral Sanctions Identifications List (SSI) - Treasury Department
+    :code: SSI
+  :source_list_url:
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/ssi_list.aspx
   :name: ROSTEC
   :type: Entity
-  :alt_names:
-  - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED
-    TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
+  :alt_names: 
+  - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
   - STATE CORPORATION ROSTEKHNOLOGII
   - ROSTEC STATE CORPORATION
-  - RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION
-    AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
+  - RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT, PRODUCTION AND EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
   - RUSSIAN TECHNOLOGIES
   - STATE CORPORATION ROSTECHNOLOGII
   :programs:
@@ -265,45 +445,105 @@
   :citizenships: []
   :dates_of_birth: []
   :places_of_birth: []
-  :addresses:
+  :addresses: 
   - :city: Moscow
     :country: RU
     :postal_code: '119048'
-    :state: 
+    :state:
     :address: 24 Usacheva ul.
   - :city: Moscow
     :country: RU
     :postal_code: '119991'
-    :state: 
+    :state:
     :address: 21 Gogolevsky Blvd.
-  :ids:
+  :ids: 
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '1077799030847'
     :type: Registration ID
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '7704274402'
     :type: Tax ID No.
   - :country: RU
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: '94137372'
     :type: Government Gazette Number
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: info@rostec.ru
     :type: Email Address
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: www.rostec.ru
     :type: Website
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Subject to Directive 3
     :type: Executive Order 13662 Directive Determination -
+  :name_idx: ROSTEC
+  :rev_name: ROSTEC
+  :trim_name: ROSTEC
+  :trim_rev_name: ROSTEC
+  :alt_names_idx: 
+  - STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
+  - STATE ROSTEKHNOLOGII
+  - ROSTEC STATE
+  - RUSSIAN TECHNOLOGIES STATE FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
+  - RUSSIAN TECHNOLOGIES
+  - STATE ROSTECHNOLOGII
+  :alt_names_with_common: 
+  - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
+  - STATE CORPORATION ROSTEKHNOLOGII
+  - ROSTEC STATE CORPORATION
+  - RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
+  - RUSSIAN TECHNOLOGIES
+  - STATE CORPORATION ROSTECHNOLOGII
+  :rev_alt_with_common: 
+  - STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT ROSTEKHNOLOGII
+  - STATE CORPORATION ROSTEKHNOLOGII
+  - ROSTEC STATE CORPORATION
+  - RUSSIAN TECHNOLOGIES STATE CORPORATION FOR ASSISTANCE TO DEVELOPMENT PRODUCTION EXPORT OF ADVANCED TECHNOLOGY INDUSTRIAL PRODUCT
+  - RUSSIAN TECHNOLOGIES
+  - STATE CORPORATION ROSTECHNOLOGII
+  :trim_alt_with_common: 
+  - STATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII
+  - STATECORPORATIONROSTEKHNOLOGII
+  - ROSTECSTATECORPORATION
+  - RUSSIANTECHNOLOGIESSTATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT
+  - RUSSIANTECHNOLOGIES
+  - STATECORPORATIONROSTECHNOLOGII
+  :trim_rev_alt_with_common: 
+  - STATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII
+  - STATECORPORATIONROSTEKHNOLOGII
+  - ROSTECSTATECORPORATION
+  - RUSSIANTECHNOLOGIESSTATECORPORATIONFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT
+  - RUSSIANTECHNOLOGIES
+  - STATECORPORATIONROSTECHNOLOGII
+  :rev_alt_names: 
+  - ROSTEKHNOLOGII PRODUCT INDUSTRIAL TECHNOLOGY ADVANCED OF EXPORT PRODUCTION DEVELOPMENT TO ASSISTANCE FOR STATE
+  - ROSTEKHNOLOGII STATE
+  - STATE ROSTEC
+  - PRODUCT INDUSTRIAL TECHNOLOGY ADVANCED OF EXPORT PRODUCTION DEVELOPMENT TO ASSISTANCE FOR STATE TECHNOLOGIES RUSSIAN
+  - TECHNOLOGIES RUSSIAN
+  - ROSTECHNOLOGII STATE
+  :trim_alt_names: 
+  - STATEFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCTROSTEKHNOLOGII
+  - STATEROSTEKHNOLOGII
+  - ROSTECSTATE
+  - RUSSIANTECHNOLOGIESSTATEFORASSISTANCETODEVELOPMENTPRODUCTIONEXPORTOFADVANCEDTECHNOLOGYINDUSTRIALPRODUCT
+  - RUSSIANTECHNOLOGIES
+  - STATEROSTECHNOLOGII
+  :trim_rev_alt_names: 
+  - ROSTEKHNOLOGIIPRODUCTINDUSTRIALTECHNOLOGYADVANCEDOFEXPORTPRODUCTIONDEVELOPMENTTOASSISTANCEFORSTATE
+  - ROSTEKHNOLOGIISTATE
+  - STATEROSTEC
+  - PRODUCTINDUSTRIALTECHNOLOGYADVANCEDOFEXPORTPRODUCTIONDEVELOPMENTTOASSISTANCEFORSTATETECHNOLOGIESRUSSIAN
+  - TECHNOLOGIESRUSSIAN
+  - ROSTECHNOLOGIISTATE

@@ -34,6 +34,14 @@
     :state: 
     :address: '200 Cantonment Road, #15-00 Southpoint'
   :ids: []
+  :name_idx: KUO OIL S PTE
+  :name_with_common: KUO OIL S PTE LIMITED
+  :rev_name_with_common: LIMITED PTE S OIL KUO
+  :trim_name_with_common: KUOOILSPTELIMITED
+  :trim_rev_name_with_common: LIMITEDPTESOILKUO
+  :rev_name: PTE S OIL KUO
+  :trim_name: KUOOILSPTE
+  :trim_rev_name: PTESOILKUO
 - :entity_number: '13043'
   :title: 
   :call_sign: 
@@ -70,6 +78,13 @@
     :country: AE
     :postal_code: 
     :state: Sharjah
-    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port,
-      Near Mina Khalid Road, Al Khan Area
+    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port, Near Mina Khalid Road, Al Khan Area
   :ids: []
+  :name_idx: FAL OIL
+  :name_with_common: FAL OIL COMPANY LTD
+  :rev_name_with_common: LTD COMPANY OIL FAL
+  :trim_name_with_common: FALOILCOMPANYLTD
+  :trim_rev_name_with_common: LTDCOMPANYOILFAL
+  :rev_name: OIL FAL
+  :trim_name: FALOIL
+  :trim_rev_name: OILFAL

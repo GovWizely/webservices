@@ -47,6 +47,14 @@
     :state: 
     :address: Federico Boyd Avenue & 51 Street
   :ids: []
+  :name_idx: BANCO NACIONAL DE CUBA
+  :rev_name: CUBA DE NACIONAL BANCO
+  :trim_name: BANCONACIONALDECUBA
+  :trim_rev_name: CUBADENACIONALBANCO
+  :alt_names_idx: [BNC, NATIONAL BANK OF CUBA]
+  :rev_alt_names: [BNC, CUBA OF BANK NATIONAL]
+  :trim_alt_names: [BNC, NATIONALBANKOFCUBA]
+  :trim_rev_alt_names: [BNC, CUBAOFBANKNATIONAL]
 - :entity_number: '6982'
   :title: 
   :call_sign: 
@@ -60,17 +68,17 @@
   :source: *1
   :source_list_url: 
   :source_information_url: http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx
-  :name: JIM'ALE, Ahmed Nur Ali
+  :name: "JIM'ALE, Ahmed Nur Ali"
   :type: Individual
   :alt_names:
-  - JUMALI, Ahmed Ali
-  - JIMALE, Ahmad Ali
-  - JIM'ALE, Ahmad Nur Ali
-  - JUMALE, Ahmed Nur
-  - JIMALE, Ahmed Ali
-  - JIMALE, Shaykh Ahmed Nur
-  - JIMALE, Sheikh Ahmed
-  - JUMALE, Ahmed Ali
+  - 'JUMALI, Ahmed Ali'
+  - 'JIMALE, Ahmad Ali'
+  - "JIM'ALE, Ahmad Nur Ali"
+  - 'JUMALE, Ahmed Nur'
+  - 'JIMALE, Ahmed Ali'
+  - 'JIMALE, Shaykh Ahmed Nur'
+  - 'JIMALE, Sheikh Ahmed'
+  - 'JUMALE, Ahmed Ali'
   :programs:
   - SDGT
   :nationalities:
@@ -105,6 +113,46 @@
     :issue_date: '2001-10-01'
     :number: A0181988
     :type: Passport
+  :name_idx: JIMALE Ahmed Nur Ali
+  :rev_name: Ali Nur Ahmed JIMALE
+  :trim_name: JIMALEAhmedNurAli
+  :trim_rev_name: AliNurAhmedJIMALE
+  :alt_names_idx: 
+  - JUMALI Ahmed Ali
+  - JIMALE Ahmad Ali
+  - JIMALE Ahmad Nur Ali
+  - JUMALE Ahmed Nur
+  - JIMALE Ahmed Ali
+  - JIMALE Shaykh Ahmed Nur
+  - JIMALE Sheikh Ahmed
+  - JUMALE Ahmed Ali
+  :rev_alt_names: 
+  - Ali Ahmed JUMALI
+  - Ali Ahmad JIMALE
+  - Ali Nur Ahmad JIMALE
+  - Nur Ahmed JUMALE
+  - Ali Ahmed JIMALE
+  - Nur Ahmed Shaykh JIMALE
+  - Ahmed Sheikh JIMALE
+  - Ali Ahmed JUMALE
+  :trim_alt_names: 
+  - JUMALIAhmedAli
+  - JIMALEAhmadAli
+  - JIMALEAhmadNurAli
+  - JUMALEAhmedNur
+  - JIMALEAhmedAli
+  - JIMALEShaykhAhmedNur
+  - JIMALESheikhAhmed
+  - JUMALEAhmedAli
+  :trim_rev_alt_names: 
+  - AliAhmedJUMALI
+  - AliAhmadJIMALE
+  - AliNurAhmadJIMALE
+  - NurAhmedJUMALE
+  - AliAhmedJIMALE
+  - NurAhmedShaykhJIMALE
+  - AhmedSheikhJIMALE
+  - AliAhmedJUMALE
 - :entity_number: '11043'
   :title: 
   :call_sign: 
@@ -137,6 +185,14 @@
     :issue_date: 
     :number: IMO 9051648
     :type: Vessel Registration Identification
+  :name_idx: PARSHAN
+  :rev_name: PARSHAN
+  :trim_name: PARSHAN
+  :trim_rev_name: PARSHAN
+  :alt_names_idx: [IRAN BRIGHTNESS, BRIGHTNESS, MARIGOLD]
+  :rev_alt_names: [BRIGHTNESS IRAN, BRIGHTNESS, MARIGOLD]
+  :trim_alt_names: [IRANBRIGHTNESS, BRIGHTNESS, MARIGOLD]
+  :trim_rev_alt_names: [BRIGHTNESSIRAN, BRIGHTNESS, MARIGOLD]    
 - :entity_number: '521'
   :title: Executive Director, Havana International Bank
   :call_sign: 
@@ -173,3 +229,7 @@
     :issue_date: '2001-12-25'
     :number: ABC123
     :type: Passport
+  :name_idx: CHAO Lazaro R
+  :rev_name: R Lazaro CHAO
+  :trim_name: CHAOLazaroR
+  :trim_rev_name: RLazaroCHAO
