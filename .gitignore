@@ -17,3 +17,4 @@
 /tags
 /capistrano
 dump.rdb
+elasticsearch.yml
