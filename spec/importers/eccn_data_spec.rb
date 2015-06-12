@@ -62,7 +62,7 @@ describe EccnData do
 
     it 'handles "category X, part  Y" case' do
       r = importer.send(:eccn_to_url, 'Category 5, Part  2 Note 3 (b)')
-      expect(r).to eq('http://www.bis.doc.gov/index.php/forms-documents/doc_download/951-ccl5-pt2')
+      expect(r).to eq('http://www.bis.doc.gov/index.php/forms-documents/doc_download/950-ccl5-pt1')
     end
 
     it 'ignores other notes' do

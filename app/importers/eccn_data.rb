@@ -77,8 +77,8 @@ class EccnData
       'http://www.bis.doc.gov/index.php/forms-documents/doc_download/863-category-8-marine'
     when /\A9/
       'http://www.bis.doc.gov/index.php/forms-documents/doc_download/991-ccl9'
-    when /category\s+(\d)(.*part\s+(\d))?/i
-      eccn_to_url "#{Regexp.last_match(1)}000#{Regexp.last_match(3)}"
+    when /category\s+(\d)/i
+      eccn_to_url "#{Regexp.last_match(1)}"
     else
       nil
     end
