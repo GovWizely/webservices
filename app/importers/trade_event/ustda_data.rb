@@ -39,6 +39,10 @@ module TradeEvent
       source:             '',
     }.freeze
 
+    def loaded_resource
+      @loaded_resource ||= open(@resource, 'r:utf-8').read
+    end
+
     def import
       Ustda.index(events)
     end
