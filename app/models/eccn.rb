@@ -30,9 +30,9 @@ class Eccn
         eccn2:       { type: 'string', analyzer: 'title_keyword_analyzer' },
         eccn3:       { type: 'string', analyzer: 'title_keyword_analyzer' },
         eccn4:       { type: 'string', analyzer: 'title_keyword_analyzer' },
-        url0:        { type: 'string', index: 'not_analyzed' },
-        url1:        { type: 'string', index: 'not_analyzed' },
-        url2:        { type: 'string', index: 'not_analyzed' },
+        url0:        { type: 'string', analyzer: 'custom_analyzer' },
+        url1:        { type: 'string', analyzer: 'custom_analyzer' },
+        url2:        { type: 'string', analyzer: 'custom_analyzer' },
       },
     },
   }.freeze

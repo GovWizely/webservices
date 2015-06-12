@@ -47,4 +47,19 @@ describe 'ECCN API V2', type: :request do
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
   end
+
+  describe 'GET /eccns/search.json' do
+    context 'when description match parameter given' do
+      let(:params) { { description: 'forms' } }
+      before { get '/eccns/search', params, @v2_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns matches for the description field' do
+        results = JSON.parse(response.body)['results']
+        expect(results.all? {|r| r['description'].match('forms')}).to be(true)
+      end
+    end
+  end
 end
