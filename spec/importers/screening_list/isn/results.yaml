@@ -12,9 +12,9 @@
   :programs:
   - E.O. 13328 - Iran
   :name_idx: 7th of Tir
-  :rev_name: Tir of 7th
-  :trim_name: 7thofTir
-  :trim_rev_name: Tirof7th
+  :name_rev: Tir of 7th
+  :name_trim: 7thofTir
+  :name_trim_rev: Tirof7th
 - :name: Aerospace Industries Organization (AIO)
   :federal_register_notice: Vol. 70, No. 126, 07/01/05
   :start_date: '2005-06-28'
@@ -27,12 +27,12 @@
   - E.O. 13328 - Iran
   :name_idx: Aerospace Industries AIO
   :name_with_common: Aerospace Industries Organization AIO
-  :rev_name_with_common: AIO Organization Industries Aerospace
-  :trim_name_with_common: AerospaceIndustriesOrganizationAIO
-  :trim_rev_name_with_common: AIOOrganizationIndustriesAerospace
-  :rev_name: AIO Industries Aerospace
-  :trim_name: AerospaceIndustriesAIO
-  :trim_rev_name: AIOIndustriesAerospace
+  :name_rev_with_common: AIO Organization Industries Aerospace
+  :name_trim_with_common: AerospaceIndustriesOrganizationAIO
+  :name_trim_rev_with_common: AIOOrganizationIndustriesAerospace
+  :name_rev: AIO Industries Aerospace
+  :name_trim: AerospaceIndustriesAIO
+  :name_trim_rev: AIOIndustriesAerospace
 - :name: Aerospace Logistics Services
   :federal_register_notice: Vol. 72, No. 77, 4/23/07
   :start_date: '2007-04-17'
@@ -45,9 +45,9 @@
   - INKSNA
   - ISNA
   :name_idx: Aerospace Logistics Services
-  :rev_name: Services Logistics Aerospace
-  :trim_name: AerospaceLogisticsServices
-  :trim_rev_name: ServicesLogisticsAerospace
+  :name_rev: Services Logistics Aerospace
+  :name_trim: AerospaceLogisticsServices
+  :name_trim_rev: ServicesLogisticsAerospace
 - :name: Ahmad Derakhshandeh
   :federal_register_notice: Vol. 72, No. 34, 02/21/07
   :start_date: '2007-01-09'
@@ -59,9 +59,9 @@
   :programs:
   - E.O. 13328 - Iran
   :name_idx: Ahmad Derakhshandeh
-  :rev_name: Derakhshandeh Ahmad
-  :trim_name: AhmadDerakhshandeh
-  :trim_rev_name: DerakhshandehAhmad  
+  :name_rev: Derakhshandeh Ahmad
+  :name_trim: AhmadDerakhshandeh
+  :name_trim_rev: DerakhshandehAhmad
 - :name: Ahmad Vahid Dastjerdi
   :federal_register_notice: Vol. 72, No. 213, 11/05/07
   :start_date: '2007-10-25'
@@ -73,6 +73,6 @@
   :programs:
   - E.O. 13328 - Iran
   :name_idx: Ahmad Vahid Dastjerdi
-  :rev_name: Dastjerdi Vahid Ahmad
-  :trim_name: AhmadVahidDastjerdi
-  :trim_rev_name: DastjerdiVahidAhmad
+  :name_rev: Dastjerdi Vahid Ahmad
+  :name_trim: AhmadVahidDastjerdi
+  :name_trim_rev: DastjerdiVahidAhmad

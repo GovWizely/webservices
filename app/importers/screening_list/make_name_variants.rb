@@ -2,7 +2,7 @@ module ScreeningList
   module MakeNameVariants
     ##
     # index 2 forms of each name for both "name" and "alt_names" (if applicable),
-    # one with punctuation and "stopwords" removed and
+    # one with punctuation and "STOPWORDS" removed and
     # one the above plus "common" words removed.
     #
     # then store additional modified versions of the two in the following ways:
@@ -12,45 +12,55 @@ module ScreeningList
     #     3) reversed with white space removed
     #
 
+    STOPWORDS    = %w( and the los )
+    COMMON_WORDS = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+
     def make_names(doc)
-      stopwords    = %w( and the los )
-      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+      doc[:name_idx] = strip_punct(doc[:name])
+      doc[:name_idx] = filter_words(doc[:name_idx], STOPWORDS)
 
-      doc[:name_idx]      = doc[:name].gsub(/[[:punct:]]/, '')
-      doc[:name_idx]      = doc[:name_idx].split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      make_names_with_common(doc, 'name') unless (doc[:name_idx].downcase.split & COMMON_WORDS).empty?
 
-      # if there is a common word, make entries to index
-      unless (doc[:name_idx].downcase.split & common_words).empty?
-        doc[:name_with_common]          = doc[:name_idx]
-        doc[:rev_name_with_common]      = doc[:name_with_common].split.reverse.join(' ')
-        doc[:trim_name_with_common]     = doc[:name_with_common].gsub(/\s+/, '')
-        doc[:trim_rev_name_with_common] = doc[:rev_name_with_common].gsub(/\s+/, '')
-        doc[:name_idx]                  = doc[:name_idx].split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-      end
+      doc[:name_rev]      = name_rev(doc[:name_idx])
+      doc[:name_trim]     = name_trim(doc[:name_idx])
+      doc[:name_trim_rev] = name_trim(doc[:name_rev])
 
-      doc[:rev_name]      = doc[:name_idx].split.reverse.join(' ')
-      doc[:trim_name]     = doc[:name_idx].gsub(/\s+/, '')
-      doc[:trim_rev_name] = doc[:rev_name].gsub(/\s+/, '')
+      make_alt_names(doc) if doc[:alt_names].present?
+    end
 
-      if doc[:alt_names].present?
+    def make_alt_names(doc)
+      doc[:alt_idx] = strip_punct(doc[:alt_names])
+      doc[:alt_idx] = filter_words(doc[:alt_idx], STOPWORDS)
 
-        doc[:alt_names_idx]      = doc[:alt_names].map { |name| name.gsub(/[[:punct:]]/, '') }
-        doc[:alt_names_idx]      = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| stopwords.include?(word.downcase) }.join(' ') }
+      make_names_with_common(doc, 'alt') unless (doc[:alt_idx].map(&:downcase).join(' ').split & COMMON_WORDS).empty?
 
-        # if there is a common word, make entries to index
-        unless (doc[:alt_names_idx].map(&:downcase).join(' ').split & common_words).empty?
-          doc[:alt_names_with_common]    = doc[:alt_names_idx]
-          doc[:rev_alt_with_common]      = doc[:alt_names_with_common]
-          doc[:trim_alt_with_common]     = doc[:alt_names_with_common].map { |name| name.gsub(/\s+/, '') }
-          doc[:trim_rev_alt_with_common] = doc[:rev_alt_with_common].map { |name| name.gsub(/\s+/, '') }
-          doc[:alt_names_idx]            = doc[:alt_names_idx].map { |name| name.split.delete_if { |word| common_words.include?(word.downcase) }.join(' ') }
-        end
+      doc[:alt_rev]      = name_rev(doc[:alt_idx])
+      doc[:alt_trim]     = name_trim(doc[:alt_idx])
+      doc[:alt_trim_rev] = name_trim(doc[:alt_rev])
+    end
 
-        doc[:rev_alt_names]      = doc[:alt_names_idx].map { |name| name.split.reverse.join(' ') }
-        doc[:trim_alt_names]     = doc[:alt_names_idx].map { |name| name.gsub(/\s+/, '') }
-        doc[:trim_rev_alt_names] = doc[:rev_alt_names].map { |name| name.gsub(/\s+/, '') }
-      end
-      doc
+    def make_names_with_common(doc, prefix)
+      doc[:"#{prefix}_with_common"]          = doc[:"#{prefix}_idx"]
+      doc[:"#{prefix}_rev_with_common"]      = name_rev(doc[:"#{prefix}_with_common"])
+      doc[:"#{prefix}_trim_with_common"]     = name_trim(doc[:"#{prefix}_with_common"])
+      doc[:"#{prefix}_trim_rev_with_common"] = name_trim(doc[:"#{prefix}_rev_with_common"])
+      doc[:"#{prefix}_idx"]                  = filter_words(doc[:"#{prefix}_idx"], COMMON_WORDS)
+    end
+
+    def strip_punct(name)
+      name.class == String ? name.gsub(/[[:punct:]]/, '') : name.map { |n| n.gsub(/[[:punct:]]/, '') }
+    end
+
+    def filter_words(name, wordlist)
+      name.class == String ? name.split.delete_if { |n| wordlist.include?(n.downcase) }.join(' ') : name.map { |n| n.split.delete_if { |word| wordlist.include?(word.downcase) }.join(' ') }
+    end
+
+    def name_rev(name)
+      name.class == String ? name.split.reverse.join(' ') : name.map { |n| n.split.reverse.join(' ') }
+    end
+
+    def name_trim(name)
+      name.class == String ? name.gsub(/\s+/, '') : name.map { |n| n.gsub(/\s+/, '') }
     end
   end
 end

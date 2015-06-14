@@ -14,12 +14,12 @@
   :name_idx: SEMICONDUCTOR SYSTEMS INTL INC SSI
   :name_idx: SEMICONDUCTOR SYSTEMS INTL SSI
   :name_with_common: SEMICONDUCTOR SYSTEMS INTL INC SSI
-  :rev_name_with_common: SSI INC INTL SYSTEMS SEMICONDUCTOR
-  :trim_name_with_common: SEMICONDUCTORSYSTEMSINTLINCSSI
-  :trim_rev_name_with_common: SSIINCINTLSYSTEMSSEMICONDUCTOR
-  :rev_name: SSI INTL SYSTEMS SEMICONDUCTOR
-  :trim_name: SEMICONDUCTORSYSTEMSINTLSSI
-  :trim_rev_name: SSIINTLSYSTEMSSEMICONDUCTOR  
+  :name_rev_with_common: SSI INC INTL SYSTEMS SEMICONDUCTOR
+  :name_trim_with_common: SEMICONDUCTORSYSTEMSINTLINCSSI
+  :name_trim_rev_with_common: SSIINCINTLSYSTEMSSEMICONDUCTOR
+  :name_rev: SSI INTL SYSTEMS SEMICONDUCTOR
+  :name_trim: SEMICONDUCTORSYSTEMSINTLSSI
+  :name_trim_rev: SSIINTLSYSTEMSSEMICONDUCTOR
   :addresses:
   - :address: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
     :city: COPENHAGEN
@@ -37,9 +37,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: KAL TEK LABS
-  :rev_name: LABS TEK KAL
-  :trim_name: KALTEKLABS
-  :trim_rev_name: LABSTEKKAL
+  :name_rev: LABS TEK KAL
+  :name_trim: KALTEKLABS
+  :name_trim_rev: LABSTEKKAL
   :addresses:
   - :address: '250 BONITA GLEN DRIVE, #3D'
     :city: CHULA VISTA
@@ -57,9 +57,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: KATSUTA KEISUKE
-  :rev_name: KEISUKE KATSUTA
-  :trim_name: KATSUTAKEISUKE
-  :trim_rev_name: KEISUKEKATSUTA
+  :name_rev: KEISUKE KATSUTA
+  :name_trim: KATSUTAKEISUKE
+  :name_trim_rev: KEISUKEKATSUTA
   :addresses:
   - :address: 1-25-4 MINAMI-AZABU, MINATOKU
     :city: TOKYO
@@ -77,9 +77,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: KINTRACO
-  :rev_name: KINTRACO
-  :trim_name: KINTRACO
-  :trim_rev_name: KINTRACO
+  :name_rev: KINTRACO
+  :name_trim: KINTRACO
+  :name_trim_rev: KINTRACO
   :addresses:
   - :address: BERENKOOG 29
     :city: ALKMAAR
@@ -97,9 +97,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: ABELAIRAS AMANCIO J
-  :rev_name: J AMANCIO ABELAIRAS
-  :trim_name: ABELAIRASAMANCIOJ
-  :trim_rev_name: JAMANCIOABELAIRAS
+  :name_rev: J AMANCIO ABELAIRAS
+  :name_trim: ABELAIRASAMANCIOJ
+  :name_trim_rev: JAMANCIOABELAIRAS
   :addresses:
   - :address: 6486 S.W. 9 STREET
     :city: MIAMI
@@ -117,9 +117,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: ABRISHAMI ELHAM
-  :rev_name: ELHAM ABRISHAMI
-  :trim_name: ABRISHAMIELHAM
-  :trim_rev_name: ELHAMABRISHAMI
+  :name_rev: ELHAM ABRISHAMI
+  :name_trim: ABRISHAMIELHAM
+  :name_trim_rev: ELHAMABRISHAMI
   :addresses:
   - :address: 271 MONSARRAT DRIVE
     :city: DUBLIN
@@ -137,9 +137,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: ACE IAN
-  :rev_name: IAN ACE
-  :trim_name: ACEIAN
-  :trim_rev_name: IANACE
+  :name_rev: IAN ACE
+  :name_trim: ACEIAN
+  :name_trim_rev: IANACE
   :addresses:
   - :address: 4 MIMOSA WAY
     :city: PINELANDS
@@ -157,9 +157,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: ADT ANALOG DIGITAL TECHNIK
-  :rev_name: TECHNIK DIGITAL ANALOG ADT
-  :trim_name: ADTANALOGDIGITALTECHNIK
-  :trim_rev_name: TECHNIKDIGITALANALOGADT
+  :name_rev: TECHNIK DIGITAL ANALOG ADT
+  :name_trim: ADTANALOGDIGITALTECHNIK
+  :name_trim_rev: TECHNIKDIGITALANALOGADT
   :addresses:
   - :address: 8019 NIEDERSEEON, HOUSE 21
     :city:
@@ -177,9 +177,9 @@
   :source_list_url: http://www.bis.doc.gov/index.php/the-denied-persons-list
   :source_information_url: http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list
   :name_idx: AGNESE ANDREE
-  :rev_name: ANDREE AGNESE
-  :trim_name: AGNESEANDREE
-  :trim_rev_name: ANDREEAGNESE
+  :name_rev: ANDREE AGNESE
+  :name_trim: AGNESEANDREE
+  :name_trim_rev: ANDREEAGNESE
   :addresses:
   - :address: 22 RUE DU 11 NOVEMBER 1918
     :city: PANTIN

@@ -48,13 +48,13 @@
     :address: Federico Boyd Avenue & 51 Street
   :ids: []
   :name_idx: BANCO NACIONAL DE CUBA
-  :rev_name: CUBA DE NACIONAL BANCO
-  :trim_name: BANCONACIONALDECUBA
-  :trim_rev_name: CUBADENACIONALBANCO
-  :alt_names_idx: [BNC, NATIONAL BANK OF CUBA]
-  :rev_alt_names: [BNC, CUBA OF BANK NATIONAL]
-  :trim_alt_names: [BNC, NATIONALBANKOFCUBA]
-  :trim_rev_alt_names: [BNC, CUBAOFBANKNATIONAL]
+  :name_rev: CUBA DE NACIONAL BANCO
+  :name_trim: BANCONACIONALDECUBA
+  :name_trim_rev: CUBADENACIONALBANCO
+  :alt_idx: [BNC, NATIONAL BANK OF CUBA]
+  :alt_rev: [BNC, CUBA OF BANK NATIONAL]
+  :alt_trim: [BNC, NATIONALBANKOFCUBA]
+  :alt_trim_rev: [BNC, CUBAOFBANKNATIONAL]
 - :entity_number: '6982'
   :title: 
   :call_sign: 
@@ -114,10 +114,10 @@
     :number: A0181988
     :type: Passport
   :name_idx: JIMALE Ahmed Nur Ali
-  :rev_name: Ali Nur Ahmed JIMALE
-  :trim_name: JIMALEAhmedNurAli
-  :trim_rev_name: AliNurAhmedJIMALE
-  :alt_names_idx: 
+  :name_rev: Ali Nur Ahmed JIMALE
+  :name_trim: JIMALEAhmedNurAli
+  :name_trim_rev: AliNurAhmedJIMALE
+  :alt_idx:
   - JUMALI Ahmed Ali
   - JIMALE Ahmad Ali
   - JIMALE Ahmad Nur Ali
@@ -126,7 +126,7 @@
   - JIMALE Shaykh Ahmed Nur
   - JIMALE Sheikh Ahmed
   - JUMALE Ahmed Ali
-  :rev_alt_names: 
+  :alt_rev:
   - Ali Ahmed JUMALI
   - Ali Ahmad JIMALE
   - Ali Nur Ahmad JIMALE
@@ -135,7 +135,7 @@
   - Nur Ahmed Shaykh JIMALE
   - Ahmed Sheikh JIMALE
   - Ali Ahmed JUMALE
-  :trim_alt_names: 
+  :alt_trim:
   - JUMALIAhmedAli
   - JIMALEAhmadAli
   - JIMALEAhmadNurAli
@@ -144,7 +144,7 @@
   - JIMALEShaykhAhmedNur
   - JIMALESheikhAhmed
   - JUMALEAhmedAli
-  :trim_rev_alt_names: 
+  :alt_trim_rev:
   - AliAhmedJUMALI
   - AliAhmadJIMALE
   - AliNurAhmadJIMALE
@@ -186,13 +186,13 @@
     :number: IMO 9051648
     :type: Vessel Registration Identification
   :name_idx: PARSHAN
-  :rev_name: PARSHAN
-  :trim_name: PARSHAN
-  :trim_rev_name: PARSHAN
-  :alt_names_idx: [IRAN BRIGHTNESS, BRIGHTNESS, MARIGOLD]
-  :rev_alt_names: [BRIGHTNESS IRAN, BRIGHTNESS, MARIGOLD]
-  :trim_alt_names: [IRANBRIGHTNESS, BRIGHTNESS, MARIGOLD]
-  :trim_rev_alt_names: [BRIGHTNESSIRAN, BRIGHTNESS, MARIGOLD]    
+  :name_rev: PARSHAN
+  :name_trim: PARSHAN
+  :name_trim_rev: PARSHAN
+  :alt_idx: [IRAN BRIGHTNESS, BRIGHTNESS, MARIGOLD]
+  :alt_rev: [BRIGHTNESS IRAN, BRIGHTNESS, MARIGOLD]
+  :alt_trim: [IRANBRIGHTNESS, BRIGHTNESS, MARIGOLD]
+  :alt_trim_rev: [BRIGHTNESSIRAN, BRIGHTNESS, MARIGOLD]
 - :entity_number: '521'
   :title: Executive Director, Havana International Bank
   :call_sign: 
@@ -230,6 +230,6 @@
     :number: ABC123
     :type: Passport
   :name_idx: CHAO Lazaro R
-  :rev_name: R Lazaro CHAO
-  :trim_name: CHAOLazaroR
-  :trim_rev_name: RLazaroCHAO
+  :name_rev: R Lazaro CHAO
+  :name_trim: CHAOLazaroR
+  :name_trim_rev: RLazaroCHAO
