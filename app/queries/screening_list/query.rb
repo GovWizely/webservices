@@ -67,20 +67,19 @@ module ScreeningList
       names_wc_kw   = %w( name_with_common.keyword alt_with_common.keyword
                           name_rev_with_common.keyword rev_alt_name_with_common.keyword)
 
-      # search all trim names since common words aren't detected in
+      # search all names without whitespace since common words aren't detected in
       # queries with no ws
-
-      name_trims    = %w( name_trim name_trim_rev alt_trim alt_trim_rev
-                          name_trim_with_common name_trim_rev_with_common alt_trim_with_common alt_trim_rev_with_common )
+      name_no_wss    = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
+                           name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
 
       @name = @name.gsub(/[[:punct:]]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
       if (@name.downcase.split & common_words).empty?
-        single_token = names_kw + name_trims
+        single_token = names_kw + name_no_wss
         all_fields   = single_token + names
       else
-        single_token = names_wc_kw + name_trims
+        single_token = names_wc_kw + name_no_wss
         all_fields   = single_token + names_wc
       end
 

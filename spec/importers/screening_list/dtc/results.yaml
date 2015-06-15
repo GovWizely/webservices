@@ -9,8 +9,8 @@
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :name_idx: 'Juwhan Yun'
   :name_rev: 'Yun Juwhan'
-  :name_trim: 'JuwhanYun'
-  :name_trim_rev: 'YunJuwhan'
+  :name_no_ws: 'JuwhanYun'
+  :name_no_ws_rev: 'YunJuwhan'
   :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
   :id: '1857dfc050bc7adea46922f09996649de18495d7'
 - :name: Dilligas Trading Co., Inc.
@@ -22,11 +22,11 @@
   :name_idx: Dilligas Trading
   :name_with_common: Dilligas Trading Co Inc
   :name_rev_with_common: Inc Co Trading Dilligas
-  :name_trim_with_common: DilligasTradingCoInc
-  :name_trim_rev_with_common: IncCoTradingDilligas
+  :name_no_ws_with_common: DilligasTradingCoInc
+  :name_no_ws_rev_with_common: IncCoTradingDilligas
   :name_rev: Trading Dilligas
-  :name_trim: DilligasTrading
-  :name_trim_rev: TradingDilligas
+  :name_no_ws: DilligasTrading
+  :name_no_ws_rev: TradingDilligas
   :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
   :id: 'afd9dbfe97d679d161eaed68203399296abf631c'
 - :name: Brian Joseph Fleming
@@ -38,12 +38,12 @@
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :name_idx: 'Brian Joseph Fleming'
   :name_rev: 'Fleming Joseph Brian'
-  :name_trim: 'BrianJosephFleming'
-  :name_trim_rev: 'FlemingJosephBrian'
+  :name_no_ws: 'BrianJosephFleming'
+  :name_no_ws_rev: 'FlemingJosephBrian'
   :alt_idx: ['Brian Joseph McSulla']
   :alt_rev: ['McSulla Joseph Brian']
-  :alt_trim: ['BrianJosephMcSulla']
-  :alt_trim_rev: ['McSullaJosephBrian']
+  :alt_no_ws: ['BrianJosephMcSulla']
+  :alt_no_ws_rev: ['McSullaJosephBrian']
   :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
   :id: 'ba449382749d0c16fd862d7b3da698fb65b5d7aa'
 - :name: John Smith
@@ -55,11 +55,11 @@
   :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
   :name_idx: 'John Smith'
   :name_rev: 'Smith John'
-  :name_trim: 'JohnSmith'
-  :name_trim_rev: 'SmithJohn'
+  :name_no_ws: 'JohnSmith'
+  :name_no_ws_rev: 'SmithJohn'
   :alt_idx: ['Brian Smith']
   :alt_rev: ['Smith Brian']
-  :alt_trim: ['BrianSmith']
-  :alt_trim_rev: ['SmithBrian']
+  :alt_no_ws: ['BrianSmith']
+  :alt_no_ws_rev: ['SmithBrian']
   :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar_admin.html'
   :id: '5989fe6f23c0b7b07aade5e4782acbbceb57be71'

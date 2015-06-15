@@ -13,8 +13,8 @@
   - E.O. 13328 - Iran
   :name_idx: 7th of Tir
   :name_rev: Tir of 7th
-  :name_trim: 7thofTir
-  :name_trim_rev: Tirof7th
+  :name_no_ws: 7thofTir
+  :name_no_ws_rev: Tirof7th
 - :name: Aerospace Industries Organization (AIO)
   :federal_register_notice: Vol. 70, No. 126, 07/01/05
   :start_date: '2005-06-28'
@@ -28,11 +28,11 @@
   :name_idx: Aerospace Industries AIO
   :name_with_common: Aerospace Industries Organization AIO
   :name_rev_with_common: AIO Organization Industries Aerospace
-  :name_trim_with_common: AerospaceIndustriesOrganizationAIO
-  :name_trim_rev_with_common: AIOOrganizationIndustriesAerospace
+  :name_no_ws_with_common: AerospaceIndustriesOrganizationAIO
+  :name_no_ws_rev_with_common: AIOOrganizationIndustriesAerospace
   :name_rev: AIO Industries Aerospace
-  :name_trim: AerospaceIndustriesAIO
-  :name_trim_rev: AIOIndustriesAerospace
+  :name_no_ws: AerospaceIndustriesAIO
+  :name_no_ws_rev: AIOIndustriesAerospace
 - :name: Aerospace Logistics Services
   :federal_register_notice: Vol. 72, No. 77, 4/23/07
   :start_date: '2007-04-17'
@@ -46,8 +46,8 @@
   - ISNA
   :name_idx: Aerospace Logistics Services
   :name_rev: Services Logistics Aerospace
-  :name_trim: AerospaceLogisticsServices
-  :name_trim_rev: ServicesLogisticsAerospace
+  :name_no_ws: AerospaceLogisticsServices
+  :name_no_ws_rev: ServicesLogisticsAerospace
 - :name: Ahmad Derakhshandeh
   :federal_register_notice: Vol. 72, No. 34, 02/21/07
   :start_date: '2007-01-09'
@@ -60,8 +60,8 @@
   - E.O. 13328 - Iran
   :name_idx: Ahmad Derakhshandeh
   :name_rev: Derakhshandeh Ahmad
-  :name_trim: AhmadDerakhshandeh
-  :name_trim_rev: DerakhshandehAhmad
+  :name_no_ws: AhmadDerakhshandeh
+  :name_no_ws_rev: DerakhshandehAhmad
 - :name: Ahmad Vahid Dastjerdi
   :federal_register_notice: Vol. 72, No. 213, 11/05/07
   :start_date: '2007-10-25'
@@ -74,5 +74,5 @@
   - E.O. 13328 - Iran
   :name_idx: Ahmad Vahid Dastjerdi
   :name_rev: Dastjerdi Vahid Ahmad
-  :name_trim: AhmadVahidDastjerdi
-  :name_trim_rev: DastjerdiVahidAhmad
+  :name_no_ws: AhmadVahidDastjerdi
+  :name_no_ws_rev: DastjerdiVahidAhmad
