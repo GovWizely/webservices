@@ -58,7 +58,7 @@ describe 'ECCN API V2', type: :request do
 
       it 'returns matches for the description field' do
         results = JSON.parse(response.body)['results']
-        expect(results.all? {|r| r['description'].match('forms')}).to be(true)
+        expect(results.all? { |r| r['description'].match('forms') }).to be(true)
       end
     end
   end
