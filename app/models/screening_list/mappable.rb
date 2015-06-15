@@ -55,48 +55,48 @@ module ScreeningList
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names_idx:             { type:     'string',
+            alt_idx:             { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names_with_common:     { type:     'string',
+            alt_with_common:     { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # reversed
-            rev_name:                  { type:     'string',
+            name_rev:                  { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_name_with_common:      { type:     'string',
+            name_rev_with_common:      { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_alt_names:             { type:     'string',
+            alt_rev:             { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            rev_alt_with_common:       { type:     'string',
+            alt_rev_with_common:       { type:     'string',
                                          analyzer: 'standard_asciifolding_nostop',
                                          fields:   {
                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed
-            trim_name:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_name_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_alt_names:            { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_alt_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_trim:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_trim_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_trim:            { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_trim_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             # whitespace removed and reversed
-            trim_rev_name:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_rev_name_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_rev_alt_names:        { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            trim_rev_alt_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_trim_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_trim_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_trim_rev:        { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_trim_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             remarks:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                     { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

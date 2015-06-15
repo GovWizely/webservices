@@ -57,30 +57,30 @@ module ScreeningList
       common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
 
       # name variants
-      names         = %w( name_idx rev_name alt_names_idx rev_alt_names )
-      names_kw      = %w( name_idx.keyword alt_names_idx.keyword rev_name.keyword
-                          rev_alt_names.keyword )
+      names         = %w( name_idx name_rev alt_idx alt_rev )
+      names_kw      = %w( name_idx.keyword alt_idx.keyword name_rev.keyword
+                          alt_rev.keyword )
 
       # name variants with 'common' words stripped
-      names_wc      = %w( name_with_common alt_names_with_common rev_name_with_common
+      names_wc      = %w( name_with_common alt_with_common name_rev_with_common
                           rev_alt_name_with_common )
-      names_wc_kw   = %w( name_with_common.keyword alt_names_with_common.keyword
-                          rev_name_with_common.keyword rev_alt_name_with_common.keyword)
+      names_wc_kw   = %w( name_with_common.keyword alt_with_common.keyword
+                          name_rev_with_common.keyword rev_alt_name_with_common.keyword)
 
       # search all trim names since common words aren't detected in
       # queries with no ws
 
-      trim_names    = %w( trim_name trim_rev_name trim_alt_names trim_rev_alt_names
-                          trim_name_with_common trim_rev_name_with_common trim_alt_with_common trim_rev_alt_with_common )
+      name_trims    = %w( name_trim name_trim_rev alt_trim alt_trim_rev
+                          name_trim_with_common name_trim_rev_with_common alt_trim_with_common alt_trim_rev_with_common )
 
       @name = @name.gsub(/[[:punct:]]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
 
       if (@name.downcase.split & common_words).empty?
-        single_token = names_kw + trim_names
+        single_token = names_kw + name_trims
         all_fields   = single_token + names
       else
-        single_token = names_wc_kw + trim_names
+        single_token = names_wc_kw + name_trims
         all_fields   = single_token + names_wc
       end
 

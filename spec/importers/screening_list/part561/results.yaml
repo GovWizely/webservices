@@ -57,33 +57,33 @@
     :type: SWIFT/BIC
   :name_idx: BANK OF KUNLUN
   :name_with_common: BANK OF KUNLUN CO LTD
-  :rev_name_with_common: LTD CO KUNLUN OF BANK
-  :trim_name_with_common: BANKOFKUNLUNCOLTD
-  :trim_rev_name_with_common: LTDCOKUNLUNOFBANK
-  :rev_name: KUNLUN OF BANK
-  :trim_name: BANKOFKUNLUN
-  :trim_rev_name: KUNLUNOFBANK  
-  :alt_names_idx:
+  :name_rev_with_common: LTD CO KUNLUN OF BANK
+  :name_trim_with_common: BANKOFKUNLUNCOLTD
+  :name_trim_rev_with_common: LTDCOKUNLUNOFBANK
+  :name_rev: KUNLUN OF BANK
+  :name_trim: BANKOFKUNLUN
+  :name_trim_rev: KUNLUNOFBANK
+  :alt_idx:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK
-  :alt_names_with_common: 
+  :alt_with_common:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK CO LTD
-  :rev_alt_with_common: 
-  - KARAMAY URBAN CREDIT COOPERATIVES
-  - KARAMAY CITY COMMERCIAL BANK CO LTD
-  :trim_alt_with_common: 
+  :alt_rev_with_common:
+  - COOPERATIVES CREDIT URBAN KARAMAY
+  - LTD CO BANK COMMERCIAL CITY KARAMAY
+  :alt_trim_with_common:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANKCOLTD
-  :trim_rev_alt_with_common: 
-  - KARAMAYURBANCREDITCOOPERATIVES
-  - KARAMAYCITYCOMMERCIALBANKCOLTD
-  :rev_alt_names:
+  :alt_trim_rev_with_common:
+  - COOPERATIVESCREDITURBANKARAMAY
+  - LTDCOBANKCOMMERCIALCITYKARAMAY
+  :alt_rev:
   - COOPERATIVES CREDIT URBAN KARAMAY
   - BANK COMMERCIAL CITY KARAMAY
-  :trim_alt_names:
+  :alt_trim:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANK
-  :trim_rev_alt_names:
+  :alt_trim_rev:
   - COOPERATIVESCREDITURBANKARAMAY
   - BANKCOMMERCIALCITYKARAMAY
