@@ -58,11 +58,11 @@
   :name_idx: BANK OF KUNLUN
   :name_with_common: BANK OF KUNLUN CO LTD
   :name_rev_with_common: LTD CO KUNLUN OF BANK
-  :name_trim_with_common: BANKOFKUNLUNCOLTD
-  :name_trim_rev_with_common: LTDCOKUNLUNOFBANK
+  :name_no_ws_with_common: BANKOFKUNLUNCOLTD
+  :name_no_ws_rev_with_common: LTDCOKUNLUNOFBANK
   :name_rev: KUNLUN OF BANK
-  :name_trim: BANKOFKUNLUN
-  :name_trim_rev: KUNLUNOFBANK
+  :name_no_ws: BANKOFKUNLUN
+  :name_no_ws_rev: KUNLUNOFBANK
   :alt_idx:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK
@@ -72,18 +72,18 @@
   :alt_rev_with_common:
   - COOPERATIVES CREDIT URBAN KARAMAY
   - LTD CO BANK COMMERCIAL CITY KARAMAY
-  :alt_trim_with_common:
+  :alt_no_ws_with_common:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANKCOLTD
-  :alt_trim_rev_with_common:
+  :alt_no_ws_rev_with_common:
   - COOPERATIVESCREDITURBANKARAMAY
   - LTDCOBANKCOMMERCIALCITYKARAMAY
   :alt_rev:
   - COOPERATIVES CREDIT URBAN KARAMAY
   - BANK COMMERCIAL CITY KARAMAY
-  :alt_trim:
+  :alt_no_ws:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANK
-  :alt_trim_rev:
+  :alt_no_ws_rev:
   - COOPERATIVESCREDITURBANKARAMAY
   - BANKCOMMERCIALCITYKARAMAY

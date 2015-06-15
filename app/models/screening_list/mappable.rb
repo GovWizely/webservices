@@ -35,96 +35,96 @@ module ScreeningList
           },
           properties: {
             # name variants
-            name:                      { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name:                       { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_idx:                  { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_idx:                   { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_with_common:          { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_with_common:           { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_names:                 { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_names:                  { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_idx:             { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_idx:                    { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_with_common:     { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_with_common:            { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # reversed
-            name_rev:                  { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_rev:                   { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_rev_with_common:      { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            name_rev_with_common:       { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_rev:             { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_rev:                    { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_rev_with_common:       { type:     'string',
-                                         analyzer: 'standard_asciifolding_nostop',
-                                         fields:   {
-                                           keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+            alt_rev_with_common:        { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
             # whitespace removed
-            name_trim:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            name_trim_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_trim:            { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_trim_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws:                  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             # whitespace removed and reversed
-            name_trim_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            name_trim_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_trim_rev:        { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_trim_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_rev:              { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
-            remarks:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:                     { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            remarks:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            title:                      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            type:                      { type: 'string', analyzer: 'keyword_lowercase' },
-            source:                    { properties: { full_name: { type: 'string', index: 'no' },
-                                                       code:      { type: 'string', analyzer: 'keyword' } } },
-            federal_register_notice:   { type: 'string', analyzer: 'keyword' },
+            type:                       { type: 'string', analyzer: 'keyword_lowercase' },
+            source:                     { properties: { full_name: { type: 'string', index: 'no' },
+                                                        code:      { type: 'string', analyzer: 'keyword' } } },
+            federal_register_notice:    { type: 'string', analyzer: 'keyword' },
 
             ### Note to self: (I went back and forth so many times that I need a note to break me out of this loop)
             # uppercase is relevant here because
-            addresses:                 { properties: { country:         { type: 'string', analyzer: 'keyword_uppercase' } } },
+            addresses:                  { properties: { country:         { type: 'string', analyzer: 'keyword_uppercase' } } },
             # we currently use both filter/term and query/match on this field using different parameters (countries and address,
             # respectively) and we want the query/match not to care about casing.
             # This ensures the query gets analyzed and uppercased during search and the existing terms filter can remain as is.
             # I could mention that I intend to move those filter to use the filter/query but I won't. That might never happen :-P
             ###
-            ids:                       { properties: { country:         { type: 'string', analyzer: 'keyword' },
-                                                       issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
-                                                       expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
+            ids:                        { properties: { country:         { type: 'string', analyzer: 'keyword' },
+                                                        issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
+                                                        expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
 
-            nationalities:             { type: 'string', analyzer: 'keyword' },
-            citizenships:              { type: 'string', analyzer: 'keyword' },
-            dates_of_birth:            { type: 'string', analyzer: 'keyword' },
-            start_date:                { type: 'date',   format: 'YYYY-MM-dd' },
-            end_date:                  { type: 'date',   format: 'YYYY-MM-dd' },
+            nationalities:              { type: 'string', analyzer: 'keyword' },
+            citizenships:               { type: 'string', analyzer: 'keyword' },
+            dates_of_birth:             { type: 'string', analyzer: 'keyword' },
+            start_date:                 { type: 'date',   format: 'YYYY-MM-dd' },
+            end_date:                   { type: 'date',   format: 'YYYY-MM-dd' },
 
-            entity_number:             { type: 'integer' },
+            entity_number:              { type: 'integer' },
           },
         },
       }.freeze

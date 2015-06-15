@@ -31,12 +31,12 @@
   :ids: []
   :name_idx: HANIYA Ismail Abdul Salah
   :name_rev: Salah Abdul Ismail HANIYA
-  :name_trim: HANIYAIsmailAbdulSalah
-  :name_trim_rev: SalahAbdulIsmailHANIYA
+  :name_no_ws: HANIYAIsmailAbdulSalah
+  :name_no_ws_rev: SalahAbdulIsmailHANIYA
   :alt_idx: [HANIYA Ismail, HANIYYA Ismaeel]
   :alt_rev: [Ismail HANIYA, Ismaeel HANIYYA]
-  :alt_trim: [HANIYAIsmail, HANIYYAIsmaeel]
-  :alt_trim_rev: [IsmailHANIYA, IsmaeelHANIYYA]
+  :alt_no_ws: [HANIYAIsmail, HANIYYAIsmaeel]
+  :alt_no_ws_rev: [IsmailHANIYA, IsmaeelHANIYYA]
 - :entity_number: '9674'
   :title:
   :call_sign:
@@ -67,15 +67,15 @@
   :ids: []
   :name_idx: QFEISHEH Hatem
   :name_rev: Hatem QFEISHEH
-  :name_trim: QFEISHEHHatem
-  :name_trim_rev: HatemQFEISHEH
+  :name_no_ws: QFEISHEHHatem
+  :name_no_ws_rev: HatemQFEISHEH
   :alt_idx:
    [KAFEESHEH Hatem Rabah, QEFEISHA Hatem, ABU ANED Hadj Hatem]
   :alt_rev:
    [Rabah Hatem KAFEESHEH, Hatem QEFEISHA, Hatem Hadj ANED ABU]
-  :alt_trim:
+  :alt_no_ws:
    [KAFEESHEHHatemRabah, QEFEISHAHatem, ABUANEDHadjHatem]
-  :alt_trim_rev:
+  :alt_no_ws_rev:
    [RabahHatemKAFEESHEH, HatemQEFEISHA, HatemHadjANEDABU]  
 - :entity_number: '9688'
   :title:
@@ -110,12 +110,12 @@
   :ids: []
   :name_idx: YAHIA Khaled Abed
   :name_rev: Abed Khaled YAHIA
-  :name_trim: YAHIAKhaledAbed
-  :name_trim_rev: AbedKhaledYAHIA
+  :name_no_ws: YAHIAKhaledAbed
+  :name_no_ws_rev: AbedKhaledYAHIA
   :alt_idx: [YEHIA Khaled Said]
   :alt_rev: [Said Khaled YEHIA]
-  :alt_trim: [YEHIAKhaledSaid]
-  :alt_trim_rev: [SaidKhaledYEHIA]
+  :alt_no_ws: [YEHIAKhaledSaid]
+  :alt_no_ws_rev: [SaidKhaledYEHIA]
 - :entity_number: '9705'
   :title:
   :call_sign:
@@ -146,12 +146,12 @@
   :ids: []
   :name_idx: SALEH Jamal
   :name_rev: Jamal SALEH
-  :name_trim: SALEHJamal
-  :name_trim_rev: JamalSALEH
+  :name_no_ws: SALEHJamal
+  :name_no_ws_rev: JamalSALEH
   :alt_idx: [NASSER Jamal Talab Mohammad Saleh, SALEH Jamal Talab]
   :alt_rev: [Saleh Mohammad Talab Jamal NASSER, Talab Jamal SALEH]
-  :alt_trim: [NASSERJamalTalabMohammadSaleh, SALEHJamalTalab]
-  :alt_trim_rev: [SalehMohammadTalabJamalNASSER, TalabJamalSALEH]
+  :alt_no_ws: [NASSERJamalTalabMohammadSaleh, SALEHJamalTalab]
+  :alt_no_ws_rev: [SalehMohammadTalabJamalNASSER, TalabJamalSALEH]
 - :entity_number: '9712'
   :title:
   :call_sign:
@@ -180,12 +180,12 @@
   :ids: []
   :name_idx: SHIHAB Mohammed
   :name_rev: Mohammed SHIHAB
-  :name_trim: SHIHABMohammed
-  :name_trim_rev: MohammedSHIHAB
+  :name_no_ws: SHIHABMohammed
+  :name_no_ws_rev: MohammedSHIHAB
   :alt_idx: [SHEHAB Mohamed Abed Hadi Rahman]
   :alt_rev: [Rahman Hadi Abed Mohamed SHEHAB]
-  :alt_trim: [SHEHABMohamedAbedHadiRahman]
-  :alt_trim_rev: [RahmanHadiAbedMohamedSHEHAB]
+  :alt_no_ws: [SHEHABMohamedAbedHadiRahman]
+  :alt_no_ws_rev: [RahmanHadiAbedMohamedSHEHAB]
 - :entity_number: '9715'
   :title:
   :call_sign:
@@ -212,5 +212,5 @@
   :ids: []
   :name_idx: JARRAR Khaledah
   :name_rev: Khaledah JARRAR
-  :name_trim: JARRARKhaledah
-  :name_trim_rev: KhaledahJARRAR
+  :name_no_ws: JARRARKhaledah
+  :name_no_ws_rev: KhaledahJARRAR

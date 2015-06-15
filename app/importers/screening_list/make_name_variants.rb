@@ -16,39 +16,40 @@ module ScreeningList
     COMMON_WORDS = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
 
     def make_names(doc)
-      doc[:name_idx] = strip_punct(doc[:name])
+      doc[:name_idx] = strip(doc[:name], 'punct')
       doc[:name_idx] = filter_words(doc[:name_idx], STOPWORDS)
 
       make_names_with_common(doc, 'name') unless (doc[:name_idx].downcase.split & COMMON_WORDS).empty?
 
-      doc[:name_rev]      = name_rev(doc[:name_idx])
-      doc[:name_trim]     = name_trim(doc[:name_idx])
-      doc[:name_trim_rev] = name_trim(doc[:name_rev])
+      doc[:name_rev]       = name_rev(doc[:name_idx])
+      doc[:name_no_ws]     = strip(doc[:name_idx], 'whitespace')
+      doc[:name_no_ws_rev] = strip(doc[:name_rev], 'whitespace')
 
       make_alt_names(doc) if doc[:alt_names].present?
     end
 
     def make_alt_names(doc)
-      doc[:alt_idx] = strip_punct(doc[:alt_names])
+      doc[:alt_idx] = strip(doc[:alt_names], 'punct')
       doc[:alt_idx] = filter_words(doc[:alt_idx], STOPWORDS)
 
       make_names_with_common(doc, 'alt') unless (doc[:alt_idx].map(&:downcase).join(' ').split & COMMON_WORDS).empty?
 
-      doc[:alt_rev]      = name_rev(doc[:alt_idx])
-      doc[:alt_trim]     = name_trim(doc[:alt_idx])
-      doc[:alt_trim_rev] = name_trim(doc[:alt_rev])
+      doc[:alt_rev]       = name_rev(doc[:alt_idx])
+      doc[:alt_no_ws]     = strip(doc[:alt_idx], 'whitespace')
+      doc[:alt_no_ws_rev] = strip(doc[:alt_rev], 'whitespace')
     end
 
     def make_names_with_common(doc, prefix)
-      doc[:"#{prefix}_with_common"]          = doc[:"#{prefix}_idx"]
-      doc[:"#{prefix}_rev_with_common"]      = name_rev(doc[:"#{prefix}_with_common"])
-      doc[:"#{prefix}_trim_with_common"]     = name_trim(doc[:"#{prefix}_with_common"])
-      doc[:"#{prefix}_trim_rev_with_common"] = name_trim(doc[:"#{prefix}_rev_with_common"])
-      doc[:"#{prefix}_idx"]                  = filter_words(doc[:"#{prefix}_idx"], COMMON_WORDS)
+      doc[:"#{prefix}_with_common"]           = doc[:"#{prefix}_idx"]
+      doc[:"#{prefix}_rev_with_common"]       = name_rev(doc[:"#{prefix}_with_common"])
+      doc[:"#{prefix}_no_ws_with_common"]     = strip(doc[:"#{prefix}_with_common"], 'whitespace')
+      doc[:"#{prefix}_no_ws_rev_with_common"] = strip(doc[:"#{prefix}_rev_with_common"], 'whitespace')
+      doc[:"#{prefix}_idx"]                   = filter_words(doc[:"#{prefix}_idx"], COMMON_WORDS)
     end
 
-    def strip_punct(name)
-      name.class == String ? name.gsub(/[[:punct:]]/, '') : name.map { |n| n.gsub(/[[:punct:]]/, '') }
+    def strip(name, target)
+      pattern = target == 'punct' ? /[[:punct:]]/ : /\s+/
+      name.class == String ? name.gsub(pattern, '') : name.map { |n| n.gsub(pattern, '') }
     end
 
     def filter_words(name, wordlist)
@@ -57,10 +58,6 @@ module ScreeningList
 
     def name_rev(name)
       name.class == String ? name.split.reverse.join(' ') : name.map { |n| n.split.reverse.join(' ') }
-    end
-
-    def name_trim(name)
-      name.class == String ? name.gsub(/\s+/, '') : name.map { |n| n.gsub(/\s+/, '') }
     end
   end
 end

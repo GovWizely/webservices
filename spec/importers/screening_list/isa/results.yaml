@@ -37,11 +37,11 @@
   :name_idx: KUO OIL S PTE
   :name_with_common: KUO OIL S PTE LIMITED
   :name_rev_with_common: LIMITED PTE S OIL KUO
-  :name_trim_with_common: KUOOILSPTELIMITED
-  :name_trim_rev_with_common: LIMITEDPTESOILKUO
+  :name_no_ws_with_common: KUOOILSPTELIMITED
+  :name_no_ws_rev_with_common: LIMITEDPTESOILKUO
   :name_rev: PTE S OIL KUO
-  :name_trim: KUOOILSPTE
-  :name_trim_rev: PTESOILKUO
+  :name_no_ws: KUOOILSPTE
+  :name_no_ws_rev: PTESOILKUO
 - :entity_number: '13043'
   :title: 
   :call_sign: 
@@ -83,8 +83,8 @@
   :name_idx: FAL OIL
   :name_with_common: FAL OIL COMPANY LTD
   :name_rev_with_common: LTD COMPANY OIL FAL
-  :name_trim_with_common: FALOILCOMPANYLTD
-  :name_trim_rev_with_common: LTDCOMPANYOILFAL
+  :name_no_ws_with_common: FALOILCOMPANYLTD
+  :name_no_ws_rev_with_common: LTDCOMPANYOILFAL
   :name_rev: OIL FAL
-  :name_trim: FALOIL
-  :name_trim_rev: OILFAL
+  :name_no_ws: FALOIL
+  :name_no_ws_rev: OILFAL
