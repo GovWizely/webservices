@@ -20,6 +20,15 @@ We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fullte
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
+Webservices uses foreman to start all necessary services in development environments, including elasticsearch. elasticsearch attempts to use ./elasticsearch.yml as its config file, but that file doesn't actually exist in the repository. You must symlink your system's actual elasticsearch config file to ./elasticsearch.yml. If using homebrew on OSX, you can do this as follows:
+
+    $ brew info elasticsearch
+    ...
+    Or, if you don't want/need launchctl, you can just run:
+        elasticsearch --config=/path/to/config/elasticsearch.yml
+
+    $ ln -s /path/to/config/elasticsearch.yml .
+
 ### Redis
 
 You'll need to have redis installed on your machine. `brew install redis`, `apt-get install redis-server`, etc.
@@ -41,11 +50,11 @@ Fire up a server and try it all out.
 
 <http://127.0.0.1:3000/market_research_library/search?countries=HU,CA>
 
-### Tests
-
-These require an [ElasticSearch](http://www.elasticsearch.org/) server to be running.
+### Specs
 
     bundle exec rspec
+
+Elasticsearch must be running. It's easiest to just `foreman start -f Procfile.dev`.
 
 ### Code Coverage
 
