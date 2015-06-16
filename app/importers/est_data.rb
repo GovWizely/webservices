@@ -29,6 +29,7 @@ class EstData
 
   private
 
+  # :nocov:
   def fetch_data
     headless_login
     mechanize_agent.get(@resource).body
@@ -48,6 +49,7 @@ class EstData
   def mechanize_agent
     @mechanize_agent ||= Mechanize.new
   end
+  # :nocov:
 
   def process_article_info(article_hash)
     article = remap_keys COLUMN_HASH, article_hash
