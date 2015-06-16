@@ -1,4 +1,4 @@
-class EmenuBsp
+class BusinessServiceProvider
   include Indexable
 
   self.settings = {

@@ -1,16 +1,16 @@
 require 'spec_helper'
 
-describe 'Emenu BSP API V1', type: :request do
+describe 'Business Service Providers API V1', type: :request do
   before(:all) do
-    EmenuBsp.recreate_index
-    EmenuBspData.new(
-      "#{Rails.root}/spec/fixtures/emenu_bsp_articles/emenu_bsp_articles.json").import
+    BusinessServiceProvider.recreate_index
+    BusinessServiceProviderData.new(
+      "#{Rails.root}/spec/fixtures/business_service_providers/articles.json").import
   end
 
-  describe 'GET /emenu_bsps/search.json' do
+  describe 'GET /business_service_providers/search.json' do
     context 'when search parameters are empty' do
-      let(:all_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/emenu_bsps/all_results.json").read }
-      before { get '/emenu_bsps/search', {} }
+      let(:all_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/business_service_providers/all_results.json").read }
+      before { get '/business_service_providers/search', {} }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -26,11 +26,11 @@ describe 'Emenu BSP API V1', type: :request do
     end
   end
 
-  describe 'GET /emenu_bsps/search.json' do
+  describe 'GET /business_service_providers/search.json' do
     context 'when one document matches a query and filter' do
-      let(:one_match) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/emenu_bsps/one_match.json").read }
+      let(:one_match) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/business_service_providers/one_match.json").read }
       let(:params) { { q: 'consult', ita_offices: 'el salvador' } }
-      before { get '/emenu_bsps/search', params }
+      before { get '/business_service_providers/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'

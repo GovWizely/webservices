@@ -1,4 +1,4 @@
-class EmenuBspQuery < Query
+class BusinessServiceProviderQuery < Query
   setup_query(
     q:      %i(company_description company_name contact_name),
     query:  %i(),
