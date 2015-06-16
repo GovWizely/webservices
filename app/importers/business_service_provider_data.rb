@@ -1,6 +1,6 @@
 require 'open-uri'
 
-class EmenuBspData
+class BusinessServiceProviderData
   include Importer
   ENDPOINT = 'http://emenuapps.ita.doc.gov/ePublic/bsp/alljson/en/bsp.xml'
 
@@ -21,7 +21,7 @@ class EmenuBspData
   def import
     doc = JSON.parse(open(@resource, 'r:UTF-8').read)
     articles = doc['bsps']['bsp'].map { |article_hash| process_article_info article_hash }
-    EmenuBsp.index articles
+    model_class.index(articles)
   end
 
   private
