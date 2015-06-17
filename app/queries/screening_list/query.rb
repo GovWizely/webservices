@@ -24,7 +24,7 @@ module ScreeningList
       @start_date = options[:start_date] if options[:start_date].present?
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
-      @fuzzy_name = true if options[:fuzzy_name].present?
+      @fuzzy_name = true if options[:fuzzy_name].present? && options[:fuzzy_name].try(:downcase) == 'true'
     end
 
     def generate_query(json)

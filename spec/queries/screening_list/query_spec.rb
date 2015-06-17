@@ -25,14 +25,14 @@ describe ScreeningList::Query do
       end
 
       context 'and fuzzy_name is true' do
-        let(:query) { described_class.new(name: 'mohamed', fuzzy_name: true) }
+        let(:query) { described_class.new(name: 'mohamed', fuzzy_name: 'true') }
         let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_name_and_fuzzy.json").read }
         it 'generates search body with name' do
           expect(JSON.parse(query.generate_search_body)).to eq(search_body)
         end
 
         context 'and name in "common words"' do
-          let(:query) { described_class.new(name: 'company', fuzzy_name: true) }
+          let(:query) { described_class.new(name: 'company', fuzzy_name: 'true') }
           let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_name_and_fuzzy_and_common_word.json").read }
           it 'generates search body with name' do
             expect(JSON.parse(query.generate_search_body)).to eq(search_body)
