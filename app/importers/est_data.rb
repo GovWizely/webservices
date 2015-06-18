@@ -21,9 +21,8 @@ class EstData
   end
 
   def import
-    data = JSON.parse(fetch_data)
+    data = fetch_data
     articles = data.map { |article_hash| process_article_info article_hash }
-
     Est.index articles
   end
 
@@ -32,7 +31,9 @@ class EstData
   # :nocov:
   def fetch_data
     headless_login
-    mechanize_agent.get(@resource).body
+    result = []
+    result.concat(current_page_data) until current_page_empty?
+    result
   end
 
   def headless_login
@@ -40,14 +41,28 @@ class EstData
     token_form.password = web_auth
     # 1st login step using web auth.
     login_form = mechanize_agent.submit(token_form, token_form.buttons.first).form
-    login_form.field_with(name: 'user[email]').value = username
-    login_form.field_with(name: 'user[password]').value = password
-    # 2nd login step using username + password.
-    mechanize_agent.submit(login_form, login_form.buttons.first) # No need to do any actions in the returned page.
+    if login_form.present? # if the session is saved no login form will be presented.
+      login_form.field_with(name: 'user[email]').value = username
+      login_form.field_with(name: 'user[password]').value = password
+      # 2nd login step using username + password.
+      # No need to do any actions in the returned page.
+      mechanize_agent.submit(login_form, login_form.buttons.first)
+    end
   end
 
   def mechanize_agent
     @mechanize_agent ||= Mechanize.new
+  end
+
+  def current_page_empty?
+    @page ||= 1
+    @page_data = JSON.parse(mechanize_agent.get(@resource + "?page=#{@page}").body)
+    @page += 1
+    @page_data.blank?
+  end
+
+  def current_page_data
+    @page_data
   end
   # :nocov:
 
