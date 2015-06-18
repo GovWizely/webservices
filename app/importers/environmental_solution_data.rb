@@ -23,7 +23,7 @@ class EnvironmentalSolutionData
   def import
     data = fetch_data
     articles = data.map { |article_hash| process_article_info article_hash }
-    EnvironmentalSolution.index articles
+    model_class.index articles
   end
 
   private
