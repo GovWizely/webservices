@@ -11,6 +11,9 @@ if ::File.exist?("#{release_path}/config/initializers/airbrake.rb")
   run "cd #{release_path} ; bundle exec rake airbrake:deploy"
 end
 
+Chef::Log.info('Creating new indices')
+run "cd #{release_path} ; bundle exec rake db:create"
+
 Chef::Log.info('Recreating indices with modified mappings')
 run "cd #{release_path} ; bundle exec rake ita:recreate_indices_with_modified_mappings"
 
