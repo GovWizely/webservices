@@ -7,7 +7,7 @@ class EccnData
 
   EXPECTED_CSV_HEADERS = %w(description eccn1 eccn2 eccn3 eccn4 eccn5)
 
-  ENDPOINT = "#{Rails.root}/data/eccns/eccn.descs.2015.05.20.csv"
+  ENDPOINT = "#{Rails.root}/data/eccns/ECCN_Descriptions_2015_06_16.txt"
 
   COLUMN_HASH = {
     eccn1: :eccn0,
@@ -22,7 +22,8 @@ class EccnData
   end
 
   def import
-    rows = CSV.parse(open(@resource, 'r:ISO-8859-1').read)
+    file_contents = open(@resource, 'r:ISO-8859-1').read
+    rows = CSV.parse(file_contents, col_sep: "\t", quote_char: '"')
 
     if rows[0].map(&:downcase) != EXPECTED_CSV_HEADERS
       fail "'#{rows[0]}' are not the headers we expect"

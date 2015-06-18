@@ -1,6 +1,5 @@
 module ScreeningList
   module GenerateFuzzyNameQuery
-
     def generate_fuzzy_name_query(json)
       stopwords    = %w( and the los )
       common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
@@ -65,5 +64,3 @@ module ScreeningList
     end
   end
 end
-
-

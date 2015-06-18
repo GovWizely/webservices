@@ -1,0 +1,2953 @@
+Description	ECCN1	ECCN2	ECCN3	ECCN4	ECCN5
+"Ablative liners, thrust or combustion chambers"	9A106a	9A619c	9A619e		
+Abrin	1C351d1				
+Absolute reflectance measurement equipment	6B004a				
+Absorbers of electromagnetic waves	1C001				
+"Absorbers, hair type"	1C001a Note 1a				
+"Absorbers, non-planar & planar"	1C001a Note 1	1C001c	1C001c		
+Absorption columns	2B350e				
+Accelerators (electro-magnetic radiation)	3A101b				
+"Accelerators or coprocessors, graphics"	4A003d				
+Accelerometer axis align stations	7B003	7B101			
+Accelerometer test station	7B003	7B101			
+Accelerometers & components therefor	7A101				
+Accelerometers & accelerometer components	7A001				
+Acoustic beacons	6A001a1b				
+Acoustic beam forming software	6D003a1				
+"Acoustic hydrophone arrays, towed"	6A001a2b				
+Acoustic location & object detection systems or transmitting and receiving arrays	6A001a1b				
+"Acoustic, marine, terrestrial equipment"	6A991				
+"Acoustic mounts, noise reduction equipment for vessels"	8A002o3a				
+Acoustic-optic signal processing devices	3A001c3				
+Acoustic positioning systems	6A001a1d				
+Acoustic projectors	6A001a1c				
+Acoustic seabed survey equipment	6A001a1a				
+"Acoustic systems, diver deterrent"	8A002r				
+"Acoustic systems, equipment, radar, parts ? for military not on USML"	6A611	3A611			
+"Acoustic systems, marine"	6A001a				
+Acoustic transducers	6A001a2c				
+Acoustic underwater communications systems	5A001b1				
+Acoustic vibration test equipment	9B006				
+Acoustic wave devices	3A001c				
+Acoustic-wave device manufacturing equipment and systems	3B991b Note				
+Active flight control system software	7D003e				
+Active flight control system technology	7E004b				
+Active magnetic bearing systems	2A001c				
+Active acoustic systems	6A001a1				
+Actively cooled mirrors	6A005e1				
+"Acoustic systems, equipment, radar, parts, components, accessories for military"	6A611	3A611			
+Adaptive control software	2D992a				
+Adaptive control software	2D002b2				
+ADCs (analog-to-digital converters)	3A101a				
+ADCs (analog-to-digital converters)	3A001a5				
+ADCs (analog-to-digital converters)	4A003e				
+Aero gas turbine engine/assemblies/component test software	9D004b	9D619a			
+Aero gas turbine engines	9A001	9A619a			
+Aerosol challenge testing chambers	2B352h				
+Aerosol generating units specially designed for fitting to the systems specified in 2B352.i.1 or .i.2	2B352i3				
+Aflatoxins	1C351d2				
+African horse sickness virus	1C352a17				
+African swine fever virus (animal pathogens)	1C352a1				
+Agitators (chemical manufacturing)	2B350b				
+"AHRS (Attitude Heading Reference Systems), source code"	7D002				
+Air traffic control software	6D003h1				
+Air independent power systems (for underwater use)	8A002j				
+Air compressors and filtration systems designed for filling air cylinders	8A992l				
+Air Traffic Control software application programs	6D993				
+Airtight vaults	0A981				
+Airborne altimeters	7A006	9A610v			
+Airborne altimeters	7A106	9A610v			
+Airborne communication equipment	7A994				
+Airborne radar equipment	6A998				
+Air-cooled diesel engines and engine blocks for armored vehicles	0A606				
+Aircraft	9A610				
+"Aircraft, civil"	9A991b				
+"Aircraft, demilitarized"	9A991a	9A610			
+"Aircraft, n.e.s."	9A991	9A610			
+"Aircraft, trainer"	9A610a				
+Aircraft breathing equipment and parts	9A991e	9A610g			
+Aircraft (military) pressurized breathing equipment	9A610g				
+Aircraft inertial navigation systems & equipment	7A103a				
+Aircraft inertial navigation systems & equipment	7A003				
+Aircraft parts and components	9A991d	9A610x			
+Aircraft wing folding system software	0D521 No 3				
+Aircraft wing folding system technology	0E521 No 2				
+Alexandrite lasers	6A005c2b				
+Align & expose step & repeat equipment (wafer processing)	3B001f1				
+Alignment equipment for equipment controlled by 7A	7B001				
+"Alkylphenylene ethers or thio-ethers, as lubricating fluids"	1C006b1				
+"Alloy strips, magnetic"	1C003c				
+Alloyed materials production systems and components	1B002				
+Alloyed metal materials in powder or particulate form	1C002b				
+"Alloyed metal materials in the form of uncomminuted flakes, ribbons, or thin rods"	1C002c				
+"Alloys, aluminum"	1C202a				
+"Alloys, aluminum"	1C002a2d				
+"Alloys, magnesium"	1C002a2e				
+"Alloys, metal powder or particulate form"	1C002b				
+"Alloys, nickel"	1C002a2a				
+"Alloys, niobium"	1C002a2b				
+"Alloys, titanium"	1C202b				
+"Alpha-emitting radionuclides, compounds, mixtures, products or devices"	1C236				
+Alternators for ground vehicles	0A606y2				
+"Altimeters, airborne"	7A006	9A610v			
+"Altimeters, radar or laser types"	7A106	9A610v			
+Alumina fibers	1C010c Note 1				
+Aluminides	1C002a1				
+"Aluminides, nickel"	1C002a1a				
+"Aluminides, titanium"	1C002a1b				
+Aluminum alloys	1C002a2d				
+Aluminum alloy/powder or particulate form	1C002b1d				
+Aluminum alloys as tubes/solid forms/forgings	1C202a				
+Aluminum electroplating equipment	2B999i				
+"Aluminum gallium nitride (AlGaN) ?substrates?, ingots, boules, or other preforms of those materials"	3C005				
+"Aluminum nitride (AlN) ?substrates?, ingots, boules, or other preforms of those materials"	3C005				
+Aluminum organo-metallic compounds	3C003				
+"Aluminum powder, spherical or spheroidal"	1C111a1				
+Aluminum powder (spherical) production equipment	1B102				
+"Amalgam electrolysis cells, lithium isotope separation"	1B233b3				
+"Amalgam pumps, lithium and/or mercury"	1B233b2				
+"Ammonia, aqueous"	1C980				
+Ammonium bifluoride	see ammonium hydrogen fluoride	1C350d1			
+Ammonium hydrogen fluoride	1C350d1				
+"Ammonium nitrate, including certain fertilizers containing ammonium nitrate"	1C997				
+Ammunition hand-loading equipment	0B986				
+Amorphous alloy strips	1C003				
+"Amplifiers, microwave solid state"	3A001b4				
+"Amplifiers, pulse"	3A999d				
+Analog computers	4A101				
+Analog-to-digital converters	3A101a				
+"Analog-to-digital converters, integrated circuits"	3A001a5				
+Analog-to-digital conversion equipment	4A003e				
+"Analyzers, network"	3A002e				
+"Analyzers, spectrum"	3A002c1				
+Andean potato latent virus (Potato Andean latent tymovirus)	1C354c1				
+Andes virus	1C351a1				
+Angular displacement measuring instruments	2B206c				
+Angular measuring instruments	2B006b2				
+Angular measuring instruments	2B206				
+Angular-linear inspection equipment (hemishells)	2B206				
+Angular-linear inspection equipment (hemishells)	2B006c				
+Angular rate sensors	7A002				
+Animal pathogens	1C352				
+Annealing or recrystallizing equipment	3B991b1c1				
+"Antennae, phased array"	5A001d				
+"Antennae, phased array (for radar)"	6A008e				
+Anti-friction bearings and bearing systems	2A001				
+"Anti-vibration mounts (noise reduction), civil vessels"	8A002o3a				
+Antimony hydrides	3C004				
+Application Specific Integrated Circuits (ASICs)	3A611f	3A611y14			
+Aramid fibers & filamentary materials	1C210a				
+Aramid fibers & filamentary materials	1C010a				
+Arc remelt & casting furnaces	2B227a				
+Argon ion lasers	6A205a				
+Argon ion lasers	6A005a				
+Armor body (hard)	1A005b				
+Armor body (soft)	1A005a				
+Armor plate (for hard body armor)	1A613	1A005b			
+Armor plate drilling machines	2B018a				
+Armor plate planing machines	2B018b				
+Armor plate quenching presses	2B018c				
+Armor (for vehicles)	0A606b2b				
+"Arms machinery, equipment, gear, parts, and accessories"	2B018				
+Arms (small) chambering machines	2B018o				
+Arms (small) deep hole drilling machines and drills therefor	2B018p				
+Arms (small) rifling machines	2B018q				
+Arms (small) spill boring machines	2B018r				
+Aromatic polyimides	1C008a3				
+Aromatic polyamide-imide	1C008a2				
+Aromatic polyetherimides	1C008a4				
+Array processor microcircuits	3A001a3 Note				
+Array processors/assemblies	4A004				
+Array processors/assemblies	4A003				
+"Arrays of aerosol generating units or spray booms, specially designed for fitting to aircraft, ?lighter than air vehicles,? or ?UAVs?"	2B352h2				
+Arsenic trichloride	1C350b1				
+Arsenic hydrides	3C004				
+Asphalt paving mixtures	1C980				
+ASICs (Application Specific Integrated Circuits)	3A611f	3A611y14			
+Aspheric optical elements	6A004e				
+Assemblies to enhance performance by aggregation of computing elements	4A994c				
+Asynchronous transfer mode (ATM) equipment	5A991c10d				
+"Asynchronous transfer mode (ATM), technology for the development of equipment employing"	5E001c1				
+Atomic frequency standards	3A002g				
+Atomic transition solid state lasers	6A005a	6A005b			
+"Attitude Heading Reference Systems (AHRS), source code software"	7D002				
+Attitude control equipment for missiles	7A116				
+Audio selector panels (military aircraft)	9A610y3				
+Audio selector panels (submersible vessels)	8A620y11				
+Audio selector panels (surface vessels of war)	8A609y11				
+Aujeszky? disease virus (Porcine herpes virus)	1C352a6				
+"Austenitic stainless steel plate, valves, piping, tanks and vessels"	2B999n				
+"Autoclave temperature, pressure or atmosphere regulation technology"	1E103				
+"Automated control systems, submersible vehicles"	8A002b				
+Automatic drug injection systems	0A981				
+"Automotive, diesel, and marine engine lubricating oil"	1C980				
+Avian influenza virus	1C352a2				
+Aviation engine lubricating oil	1C980				
+"Avionic equipment, parts, and components"	7A994				
+"Avionic systems, equipment, parts ? for military not on USML"	7A611	3A611			
+Avionics EMP/EMI protection technology	7E102				
+Axles for ground vehicles	0A606y3				
+Bacillus anthracis	1C351c1				
+"Backshells, electric connector"	3A611y9				
+Bacteria	1C351c				
+Bacteria	1C354a				
+Bacteria	1C352b				
+Balancing machines	2B119a				
+Balancing machines	7A104a				
+Balancing instrumentation	7A104b				
+"Balancing machines, centrifugal multiplane"	2B229				
+"Balancing machines, centrifugal multiplane"	2B999m				
+"Ball bearings, precision hardened steel and tungsten carbide"	1C999a				
+"Ball bearings, Radial"	2A101				
+Ball & solid roller bearings	2A001a				
+"Band-pass filters, tunable"	3A001b5				
+Barium metal vapor lasers	6A005b				
+Batch mixers	1B117				
+Bathymetric survey systems or transmitting and receiving arrays	6A001a1b				
+"Batons, shock"	0A985				
+"Batons, spiked"	0A983				
+Batteries (ground vehicles)	0A606y4				
+Batteries (lead-acid and nickel-cadmium) for military aircraft	9A610y24				
+"Batteries, thermal"	9A604				
+Bay cable systems	6A001a2e				
+Bay cable systems software	6D003a3				
+Bayonets	0A918b				
+Beacons (underwater)	9A610y20				
+"Beam lead bonders, stored program controlled equipment"	3B991b3b				
+Beam steering mirrors	6A004a4				
+Beamforming techniques	6A001a2c				
+Bearing pullers for gas turbine engines	9B619y				
+Bearings (anti-friction) and bearing systems	2A001				
+"Bearings (e.g., ball, roller, wheel) ? for ground vehicles"	0A606y5				
+"Bearings, ball & solid roller"	2A001a				
+"Bearings, (e.g., ball, roller, wheel) for ground vehicles"	0A606y5				
+"Bearings, high precision/temperature/special"	2A001				
+"Bearings, magnetic (active)"	2A001c				
+"Bearings, precision hardened steel and tungsten carbide"	1C999a				
+Bellows forming dies	2B999b				
+Bellows manufacturing equipment	2B999b				
+Bellows seal valves	2A226				
+Bellows seal valves	2B350g				
+"Bellows sealed valves, n.e.s."	2A999				
+Bellows-forming mandrels	2B228c				
+Bellows-forming dies	2B228c				
+Bellows-sealed scroll-type compressors	2B233				
+Bellows-sealed scroll-type vacuum pumps	2B233				
+Benzilic acid	1C350b2				
+"Beryllium metal, alloys, compounds, or manufactures"	1C230				
+Beryllium metal particulate	1C111a2a4				
+Beryllium/beryllium substrate blanks	6C004d				
+"Biological containment facilities, ACDP level 3 or 4"	2B352a				
+Biological isolators	2B352g2				
+Biological manufacturing equipment & facilities	2B352				
+Biological safety cabinets	2B352g2				
+Bismaleimides	1C008a1				
+Bismuth	1C229				
+"Bladders for aircraft/aerospace, fuel"	1A001a	9A991d	9A610x		
+"Bladders for aircraft/aerospace/missiles, fuel"	1A001c	9A610x			
+"Blanks, beryllium/beryllium (Be/Be) deposited material"	6C004d				
+"Blanks, Zinc selenide (ZnSe) substrate"	6C004a				
+"Blanks, Zinc sulphide (ZnS) substrate"	6C004a				
+Bluetongue virus	1C352a3				
+Boats	8A992f				
+Body armor (hard and soft)	1A005				
+"Boilers, Marine"	8A918				
+"Bombs, smoke"	1A984				
+Bonding equipment	3B991b3b				
+"Boring equipment, large"	2B999h1				
+Boring machines (CNC)	2B001				
+Boring machines (CNC)	2B201				
+Boron	C011b				
+Boron alloys particulate	1C011b				
+Boron & boron compounds	1C225				
+Boron fibers	1C010c Note 3				
+Bottom cable systems	6A001a2e				
+Bottom cable systems software	6D003a3				
+Botulinum toxin	1C351d3				
+Boules of electro-optic materials	6C004b				
+"Brake discs, rotors, drums, calipers, cylinders, pads, shoes for ground vehicles"	0A606y1				
+Brake pads (steel) for military aircraft	9A610y19				
+"Brayton cycle engine, air independent"	8A002j1				
+"Breathing equipment and parts, pressurized aircraft"	9A991e	9A610g			
+Bridge (self-launching) components for deployment by ground vehicles	0A606f				
+"Bridges & gateways, telecommunication"	5A991b4a				
+"Bridges & gateways, telecommunication"	5A991c9				
+Brucella abortus	1C351c2				
+Brucella melitensis	1C351c3				
+Brucella suis	1C351c4				
+"BTAT (Bis(2,2,2-trinitroethyl)-3,6-diaminotetrazine)"	Annex to Category 1 List of Explosives 47a				
+Buckshot shotgun shells	0A984				
+Bulk acoustic wave devices	3A001c2				
+"Bulk fluoride glass, low optic absorption"	6C004e2				
+Bulletproof and bullet resistant vests	1A005				
+Burkholderia mallei (Pseudomonas mallei)	1C351c5				
+Burkholderia pseudomallei (Pseudomonas pseudomallei)	1C351c6				
+Butacene	1C111c1				
+"Cables, cable assembles, and connectors ? for"	0A606y6				
+Cable systems for communications to detect surreptitious intrusion	5A002a8				
+"Cables, Optical fiber"	5A001c				
+Cables with surreptitious intrusion detection	5A002a7				
+CAD (Computer-aided-design) software for semiconductors	3D003				
+Cadmium telluride (CdTe) single crystals/epitaxial wafers	6C002b				
+Cadmium zinc telluride (CdZnTe) single crystals & epitaxial wafers	6C002b				
+Calcium	1C227				
+Calcium fluoride (CaF2) made/coated crucibles	2A225a1				
+Calcium zirconate (metazirconate) (Ca2ZrO3) crucibles	2A225a2				
+"Calibration, test or alignment equipment for equipment controlled by 7A"	7B001				
+"Camera equipment, underwater , n.e.s."	8A992d				
+"Camera, designed or modified for remote operation with submersible vehicle"	8A992a1				
+"Cameras, electronic framing type"	6A003a4				
+"Cameras, electronic framing type"	6A203b2				
+"Cameras, electronic streak type"	6A003a3				
+"Cameras, electronic streak type"	6A203b1				
+"Cameras, framing"	6A003a				
+"Cameras, framing"	6A203				
+"Cameras, imaging"	6A003b				
+"Cameras, mechanical"	6A203a1				
+"Cameras, mechanical"	6A003a				
+"Cameras, photo-optical step and repeat"	3B991b2d1				
+"Cameras, radiation hardened TV"	6A203d				
+"Cameras, scanning & scanning camera systems"	6A003b2				
+"Cameras (still), underwater photographic"	8A002e				
+"Cameras (still), for underwater use"	8A992b				
+"Cameras, video using solid state sensors"	6A003b1				
+Cameras and components	6A003				
+Cameras and components not controlled by 6A003	6A203				
+"Cameras and imaging devices (high-speed) and ?components? therefore, ?software? ?specially designed? to enhance or release the performance characteristics of devices to meet or exceed the performance characteristics described in ECCN 6A203"	6D201				
+Cameras not controlled by 6A003 or 6A203	6A993				
+"Canopies, complete"	9A992	9A610h			
+"Caps, mechanical"	3A611y29				
+Capacitors	3A001e2				
+Capacitors	3A201a				
+"Capacitors, high voltage"	3A999c				
+"Capacitors, mica paper"	3A611y5				
+Carbon dioxide and monoxide	1C980				
+Carbon dioxide detector for military aircraft	9A610y27				
+Carbon dioxide (CO2) lasers	6A005d3				
+Carbon fiber & filamentary materials	1C010b				
+Carbon fiber & filamentary materials	1C210a				
+Carbon fiber preforms	1C010e				
+Carbon fibrous or filamentary materials	1A002b1				
+Carbon monoxide (CO) lasers	6A005d2				
+Carbon or alumina fiber conversion equipment	1B001d4				
+"Carbon-carbon components, resaturated pyrolized"	1A102				
+"Carbon-carbon materials, resaturated pyrolized"	1C102				
+Carbonyl dichloride (75-44-5) (Phosgene)	1C355b1a				
+Carboxy-terminated polybutadiene (CTPB)	1C111b1				
+Casks for transport of radioactive material	2A291c				
+Casting and remelt arc furnaces	2B227a				
+"Catalysts, platinized"	1A225				
+Cathodes (Impregnated) for electronic tubes	3A001b1c				
+Cathodes	3A001b1				
+Cathodic arc deposition production equipment	2B005f				
+"Cedar, Western red"	1C988				
+"Cells, primary & secondary"	3A001e1	3A991j			
+Cellular radio equipment/system software	5D991				
+Centralized network control	5A991e				
+Centralized network control development/production technology	5E991				
+Centrifugal decanters	2B352c				
+Centrifugal fixtures for gyro bearings	7B003	7B101			
+Centrifugal multiplane balancing machines	2B999m				
+Centrifugal multiplane balancing machines for flexible rotors	2B229a				
+Centrifugal separators	2B352c				
+Centrifuge rotor balancing equipment	2B229				
+Centrifuge rotor assembly equipment	2B228a				
+Centrifuges capable of imparting accelerations above 100 g	2B122				
+Ceramic based materials	1C007				
+"Ceramic base materials, of single or complex borides of titanium"	1C007a				
+"Ceramic composite materials, useable for radomes or nose tips"	1C107b				
+Ceramic cores for blades & vanes	9B001b	9B619a			
+Ceramic core manufacturing equipment	9B991d	9B619a			
+Ceramic fibers	1C010c Note 4				
+Ceramic non-composite materials	1C007b				
+Ceramic shells for blades & vanes	9B001b	9B619a			
+Ceramic shell wax pattern preparation equipment	9B991e	9B619a			
+Ceramic-ceramic composite materials	1C007f				
+Ceramic-ceramic-matrix composite materials	1C007d				
+Ceramic-matrix composite materials	1C007c				
+Cerium sulphide (Ce2S3) made/coated crucibles	2A225a3				
+Certification software for information security software	5D002c2				
+"Chambers, aerosol challenge testing (capacity of 1 m3 or more)"	2B352h				
+"Changers, frequency"	3A999a				
+"Changers, frequency (converters or inverters)"	3A225				
+Chapare virus	1C351a2				
+"Charges, containing military explosives for civil applications"	1C608				
+"Charges, non-irritant smoke"	1A984				
+"Charges, shaped for oil well operations"	1C992a				
+Chemical agents	1A984				
+Chemical disposal technology	1E351				
+Chemical incinerators	2B350j				
+Chemical production process control software	1D390				
+Chemical production facility technology	1E350				
+Chemical warfare (CW) precursors	1C350				
+Chemical lasers	6A005d5				
+Chemical manufacturing equipment	2B350				
+Chemical manufacturing facilities	2B350				
+Chemical (precursor) mixtures and test kits	1C395				
+"Chemical (precursor) mixtures, used in the production of chemical warfare agents"	1C995				
+Chemical storage tanks & containers	2B350c				
+Chemical Vapor deposition (CVD) equipment	3B991b1i				
+"Chemical vapor deposition (CVD) equipment, epitaxial growth"	3B001				
+"Chemical vapor deposition (CVD) equipment, production (fiber)"	1B001d2				
+"Chemical vapor deposition (CVD) equipment, production"	2B005a				
+"Chemicals, CWC Schedule 2 and 3"	1C355				
+"Chemicals, precursors for toxic chemical agents"	1C350				
+Chikungunya virus (Human pathogen)	1C351a3				
+"Chip carrier bonders, stored program controlled equipment"	3B991b3b				
+Chlamydophila psittaci (formerly known as Chlamydia psittaci)	1C351c7				
+Chlorine trifluoride (ClF3)	1C238				
+2-Chloroethanol	1C350d2				
+"Chlorofluorocarbon, as hydraulic fluids"	1C006a2				
+Chloropicrin (trichloronitromethane)(76-06-2)	1C355b3				
+Choclo virus	1C351a4				
+Cholera toxin	1C351d4				
+Chromatography analytical instruments	3A999f				
+Chronometry equipment	3A999e2				
+Cinema recording cameras	6A003a1				
+Circuit breakers	3A611y17				
+"Clamps (V-Band, cushion, broomstick, hinged, and loop) for gas turbine engines"	9A619y5				
+Clean room filters	3B991b4				
+Clicker dies	1B101d				
+"Clostridium argentinense (formerly known as Clostridium botulinum Type G), botulinum neurotoxin producing strains"	1C351c8				
+botulinum neurotoxin producing strains	1C351c8				
+"Clostridium baratii, botulinum neurotoxin producing strains"	1C351c9				
+Clostridium botulinum	1C351c10				
+"Clostridium butyricum, botulinum neurotoxin producing strain"	1C351c11				
+"Clostridium perfringens, epsilon toxin producing types"	1C351c12				
+"Clostridium perfringens alpha, beta 1, beta 2, epsilon and iota toxins"	1C351d5				
+"Clothing & materials, bullet-resistant"	1A005				
+CNTD (Controlled nucleation thermal decomposition) equipment	2B005a1b				
+"Coating application & processing technology, optic fibers"	5E991a1				
+"Coating application technology, for non-electronic substrates"	2E003f				
+"Coating application & processing technology, optic fibers"	5E001b3				
+Coating equipment for prepregs/preform production	1B101d				
+"Coating & processing equipment, for non-electronic substrates"	2B005				
+Coatings for reduced electromagnetic visibility or signature suppression	1C101	0C617a			
+Coccidioides immitis	1C351e1				
+Coccidioides posadasii	1C351e2				
+Cochliobolus miyabeanus (Helminthosporium oryzae)	1C354b2				
+Cold-cathode tubes	3A228a				
+Colletotrichum coffeanum var. virulans (Colletotrichum kahawae)	1C354b1				
+Colletotrichum kahawae (Colletotrichum coffeanum var. virulans)	1C354b1				
+Color center lasers	6A005c1	6A005c2	6S005c3		
+"Column, absorption or distillation"	2B350e				
+"Column, liquid-liquid exchange, for lithium amalgams"	1B233b1				
+Combined cycle engines/components	9A011	9A619			
+"Combustion regulation devices, missile engines"	9A118				
+Common channel signaling equipment/systems	5A991c8				
+"Common channel signaling, technology for the development of equipment employing"	5D001c5				
+Communication channel controllers	5A991b4b				
+"Communication equipment, airborne"	7A994				
+"Communication (mobile) equipment, assemblies and components"	5A991g				
+"Communications interception devices, parts and accessories"	5A980	5D980	5E980		
+"Communications cable systems, secure"	5A002a7				
+Communications Systems (underwater)	5A001b1				
+Compasses	9A610y13				
+Compasses (gyro-astro) & other position or orientation deriving devices	7A004				
+"Compasses (gyro-astro) & devices, other than those of 7A004"	7A104				
+Components made from Fluorinated compounds	1A001				
+Components/structures for spacecraft	9A010				
+"Composite conductors, superconductive"	1C005				
+Composite or laminate development software	1D002				
+"Composite structures, as tubes"	1A202				
+Composite structures or laminates	1A002				
+"Composite (structural) production equipment, n.e.s."	1B999e				
+"Composite (structural) production equipment controlled by 1B999, software for"	1D999				
+"Composite materials, ceramic-ceramic"	1C007f				
+Composites production equipment	1B001				
+Composite structures for propulsion systems or space vehicles	9A110	9A619x			
+Composite structures for unmanned aerial vehicles	9A610t				
+Composites (structural) production equipment	1B101				
+Compound rotary tables for machine tools	2B008c				
+Compound semiconductor integrated circuits	3A001a11				
+Compound semiconductor photocathodes	6A002a2c3				
+Compressors	9A619x				
+"Compressors, bellows-sealed scroll-type"	2B233				
+"Compressors, turboexpande"	1B232				
+"Compressors, turbo/centrifugal/axial flow"	9A619x				
+"Computer, electronic assemblies & equipment & components"	4A001	4A003	4A004	4A994	
+"Computer, electronic components"	4A101				
+"Computer, electronic components"	4A102				
+"Computers, parts, components, accessories? for military applications, not on USML"	3A611				
+Computer aided design (CAD) equipment for semiconductor devices or integrated circuits	3B991b2c				
+Integrated circuits	3B991b2c				
+Computer-aided-design (CAD) software for IC's & semiconductors	3D003				
+Computer interconnect equipment	4A003g				
+"Computer/assemblies/components, neural"	4A004b				
+"Computer/assemblies/components, optical"	4A004c				
+"Computers, electronic assemblies, and related equipment and components not controlled by 4A001 or 4A003"	4A994				
+"Computers, analog & analog ruggedized"	4A101				
+Computers for fingerprint equipment	4A980				
+"Computers, digital ruggedized"	4A101				
+"Computers/assemblies/components, systolic array"	4A004a				
+"Computers, analog"	4A001				
+"Computers, digital"	4A003				
+"Computers, digital"	4A004				
+"Computers, digital"	4A001				
+"Computers, hybrid"	4A102				
+"Computers, parts, components ? for military application not on USML"	4A611	3A611			
+"Computers and electronic assemblies (hybrid), and specially designed components therefor"	4A994k				
+"Computers, with extended operating temperature range"	4A001a1				
+"Computers, radiation hardened"	4A001a2				
+"Concealment and deception equipment (military), i.e. special paints, decoys, smoke or obscuration equipment and simulator"	0A617				
+Concealed object detection equipment	2A984	2D984	2E984		
+Condensers for use in nuclear reactors	2A290a				
+Condensers or heat exchangers	2B350d				
+Conductive polymers	1C001c				
+"Conductors, superconductive composite"	1C005				
+Congo-Crimean haemorrhagic fever virus (a.k.a. Crimean-Congo haemorrhagic fever virus)	1C351a5				
+"Connector backshells, electric"	3A611y9				
+Conotoxin	1C351d6				
+Construction equipment ?specially designed? for military use	0A617y1				
+Contactors	3A611y27				
+"Containers, for packing defense articles or ?600 series? items"	0A617y3				
+"Containers, chemical"	2B350c				
+Containment devices (not enumerated under ECCN 1B608 or in USML Category IV or V) for the testing of high explosives or explosive devices	1B234				
+Containment facilities	2B352a				
+Continuous mixers	1B118				
+Contrarotating propellers	8A002o1b				
+Control units for metallurgical melting & casting furnaces	2B227				
+"Control systems, on-line development of gas turbine engines"	9B002	9B619a			
+Controllable-pitch propellers	8A002o2a				
+Controlled atmosphere melting & casting furnaces	2B227				
+Controlled environment (vacuum or inert gas) induction furnaces	2B226				
+Controlled nucleation thermal decomposition (CNTD) equipment	2B005a1b				
+"Controllers, machine tool (CNC)"	1B001a				
+Controllers for high explosive handling robots	2B207				
+"Controllers, robot"	2B007				
+Converter integrated circuits	3A001a5				
+"Converters, frequency"	3A225				
+"Converters, frequency extender"	3A001b7				
+"Cooling fluid (fluorocarbon electronic) development, production, or use technology"	1E994				
+Cooling fluids - electronic	1C006d				
+"Cooling fluids, fluorocarbon electronic"	1C006d				
+"Cooling systems, freon and chilled water"	1B999d				
+Copper or phosphor bronze mesh packings	1A226				
+Copper metal vapor lasers	6A005b				
+Coprocessor microcircuits	3A001a3 Note				
+"Coprocessors or accelerators, graphics"	4A003d				
+Correlation-velocity sonar log equipment	6A001b				
+Counter-current solvent extractors	0B006c				
+Counter Improvised Explosive Device equipment	5A001h				
+Coxiella burnetii	1C351c13				
+"Crime science laboratories, parts and accessories, nonmilitary mobile"	9A980				
+Crimean-Congo haemorrhagic fever virus (a.k.a. Congo-Crimean haemorrhagic fever virus)	1C351a5				
+"Critically safe tanks, nuclear fuel reprocessing"	0B006b				
+Cross-flow filtration equipment	2B352d				
+Crossed-field amplifier tubes	3A001b1b				
+"Crucibles, liquid actinide resistant"	2A225				
+"Crucibles, tantalum"	2A225b	2A225c			
+Crude petroleum or shale oil	1C981				
+"Cryocoolers for optical sensors, space qualified"	6A002d1				
+"Cryocoolers for optical sensors, non-space qualified"	6A002d2				
+"Cryogenic and superconductive equipment, parts, components, accessories"	9A620				
+Cryogenic and superconductive test equipment	9B620				
+Cryogenic and superconductive software	9D620				
+Cryogenic and superconductive technology	9E620				
+"Cryptanalytic equipment or devices, digital"	5A002a2				
+"Cryptoanalytic equipment and components, n.e.s."	5A992				
+?Cryptographic activation? equipment	5A002j				
+"Cryptographic enabling systems, equipment, integrated circuits, etc"	5A002b				
+Cryptographic enabling software	5D002d				
+Cryptographic enabling technology	5E002b				
+"Cryptographic equipment and components, n.e.s."	5A992				
+"Cryptography equipment or devices, digital"	5A002a1				
+"Cryptography equipment or devices, analog"	5A002a3				
+"Cryptologic equipment, software for the development, production or use of"	5D992				
+"Cryptologic equipment and components, n.e.s."	5A992				
+"Cryptologic equipment, technology for the development, production or use of"	5E992				
+Crystal pullers and furnaces	3B991b1c				
+CTPB (Carboxy-terminated polybutadiene)	1C111b1				
+Custom integrated circuits	3A001a2	3A001a10			
+"Cutting tool inserts, single diamond point"	2B998b				
+"Cutting machines, gears"	2B003				
+Cutting equipment for prepregs/preform production	1B101d				
+CVD (Chemical vapor deposition) equipment	1B001d2				
+CVD (Chemical vapor deposition) equipment	2B005a				
+CVD (Chemical vapor deposition) equipment	1B101c2				
+"CVD (Chemical vapor deposition) furnaces, other than those controlled by 2B005.a, designed or modified for the densification of carbon-carbon composites ...."	2B105				
+CW (Chemical warfare) precursors	1C350				
+Cyanogen chloride (506-77-4)	1C355b1b	1E355b2			
+"Cylinder wall lubrication technology, diesel engines"	9E003e3				
+DACs (Digital-to-analog converters)	3A001a5				
+DBRN (Data Based Referenced Navigation) system technology	7E004a7				
+"Damping, flotation or lubricating fluids"	1C006c				
+Data acquisition systems for gas turbine engine development	9B002	9B619a			
+"Data (message) switching equipment, systems, components and assemblies"	5A991c1				
+"Data acquisition equipment for wind tunnels, automatic"	9B005				
+"Data Based Referenced Navigation (DBRN) systems for underwater navigation, technology"	7E004a7				
+Datagram packet routing or switching equipment	5A991c3				
+"Decanters, centrifugal"	2B352c				
+Decontamination equipment	1A004	1A995			
+Deep-hole drilling machines	2B001f				
+"Defect, error or contaminant detection equipment for wafers or substrates"	3B992b1				
+Deformable mirrors	6A004a1				
+Degassing equipment	2B350				
+DEGDN (diethylene glycol dinitrate)	1C111c5				
+Demolition blocks	0A604a				
+Dengue fever virus	1C351a6				
+Depleted Uranium	1A290				
+Depth sounders	6A001a1				
+"Design integration of guidance sets, software"	7D103				
+Detection and protection equipment and components	1A004	1A995	2B351	2B352	
+"Detection equipment, seismic"	6A999a				
+"Detection equipment, radiation"	1A004	1A995	1A999a		
+"Detection equipment, radiographic"	1A999b				
+Detection systems for explosives and detonators	1A004d	2A983	2D983	2E983	
+Detection or location systems or transmitting and receiving arrays (acoustic)	6A001a1b				
+"Detectors, optical"	6A002a				
+"Detectors, radiation hardened"	6A102				
+"Detectors, space-qualified solid state optical"	6A002a1				
+Detonation cord	1A008	1C992c			
+Detonator detection	2A983	2D983	2E983		
+Detonators and multipoint initiation systems	3A229				
+"Detonator firing sets, for multiple detonators of 3A232"	1A007	3A229			
+"Detonators, electric or non-electric"	1C608d	1C992e			
+"Detonators, exploding bridge wire (EBW)"	1A007				
+"Detonators, exploding bridge (EB)"	1A007				
+"Detonators, exploding foil initiators (EB)"	1A007				
+Detonators for military explosives	0A604				
+"Detonators, slapper (electric)"	1A007				
+Deuterium fluoride-carbon dioxide (DF-CO2) lasers	6A005d5				
+Deuterium fluoride (DF) lasers	6A005d5				
+Di-isopropylamine	1C350d4				
+Diacetoxyscirpenol toxin	1C351d7				
+"Dials, indicator"	3A611y26				
+"Dialkyl (Me, Et, n-Pr or i-Pr) N,N-dialkyl (Me, Et, n-Pr, or i-Pr)-phosphoramidates"	1C355a2c				
+"Diamond cutting tool inserts, single point"	2B998b				
+Diamond film substrate development/production technology	3E003d				
+"Diaphragms, made from fluoroelastomers"	1A001c				
+Diaphragm valves	2B350g				
+Dibromotetrafluoroethane based damping or flotation fluids	1C006c1				
+"Die bonder, stored program controlled"	3B991b3a				
+Diesel engines for submarines	8A620d				
+"Diesel engines, nonmagnetic"	8A609b				
+Diesel engines (air-cooled) and engine blocks for amored vehicles	0A606c				
+"Dies, bellows-forming"	2B228c				
+"Diesel engines, n.e.s."	9A990				
+"Diesel cycle engine, air independent"	8A002j				
+Diethyl ethylphosphonate	1C350b3				
+Diethyl methylphosphonite	1C350b4				
+Diethyl phosphite	1C350c1				
+"Diethyl-N, N-dimethylphosphoramidate"	1C350b5				
+Diethylaminoethanol	1C350d3				
+Diethylene glycol dinitrate (DEGDN)	1C111c5				
+"Diffusion bonding technology, metal working"	2E003b1b				
+"Diffusion bonding technology/data, super alloys or Ti alloys"	2E003b2b				
+"Diffusion bonding tools, dies, molds or fixtures"	1B003				
+Digital array processors	3A001a3 Note				
+Digital computers	4A003				
+Digital computers	4A994b				
+"Digital computers, electronic assemblies & related equipment"	4A003				
+"Digital computers, electronic assemblies & related equipment"	4A001				
+"Digital computers, logic processors"	4A003				
+"Digital computers, ruggedized"	4A101				
+"Digital computers, signal processing"	4A003				
+"Digital computers, vector processors"	4A003				
+"Digital computer electronic assemblies, parallel processing"	4A003c				
+Digital computer systems	4A004				
+Digital computer systems	4A003c				
+Digital computer systems	4A003b				
+Digital computer systems	4A001				
+Digital coprocessors	3A001a3 Note				
+"Digital differential analyzer, ruggedized"	4A101				
+"Digital electronic control software for propulsion systems, aerospace test facilities or air breathing aero-engine test facilities"	9D003	9D619			
+"Digital exchanges, telecommunication"	5A991c				
+Digital instrumentation data recorders	3A002a6				
+Digital signal processors	4A003				
+Digital time delay generators	3A999e1				
+Digital-to-analog converter integrated circuits (DACs)	3A001a5				
+Digitally controlled radio receivers	5A001b5				
+"Digitizers, waveform"	3A002a5				
+Dimensional inspection or measuring systems or equipment not controlled by 2B006	2B996				
+Dimensional inspection machines	2B206				
+Dimensional inspection equipment/systems	2B006a				
+Dimensional inspection equipment/systems	2B006c				
+"Dimensional measuring equipment, instruments/systems"	2B006b				
+Dimethyl ethylphosphonate	1C350b10				
+Dimethyl methylphosphonate	1C350b11				
+Dimethyl phosphite	1C350c2				
+Dimethylamin	1C350d5				
+Dimethylamine hydrochloride	1C350d6				
+Dinitrogen tetroxide ()	1C111a3b				
+Dinitrogen trioxide	1C111a3a				
+Dinitrogen pentoxide	1C111a3c				
+"2,2' Dinitropropanol"	1C018				
+"Diodes, laser"	6A005d1				
+Diortho tolyl-urethane	1C018g				
+Diphenyl urethane	1C018f				
+Direct view imaging equipment	6A002c				
+Direct-acting hydraulic pressing technology for metal working	2E003b2c				
+Direct Digital Synthesizer (DDS) integrated circuits	3A001a13				
+"Direction finding equipment & components, surveillance"	5A001e				
+"Direction finding equipment, parts & components, navigation, not controlled under 7A003 or 7A103"	7A994				
+"Direction finding systems, equipment & components, navigation (inertial)"	7A003				
+"Direction finding systems, equipment & components, navigation, not controlled under 7A003"	7A103				
+Directional solidification casting control software	9D004c				
+Directional solidification casting equipment	9B001a	9B619a			
+Discharge type arms	0A985				
+Discrete microwave transistors	3A001b3				
+Discrete microwave transistor technology	3E001				
+Disk drive (magnetic hard) development or production technology	4E993c				
+"Display, 3D (software for)"	7D004g				
+Disruptors	1A006b				
+"Dissolvers, for nuclear fuel"	0B006b				
+Distillation columns	2B350e				
+"Distillation columns, hydrogen-cryogenic"	1B228				
+"Distillation towers, packings"	1A226				
+Dive computers	8A992j				
+Diver deterrent acoustic systems	8A002r				
+"DNAN (2,4-dinitroanisole) (CAS 119-27-7)"	Annex to Category 1 ?List of Explosives? 44				
+Dobrava-Belgrade virus	1C351a7				
+Doppler laser interferometers (DLIs)	6A225				
+Double seal valves	2B350g				
+Drilling equipment	2B999h				
+"Drilling machines, deep-hole"	2B001f				
+Drone (military) production facilities	9B610c				
+"Dry etching equipment, anisotropic plasma"	3B001c				
+Dye lasers	6A005c				
+Dye lasers	6A205				
+Dynamic adaptive routing equipment	5A991c9				
+Dynamic wavefront (phase) measuring equipment	6A005f1				
+Dynamic adaptive routing software	5D991a				
+E-beam welders	2B999e				
+"Earth moving equipment, large"	2B999h2				
+Eastern equine encephalitis virus	1C351a8				
+EB-PVD (Electron beam physical vapor deposition) equipment	2B005c				
+Ebola virus	1C351a9				
+Eddy current test equipment for nuclear reactors	2A291d				
+"EDMs, non-wire feed types"	2B001d				
+"EDMs, wire feed type"	2B991d1				
+Ejection seat mounted survival aids for military aircraft	9A610y6				
+Electric cattle prods	0A985				
+"Electric detonators, explosive"	3A232a				
+Electric fans	3A611y2				
+Electric propulsion engines	8A002o2b				
+Electrical contacts	3A611y19				
+"Electrical discharge machines, non wire feed (CNC)"	2B001d				
+Electrical discharge machines (EDM) of the wire feed type	2B991d2				
+Electrical guide pins	3A611y20				
+Electrically driven explosive detonators	3A232a				
+Electro-optic materials	6C004				
+Electro-optical device manufacturing equipment and systems	3B991b Note				
+Electro-optical integrated circuits	3A001a6				
+"Electrolysis cells, amalgam lithium isotope separation"	1B233b3				
+Electrolytic cells for fluorine production	1B225				
+Electrolytic cells for fluorine production not controlled by 1B225	1B999a				
+Electromagnetic interference (EMI) protection technology	7E102				
+Electromagnetic isotope separators	1B226				
+"Electromagnetic pulse (EMP) protection, detectors"	6A102				
+"Electromagnetic pulse (EMP) protection technology, avionics"	7E102				
+"Electromagnetic radiation sensors, optical fiber"	6A002d3a				
+Electromagnetic signature reduction devices	1A101				
+Electromagnetic signature reduction materials	1C101				
+Electromagnetic underwater communications systems	5A001b1b				
+"Electromagnets, superconductive"	3A201b				
+"Electromagnets, superconductive"	3A001e3				
+Electron beam cutting machines (CNC)	2B001e1b				
+Electron beam equipment for mask making/semiconductor devices	3B001f2				
+Electron beam equipment for projection image transfer	3B991b2g				
+Electron beam melting furnaces	2B227b				
+Electron beam physical vapor deposition (EB-PVD) equipment	2B005c				
+Electron beam sensitive resist materials	3C002b				
+"Electron beam systems, for probing semiconductor devices"	3B992b5				
+Electron beam systems	3B991b1j				
+Electron beam test systems	3B992b5				
+Electron bombardment mass spectrometers	3A233d				
+Electron cyclotron resonance (ECR) plasma dry etching equipment	3B001c1b				
+Electron tube manufacturing equipment and components	3B991a				
+Electron tube inspection or testing equipment and components	3B992a				
+Electronic assemblies	4A003				
+Electronic assemblies and related equipment not controlled by 4A001 or 4A003	4A994				
+Electronic assemblies specially designed to provide feedback capability in systems controlled by 2B006.b.1.c	2B006b1d				
+Electronic cameras	6A003a5				
+Electric chairs	0A981				
+Electronic components	3A001				
+Electronic components	3A201				
+Electronic components	3A101				
+Electronic components (military)	3A611				
+"Electronic components and materials inspection or testing equipment, components and accessories"	3B992				
+Electronic components and materials manufacturing equipment	3B991				
+"Electronic components and materials manufacturing equipment, not controlled by 3B001"	3C001				
+Electronic computers	4A994a				
+Electronic computers & related equipment	4A001	4A003	4A004	4A994	
+Electronic computers & related equipment	4A101				
+Electronic computers & related equipment	4A102				
+Electronic cooling fluids	1C006d				
+Electronic framing cameras	6A203b2				
+Electron sensing devices	6A002a2a2b				
+Electronic streak cameras & streak tubes	6A003a3				
+Electronic streak cameras & streak tubes	6A203b1				
+Electrical connectors	3A611y1				
+"Electronically steerable antennae, phased array"	5A001d				
+Electroplating equipment	2B999i				
+"EMP/EMI protection technology, avionic systems"	7E102				
+"Encoders, rotary input shaft type"	3A001f				
+"Encryption equipment, assemblies & components"	5A002				
+Encryption hardware component	"Category 5, Part  2 Note 3 (b)"				
+Encryption software	5D002				
+"End effectors, robot"	2B207				
+"End effectors, robot"	2B007				
+Energetic ionic materials	Category 1 List of Explosives 48				
+Energy storage capacitors	3A001e2				
+"Engines, diesel n.e.s."	9A990				
+"Engines (marine), n.e.s."	8A992g				
+"Engines (submarine), n.e.s."	8A992g				
+Engines (air breathing reciprocating or rotary internal combustion type)	9A012b4				
+Enterohaemorrhagic E. coli (EHEC)	1C351c17				
+Environmental chambers	8b	9B106b	9B610b		
+"Environmental chambers, capable of simulating flight conditions"	9B106a	9B610b			
+Epitaxial growth equipment	3B001a				
+Epitaxial growth stored program controlled equipment	3B991b1d				
+"Epitaxial wafers, Cadmium telluride (CdTe)"	6C002b				
+Epoxy resin matrix impregnated carbon fibers or filamentary materials	1C010e Note 1				
+Equine morbillivirus (Hendra virus)	1C351a12				
+Erbium oxide (erbia) (Er2O3) made/coated crucibles	2A225a4				
+Etching stored program controlled equipment	3B991b1h				
+"Ethers, as lubricating fluid"	1C006b1				
+0-ethyl-2-diisopropylaminoethyl methylphosphonite (QL)	1C350a1				
+Ethyl centralites	1C018a				
+Ethyl phenyl urethane	1C018e				
+Ethyl phosphinyl dichloride	1C350b12				
+Ethyl phosphinyl difluoride	1C350b13				
+Ethyl phosphonous dichloride	1C350b12				
+Ethyl phosphonous difluoride	1C350b13				
+Ethyl phosphonyl dichloride	1C350b14				
+Ethyl phosphonyl difluoride	1C350a2				
+Ethyl-NN-diphenylurea (ethyl unsymmetrical diphenylurea)	1C018d				
+Ethyldiethanolamine (139-87-7)	1C350c12				
+Evaporators for concentrated lithium hydroxide solution	1B233b4				
+"Exchange columns, liquid-liquid for lithium amalgams"	1B233b1				
+"Exchanges, telecommunication"	5A991c				
+Excimer lasers	6A005d4				
+"Execution of human beings, equipment for"	0A981				
+Expert systems - integration systems technology	2E003e				
+Exploding foil initiators (EFI)	1A007				
+Exploding bridge (EB) detonators	1A007				
+Exploding bridge wire (EBW) detonators	1A007				
+"Explosive, high"	1C239				
+Explosive/munitions environment handling robots	2B007b				
+Explosive detection	1A004d				
+Explosive detonator firing sets	1A007a				
+"Explosives or detonator detection equipment, software, or technology"	2A983	2D983	2E983		
+"Explosive detonators, electric"	1A007b	3A232			
+"Explosive devices , charges, components - commercial"	1A008	1C992l			
+Explosives (military) production equipment	1B018a				
+Explosives (military) in charges for civil applications	1A008	1C608			
+FADEC (Full authority digital electronic engine control) software	9D003	9D619			
+FADEC (Full authority digital electronic engine control) technology	9E003h	9E619			
+Fan blade (hollow) technology	9E003	9E619			
+"Fans, electric"	3A611y2				
+Fast Fourier Transform (FFT) processors	3A001a12				
+Fast switching function modules or assemblies	3A228c				
+"Fast fourier transform processors, acoustic signal processing"	6A001a2c				
+Fault tolerance FADEC software	9D003	9E619			
+"Fermenters (biological processing), and components designed for such fermenters"	2B352b				
+Fertilizers containing ammonium nitrate	1C997				
+"Fiber, equipment for the production of"	1B999				
+Fiber and filamentary material	1C010				
+Fiber and filamentary material	1C210				
+"Fiber converting equipment, polymeric to carbon or silicon carbon"	1B001d1				
+Fiber optic cable	5A001c				
+Fiber optic gyro coil winding machines	7B003				
+Fiber optic magnetometers	6A006c				
+Fiber optic hull penetrators/connectors	8A002c				
+Fiber optic wave division multiplex equipment	5A991b5				
+"Fiber preforms, metal coated, for fiber prepregs in 9C110"	9C110				
+"Fiber prepregs, resin impregnated, for items in 9A110"	9C110				
+"Fiber reinforcement, production equipment"	1B001d				
+Fiber straining equipment	1B001d1				
+Fiber surface treatment equipment	1B101d				
+Fibrous or filamentary materials	1C210				
+Fibrous or filamentary materials	1C010				
+"Fibrous or filamentary materials, carbon"	1A002b1				
+Fibrous and filamentary materials for use in composite structures	1C990				
+Fibrous or filamentary material production equipment	1B001				
+Fibrous or filamentary material production equipment	1B101c				
+"Fibrous and filamentary materials development, production or use technology"	1E994				
+Field programmable gate arrays (FPGA)	3A001a7				
+Field programmable logic arrays (FPLA)	3A001a7				
+Field programmable logic devices	3A001a7				
+Field programmable logic devices	3A991c				
+Filament winding machines	1B001a				
+Filament winding machines	1B101a				
+Filament winding machines	1B201				
+"Filling equipment, remotely controlled"	2B350f				
+Film type integrated circuits	3A001a Note 2				
+Filter canisters	1A004	1A995			
+"Filters, tunable band-pass"	3A001b5				
+Filters for clean rooms	3B991b4				
+Filters (fuel or oil) for gas turbine engines	9A619y4				
+"Filters (hydraulic, fuel, oil, air) for ground vehicles"	0A606y8				
+"Filters, optical"	6A994a				
+Filters for hydraulic/oil/fuel systems in military aircraft	9A610y8				
+Filters for pneumatic/hydraulic/oil/fuel systems in submersible vessels	8A620y2				
+Filters for pneumatic/hydraulic/oil/fuel systems in surface vessels of war	8A609y2				
+Finger barriers	3A611y31				
+Finger cuffs	0A983				
+"Fingerprint analyzers, cameras and equipment"	3A981				
+"Fingerprint equipment, computers for"	4A980				
+"Fingerprinting powders, dyes, inks"	1A985				
+"Fingers, for surface effect vessels"	8A002k				
+"Finishing machines, gear"	2B003				
+"Finishing machines, gear"	2B003				
+Fins	8A992i				
+Fire extinguishers for military aircraft	9A610y26				
+Fire detectors for military aircraft	9A610y27				
+"Firearms, muzzle-loading (black powder)"	0A018c				
+"Firing sets, for multiple detonators of 3A232"	1A007	3A229a			
+Fireworks displays	1C608j	1C992k			
+"Fissile materials, special or other"	0C002				
+"Flanges, vacuum"	2B999k				
+"Flares, non-irritant smoke"	1A984				
+Flash discharge X-ray generators	3A201c				
+Flash X-ray machines	3A999c				
+Flexible rotor centrifugal balancing machines	2B229a				
+Flexible sensors for hydrophones	6A001a2a1				
+"Flexible nozzles, thrust vector control sub-system"	9A106c				
+Flexible waveguide	3A991h				
+Flight management system integration technology	7E104				
+Flight control servo valves	9A106e				
+Flight control systems for missiles	7A116				
+Flight control systems for military UAVs or drones	9A610w				
+Flight control systems - software	7D003e	7D004			
+"Flight instrument systems, integrated"	7A103b				
+"Flight instrument trainer, military"	9A610t				
+Flight control system development technology	7E004				
+Flight control actuator technology	7E004a5				
+Flip-guards	3A611y32				
+Flow-forming machines	2B009				
+Flow-forming machines	2B109				
+Flow-forming machines	2B209				
+Flow-forming machines	2B999l				
+Fluid energy mills	1B119				
+Fluoride compounds (bulk)	6C994a1				
+Fluoride glass (bulk)	6C994a2				
+Fluorinated silicone fluid	1C006b2				
+"Fluorinated compounds, components"	1A001				
+"Fluorinated compounds, unprocessed"	1C009				
+Fluorinated phosphazene elastomers	1C009c				
+Fluorinated polyimide	1C009b				
+Fluorine	1C999f				
+Fluorine production (electrolytic cells)	1B225				
+"Fluorocarbon electronic cooling fluid development, production, or use technology"	1E994				
+Fluorocarbon electronic cooling fluids	1C006d				
+Fluorophosphate glass	6C004e				
+Flurocarbon electronic cooling fluids	1C006d				
+Fluxgate magnetometer technology	6E003f				
+Fly cutting machines	2B001b4	2B992b			
+Fly-by-light flight control system software	7D003e	7D004c	0D521 No 2		
+Fly-by-light technology	7E004b				
+Fly-by-wire flight control system software	7D003e	7D004c	0D521 No 2		
+Fly-by-wire systems for military UAVs or drones	9A610w				
+Fly-by-wire systems for missiles	7A116				
+Fly-by-wire control system technology	7E004b	0E521 No 6			
+"Foam, syntactic for underwater use (in any stage of manufacture)"	8C001	8A002a4			
+"Foam mirror structures, lightweight"	6A004a3				
+"Focal plane arrays, direct view"	6A002c2	6A002c3			
+"Focal plane arrays, linear & 2D"	6A002a3				
+"Focal plane arrays, non-space qualified"	6A002a3g				
+"Focal plane arrays, space qualified"	6A002a1d				
+Focal-plane array performance determining equipment	3B992b4c				
+"Fogging or spraying systems, specially designed for fitting to aircraft, ?lighter than air vehicles,? or ?UAVs?"	2B352h1				
+Foot & mouth disease virus	1C352a4				
+Fording (water) kits for ground vehicles	0A606e				
+FPGA's (Field programmable gate arrays)	3A001a7				
+FPLA's (Field programmable logic arrays)	3A001a8				
+Fracking fluid	0A998b2				
+"Framing cameras, electronic type"	6A203b2				
+"Framing cameras, mechanical"	6A203a1				
+Framing tubes & solid state imaging devices	6A203b3				
+"Framing cameras, electronic type"	6A003a4				
+Francisella tularensis	1C351c14				
+Free electron laser magnet wiggler manufacturing or inspection equipment	6B995a1				
+Free electron laser photo injector manufacturing or inspection equipment	6B995a2				
+"Freeze drying equipment, steam sterilizable"	2B352e				
+Freon and chilled water cooling systems	1B999d				
+Frequency agile (frequency hopping) radio equipment	5A001b3				
+Frequency agile systems	5A002a5				
+Frequency agile tubes	3A001b1				
+Frequency hopping development technology	5E001b4				
+Frequency analyzers (signal analyzers)	3A002c				
+Frequency changers	3A999a				
+Frequency changers (converters or inverters)	3A225				
+"Frequency changers (a.k.a. converters or inverters) and generators, ?software? ?specially designed? for the ?use? of"	3D201				
+"Frequency changers (a.k.a. converters or inverters) and generators, ?software? ?specially designed? to enhance or release the performance characteristics of equipment to meet or exceed the performance characteristics in ECCN 3A225"	3D202				
+"Frequency extenders, mixers/converters"	3A001b7				
+Frequency network analyzers	3A002e				
+"Frequency standards, atomic"	3A002g				
+Frequency synthesized signal generators	3A002d				
+"Frequency synthesizer, electronic assemblies"	3A001b11				
+Fuel oils	1C980				
+"Fuel elements, (irradiated) reprocessing plant & equipment"	0B006				
+Fuel element chopping or shredding machines	0B006a				
+Fuel cell air independent power systems	8A002j				
+Fuel lines and hoses for gas turbine engines	9A619y3				
+Fuel filters for gas turbine engines	9A619y4				
+Full Authority Digital Electronic Engine Control software	9D003	9D619			
+"Functional (truth table) testing equipment, for integrated circuits"	3B002b				
+"Fungi, human and zoonotic pathogens and ?toxins?"	1C351e				
+"Fungi, plant pathogens"	1C354b				
+Furnaces	2B226				
+"Furnaces, Chemical Vapor Deposition (CVD), other than those controlled by 2B005.a, designed or modified for the densification of carbon-carbon composites"	2B105				
+Furnaces	2B227				
+Fused silica glass	6C004e				
+GaAs photocathodes	6A002a2c3				
+GaInAs photocathodes	6A002a2c3				
+Galleys (military aircraft)	9A610y9				
+Galleys (submersible vessels)	8A620y3				
+Galleys (surface vessels of war)	8A609y3				
+Gallium organo-metallic compounds	3C003				
+"Gallium III/V compound substrates, hetero-epitaxial grown-multi-layer"	3C001c				
+"Gallium nitride (GaN) ?substrates?, ingots, boules, or other preforms of those materials"	3C005				
+Gallium selenide	6C004b5				
+Gallows	0A981				
+Gas centrifuge rotor assembly equipment	2B228a				
+Gas krytron tubes	3A228a				
+Gas or full face masks	1A004	1A995			
+Gas centrifuge rotor balancing equipment	2B229				
+"Gas, manufactured, synthetic or natural liquid produced or derived from Naval Petroleum Reserves"	1C984				
+Gas discharge & ion lasers	6A005a				
+"Gas and oil exploration equipment, software, and data"	0A998				
+Gas lasers	6A005a				
+"Gas monitoring systems, toxic"	2B351				
+"Gas turbine aeroengines, civil non-certified/supersonic"	9A001				
+"Gas turbine blade, manufacturing or measuring equipment"	9B001	9B619			
+Gas turbine blade technology	9E003a	9E619			
+"Gas turbine blades, vanes or tip shroud casting equipment, tooling or fixtures"	9B991	9B619			
+Gas turbine brush seal production/test equipment	9B003	9B619			
+"Gas turbine components, solid state joining equipment"	9B004	9B619			
+Gas turbine engine development systems/instrumentation	9B002	9B619			
+Gas turbine engine development control systems or instrumentation	9B002	9B619			
+Gas turbine engine propulsion systems assemblies/components	9A003	9A619			
+Gas turbine engine technology	9E003	9E619			
+Gas turbine engine development and use software	9D004	9D619			
+Gas turbine engine monitoring system software	9D619b11				
+"Gas turbine engines, parts and components, not controlled by 9A001 or 9A101"	9A991	9A619			
+"Gas turbine engines & assemblies/components, marine"	9A002				
+Gas turbine test/flow modeling software	9D004a	9D619			
+Gas turbine (aero engine) test software	9D004b	9D619			
+"Gaskets, made from fluoroelastomers"	1A001c				
+"Gaskets, aircraft/aerospace use"	1A001a	9A610x			
+"Gaskets, ground vehicles"	0A606y9				
+"Gaskets, vacuum"	2B999k				
+Gate silicon intensifier target (SIT) videcon tubes	6A203b3b				
+Gateways & bridges	5A991b4b				
+"Gauges, hydraulic, pneumatic, fuel and lubrication"	3A611y35				
+Gauges and indicators (analog cockpit)	9A610y2				
+Gauges and indicators (submersible vessels)	8A620y10				
+Gauges and indicators (surface vessels of war)	8A609y10				
+GDMS (Glow discharge mass spectrometers)	3A233b				
+"Gear honing, shaving, grinding, cutting, and finishing machines"	2B003				
+Gearmaking and/or finishing machinery not controlled by 2B003	2B993				
+Gel propellant control system	9A106d				
+"Generator systems, neutron"	3A231				
+Generators and other equipment for nuclear plants	2A290				
+"Generators, digital time delay"	3A999e1				
+"Generators, for ground vehicles"	0A606y2				
+"Generators, field ? ?specially designed for military use"	0A617y4				
+"Generators, high-current pulse for detonators"	3A229				
+"Generators, high-speed pulse"	3A230				
+"Generators, marx"	3A999c				
+"Generators, portable electric"	2A994				
+Genetically-modified microorganisms	1C353				
+"Germanium, hetero-epitaxial grown multi-layer substrates"	3C001b				
+"Gimbals, optical control"	6A004d3				
+Glass fiber or filamentary materials	1C210b				
+"Glass fiber, for optical communications"	5A001c				
+Glass matrix reinforced composite materials	1C007f				
+"Glass preforms, for optical fiber production"	5C991				
+"Glass Windows, nuclear radiation shielding"	1A227				
+"Glass, high homogeneity"	6C004e3				
+Global Navigation Satellite Systems (GNSS) ranging signals decryption software	7D005				
+Global positioning system (GPS) equipment & components	7A005	7A105	7A994		
+Glove boxes	0B999				
+"Gloves, protective"	1A004	1A995			
+Glow discharge mass spectrometers (GDMS)	3A233b				
+GNSS (Global Navigation Satellite Systems) ranging signals decryption software	7D005				
+Goat pox virus	1C352a5				
+Gold (Au) metal vapor lasers	6A005b				
+"GPS equipment, other than those of 7A005"	7A105				
+GPS (Global positioning system) equipment/components	7A005				
+"Gradiometers & components, gravity"	6A007c				
+"Gradiometers & components, gravity"	6A107				
+"Gradiometers & components, magnetic"	6A006				
+Graphics accelerators or graphics coprocessors	4A003d				
+Graphics accelerator development or production technology	4E993a				
+"Graphite, fine grain recrystallized bulk"	1C107a				
+"Graphite, bulk"	1C107a				
+"Graphite, pyrolytic or fibrous reinforced"	1C107b				
+"Graphite, nuclear-grade, not intended for use in a nuclear reactor"	1C298				
+"Gravimeters (Gravity meters) & components, gravity"	6A007a				
+"Gravimeters (Gravity meters) & components, gravity"	6A007b				
+"Gravimeters (Gravity meters) & components, gravity"	6A107				
+Gravity meter (gravimeters) products & calibration equipment	6B007				
+Gravity meters	6A997				
+Gravity gradiometers & components	6A007c				
+Gravity meters (gravimeters) & components	6A007b				
+Gravity meters (gravimeters) & components	6A007a				
+Gravity meters (gravimeters) software	6D003g				
+Gravity gradiometers & components	6A107				
+Gravity meters (gravimeters) & components	6A107				
+Gravity gradiometer software	6D003g				
+Greases	1C980				
+"Grenades, non-irritant smoke"	1A984				
+Grinding machines (CNC)	2B991d1				
+"Grinding machines, gear"	2B003				
+Grinding machines	2B201b				
+Grinding machines	2B001c				
+Ground fault circuit interrupters	3A611y18				
+Ground vehicles & related commodities	0A606				
+Grounding straps	3A611y25				
+Guanarito virus	1C351a10				
+Guanidine nitrate	1C011c	1C608m			
+GUDN (Guanylurea dinitramide) FOX-12 (CAS 217464-38-5)	Annex to Category 1 List of Explosives 46				
+Guidance sets usable in missiles	7A117				
+Guillotines	0A981				
+Gun barrel rifling and broaching machines and tools therefor	2B018e	2B018e	2B018f		
+Gun barrel trepanning machines	2B018g				
+Gun boring and turning machines	2B018h				
+Gun honing machines	2B018i				
+"Gun, immobilization"	0A985				
+Gun jump screw lathes	2B018j				
+Gun rifling machines	2B018k				
+"Gun, shotgun"	0A984				
+Gun straightening presses	2B018l				
+"Gun, stun"	0A985				
+Gyro dynamic balance stations	7B003	7B101			
+Gyro tuning test stations	7B003	7B101			
+Gyro run-in/motor test stations	7B003	7B101			
+Gyro evacuation/fill stations	7B003	7B101			
+Gyro-astro compasses & devices	7A104				
+Gyros & gyro components	7A102				
+Gyros	7A002				
+Gyroscope production/manufacturing/test equipment	7B003				
+Hafnium oxide (hafnia) (HfO2) made/coated crucibles	2A225a5				
+"Hafnium metal, alloys & compounds"	1C231				
+Hafnium fluoride (HfF4) glass	6C004e				
+Hair type absorbers	1C001a Note 1a				
+Handcuffs	0A982				
+Handling equipment for propellants and their constituents	1B115				
+"Handling systems, semiconductor wafers"	3B001e				
+Hantaan virus	1C351a11				
+Harbor entrance detection devices for submersible vessels	8A620c				
+Hard surface coated substrates	3B991b2b1				
+"Harnesses, complete"	9A992	9A610h			
+"Heading sensors, towed hydrophones"	6A001a2b4				
+Heading sensors	6A001a2d				
+Heat exchangers for use in nuclear reactors	2A290a				
+Heat exchangers & condensers	2B350d				
+Heat pipe cooled mirrors	6A005e1				
+Heat sinks	3A611y3				
+Helicopter system development technology	7E004c				
+Helicopter power transfer system technology	9E003d	9E610			
+"Helium, enriched"	1C232				
+Helium refrigeration units	1B231b1				
+Helium	1C980				
+Helium-3	1C232				
+Helix Tubes	3A001b1a4				
+Helix traveling wave tubes (TWTs) technology	3E611b1				
+"Helmet, military"	1A613c	1A613y1			
+Helminthosporium oryzae (Cochliobolus miyabeanus)	1C354b2				
+Hemishell dimensional inspection equipment/systems	2B006c				
+Hendra virus (Equine morbillivirus)	1C351a12				
+Hetero-epitaxial grown multi-layer substrates	3C001				
+Hetero-structure semiconductor technology	3E003b				
+High energy storage capacitors	3A001e2				
+"High explosive containment vessels, chambers, containers, and similar containment devices not enumerated under ECCN 1B608 or in USML Category IV or V"	1B234				
+High power pulse shaping networks	3A999c				
+High voltage capacitors	3A999c				
+High voltage triggers	3A999c				
+High-speed pulse generators	3A230				
+High-speed cameras	6A003				
+High-speed cameras and imaging devices and ?components? therefore not controlled by ECCN 6A003	6A203				
+"High-speed cameras and imaging devices and ?components? therefore, ?software? ?specially designed? to enhance or release the performance characteristics of devices to meet or exceed the performance characteristics described in ECCN 6A203"	6D201				
+High-vacuum service equipment	2B999k				
+High-velocity gun systems	2B232				
+Hinges for ground vehicles	0A606y11				
+HIPS (Hot Isostatic Presses)	2B204				
+HIPS (Hot Isostatic Presses)	2B004				
+HIPS (Hot Isostatic Presses)	2B104				
+Hogcholera virus (swine fever virus)	1C352a7				
+"Holding or storage vessels, critically safe & resistant to nitric acid"	0B006e				
+Hollow cylinder centrifugal balancing machines	2B229b				
+Holographic sights	0A987				
+"Honing machines, gear"	2B003				
+"Honing machines, gear"	2B003				
+"Hopping code generation capability, equipment with"	5A002a5				
+Horses by sea	0A980				
+Hoses (brake) for ground vehicles	0A606y1				
+Hoses (cooling systems) for ground vehicles	0A606v7				
+Hoses (fuel) for gas turbine engines	9A619y3				
+Hoses (fuel and hydraulic) for military aircraft	9A610y10				
+Hoses (hydraulic system) for ground vehicles	0A606y10				
+Hoses for pneumatic/hydraulic/oil/fuel systems in surface vessels of war	8A609y2				
+Hoses (pneumatic) for ground vehicles	0A606y13				
+Hot isostatic presses (HIPS)	2B204				
+"Hot isostatic densification technology/data, Al/Ti/Superalloys"	2E003b2d				
+Hot isostatic presses (HIPS)	2B004				
+Hot cap sealers (semi-automatic or automatic) for ceramic microcircuit	3B991b3c				
+Hot cell manipulators	2B225				
+Hot cells	0B999				
+Hot isostatic presses (HIPS)	2B104				
+Hovercraft	8A001				
+HT-2 toxin	1C351d8				
+HTPB (Hydroxy-terminated polybutadiene) propellant additive	1C111b2				
+"Hull penetrators/connectors, fiber optic"	8A002c				
+Human pathogens and ?toxins?	1C351				
+Hybrid integrated circuits	3A001a Note 2				
+Hybrid rocket propulsion systems	9A009				
+Hybrid computers & components	4A001				
+Hybrid computers and electronic assemblies	4A994k				
+Hybrid computers	4A102				
+Hybrid computer electronic systems/electronic assemblies	4A001a				
+Hybrid rocket motors and components	9A109				
+Hydraulic fluids	1C006a				
+Hydraulic fluids	1C980				
+Hydraulic fluids	1C996				
+Hydraulic forming equipment	2B999b				
+Hydraulic fracturing items	0A998b				
+"Hydraulic fracturing ?proppant,? ?fracking fluid,? and chemical additives therefor"	0A998b2				
+"Hydraulic pressing, direct-acting technology"	2E003b1c				
+Hydraulic stretch-forming machines and dies technology	2E003c				
+Hydrazine	1C111d				
+"Hydrides of Antimony, arsenic & phosphorus"	3C004				
+"Hydrocarbon oils, synthetic"	1C996				
+"Hydroclave temperature, pressure or atmosphere regulation technology"	1E103				
+"Hydrodynamic calculations/modeling, software for"	0D999c				
+Hydrofoil vessels	8A001h				
+Hydrofoils	8A002m				
+Hydrogen	1C980				
+Hydrogen cyanide (74-90-8)	1C355b1c	1E355b3			
+Hydrogen fluoride	1C350d7				
+Hydrogen fluoride (HF) lasers	6A005d5a				
+Hydrogen isotope storage & purification systems	1B231b2				
+Hydrogen refrigeration units	1B231b1				
+Hydrogen sulphide-water exchange tray columns	1B229				
+Hydrogen-cryogenic distillation columns	1B228				
+"Hydrophone arrays, towed acoustic"	6A001a2b				
+Hydrophone arrays (towed) acoustic data processing source code	6D003a2				
+Hydrophones	6A001a2a				
+3-Hydroxy-1-methylpiperidine	1C350d8				
+Hydroxy-terminated polybutadiene (HTPB)	1C111b2				
+ICP/MS (Inductively coupled plasma mass spectrometers)	3A233a				
+III/V and II/VI semiconductor materials purifying or processing equipment	3B991b1b				
+"III/V compound substrates, gallium or indium"	3C001c				
+Identification plates and nameplates	3A611y33				
+Identification plates for gas turbine engines	9A619y7				
+Igniters	1C608e	1C992f			
+"Image enhancement, digital equipment"	4A003				
+Image enhancement equipment	4A994f				
+Imaging devices	6A002				
+Imaging device manufacturing equipment and systems	3B991b Note				
+Image intensifier tubes & components	6A002a2				
+"Image intensifier tubes, direct view"	6A002c1	6A002c3			
+Image transfer equipment	3B991b2				
+Imaging cameras	6A003b				
+Imaging cameras with focal plane arrays of 6A002.a.3	6A003b4				
+Imaging cameras with image intensifiers of 6A002a.2.a	6A003b3				
+Imaging cameras incorporating solid-state detectors specified by 6A002.a.1	6A003b5				
+Imaging devices	6A203b3				
+"Imaging equipment, visible & infrared"	6A002c				
+"Imaging sensors, multispectral and monospectral"	6A002b				
+Immobilization guns and projectiles	0A985				
+Immunotoxins and vaccines	1C991				
+Impregnated cathodes for electronic tubes	3A001b1c				
+Imprint lithography equipment	3B001f2				
+"Improvised explosive devices (specially designed or modified disposal equipment , components, and accessories)"	1A006				
+Improvised Explosive Devices (IED) activation devices	5A001h				
+IMU platform balance fixture	7B003	7B101			
+IMU platform tester	7B003	7B101			
+IMU stable element handling fixture	7B003	7B101			
+Incinerators designed to destroy the chemicals controlled by 1C350	2B350j				
+Independent (air) power systems underwater	8A002j				
+Indicator dials	3A611y26				
+Indicator heads designed/modified for use with balancing machines in 2B119.a	2B119b				
+Indium organo-metallic compounds	3C003				
+Indium III/V compounds substrates	3C001c				
+Induction coil magnetometers	6A006c				
+"Induction furnace, controlled environment inert gas"	2B226				
+"Induction furnace, vacuum"	2B226				
+Inductively coupled plasma mass spectrometers (ICP/MS)	3A233a				
+Industrial process control hardware/systems designed for power industries	1B999c				
+"Industrial process control hardware/systems designed for power industries controlled by 1B999, software for"	1D999a				
+Inert gas environment induction furnaces	2B226				
+Inertial Measurement Equipment	7A003c				
+Inertial measurement equipment	7A003				
+Inertial measurement unit tester (IMU module)	7A003	7B003	7B101		
+"Inertial navigation, systems/equipment/components"	7A103a				
+"Inertial navigation, systems/equipment/components"	7A003				
+Inertial navigation systems not controlled by 7A003 or 7A103	7A994				
+"Inertial navigation system software, source code"	7D002				
+Inertial reference Systems (IRS)	7A003c				
+"Inertial sensors, optical fiber"	6A002d3a				
+Inflatable boats and components	8A992f				
+Inflation cartridges	8A992i				
+Influenza virus	1C351b1				
+Information security equipment software	5D992				
+Information security technology support software	5D002b				
+"Information security equipment and components, n.e.s."	5A992				
+Information security software	5D002				
+Information security systems/equipment/devices/components	5A002				
+Information security technology	5E992				
+"Information security - test, inspection, and production equipment"	5B002				
+"Infrared detectors, industrial space qualified"	6A002a1				
+"Infrared sensors, industrial"	6A002c				
+Infrared viewers (police model)	9A980				
+Inhibited red fuming nitric acid (IRFNA)	1C111a3e				
+"Initiation systems, single or multipoint (electric)"	3A232b				
+Injector (free electron laser photo) manufacturing or inspection equipment	6B995a2				
+Inorganic overlay coating application technology	2E003f				
+Inorganic chemicals listed in Supp. No. 1 to part 754 produced or derived from the Naval Petroleum Reserves	1C980				
+Inorganic fibers & filamentary materials	1C010c				
+Inspection equipment (linear-angular for hemishells)	2B006c				
+Inspection equipment for composite materials	1B001f				
+"Inspection machines (dimensional), devices or systems, other than those in 2B006"	2B206				
+Instruction generators for machine tools - technology	2E003d				
+Instrumentation for gas turbine development	9B002	9B619			
+Instrumentation for wind tunnels	9B005				
+"Instrumentation systems, inertial navigation"	7A003				
+Instrumentation cameras	6A003a				
+Integrated circuit assembly equipment	3B991b3				
+"Integrated circuit, Direct Digital Synthesizer (DDS)"	3A001a13				
+"Integrated circuit test equipment, microwave"	3B002c				
+"Integrated circuit test equipment, for (truth table) testing"	3B002b				
+"Integrated circuit, masks"	3B001g				
+"Integrated circuits, compound semiconductor"	3A001a11				
+"Integrated circuits, custom"	3A001a10				
+"Integrated circuits, general purpose"	3A001a				
+"Integrated circuits, microwave"	3A001b2				
+"Integrated circuits, radiation hardened"	3A001a1				
+Integrated circuits and assemblies manufacturing equipment and systems	3B991b				
+Integrated circuit and assembly testing equipment	3B992b4b				
+Integrated circuit computer-aided-design (CAD) software	3D003				
+Integrated circuits and assemblies inspection or testing equipment and systems	3B992b				
+Integrated flight instrument systems/components	7A103b				
+"Integrated Navigation Systems, designed or modified for use in missiles"	7A103c				
+Integrated Services Digital Network technology	5E991				
+"Integrated system source code, avionic/mission systems"	7D003c				
+Integration software for expert systems	2E003e				
+Integration technology for flight management systems	7E104				
+"Intercepting systems and equipment, communications"	5A001f				
+"Intercepting devices, communications"	5A980				
+Interconnect equipment (Computer)	4A003g				
+Interconnection equipment	3B991b1l				
+"Interferometers, velocity (VISARs)"	6A225				
+Interlacing machines	1B001c				
+Intermediate amplifier equipment	5A991b Note a3				
+"Interrupters, ground fault circuit"	3A611y18				
+Interstages for missiles	9A117				
+Intrinsic magnetic gradiometers	6A006c3				
+Inverse synthetic aperture radar (ISAR)	6A008d				
+Inverters (Frequency changers or converters)	3A225				
+Ion beam equipment for mask making/semiconductor devices	3B001f2				
+Ion beam equipment for projection image transfer	3B991b2g				
+Ion beam sensitive resist materials	3C002b				
+"Ion beam system, manufacturing, repairing, physical layout analysis and testing of masks or semiconductor devices"	3B992b6				
+Ion implantation equipment	3B001b				
+Ion implantation equipment	3B991b1g				
+Ion implantation production equipment	2B005b				
+Ion lasers	6A005a				
+Ion or laser beam lithography mask or reticle fabrication equipment	3B991b2d2				
+Ion plating production equipment	2B005g				
+Ion-enhanced diffusion equipment	3B991b1g				
+Ion-exchange processing equipment	0B006c				
+ISDN development/production technology	5E991				
+Isolated live cultures	see Cultures				
+Isolators capable of use with biological agents	2B352f2				
+"Isostatic presses, hot"	2B104				
+"Isostatic presses, hot"	2B204				
+"Isostatic presses, hot"	2B004				
+"Isostatic presses, n.e.s."	2B999a				
+"Isotope separators, electromagnetic"	1B226				
+Jamming equipment	5A001f3				
+Japanese encephalitis virus	1C351a13				
+Jet engine lubricating oil	1C980				
+"Jet vane, thrust vector control sub-system"	9A106c				
+"Jet engines/components, pulse"	9A111				
+"Jigs and fixtures for use in the manufacture of firearms, ordnance, and other stores and appliances for land, sea, or aerial warfare"	2B018n				
+Joule-Thomson self-regulating minicoolers	6A002d2b6				
+Joy sticks	3A611y4				
+"Jumpers, electrica"	3A611y24				
+Junin virus	1C351a14				
+"Kerr or Pocket cells, electro-optical shuttering"	6A203b3c				
+Kick motors	9A004				
+Knobs	3A611y34				
+"Krytron tubes, gas"	3A228a				
+Kyasanur Forest virus	1C351a15				
+"Laboratories (mobile), crime science"	9A980				
+Laguna Negra virus	1C351a16				
+Laminate or composite development software	1D002				
+"Laminates & composite structures, organic metal or carbon"	1A002				
+"Laminates, rockets/propulsion systems/space vehicles"	9A110				
+Land inertial navigation equipment	7A003				
+Land-based gravity meters production equipment	6B007				
+Laser acoustic detection equipment	6A005a				
+Laser based linear position feedback units	2B008a				
+Laser based measuring instruments	2B006b1c				
+Laser beam cutting machines (CNC)	2B001e1c				
+Laser beam equipment for mask making/semiconductor devices	3B001f2				
+Laser beam lithography mask or reticle fabrication equipment	3B991b2d2				
+"Laser beam systems, for probing semiconductor devices"	3B992b5				
+Laser communication technique technology	5E001b2				
+Laser diagnostic equipment	6A005f2				
+Laser diodes	6A005d1				
+Laser diodes designed for telecommunication	5A991b Note b4				
+Laser gyro mirror characterization equipment	7B102				
+Laser microphone	6A005g				
+Laser pointing devices for use on firearms	0A987				
+Laser radar altimeters	7A106				
+Laser radar or Light Detection & Ranging (LIDAR) equipment	6A008j				
+Laser radar systems	6A108				
+Laser ring gyro test equipment	7B002				
+"Laser, technology"	6E003e				
+Laser welding machines	2B999c				
+Lasers	6A005				
+Lasers	6A205				
+Lasers	6A995				
+Lasers for direct write on wafers	3B991b2h				
+Lassa fever virus	1C351a17				
+Lathes (CNC)	2B001a				
+Latches for ground vehicles	0A606y11				
+Launch support equipment	9A115	9A610f			
+Launch vehicle components/structures	9A010	9A610x			
+Lavatories for military aircraft	9A610y11				
+Lavatories for submersible vessels	8A620y4				
+Lavatories for surface vessels of war	8A609y4				
+"LAX-112 (3,6-diamino-1,2,4,5-tetrazine-1,4-dioxide)"	Annex to Category 1 List of Explosives 47b				
+Leg irons	0A982				
+Lenses for radiation hardened TV cameras	6A203c				
+Lidar equipment (Laser radar)	6A008j				
+Life jackets	8A992i				
+Life rafts for military aircraft	9A610y12				
+"Lift fans, for surface effect vessels"	8A002l				
+Light gas guns(Multistage) systems	2B232				
+"Light systems, fuses, and components, for ground vehicles"	0A606y12				
+"Light systems, Stroboscopic"	8A992c				
+"Light systems, underwater"	8A002g				
+"Light systems, underwater"	8A002d2				
+"Light-weight reduction gearing, marine transmissions"	8A002o1d				
+"Lights, underwater"	8A992j				
+"Lights, search"	0A617y1	0A617y2			
+Lightweight composite or foam mirror structures	6A004a3				
+Lightweight monolithic mirrors	6A004a2				
+Lightweight turbofan/turbojet engines	9A101	9A619a			
+Line terminating equipment	5A991b Note a2				
+Linear voltage displacement transformer (LVDT) based instruments	2B006b1b1				
+Linear position feedback units or sensors	2B008a				
+Linear measuring equipment/instruments	2B006b1				
+Linear focal plane arrays	6A002a3				
+Linear-angular inspection equipment for hemishells	2B006c				
+"Liquid oxidizers, various nitrous oxides"	1C111a3				
+Liquid or water jet cutting machines (CNC)	2B001e1a				
+Liquid lasers	6A005c				
+Liquid propellant tanks	9A103				
+Liquid rocket propulsion systems & components	9A106				
+Liquid rocket propulsion systems & components	9A006				
+Liquid rocket propulsion systems	9A005				
+"Liquid, slurry and gel propellant control systems"	9A106d				
+Liquid propellant rocket engines	9A105				
+"Liquid-liquid exchange columns, for lithium amalgams"	1B233b1				
+"Lithium metal, alloys, compounds, mixtures, products or devices"	1C233				
+"Lithium isotope separation facilities, plant and equipment"	1B233				
+Lithium amalgam electrolysis cells	1B233b3				
+Lithium amalgam pumps	1B233b2				
+Lithograph templates	3B001i				
+"Lithography equipment, imprint"	3B001f2				
+"Lithography equipment, mask making for semiconductor wafer-processing"	3B001f				
+Lithography mask or reticle fabrication equipment	3B991b2d2				
+Lithography software	3D003				
+"Location & object detection systems or transmitting and receiving arrays, acoustic"	6A001a1b				
+"Logic arrays, field programmable (FPLA)"	3A001a8				
+Logic processors and assemblies	4A003				
+Louping ill virus	1C351a18				
+Low Light Level (LLL) camera software	6D003				
+Lubricating materials	1C006b				
+Lubricating oil	1C980				
+Lujo virus	1C351a19				
+Lumpy skin disease virus	1C352a16				
+LVDT (Linear voltage displacement transformer) based instruments	2B006b1b1				
+Lymphocytic choriomeningitis virus	1C351a20				
+Lyssavirus (including rabies virus and all other members of the Lyssavirus genus)	1C352a8				
+"Machine tools, E-beam"	2B001e1b				
+"Machine tools, laser"	2B001e1c				
+"Machine tools, numerically controlled"	2B001				
+"Machine tools, numerically controlled"	2B201				
+"Machine tools, numerically controlled and using a Magnetorheological finishing (MRF) proces"	2B002				
+"Machine tools, numerically controlled, optical finishing"	2B002				
+"Machine tools, water/other liquid jet"	2B001e1a				
+"Machine tool assemblies, units or inserts"	2B998				
+Machine tool components and assemblies for 2B006 & 2B007 equipment	2B008				
+Machine tool cutting tools	2B008				
+Machine tools for generating optical quality surfaces	2B992				
+Machine tools for grinding (CNC)	2B001c				
+Machine tools for grinding (CNC)	2B201b				
+Machines for milling (CNC)	2B001b				
+Machines for milling (CNC)	2B201a				
+"Machine tools for turning, grinding, and milling"	2B991d1				
+Machines for turning (CNC)	2B001a				
+Machine tool instruction generators - development technology	2E003d				
+Machine tool rotary position feedback units	2B008b				
+Machine tool spindles	2B008c				
+Machining centers (CNC)	2B201				
+Machining centers (CNC)	2B001				
+Machupo virus	1C351a21				
+Magnaporthe oryzae (Pyricularia oryzae)	1C354b6				
+Magnesium (high purity)	1C228				
+"Magnesium alloy, powder or particulate form"	1C002b1e				
+Magnesium alloys	1C002a2e				
+"Magnesium, metal and alloys of"	1C011a				
+Magnesium oxide (MgO) made or coated crucibles	2A225a6				
+Magnesium metal particulate	1C111a2a4				
+Magnetic alloy strips	1C003c				
+Magnetic anomaly detection software	6D003f2				
+Magnetic bearings (suspension)	2A001c				
+Magnetic compensation systems for magnetic and underwater electric field sensors	6A006d				
+Magnetic compensation systems software	6D003f1				
+Magnetic confinement plasma dry etching equipment	3B001c1a				
+Magnetic disk storage	3A002a6				
+Magnetic and Electric Field Sensors ?software?	6D003f				
+Magnetic gradiometers	6A006c				
+"Magnetic gradiometers, intrinsic"	6A006c2				
+Magnetic hard disk drive development or production technology	4E993c				
+Magnetic metals	1C003				
+"Magnetically enhanced, sputtering equipment"	3B991b1f				
+Magnetometers	6A006				
+Magnetometers not controlled by 6A006	6A996a				
+Magnetometer system	6A006				
+Magnetostrictive alloys	1C003b				
+"Mandrels for rotor assembly, bellows forming"	2B228a				
+"Mandrels, bellows-forming"	2B228c				
+Mandrels (precision) for filament winding machines	1B201				
+"Manganin gauges, pressure"	6A226a				
+"Manifolds (air, fuel, oil) for gas turbine engines"	9A619y8				
+"Manipulators, remote"	2B225				
+"Manipulators, for submersibles"	8A002i				
+"Manned, tethered submersible vehicles"	8A001a				
+"Manned, untethered submersible vehicles"	8A001b				
+Manufactured gas and synthetic natural gas produced or derived from Naval Petroleum Reserves	1C984				
+Map cases for military aircraft	9A610y28				
+Maraging steel	1C116				
+Maraging stee	1C216				
+Marburg virus	1C351a22				
+Marine acoustic systems	6A001a				
+Marine boiler	8A992l				
+"Marine engines and parts (both inboard and outboard, n.e.s.)"	8A992g				
+Marine gas turbine engines	9A002				
+"Marine, terrestrial acoustic equipment"	6A991				
+Marx generators	3A999c				
+"Mask, gas or full face"	1A004	1A995			
+Mask or reticle altering holders or equipment	3B991b2d3				
+Mask or reticle fabrication equipment	3B991b2d				
+"Mask or reticles or pellicles, stored program controlled inspection equipment"	3B991b2e				
+Mask software	3D003				
+Masks	8A992i				
+"Masks, integrated circuits of 3A001"	3B001g				
+"Masks, mask substrates, mask-making equipment"	3B991b2				
+Mass spectrometers & ion sources (UF6 enrichment plant)	3A233				
+"Mass spectrometers, n.e.s."	3A999b				
+Materials for reduced electromagnetic reflectivity	1C101				
+Materials ?specially designed? for ground vehicles and related commodities controlled by 0A606 and not elsewhere specified on USML	0C606				
+Materials ?specially designed? for surface vessels of war and related commodities controlled by 8A609	8C609				
+Miscellaneous materials ?specially designed? for military use	0C617				
+"Matrix, organic"	1A002b				
+MCT (HgCdTe) crystals & epitaxial wafers	6C002b				
+"Measurement equipment, radiation"	1A999a				
+"Measurement equipment, underwater velocity"	6A001b				
+"Measuring instruments or systems, dimensional"	2B006				
+Measuring and analysis equipment	3B992b2				
+"Mechanical cameras, framing"	6A003a1	6A003a2	6A003a3		
+Mechanical caps	3A611y29				
+Mechanical plugs	3A611y30				
+Media access units	5A991b Note a12				
+Medical facilities for submersible vessels	8A620y6				
+Medical facilities for surface vessels of war	8A609y6				
+Melting furnaces	2B227b				
+Mercury amalgam pumps	1B233b2				
+Mercury cadmium telluride crystals & epitaxial wafers	6C002b				
+Metal alloy powders or particulate form	1C002b				
+Metal alloy particulate	1C111a2a4				
+Metal alloys	1C002a				
+"Metal alloys, aluminum or titanium"	1C202				
+"Metal alloys, beryllium"	1C230				
+"Metal alloys, boron"	1C011b				
+"Metal alloys, hafnium"	1C231				
+"Metal alloys, lithium"	1C233				
+"Metal alloys, powder and material production systems and components"	1B002				
+"Metal alloys, tungsten"	1C226				
+"Metal alloys, tungsten or molybdenum"	1C117				
+"Metal alloys, zirconium"	1C234				
+Metal coated fiber preforms	9A110				
+Metal coated fiber preforms for fiber prepregs in 9C110	9C110				
+Metal or carbon matrix	1A002b				
+Metal embrittlement agents	0A617				
+"Metal-organic compounds, aluminum/gallium/indium"	3C003				
+Metal particulate	1C011				
+Metal powder production equipment	1B102				
+Metal vapor lasers	6A005b				
+"Metal working process tools, die & fixture technology"	2E003b1				
+Metal working manufacturing processes technology	2E003b				
+Metallo-organic or polymeric materials	1C007e				
+Metallurgical melting & casting furnaces	2B227				
+Metals or carbon coated fibers	1C010e				
+Metals with high initial relative (magnetic) permeability	1C003a				
+Methyl centralite	1C018a				
+Methyldiethanolamine (105-59-9)	1C355b2b				
+Methyl phosphinyl dichloride	1C350b1				
+Methyl benzilate	1C350d9				
+Microbiological disposal technology	1E351				
+"Microchannel plates, image intensifier tubes"	6A002a2				
+Microcomputer microcircuits	3A001a3				
+Microcontroller microcircuits	3A001a3				
+Microcyclus ulei (syn. Dothidella ulei)	1C354b3				
+Microcystins (Cyanginosin)	1C351d9				
+"Microelectronic circuits (e.g., integrated circuits and micro-circuits) rated, certified, or otherwise specified or described as meeting or exceeding all the characteristics in 9A515.d and that are ?specially designed? for defense articles, ?600 series? items, or items controlled by 9A515"	9A515d				
+"Microelectronic circuits (e.g., integrated circuits and micro-circuits) that are rated, certified, or otherwise specified or described as meeting or exceeding all the characteristics in 9A515.e and that are ?specially designed? for defense articles controlled by USML Category XV or items controlled by 9A515"	9A515e				
+Microfluorination ion sources	3A233f				
+Micromachined Angular Rate Sensors	7A994				
+"Microorganisms, genetically modified"	1C353				
+Microphones	3A611y6				
+Microprocessor microcircuits	3A001a3				
+Microprocessor microcircuits above 530 MTOPS development/production technology	3E002g				
+"Microwave amplifiers, solid state"	3A001b4				
+"Microwave frequency extenders, mixers/converters"	3A001b7				
+Microwave integrated circuit test equipment	3B002c				
+Microwave integrated circuits	3A001b2				
+Microwave modules	3A001b4				
+Microwave or millimeter wave components	3A001b				
+Microwave or millimeter wave components software	3D001				
+Microwave or millimeter wave components technology	3E002				
+Microwave ?monolithic integrated circuits? (MMIC) power amplifiers	3A001b2				
+Microwave Monolithic Integrated Circuit (MMIC) power amplifier technology	5E001d	5E001e	3E001		
+Microwave power modules (MPM)	3A001b9				
+Microwave transistors (discrete)	3A001b3				
+Microwave test receivers	3A002f				
+Microwave wave components	3A001b				
+MIG welders	2B999d				
+Military commodities	0A919				
+Military components	3A611				
+Military construction equipment	0A617y				
+"Military electronics (equipment, end items, systems)"	3A611				
+Military explosive production equipment	1B018a				
+"Military ferries, bridges and pontoons"	0A617				
+"Military harbor entrance detection devices (magnetic, pressure, and acoustic)"	8A620				
+Military helmet	0A018				
+Military training equipment	0A614				
+Military vehicles	0A606				
+Military vehicle fording kits	0A606				
+Military vehicle self-launching bridge components	0A606				
+Millimeter wave components	3A001b				
+"Milling machines, (CNC) with two or more coordinated axes"	2B001b				
+"Milling machines, (CNC) with two or more coordinated axes"	2B201a				
+Milling machines (CNC	2B991d1				
+"Mills, fluid energy"	1B119				
+Mining equipment	2B999h				
+"Mirror assemblies/segments, space assembly"	6A004c3				
+"Mirror characterization equipment, reflectometers"	7B102b				
+"Mirror control equipment, phased array/segment"	6A004d4				
+"Mirror structures, lightweight foam or composite type"	6A004a3				
+"Mirrors, actively cooled or heat pipe cooled"	6A005e1				
+"Mirrors, beam steering"	6A004a4				
+"Mirrors, cockpit for military aircraft"	9A610y15				
+"Mirrors, optical"	6A005e2				
+"Mirrors, optical"	6A004a				
+Missile engine combustion regulation devices	9A118				
+Missile (usable) guidance sets	7A117				
+Missile telemetry	5A101				
+"Missile modeling, simulation & integration software"	9D103				
+Mixed Oxides of Nitrogen (MON)	1C111a3d				
+"Mixers, batch"	1B117				
+"Mixers, continuous"	1B118				
+"Mixers, frequency extenders"	3A001b7				
+"Mobile communications equipment, assemblies and components"	5A991g				
+Modeccin toxin	1C351d10				
+"Modeling/simulation of guidance sets, software"	7D103				
+Modems	991b2				
+Modular time interval meter	3A999e2				
+"Modules, microwave"	3A001b2				
+"Modules/assemblies, fast switching function"	3A228c				
+Molecular beam epitaxial growth equipment using gas sources	3B001a3				
+Molecular beam epitaxial growth equipment	3B991b1e				
+Molecular beam mass spectrometers	3A233e				
+Molybdenum alloy fibers	1C010c Note 2				
+Molybdenum & tungsten metals & alloys	1C117				
+"Monel equipment including valves, piping, tanks and vessels"	2B999f				
+Monel plate	1C999c				
+"Monitoring equipment, radiation"	1A999a				
+"Monitoring systems, toxic gas"	2B351				
+Monkey pox virus	1C351a23				
+Monolithic integrated circuits	3A001a Note 2				
+Monolithic integrated circuit repair or trimming laser equipment	3B991b1m				
+Monospectral imaging sensors	6A002b				
+Motion control boards for machine tools	2B991b				
+Motion simulators or rate tables	2B120				
+Multi-chamber central wafer handling systems	3B001e				
+Multi-channel interval meter	3A999e2				
+Multichip modules	3A611h	3A611y16			
+"Multi-data-stream processing equipment, development or production technology for"	4E993b				
+Multi-element detector arrays	6A002a3				
+Multi-layer hetero-epitaxial material substrates & wafers	3C001				
+"Multi-layer masks (with phase shift layer), for integrated circuits"	3B001h				
+Multichip integrated circuits	3A001a Note 2				
+Multichip modules	3A611h	3A611y16			
+"Multilevel security capability, equipment"	5A002a6				
+"Multimode optical fiber & cables, high tensile strength"	5A001c				
+Multiple-seal pump	2B350i				
+Multiplex equipment	5A991b Note a7				
+Multipoint initiation systems	3A232b				
+Multipoint restraint devices	0A982				
+Multispectral imaging sensors	6A002b				
+Multistage light gas gun systems	2B232				
+Multi-walled piping incorporating a leak detection port	2B350h				
+Murray Valley encephalitis virus	1C351a24				
+"Mycoplasma capricolum subspecies capripneumoniae (?strain F38"")"	1C352b1b				
+Mycoplasma mycoides subspecies mycoides SC (small colony) (a.k.a. contagious bovine pleuropneumonia)	1C352b1a				
+"N,N-diisopropyl-beta-aminoethane thiol"	1C350b6				
+"N,N-diisopropyl-(beta)-amino ethanol"	1C350b8				
+"N,N-diisopropyl-beta-aminoethyl chloride"	1C350b9				
+"N,N-diisopropyl-(beta)-aminoethyl chloride hydrochloride"	1C350b7				
+"NBC (Nuclear, biological and chemical) detection system software"	1D003				
+"NBC (Nuclear, biological and chemical) detection system libraries or parametric technical databases"	1E002g				
+NN-Diphenylurea (unsymmetrical diphenylurea)	1C018b				
+Name plates and identification plates	3A611y33				
+Nanocrystalline alloy strips	1C003c				
+Natural gas liquids and derivatives produced or derived from Naval Petroleum Reserves	1C983				
+Naval Petroleum Reserves	1C983				
+"Navigation, airborne comm. & other avionics equip. technology"	7E003	7E994	0E521 No 6		
+"Navigation, airborne communication and other avionics software"	7D004	7D994	0D521 No 2		
+"Navigation/avionics equipment, systems, parts, components ? for military"	7A611	3A611			
+Navigation direction finding equipment	7A004-7A008	7A103-7A105	7A994		
+"Navigation systems, equipment & components, inertial"	7A103				
+"Navigation systems, equipment & components, inertial"	7A003				
+"Navigation systems, equipment, parts ? for military not on USML"	7A611	3A611			
+"Navigation systems, underwater sonar"	7A008				
+NDT (non-destructive test) inspection equipment (3D)	1B001f				
+NDT (non-destructive test) inspection equipment	9B007				
+Neodymium lasers	6A005d6				
+Neodymium lasers	6A205f				
+Nets (submarine or torpedo)	8A620e				
+Network analyzers	3A002e				
+Network access controllers contained in computer equipment	4A994i				
+Network access controllers contained in telecommunications	5A991b4a				
+Neural computers/assemblies/components	4A004b				
+Neural network integrated circuits	3A001a9				
+Neutron generator systems & tubes	3A231				
+"Neutronic calculations/modeling, software for"	0D999a				
+Newcastle disease virus	1C352a9				
+Nickel alloy	1C002a2a				
+Nickel alloy/powder or particulate form	1C002b1a				
+Nickel aluminides	1C002a1a				
+Nickel based alloys	1C002a1				
+Nickel electroplating equipment	2B999i				
+Nickel metal (made from powder)	1C240				
+Nickel powder	1C240				
+Night vision devices	6A002a2	"6A003b3, b4"	6A202	6A203	
+Night vision technology	6E002	6E101			
+Niobium alloys	1C002a2b				
+Niobium alloy/powder or particulate form	1C002b1b				
+Nipah virus	1C351a25				
+"3-Nitraza-1,5 pentane diisocyanate"	1C018l				
+Nitric acid	1C999e				
+Nitrided niobium-titanium-tungsten alloy crucibles	2A225a7				
+2-Nitrodiphenylamine	1C11c3	1C018h			
+Nitrogen dioxide (dinitrogen tetroxide)	1C111a3b				
+Nitroglycerin (in medicinal form)	1C992l				
+Nitroguanidine	1C011d				
+P-Nitromethylaniline	1C018i				
+"N,N-Dialkyl (Me, Et, n-Pr or i-Pr) aminoethyl-2-clorides and corresponding protonated salts"	1C355a2d				
+"N,N-Dialkyl (Me, Et, n-Pr or i-Pr) aminoethane-2-ols and corresponding protonated salts"	1C355a2e				
+"N,N-Dialkyl (Me, Et, n-Pr or i-Pr) aminoethane-2-thiols and corresponding protonated salts"	1C355a2f				
+"N,N-Dialkyl (Me, Et, n-Pr or i-Pr) phosphoramidic dihalides"	1C355a2b				
+"Noise reduction equipment for vessels, acoustic mounts"	8A002o3a				
+"Noise cancellation systems for vessels, active"	8A002o3b				
+"Noise reduction systems for vessels, active"	8A002o3b				
+Non-destructive inspection equipment	1B001f				
+"Non-destructive test inspection equipment, rocket motor"	9B007				
+Non-fluorinated polymeric substances	1C008				
+Non-fluorinated polymeric manufactures	1A003				
+"Non-irritant smoke flares, canisters, grenades and charges"	1A984				
+Non-linear optical materials	6C004c				
+Non-planar absorbers	1C001a Note 1b				
+Non-tunable continuous wave (CW) lasers	6A005a	6A995e			
+Non-tunable pulsed lasers	6A005b	6A995d			
+Non-tunable solid state lasers	6A005a	6A005b	6A995f		
+"Nozzles, for producing pyrolitically derived materials"	1B116				
+"Nozzles, rocket motor (liquid)"	9A106b				
+Nuclear material handling and processing equipment	2A291				
+"Nuclear materials, facilities, and equipment software"	0D001				
+"Nuclear plant commodities, parts and accessories"	2A291d				
+"Nuclear reactor, eddy current test equipment"	2A291d				
+Nuclear reactor equipment	2A291				
+"Nuclear reactor, simulators"	2A291b				
+"Nuclear reactor, ultrasonic test equipment"	2A291d				
+Nuclear reactors fuel element (irradiated) reprocessing plant/equipment	0B006				
+"Nuclear technology for the development, production or use of nuclear materials, facilities, and equipment"	0E001				
+Numerical control for machine tools - software	2D002	2D003			
+Numerical control for machine tools - technology	2E003d				
+"Numerical control units for machine tools and numerically controlled machine tools, n.e.s."	2B991				
+Numerically controlled machine tools	2B290				
+Numerically controlled machine tools that can be equipped with electronic devices for simultaneous contouring control	2B991c				
+O-ring for ground vehicles	0A606y9				
+Object detection and location systems or transmitting and receiving arrays (acoustic)	6A001a1b				
+Ocean salvage systems	8A001e				
+Off highway wheel tractors	9A990				
+"Oil and gas exploration equipment, software, and data"	0A998				
+Oil well cartridges	1C608f	1C992g			
+Oil lines and tubes for military gas turbine engines	9A619y2				
+Oil tank and reservoirs for military gas turbine engines	9A619y1				
+"Oil, lubricating, cutting, or quenching"	1C980				
+"Oils, distillate fuel"	1C980				
+Omsk haemorrhagic fever virus	1C351a26				
+On-highway tractor	9A990				
+"Operating systems for real time processing equipment, software"	4D993c				
+Operating system software for real time processing equipment	4D993c				
+"Optical absorption materials, low"	6C994a				
+"Optical components, space-qualified"	6A004c				
+Optical components for lasers	6A005e				
+Optical components for lasers	6A004b				
+Optical computers	4A004c				
+Optical control equipment	6A004d				
+"Optical detectors, radiation hardened"	6A102				
+Optical detectors & sensors	6A002				
+Optical element inspection or testing equipment and components	3B992a				
+Optical element manufacturing equipment and components	3B991a				
+"Optical elements, aspheric"	6A004e				
+Optical equipment	6A005f				
+Optical equipment	6B004				
+Optical equipment other than optical surface scattering measurement equipment	6B004b				
+Optical fabrication technologies	6E003d2				
+Optical fabrication technologies	6E993a				
+Optical fiber characterization equipment	5A991b Note b3				
+Optical fiber couplers or connectors for underwater use	8A002c				
+"Optical fiber & accessories, communications"	5A001c				
+Optical fiber preforms	6C994b				
+Optical fiber preforms	5C991				
+"Optical fibers/fiber cable, sensing"	6A002d3				
+"Optical fiber sensing elements, hydrophones"	6A001a2a2				
+Optical filters	6A994a				
+Optical filters technology	6E993b				
+Optical finishing processes	2B002d				
+Optical (Infrared) tracking (range) radars	6A108b2				
+Optical integrated circuits	3A001a6				
+Optical materials	6C994				
+"Optical materials, with non-linear characteristics"	6C004b3				
+Optical mirrors (reflectors)	6A004a				
+Optical mirrors (reflectors)	6A005e2				
+Optical sensing fibers not controlled by 6A002	6C992				
+Optical Sensors	6A992				
+Optical sensor cryocoolers	6A002d1				
+Optical sensors - flight control systems - technology	7E004				
+"Optical sensors, optical fiber"	6A002d3				
+Optical sensor materials	6C002				
+Optical sighting devices for firearms	0A987				
+Optical surface coating/treatment technology	6E003d1				
+Optical switching equipment	5A991c10c				
+"Optical switching equipment, technology for the development of equipment employing"	5E001c3				
+"Optical-electro shutters, Kerr or Pockel cells"	6A203b3c				
+Optics	6A994				
+"Optics, (optical components)"	6A004				
+Optimization of rocket systems trajectory technology	7E104				
+Organic fibers & filamentary materials	1C010a				
+Organic matrix	1A002a				
+Organo-metallic compounds	3C003				
+Oropouche virus	1C351a27				
+Oscillators or oscillator assemblies	3A001b10				
+Oscilloscopes (high-speed)	3A002a7				
+Oscilloscopes (analog and digital)	3A292				
+Oxide matrix reinforced materials	1C007f				
+Oxygen Iodine (O2-I) laser	6A005d5c1				
+PABXs (Private Automatic Branch exchanges)	5A991c				
+Packet switching equipment	5A991c10				
+"Parachutes, military"	9A610h				
+Paraffin wax	1C980				
+Parametric technical databases	1E002g				
+Particle accelerators	1B999b				
+Particle flow detection microphone	6A005g				
+Passenger seats for military aircraft	9A610y16				
+Particle measuring systems employing lasers	3B992b7				
+Parts for ?600 series? or defense articles	3A611y				
+Passive coherent location systems or equipment	5A001g				
+"Passive sensors, direction finding systems"	7A115				
+Passive acoustic systems	6A001a1d				
+"Pathogens, genetically modified microorganisms"	1C353a				
+"Pathogens, animal"	1C352				
+"Pathogens, human"	1C351				
+"Pathogens, plant"	1C354				
+"Pathogens, zoonotic"	1C351				
+PBAA (Polybutadiene-acrylic acid)	1C111b3				
+PBAN (Polybutadiene-acrylic acid-acrylonitrile)	1C111b4				
+PEEK (Polyether ether ketone)	1C998				
+PEK (Polyether ketone)	1C998				
+PEKEKK (Polyether ketone ether ketone ketone)	1C998				
+PEKK (Polyether ketone ketone)	1C998				
+"1,1,3,3,3-Pentafluoro-2-(trifluoromethyl)-1-propene (382-21-8) (PFIB)"	1C355a1a	1E355a1			
+"Perfluoroaliphatic-ethers, monomeric or polymeric"	1C006d1a				
+Perfluoroalkanes	1C006d1d				
+Perfluorocycloalkanes	1C006d1c				
+"Perfluoropolyalkylether-triazines, monomeric or polymeric"	1C006d1a				
+"Performance improvement software, navigation systems"	7D003a				
+"Performance improvement source code, navigation systems"	7D003b	7D004			
+Peronosclerospora philippinensis (a.k.a. Peronosclerospora sacchari)	1C354b7				
+Peste des petits ruminants virus	1C352a10				
+Petroleum products produced or derived from Naval Petroleum Reserves	1C982				
+"Petroleum, crude or reconstituted"	1C981				
+"PFIB (1,1,3,3,3-Pentafluoro-2-(trifluoromethyl)-1-propene (382-21-8)"	1C355a1a				
+Phased array antennae (in radar)	6A008e				
+Phased array/segment mirror control equipment	6A004d4				
+Phased array antennae (in radar)	5A001d				
+Phased array antennae	5A991f				
+"Phenylene, as lubricating fluids"	1C006b1				
+Phoma glycinicola (formerly Pyrenochaeta glycines)	1C354b12				
+Phosgene: Carbonyl dichloride (75-44-5)	1C355b1a	1E355b1			
+Phosphate glass	6C004e				
+Phosphor bronze or copper mesh packings	1A226				
+"Phosphor image plates, storage"	1A999b				
+Phosphorus hydrides	3C004				
+Phosphorus oxychloride	1C350c3				
+Phosphorus pentachloride	1C350c4				
+Phosphorus pentasulphide	1C350d10				
+Phosphorus trichloride	1C350c5				
+Photo-enhanced CVD equipment	3B991b1i				
+Photo-enhanced diffusion equipment	3B991b1g				
+Photo-optical step and repeat cameras	3B991b2d1				
+Photocathodes	6A002a2c				
+"Photographic still cameras, underwater"	8A001e				
+"Photographic still cameras, for underwater use"	8A992b				
+Photomultiplier tubes	6A202				
+"Photovoltaic arrays, space qualified or radiation hardened"	3A001e4				
+"Physics-based simulation ?software? specially designed for the ?development? of lithographic, etching or deposition processes"	3D003				
+"Piezoelectric polymer & copolymer, made from vinylidene fluoride materials"	1A001b				
+"Piezoelectric sensing elements, hydrophones"	6A001a2a2b				
+Pinacolone	1C350d11				
+Pinacolyl alcohol	1C350b18				
+"Piping, austenitic stainless steel"	2B999n				
+"Piping, fittings and valves of or lined with stainless steel, copper-nickel alloy or other alloy steel"	2A292				
+"Piping, monel"	2B999f				
+"Piping, multi-walled incorporating a leak detection port"	2B350h				
+"Piping, stainless steel"	2B999g				
+"Piping, vacuum"	2B999k				
+Pitch-impregnated fibers	1C010e				
+Planar absorbers	1C001a Note 1	1C001c	1C001d		
+"Plant pathogens, bacteria or fungi"	1C354				
+PLAs (Programmable Logic Arrays)	3A001a8				
+Plasma atomization & melting furnaces	2B227b				
+Plasma dry etching equipment	3B001c				
+Plasma-enhanced CVD (PECVD) equipment	3B991b1i				
+Plasma enhanced or plasma assisted CVD production equipment	2B005a1c				
+"Plasma spraying production equipment, with controlled atmosphere"	2B005d				
+"Platforms, complete"	9A992	9A610h			
+Platinized catalysts	1A225				
+"Plugs, mechanical"	3A611y30				
+Plutonium metal production systems	0B006g				
+Plutonium nitrate conversion systems	0B006f				
+Pocket cell electro-optical shuttering	6A203b3c				
+Police helmets and shields	0A979				
+Polyarylene ketones	1C008d				
+Polybiphenylenethersulphone	1C008f				
+Polybromotifluoroethylene	1C006c3				
+Polybutadiene-acrylic acid (PBAA)	1C111b3				
+Polybutadiene-acrylic acid-acrylonitrile (PBAN)	1C111b4				
+Polycarbosilazanes	1C007e3				
+Polychlorotrifluoroethylene	1C006c2				
+Polycrystalline alimina fibers	1C010c Note 1				
+Polycrystalline silicon and materials production equipment	3B991b1a				
+"Polydiorganosilanes, precursor for silicon carbide"	1C007e1				
+Polyether ketone ether ketone ketone (PEKEKK)	1C998				
+Polyether ketone (PEK)	1C998				
+Polyether ether ketone (PEEK)	1C998				
+Polyether ketone ketone (PEKK)	1C998				
+"Polyetherimides, fibrous & filamentary materials composed of"	1C010d1a				
+Polygraphs	3A981				
+Polymeric or metallo-organic materials	1C007e				
+Polymeric substances	1C111b				
+"Polymeric substances, non-fluorinated"	1C008				
+"Polymeric substances, non-fluorinated"	1C998				
+"Polysilazanes, precursor for silicon nitride"	1C007e2				
+Polythiophene	1C001c3				
+Porcine enterovirus type	91C352a11				
+Porcine herpes virus (Aujeszky? disease)	1C352a6				
+Porous nickel metal	1C240				
+Portable electric generator development or production software	2D994				
+Portable electric generators	2A994				
+"Positioning equipment/components, global"	7A005				
+Positioning equipment	7A105				
+"Positioning systems, acoustic"	6A001a1d				
+Positioning tables or rate tables	2B120				
+Positioning tables or rate tables	2B121				
+Positive resists for semiconductor lithography	3C002a1				
+Post-flight data processing software	6D103				
+Potassium cyanide	1C350d12				
+Potassium bifluoride	1C350d14				
+Potassium fluoride	1C350d13				
+Potassium hydrogen fluoride see potassium bifluoride	1C350d14				
+Potassium titanyl arsenate (KTA)	6C004b1				
+Potato Andean latent tymovirus (Andean potato latent virus)	1C354c1				
+Potentiometer	3A611y7				
+Powassan virus	1C351a28				
+Powder metallurgy rotor component manufacturing equipment	9B009				
+"Power generating equipment, nuclear reactor"	0A002				
+"Power supplies, direct current high power (dc)"	3A226				
+"Power supplies, direct current high-voltage"	3A227				
+"Power systems, air independent, for underwater use"	8A002j				
+"Power transmission shaft systems, marine"	8A002o1				
+"Power transmission shaft systems, marine"	8A002o1e				
+Precision mandrels for filament winding machines	1B201				
+Precision rotor forming mandrels	2B209b				
+"Precision tracking systems, usable for missiles"	6A108b				
+Precursors for toxic chemical agents	1C350				
+Preform production equipment	1B101d				
+"Preforms, metal coated, for fiber prepregs in 9C110"	9C110				
+Preforms production equipment	1B001				
+"Preforms production equipment, n.e.s."	1B999e				
+"Preforms production equipment controlled by 1B999, software for"	1D999b				
+"Preforms, fibrous or filamentary materials"	1C010e				
+"Preforms, glass for optical fibers"	5C991				
+Preforms for space vehicles (metal coated fiber)	9A110				
+"Preforms, fibrous or filamentary materials"	9A110				
+"Preforms, metal coated fiber (for propulsion systems)"	9A110				
+Prepreg production equipment	1B001e				
+Prepreg production equipment	1B101d				
+"Prepregs production equipment, n.e.s."	1B999e				
+"Prepregs production equipment controlled by 1B999, software for"	1D999b				
+"Prepregs, fibrous or filamentary materials"	1C010e				
+"Prepregs, resin impregnated fiber, for 9A110 items"	9C110				
+Prepregs production equipment	1B001				
+"Prepregs, when impregnated with phenolic or epoxy resins"	1C010e Note 2				
+"Prepregs, fibrous or filamentary materials"	9A110				
+"Presses, hot isostatic"	2B204				
+"Presses, hot isostatic"	2B104				
+"Presses, hot isostatic"	2B004				
+"Presses, hot isostatic n.e.s."	2B999a				
+Pressure transducers	2B230				
+"Pressure regulators, air cylinders, hoses, valves and backpacks"	8A992h				
+"Pressure sensors, manganin & quartz"	6A226				
+Primary cells and secondary cells	3A001e1a	3A991j			
+"Printed circuit boards for numerical control units, machine tools or feed back devices"	2B998c				
+Printed circuit boards & populated circuit card assemblies	3A611g	6A611y15			
+Private automatic branch exchanges (PABXs)	5A991c				
+"Probing (test) systems, semiconductor devices"	3B002d				
+"Process control instrumentation, for reprocessing plant"	0B006d				
+Process control hardware/systems designed for power industries	1B999				
+"Process control hardware/systems designed for power industries controlled by 1B999, software for"	1D999a				
+Process control systems for use in nuclear reactor equipment	2A290b				
+Process control systems for use in nuclear material handling and processing equipment	2A291a				
+Processing equipment for bay or bottom cable systems	6A001a2e3				
+"Processors, digital array"	3A001a3 Note				
+"Processors, digital signal"	3A001a3 Note				
+"Processors, digital signal"	4A003				
+"Processors, digital array"	4A003				
+"Production facilities, reentry vehicles"	9B116				
+"Production equipment, propulsion systems & components"	9B115	9B619			
+"Production equipment, reentry vehicles"	9B115				
+"Production facilities, rockets/propulsion systems"	9B116				
+Profilometers	7B002b				
+Program proof and validation software for real time processing equipment	4D993				
+"Programmable gate & logic arrays (FPGA's & FPLA's), field"	3A001a7				
+"Programmable & logic arrays (FPGA's & FPLA's), field"	3A001a8				
+Programmable logic devices (PLD)	3A611f	3A611y14			
+Programming controls for filament winding machines	1B201				
+Projectile accelerators	2B232				
+Projection image transfer equipment	3B991b2g				
+"Projection telescopes, laser diagnostics"	6A005f4				
+"Projectors, acoustic"	6A001a1c				
+Proppant	0A998b2				
+"Prolifometers, to characterize mirrors for laser gyro equipment"	7B102c				
+Propellant additives and agents	1C111c				
+Propellants and constituent materials	1C111				
+Propellant (liquid) production equipment and components	1B115				
+Propellant (liquid) test and handling equipment and components	1B115				
+Propellant (solid) production equipment and components	1B117				
+Propellers and systems used with reciprocating engines for military aircraft	9A610y25				
+Propeller blades or propfans composite technology	9E003b2	9E610y			
+Propeller noise reduction technology	8E002a				
+Propeller noise reduction software	8D002				
+"Propellers, contrarotating"	8A002o1b				
+"Propellers, water screw"	8A002o1				
+"Propulsion equipment, nuclear"	0A002				
+"Propulsion systems/components, production equipment"	9B115	8B619			
+"Propulsion systems, rocket"	9A005				
+"Propulsion equipment, underwater"	8A992j				
+"Propulsion system components/structures, launch-vehicle"	9A010				
+Propulsion system composite components/structures	9A110	9A619x			
+Propulsion system use software	9D101	9D610a			
+"Propulsion systems, rocket"	9A009				
+"Propulsion systems, rocket"	9A007				
+Propulsive substances	1C111a				
+Protective and detection equipment	1A004	1A995	2B351		
+"Protective clothing, Independently ventilated"	2B352g1				
+"Protective suits, gloves, shoes"	1A004	1A995	2B352g1		
+Proximity focused image intensifier tubes	6A203b3a				
+Pseudomonas mallei (Burkholderia mallei)	1C351c5				
+Pseudomonas pseudomallei (Burkholderia pseudomallei)	1C351c6				
+Psychological stress analysis equipment	3A981				
+Public Address (PA) systems for military aircraft	9A610y18				
+Public Address (PA) systems for submersible vessels	8A620y1				
+Public Address (PA) systems for surface vessels of war	8A609y1				
+Puccinia graminis ssp. graminis var. graminis / Puccinia graminis ssp. graminis var. stakmanii (Puccinia graminis [syn. Puccinia graminis f. sp. tritici])	1C354b4				
+Puccinia striiformis (syn. Puccinia glumarum)	1C354b5				
+Pulsating Chemical Vapor Deposition production equipment	2B005a1a				
+Pulse amplifiers	3A999c				
+Pulse excited Q switched neodymium-doped lasers	6A205f				
+"Pulse generators, high-current for detonators"	3A229				
+"Pulse generators, high-speed"	3A230				
+Pulse jet engines/components	9A111				
+Pulse radar cross-section measurement systems & components	6B008				
+"Pulse shaping networks, high power"	3A999c				
+Pulsed electron accelerators	3A201c				
+Pumpjet propulsion systems	8A002p				
+"Pumps, high pressure"	0A998b3				
+"Pumps, liquid propellant"	9A106d				
+"Pumps, lithium amalgam"	1B233b2				
+"Pumps, mercury or lithium amalgam"	1B233b2				
+"Pumps, multiple-seal"	2B350i				
+"Pumps, potassium amide in liquid ammonia"	1B230				
+"Pumps, seal-less"	2B350i				
+"Pumps, vacuum"	2B231				
+"Pumps, vacuum"	2B350i				
+Pumps designed for industrial service	2B999j				
+Pumps designed to move molten metals by electromagnetic force	2A293				
+Pyrolitic deposition nozzles	1B116				
+"Pyrolitic deposition systems (?isostatic presses?, other than those controlled by 2B004)"	2B104				
+"Pyrolitic deposition systems (chemical vapor deposition furnaces, other than those controlled by 2B005.a)"	2B105				
+"Pyrolitic deposition systems, for rocket nozzles and reentry vehicle nose tips"	2B117				
+Pyrolitically derived materials production technology	1E104				
+Pyrolized carbon-carbon components	1A102				
+Pyrolized carbon-carbon materials	1C102				
+"Pyrolysis equipment, for rocket nozzles and reentry vehicle nose tips (?isostatic presses?, other than those controlled by 2B004)"	2B104				
+"Pyrolysis equipment, for rocket nozzles and reentry vehicle nose tips (chemical vapor deposition furnaces, other than those controlled by 2B005.a)"	2B105				
+"Pyrolysis equipment, for rocket nozzles and reentry vehicle nose tips (other than those controlled by 2B004, 2B005.a, 2B104, or 2B105"	2B117				
+"Pyrolysis process control equipment, for ?isostatic presses?, other than those controlled by 2B004"	2B104				
+"Pyrolysis process control equipment, for chemical vapor deposition furnaces, other than those controlled by 2B005.a"	2B105				
+"Pyrolysis process control equipment (other than those controlled by 2B004, 2B005.a, 2B104, or 2B105)"	2B117				
+"Pyrotechnic articles, dual use"	1A984				
+"Pyrotechnic devices, commercial"	1C608j	1C992k			
+QRS11-00100-100/101 Micromachined Angular Rate Sensors	7A994				
+Q-switched lasers	6A005a	6A005b			
+Q-switched lasers	6A205f				
+Quadrature-amplitude-modulation (QAM) based radio equipment operating above level 4	5A991b7a				
+Quadrature-amplitude- modulation (QAM) based radio equipment operating above level 16	5A991b7b				
+Quadrature-amplitude-modulation (QAM) based radio equipment	5A991b7				
+"Quadrature-amplitude-modulation (QAM) based radio equipment, equipment for the development of"	5B001b4a				
+"Quadrature-amplitude-modulation (QAM) based radio equipment, software for the development of"	5D001d4a				
+"Quadrature-amplitude-modulation (QAM) based radio equipment, technology for the development of"	5E001c4a				
+Quantum cryptography	5A002a9				
+Quartz pressure sensors/transducers	6A226b				
+3-Quinuclidinol	1C350b19				
+3-Quinuclidone	1C350d15				
+Rabies virus (and all other members of the Lyssavirus genus)	1C352a8				
+"Radar cross section measurement systems, missile"	6B108				
+"Radar, high frequency (HF) surface wave"	3A611e				
+Radar systems & components	6A008				
+Radar altimeters	7A106				
+Radar software	6D003h				
+"Radar systems, employing signal processing"	6A008h				
+Radial ball bearing	2A101				
+"Radiation detection, monitoring and measurement equipment"	1A999a				
+Radiation hardened detectors	6A002				
+Radiation hardened detectors	6A102				
+Radiation hardened designed (or rated) robots	2B007c				
+Radiation hardened electronic computers	4A001a2				
+Radiation hardened integrated circuits	3A001a1	9A515d	9A515e		
+Radiation hardened sensors	6A002				
+Radiation hardened TV cameras	6A203d				
+Radiation hardened TV cameras not specified in 6A203	6A999b				
+"Radiation transport calculations/modeling, software for"	0D999b				
+"Radiation sensors, optical fibers"	6A002d3				
+Radiation shielding windows	1A227				
+Radio frequency monitoring equipment	5A001f4				
+Radio frequency transmitting equipment	5A001h1				
+Radio equipment	5A001b2	5A001b3	5A001b4		
+Radio equipment	5A991b6	5A991b7			
+Radio relay communications equipment	5A991h				
+"Radio, shortwave technology"	5E001c4c				
+Radio systems development/production technology	5E001b3				
+Radiographic detection equipment	1A999b				
+Radiographic equipment	3A101b				
+"Radionuclides, alpha-emitting"	1C236				
+"Radionuclides, alpha-emitting, n.e.s."	1C999g				
+"Radium-226, compounds, mixtures, products or devices"	1C237				
+Radome design software	6D003h2				
+Radomes usable in protecting missiles against nuclear effects	6A103				
+Rafts (life) for military aircraft	9A610y12				
+"Ralstonia solanacearum, race 3, biovar 2"	1C354a5				
+Raman shift lasers	6A205e				
+Ramjet engines/components	9A011				
+"Range gated illumination systems, underwater"	8A002d2				
+Range instrumentation radars	6A108b2				
+"Rankine cycle engine, air independent"	8A002j1				
+Rate tables and positioning tables	2B121				
+"Rate tables, positioning tables, and motion simulators"	2B120				
+Rathayibacter toxicus	1C354a6				
+"Reactor vessels, chemical"	2B350a				
+Read-out integrated circuits (ROICs)	6A990				
+Real time processing	2D002b				
+Real time processing operating systems	4D993c				
+Real time processing equipment operating system software	4D993c				
+Real time processing proof and validation software	4D993				
+Rebreathing apparatus specially designed for military use	8A620f				
+"Receivers, microwave test"	3A002f				
+"Receivers, radio"	5A001b2	5A001b3	5A001b4		
+Reciprocating diesel engine & component technology	9E003e1				
+Reconstructed replication competent forms of the 1918 pandemic influenza virus containing any portion of the coding regions of all eight gene segments	1C351b1				
+"Recording equipment, analog & digital tape recorders"	3A002a				
+Recovery of source code - software	5D001c2				
+Red dot sights	0A987				
+Reduced observables analysis software	1D103				
+"Reduction gearing, light-weight marine transmissions"	8A002o1d				
+Reentry vehicles & equipment	9A116				
+"Reentry vehicles/components, production equipment"	9B115				
+"Reflectance measuring equipment, absolute"	6B004				
+Reflectivity (electromagnetic) reducing materials	1C101				
+"Reflectometers, mirror characterization"	7B102b				
+"Reflectors (mirrors), optical"	6A004a1				
+Reflex sights	0A987				
+"Refrigeration units, hydrogen or helium"	1B231b1				
+Reinforced composite materials	1C007f				
+"Reinforcement fiber, production equipment"	1B001d				
+"Release mechanisms, electronic"	9A992	9A610h			
+Remote manipulators	2B225				
+Remotely operated vehicles	1A006a				
+"Remotely operated filling equipment, chemical"	2B350f				
+"Remotely piloted vehicles (RPVs), non-military"	9A012				
+"Remotely controlled manipulators, for submersibles"	8A002i				
+Repeater/regenerator equipment	5A991b Note a4 or 5				
+"Reprocessing plant, nuclear fuel"	0B006				
+Resaturated pyrolized components	1A102				
+Resaturated pyrolized materials	1C102				
+Resin impregnated fiber prepregs for 9A110 items	9C110				
+Resin impregnated fibers	1C010e				
+Resin (thermoset) impregnated continuous materials	1C210c				
+"Resin impregnated fiber prepregs, propulsion & space systems"	9A110				
+"Resist materials, semiconductor lithography"	3C002				
+"Resists (positive), semiconductor lithography"	3C992				
+"Resist material, coated (semiconductor) substrates"	3C002				
+"Resistors, fixed"	3A611y23				
+Restraint devices (electronic monitoring)	3A981				
+"Restraint devices, law enforcement, including leg irons, shackles, and handcuffs; straight jackets, stun cuffs; shock belts; shock sleeves, multipoint restraint devices, restraint chairs"	0A982				
+"Reticles, integrated circuits of 3A001"	3B001g				
+Reticles and designs	3B991b2				
+Reticle sights	0A987				
+Rhenium and alloys containing rhenium	1C241				
+Rheostats	3A611y8				
+Ricin	1C351d11				
+Rickettsia prowazekii	1C351c15				
+Rift Valley fever virus	1C351a29				
+Rinderpest virus	1C352a12				
+Ring laser gyro mirror characterizing equipment	7B002				
+Ring Magnets	0A999				
+Robot end-effectors	2B207				
+Robot end-effectors	2B007				
+Robot controllers for high explosive handling	2B207				
+Robot controllers	2B007				
+Robots with real time 3D image processing or scene analysis	2B007a				
+Robots not controlled by 2B007 or 2B207	2B997				
+"Robots, specially designed to operate at high altitudes"	2B007d				
+"Robots, explosive/munitions environment handling"	2B007b				
+"Robots, radiation hardened"	2B007c				
+Robots with real time 3D image processing or scene analysis	2B207				
+Robots specially designed for underwater use	8A002h				
+Rocio virus	1C351a30				
+Rocket fuels	1C111				
+"Rocket/rocket motor, test benches/stands"	9B117				
+"Rocket engines, solid propellant"	9A107				
+"Rocket motors, hybrid"	9A109				
+Rocket nozzles	9A106b				
+"Rocket stages, other than those of 9A005/7/9, 9A105/107/109"	9A119				
+Rocket motor inspection equipment	9B007				
+"Rockets, sounding"	9A104				
+"Roller bearings, solid"	2A001a				
+Rollers for prepregs/preform production	1B101d				
+Rotary position feedback units	2B008b				
+"Rotor assembly mandrels, bellows formin"	2B228a				
+Rotor centrifugal balancing machines	2B229				
+"Rotor components, tooling for manufacture"	9B009				
+Rotor fabrication/assembly equipment	2B228a				
+"Rotor forming mandrels, precision"	2B209b				
+Rotor straightening equipment or systems	2B228b				
+"Routers, telecommunications"	5A991c10				
+Ruby lasers	6A995c				
+Russian Spring-Summer encephalitis virus	1C351a35				
+S-parameter test/measurement equipment	3B002a				
+S20 and S25 photocathodes	6A002				
+Sabia	1C351a31				
+"Safety cabinets, capable of biological use"	2B352f2				
+Salmonella typhi	1C351c16				
+"Salvage systems, ocean"	8A001e				
+Saps	0A978				
+SARS-associated coronavirus (SARS-CoV)	1C351b2				
+Satellite communication equipment technology	5E001b1				
+Satellite receivers	7A005				
+"Satellite receivers, other than those of 7A005"	7A105				
+"Satellites, commercial communication"	9A004				
+SAW (Surface Acoustic Wave) devices	3A001c1				
+Saxitoxin	1C351d12				
+Scanning cameras & systems	6A003b2				
+Scatterometers	7B002a				
+"Scatterometers, to characterize mirrors for laser gyro equipment"	7B102a				
+Sclerophthora rayssiae var. zeae	1C354b8				
+Scramjet engines/components	9A011				
+Scuba gear	8A992h				
+SDH (Synchronous Digital Hierarchy) technology	5E001b4				
+SDH (Synchronous Digital Hierachy) technology	5E991a2				
+"Sea-induced motion control systems, automatic"	8A002n				
+Sealers (semi-automatic or automatic hot cap) for ceramic microcircuit packages	3B991b3c				
+Seal-less pumps	2B350i				
+"Seals, aircraft/aerospace use"	1A001a	9A610x			
+"Seals, for surface effect vessels"	8A002k				
+"Seals, made from fluoroelastomers"	1A001c				
+Search lights	0A617y5				
+"Seats, seat assemblies, seat supports, and harnesses ? for ground vehicles"	0A606y14				
+"Security equipment, information"	5A002				
+"Security equipment, information, software"	5D002				
+Security imaging equipment	2A984	2D984	2E984		
+Security scanning equipment	2A984	2D984	2E984		
+"Segmented mirrors, assembly in space"	6A004c3				
+Seismic detection equipment	6A999a				
+"Semiconductor, test equipment"	3B002				
+Semiconductor compound photocathodes	6A002a2c3				
+"Semiconductor components, extended temperature range"	3A001a2				
+"Semiconductor component design software, computer-aided-design"	3D003				
+Semiconductor device discrete testing equipment	3B992b4a				
+Semiconductor device inspection or testing equipment and systems	3B992b				
+Semiconductor device or material manufacturing equipment	3B001				
+Semiconductor devices manufacturing equipment and systems	3B991b				
+Semiconductor lasers	6A005d1				
+Semiconductor materials purifying or processing equipment	3B991b1b				
+"Semiconductor probing systems, electron & laser beam"	3B002d				
+Sensing devices (electronic)	6A002a2a2b				
+"Sensing elements, hydrophone"	6A001a2a				
+"Sensing fibers, optical (not controlled by 6A002)"	6C992				
+"Sensor materials, optical"	6C002				
+"Sensors, direction finding systems (passive)"	7A115				
+"Sensors, industrial infrared"	6A002a				
+"Sensors, linear position feedback unit"	2B008a				
+"Sensors, Micromachined Angular Rate"	7A994				
+"Sensors, multispectral imaging"	6A002b				
+"Sensors, optical"	6A992				
+"Sensors, optical"	6A002				
+"Sensors, pressure (manganin & quartz)"	6A226				
+"Sensors, radiation hardened"	6A102				
+"Sensors, superconductive electromagnetic"	6A996				
+Seoul virus	1C351a32				
+Separation mechanisms for missiles	9A117				
+"Separators, centrifugal (biological)"	2B352c				
+"Separators, electromagnetic isotope"	1B226				
+"Servo valves, gel propellant control systems"	9A106d				
+Shackles	0A982				
+Shaft encoders (rotary input type)	3A001f				
+Shale oil	1C981				
+"Shaving machines, gear"	2B003				
+Sheep pox virus	1C352a13				
+"Shields, police"	0A979				
+Shiga toxin	1C351d13				
+Shiga-like ribosome inactivating proteins other than verotoxin	1C351d17				
+"Shiga toxin producing Escherichia coli (STEC) of serogroups O26, O45, O103, O104, O111,O121, O145, O157, and other shiga toxin producing serogroups"	1C351c17				
+Shigella dysenteriae	1C351c18				
+"Ship vessel positioning systems, acoustic"	6A001a1d				
+Shims for gas turbine engines	9A619y6				
+Shock batons	0A985				
+Shock belts	0A982				
+Shock shields	0A985				
+Shock sleeves	0A982				
+Shock tubes	1C608b	1C992c			
+"Shoes, protective"	1A004	1A995			
+Shortwave radio technology	5E001c4c				
+Shotgun shells	0A986				
+Shotgun shell manufacturing equipment	0B986				
+"Shotgun shells, buckshot"	0A984				
+"and shotgun shells, technology for the development or production of"	0E984				
+"Shotguns, barrel length 18 inches or over"	0A984				
+"Shotgun trigger mechanisms, barrels, magazines, magazine extension tubes, receivers"	0A984				
+Shrink fit machines for rotor fabrication/assembly	2B228a				
+Side Scan Sonar designed for seabed imaging	6A001a1a3				
+Sidelooking airborne radar (SLAR)	6A008d				
+Sights and sighting devices for firearms	0A987				
+Signal processor microcircuits	3A001a3 Note				
+"Signal generators, frequency synthesizer based"	3A002d				
+Signal analyzers	3A002c				
+"Signal processing devices, acousto-optic"	3A001c3				
+"Signal processing equipment, sonar"	6A001a1d				
+Signal processing equipment	4A994f				
+"Signal processing equipment, general purpose digital"	4A003				
+"Signal processing equipment, hydrophone arrays"	6A001a2c				
+"Signal tracking development/use technology, laser"	5E001b2				
+"Signature suppression devices, treatments & fittings"	1C001				
+Signature (electromagnetic) reduction devices	1C001				
+Signature (electromagnetic) reduction devices	1A101				
+"Signature suppression devices, treatments & fittings"	1A101				
+Silahydrocarbon oils	1C006a1				
+Silicon carbide (SiC) substrate blanks	6C004d				
+"Silicon, hetero-epitaxial grown multi-layer substrates"	3C001a				
+Silicon microcircuits	3A001a				
+Silicone carbide wafers	3C005				
+Silicon-on-sapphire integrated circuits	3A001a Note 2				
+"Silicone fluid, fluorinated"	1C006b2				
+Silver gallium selenide (AgGaSe2)	6C004b2				
+Silylated resists for semiconductor lithography	3C002d				
+Simulators for nuclear reactors	2A291b				
+"Simultaneous initiation arrangements or systems, single & multipoint"	3A232b				
+Single crystal casting control software	9D004c				
+Single crystal casting equipment	9B001a	9B619			
+Single crystals	6C002b				
+Single mode optical fiber & cable	5A991				
+"Single point diamond turning techniques, technology"	6E003d2				
+"Single-element & focal plane arrays, space-qualified"	6A002e				
+Sin Nombre virus	1C351a33				
+"Skin friction transducers, wall"	9B008				
+"Skirts, for surface effect vessel"	8A002k				
+Slapper detonators (Electric)	1A007	3A232a3			
+Slurry propellant control systems	9A106d				
+Small waterplane area vessels	8A001i				
+Smoke bombs	1A984				
+Smoke detector for military aircraft	9A610y27				
+Sodium azide	1C992l				
+Sodium bifluoride	1C350d16				
+Sodium cyanide	1C350d17				
+Sodium fluoride	1C350d18				
+Sodium (Na) metal vapor lasers	6A005b				
+Sodium sulphide	1C350d19				
+Software	see product group D for controls in each category				
+"Software, adaptive control"	2D002b2				
+"Software, adaptive control"	2D992a				
+"Software, dedicated, for toxic gas monitoring systems and their dedicated detecting components controlled by 2B351"	2D351				
+"Software, electronic devices"	2D002				
+"Software, for coordinating function of multiple subsystems for use in missiles"	9D105				
+"Software, for potable electric generator development or production"	2D994				
+"Software for Nuclear materials, facilities and equipment"	0D001				
+"Software, numerical control"	2D002	2D003			
+"Software, real time processing in machine tools"	2D002b				
+"Software, real time processing equipment operating systems"	4D993c				
+"Software, recovery of source code"	5D001c2				
+"?Software? specially designed or modified for the ?development?, ?production? or ?use? of equipment controlled by 2A983"	2D983				
+"?Software? ?specially designed? for ground vehicles and related commodities controlled by 0A606, 0B606, or 0C606"	0D606				
+"?Software? ?specially designed? for commodities controlled by 0A617, ?equipment? controlled by 0B617, or materials controlled by 0C617"	0D617				
+?Software? specially designed for the ?development? of the equipment controlled by 3A003	3D004				
+"?Software? ?specially designed? for the ?development,? ?production,? operation, failure analysis or anomaly resolution of commodities controlled by 9A515.d"	9D515d				
+"?Software? ?specially designed? for the ?development,? ?production,? operation, failure analysis or anomaly resolution of commodities controlled by 9A515.e"	9E515e				
+"Solar cells, cell-interconnect-coverglass (CIC) assemblies, solar panels, and solar arrays (space qualified)"	3A001e4	3A991			
+Solenoids	3A611y10				
+"Solenoids, superconductive"	3A001e3				
+"Solenoids, superconductive"	3A201b				
+Solid propellant rocket engines	9A107				
+Solid rocket propulsion systems	9A007				
+"Solid rocket propulsion system, components"	9A008				
+"Solid rocket propulsion system, components"	9A108				
+Solid state cameras	6A003b1				
+"Solid state joining equipment, tools/dies/fixtures"	9B004				
+Solid state imaging devices	6A203b3				
+Solid-state imaging devices	6A002				
+Solid-state pulsed power switching thyristor devices and thyristor modules	3A001g				
+"Solid state lasers, tunable"	6A005c				
+Solid state microwave amplifiers	3A001b4				
+"Solid-state power semiconductor switches, diodes, or 'modules'"	3A001h				
+"Sonar, active individual"	6A001a1e				
+Sonar processing equipment	6A001a2b				
+Sonar log equipment	6A001b				
+"Sonar, Side Scan Sonar (SSS) designed for seabed imaging"	6A001a1a3				
+"Sonar, Synthetic Aperture Sonar (SAS) designed for seabed imaging"	6A001a1a3				
+"Sonar, underwater navigation system"	7A008				
+Sonar signal processing equipment	6A001a1d Note a				
+SONET (Synchronous Optical Network) technology	5E001b4				
+SONET (Synchronous Optical Network) technology	5E991a2				
+Sounding rocket use software	9D101				
+Sounding rockets	9A104				
+Source code automatic generation software	4D993b				
+"Source code, development of avionic goods as specified"	7D004	0D521 No 2			
+Source code recovery software	5D001c2				
+Space launch vehicles	9A004				
+Space probes	9A004				
+Space qualified focal plane arrays	6A002 a1d				
+Space qualified or radiation hardened photovoltaic arrays	3A001e1c				
+Space-qualified solid state detectors	6A002a1				
+Space-qualified optical components	6A004c				
+Spacecraft and related commodities	9A004	9A515			
+Spacecraft components	9A515	9A010			
+Spacecraft inertial navigation equipment/components	7A003				
+"Spark-gaps, triggered"	3A228b				
+Speakers	3A611y11				
+Spectrometry analytical instruments	3A999f				
+Spherical or spheroidal aluminum powder	1C111a1				
+Spiked batons	0A983				
+Spin forming machines	2B009				
+Spin forming machines	2B209				
+Spin forming machines	2B999l				
+Spin forming machines capable of flow-forming functions	2B209				
+Spin forming machines combining spin-forming and flow-forming function	2B009				
+Spindle assemblies	2B998a				
+"Spindle assemblies, machine tools"	2B008c				
+"Spray booms or arrays of aerosol generating units, specially designed for fitting to aircraft, lighter than air vehicles,? or ?UAVs?"	2B352i2				
+Spray cooling thermal management systems	3A003				
+Spray-drying equipment capable of drying toxins or pathogenic microorganisms	2B352f				
+"Spraying or fogging systems, specially designed for fitting to aircraft, ?lighter than air vehicles,? or ?UAVs?"	2B352i1				
+"Spraying production equipment, plasma with controlled atmosphere"	2B005d				
+Spread spectrum development technology techniques	5E001b4				
+Spread spectrum radio equipment	5A001b3				
+Spread spectrum spreading code generation	5A002a5				
+"Sprytron tubes, vacuum"	3A228a				
+Sputter deposition production equipment	2B005e				
+"Sputtering equipment, magnetically enhanced"	3B991b1f				
+SQUIDs (Superconducting quantum interference devices)	6A006a1				
+Staging mechanisms for missiles	9A117				
+Stainless steel plate	1C999b				
+"Staphylococcus aureus enterotoxins, hemolysin alpha toxin, and toxic shock syndrome toxin (formerly known as Staphylococcus enterotoxin F)"	1C351d14				
+?Star trackers? and components therefor	7A004				
+Statistical multiplex equipment	5A991b Note a7				
+Steam sterilizable freeze drying equipment	2B352e				
+"Steel, maraging"	1C216				
+"Steel, maraging"	1C116				
+"Steel, Titanium-stabilized duplex stainless (Ti-DSS)"	1C118				
+"Steel plate, stainless"	1C999b				
+"Stealth materials, coatings and treatments for signature suppression"	0C617a				
+"Step & repeat equipment, semiconductor wafer processing"	3B001f1				
+"Stirling cycle engine, air independent"	8A002j4				
+St. Louis encephalitis virus	1C351a34				
+"Storage & holding vessels, critically safe & resistant to nitric acid"	0B006e				
+Storage phosphor image plates	1A999b				
+"Storage tanks, chemical (capacity greater than 100 L)"	2B350c				
+Stored program controlled (SPC) switching equipment	5A991c				
+"Stored program controlled (SPC) switching equipment, equipment for the development of equipment employing"	5B001b				
+"Stored program controlled (SPC) switching equipment, software for the development of equipment employing"	5D001d				
+"Stored program controlled (SPC) switching equipment, technology for the development of equipment employing"	5E001c				
+"Stored program controlled equipment controlled by 3B, software for use of"	3D002				
+Stored program controlled crystal pullers	3B991b1c2				
+Straight jackets	0A982				
+Strap down/gimbal inertial navigation systems or equipment	7A003				
+"Streak cameras, mechanical type"	6A203a2				
+"Streak cameras, mechanical or electronic"	6A003a3				
+"Streak tubes, electronic streak cameras"	6A203b1				
+"Streak cameras, electronic type"	6A203b1				
+Striplines to provide low inductance path to detonators	3A234				
+Stroboscopic light systems	8A992c				
+Structural composites production equipment	1B101				
+"Structures and composite structures, laminate, and manufacturers for missiles"	9A110				
+Stun guns	0A985				
+Stun cuffs	0A982				
+Subcavitating hydrofoils	8A002m				
+Submarine diesel engines	8A620d				
+"Submarine engines, n.e.s."	8A992g				
+Submarine nets	8A620e				
+"Submarine vessel positioning systems, acoustic"	6A001a1d				
+Submersible systems	8A992e				
+"Submersible vessels, cargo and transport"	8A620				
+"Submersible vessels, military"	8A620				
+"Submersible vessels, oceanographic and associated commodities"	8A620				
+Submersible vehicles operation software (unmanned)	8D999				
+"Submersible vehicles/vehicle systems, equipment, or components (non-military)"	8A002a				
+Submersible vehicles/vehicle systems or equipment (non-military)	8A001				
+"Substrate development/production technology, diamond film"	3E003d				
+"Substrates, for X-ray masks"	3B991b2b2				
+"Substrates, hard surface coated"	3B991b2b1				
+"Substrates, multi-layer hetero-epitaxial materials"	3C001				
+"Substrates, semiconductor with resist coating"	3C002				
+"Substrates with at least one epitaxial layer of silicon carbide, gallium nitride, aluminum nitride or aluminum gallium nitride"	3C006				
+"Suits, protective"	1A995	2B352f1			
+Sulphur dichloride	1C350c7				
+Sulphur monochloride	1C350c6				
+Super-ventilated propellers	8A002o1a				
+Supercavitating hydrofoils	8A002m				
+Supercavitating propellers	8A002o1a				
+Supercomputers	see Computers				
+Superconducting quantum interference devices (SQUIDs)	6A006a1				
+Superconductive composite conductor	1C005				
+"Superconductive gates, current switching"	3A001d1				
+Superconductive electrical equipment	9A620b				
+Superconductive electromagnetic sensors	6A996b				
+Superconductive electromagnets or solenoids	3A201b				
+Superconductive electromagnets or solenoids	3A001e3				
+Superconductive devices or circuits	3A001d				
+Superconductive quantum interference devices (SQUIDs)	6A006a1				
+Superconductive propulsion engines	8A002o2c				
+Superconductive electromagnetic sensors	6A996				
+Superconductive electronic device technology	3E003c				
+"Superplastic forming technology, metal working"	2E003b1a				
+"Superplastic forming tools, dies, molds or fixtures"	1B003				
+"Superplastic forming technology/data, Al/Ti/Super alloys"	2E003b2a				
+Surface acoustic wave devices	3A001c1				
+Surface coating & processing equipment	2B005				
+"Surface-effect vehicles, (fully skirted variety)"	8A001f				
+"Surface-effect vehicles, (fully skirted variety)"	8A002k				
+"Surface-effect vehicles,(rigid sidewalls)"	8A001g				
+Surface finishing equipment	3B991b1k				
+Surface irregularity measuring equipment/instruments	2B006c				
+Surface skimming (shallow bulk) acoustic wave devices	3A001c1				
+"Surface vessel positioning systems, acoustic"	6A001a1d				
+Surface vessels & components	8A001	8A609			
+Surface vessels of war and related commodities	8A609				
+"Surface wave radar, high frequency"	3A611e				
+Surreptitious interception devices	5A980				
+Surreptitious interception systems and equipment	5A001f				
+"Surreptitious interception systems and equipment, software for"	5D001	5D980			
+"Surreptitious interception systems and equipment, technology for"	5E001	5E980			
+"Survey equipment, surface vessel"	6A001a1a1				
+"Survey equipment, underwater"	6A001a1a2				
+"Survey systems or transmitting and receiving arrays, bathymetric"	6A001a1b				
+Swine fever virus (African)	1C352a1				
+Swine fever virus (Hog cholera virus)	1C352a7				
+Switch fabric development/production technology	5A991c10				
+"Switches, filtered and unfiltered mechanical"	3A611y21				
+"Switching devices, modules or assemblies"	3A228				
+"Switching equipment, stored program controlled"	5A991c				
+Synchronous Digital Hierarchy (SDH) technology	5E001b4				
+Synchronous Digital Hierarchy (SDH) technology	5E991a2				
+Synchronous Optical Network technology (SONET)	5E001b4				
+Synchronous Optical Network technology (SONET)	5E991a2				
+Synchytrium endobioticum	1C354b9				
+"Syntactic foam, underwater use"	8C001				
+Synthetic crystalline laser host material	6C005				
+Synthetic diamond material	6C004f				
+Synthetic aperture radar (SAR)	6A008d				
+Systolic array computers/assemblies/components	4A004a				
+T-2 toxic	1C351d15				
+"Tanks, austenitic stainless steel"	2B999n				
+"Tanks, chemical storage (capacity greater than 100 L)"	2B350c				
+"Tanks, monel"	2B999f				
+"Tanks, stainless steel"	2B999g				
+Tank turret rings and sprockets induction hardening machines	2B018m				
+Tank turret bearing grinding machines	2B018s				
+Tantalum crucibles coated with tantalum carbide/nitride/boride	2A225c				
+Tantalum made or lined crucibles	2A225b				
+Tape designed for testing recording equipment of entry 3A002a	3A002a				
+"Tape bonders, stored program controlled equipment"	3B991b3b				
+Tape recording equipment	3A002a				
+Tape-laying machines	1B101b				
+Tape-laying machines	1B001b				
+Tar sands	1C981				
+Tear gas	1A984				
+Technology	see product group E for controls for each category				
+"Technology, airborne equipment"	7E004a				
+"Technology, development of frequency hopping techniques"	5E001b4				
+"Technology, development of spread spectrum techniques"	5E001b4				
+"Technology, ?development,? ?production,? or ?use? of ?software? controlled by ECCN 3D201 or 3D202"	3E202				
+"Technology, diamond substrate film"	3E003d				
+"Technology, for commodities controlled by 8A609, 8B609, or 8C609, or ?software? controlled by 8D609"	8E609				
+"Technology, for ground vehicles and related commodities in 0A606, 0B606, 0C606 or software in 0D606"	0E606				
+"Technology, for items controlled by 0A617, 0B617, 0C617, 0D617"	0E617				
+"Technology, for items controlled by 8A620, 8B620 or 8D620"	8D620	8E620			
+"Technology, gas turbine engine components"	9E003c	9E619			
+"Technology, gas turbine engine components"	9E003a	9E619			
+"Technology, helicopter power transfer systems"	9E003a	9E619			
+"Technology, hetero-structure semiconductor development"	3E003b				
+"Technology, high output type diesel engines"	9E003e				
+"Technology, integration software for expert systems"	2E003e				
+"Technology, machine tool instruction generators"	2E003d				
+"Technology, ?production? or ?use? of ?software? controlled by ECCN 6D201"	6E202				
+"?Technology? specially designed or modified for the ?development?, ?production? or ?use? of equipment controlled by 2A983, or the ?development? of software controlled by 2D983"	2E983				
+Technology ?required? for the ?development? or ?production? of commodities controlled by ECCN 6A990	6E990				
+"?Technology? ?required? for the ?development,? ?production,? operation, failure analysis or anomaly resolution of commodities controlled by 9A515.d"	9E515d				
+"?Technology? ?required? for the ?development,? ?production,? failure analysis or anomaly resolution of commodities controlled by 9A515.e"	9E515e				
+"Technology, superconductive electronic device"	3E003c				
+"Technology, tilt rotor/wing power transfer systems development"	9E003d	9E610a			
+"Technology, vacuum microelectronic device"	3E003a				
+TEGDN (Triethylene glycol dinitrate) propellant additive	1C111c2				
+Telecommunications equipment	5A001				
+"Telecommunications equipment, parts, components for a military application"	5A611	3A611			
+"Telecommunications equipment, high and low temperature tolerant"	5A991a				
+Telecommunication equipment not controlled by 5A001	5A991				
+Telecommunications equipment/system software	5D001c1				
+Telecommunications interception equipment	5A001f				
+Telecommunication monitoring equipment	5A001f				
+"Telecommunication test, inspection and production equipment"	5B001				
+Telecommunications test equipment	5B991				
+"Telecommunications transmission equipment, equipment for the development of equipment employing"	5B001b				
+"Telecommunications transmission equipment, software for the development of equipment employing"	5D001d				
+"Telecommunications transmission equipment, technology for the development of equipment employing"	5E001c				
+Telemetering & telecontrol equipment for missile	5A101				
+"Television cameras (radiation hardened), or lenses therefor"	6A203d				
+"Television cameras, underwater"	8A002d1b				
+"Television cameras, underwater"	8A002d1				
+"Television cameras, underwater"	8A002d1a				
+"Television cameras, underwater"	8A992a2				
+"Television systems (camera, lights, monitoring and signal transmission equipment), remote operation with submersible vehicle"	8A992a1				
+Tellurium (Te)	6C002a				
+Tempest type equipment	5A002a4				
+Tension stretchers for prepregs/preform production	1B101d				
+Terminal interface equipment	4A994i				
+"Terrestrial, marine acoustic equipment"	6A991				
+Teschen disease virus	1C352a14				
+"Test benches/stands, for rockets/motors/rocket engines"	9B117				
+"Test, calibration or alignment equipment for equipment controlled by 7A"	7B001				
+"Test chambers, aerosol challenge"	2B352g				
+Test equipment - propellants and their constituents	1B115				
+Test equipment - specially designed for testing finished or unfinished semiconductor devices	3B002				
+"Test, inspection, and production commodities for military electronics"	3B611				
+Test models for defense articles	0A617				
+"Test receivers, microwave"	3A002f				
+Test tape designed for recording equipment of entry 3A002a	3A002a				
+"Testing equipment, for electronic components"	3B992b4				
+"Test, inspection, development and production equipment for Category 5 item"	5B				
+Tetrazines	Annex to Category 1 List of Explosives 47				
+Tetrodotoxin	1C351d16				
+"TEX (4,10-Dinitro-2,6,8,12-tetraoxa-4, 10- diazaisowurtzitane)"	Annex to Category 1 List of Explosives 45				
+Thallium arsenic selenide (Tl3AsSe3 or TAS)	6C004b3				
+Thecaphora solani	1C354b11				
+Thermal batteries	9A604				
+Thermal ionization mass spectrometers (TIMS)	3A233c				
+"Thermal sensors, optical fiber"	6A002d3				
+Thermoplastic liquid crystal copolymers	1C008b				
+Thermoset resin impregnated materials	1C210c				
+"Thio-ethers, as lubricating fluids"	1C006b1				
+Thiodiglycol	1C350b20				
+Thionyl chloride	1C350c8				
+"Thrust tabs, thrust vector control subsystems"	9A106c				
+Thrust vector control sub-system	9A106c				
+Thulium-YAG (Tm:YAG) lasers	6A005c1	6A005c2	6A005c3		
+Thulium-YSGG (Tm:YSGG) lasers	6A005c1	6A005c2	6A005c3		
+Thumbcuffs	0A983				
+Thumbscrews	0A983				
+Thumbwheels	3A611y22				
+"Thyristor devices and modules, solid-state pulsed power switching"	3A001g				
+"Tick-borne encephalitis virus (Far Eastern subtype, formerly known as Russian Spring-Summer encephalitis virus)"	1C351a35				
+Spring-Summer encephalitis virus)	1C351a35				
+"Tick-borne encephalitis virus (Siberian subtype, formerly known as West Siberian virus)"	1C351b3				
+Tilletia indica	1C354b10				
+Tilt rotor/tilt wing power transfer system technology	9E003d	9E610a			
+Tilting spindles for machine tools	2B009c				
+"Time delay general, electronic equipment for"	3A999e				
+"Time interval measurement, electronic equipment for"	3A999e				
+Time or frequency domain processing & correlation equipment	6A001a2c				
+TIMS (Thermal ionization mass spectrometers	3A233c				
+Tires (aircraft)	9A610y1				
+"Tires (ground vehicles), except run flat"	0A60615				
+Titanium alloys	1C002b3				
+"Titanium alloys, as tubes/solid forms/forgings"	1C202b				
+Titanium alloy/powder or particulate form	1C002c1c				
+Titanium aluminides	1C002a2				
+Titanium-based alloys	1C002b3				
+Titanium doped sapphire laser host material	6C005a				
+Titanium-sapphire (Ti: Al2O3) lasers	6A005c1	6A005c2	6A005c3		
+Titanium-stabilized duplex stainless steel 9Ti-DSS)	1C118				
+TMETN (trimethylolethane trinitrate)	1C111c4				
+Tooling for powder metallurgy rotor component manufacture	9B009				
+Torpedo net	8A620e				
+Torquemeter assembly software	9D619b9				
+"Torture, specially designed implements of"	0A983				
+Touchpads	3A611y28				
+Tow-placement machines	1B001g				
+Towed acoustic hydrophone arrays	6A001a2b				
+Toxic gas monitoring systems	2B351				
+Toxins	1C350	1C351	1C355	1C395	
+Trackballs	3A611y12				
+Tracking radar	6A008l1				
+"Tracking systems, precision"	6A108b1				
+Tracking systems	6A008l				
+Tractors and parts	9A990				
+"Transceivers, radio"	5A001b2 through 10				
+"Transceivers, radio"	5A991b6	5A991b7			
+Transcoders (translation encoders)	5A991b Note a6				
+"Transducers, wall skin friction"	9B008				
+"Transducers, acoustic projectors"	6A001a1c				
+"Transformers, electric"	3A611y13				
+Transient recorders (Waveform digitizers)	3A002a5	3A292d			
+"Transistor test equipment, S-parameter measurement"	3B002a				
+"Transistors, microwave"	3A001b3				
+Translation encoders (transcoders)	5A991b Note a6				
+"Transmission fluids, automatic"	1C980				
+Transmission equipment	5A991b				
+Transmission equipment for Improvised Explosive Devices (IED)	5A001h				
+Transmissions for tracked combat vehicles	0A606d				
+Transmit/receive or transmit module technology	3E611b2				
+Transmultiplex equipment	5A991b Note a9				
+"Traveling wave tubes (TWTs), industrial"	3A001b1a				
+Tributyl phosphate	1C999d				
+Triethanolamine	1C350c9				
+Triethanolamine hydrochloride	1C350d20				
+Triethyl phosphite	1C350c10				
+Triethylene glycol dinitrate (TEGDN)	1C111c2				
+Triggered spark-gaps	3A228b				
+"Triggers, high voltage"	3A999c				
+Trimethyl phosphite	1C350c11				
+"Tritium, compounds & mixtures"	1C235				
+Tritium plant or facilities equipment	1B231b				
+"Tritium production recovery, extraction & concentration handling facilities or plant"	1B231a				
+Trusted Computer System Evaluation Criteria (TCSEC) capability	5A002f				
+"Tubes, gas krytron"	3A228a				
+"Tubes, vacuum sprytron"	3A228a				
+Tunable band-pass filters	3A001b5				
+Tunable lasers	6A005c				
+"Tunable lasers, solid state"	6A005c1	6A005c2	6A005c3		
+Tungsten alloys	1C004				
+"Tungsten alloy, parts"	1C226				
+"Tungsten carbide, parts"	1C226				
+Tungsten & molybdenum metal & alloys	1C117				
+"Tungsten, parts"	1C226				
+Turbines for use in nuclear reactors	2A290a				
+"Turbines, aero gas engines, test software"	9D004b	9D619			
+"Turbines, gas aero engines"	9A001	9A619a			
+Turbo prop engines	9A619a				
+Turbocompound engines	9A101				
+Turboexpanders and turboexpander-compressors	1B232				
+"Turbofan & turbojet engines, lightweight"	9A101	9A619			
+Turboprop engine systems specially designed for items controlled by 9A012	9A102a				
+Turning machines for optical quality surfaces	2B992a				
+Turning machines (CNC)	2B991d1				
+Turning machines	2B201c				
+Turning machines (CNC)	2B001a				
+"TV cameras (radiation-hardened), or lenses therefor"	6A203d				
+"TV cameras, radiation-hardened, not specified in 6A203"	6A999b				
+Two dimensional focal plane arrays	6A002a3				
+TWTs (Traveling Wave Tubes)	3A001b1a				
+UAVs (non-military)	9A012a				
+UAV (military) production facilities	9B610c				
+Ultrasonic test equipment for nuclear reactors	2A291d				
+"Underwater breathing apparatus, self-contained"	8A992h				
+"Underwater cameras, photographic"	8A002d	8A002e	8A002f		
+"Underwater camera equipment, n.e.s."	8A992d				
+Underwater communications system	5A001b1				
+Underwater ElectroMagnetic Receivers (UEMR)	6A006e				
+Underwater ElectroMagnetic Receivers (UEMR) software	6D003f3	6D003f4			
+Underwater electric field sensors	6A006b				
+Underwater lights	8A992j				
+Underwater noise reduction technology	8E002				
+Underwater (propeller) noise reduction software	8D002				
+Underwater propulsion equipment	8A992j				
+Underwater rebreathing apparatus	8A620f				
+"Underwater robots, computer controlled"	8A002h				
+Underwater sonar navigation systems	7A008				
+"Underwater systems or equipment and parts, not controlled by 8A002"	8A992				
+Underwater television cameras	8A992a2				
+"Underwater vehicles, industrial"	8A001				
+Underwater velocity measurement equipment	6A001b				
+"Underwater vessel positioning systems, acoustic"	6A001a1d				
+Underwater vision systems	8A002d				
+Underwater vision systems	8A992a				
+"Unmanned aerial vehicles, not specified in 9A102"	9A120	9A610			
+"Unmanned aerial vehicles and associated systems, production equipment"	9A010	9A610			
+"Unmanned aerial vehicles, associated equipment, systems, and components"	9A012b	9A610			
+Unmanned air vehicle systems (UAVs) Non-military	9A012a				
+Unmanned submersible vehicle operation software	8D999				
+Unmanned tethered submersible vehicles	8A001c				
+Unmanned untethered submersible vehicles	8A001d				
+"Uranium, depleted"	1A290				
+Uranium titanium alloys	1C004				
+Urine collection bags/pads/cups/pumps for military aircraft	9A610y21				
+Vaccines and immunotoxins	1C991				
+Vacuum furnaces	2B226				
+Vacuum furnaces	2B227				
+Vacuum induction furnaces	2B226				
+"Vacuum induction furnace, power supplies"	2B226				
+"Vacuum melting, remelt & casting furnaces"	2B227				
+Vacuum microelectronic device development/production technology	3E003a				
+Vacuum pumps	2B231				
+Vacuum pumps	2B350i				
+"Vacuum pumps, bellows-sealed scroll-type"	2B233				
+"Vacuum tubes, electronic microwave"	3A001b1				
+Vacuum sprytron tubes	3A228a				
+"Vacuum valves, piping, flanges, gaskets"	2B999k				
+"Valve seats, made from fluoroelastomers"	1A001c				
+"Valves, austenitic stainless steel"	2B999n				
+"Valves, bellows seal"	2A226				
+"Valves, bellows"	2B350g				
+Valves (check) for hydraulic and pneumatic systems in military aircraft	9A610y4				
+"Valves, double-seal"	2B350g				
+"Valves, of or lined with stainless steel, copper-nickel alloy or other alloy steel"	2A292				
+"Valves, diaphragm"	2B350g				
+"Valves, monel"	2B999f				
+"Valves, multiple seal incorporating a leak detection port"	2B350g				
+"Valves, non-return (check)"	2B350g				
+"Valves, stainless steel"	2B999g				
+"Valves, vacuum"	2B999k				
+Variola virus	1C351a36				
+Vector processing unit technology	3E002				
+Vector processors/assemblies	4A003				
+Vehicle position determination software	6D103				
+"Vehicles, ?specially designed? for a military use"	0A606a				
+"Vehicles, unarmed, off-road, and armored"	0A606b1				
+Velocity interferometers (VISARs)	6A225				
+"Velocity measurement equipment, underwater"	6A001b				
+Venezuelan equine encephalitis virus	1C351a37				
+Ventilated full or half (protective clothing) suits	2B352f1				
+Ventilated propellers	8A002o1a				
+Verocytotoxin producing 	1C351c17				
+Verotoxin	1C351d17				
+Vesicular stomatitis virus	1C352a15				
+"Vessels, austenitic stainless steel"	2B999n				
+"Vessel positioning systems, acoustic"	6A001a1d				
+Vessel noise reduction equipment	8A002o3				
+"Vessels, marine"	8A001	8A609	8A620		
+"Vessels, marine systems or equipment"	8A992				
+"Vessels, monel"	2B999f				
+"Vessels, stainless steel"	2B999e				
+"Vests, bulletproof & bullet resistant"	1A005				
+"Vibration test equipment, acoustic"	9B006				
+"Vibration test equipment, parts and components"	9B990				
+Vibration test equipment using digital control techniques	2B116				
+Vibrio cholerae	1C351c19				
+Video cameras incorporating solid state sensors	6A003b1				
+Vinylidene fluoride copolymers	1C009a				
+"Vinylidene fluoride copolymers, components of"	1A001				
+"virulans, fungi (Colletotrichum kahawae)"	1C354b1				
+Virus protection software	5D992				
+Viruses	1C351	1C352	1C353		
+"Viruses, animal pathogens"	1C352a				
+"Viruses, human pathogens"	1C351a				
+"Viruses, plant pathogens"	1C354c				
+"Viscous software, 2D or 3D engine flow modeling"	9D004a				
+Viscum Album Lectin 1 (Viscumin)	1C351d18				
+"Vision systems, underwater"	8A992a				
+"Vision systems, underwater"	8A002d				
+Voice print identification and analysis equipment and parts	3A980				
+Volkensin toxin	1C351d19				
+"Wafer handling systems, semiconductor"	3B001e				
+"Wafer processing, semiconductor manufacture"	3B001e				
+Wafer probing equipment	3B992b3				
+Wafer production align and expose equipment	3B991b2f				
+"Wafers, semiconductor with function determined"	3A001a				
+"Wafers, comprising multiple epitaxially grown layers"	3C001				
+Wall skin friction transducers	9B008				
+"War implement machinery, equipment, gear, and specially designed parts and accessories therefo"	2B018				
+Water (deep) fording kits for ground vehicles	0A606e				
+Water jet cutting machines (CNC)	2B001e1a				
+Water jet (pumpjet) propulsion systems	8A002p				
+Water tanks (potable) and accessories for military aircraft	9A610y17				
+Water tanks (potable) and accessories for submersible vessels	8A620y7				
+Water tanks (potable) and accessories for surface vessels of war	8A609y7				
+"Water tunnels, propulsion model acoustic field measurement"	8B001				
+Water-hydrogen sulphide exchange tray columns	1B229				
+Water-screw propellers	8A002o1				
+Wave division multiplex equipment	5A991b5				
+Waveform digitizers (Transient recorders)	3A002a5				
+"Wax pattern preparation equipment, ceramic shell"	9B991e				
+Weaving machines	1B001c				
+Weight belts	8A992i				
+"Welders, MIG"	2B999d				
+"Welders, E-beam"	2B999e				
+"Welding machines, laser"	2B999c				
+Western equine encephalitis virus	1C351a38				
+"Western red cedar, logs and timber"	1C988				
+Wet-spinning equipment for refractory ceramics	1B101c3				
+Wet-spinning equipment for refractory ceramics	1B001d3				
+Wetsuits	8A992i				
+Wide-swath bathymetric survey systems	6A001a1				
+Wigglers (free electron laser magnet) manufacturing or inspection equipment	6B995a1				
+Wind tunnel aero-model technology	9E003b1				
+"Wind tunnel, control systems"	9B005				
+"Wind tunnels, usable for missiles"	9B105				
+"Winding machines, fiber optic gyro coil"	7B003				
+"Windows, glass for nuclear radiation shielding"	1A227				
+"Windows (ground vehicle), except those for amored vehicles"	0A606y16				
+Windshield water and wiper systems for military aircraft	9A610y22				
+Wing folding system software	0D521 No 3				
+Wing folding system technology	0E521 No 2				
+"Work stations, as computers having a CTP above 260 Mtops"	4A003b				
+X-ray converters	1A999b				
+X-ray equipment for projection image transfer	3B991b2g				
+"X-ray generators, radiographic"	3A201c				
+"X-ray machines, flash"	3A999c				
+"X-ray (non planar) inspection equipment, rocket motors"	9B007				
+Xanthomonas albilineans	1C354a1				
+"Xanthomonas axonopodis pv. citri (Xanthomonas campestris pv, citri A) (Xanthomonas campestris pv. citri)"	1C354a2				
+Xanthomonas oryzae	1C354a3				
+Xanthomonas oryzae pv. oryzae (syn. Pseudomonas campestris pv. oryzae)	1C354a3				
+Yellow fever virus	1C351a39				
+Yersinia pestis	1C351c20				
+"Yttrium oxide (yttria) (Y2O3), crucibles made or coated"	2A225a8				
+Zinc germanium biphosphide	6C004b4				
+Zinc germanium diphosphide	6C004b4				
+Zinc germanium phosphide	6C004b4				
+"Zinc selenide (ZnSe), substrate blanks"	6C004a				
+"Zinc sulphide (ZnS), substrate blanks"	6C004a				
+Zirconium fluoride (ZrF4) glass	6C004e				
+Zirconium metal particulate	1C111a2a1				
+"Zirconium metal, alloy, compounds, or manufacturers"	1C234				
+Zirconium oxide (zirconia) (ZrO2) made/coated crucibles	2A225a9				
+Zoonotic pathogens and ?toxins?	1C351				
