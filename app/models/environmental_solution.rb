@@ -1,4 +1,4 @@
-class Est
+class EnvironmentalSolution
   include Indexable
 
   self.settings = {

@@ -1,4 +1,4 @@
-class EstData
+class EnvironmentalSolutionData
   include Importer
   LOGIN_URL = 'https://admin.export.gov/site_login'
   ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
@@ -23,7 +23,7 @@ class EstData
   def import
     data = fetch_data
     articles = data.map { |article_hash| process_article_info article_hash }
-    Est.index articles
+    EnvironmentalSolution.index articles
   end
 
   private

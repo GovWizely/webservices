@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe EstQuery do
-  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/est" }
+describe EnvironmentalSolutionQuery do
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/environmental_solution" }
   let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
   let(:query) do
-    EstQuery.new(q: 'Precipitators')
+    EnvironmentalSolutionQuery.new(q: 'Precipitators')
   end
 
   describe '#new' do
