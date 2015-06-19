@@ -29,7 +29,6 @@ module ScreeningList
       @fuzzy_name = true if options[:fuzzy_name].present? && options[:fuzzy_name].try(:downcase) == 'true'
     end
 
-
     def generate_query(json)
       multi_fields = %i(alt_names name remarks title)
       json.query do
