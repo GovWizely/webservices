@@ -5,4 +5,3 @@ json.results do
     json.partial! 'entry', entry: entry
   end
 end
-
