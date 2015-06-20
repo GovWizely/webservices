@@ -30,6 +30,21 @@ module Indexable
         body:  { settings: settings, mappings: mappings })
     end
 
+    def update_metadata(version)
+      ES.client.index(
+        index: index_name,
+        type:  'metadata',
+        id:    0,
+        body:  { version: version, time: DateTime.now.utc })
+    end
+
+    def stored_metadata
+      ES.client.search(
+        index: index_name,
+        type:  'metadata',
+        body:  { query: { match: { _id: 0 } } })['hits']['hits'][0]['_source'].symbolize_keys rescue {}
+    end
+
     def index_exists?
       ES.client.indices.exists index: index_name
     end

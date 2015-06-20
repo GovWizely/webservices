@@ -7,13 +7,6 @@ describe ScreeningList::SdnData do
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/sdn/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
-
-  describe '#import' do
-    it 'loads special designated nationals from specified resource' do
-      expect(ScreeningList::Sdn).to receive(:index) do |sdn|
-        expect(sdn).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which versions resources'
+  it_behaves_like 'an importer which indexes the correct documents'
 end

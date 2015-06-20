@@ -9,12 +9,5 @@ describe TariffRate::GuatemalaData do
   let(:importer) { described_class.new(fixtures_file, s3_good) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/guatemala/results.yaml") }
 
-  describe '#import' do
-    it 'loads GUATEMALA tariff rates from specified resource' do
-      expect(TariffRate::Guatemala).to receive(:index) do |res|
-        expect(res).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

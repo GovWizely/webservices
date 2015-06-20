@@ -5,6 +5,7 @@ require 'digest/md5'
 module ScreeningList
   class DplData
     include ::Importer
+    include ::VersionableResource
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
@@ -35,10 +36,6 @@ module ScreeningList
       postal_code:    :postal_code,
     }
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
       model_class.index(entries)
     end
@@ -46,7 +43,7 @@ module ScreeningList
     private
 
     def rows
-      r = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t").map(&:to_h)
+      r = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8', col_sep: "\t").map(&:to_h)
 
       ensure_expected_headers(r.first)
       r

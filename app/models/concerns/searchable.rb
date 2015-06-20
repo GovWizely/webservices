@@ -23,6 +23,7 @@ module Searchable
 
       search_options = {
         index: index_names(query.try(:sources)),
+        type:  (model_classes.map { |mc| mc.to_s.typeize } rescue nil),
         body:  query.generate_search_body,
         from:  query.offset,
         size:  query.size,

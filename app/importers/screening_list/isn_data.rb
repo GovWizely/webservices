@@ -5,6 +5,7 @@ require 'digest/md5'
 module ScreeningList
   class IsnData
     include ::Importer
+    include ::VersionableResource
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
@@ -25,12 +26,12 @@ module ScreeningList
       date_liftedwaivedexpired: :end_date,
     }
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
+    def loaded_resource
+      @loaded_resource ||= open(@resource, 'r:iso-8859-1').read
     end
 
     def import
-      rows = CSV.parse(open(@resource, 'r:ISO-8859-1').read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
+      rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       ensure_expected_headers(rows.first)
 

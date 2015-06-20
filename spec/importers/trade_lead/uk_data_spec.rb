@@ -7,16 +7,5 @@ describe TradeLead::UkData do
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/uk/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
-
-  describe '#import' do
-    it 'loads UK trade leads from specified resource' do
-      expect(TradeLead::Uk).to receive(:index) do |trade_leads|
-        expect(trade_leads.size).to eq(3)
-        expect(trade_leads[0]).to eq(expected[0])
-        expect(trade_leads[1]).to eq(expected[1])
-        expect(trade_leads[2]).to eq(expected[2])
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

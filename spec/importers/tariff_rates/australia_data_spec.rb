@@ -9,12 +9,5 @@ describe TariffRate::AustraliaData do
   let(:importer) { described_class.new(fixtures_file, s3) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/australia/results.yaml") }
 
-  describe '#import' do
-    it 'loads AUSTRALIA tariff rates from specified resource' do
-      expect(TariffRate::Australia).to receive(:index) do |res|
-        expect(res).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 end

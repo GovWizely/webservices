@@ -3,6 +3,9 @@ require 'open-uri'
 module TradeEvent
   class ItaData
     include ::Importer
+    include ::VersionableResource
+
+    ENDPOINT = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020"
 
     SINGLE_VALUED_XPATHS = {
       cost:               './COST',
@@ -33,12 +36,8 @@ module TradeEvent
       venue:   './/LOCATION',
     }.freeze
 
-    def initialize(resource = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020")
-      @resource = resource
-    end
-
     def import
-      doc = Nokogiri::XML(open(@resource))
+      doc = Nokogiri::XML(loaded_resource)
       trade_events = doc.xpath('//EVENTINFO').map do |event_info|
         trade_event = process_event_info(event_info)
         trade_event

@@ -3,15 +3,9 @@ require 'spec_helper'
 describe TradeLead::FbopenImporter::PatchData do
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
+  let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
 
-  describe '#import' do
-    it 'loads leads from partial resource' do
-      expect(TradeLead::Fbopen).to receive(:index) do |fbo|
-        expect(fbo.size).to eq(2)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which indexes the correct documents'
 
   describe '#model_class' do
     it 'returns correct model_class' do
@@ -22,14 +16,6 @@ describe TradeLead::FbopenImporter::PatchData do
   describe '#can_purge_old?' do
     it 'always returns false' do
       expect(importer.can_purge_old?).to match(false)
-    end
-  end
-
-  describe '#leads' do
-    let(:expected_lead_data) { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
-    it 'correctly transform leads from dump' do
-      leads = importer.leads
-      expected_lead_data.each_with_index { |expected_lead, index| expect(leads[index]).to eq(expected_lead) }
     end
   end
 

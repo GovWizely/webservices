@@ -5,6 +5,7 @@ require 'digest/md5'
 module ScreeningList
   class ElData
     include ::Importer
+    include ::VersionableResource
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
@@ -33,12 +34,12 @@ module ScreeningList
       web_link:                :source_list_url,
     }
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
+    def loaded_resource
+      @loaded_resource ||= open(@resource, 'r:iso-8859-1:utf-8').read
     end
 
     def import
-      rows = CSV.parse(open(@resource, 'r:iso-8859-1:utf-8').read,
+      rows = CSV.parse(loaded_resource,
                        headers:           true,
                        header_converters: :symbol)
 

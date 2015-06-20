@@ -7,13 +7,6 @@ describe ScreeningList::IsnData do
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/isn/results.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
-
-  describe '#import' do
-    it 'loads ISN entries from specified resource' do
-      expect(ScreeningList::Isn).to receive(:index) do |isn|
-        expect(isn).to eq(expected)
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'an importer which versions resources'
+  it_behaves_like 'an importer which indexes the correct documents'
 end

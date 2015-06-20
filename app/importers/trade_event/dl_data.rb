@@ -3,6 +3,7 @@ require 'open-uri'
 module TradeEvent
   class DlData
     include ::Importer
+    include ::VersionableResource
 
     attr_accessor :reject_if_ends_before
 
@@ -20,7 +21,7 @@ module TradeEvent
     end
 
     def import
-      doc = Nokogiri::XML(open(@resource))
+      doc = Nokogiri::XML(loaded_resource)
       trade_events = doc.xpath('//item').map do |event_info|
         process_event_info(event_info)
       end.compact

@@ -20,6 +20,10 @@ describe Importer do
         @docs = docs
       end
 
+      def available_version
+        Digest::SHA1.hexdigest(@docs.to_yaml)
+      end
+
       def import
         model_class.index(@docs)
       end
@@ -148,6 +152,28 @@ describe Importer do
 
     def stored_docs
       Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
+    end
+  end
+
+  describe "#import's metadata-saving logic" do
+    it 'stores the time of import' do
+      expect(Mock.stored_metadata).to eq({})
+      MockData.new([{ id: 1, content: 'foo' }]).import
+      expect(Mock.stored_metadata[:time]).to_not be_nil
+    end
+  end
+
+  describe "#import's resource-versioning logic" do
+    it 're-indexes when there is a new version available' do
+      expect(Mock).to receive(:index).twice
+      MockData.new([{ id: 1, content: 'foo' }]).import
+      MockData.new([{ id: 2, content: 'bar' }]).import
+    end
+
+    it 'does not re-index an existing version' do
+      expect(Mock).to receive(:index).once
+      MockData.new([{ id: 1, content: 'foo' }]).import
+      MockData.new([{ id: 1, content: 'foo' }]).import
     end
   end
 end

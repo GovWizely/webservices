@@ -3,6 +3,7 @@ require 'csv'
 module ScreeningList
   class DtcData
     include ::Importer
+    include ::VersionableResource
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
@@ -20,12 +21,8 @@ module ScreeningList
 
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
-      rows = CSV.parse(open(@resource).read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
+      rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       ensure_expected_headers(rows.first)
 
