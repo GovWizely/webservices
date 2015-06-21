@@ -92,17 +92,7 @@ module TradeLead
       end
 
       def extract_end_date(entry)
-        if entry[:arch_date].nil? && entry[:resp_date].nil?
-          nil
-        elsif !entry[:arch_date].nil? && entry[:resp_date].nil?
-          entry[:arch_date]
-        elsif entry[:arch_date].nil? && !entry[:resp_date].nil?
-          entry[:resp_date]
-        elsif entry[:resp_date] < entry[:arch_date]
-          entry[:arch_date]
-        else
-          entry[:resp_date]
-        end
+        [entry[:arch_date], entry[:resp_date]].reject(&:nil?).max
       end
     end
   end
