@@ -33,8 +33,7 @@ module TradeLead
       end
 
       def import
-        entries = import_full_xml.map { |entry| process_xml_entry(entry) }.compact
-        TradeLead::Fbopen.index(entries)
+        entries_batches { |batch| TradeLead::Fbopen.index(batch) }
       end
 
       def model_class
@@ -43,18 +42,25 @@ module TradeLead
 
       private
 
-      def import_full_xml
-        entries = []
+      def entries_batches
         open(@resource) do |file|
-          Nokogiri::XML::Reader.from_io(file).each do |node|
-            if %w(PRESOL COMBINE MOD).include?(node.name) && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
-              entry = extract_fields(Nokogiri::XML(node.outer_xml), XPATHS)
-              entry[:notice_type] = node.name
-              entries << entry
-            end
+          Nokogiri::XML::Reader.from_io(file).each_slice(100) do |batch|
+            entries = batch.select { |n| should_import?(n) }.map { |n| entry_from_xml(n) }
+            entries.compact!
+            yield entries unless entries.empty?
           end
         end
-        entries
+      end
+
+      def should_import?(node)
+        %w(PRESOL COMBINE MOD).include?(node.name) \
+          && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
+      end
+
+      def entry_from_xml(node)
+        entry = extract_fields(Nokogiri::XML(node.outer_xml), XPATHS)
+        entry[:notice_type] = node.name
+        entry
       end
 
       def process_xml_entry(entry)
