@@ -2,7 +2,15 @@ webservices:
   build: .
   links:
   - elasticsearch
+  - redis
   ports:
   - "3000:3000"
+sidekiq:
+  build: .
+  links:
+  - elasticsearch
+  - redis
 elasticsearch:
   image: dockerfile/elasticsearch
+redis:
+    image: redis:2.6
