@@ -44,20 +44,24 @@ module TradeLead
 
       def entries_batches
         open(@resource) do |file|
-          Nokogiri::XML::Reader.from_io(file).each_slice(100) do |batch|
-            entries = batch.select { |n| should_import?(n) }.map { |n| entry_from_xml(n) }
-            entries.compact!
-            yield entries unless entries.empty?
+          entries = []
+          Nokogiri::XML::Reader.from_io(file).each do |node|
+            entries << process_xml_entry(extract_entry(node)) if should_import?(node)
+            if entries.size >= 1000
+              entries.compact!
+              yield entries
+              entries = []
+            end
           end
+          yield entries unless entries.empty?
         end
       end
 
       def should_import?(node)
-        %w(PRESOL COMBINE MOD).include?(node.name) \
-          && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
+        %w(PRESOL COMBINE MOD).include?(node.name) && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
       end
 
-      def entry_from_xml(node)
+      def extract_entry(node)
         entry = extract_fields(Nokogiri::XML(node.outer_xml), XPATHS)
         entry[:notice_type] = node.name
         entry
