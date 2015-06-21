@@ -28,6 +28,25 @@
   :end_date: 2015-03-21
   :source: FBO
   :id: SPE7M815Q0425
+- :publish_date: 2015-02-08
+  :procurement_organization: Defense Logistics Agency
+  :procurement_office: DLA Acquisition Locations
+  :procurement_organization_address: DLA Land and Maritime - BSM
+  :classification_code: '61'
+  :industry: '331318'
+  :procurement_office_address: '331318'
+  :title: 61--CABLE,POWER,ELECTRI
+  :contract_number: SPE7M815Q0431
+  :contact: Not available.
+  :description: Not available.
+  :url: https://www.fbo.gov/spg/DLA/J3/DSCC-BSM/SPE7M815Q0425/listing.html
+  :competitive_procurement_strategy: Total Small Business
+  :specific_location: AF
+  :specific_address:
+  :notice_type: COMBINE
+  :end_date:
+  :source: FBO
+  :id: SPE7M815Q0431
 - :publish_date: 
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
