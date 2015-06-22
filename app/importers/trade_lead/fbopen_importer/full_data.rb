@@ -53,6 +53,7 @@ module TradeLead
               entries = []
             end
           end
+          entries.compact!
           yield entries unless entries.empty?
         end
       end
