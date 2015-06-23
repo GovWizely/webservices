@@ -16,8 +16,9 @@ class EnvironmentalSolutionData
     'updated_at'      => :source_updated_at,
   }.freeze
 
-  def initialize(resource = ENDPOINT)
+  def initialize(resource = ENDPOINT, mechanize_agent = nil)
     @resource = resource
+    @mechanize_agent = mechanize_agent || Mechanize.new
   end
 
   def import
@@ -28,7 +29,6 @@ class EnvironmentalSolutionData
 
   private
 
-  # :nocov:
   def fetch_data
     headless_login
     result = []
@@ -37,26 +37,24 @@ class EnvironmentalSolutionData
   end
 
   def headless_login
-    token_form = mechanize_agent.get(LOGIN_URL).form
+    token_form = @mechanize_agent.get(LOGIN_URL).form
     token_form.password = web_auth
+
     # 1st login step using web auth.
-    login_form = mechanize_agent.submit(token_form, token_form.buttons.first).form
+    login_form = @mechanize_agent.submit(token_form, token_form.buttons.first).form
     if login_form.present? # if the session is saved no login form will be presented.
       login_form.field_with(name: 'user[email]').value = username
       login_form.field_with(name: 'user[password]').value = password
+
       # 2nd login step using username + password.
       # No need to do any actions in the returned page.
-      mechanize_agent.submit(login_form, login_form.buttons.first)
+      @mechanize_agent.submit(login_form, login_form.buttons.first)
     end
-  end
-
-  def mechanize_agent
-    @mechanize_agent ||= Mechanize.new
   end
 
   def current_page_empty?
     @page ||= 1
-    @page_data = JSON.parse(mechanize_agent.get(@resource + "?page=#{@page}").body)
+    @page_data = JSON.parse(@mechanize_agent.get(@resource + "?page=#{@page}").body)
     @page += 1
     @page_data.blank?
   end
@@ -64,7 +62,6 @@ class EnvironmentalSolutionData
   def current_page_data
     @page_data
   end
-  # :nocov:
 
   def process_article_info(article_hash)
     article = remap_keys COLUMN_HASH, article_hash
