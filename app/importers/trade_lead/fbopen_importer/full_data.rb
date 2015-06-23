@@ -42,19 +42,16 @@ module TradeLead
 
       private
 
-      def entries_batches
+      def entries_batches(&block)
+        bp = BatchProcessor.new(&block)
         open(@resource) do |file|
-          entries = []
           Nokogiri::XML::Reader.from_io(file).each do |node|
-            entries << process_xml_entry(extract_entry(node)) if should_import?(node)
-            if entries.size >= 1000
-              entries.compact!
-              yield entries
-              entries = []
+            if should_import?(node)
+              e = process_xml_entry extract_entry(node)
+              bp.queued_process(e)
             end
           end
-          entries.compact!
-          yield entries unless entries.empty?
+          bp.process!
         end
       end
 
