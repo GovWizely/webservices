@@ -61,6 +61,7 @@ Webservices::Application.routes.draw do
              'ita_zip_codes'              => 'ita_zipcode_to_post',
      }
     path['eccn'] = 'eccns' unless Rails.env.production?
+    path['environmental_solution'] = 'environmental_solutions' unless Rails.env.production?
 
     path.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false

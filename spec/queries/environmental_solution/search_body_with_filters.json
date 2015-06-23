@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["name_chinese", "name_english", "name_french", "name_portuguese", "name_spanish"],
+            "operator": "and",
+            "query": "Precipitators"
+          }
+        }
+      ]
+    }
+  }
+}

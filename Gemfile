@@ -23,6 +23,7 @@ gem 'rdiscount'
 gem 'smarter_csv'
 gem 'sidekiq'
 gem 'sinatra', require: nil
+gem 'mechanize'
 
 gem 'sass'
 gem 'jquery-rails'
