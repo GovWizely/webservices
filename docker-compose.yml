@@ -1,0 +1,27 @@
+webservices:
+  build: .
+  volumes:
+  - .:/app
+  links:
+  - elasticsearch
+  - redis
+  ports:
+  - "3000:3000"
+sidekiq:
+  build: .
+  volumes:
+  - .:/app
+  links:
+  - elasticsearch
+  - redis
+  command: bundle exec sidekiq
+  environment:
+      REDIS_URL: redis://redis:6379/0
+elasticsearch:
+  image: elasticsearch
+  ports:
+  - 9200:9200
+redis:
+    image: redis:2.6
+    ports:
+    - 6379:6379
