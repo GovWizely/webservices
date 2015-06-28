@@ -31,6 +31,12 @@ describe Query do
         expect { subject }.to raise_error(Query::InvalidParamsException)
       end
     end
+    context 'when given an empty :q parameter' do
+      subject { described_class.new(q: "") }
+      it 'should behave like no :q parameter was passed' do
+        expect(subject.q).to be_nil
+      end
+    end
   end
 
   describe '#generate_search_body' do
