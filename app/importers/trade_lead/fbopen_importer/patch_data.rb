@@ -98,7 +98,7 @@ module TradeLead
         valid_type      = %w(PRESOL COMBINE MOD).include?(entry['ntype'])
         valid_country   = entry['POPCOUNTRY'].try(:upcase) =~ /\A[A-Z]{2}\z/
         skipped_country = entry['POPCOUNTRY'] == 'US' if valid_country
-        return valid_type && valid_country && !skipped_country
+        valid_type && valid_country && !skipped_country
       end
 
       def extract_end_date(entry)

@@ -80,9 +80,9 @@ module TradeLead
       end
 
       def process_xml_dates(entry)
-        entry[:publish_date] = valid_date?(entry[:publish_date])
-        entry[:resp_date] = valid_date?(entry[:resp_date])
-        entry[:arch_date] = valid_date?(entry[:arch_date])
+        entry[:publish_date] = date_from_string(entry[:publish_date])
+        entry[:resp_date]    = date_from_string(entry[:resp_date])
+        entry[:arch_date]    = date_from_string(entry[:arch_date])
 
         entry[:end_date] = extract_end_date(entry)
         entry.delete(:resp_date)
@@ -91,12 +91,9 @@ module TradeLead
         entry
       end
 
-      def valid_date?(date)
-        if date =~ /[0-9]{8}/
-          Date.strptime(date, '%m%d%Y')
-        else
-          nil
-        end
+      # Parse string and return Date object or nil if date is invalid
+      def date_from_string(date)
+        Date.strptime(date, '%m%d%Y') if date =~ /[0-9]{8}/
       end
 
       def extract_end_date(entry)
