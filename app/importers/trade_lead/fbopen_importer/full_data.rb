@@ -33,7 +33,7 @@ module TradeLead
       end
 
       def import
-        entries_batches { |batch| TradeLead::Fbopen.index(batch) }
+        batched_import { |batch| TradeLead::Fbopen.index(batch) }
       end
 
       def model_class
@@ -42,13 +42,13 @@ module TradeLead
 
       private
 
-      def entries_batches(&block)
+      def batched_import(&block)
         bp = BatchProcessor.new(&block)
         open(@resource) do |file|
           Nokogiri::XML::Reader.from_io(file).each do |node|
             if should_import?(node)
               e = process_xml_entry extract_entry(node)
-              bp.queued_process(e)
+              bp.batched_process(e)
             end
           end
           bp.process!

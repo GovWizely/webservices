@@ -7,7 +7,7 @@ class TradeLead::FbopenImporter::BatchProcessor
     self.entries = []
   end
 
-  def queued_process(item)
+  def batched_process(item)
     return unless item
     entries << item
     process! if should_process?
