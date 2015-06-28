@@ -1,9 +1,0 @@
-#!/bin/bash
-for i in `seq 1 10`; do
-  # Wait for elasticsearch to start.
-  # We only need that because we create indexes on rails initialization
-  # Once we merge the branch that moves that creation into migrations
-  # then we can get rid of this file.
-  curl -s http://elasticsearch_1:9200 | grep -q lucene_version || sleep 1;
-done
-rails server

@@ -5,6 +5,9 @@ webservices:
   links:
   - elasticsearch
   - redis
+  environment:
+      REDIS_URL: redis://redis:6379/0
+      ES_URL: http://elasticsearch:9200
   ports:
   - "3000:3000"
 sidekiq:
@@ -14,9 +17,10 @@ sidekiq:
   links:
   - elasticsearch
   - redis
-  command: bundle exec sidekiq
   environment:
       REDIS_URL: redis://redis:6379/0
+      ES_URL: http://elasticsearch:9200
+  command: bundle exec sidekiq
 elasticsearch:
   image: elasticsearch
   ports:

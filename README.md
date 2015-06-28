@@ -3,9 +3,9 @@ trade.gov Webservices
 
 ## I Can Haz Docker?
 
-If you have [Docker](http://docker.io/) and [Fig](http://fig.sh/), all you have to do is
+If you have [Docker](http://docker.io/) and [Docker Compose](https://docs.docker.com/compose/), all you have to do is
 
-    $ fig up
+    $ docker-compose up
 
 And it should automatically bring up the ElasticSearch container and the rails app,
 correctly linking them.

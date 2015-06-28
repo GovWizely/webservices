@@ -13,7 +13,6 @@ namespace :db do
         raise unless e.message =~ /IndexAlreadyExistsException/
       end
     end
-    Elasticsearch::Persistence.client = ES.client
     User.create_index!
   end
 

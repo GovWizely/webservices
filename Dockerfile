@@ -1,4 +1,6 @@
-FROM ruby:2.1.2
+FROM ruby:2.1.3
+
+RUN apt-get update && apt-get install -y nodejs --no-install-recommends && rm -rf /var/lib/apt/lists
 
 RUN mkdir /app
 WORKDIR /app
@@ -6,9 +8,8 @@ WORKDIR /app
 COPY Gemfile /app/
 COPY Gemfile.lock /app/
 RUN bundle install --system
-RUN apt-get update && apt-get install -y nodejs --no-install-recommends && rm -rf /var/lib/apt/lists
 
 COPY . /app/
 
 EXPOSE 3000
-CMD /app/bin/docker_start
+CMD /app/bin/rails server

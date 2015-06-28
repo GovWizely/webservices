@@ -46,10 +46,4 @@ Webservices::Application.configure do
       secret_access_key: 'FAKE' } }
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
-  begin
-    # Running on docker?
-    es_url = Resolv.getaddress('elasticsearch_1')
-    ES.default_url = es_url
-  rescue
-  end
 end
