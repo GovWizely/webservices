@@ -35,7 +35,7 @@ class Query
 
     @offset = options[:offset].to_i
     @size   = [options[:size].to_i, MAX_SIZE].min
-    @q      = options[:q]
+    @q      = options[:q].try(:empty?) ? nil : options[:q]
     initialize_search_fields(options)
 
     unless valid?
