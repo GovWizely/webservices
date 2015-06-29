@@ -30,12 +30,13 @@ class Query
 
   def initialize(options = {})
     options.reverse_merge!(size: DEFAULT_SIZE)
+    options.delete(:q) if options[:q].try(:empty?)
 
     cleanup_invalid_bytes(options, [:q])
 
     @offset = options[:offset].to_i
     @size   = [options[:size].to_i, MAX_SIZE].min
-    @q      = options[:q].try(:empty?) ? nil : options[:q]
+    @q      = options[:q]
     initialize_search_fields(options)
 
     unless valid?
