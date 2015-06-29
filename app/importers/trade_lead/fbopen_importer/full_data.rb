@@ -33,8 +33,7 @@ module TradeLead
       end
 
       def import
-        entries = import_full_xml.map { |entry| process_xml_entry(entry) }.compact
-        TradeLead::Fbopen.index(entries)
+        batched_import { |batch| TradeLead::Fbopen.index(batch) }
       end
 
       def model_class
@@ -43,18 +42,27 @@ module TradeLead
 
       private
 
-      def import_full_xml
-        entries = []
+      def batched_import(&block)
+        bp = BatchProcessor.new(&block)
         open(@resource) do |file|
           Nokogiri::XML::Reader.from_io(file).each do |node|
-            if %w(PRESOL COMBINE MOD).include?(node.name) && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
-              entry = extract_fields(Nokogiri::XML(node.outer_xml), XPATHS)
-              entry[:notice_type] = node.name
-              entries << entry
+            if should_import?(node)
+              e = process_xml_entry extract_entry(node)
+              bp.batched_process(e)
             end
           end
+          bp.process!
         end
-        entries
+      end
+
+      def should_import?(node)
+        %w(PRESOL COMBINE MOD).include?(node.name) && node.node_type == Nokogiri::XML::Reader::TYPE_ELEMENT
+      end
+
+      def extract_entry(node)
+        entry = extract_fields(Nokogiri::XML(node.outer_xml), XPATHS)
+        entry[:notice_type] = node.name
+        entry
       end
 
       def process_xml_entry(entry)
@@ -62,7 +70,7 @@ module TradeLead
         return nil if !(entry[:specific_location].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:specific_location] == 'US'
 
         entry = process_xml_dates(entry)
-        return nil unless entry[:end_date] >= Date.today || entry[:end_date].nil?
+        return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.today
 
         entry[:description] &&= Nokogiri::HTML.fragment(entry[:description]).inner_text.squish
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
@@ -72,9 +80,9 @@ module TradeLead
       end
 
       def process_xml_dates(entry)
-        entry[:publish_date] = valid_date?(entry[:publish_date])
-        entry[:resp_date] = valid_date?(entry[:resp_date])
-        entry[:arch_date] = valid_date?(entry[:arch_date])
+        entry[:publish_date] = date_from_string(entry[:publish_date])
+        entry[:resp_date]    = date_from_string(entry[:resp_date])
+        entry[:arch_date]    = date_from_string(entry[:arch_date])
 
         entry[:end_date] = extract_end_date(entry)
         entry.delete(:resp_date)
@@ -83,26 +91,13 @@ module TradeLead
         entry
       end
 
-      def valid_date?(date)
-        if date =~ /[0-9]{8}/
-          Date.strptime(date, '%m%d%Y')
-        else
-          nil
-        end
+      # Parse string and return Date object or nil if date is invalid
+      def date_from_string(date)
+        Date.strptime(date, '%m%d%Y') if date =~ /[0-9]{8}/
       end
 
       def extract_end_date(entry)
-        if entry[:arch_date].nil? && entry[:resp_date].nil?
-          nil
-        elsif !entry[:arch_date].nil? && entry[:resp_date].nil?
-          entry[:arch_date]
-        elsif entry[:arch_date].nil? && !entry[:resp_date].nil?
-          entry[:resp_date]
-        elsif entry[:resp_date] < entry[:arch_date]
-          entry[:arch_date]
-        else
-          entry[:resp_date]
-        end
+        [entry[:arch_date], entry[:resp_date]].reject(&:nil?).max
       end
     end
   end

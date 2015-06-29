@@ -77,8 +77,7 @@ module TradeLead
       private
 
       def process_entry(entry)
-        return unless %w(PRESOL COMBINE MOD).include?(entry['ntype'])
-        return if !(entry['POPCOUNTRY'].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry['POPCOUNTRY'] == 'US'
+        return unless valid?(entry)
 
         entry['DATE'] &&= Date.strptime("#{entry['YEAR']}#{entry['DATE']}", '%y%m%d').iso8601
         entry['RESPDATE'] &&= Date.strptime(entry['RESPDATE'], '%m%d%y').iso8601
@@ -95,18 +94,15 @@ module TradeLead
         EMPTY_RECORD.dup.merge(lead)
       end
 
+      def valid?(entry)
+        valid_type      = %w(PRESOL COMBINE MOD).include?(entry['ntype'])
+        valid_country   = entry['POPCOUNTRY'].try(:upcase) =~ /\A[A-Z]{2}\z/
+        skipped_country = entry['POPCOUNTRY'] == 'US' if valid_country
+        valid_type && valid_country && !skipped_country
+      end
+
       def extract_end_date(entry)
-        if entry[:arch_date].nil? && entry[:resp_date].nil?
-          nil
-        elsif !entry[:arch_date].nil? && entry[:resp_date].nil?
-          entry[:arch_date]
-        elsif entry[:arch_date].nil? && !entry[:resp_date].nil?
-          entry[:resp_date]
-        elsif entry[:resp_date] < entry[:arch_date]
-          entry[:arch_date]
-        else
-          entry[:resp_date]
-        end
+        [entry[:arch_date], entry[:resp_date]].reject(&:nil?).max
       end
     end
   end
