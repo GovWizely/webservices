@@ -31,6 +31,26 @@ describe Query do
         expect { subject }.to raise_error(Query::InvalidParamsException)
       end
     end
+    context 'when given an empty :q parameter' do
+      before do
+        class TestWithSetupQuery < Query
+          setup_query(
+            q:      %i(title description),
+            query:  %i(q),
+          )
+        end
+      end
+      after do
+        Object.send(:remove_const, :TestWithSetupQuery)
+      end
+      subject {}
+      it 'should behave like no :q parameter was passed' do
+        expect(TestWithSetupQuery.new(q: "").q).to be_nil
+      end
+      it 'should behave like no :q parameter was passed2' do
+        expect(ScreeningList::Query.new(q: "").q).to be_nil
+      end
+    end
   end
 
   describe '#generate_search_body' do
