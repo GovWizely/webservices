@@ -3,6 +3,7 @@ namespace :ita do
   task :import, [:arg] => :environment do |_t, args|
     args.to_a.each do |module_or_importer_class_name|
       importers(module_or_importer_class_name).each do |i|
+        next if disabled.include?(i)
         ImportWorker.perform_async(i.name)
       end
     end
@@ -34,5 +35,9 @@ namespace :ita do
     else
       module_or_importer_class.importers
     end
+  end
+
+  def disabled
+    [TradeLead::UkData, TradeEvent::EximData]
   end
 end
