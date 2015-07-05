@@ -134,4 +134,18 @@ describe 'Market Researches API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /market_research_library/search.json?size=-1' do
+    let(:params) { { expiration_date: '2016-01-01 TO 2016-01-01', size: -1 } }
+
+    before { get search_path, params, @v2_headers }
+    subject { response }
+
+    it_behaves_like 'a successful search request'
+
+    it 'returns all market researches and ignore query params' do
+      json_response = JSON.parse(response.body)
+      expect(json_response['total']).to eq(6)
+    end
+  end
 end
