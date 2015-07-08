@@ -35,8 +35,8 @@ describe Query do
       before do
         class TestWithSetupQuery < Query
           setup_query(
-            q:      %i(title description),
-            query:  %i(q),
+            q:     %i(title description),
+            query: %i(q),
           )
         end
       end
@@ -45,10 +45,10 @@ describe Query do
       end
       subject {}
       it 'should behave like no :q parameter was passed' do
-        expect(TestWithSetupQuery.new(q: "").q).to be_nil
+        expect(TestWithSetupQuery.new(q: '').q).to be_nil
       end
       it 'should behave like no :q parameter was passed2' do
-        expect(ScreeningList::Query.new(q: "").q).to be_nil
+        expect(ScreeningList::Query.new(q: '').q).to be_nil
       end
     end
   end
