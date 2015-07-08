@@ -39,7 +39,7 @@ group :development, :test do
   gem 'shoulda-matchers', require: false
   gem 'thin'
   gem 'pry-rails'
-  gem 'pry-byebug'
+  gem 'pry-byebug', '~> 1.3.3'
   gem 'pry-remote'
 end
 
