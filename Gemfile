@@ -40,6 +40,7 @@ group :development, :test do
   gem 'thin'
   gem 'pry-rails'
   gem 'pry-byebug'
+  gem 'pry-remote'
 end
 
 group :development do

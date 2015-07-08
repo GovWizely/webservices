@@ -198,6 +198,9 @@ GEM
       pry (~> 0.10)
     pry-rails (0.3.4)
       pry (>= 0.9.10)
+    pry-remote (0.1.8)
+      pry (~> 0.9)
+      slop (~> 3.0)
     rack (1.5.3)
     rack-contrib (1.2.0)
       rack (>= 0.9.1)
@@ -334,6 +337,7 @@ DEPENDENCIES
   parslet
   pry-byebug
   pry-rails
+  pry-remote
   rack-contrib
   rails (= 4.0.9)
   rake
