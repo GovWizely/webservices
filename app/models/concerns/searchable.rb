@@ -71,22 +71,16 @@ module Searchable
       models.map(&:index_name)
     end
 
-    def fetch_all(format = :csv)
+    def fetch_all
       search_options = { scroll: '5m', search_type: 'scan', index: index_names }
       search_options[:type] = index_type if index_type
       response = ES.client.search(search_options)
 
-      results = format == :json ? { offset: 0 } : []
+      results = { offset: 0 }
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         break if response['hits']['hits'].empty?
-        case format
-          when :json
-            batch = response['hits'].deep_symbolize_keys
-            results.merge!(batch)
-          else
-            batch = response['hits']['hits'].map(&:deep_symbolize_keys)
-            results.push(*batch)
-        end
+        batch = response['hits'].deep_symbolize_keys
+        results[:hits].present? ? results[:hits].concat(batch[:hits]) : results.merge!(batch)
       end
 
       results
