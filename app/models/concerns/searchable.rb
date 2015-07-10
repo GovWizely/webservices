@@ -76,12 +76,18 @@ module Searchable
       search_options[:type] = index_type if index_type
       response = ES.client.search(search_options)
 
-      results = []
-
+      results = { offset: 0 }
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
+
         break if response['hits']['hits'].empty?
-        batch = response['hits']['hits'].map(&:deep_symbolize_keys)
-        results.push(*batch)
+
+        batch = response['hits'].deep_symbolize_keys
+
+        if results[:hits].present?
+          results[:hits].concat(batch[:hits])
+        else
+          results.merge!(batch)
+        end
       end
 
       results

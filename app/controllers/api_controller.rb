@@ -28,7 +28,12 @@ class ApiController < ActionController::Base
       format.csv { render_sv('csv') }
       format.tsv { render_sv('tsv') }
       format.json do
-        @search = search_class.search_for(s)
+        @search =
+          if s[:size].to_i == -1
+            search_class.fetch_all
+          else
+            search_class.search_for(s)
+          end
         render
       end
     end
@@ -51,7 +56,7 @@ class ApiController < ActionController::Base
   end
 
   def render_sv(format)
-    search = search_class.fetch_all
+    search = search_class.fetch_all[:hits]
     send_data(
       search_class.send("as_#{format}", search),
       type:        "Mime::#{format.upcase}".constantize,

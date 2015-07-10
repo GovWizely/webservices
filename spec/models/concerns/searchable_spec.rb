@@ -25,9 +25,9 @@ describe Searchable do
     subject { MockModel.fetch_all }
 
     it 'returns the correct number of documents' do
-      expect(subject).to be_a(Array)
-      expect(subject.count).to eq(1_000)
-      expect(subject.first[:_source]).to be_a(Hash)
+      expect(subject).to be_a(Hash)
+      expect(subject[:hits].count).to eq(1_000)
+      expect(subject[:hits].first[:_source]).to be_a(Hash)
     end
   end
 end
