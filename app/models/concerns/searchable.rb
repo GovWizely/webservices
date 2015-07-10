@@ -78,9 +78,16 @@ module Searchable
 
       results = { offset: 0 }
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
+
         break if response['hits']['hits'].empty?
+
         batch = response['hits'].deep_symbolize_keys
-        results[:hits].present? ? results[:hits].concat(batch[:hits]) : results.merge!(batch)
+
+        if results[:hits].present?
+          results[:hits].concat(batch[:hits])
+        else
+          results.merge!(batch)
+        end
       end
 
       results

@@ -28,7 +28,12 @@ class ApiController < ActionController::Base
       format.csv { render_sv('csv') }
       format.tsv { render_sv('tsv') }
       format.json do
-        @search = s[:size].to_i == -1 ? search_class.fetch_all : search_class.search_for(s)
+        @search =
+          if s[:size].to_i == -1
+            search_class.fetch_all
+          else
+            search_class.search_for(s)
+          end
         render
       end
     end
