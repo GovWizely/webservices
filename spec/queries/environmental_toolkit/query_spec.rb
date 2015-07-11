@@ -1,10 +1,10 @@
 require 'spec_helper'
 
-describe EnvironmentalSolutionQuery do
-  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/environmental_solution" }
+describe EnvironmentalToolkit::Query do
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/query" }
   let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_filters.json").read }
   let(:query) do
-    EnvironmentalSolutionQuery.new(q: 'Precipitators')
+    EnvironmentalToolkit::Query.new(q: 'Precipitators')
   end
 
   describe '#new' do

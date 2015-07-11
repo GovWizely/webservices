@@ -1,3 +1,3 @@
-EnvironmentalSolutionData.username = '-'
-EnvironmentalSolutionData.password = '-'
-EnvironmentalSolutionData.web_auth = '-'
+EnvironmentalToolkit::Login.username = '-'
+EnvironmentalToolkit::Login.password = '-'
+EnvironmentalToolkit::Login.web_auth = '-'
