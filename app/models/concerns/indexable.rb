@@ -39,10 +39,11 @@ module Indexable
     end
 
     def stored_metadata
-      ES.client.search(
+      ES.client.get(
         index: index_name,
         type:  'metadata',
-        body:  { query: { match: { _id: 0 } } })['hits']['hits'][0]['_source'].symbolize_keys rescue {}
+        id:    0,
+      )['_source'].symbolize_keys rescue {}
     end
 
     def index_exists?
