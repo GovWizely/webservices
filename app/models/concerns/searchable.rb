@@ -41,6 +41,7 @@ module Searchable
 
       hits = ES.client.search(search_options)['hits'].deep_symbolize_keys
       hits[:offset] = query.offset
+      hits[:sources_used] = index_meta(query.try(:sources))
       hits.deep_symbolize_keys
     end
 
@@ -75,6 +76,7 @@ module Searchable
 
       response = ES.client.search(search_options)
       results = { offset: 0,
+                  sources_used: index_meta,
                   hits:   response['hits'].deep_symbolize_keys[:hits],
                   total:  response['hits']['total'] }
 
@@ -109,6 +111,15 @@ module Searchable
 
     def index_types(sources = nil)
       models(sources).map(&:index_type)
+    end
+
+    def index_meta(sources = nil)
+      models(sources).map do |model|
+        {
+          source:      model.source[:full_name] || model.source[:code],
+          update_time: model.stored_metadata[:time] || '',
+        }
+      end
     end
   end
 end

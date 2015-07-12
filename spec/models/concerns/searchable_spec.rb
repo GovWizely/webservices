@@ -1,33 +1,70 @@
 require 'spec_helper'
 
 describe Searchable do
-  describe '#fetch_all' do
-    let(:index_name) { 'test_index_name' }
-    let(:index_type) { 'test_index_type' }
-
-    before do
-      class MockModel
-        include Searchable
-        self.fetch_all_sort_by = 'foo'
-        def self.index_names(_source = nil)
-          ['test_index_name']
-        end
-        def self.index_types(_source = nil)
-          ['test_index_type']
-        end
+  before(:all) do
+    class MockModel
+      include Indexable
+      self.fetch_all_sort_by = 'foo'
+      self.mappings = {
+        name.typeize => {
+          _timestamp: {
+            enabled: true,
+            store:   true,
+          },
+          properties: {
+            foo: { type: 'string' },
+          },
+        },
+      }
+      def self.source
+        {
+          full_name: 'A mocked model',
+          code:      'MModel',
+        }
       end
-
-      # I'm doing this without the use of a class which includes Indexable
-      # in order to only use Searchable in this spec.
-      ES.client.indices.delete(index: index_name) if ES.client.indices.exists(index: index_name)
-
-      1_000.times { |i| ES.client.index(index: index_name, type: index_type, body: { foo: "Bar #{i}" }) }
-      ES.client.index(index: index_name, type: 'metadata', body: { time: Time.now })
-      ES.client.indices.refresh(index: index_name)
+      self.model_classes = [MockModel]
+      def self.stored_metadata
+        { version: 123, time: 'a few minutes ago' }
+      end
     end
 
-    after { Object.send(:remove_const, :MockModel) }
+    class MockModelQuery
+      def initialize(_options); end
+      def self.sources
+        [MockModel]
+      end
+      def search_type
+        nil
+      end
 
+      def generate_search_body
+        {}
+      end
+
+      def offset
+        0
+      end
+
+      def size
+        2
+      end
+
+      def sort
+        []
+      end
+    end
+
+    MockModel.recreate_index
+    MockModel.index((1..1_000).map { |i| { foo: "Bar #{i}" } })
+    MockModel.update_metadata(9989)
+  end
+
+  after(:all) do
+    Object.send(:remove_const, :MockModel)
+    Object.send(:remove_const, :MockModelQuery)
+  end
+
+  describe '#fetch_all' do
     subject { MockModel.fetch_all }
 
     it 'returns the correct number of documents' do
@@ -42,6 +79,26 @@ describe Searchable do
 
       # Sorted correctly?
       expect(hits.first(10)).to eq hits.first(10).sort { |x, y| x[:foo] <=> y[:foo] }
+    end
+
+    it 'response includes metadata' do
+      expect(subject.keys).to include(:sources_used)
+      expect(subject[:sources_used]).to eq([{ update_time: 'a few minutes ago', source: 'A mocked model' }])
+
+      # too wide test for the description
+      expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used])
+    end
+  end
+
+  describe '#search_for' do
+    subject { MockModel.search_for({}) }
+
+    it 'response includes metadata' do
+      expect(subject.keys).to include(:sources_used)
+      expect(subject[:sources_used]).to eq([{ update_time: 'a few minutes ago', source: 'A mocked model' }])
+
+      # too wide test for the description
+      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used])
     end
   end
 end
