@@ -1,7 +1,7 @@
-module EnvironmentalToolkit
+module Envirotech
   class EnvironmentalSolution
     include Indexable
-    include EnvironmentalToolkit::Mappable
+    include Envirotech::Mappable
     self.source = {
       code: 'EnvironmentalSolution',
     }

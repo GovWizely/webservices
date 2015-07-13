@@ -1,4 +1,4 @@
-module EnvironmentalToolkit
+module Envirotech
   class EnvironmentalSolutionData
     include Importer
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
@@ -28,7 +28,7 @@ module EnvironmentalToolkit
     private
 
     def fetch_data
-      EnvironmentalToolkit::Login.headless_login
+      Envirotech::Login.headless_login
       result = []
       result.concat(current_page_data) until current_page_empty?
       result
@@ -36,7 +36,7 @@ module EnvironmentalToolkit
 
     def current_page_empty?
       @page ||= 1
-      @page_data = JSON.parse(EnvironmentalToolkit::Login.mechanize_agent.get(@resource + "?page=#{@page}").body)
+      @page_data = JSON.parse(Envirotech::Login.mechanize_agent.get(@resource + "?page=#{@page}").body)
       @page += 1
       @page_data.blank?
     end

@@ -1,4 +1,4 @@
-module EnvironmentalToolkit
+module Envirotech
   extend ::Importers
 
   class Login

@@ -1,4 +1,4 @@
-module EnvironmentalToolkit
+module Envirotech
   class Query < ::Query
     attr_reader :sources
 

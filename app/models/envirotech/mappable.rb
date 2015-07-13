@@ -1,4 +1,4 @@
-module EnvironmentalToolkit
+module Envirotech
   module Mappable
     def self.included(klass)
       klass.settings = {
