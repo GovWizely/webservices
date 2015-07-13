@@ -1,13 +1,13 @@
 require 'spec_helper'
 
-describe EnvironmentalToolkit::EnvironmentalSolutionData do
+describe Envirotech::EnvironmentalSolutionData do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/environmental_solution" }
-  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/environmental_toolkit/environmental_solution_articles/environmental_solution_articles.json" }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/environmental_solution_articles/environmental_solution_articles.json" }
 
   let(:mechanize_agent) do
     agent = double('mechanize_agent')
 
-    allow(agent).to receive(:get).with(EnvironmentalToolkit::Login::LOGIN_URL) do
+    allow(agent).to receive(:get).with(Envirotech::Login::LOGIN_URL) do
       token_form = double('password=' => 'foo', 'buttons' => [])
       double(form: token_form)
     end
@@ -32,13 +32,13 @@ describe EnvironmentalToolkit::EnvironmentalSolutionData do
 
   let(:articles_hash) { YAML.load_file("#{fixtures_dir}/environmental_solution_articles.yaml") }
 
-  before { EnvironmentalToolkit::Login.mechanize_agent = mechanize_agent }
+  before { Envirotech::Login.mechanize_agent = mechanize_agent }
 
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
     it 'loads environmental_solution articles from specified resource' do
-      expect(EnvironmentalToolkit::EnvironmentalSolution).to receive(:index) do |articles|
+      expect(Envirotech::EnvironmentalSolution).to receive(:index) do |articles|
         expect(articles.size).to eq(2)
         2.times { |x| expect(articles[x]).to eq(articles_hash[x]) }
       end
