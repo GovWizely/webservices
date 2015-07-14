@@ -5,6 +5,12 @@ class MarketResearchData
   include Importer
   include VersionableResource
 
+  # Temporarily disable version checking so that import attempts to import
+  # source on every run. To test recent industry_mapper work.
+  def available_version
+    nil
+  end
+
   ENDPOINT = 'http://mr.export.gov/nextgen/ng.txt'
 
   COLUMN_HASH = {
