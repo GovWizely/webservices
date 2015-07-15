@@ -97,7 +97,7 @@ module Importer
 
   def normalize_industry(industry)
     source = model_class.to_s
-    Rails.cache.fetch("#{source}/#{industry}", expires_in: 10.minutes) do
+    Rails.cache.fetch("#{source}/#{industry}", expires_in: 90.seconds) do
       IndustryMappingClient.map_industry(industry, source)
     end
   end
