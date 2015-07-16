@@ -45,11 +45,6 @@ module ScreeningList
                                           fields:   {
                                             keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_with_common:           { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
             alt_names:                  { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
@@ -60,28 +55,13 @@ module ScreeningList
                                           fields:   {
                                             keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            alt_with_common:            { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
             # reversed
             name_rev:                   { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
                                             keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            name_rev_with_common:       { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
             alt_rev:                    { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
-
-            alt_rev_with_common:        { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
                                             keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },

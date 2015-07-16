@@ -44,16 +44,12 @@
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: FERLAND
-  :name_with_common: FERLAND COMPANY LIMITED
-  :name_rev_with_common: LIMITED COMPANY FERLAND
   :name_no_ws_with_common: FERLANDCOMPANYLIMITED
   :name_no_ws_rev_with_common: LIMITEDCOMPANYFERLAND
   :name_rev: FERLAND
   :name_no_ws: FERLAND
   :name_no_ws_rev: FERLAND
   :alt_idx: [FERLAND]
-  :alt_with_common: [FERLAND CO LTD]
-  :alt_rev_with_common: [LTD CO FERLAND]
   :alt_no_ws_with_common: [FERLANDCOLTD]
   :alt_no_ws_rev_with_common: [LTDCOFERLAND]
   :alt_rev: [FERLAND]

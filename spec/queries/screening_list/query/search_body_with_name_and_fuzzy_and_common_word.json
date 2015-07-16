@@ -14,10 +14,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -29,7 +29,7 @@
                                 ],
                                 "fuzziness": 0,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
@@ -45,10 +45,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -57,14 +57,14 @@
                                     "name_no_ws_rev_with_common",
                                     "alt_no_ws_with_common",
                                     "alt_no_ws_rev_with_common",
-                                    "name_with_common",
-                                    "alt_with_common",
-                                    "name_rev_with_common",
-                                    "rev_alt_name_with_common"
+                                    "name_idx",
+                                    "name_rev",
+                                    "alt_idx",
+                                    "alt_rev"
                                 ],
                                 "fuzziness": 0,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
@@ -80,10 +80,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -95,7 +95,7 @@
                                 ],
                                 "fuzziness": 1,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
@@ -111,10 +111,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -123,14 +123,14 @@
                                     "name_no_ws_rev_with_common",
                                     "alt_no_ws_with_common",
                                     "alt_no_ws_rev_with_common",
-                                    "name_with_common",
-                                    "alt_with_common",
-                                    "name_rev_with_common",
-                                    "rev_alt_name_with_common"
+                                    "name_idx",
+                                    "name_rev",
+                                    "alt_idx",
+                                    "alt_rev"
                                 ],
                                 "fuzziness": 1,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
@@ -146,10 +146,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -161,7 +161,7 @@
                                 ],
                                 "fuzziness": 2,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
@@ -177,10 +177,10 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_with_common.keyword",
-                                    "alt_with_common.keyword",
-                                    "name_rev_with_common.keyword",
-                                    "rev_alt_name_with_common.keyword",
+                                    "name_idx.keyword",
+                                    "alt_idx.keyword",
+                                    "name_rev.keyword",
+                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
@@ -189,14 +189,14 @@
                                     "name_no_ws_rev_with_common",
                                     "alt_no_ws_with_common",
                                     "alt_no_ws_rev_with_common",
-                                    "name_with_common",
-                                    "alt_with_common",
-                                    "name_rev_with_common",
-                                    "rev_alt_name_with_common"
+                                    "name_idx",
+                                    "name_rev",
+                                    "alt_idx",
+                                    "alt_rev"
                                 ],
                                 "fuzziness": 2,
                                 "operator": "and",
-                                "query": "company"
+                                "query": ""
                             }
                         }
                     }
