@@ -30,4 +30,10 @@ describe ItaZipCodeQuery do
       end
     end
   end
+
+  it 'sorts results by zip_code' do
+    # Not a great test. Just to document the sorting as a requirement.
+    expect(ItaZipCodeQuery.new({}).sort).to eq('_score,zip_code:asc')
+  end
+
 end
