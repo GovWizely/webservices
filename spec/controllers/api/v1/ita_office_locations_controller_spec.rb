@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Api::V1::ItaOfficeLocationsController, type: :controller do
+  before { ItaOfficeLocation.recreate_index }
   describe '#search' do
     let(:search_params) do
       {
