@@ -56,5 +56,32 @@ describe 'Consolidated Envirotech API V1', type: :request do
       end
     end
   end
+
+  describe 'GET /envirotech/regulations/search.json' do
+    let(:params) { {size: 100} }
+    before { get '/envirotech/regulations/search', params }
+    subject { response }
+
+    context 'when search parameters are empty' do
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::Regulation results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) do
+          [Envirotech::Regulation]
+        end
+      end
+    end
+
+    context 'when q is specified' do
+      context 'when one document matches "dechets"' do
+        let(:params) { {q: 'dechets'} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Regulation results that match "dechets"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Regulation] }
+        end
+      end
+    end
+  end
 end
 

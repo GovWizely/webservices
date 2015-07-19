@@ -1,11 +1,13 @@
 shared_context 'all Envirotech fixture data' do
   include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
+  include_context 'Envirotech::Regulation data'
 end
 
 shared_context 'all Envirotech v2 fixture data' do
   include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
+  include_context 'Envirotech::Regulation data'
 end
 
 shared_context 'Envirotech::Solution data' do
@@ -71,6 +73,39 @@ end
 
 shared_examples 'it contains all Envirotech::Issue results that match "passivel"' do
   let(:source) { Envirotech::Issue }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'Envirotech::Regulation data' do
+  before do
+    Envirotech::Regulation.recreate_index
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
+    allow_any_instance_of(Envirotech::RegulationData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
+    Envirotech::RegulationData.new(fixtures_file).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
+                                                                 "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
+
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_examples 'it contains all Envirotech::Regulation results' do
+  let(:source) { Envirotech::Regulation }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::Regulation results that match "dechets"' do
+  let(:source) { Envirotech::Regulation }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::Regulation results matches a query with Chinese character' do
+  let(:source) { Envirotech::Regulation }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end

@@ -56,6 +56,7 @@ module Envirotech
             source_created_at:   { type: 'date', format: 'YYYY-MM-dd' },
             source_updated_at:   { type: 'date', format: 'YYYY-MM-dd' },
             source:              { type: 'string', analyzer: 'keyword' },
+            url:                 { type: 'string' },
             source_id:           { type: 'string' },
           },
         },
