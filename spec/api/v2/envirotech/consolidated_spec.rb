@@ -49,6 +49,42 @@ describe 'Consolidated Envirotech API V2', type: :request do
     end
   end
 
+  describe 'GET /v2/envirotech/issues/search.json' do
+    let(:params) { { size: 100 } }
+    before { get '/v2/envirotech/issues/search', params }
+    subject { response }
+
+    context 'when search parameters are empty' do
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::Issue results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) do
+          [Envirotech::Issue]
+        end
+      end
+    end
+
+    context 'when q is specified' do
+      context 'when one document matches "passivel"' do
+        let(:params) { { q: 'passivel' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Issue results that match "passivel"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Issue] }
+        end
+      end
+
+      context 'when stemming/folding matches a query with Chinese character' do
+        let(:params) { { q: '个' } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Issue results matches a query with Chinese character'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Issue] }
+        end
+      end
+    end
+  end
+
   describe 'GET /v2/envirotech/regulations/search.json' do
     let(:params) { { size: 100 } }
     before { get '/v2/envirotech/regulations/search', params }

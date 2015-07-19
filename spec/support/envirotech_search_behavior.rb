@@ -77,6 +77,12 @@ shared_examples 'it contains all Envirotech::Issue results that match "passivel"
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::Issue results matches a query with Chinese character' do
+  let(:source) { Envirotech::Issue }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'Envirotech::Regulation data' do
   before do
     Envirotech::Regulation.recreate_index
