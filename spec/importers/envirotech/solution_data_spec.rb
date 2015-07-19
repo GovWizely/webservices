@@ -1,8 +1,8 @@
 require 'spec_helper'
 
-describe Envirotech::EnvironmentalSolutionData do
-  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/environmental_solution" }
-  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/environmental_solution_articles/environmental_solution_articles.json" }
+describe Envirotech::SolutionData do
+  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/solution" }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json" }
 
   let(:mechanize_agent) do
     agent = double('mechanize_agent')
@@ -30,15 +30,15 @@ describe Envirotech::EnvironmentalSolutionData do
 
   let(:importer) { described_class.new('dummy_resource') }
 
-  let(:articles_hash) { YAML.load_file("#{fixtures_dir}/environmental_solution_articles.yaml") }
+  let(:articles_hash) { YAML.load_file("#{fixtures_dir}/solution_articles.yaml") }
 
   before { Envirotech::Login.mechanize_agent = mechanize_agent }
 
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    it 'loads environmental_solution articles from specified resource' do
-      expect(Envirotech::EnvironmentalSolution).to receive(:index) do |articles|
+    it 'loads solution articles from specified resource' do
+      expect(Envirotech::Solution).to receive(:index) do |articles|
         expect(articles.size).to eq(2)
         2.times { |x| expect(articles[x]).to eq(articles_hash[x]) }
       end

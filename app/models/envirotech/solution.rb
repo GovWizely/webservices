@@ -1,9 +1,9 @@
 module Envirotech
-  class EnvironmentalSolution
+  class Solution
     include Indexable
     include Envirotech::Mappable
     self.source = {
-      code: 'EnvironmentalSolution',
+      code: 'SOLUTIONS',
     }
   end
 end

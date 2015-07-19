@@ -5,15 +5,15 @@ describe 'Consolidated Envirotech API V1', type: :request do
 
   describe 'GET /envirotech/search.json' do
     let(:params) { {size: 100} }
-    before { get '/envirotech/search', params }
+    before { get '/envirotech/solutions/search', params }
     subject { response }
 
     context 'when search parameters are empty' do
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all Envirotech::EnvironmentalSolution results'
+      it_behaves_like 'it contains all Envirotech::Solution results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
-          [Envirotech::EnvironmentalSolution]
+          [Envirotech::Solution]
         end
       end
     end
@@ -22,9 +22,9 @@ describe 'Consolidated Envirotech API V1', type: :request do
       context 'when one document matches "Precipitadores"' do
         let(:params) { {q: 'Precipitadores'} }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all Envirotech::EnvironmentalSolution results that match "Precipitadores"'
+        it_behaves_like 'it contains all Envirotech::Solution results that match "Precipitadores"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [Envirotech::EnvironmentalSolution] }
+          let(:sources) { [Envirotech::Solution] }
         end
       end
     end

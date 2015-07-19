@@ -83,7 +83,7 @@ Webservices::Application.routes.draw do
     end
 
     namespace :envirotech do
-      get 'search', to: 'consolidated#search'
+      get ':sources/search', to: 'consolidated#search'
     end unless Rails.env.production?
   end
 

@@ -1,5 +1,5 @@
 module Envirotech
-  class EnvironmentalSolutionData
+  class SolutionData
     include Importer
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
 

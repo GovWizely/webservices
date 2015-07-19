@@ -7,8 +7,8 @@
   :name_english: Mercury - Electrostatic Precipitators
   :name_chinese: 汞-静电除尘器
   :source_id: 201
-  :source: EnvironmentalSolution
-  :id: 6d7e8bd0e58f773bd90649ab4281831ca6fb9b9a
+  :source: SOLUTIONS
+  :id: 1c0a97766f307f1897ffcfb34b069aa59be27b2e
 - :source_created_at: '2013-11-06'
   :source_updated_at: '2013-11-06'
   :name_spanish: 'Tecnologías Asociadas para el Sistema Nacional de Eliminación de Descargas Contaminantes: Estándares de Tratamiento de Aguas Residuales Secundarios o Avanzados'
@@ -17,5 +17,5 @@
   :name_english: 'Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards'
   :name_chinese: NPDES相关技术：二级或高级污水处理标准
   :source_id: 200
-  :source: EnvironmentalSolution
-  :id: 07cb688c619da4eedc61251a4ada2bfa92d80c82
+  :source: SOLUTIONS
+  :id: 16e2fcfe20c9fb918f19ba7990de5bb0298b0122
