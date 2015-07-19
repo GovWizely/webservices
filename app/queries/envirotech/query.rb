@@ -2,7 +2,16 @@ module Envirotech
   class Query < ::Query
     attr_reader :sources
 
-    setup_query(q: %i(name_chinese name_english name_french name_portuguese name_spanish))
+    setup_query(q: %i(name_chinese
+                      name_english
+                      name_french
+                      name_portuguese
+                      name_spanish
+                      abstract_chinese
+                      abstract_english
+                      abstract_french
+                      abstract_portuguese
+                      abstract_spanish))
 
     def initialize(options = {})
       super
