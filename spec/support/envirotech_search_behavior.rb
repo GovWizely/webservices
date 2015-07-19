@@ -2,12 +2,14 @@ shared_context 'all Envirotech fixture data' do
   include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
   include_context 'Envirotech::Regulation data'
+  include_context 'Envirotech::Provider data'
 end
 
 shared_context 'all Envirotech v2 fixture data' do
   include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
   include_context 'Envirotech::Regulation data'
+  include_context 'Envirotech::Provider data'
 end
 
 shared_context 'Envirotech::Solution data' do
@@ -113,5 +115,33 @@ end
 shared_examples 'it contains all Envirotech::Regulation results matches a query with Chinese character' do
   let(:source) { Envirotech::Regulation }
   let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+
+shared_context 'Envirotech::Provider data' do
+  before do
+    Envirotech::Provider.recreate_index
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json"
+    allow_any_instance_of(Envirotech::ProviderData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
+    Envirotech::ProviderData.new(fixtures_file).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
+                                                                      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
+
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_examples 'it contains all Envirotech::Provider results' do
+  let(:source) { Envirotech::Provider }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::Provider results that match "Corporation"' do
+  let(:source) { Envirotech::Provider }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
