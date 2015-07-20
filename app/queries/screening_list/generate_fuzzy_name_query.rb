@@ -18,8 +18,8 @@ module ScreeningList
       all_fields   = single_token + names
 
       score_hash = {
-        score_100: { fields: single_token, fuzziness: 0, weight: 5 },
-        score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
+        score_100: { fields: single_token, fuzziness: 0, weight: 10 },
+        # score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
         score_90:  { fields: single_token, fuzziness: 1, weight: 5 },
         score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
         score_80:  { fields: single_token, fuzziness: 2, weight: 5 },
