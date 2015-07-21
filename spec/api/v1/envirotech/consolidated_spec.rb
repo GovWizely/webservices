@@ -28,6 +28,18 @@ describe 'Consolidated Envirotech API V1', type: :request do
         end
       end
     end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 201' do
+        let(:params) { {source_ids: 201} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Solution results that match source_id 201'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Solution] }
+        end
+      end
+    end
+
   end
 
   describe 'GET /envirotech/issues/search.json' do
@@ -50,6 +62,17 @@ describe 'Consolidated Envirotech API V1', type: :request do
         let(:params) { {q: 'passivel'} }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all Envirotech::Issue results that match "passivel"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Issue] }
+        end
+      end
+    end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 23' do
+        let(:params) { {source_ids: 23} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Issue results that match source_id 23'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [Envirotech::Issue] }
         end
@@ -82,6 +105,17 @@ describe 'Consolidated Envirotech API V1', type: :request do
         end
       end
     end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 19' do
+        let(:params) { {source_ids: 19} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Regulation results that match source_id 19'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Regulation] }
+        end
+      end
+    end
   end
 
   describe 'GET /envirotech/providers/search.json' do
@@ -109,6 +143,16 @@ describe 'Consolidated Envirotech API V1', type: :request do
         end
       end
     end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 984' do
+        let(:params) { {source_ids: 984} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Provider results that match source_id 984'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::Provider] }
+        end
+      end
+    end
   end
 end
-

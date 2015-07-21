@@ -51,6 +51,12 @@ shared_examples 'it contains all Envirotech::Solution results matches a query wi
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::Solution results that match source_id 201' do
+  let(:source) { Envirotech::Solution }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 
 shared_context 'Envirotech::Issue data' do
   before do
@@ -85,6 +91,13 @@ shared_examples 'it contains all Envirotech::Issue results matches a query with 
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::Issue results that match source_id 23' do
+  let(:source) { Envirotech::Issue }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+
 shared_context 'Envirotech::Regulation data' do
   before do
     Envirotech::Regulation.recreate_index
@@ -118,6 +131,13 @@ shared_examples 'it contains all Envirotech::Regulation results matches a query 
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::Regulation results that match source_id 19' do
+  let(:source) { Envirotech::Regulation }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+
 
 shared_context 'Envirotech::Provider data' do
   before do
@@ -143,5 +163,11 @@ end
 shared_examples 'it contains all Envirotech::Provider results that match "Corporation"' do
   let(:source) { Envirotech::Provider }
   let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::Provider results that match source_id 984' do
+  let(:source) { Envirotech::Provider }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
