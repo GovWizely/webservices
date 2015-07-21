@@ -54,7 +54,7 @@ module Envirotech
 
       article[:source] = model_class.source[:code]
 
-      article[:id] = Utils.generate_id(article, %i(source_id name_english source))
+      article[:id] = Utils.generate_id(article, %i(source_id source))
       sanitize_entry(article)
     end
   end
