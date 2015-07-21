@@ -147,4 +147,42 @@ describe 'Consolidated Envirotech API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /envirotech/analysis_links/search.json' do
+    let(:params) { {size: 100} }
+    before { get '/envirotech/analysis_links/search', params }
+    subject { response }
+
+    context 'when search parameters are empty' do
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::AnalysisLink results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) do
+          [Envirotech::AnalysisLink]
+        end
+      end
+    end
+
+    context 'when q is specified' do
+      context 'when one document matches "Metodos"' do
+        let(:params) { {q: 'Metodos'} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::AnalysisLink results that match "Metodos"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::AnalysisLink] }
+        end
+      end
+    end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 10' do
+        let(:params) { {source_ids: 10} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::AnalysisLink results that match source_id 10'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::AnalysisLink] }
+        end
+      end
+    end
+  end
 end

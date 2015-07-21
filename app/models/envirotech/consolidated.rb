@@ -4,6 +4,7 @@ module Envirotech
     self.model_classes = [Envirotech::Solution,
                           Envirotech::Issue,
                           Envirotech::Regulation,
-                          Envirotech::Provider]
+                          Envirotech::Provider,
+                          Envirotech::AnalysisLink]
   end
 end

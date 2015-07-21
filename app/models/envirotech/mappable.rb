@@ -58,6 +58,8 @@ module Envirotech
             source:              { type: 'string', analyzer: 'keyword' },
             url:                 { type: 'string' },
             source_id:           { type: 'string' },
+
+            issue_id:            { type: 'string' },
           },
         },
       }.freeze
