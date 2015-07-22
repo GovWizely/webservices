@@ -193,4 +193,42 @@ describe 'Consolidated Envirotech API V1', type: :request do
       end
     end
   end
+
+  describe 'GET /envirotech/background_links/search.json' do
+    let(:params) { {size: 100} }
+    before { get '/envirotech/background_links/search', params }
+    subject { response }
+
+    context 'when search parameters are empty' do
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::BackgroundLink results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) do
+          [Envirotech::BackgroundLink]
+        end
+      end
+    end
+
+    context 'when q is specified' do
+      context 'when one document matches "Protecao"' do
+        let(:params) { {q: 'Protecao'} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::BackgroundLink results that match "Protecao"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::BackgroundLink] }
+        end
+      end
+    end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 10' do
+        let(:params) { {source_ids: 1} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::BackgroundLink results that match source_id 1'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::BackgroundLink] }
+        end
+      end
+    end
+  end
 end

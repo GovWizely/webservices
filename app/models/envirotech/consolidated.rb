@@ -5,6 +5,7 @@ module Envirotech
                           Envirotech::Issue,
                           Envirotech::Regulation,
                           Envirotech::Provider,
-                          Envirotech::AnalysisLink]
+                          Envirotech::AnalysisLink,
+                          Envirotech::BackgroundLink]
   end
 end

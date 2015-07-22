@@ -4,6 +4,7 @@ shared_context 'all Envirotech fixture data' do
   include_context 'Envirotech::Regulation data'
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
+  include_context 'Envirotech::BackgroundLink data'
 end
 
 shared_context 'all Envirotech v2 fixture data' do
@@ -12,6 +13,7 @@ shared_context 'all Envirotech v2 fixture data' do
   include_context 'Envirotech::Regulation data'
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
+  include_context 'Envirotech::BackgroundLink data'
 end
 
 shared_context 'Envirotech::Solution data' do
@@ -205,5 +207,39 @@ end
 shared_examples 'it contains all Envirotech::AnalysisLink results that match source_id 10' do
   let(:source) { Envirotech::AnalysisLink }
   let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+
+shared_context 'Envirotech::BackgroundLink data' do
+  before do
+    Envirotech::BackgroundLink.recreate_index
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json"
+    allow_any_instance_of(Envirotech::BackgroundLinkData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
+    Envirotech::BackgroundLinkData.new(fixtures_file).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
+                                                                        "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
+
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+end
+
+shared_examples 'it contains all Envirotech::BackgroundLink results' do
+  let(:source) { Envirotech::BackgroundLink }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::BackgroundLink results that match "Protecao"' do
+  let(:source) { Envirotech::BackgroundLink }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::BackgroundLink results that match source_id 1' do
+  let(:source) { Envirotech::BackgroundLink }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
