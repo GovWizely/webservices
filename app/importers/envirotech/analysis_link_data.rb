@@ -1,5 +1,5 @@
 module Envirotech
-  class AnalysisLinkData
+  class AnalysisLinkData < Envirotech::BaseData
     include Importer
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulatory_analysis_links.json'
 
@@ -27,24 +27,6 @@ module Envirotech
     end
 
     private
-
-    def fetch_data
-      Envirotech::Login.headless_login
-      result = []
-      result.concat(current_page_data) until current_page_empty?
-      result
-    end
-
-    def current_page_empty?
-      @page ||= 1
-      @page_data = JSON.parse(Envirotech::Login.mechanize_agent.get(@resource + "?page=#{@page}").body)
-      @page += 1
-      @page_data.blank?
-    end
-
-    def current_page_data
-      @page_data
-    end
 
     def process_article_info(article_hash)
       article = remap_keys COLUMN_HASH, article_hash
