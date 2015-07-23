@@ -60,6 +60,8 @@ module Envirotech
             source_id:           { type: 'string' },
 
             issue_id:            { type: 'string' },
+            provider_id:         { type: 'string' },
+            solution_id:         { type: 'string' },
           },
         },
       }.freeze

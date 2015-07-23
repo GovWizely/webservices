@@ -223,4 +223,31 @@ describe 'Consolidated Envirotech API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /envirotech/provider_solutions/search.json' do
+    let(:params) { {size: 100} }
+    before { get '/envirotech/provider_solutions/search', params }
+    subject { response }
+
+    context 'when search parameters are empty' do
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::ProviderSolution results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) do
+          [Envirotech::ProviderSolution]
+        end
+      end
+    end
+
+    context 'when source_ids are specified' do
+      context 'when one document matches source_id 422' do
+        let(:params) { {source_ids: 422} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match source_id 422'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::ProviderSolution] }
+        end
+      end
+    end
+  end
 end

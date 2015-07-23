@@ -37,7 +37,7 @@ describe Envirotech::ProviderData do
   it_behaves_like 'an importer which can purge old documents'
 
   describe '#import' do
-    it 'loads regulation articles from specified resource' do
+    it 'loads provider articles from specified resource' do
       expect(Envirotech::Provider).to receive(:index) do |articles|
         expect(articles.size).to eq(2)
         2.times { |x| expect(articles[x]).to eq(articles_hash[x]) }

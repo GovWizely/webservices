@@ -12,7 +12,9 @@ module Envirotech
                       abstract_french
                       abstract_portuguese
                       abstract_spanish
-                      issue_id))
+                      issue_id
+                      provider_id
+                      solution_id))
 
     def initialize(options = {})
       super

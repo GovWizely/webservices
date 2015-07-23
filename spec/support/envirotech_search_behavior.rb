@@ -5,6 +5,7 @@ shared_context 'all Envirotech fixture data' do
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
   include_context 'Envirotech::BackgroundLink data'
+  include_context 'Envirotech::ProviderSolution data'
 end
 
 shared_context 'all Envirotech v2 fixture data' do
@@ -14,6 +15,7 @@ shared_context 'all Envirotech v2 fixture data' do
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
   include_context 'Envirotech::BackgroundLink data'
+  include_context 'Envirotech::ProviderSolution data'
 end
 
 shared_context 'Envirotech::Solution data' do
@@ -241,5 +243,30 @@ end
 shared_examples 'it contains all Envirotech::BackgroundLink results that match source_id 1' do
   let(:source) { Envirotech::BackgroundLink }
   let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'Envirotech::ProviderSolution data' do
+  before do
+    Envirotech::ProviderSolution.recreate_index
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solution_articles/provider_solution_articles.json"
+    allow_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
+    Envirotech::ProviderSolutionData.new(fixtures_file).import
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
+                                                                          "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
+  end
+end
+
+shared_examples 'it contains all Envirotech::ProviderSolution results' do
+  let(:source) { Envirotech::ProviderSolution }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::ProviderSolution results that match source_id 422' do
+  let(:source) { Envirotech::ProviderSolution }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
