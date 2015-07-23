@@ -212,6 +212,11 @@ shared_examples 'it contains all Envirotech::AnalysisLink results that match sou
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::AnalysisLink results that match issue_id 19' do
+  let(:source) { Envirotech::AnalysisLink }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
 
 shared_context 'Envirotech::BackgroundLink data' do
   before do
@@ -246,6 +251,12 @@ shared_examples 'it contains all Envirotech::BackgroundLink results that match s
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all Envirotech::BackgroundLink results that match issue_id 16' do
+  let(:source) { Envirotech::BackgroundLink }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'Envirotech::ProviderSolution data' do
   before do
     Envirotech::ProviderSolution.recreate_index
@@ -266,6 +277,24 @@ shared_examples 'it contains all Envirotech::ProviderSolution results' do
 end
 
 shared_examples 'it contains all Envirotech::ProviderSolution results that match source_id 422' do
+  let(:source) { Envirotech::ProviderSolution }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::ProviderSolution results that match solution_id 196' do
+  let(:source) { Envirotech::ProviderSolution }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 931' do
+  let(:source) { Envirotech::ProviderSolution }
+  let(:expected) { [1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 931 and solution_id 128' do
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'

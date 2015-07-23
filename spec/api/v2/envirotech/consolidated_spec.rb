@@ -184,6 +184,17 @@ describe 'Consolidated Envirotech API V2', type: :request do
         end
       end
     end
+
+    context 'when issue_ids are specified' do
+      context 'when one document matches issue_ids 19' do
+        let(:params) { {issue_ids: 19} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::AnalysisLink results that match issue_id 19'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::AnalysisLink] }
+        end
+      end
+    end
   end
 
   describe 'GET /envirotech/background_links/search.json' do
@@ -222,6 +233,17 @@ describe 'Consolidated Envirotech API V2', type: :request do
         end
       end
     end
+
+    context 'when issue_ids are specified' do
+      context 'when one document matches issue_ids 16' do
+        let(:params) { {issue_ids: 16} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::BackgroundLink results that match issue_id 16'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::BackgroundLink] }
+        end
+      end
+    end
   end
 
   describe 'GET /envirotech/provider_solutions/search.json' do
@@ -244,6 +266,39 @@ describe 'Consolidated Envirotech API V2', type: :request do
         let(:params) { {source_ids: 422} }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all Envirotech::ProviderSolution results that match source_id 422'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::ProviderSolution] }
+        end
+      end
+    end
+
+    context 'when solution_ids are specified' do
+      context 'when one document matches solution_ids 196' do
+        let(:params) { {solution_ids: 196} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match solution_id 196'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::ProviderSolution] }
+        end
+      end
+    end
+
+    context 'when provider_ids are specified' do
+      context 'when one document matches provider_ids 931' do
+        let(:params) { {provider_ids: 931} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 931'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [Envirotech::ProviderSolution] }
+        end
+      end
+    end
+
+    context 'when provider_ids and solution_id are specified' do
+      context 'when one document matches provider_ids 931' do
+        let(:params) { {provider_ids: 931, solution_ids: 128} }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 931 and solution_id 128'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [Envirotech::ProviderSolution] }
         end

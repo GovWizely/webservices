@@ -13,10 +13,7 @@
                        "abstract_english",
                        "abstract_french",
                        "abstract_portuguese",
-                       "abstract_spanish",
-                       "issue_id",
-                       "provider_id",
-                       "solution_id"],
+                       "abstract_spanish"],
             "operator": "and",
             "query": "Precipitators"
           }
