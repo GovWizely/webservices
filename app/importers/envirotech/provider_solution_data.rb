@@ -4,10 +4,10 @@ module Envirotech
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_provider_solutions.json'
 
     COLUMN_HASH = {
-      'id' => :source_id,
-      'url' => :url,
+      'id'                     => :source_id,
+      'url'                    => :url,
       'envirotech_provider_id' => :provider_id,
-      'envirotech_solution_id' => :solution_id
+      'envirotech_solution_id' => :solution_id,
     }.freeze
 
     def initialize(resource = ENDPOINT)

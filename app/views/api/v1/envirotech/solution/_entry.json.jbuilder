@@ -7,5 +7,5 @@ json.call(entry[:_source],
           :name_spanish,
           :source_created_at,
           :source_updated_at,
-          :source
+          :source,
          )

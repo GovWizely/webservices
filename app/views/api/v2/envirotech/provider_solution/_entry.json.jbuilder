@@ -3,5 +3,5 @@ json.call(entry[:_source],
           :source,
           :provider_id,
           :solution_id,
-          :url
-)
+          :url,
+         )

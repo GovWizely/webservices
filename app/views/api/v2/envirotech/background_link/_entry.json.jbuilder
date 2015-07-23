@@ -9,5 +9,5 @@ json.call(entry[:_source],
           :source_updated_at,
           :source,
           :url,
-          :issue_id
-)
+          :issue_id,
+         )

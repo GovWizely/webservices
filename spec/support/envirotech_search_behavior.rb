@@ -63,7 +63,6 @@ shared_examples 'it contains all Envirotech::Solution results that match source_
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'Envirotech::Issue data' do
   before do
     Envirotech::Issue.recreate_index
@@ -73,7 +72,7 @@ shared_context 'Envirotech::Issue data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
-                                                                 "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
 
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -103,7 +102,6 @@ shared_examples 'it contains all Envirotech::Issue results that match source_id 
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'Envirotech::Regulation data' do
   before do
     Envirotech::Regulation.recreate_index
@@ -113,7 +111,7 @@ shared_context 'Envirotech::Regulation data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
-                                                                 "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
 
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -143,8 +141,6 @@ shared_examples 'it contains all Envirotech::Regulation results that match sourc
   it_behaves_like 'it contains all expected results of source'
 end
 
-
-
 shared_context 'Envirotech::Provider data' do
   before do
     Envirotech::Provider.recreate_index
@@ -154,7 +150,7 @@ shared_context 'Envirotech::Provider data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
-                                                                      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
 
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -178,7 +174,6 @@ shared_examples 'it contains all Envirotech::Provider results that match source_
   it_behaves_like 'it contains all expected results of source'
 end
 
-
 shared_context 'Envirotech::AnalysisLink data' do
   before do
     Envirotech::AnalysisLink.recreate_index
@@ -188,7 +183,7 @@ shared_context 'Envirotech::AnalysisLink data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
-                                                                    "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
 
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -227,7 +222,7 @@ shared_context 'Envirotech::BackgroundLink data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
-                                                                        "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
 
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -266,7 +261,7 @@ shared_context 'Envirotech::ProviderSolution data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
-                                                                          "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
   end
 end
 

@@ -5,21 +5,21 @@ module Envirotech
         index: {
           analysis: {
             analyzer:
-              { english_analyzer:    {
-                tokenizer: 'standard',
-                filter:    %w(standard asciifolding lowercase snowball) },
-                french_analyzer:     {
-                  tokenizer: 'standard',
-                  filter:    %w(standard asciifolding lowercase french) },
-                chinese_analyzer:    {
-                  tokenizer: 'standard',
-                  filter:    %w(standard  lowercase) },
-                portuguese_analyzer: {
-                  tokenizer: 'standard',
-                  filter:    %w(standard asciifolding lowercase portuguese) },
-                spanish_analyzer:    {
-                  tokenizer: 'standard',
-                  filter:    %w(standard asciifolding lowercase spanish) },
+                      { english_analyzer:    {
+                        tokenizer: 'standard',
+                        filter:    %w(standard asciifolding lowercase snowball) },
+                        french_analyzer:     {
+                          tokenizer: 'standard',
+                          filter:    %w(standard asciifolding lowercase french) },
+                        chinese_analyzer:    {
+                          tokenizer: 'standard',
+                          filter:    %w(standard  lowercase) },
+                        portuguese_analyzer: {
+                          tokenizer: 'standard',
+                          filter:    %w(standard asciifolding lowercase portuguese) },
+                        spanish_analyzer:    {
+                          tokenizer: 'standard',
+                          filter:    %w(standard asciifolding lowercase spanish) },
 
               },
             filter:   {
