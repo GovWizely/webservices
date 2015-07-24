@@ -21,7 +21,7 @@ describe 'Ita Zip Code API V2', type: :request do
 
       it 'returns zip code entries' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(2)
+        expect(json_response[:total]).to eq(5)
 
         results = json_response[:results]
         expect(results).to match_array expected_results
@@ -40,9 +40,26 @@ describe 'Ita Zip Code API V2', type: :request do
         expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        expect(results).to match_array expected_results
+        expect(results).to match_array expected_results.values_at(0,1)
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
+    end
+
+    context 'when there are many matches' do
+      # We force the scores to be the same by sending an empty query.
+      # That's because we sort first by relevance (_score) and with too few documents
+      # indexed there is not enough data for the term frequency and document frequency
+      # to be meaningful. For a better explanation:
+      # https://www.elastic.co/guide/en/elasticsearch/guide/current/relevance-is-broken.html
+      before { get search_path, { size: 50 }, @v2_headers }
+      subject { response }
+      it 'returns entries sorted by zip code' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+
+        results = json_response[:results]
+        zip_codes = results.map { |x| x[:zip_code] }
+        expect(zip_codes).to eq(["00501", "00544", "07833", "52036", "72835"])
+      end
     end
 
     context 'when one zip code is specified' do

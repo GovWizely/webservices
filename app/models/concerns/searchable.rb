@@ -31,6 +31,7 @@ module Searchable
       }
 
       search_options[:type] = index_type if index_type
+      search_options[:search_type] = query.search_type if query.search_type
 
       hits = ES.client.search(search_options)['hits'].deep_symbolize_keys
       hits[:offset] = query.offset

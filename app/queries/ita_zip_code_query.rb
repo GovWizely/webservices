@@ -3,6 +3,8 @@ class ItaZipCodeQuery < Query
     super
     @zip_codes = options[:zip_codes].downcase.split(',') if options[:zip_codes].present?
     @q = options[:q].downcase if options[:q].present?
+    @sort = '_score,zip_code:asc'
+    @search_type = :dfs_query_then_fetch
   end
 
   def generate_query(json)
