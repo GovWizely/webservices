@@ -75,10 +75,10 @@ module Searchable
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
-      results = { offset: 0,
+      results = { offset:       0,
                   sources_used: index_meta,
-                  hits:   response['hits'].deep_symbolize_keys[:hits],
-                  total:  response['hits']['total'] }
+                  hits:         response['hits'].deep_symbolize_keys[:hits],
+                  total:        response['hits']['total'] }
 
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         batch = response['hits'].deep_symbolize_keys

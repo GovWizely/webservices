@@ -59,4 +59,9 @@ class SharepointTradeArticle
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Sharepoint Trade Article',
+    code:      'SPTA',
+  }
 end

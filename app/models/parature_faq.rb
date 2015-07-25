@@ -36,4 +36,9 @@ class ParatureFaq
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Parature FAQ',
+    code:      'PFAQ',
+  }
   end

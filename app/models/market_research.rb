@@ -49,4 +49,9 @@ class MarketResearch
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Market Research',
+    code:      'MR',
+  }
 end

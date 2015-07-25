@@ -14,4 +14,9 @@ class TradeArticle
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Trade Articles',
+    code:      'TRADEA',
+  }
 end

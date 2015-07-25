@@ -33,4 +33,9 @@ class ItaZipCode
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'ITA Zip Code',
+    code:      'ITAZC',
+  }
 end

@@ -7,8 +7,14 @@ module Indexable
 
   included do
     class << self
-      attr_accessor :mappings, :settings
+      attr_accessor :mappings, :settings, :source
     end
+
+    # If the model class doesn't define the source full_name,
+    # default to the class name. This gets used when reporting
+    # which sources were used in a search and when was that
+    # source last updated.
+    self.source = { full_name: name, code: name }
   end
 
   module ClassMethods
@@ -102,12 +108,6 @@ module Indexable
       prepared.merge!(ttl: record[:ttl]) if record[:ttl]
       prepared.merge!(timestamp: record[:timestamp]) if record[:timestamp]
       prepared
-    end
-
-    # This overwrites index_names in Searchable, making searches by classes
-    # which include Indexable focus only on the index defined by the class.
-    def index_names(_sources = nil)
-      [index_name]
     end
   end
 end
