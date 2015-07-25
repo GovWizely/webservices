@@ -1,4 +1,4 @@
-json.call(@search, :total)
+json.partial! 'shared/queryinfo'
 json.results do
   json.array! @search[:hits] do |hit|
     ita_office_location = hit.deep_symbolize_keys

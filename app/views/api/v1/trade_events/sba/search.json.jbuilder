@@ -1,4 +1,4 @@
-json.call(@search, :total, :offset)
+json.partial! 'shared/queryinfo'
 json.results do
   json.array! @search[:hits] do |hit|
     sba_trade_event = hit.deep_symbolize_keys
