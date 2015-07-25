@@ -46,10 +46,11 @@ describe 'Ita Zip Code API V2', type: :request do
     end
 
     context 'when there are many matches' do
-      # We force the scores to be the same by sending an empty query.
-      # That's because we sort first by relevance (_score) and with too few documents
-      # indexed there is not enough data for the term frequency and document frequency
-      # to be meaningful. For a better explanation:
+      # We force all scores to be the same by sending an empty query.
+      # Even tho we have forced queries to use global IDF to avoid the small IDF differences
+      # on each node to always kick in with higher precedence, running an empty search here
+      # should make for a less fragile test.
+      # For a better explanation of the underlying issue:
       # https://www.elastic.co/guide/en/elasticsearch/guide/current/relevance-is-broken.html
       before { get search_path, { size: 50 }, @v2_headers }
       subject { response }
