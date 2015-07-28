@@ -9,6 +9,13 @@ namespace :ita do
     end
   end
 
+  desc 'Import data for a given importer without firing off a Sidekiq job'
+  task :import_synchronously, [:importer_class_name] => :environment do |_t, args|
+    importer_class = args.importer_class_name.constantize
+    fail 'Give me an Importer please.' unless importer_class.include?(Importer)
+    importer_class.new.import
+  end
+
   desc 'Recreate indices for a given comma-separated list of modules containing importers, or importer classes.'
   task :recreate_index, [:arg] => :environment do |_t, args|
     args.to_a.each do |module_or_importer_class_name|
