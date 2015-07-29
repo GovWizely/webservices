@@ -40,7 +40,7 @@ describe 'Ita Zip Code API V2', type: :request do
         expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        expect(results).to match_array expected_results.values_at(0,1)
+        expect(results).to match_array expected_results.values_at(0, 1)
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -59,7 +59,7 @@ describe 'Ita Zip Code API V2', type: :request do
 
         results = json_response[:results]
         zip_codes = results.map { |x| x[:zip_code] }
-        expect(zip_codes).to eq(["00501", "00544", "07833", "52036", "72835"])
+        expect(zip_codes).to eq(%w(00501 00544 07833 52036 72835))
       end
     end
 
