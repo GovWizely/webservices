@@ -59,6 +59,7 @@ Webservices::Application.routes.draw do
              'country_commercial_guides'  => 'country_commercial_guides',
              'business_service_providers' => 'business_service_providers',
              'ita_zip_codes'              => 'ita_zipcode_to_post',
+             'ita_taxonomy'               => 'ita_taxonomies',
      }
     path['eccn'] = 'eccns' unless Rails.env.production?
 

@@ -20,6 +20,7 @@ gem 'htmlentities'
 gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'git'
 gem 'rdiscount'
+gem 'rubyzip'
 gem 'smarter_csv'
 gem 'sidekiq'
 gem 'sinatra', require: nil
