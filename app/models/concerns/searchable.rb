@@ -15,6 +15,11 @@ module Searchable
     class << self
       attr_accessor :model_classes
     end
+
+    # Defaults to itself. This makes sense when the model is also Indexable,
+    # as we're only dealing with a single source. model_classes will get
+    # manually set in a non-Indexable (i.e. consolidated) model.
+    self.model_classes = [self]
   end
 
   module ClassMethods
@@ -54,27 +59,17 @@ module Searchable
       query_class
     end
 
+    # The Indexable concern will override this if included. In the case where
+    # a model is Searchable but not Indexable (i.e. a model representing a
+    # consolidated set of sources), we still call this method when performing
+    # a search. The fact that it returns nil tell us not to set the types
+    # of document to search for when doing so.
     def index_type
       nil
     end
 
-    def index_names(sources = nil)
-      models = model_classes
-      if sources && sources.any?
-        selected_models = models.select { |c| sources.include?(c.source[:code]) }
-
-        # If the given sources do not match any models, we'll search over them
-        # all. This prevents us from querying EVERY index in our DB, which is
-        # undesirable. It would be better if we didn't send a query to ES in this
-        # case.
-        models = selected_models if selected_models.any?
-      end
-      models.map(&:index_name)
-    end
-
     def fetch_all
-      search_options = { scroll: '5m', search_type: 'scan', index: index_names }
-      search_options[:type] = index_type if index_type
+      search_options = { scroll: '5m', search_type: 'scan', index: index_names, type: index_types }
       response = ES.client.search(search_options)
 
       results = { offset: 0 }
@@ -92,6 +87,30 @@ module Searchable
       end
 
       results
+    end
+
+    def index_names(sources = nil)
+      models(sources).map(&:index_name)
+    end
+
+    private
+
+    def models(sources)
+      models = model_classes
+      if sources.try(:any?)
+        selected_models = models.select { |c| sources.include?(c.source[:code]) }
+
+        # If the given sources do not match any models, we'll search over them
+        # all. This prevents us from querying EVERY index in our DB, which is
+        # undesirable. It would be better if we didn't send a query to ES in this
+        # case.
+        models = selected_models if selected_models.any?
+      end
+      models
+    end
+
+    def index_types(sources = nil)
+      models(sources).map(&:index_type)
     end
   end
 end
