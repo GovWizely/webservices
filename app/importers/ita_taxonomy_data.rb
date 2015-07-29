@@ -37,6 +37,7 @@ class ItaTaxonomyData
     entries = @industry_terms + @world_region_terms + @country_terms + @initiative_terms
     entries.each do |entry|
       entry.delete(:parent_ids)
+      entry[:id] = Utils.generate_id(entry, %i(id name taxonomy))
     end
     entries
   end
