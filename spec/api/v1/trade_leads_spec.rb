@@ -9,7 +9,7 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::Uk.recreate_index
     TradeLead::FbopenImporter::PatchData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/presol_source").import
     TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-    TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+    TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
     TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
     TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
   end
@@ -18,14 +18,14 @@ describe 'Trade Leads API V1', type: :request do
 
   describe 'GET /trade_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get '/trade_leads/search', {} }
+      before { get '/trade_leads/search' }
       subject { response }
 
       it_behaves_like 'a successful search request'
 
       it 'returns trade leads sorted by published_date:desc, country: asc' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(16)
+        expect(json_response['total']).to eq(22)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
@@ -41,7 +41,7 @@ describe 'Trade Leads API V1', type: :request do
 
       it 'returns up to the specified size' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(16)
+        expect(json_response['total']).to eq(22)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
@@ -50,7 +50,7 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when countries is populated' do
-      let(:params) { { countries: 'GB' } }
+      let(:params) { { countries: 'CA' } }
       before { get '/trade_leads/search', params }
       subject { response }
 
@@ -58,13 +58,15 @@ describe 'Trade Leads API V1', type: :request do
 
       it 'returns trade leads sorted by id in descending order' do
         json_response = JSON.parse(response.body)
-        expect(json_response['total']).to eq(3)
+        expect(json_response['total']).to eq(5)
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[4])
-        expect(results[1]).to eq(expected_results[5])
-        expect(results[2]).to eq(expected_results[6])
+        expect(results[0]).to eq(expected_results[12])
+        expect(results[1]).to eq(expected_results[13])
+        expect(results[2]).to eq(expected_results[14])
+        expect(results[3]).to eq(expected_results[15])
+        expect(results[4]).to eq(expected_results[17])
       end
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
@@ -82,7 +84,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results).to include *expected_results.values_at(3)
+        expect(results).to include *expected_results.values_at(12)
       end
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
@@ -100,7 +102,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[3])
+        expect(results[0]).to eq(expected_results[12])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -117,7 +119,7 @@ describe 'Trade Leads API V1', type: :request do
         expect(json_response['offset']).to eq(0)
 
         results = json_response['results']
-        expect(results[0]).to eq(expected_results[10])
+        expect(results[0]).to eq(expected_results[16])
       end
     end
   end

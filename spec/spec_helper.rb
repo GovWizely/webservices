@@ -72,4 +72,6 @@ RSpec.configure do |config|
   config.order = 'random'
 
   config.include Devise::TestHelpers, type: :controller
+
+  config.filter_run_excluding skip: true
 end

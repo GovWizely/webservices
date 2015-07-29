@@ -1,61 +1,75 @@
-require 'open-uri'
 require 'csv'
 
 module TradeLead
   class UkData
     include Importer
 
-    # Could implement some params here to fetch historical data #
-    ENDPOINT = 'https://online.contractsfinder.businesslink.gov.uk/PublicFileDownloadHandler.ashx?fileName=notices.csv&recordType=Notices&fileContent=Recent'
-
-    COLUMN_HASH = {
-      noticeid:         :id,
-      referencenumber:  :reference_number,
-      datepublished:    :publish_date,
-      valuemin:         :min_contract_value,
-      valuemax:         :max_contract_value,
-      status:           :status,
-      url:              :url,
-      org_name:         :procurement_organization,
-      org_contactemail: :contact,
-      title:            :title,
-      description:      :description,
-      noticetype:       :notice_type,
-      region:           :specific_location,
-      classification:   :industry,
-    }
-
-    def initialize(resource = ENDPOINT)
+    def initialize(resource = nil)
       @resource = resource
     end
 
     def import
-      file = open @resource
-      file.readline # HACK: to remove first line from csv
-      rows = CSV.parse(file, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
-      entries = []
-      rows.each do |row|
-        next if %w(archived retracted).include? row[:status].downcase
-        entries << process_row(row.to_h)
-      end
-      TradeLead::Uk.index(entries)
+      xml_body = @resource ? File.open(@resource).read : fetch_xml.body
+
+      # The source XML file states that its content in encoded in utf-16, but
+      # it appears to actually be encoded in utf-8. Go figure. Despite telling
+      # Nokogiri to treat the document as utf-8, I continued to get errors
+      # related to it thinking that the document was encoded in utf-16. A more
+      # direct way to make Nokogiri think the docuemnt is utf-8 is to edit
+      # the actual content as I do here.
+      xml_body['encoding="utf-16"'] = 'encoding="utf-8"'
+
+      leads = Nokogiri::XML(xml_body).xpath('//FullNotice').map do |info|
+        process_lead_info(info)
+      end.compact
+
+      model_class.index(leads)
     end
 
     private
 
-    def process_row(row)
-      entry = remap_keys(COLUMN_HASH, row)
-      entry[:publish_date] = parse_date(entry[:publish_date])
-      %i(description title procurement_organization contact).each do |key|
-        entry[key] = sanitize(entry[key])
-      end
-      entry[:country] = 'GB'
-      entry[:source] = TradeLead::Uk.source[:code]
-      entry
+    # :nocov:
+    def fetch_xml
+      base = 'https://www.contractsfinder.service.gov.uk'
+      agent = Mechanize.new
+      # You have to view the results you wish to download first before initiating the CSV download
+      agent.get("#{base}/Search/Results",         IncludeClosed:  'False',
+                                                  IncludeAwarded: 'False',
+                                                  LocationType:   'AllLocations',
+                                                  sort:           'PublicationDescending')
+      agent.get("#{base}/Search/GetXmlFile")
     end
+    # :nocov:
 
-    def sanitize(entry_key)
-      Nokogiri::HTML.fragment(entry_key).inner_text.squish if entry_key.present?
+    XPATHS = {
+      id:                       './Id',
+      reference_number:         './Notice/Identifier',
+      publish_date:             './Notice/PublishedDate',
+      min_contract_value:       './Notice/ValueLow',
+      max_contract_value:       './Notice/ValueHigh',
+      status:                   './Notice/Status',
+      url:                      './Notice/ContactDetails/WebAddress',
+      procurement_organization: './Notice/OrganisationName',
+      contact:                  './Notice/ContactDetails/Email',
+      title:                    './Notice/Title',
+      description:              './Notice/Description',
+      notice_type:              './Notice/Type',
+      specific_location:        './Notice/Region',
+      industry:                 './Notice/Sector',
+    }
+
+    def process_lead_info(lead_info)
+      lead = extract_fields(lead_info, XPATHS)
+
+      if %w(closed awarded).include?(lead[:status].downcase)
+        fail "Should not be any docs with status #{lead[:status]}"
+      end
+
+      lead[:publish_date] = lead[:publish_date] ? parse_date(lead[:publish_date]) : nil
+      lead[:source] = model_class.source[:code]
+      lead[:country] = 'GB'
+
+      sanitize_entry(lead)
     end
   end
 end
