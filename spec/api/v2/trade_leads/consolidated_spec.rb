@@ -108,7 +108,6 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Australia results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Fbopen results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::State results that match industries "Health Care Medical"'
-      it_behaves_like 'it contains all TradeLead::Uk results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Canada results that match industries "Health Care Medical"'
     end
     it_behaves_like "an empty result when an industries search doesn't match any documents"

@@ -185,7 +185,7 @@ shared_context 'TradeLead::Uk data' do
   before(:all) do
     TradeLead::Uk.recreate_index
     TradeLead::UkData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/uk/uk_trade_leads.csv").import
+      "#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Uk] = JSON.parse(open(
@@ -195,25 +195,13 @@ end
 
 shared_examples 'it contains all TradeLead::Uk results' do
   let(:source) { TradeLead::Uk }
-  let(:expected) { [0, 1, 2] }
+  let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7, 8] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeLead::Uk results that match "equipment"' do
   let(:source) { TradeLead::Uk }
-  let(:expected) { [] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Uk results that match countries "kp"' do
-  let(:source) { TradeLead::Uk }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Uk results that match industries "Health Care Medical"' do
-  let(:source) { TradeLead::Uk }
-  let(:expected) { [] }
+  let(:expected) { [0, 7] }
   it_behaves_like 'it contains all expected results of source'
 end
 

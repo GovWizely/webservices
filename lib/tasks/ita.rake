@@ -45,6 +45,6 @@ namespace :ita do
   end
 
   def disabled
-    [TradeLead::UkData, TradeEvent::EximData]
+    [TradeEvent::EximData]
   end
 end

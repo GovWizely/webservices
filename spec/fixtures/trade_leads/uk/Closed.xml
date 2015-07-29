@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="utf-16"?>
+<ArrayOfFullNotice xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <FullNotice>
+    <Id>8a0c93ea-874a-4c71-99c5-007b40cb8d1d</Id>
+    <Notice>
+      <Id>8a0c93ea-874a-4c71-99c5-007b40cb8d1d</Id>
+      <ContactDetails>
+        <Name>Andy Kemp</Name>
+        <Email>andy.kemp@bl.uk</Email>
+        <Address1>British Library, Boston Spa</Address1>
+        <Town>Wetherby</Town>
+        <Postcode>LS23 7BQ</Postcode>
+        <Country>England</Country>
+        <WebAddress>www.bl.bravosolution.co.uk</WebAddress>
+      </ContactDetails>
+      <Identifier>OPS9405</Identifier>
+      <Title>Cleaning and Waste Management</Title>
+      <Description>The British Library is seeking a reputable company, with a proven track record in delivering Cleaning &amp; Waste Management Services to a similar organisation with a complex infrastructure and a prestigious public building. 
+
+It is anticipated that all services will be underpinned by robust policies and procedures which will at all times reflect industry best practice within an environment of continuous improvement. The selected contractor’s innovative approach will ensure good quality services delivered to the Library’s customers and drive efficiencies resulting in improved value for money to the Library. The selected contractor’s partnership approach and effective communications will also ensure that there are good relations with all parties and that synergies are maximised with other Service Providers.
+ 
+The British Library’s key operational objectives of this tender are to: -
+ 
+• Appoint a single National Cleaning &amp; Waste Management Service provider for all premises. 
+
+• Provide a professional service, which supports The Library in the delivery of its core operational and customer facing activities.
+ 
+•Achieve an improved and innovative Cleaning &amp; Waste Management service for The Library, through performance monitoring and an incentivised contractual arrangement.
+ 
+•Development of an in-house ‘Intelligent Customer Function’ to maintain the new arrangement, review and utilise Management Information and act as the main interface with the provider.
+ 
+Services to be provided, either directly or via sub-contractor, in the Cleaning &amp; Waste Management Contract are:
+ 
+• General Management
+ • Cleaning &amp; Housekeeping
+ • Washroom &amp; Hygiene services
+ • Window Cleaning
+ • External Cleaning
+ • Specialist Cleaning
+ • Pest Control
+ • Waste Management &amp; Recycling
+ • Porterage (Boston Spa Only)
+ • Electronic Monitoring System
+
+The British Library’s policy is to pay the Living Wage Foundation UK Living Wage and London Living Wage for all front line staff engaged in the Cleaning &amp; Waste Management contract from the contract commencement date. The payment of the UK Living Wage and London Living Wage shall in accordance with the annual rates determined by the Living Wage Foundation http://www.livingwage.org.uk/calculation.</Description>
+      <CPVDescription>cleaning services, accommodation, building and window cleaning services, accommodation cleaning services, building-cleaning services, window-cleaning services, blast-cleaning services for tubular structures, tank and reservoir cleaning services, tank-cleaning services, reservoir cleaning services, car park cleaning services, furnace and chimney cleaning services, cleaning services of telephone equipment, cleaning services of transport equipment, bin-cleaning services, office, school and office equipment cleaning services, cleaning services of office equipment, office cleaning services, school cleaning services</CPVDescription>
+      <PublishedDate>2015-07-16T15:04:41.3492184+00:00</PublishedDate>
+      <DeadlineDate>2015-08-21T00:00:00</DeadlineDate>
+      <ValueLow>9000000.0</ValueLow>
+      <ValueHigh xsi:nil="true" />
+      <Region>Any region</Region>
+      <Nationwide xsi:nil="true" />
+      <Location>
+        <Lat>0</Lat>
+        <Lon>0</Lon>
+      </Location>
+      <Start>2016-04-01T00:00:00</Start>
+      <End>2021-03-31T00:00:00</End>
+      <Type>Contract</Type>
+      <CpvCodes>
+        <string>90910000</string>
+      </CpvCodes>
+      <Status>Closed</Status>
+      <IsSuitableForSme>true</IsSuitableForSme>
+      <IsSuitableForVco>false</IsSuitableForVco>
+      <LastNotifiableUpdate>2015-07-16T15:04:48.2894627+00:00</LastNotifiableUpdate>
+      <OrganisationName>British Library</OrganisationName>
+      <Sector>Construction and Real Estate, Environment and Sanitation</Sector>
+      <OjeuContractType>Services</OjeuContractType>
+      <IsFrameworkAgreement>false</IsFrameworkAgreement>
+      <IsExtensionPossible>false</IsExtensionPossible>
+    </Notice>
+    <CreatedDate>0001-01-01T00:00:00</CreatedDate>
+    <LastUpdatedDate>0001-01-01T00:00:00</LastUpdatedDate>
+    <IsPublished>true</IsPublished>
+    <IsPreAwarded>false</IsPreAwarded>
+    <Organisation>
+      <Name>British Library</Name>
+    </Organisation>
+    <AdditionalDetails />
+    <WithdrawnDate xsi:nil="true" />
+    <CpvCodes>
+      <CpvCode>
+        <Code>90910000</Code>
+        <Description>Cleaning services</Description>
+        <ParentCode>90900000</ParentCode>
+        <HasChildren>false</HasChildren>
+      </CpvCode>
+    </CpvCodes>
+    <PublishedVersion>
+      <PublishedNoticeVersion>
+        <ChangedByUser>andy.kemp@bl.uk</ChangedByUser>
+        <DateChanged>2015-07-16T15:04:41.38</DateChanged>
+        <PublishedNoticeId>8a0c93ea-874a-4c71-99c5-007b40cb8d1d</PublishedNoticeId>
+        <Reason>Published</Reason>
+        <VersionNumber>1</VersionNumber>
+      </PublishedNoticeVersion>
+      <PublishedNoticeVersion>
+        <ChangedByUser>andy.kemp@bl.uk</ChangedByUser>
+        <DateChanged>2015-07-16T15:04:47.697</DateChanged>
+        <PublishedNoticeId>8a0c93ea-874a-4c71-99c5-007b40cb8d1d</PublishedNoticeId>
+        <Reason>publish</Reason>
+        <VersionNumber>2</VersionNumber>
+      </PublishedNoticeVersion>
+      <PublishedNoticeVersion>
+        <ChangedByUser>andy.kemp@bl.uk</ChangedByUser>
+        <DateChanged>2015-07-16T15:04:48.367</DateChanged>
+        <PublishedNoticeId>8a0c93ea-874a-4c71-99c5-007b40cb8d1d</PublishedNoticeId>
+        <Reason>publish</Reason>
+        <VersionNumber>3</VersionNumber>
+      </PublishedNoticeVersion>
+    </PublishedVersion>
+    <NumberOfViews>0</NumberOfViews>
+  </FullNotice>
+</ArrayOfFullNotice>
