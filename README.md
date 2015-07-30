@@ -105,6 +105,10 @@ to use it please do:
 
 If you use [RVM](https://rvm.io/), you should follow their [specific instructions](http://mailcatcher.me/) (search for "RVM") on how to install the gem.
 
+### Deployment
+
+If you want to run this app on AWS Opsworks, you may find [this guide](https://github.com/GovWizely/webservices/wiki/How-to:-set-up-a-fully-decoupled-AWS-Stack) helpful.
+
 ### Code Status
 
 * [![Build Status](https://travis-ci.org/GovWizely/webservices.svg?branch=master)](https://travis-ci.org/GovWizely/webservices/)
