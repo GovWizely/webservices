@@ -14,6 +14,7 @@ module Searchable
   included do
     class << self
       attr_accessor :model_classes
+      attr_accessor :fetch_all_sort_by
     end
 
     # Defaults to itself. This makes sense when the model is also Indexable,
@@ -69,21 +70,18 @@ module Searchable
     end
 
     def fetch_all
-      search_options = { scroll: '5m', search_type: 'scan', index: index_names, type: index_types }
+      search_options = { scroll: '5m', index: index_names, type: index_types }
+      search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
+
       response = ES.client.search(search_options)
+      results = { offset: 0,
+                  hits:   response['hits'].deep_symbolize_keys[:hits],
+                  total:  response['hits']['total'] }
 
-      results = { offset: 0 }
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
-
-        break if response['hits']['hits'].empty?
-
         batch = response['hits'].deep_symbolize_keys
-
-        if results[:hits].present?
-          results[:hits].concat(batch[:hits])
-        else
-          results.merge!(batch)
-        end
+        break if batch[:hits].empty?
+        results[:hits].concat(batch[:hits])
       end
 
       results
