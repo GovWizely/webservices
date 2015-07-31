@@ -8,6 +8,7 @@ describe Searchable do
     before do
       class MockModel
         include Searchable
+        self.fetch_all_sort_by = 'foo'
         def self.index_names(_source = nil)
           ['test_index_name']
         end
@@ -19,10 +20,9 @@ describe Searchable do
       # I'm doing this without the use of a class which includes Indexable
       # in order to only use Searchable in this spec.
       ES.client.indices.delete(index: index_name) if ES.client.indices.exists(index: index_name)
+
       1_000.times { |i| ES.client.index(index: index_name, type: index_type, body: { foo: "Bar #{i}" }) }
-
       ES.client.index(index: index_name, type: 'metadata', body: { time: Time.now })
-
       ES.client.indices.refresh(index: index_name)
     end
 
@@ -32,9 +32,16 @@ describe Searchable do
 
     it 'returns the correct number of documents' do
       expect(subject).to be_a(Hash)
-      expect(subject[:hits].count).to eq(1_000)
-      expect(subject[:hits].first[:_source]).to be_a(Hash)
-      expect(subject[:hits].find { |h| h.key?(:time) }).to be_nil
+
+      hits = subject[:hits]
+
+      expect(hits.count).to eq(1_000)
+      expect(hits.first[:_source]).to be_a(Hash)
+
+      expect(hits.find { |h| h.key?(:time) }).to be_nil
+
+      # Sorted correctly?
+      expect(hits.first(10)).to eq hits.first(10).sort { |x, y| x[:foo] <=> y[:foo] }
     end
   end
 end
