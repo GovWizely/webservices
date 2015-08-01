@@ -18,19 +18,24 @@ shared_context 'all Envirotech v2 fixture data' do
   include_context 'Envirotech::ProviderSolution data'
 end
 
-shared_context 'Envirotech::Solution data' do
-  before do
-    Envirotech::Solution.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
-    allow_any_instance_of(Envirotech::SolutionData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::SolutionData.new(fixtures_file).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json").read)
-
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+def mock_importer(klass, fixture_file)
+  importer = klass.new(fixture_file)
+  importer.define_singleton_method(:fetch_data) do
+    JSON.parse File.open(fixture_file).read
   end
+  importer
+end
+
+shared_context 'Envirotech::Solution data' do
+  Envirotech::Solution.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
+  mock_importer(Envirotech::SolutionData, fixtures_file).import
+
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json").read)
+
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::Solution results' do
@@ -64,18 +69,15 @@ shared_examples 'it contains all Envirotech::Solution results that match source_
 end
 
 shared_context 'Envirotech::Issue data' do
-  before do
-    Envirotech::Issue.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/issue_articles/issue_articles.json"
-    allow_any_instance_of(Envirotech::IssueData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::IssueData.new(fixtures_file).import
+  Envirotech::Issue.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/issue_articles/issue_articles.json"
+  mock_importer(Envirotech::IssueData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
 
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::Issue results' do
@@ -103,18 +105,15 @@ shared_examples 'it contains all Envirotech::Issue results that match source_id 
 end
 
 shared_context 'Envirotech::Regulation data' do
-  before do
-    Envirotech::Regulation.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
-    allow_any_instance_of(Envirotech::RegulationData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::RegulationData.new(fixtures_file).import
+  Envirotech::Regulation.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
+  mock_importer(Envirotech::RegulationData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
 
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::Regulation results' do
@@ -142,18 +141,15 @@ shared_examples 'it contains all Envirotech::Regulation results that match sourc
 end
 
 shared_context 'Envirotech::Provider data' do
-  before do
-    Envirotech::Provider.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json"
-    allow_any_instance_of(Envirotech::ProviderData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::ProviderData.new(fixtures_file).import
+  Envirotech::Provider.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json"
+  mock_importer(Envirotech::ProviderData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
 
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::Provider results' do
@@ -175,18 +171,15 @@ shared_examples 'it contains all Envirotech::Provider results that match source_
 end
 
 shared_context 'Envirotech::AnalysisLink data' do
-  before do
-    Envirotech::AnalysisLink.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/analysis_link_articles/analysis_link_articles.json"
-    allow_any_instance_of(Envirotech::AnalysisLinkData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::AnalysisLinkData.new(fixtures_file).import
+  Envirotech::AnalysisLink.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/analysis_link_articles/analysis_link_articles.json"
+  mock_importer(Envirotech::AnalysisLinkData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
 
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::AnalysisLink results' do
@@ -214,18 +207,15 @@ shared_examples 'it contains all Envirotech::AnalysisLink results that match iss
 end
 
 shared_context 'Envirotech::BackgroundLink data' do
-  before do
-    Envirotech::BackgroundLink.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json"
-    allow_any_instance_of(Envirotech::BackgroundLinkData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::BackgroundLinkData.new(fixtures_file).import
+  Envirotech::BackgroundLink.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json"
+  mock_importer(Envirotech::BackgroundLinkData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
 
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
 end
 
 shared_examples 'it contains all Envirotech::BackgroundLink results' do
@@ -253,16 +243,13 @@ shared_examples 'it contains all Envirotech::BackgroundLink results that match i
 end
 
 shared_context 'Envirotech::ProviderSolution data' do
-  before do
-    Envirotech::ProviderSolution.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solution_articles/provider_solution_articles.json"
-    allow_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data).and_return(JSON.parse File.open(fixtures_file).read)
-    Envirotech::ProviderSolutionData.new(fixtures_file).import
+  Envirotech::ProviderSolution.recreate_index
+  fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solution_articles/provider_solution_articles.json"
+  mock_importer(Envirotech::ProviderSolutionData, fixtures_file).import
 
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
-  end
+  @all_possible_full_results ||= {}
+  @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
+    "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
 end
 
 shared_examples 'it contains all Envirotech::ProviderSolution results' do
