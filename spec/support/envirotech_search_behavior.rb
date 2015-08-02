@@ -31,11 +31,14 @@ shared_context 'Envirotech::Solution data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
   mock_importer(Envirotech::SolutionData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
+
 end
 
 shared_examples 'it contains all Envirotech::Solution results' do
@@ -73,11 +76,13 @@ shared_context 'Envirotech::Issue data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/issue_articles/issue_articles.json"
   mock_importer(Envirotech::IssueData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
 end
 
 shared_examples 'it contains all Envirotech::Issue results' do
@@ -109,11 +114,13 @@ shared_context 'Envirotech::Regulation data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
   mock_importer(Envirotech::RegulationData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
 end
 
 shared_examples 'it contains all Envirotech::Regulation results' do
@@ -145,11 +152,13 @@ shared_context 'Envirotech::Provider data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json"
   mock_importer(Envirotech::ProviderData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
 end
 
 shared_examples 'it contains all Envirotech::Provider results' do
@@ -175,11 +184,13 @@ shared_context 'Envirotech::AnalysisLink data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/analysis_link_articles/analysis_link_articles.json"
   mock_importer(Envirotech::AnalysisLinkData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
 end
 
 shared_examples 'it contains all Envirotech::AnalysisLink results' do
@@ -211,11 +222,13 @@ shared_context 'Envirotech::BackgroundLink data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json"
   mock_importer(Envirotech::BackgroundLinkData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
 
-  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-11')) }
+    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
+  end
 end
 
 shared_examples 'it contains all Envirotech::BackgroundLink results' do
@@ -247,9 +260,11 @@ shared_context 'Envirotech::ProviderSolution data' do
   fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solution_articles/provider_solution_articles.json"
   mock_importer(Envirotech::ProviderSolutionData, fixtures_file).import
 
-  @all_possible_full_results ||= {}
-  @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
-    "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
+  before do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
+      "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
+  end
 end
 
 shared_examples 'it contains all Envirotech::ProviderSolution results' do
