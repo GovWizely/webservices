@@ -20,6 +20,10 @@ class ApiController < ActionController::Base
 
   respond_to :json, :csv, :tsv
 
+  def query_info_fields
+    [:total, :offset, :sources_used]
+  end
+
   def search
     s = params.permit(search_params).except(:format)
     s.merge!(api_version: api_version)
@@ -28,6 +32,7 @@ class ApiController < ActionController::Base
       format.csv { render_sv('csv') }
       format.tsv { render_sv('tsv') }
       format.json do
+        @query_info_fields = query_info_fields
         @search =
           if s[:size].to_i == -1
             search_class.fetch_all

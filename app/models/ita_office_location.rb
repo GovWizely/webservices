@@ -45,4 +45,9 @@ class ItaOfficeLocation
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'ITA Office Locations',
+    code:      'ITAOL',
+  }
 end

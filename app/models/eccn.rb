@@ -36,4 +36,9 @@ class Eccn
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Eccn',
+    code:      'ECCN',
+  }
 end

@@ -38,4 +38,9 @@ class CountryCommercialGuide
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Country Commercial Guide',
+    code:      'CCG',
+  }
 end

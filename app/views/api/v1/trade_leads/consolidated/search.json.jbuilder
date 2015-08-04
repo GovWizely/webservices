@@ -21,7 +21,7 @@ field_lists = {
   mca:       [:country, :publish_date, :url, :categories, :title, :description, :funding_source, :source],
 }
 
-json.call(@search, :total, :offset)
+json.partial! 'shared/queryinfo'
 json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys

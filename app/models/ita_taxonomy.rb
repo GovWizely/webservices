@@ -27,4 +27,9 @@ class ItaTaxonomy
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'ITA Taxonomy',
+    code:      'ITAT',
+  }
 end

@@ -1,4 +1,4 @@
-json.call(@search, :total, :offset)
+json.partial! 'shared/queryinfo'
 json.results do
   json.partial! 'entries', entries: @search[:hits]
 end

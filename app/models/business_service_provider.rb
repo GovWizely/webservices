@@ -38,4 +38,9 @@ class BusinessServiceProvider
       },
     },
   }.freeze
+
+  self.source = {
+    full_name: 'Parature FAQ',
+    code:      'PARATURE',
+  }
 end
