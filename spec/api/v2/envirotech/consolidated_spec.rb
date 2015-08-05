@@ -148,9 +148,9 @@ describe 'Consolidated Envirotech API V2', type: :request do
     end
   end
 
-  describe 'GET /envirotech/analysis_links/search.json' do
+  describe 'GET /v2/envirotech/analysis_links/search.json' do
     let(:params) { { size: 100 } }
-    before { get '/envirotech/analysis_links/search', params }
+    before { get '/v2/envirotech/analysis_links/search', params }
     subject { response }
 
     context 'when search parameters are empty' do
@@ -197,9 +197,9 @@ describe 'Consolidated Envirotech API V2', type: :request do
     end
   end
 
-  describe 'GET /envirotech/background_links/search.json' do
+  describe 'GET /v2/envirotech/background_links/search.json' do
     let(:params) { { size: 100 } }
-    before { get '/envirotech/background_links/search', params }
+    before { get '/v2/envirotech/background_links/search', params }
     subject { response }
 
     context 'when search parameters are empty' do
@@ -246,9 +246,9 @@ describe 'Consolidated Envirotech API V2', type: :request do
     end
   end
 
-  describe 'GET /envirotech/provider_solutions/search.json' do
+  describe 'GET /v2/envirotech/provider_solutions/search.json' do
     let(:params) { { size: 100 } }
-    before { get '/envirotech/provider_solutions/search', params }
+    before { get '/v2/envirotech/provider_solutions/search', params }
     subject { response }
 
     context 'when search parameters are empty' do
