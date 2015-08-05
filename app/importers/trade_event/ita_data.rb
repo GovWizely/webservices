@@ -85,6 +85,7 @@ module TradeEvent
     def process_required_fields(event_hash)
       event_hash[:start_date] = process_date(event_hash[:start_date]) rescue nil
       event_hash[:end_date] = process_date(event_hash[:end_date]) rescue nil
+      event_hash[:description] = ActiveSupport::Inflector.transliterate(event_hash[:description], replacement = "")
     end
 
     def process_date(date_string)
