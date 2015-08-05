@@ -6,34 +6,20 @@ module ScreeningList
 
       # name variants
       names         = %w( name_idx name_rev alt_idx alt_rev )
-      names_kw      = %w( name_idx.keyword alt_idx.keyword name_rev.keyword
-                          alt_rev.keyword )
-
-      # name variants with 'common' words stripped
-      names_wc      = %w( name_with_common alt_with_common name_rev_with_common
-                          rev_alt_name_with_common )
-      names_wc_kw   = %w( name_with_common.keyword alt_with_common.keyword
-                          name_rev_with_common.keyword rev_alt_name_with_common.keyword)
-
-      # search all names without whitespace since common words aren't detected in
-      # queries with no ws
-      name_no_wss    = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
-                           name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
+      names_kw      = %w( name_idx.keyword alt_idx.keyword name_rev.keyword alt_rev.keyword )
+      name_no_wss   = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
+                          name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
 
       @name = @name.gsub(/[[:punct:]]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
+      @name = @name.split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
 
-      if (@name.downcase.split & common_words).empty?
-        single_token = names_kw + name_no_wss
-        all_fields   = single_token + names
-      else
-        single_token = names_wc_kw + name_no_wss
-        all_fields   = single_token + names_wc
-      end
+      single_token = names_kw + name_no_wss
+      all_fields   = single_token + names
 
       score_hash = {
-        score_100: { fields: single_token, fuzziness: 0, weight: 5 },
-        score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
+        score_100: { fields: single_token, fuzziness: 0, weight: 10 },
+        # score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
         score_90:  { fields: single_token, fuzziness: 1, weight: 5 },
         score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
         score_80:  { fields: single_token, fuzziness: 2, weight: 5 },

@@ -56,8 +56,6 @@
     :number: CKLB CN BJ
     :type: SWIFT/BIC
   :name_idx: BANK OF KUNLUN
-  :name_with_common: BANK OF KUNLUN CO LTD
-  :name_rev_with_common: LTD CO KUNLUN OF BANK
   :name_no_ws_with_common: BANKOFKUNLUNCOLTD
   :name_no_ws_rev_with_common: LTDCOKUNLUNOFBANK
   :name_rev: KUNLUN OF BANK
@@ -66,12 +64,7 @@
   :alt_idx:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK
-  :alt_with_common:
-  - KARAMAY URBAN CREDIT COOPERATIVES
-  - KARAMAY CITY COMMERCIAL BANK CO LTD
-  :alt_rev_with_common:
-  - COOPERATIVES CREDIT URBAN KARAMAY
-  - LTD CO BANK COMMERCIAL CITY KARAMAY
+  :alt_no_ws_with_common:
   :alt_no_ws_with_common:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANKCOLTD

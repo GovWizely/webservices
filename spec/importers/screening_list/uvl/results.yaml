@@ -14,8 +14,6 @@
     :country: CN
   :alt_names: []
   :name_idx: China National Plant ImportExport
-  :name_with_common: China National Plant ImportExport Co
-  :name_rev_with_common: Co ImportExport Plant National China
   :name_no_ws_with_common: ChinaNationalPlantImportExportCo
   :name_no_ws_rev_with_common: CoImportExportPlantNationalChina
   :name_rev: ImportExport Plant National China
@@ -39,8 +37,6 @@
     :country: HK
   :alt_names: []
   :name_idx: Brilliance Technology
-  :name_with_common: Brilliance Technology Ltd
-  :name_rev_with_common: Ltd Technology Brilliance
   :name_no_ws_with_common: BrillianceTechnologyLtd
   :name_no_ws_rev_with_common: LtdTechnologyBrilliance
   :name_rev: Technology Brilliance
@@ -59,8 +55,6 @@
     :country: HK
   :alt_names: []
   :name_idx: Dynasense Photonics
-  :name_with_common: Dynasense Photonics Co Limited
-  :name_rev_with_common: Limited Co Photonics Dynasense
   :name_no_ws_with_common: DynasensePhotonicsCoLimited
   :name_no_ws_rev_with_common: LimitedCoPhotonicsDynasense
   :name_rev: Photonics Dynasense
@@ -86,8 +80,6 @@
     :country: HK
   :alt_names: []
   :name_idx: HiShine Technology HK
-  :name_with_common: HiShine Technology HK Limited
-  :name_rev_with_common: Limited HK Technology HiShine
   :name_no_ws_with_common: HiShineTechnologyHKLimited
   :name_no_ws_rev_with_common: LimitedHKTechnologyHiShine
   :name_rev: HK Technology HiShine
@@ -106,8 +98,6 @@
     :country: HK
   :alt_names: []
   :name_idx: Hong Kong Haimao InfoTec Development
-  :name_with_common: Hong Kong Haimao InfoTec Development Co Ltd
-  :name_rev_with_common: Ltd Co Development InfoTec Haimao Kong Hong
   :name_no_ws_with_common: HongKongHaimaoInfoTecDevelopmentCoLtd
   :name_no_ws_rev_with_common: LtdCoDevelopmentInfoTecHaimaoKongHong
   :name_rev: Development InfoTec Haimao Kong Hong
@@ -126,8 +116,6 @@
     :country: HK
   :alt_names: []
   :name_idx: Lianqi HK Electronics
-  :name_with_common: Lianqi HK Electronics Co Ltd
-  :name_rev_with_common: Ltd Co Electronics HK Lianqi
   :name_no_ws_with_common: LianqiHKElectronicsCoLtd
   :name_no_ws_rev_with_common: LtdCoElectronicsHKLianqi
   :name_rev: Electronics HK Lianqi
@@ -146,8 +134,6 @@
     :country: HK
   :alt_names: []
   :name_idx: Lion Chip Electronics
-  :name_with_common: Lion Chip Electronics Ltd
-  :name_rev_with_common: Ltd Electronics Chip Lion
   :name_no_ws_with_common: LionChipElectronicsLtd
   :name_no_ws_rev_with_common: LtdElectronicsChipLion
   :name_rev: Electronics Chip Lion

@@ -35,8 +35,6 @@
     :address: '200 Cantonment Road, #15-00 Southpoint'
   :ids: []
   :name_idx: KUO OIL S PTE
-  :name_with_common: KUO OIL S PTE LIMITED
-  :name_rev_with_common: LIMITED PTE S OIL KUO
   :name_no_ws_with_common: KUOOILSPTELIMITED
   :name_no_ws_rev_with_common: LIMITEDPTESOILKUO
   :name_rev: PTE S OIL KUO
@@ -81,8 +79,6 @@
     :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port, Near Mina Khalid Road, Al Khan Area
   :ids: []
   :name_idx: FAL OIL
-  :name_with_common: FAL OIL COMPANY LTD
-  :name_rev_with_common: LTD COMPANY OIL FAL
   :name_no_ws_with_common: FALOILCOMPANYLTD
   :name_no_ws_rev_with_common: LTDCOMPANYOILFAL
   :name_rev: OIL FAL

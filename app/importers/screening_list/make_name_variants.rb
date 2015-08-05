@@ -1,17 +1,5 @@
 module ScreeningList
   module MakeNameVariants
-    ##
-    # index 2 forms of each name for both "name" and "alt_names" (if applicable),
-    # one with punctuation and "STOPWORDS" removed and
-    # one the above plus "common" words removed.
-    #
-    # then store additional modified versions of the two in the following ways:
-    #
-    #     1) reversed
-    #     2) with white space removed
-    #     3) reversed with white space removed
-    #
-
     STOPWORDS    = %w( and the los )
     COMMON_WORDS = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
 
@@ -40,10 +28,8 @@ module ScreeningList
     end
 
     def make_names_with_common(doc, prefix)
-      doc[:"#{prefix}_with_common"]           = doc[:"#{prefix}_idx"]
-      doc[:"#{prefix}_rev_with_common"]       = name_rev(doc[:"#{prefix}_with_common"])
-      doc[:"#{prefix}_no_ws_with_common"]     = strip(doc[:"#{prefix}_with_common"], 'whitespace')
-      doc[:"#{prefix}_no_ws_rev_with_common"] = strip(doc[:"#{prefix}_rev_with_common"], 'whitespace')
+      doc[:"#{prefix}_no_ws_with_common"]     = strip(doc[:"#{prefix}_idx"], 'whitespace')
+      doc[:"#{prefix}_no_ws_rev_with_common"] = strip(name_rev(doc[:"#{prefix}_idx"]), 'whitespace')
       doc[:"#{prefix}_idx"]                   = filter_words(doc[:"#{prefix}_idx"], COMMON_WORDS)
     end
 

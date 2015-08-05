@@ -48,15 +48,15 @@ module ScreeningList
           end
 
           if @address
-            generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address, operator = :and)
+            generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
           end
         end
       end if [@q, @name, @distance, @address].any?
     end
 
-    def generate_fuzziness_queries(json, fields, value, operator)
+    def generate_fuzziness_queries(json, fields, value)
       json.set! 'should' do
-        json.child! { generate_multi_match(json, fields, value, operator) }
+        json.child! { generate_multi_match(json, fields, value) }
         json.child! do
           json.multi_match do
             json.fields fields
