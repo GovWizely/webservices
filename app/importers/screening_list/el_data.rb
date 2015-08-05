@@ -67,6 +67,7 @@ module ScreeningList
       doc[:title] = rows.map do |row|
         strip_nonascii(row[:title])
       end.compact.uniq
+      doc[:title] = doc[:title].join('; ').presence || nil
 
       doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 
