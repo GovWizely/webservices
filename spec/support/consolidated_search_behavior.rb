@@ -14,8 +14,29 @@ shared_context 'full results from response' do
   end
 end
 
+shared_context 'full results from response without source' do
+  let(:full_results) do
+    JSON.parse(response.body)['results'].map do |r|
+      r.delete('score')
+      r
+    end
+  end
+  let(:got) do
+    full_results.map do |f|
+      @all_possible_full_results[source].index(f)
+    end
+  end
+end
+
 shared_examples 'it contains all expected results of source' do
   include_context 'full results from response'
+  it 'contains them all' do
+    expect(got).to match_array(expected)
+  end
+end
+
+shared_examples 'it contains all expected results without source' do
+  include_context 'full results from response without source'
   it 'contains them all' do
     expect(got).to match_array(expected)
   end
