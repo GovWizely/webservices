@@ -1,7 +1,10 @@
+json.partial! 'api/v1/screening_lists/addresses',
+              addresses: entry[:_source][:addresses]
 json.call(entry[:_source],
           :federal_register_notice,
           :name,
           :programs,
+          :remarks,
          )
 json.source entry[:_source][:source][:full_name]
 json.call(entry[:_source],
