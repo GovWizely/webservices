@@ -36,12 +36,20 @@ module Indexable
         body:  { settings: settings, mappings: mappings })
     end
 
-    def update_metadata(version)
+    def update_metadata(version, time = DateTime.now.utc)
+      _update_metadata(version: version, time: time, import_time: time)
+    end
+
+    def touch_metadata(import_time = DateTime.now.utc)
+      _update_metadata(stored_metadata.merge(import_time: import_time))
+    end
+
+    def _update_metadata(body)
       ES.client.index(
         index: index_name,
         type:  'metadata',
         id:    0,
-        body:  { version: version, time: DateTime.now.utc })
+        body:  body)
     end
 
     def stored_metadata

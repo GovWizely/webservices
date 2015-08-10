@@ -118,6 +118,7 @@ module Searchable
         {
           source:      model.source[:full_name] || model.source[:code],
           update_time: model.stored_metadata[:time] || '',
+          import_time: model.stored_metadata[:import_time] || '',
         }
       end
     end
