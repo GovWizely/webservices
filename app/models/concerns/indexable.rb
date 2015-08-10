@@ -37,11 +37,11 @@ module Indexable
     end
 
     def update_metadata(version, time = DateTime.now.utc)
-      _update_metadata(version: version, time: time, import_time: time)
+      _update_metadata(version: version, last_updated: time, last_imported: time)
     end
 
     def touch_metadata(import_time = DateTime.now.utc)
-      _update_metadata(stored_metadata.merge(import_time: import_time))
+      _update_metadata(stored_metadata.merge(last_imported: import_time))
     end
 
     def _update_metadata(body)
