@@ -6,6 +6,7 @@ json.call(entry[:_source],
           :license_policy,
           :license_requirement,
           :name,
+          :title,
          )
 json.source entry[:_source][:source][:full_name]
 json.call(entry[:_source],

@@ -32,6 +32,7 @@ module ScreeningList
       license_requirement:     :license_requirement,
       license_policy:          :license_policy,
       web_link:                :source_list_url,
+      title:                   :title,
     }
 
     def loaded_resource
@@ -62,6 +63,11 @@ module ScreeningList
       doc[:alt_names] = rows.map do |row|
         strip_nonascii(row[:alternate_name])
       end.compact.uniq
+
+      doc[:title] = rows.map do |row|
+        strip_nonascii(row[:title])
+      end.compact.uniq
+      doc[:title] = doc[:title].join('; ').presence || nil
 
       doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 

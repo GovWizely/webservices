@@ -29,7 +29,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21"
+    "start_date": "2011-11-21",
+    "title": null
   },
   {
     "addresses": [
@@ -52,7 +53,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2012-04-27"
+    "start_date": "2012-04-27",
+    "title": null
   },
   {
     "addresses": [
@@ -75,7 +77,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2013-12-12"
+    "start_date": "2013-12-12",
+    "title": null
   },
   {
     "addresses": [
@@ -98,7 +101,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21"
+    "start_date": "2011-11-21",
+    "title": null
   },
   {
     "addresses": [
@@ -121,7 +125,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-21"
+    "start_date": "2011-11-21",
+    "title": "Title 1"
   },
   {
     "addresses": [
@@ -144,7 +149,8 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2011-11-22"
+    "start_date": "2011-11-22",
+    "title": "Title 2"
   },
   {
     "addresses": [
@@ -209,6 +215,7 @@
     "source_list_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "source_information_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
     "standard_order": null,
-    "start_date": "2012-04-27"
+    "start_date": "2012-04-27",
+    "title": null
   }
 ]
