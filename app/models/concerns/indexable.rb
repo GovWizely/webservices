@@ -53,11 +53,19 @@ module Indexable
     end
 
     def stored_metadata
-      ES.client.get(
+      stored = ES.client.get(
         index: index_name,
         type:  'metadata',
         id:    0,
       )['_source'].symbolize_keys rescue {}
+
+      if stored[:time] && !stored[:last_updated]
+        stored[:last_updated] = stored.delete(:time)
+        _update_metadata(stored)
+        stored_metadata
+      else
+        stored
+      end
     end
 
     def index_exists?

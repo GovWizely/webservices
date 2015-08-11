@@ -176,6 +176,18 @@ describe Importer do
         expect(Mock.stored_metadata[:version]).to eq('29cb2c0fe72b5d841236ddf88e22371a58649717')
       end
     end
+
+    context 'when old last_updated format is present in metadata' do
+      before do
+        expect(Mock.stored_metadata).to eq({})
+        Mock._update_metadata(time: 'quite some time ago')
+      end
+      subject { Mock.stored_metadata }
+      it 'renames the "time" field to "last_updated"' do
+        expect(subject[:time]).to be_nil
+        expect(subject[:last_updated]).to eq('quite some time ago')
+      end
+    end
   end
 
   describe "#import's resource-versioning logic" do
