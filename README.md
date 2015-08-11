@@ -63,6 +63,22 @@ Fire up a server and try it all out.
 
 <http://127.0.0.1:3000/market_research_library/search?countries=HU,CA>
 
+#### Authentication
+
+Since v2 of the API, an authentication token is required to every request.
+
+You can generate one with:
+
+    bundle exec rake db:devseed
+
+Then pass it on the query string:
+
+<http://localhost:3000/v2/market_research_library/search?api_key=devkey'>
+
+Or using http headers:
+
+    curl -H'Api-Key: devkey' 'http://localhost:3000/v2/market_research_library/search'
+
 ### Specs
 
     bundle exec rspec
