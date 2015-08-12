@@ -23,9 +23,6 @@ describe Searchable do
         }
       end
       self.model_classes = [MockModel]
-      def self.stored_metadata
-        { version: 123, time: 'a few minutes ago' }
-      end
     end
 
     class MockModelQuery
@@ -56,12 +53,40 @@ describe Searchable do
 
     MockModel.recreate_index
     MockModel.index((1..1_000).map { |i| { foo: "Bar #{i}" } })
-    MockModel.update_metadata(9989)
+  end
+
+  before(:each) do
+    MockModel.update_metadata(9989, 'a few minutes ago')
   end
 
   after(:all) do
     Object.send(:remove_const, :MockModel)
     Object.send(:remove_const, :MockModelQuery)
+  end
+
+  context 'Metadata handling' do
+    describe '#stored_metadata' do
+      subject { MockModel.stored_metadata }
+      it 'has correct fields' do
+        expect(subject.keys).to include(:version, :last_updated, :last_imported)
+      end
+    end
+
+    describe '#touch_metadata' do
+      subject { MockModel.stored_metadata }
+      it 'updates only the import_time field' do
+        MockModel.touch_metadata('just now')
+        expect(subject).to eq(version: 9989, last_updated: 'a few minutes ago', last_imported: 'just now')
+      end
+    end
+
+    describe '#update_metadata' do
+      subject { MockModel.stored_metadata }
+      it 'updates all fields' do
+        MockModel.update_metadata(4321, 'NOW!')
+        expect(subject).to eq(version: 4321, last_updated: 'NOW!', last_imported: 'NOW!')
+      end
+    end
   end
 
   describe '#fetch_all' do
@@ -83,7 +108,7 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used)
-      expect(subject[:sources_used]).to eq([{ update_time: 'a few minutes ago', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: 'a few minutes ago', last_imported: 'a few minutes ago', source: 'A mocked model' }])
 
       # too wide test for the description
       expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used])
@@ -95,10 +120,18 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used)
-      expect(subject[:sources_used]).to eq([{ update_time: 'a few minutes ago', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: 'a few minutes ago', last_imported: 'a few minutes ago', source: 'A mocked model' }])
 
       # too wide test for the description
       expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used])
+    end
+  end
+
+  describe '#index_meta' do
+    subject { MockModel.index_meta.first }
+
+    it 'contains correct fields' do
+      expect(subject.keys).to include(:source, :source_last_updated, :last_imported)
     end
   end
 end

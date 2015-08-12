@@ -36,20 +36,36 @@ module Indexable
         body:  { settings: settings, mappings: mappings })
     end
 
-    def update_metadata(version)
+    def update_metadata(version, time = DateTime.now.utc)
+      _update_metadata(version: version, last_updated: time, last_imported: time)
+    end
+
+    def touch_metadata(import_time = DateTime.now.utc)
+      _update_metadata(stored_metadata.merge(last_imported: import_time))
+    end
+
+    def _update_metadata(body)
       ES.client.index(
         index: index_name,
         type:  'metadata',
         id:    0,
-        body:  { version: version, time: DateTime.now.utc })
+        body:  body)
     end
 
     def stored_metadata
-      ES.client.get(
+      stored = ES.client.get(
         index: index_name,
         type:  'metadata',
         id:    0,
       )['_source'].symbolize_keys rescue {}
+
+      if stored[:time] && !stored[:last_updated]
+        stored[:last_updated] = stored.delete(:time)
+        _update_metadata(stored)
+        stored_metadata
+      else
+        stored
+      end
     end
 
     def index_exists?

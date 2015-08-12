@@ -27,6 +27,7 @@ module Importer
         model_class.purge_old(start_time) if can_purge_old?
         Rails.logger.info "#{self.class.name}: import finished (resource updated, new data indexed)."
       else
+        touch_metadata
         Rails.logger.info "#{self.class.name}: import finished (resource unchanged, no new data indexed)."
       end
     end
@@ -125,5 +126,5 @@ module Importer
   end
 
   delegate :can_purge_old?, to: :model_class
-  delegate :stored_metadata, :update_metadata, to: :model_class
+  delegate :stored_metadata, :update_metadata, :touch_metadata, to: :model_class
 end

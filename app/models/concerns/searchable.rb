@@ -93,6 +93,16 @@ module Searchable
       models(sources).map(&:index_name)
     end
 
+    def index_meta(sources = nil)
+      models(sources).map do |model|
+        {
+          source:              model.source[:full_name] || model.source[:code],
+          source_last_updated: model.stored_metadata[:last_updated] || '',
+          last_imported:       model.stored_metadata[:last_imported] || '',
+        }
+      end
+    end
+
     private
 
     def models(sources)
@@ -111,15 +121,6 @@ module Searchable
 
     def index_types(sources = nil)
       models(sources).map(&:index_type)
-    end
-
-    def index_meta(sources = nil)
-      models(sources).map do |model|
-        {
-          source:      model.source[:full_name] || model.source[:code],
-          update_time: model.stored_metadata[:time] || '',
-        }
-      end
     end
   end
 end

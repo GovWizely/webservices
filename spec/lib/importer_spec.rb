@@ -159,7 +159,34 @@ describe Importer do
     it 'stores the time of import' do
       expect(Mock.stored_metadata).to eq({})
       MockData.new([{ id: 1, content: 'foo' }]).import
-      expect(Mock.stored_metadata[:time]).to_not be_nil
+      expect(Mock.stored_metadata[:last_updated]).to_not be_nil
+      expect(Mock.stored_metadata[:last_imported]).to_not be_nil
+    end
+
+    context 'when source is unchanged' do
+      before do
+        expect(Mock.stored_metadata).to eq({})
+        MockData.new([{ id: 1, content: 'foo' }]).import
+        Mock.update_metadata(Mock.stored_metadata[:version], '2000-01-01')
+        MockData.new([{ id: 1, content: 'foo' }]).import
+      end
+      it 'updates only the time of import when source is unchanged' do
+        expect(Mock.stored_metadata[:last_updated]).to eq('2000-01-01')
+        expect(Mock.stored_metadata[:last_imported]).to_not eq('2000-01-01')
+        expect(Mock.stored_metadata[:version]).to eq('29cb2c0fe72b5d841236ddf88e22371a58649717')
+      end
+    end
+
+    context 'when old last_updated format is present in metadata' do
+      before do
+        expect(Mock.stored_metadata).to eq({})
+        Mock._update_metadata(time: 'quite some time ago')
+      end
+      subject { Mock.stored_metadata }
+      it 'renames the "time" field to "last_updated"' do
+        expect(subject[:time]).to be_nil
+        expect(subject[:last_updated]).to eq('quite some time ago')
+      end
     end
   end
 
