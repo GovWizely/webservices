@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe 'Consolidated Envirotech API V2', type: :request do
   include_context 'V2 headers'
-  include_context 'all Envirotech v2 fixture data'
+  include_context 'all Envirotech fixture data'
 
   describe 'GET /v2/envirotech/solutions/search.json' do
     let(:params) { { size: 100 } }

@@ -11,19 +11,6 @@ shared_context 'all Envirotech fixture data' do
   end
 end
 
-shared_context 'all Envirotech v2 fixture data' do
-  include_context 'Envirotech::Solution data'
-  include_context 'Envirotech::Issue data'
-  include_context 'Envirotech::Regulation data'
-  include_context 'Envirotech::Provider data'
-  include_context 'Envirotech::AnalysisLink data'
-  include_context 'Envirotech::BackgroundLink data'
-  include_context 'Envirotech::ProviderSolution data'
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
-end
-
 shared_context 'Envirotech::Solution data' do
   before(:all) do
     Envirotech::Solution.recreate_index
