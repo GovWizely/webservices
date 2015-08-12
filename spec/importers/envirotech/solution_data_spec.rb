@@ -1,38 +1,9 @@
 require 'spec_helper'
 
 describe Envirotech::SolutionData do
-  let(:fixtures_dir) { "#{File.dirname(__FILE__)}/solution" }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json" }
-
-  let(:mechanize_agent) do
-    agent = double('mechanize_agent')
-
-    allow(agent).to receive(:get).with(Envirotech::Login::LOGIN_URL) do
-      token_form = double('password=' => 'foo', 'buttons' => [])
-      double(form: token_form)
-    end
-
-    allow(agent).to receive(:submit) do
-      field_with = double('value=' => nil)
-      login_form = double(field_with: field_with, buttons: [])
-      double(form: login_form)
-    end
-
-    allow(agent).to receive(:get).with('dummy_resource?page=1') do
-      double(body: File.open(fixtures_file).read)
-    end
-    allow(agent).to receive(:get).with('dummy_resource?page=2') do
-      double(body: '[]')
-    end
-
-    agent
-  end
-
-  let(:importer) { described_class.new('dummy_resource') }
-
-  let(:articles_hash) { YAML.load_file("#{fixtures_dir}/solution_articles.yaml") }
-
-  before { Envirotech::Login.mechanize_agent = mechanize_agent }
+  let(:importer) { described_class.new(fixtures_file) }
+  let(:articles_hash) { YAML.load_file("#{File.dirname(__FILE__)}/solution/solution_articles.yaml") }
 
   it_behaves_like 'an importer which can purge old documents'
 
