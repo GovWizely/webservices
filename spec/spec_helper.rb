@@ -29,7 +29,6 @@ Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
 
 RSpec.configure do |config|
   config.before(:suite) do
-    Webservices::Application.model_classes.each(&:recreate_index)
     User.create_index!
 
     # Since create_index! is asynchronous, and since specs may immediately
