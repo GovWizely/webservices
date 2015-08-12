@@ -330,7 +330,7 @@ end
 
 shared_examples 'it contains all ScreeningList::Isn results' do
   let(:source) { ScreeningList::Isn }
-  let(:expected) { (0..4).to_a }
+  let(:expected) { (0..7).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 

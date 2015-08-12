@@ -9,8 +9,15 @@ module ScreeningList
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
-      address country date_liftedwaivedexpired effective_date
-      federal_register_notice name programs)
+      address address_number address_remarks
+      alternate_name alternate_number alternate_remarks alternate_type
+      call_sign city country date_liftedwaivedexpired
+      effective_date entity_number federal_register_notice
+      gross_register_tonnage gross_tonnage license_policy
+      license_requirement name postal_code programs
+      remarksnotes sdn_type source_list standard_order
+      stateprovince title vessel_flag vessel_owner
+      vessel_type web_link)
 
     include ScreeningList::CanGroupRows
     self.group_by = %i(name effective_date federal_register_notice)
@@ -24,6 +31,8 @@ module ScreeningList
       federal_register_notice:  :federal_register_notice,
       effective_date:           :start_date,
       date_liftedwaivedexpired: :end_date,
+      remarksnotes:             :remarks,
+      web_link:                 :source_list_url,
     }
 
     def loaded_resource
@@ -34,8 +43,6 @@ module ScreeningList
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       ensure_expected_headers(rows.first)
-
-      rows = rows.select { |row| !expired?(row) }
 
       docs = group_rows(rows).map do |id, grouped|
         process_grouped_rows(id, grouped)
@@ -51,12 +58,14 @@ module ScreeningList
 
       doc[:id]                     = id
       doc[:source]                 = model_class.source
-      doc[:source_list_url]        = 'http://www.state.gov/t/isn/c15231.htm'
-      doc[:source_information_url] = 'http://www.state.gov/t/isn/c15231.htm'
+
+      doc[:addresses] = rows.map { |row| process_address(row) }.uniq
 
       %i(start_date end_date).each do |field|
         doc[field] &&= parse_american_date(doc[field])
       end
+
+      doc[:source_information_url] = doc[:source_list_url]
 
       doc[:programs] = rows.map { |row| row[:programs] }
 
@@ -65,8 +74,17 @@ module ScreeningList
       doc
     end
 
-    def expired?(row)
-      parse_american_date(row[:date_liftedwaivedexpired]) < Time.now rescue nil
+    ADDRESS_HASH = {
+      address:       :address,
+      city:          :city,
+      country:       :country,
+      postal_code:   :postal_code,
+      stateprovince: :state,
+    }
+
+    def process_address(row)
+      address           = remap_keys(ADDRESS_HASH, row.to_hash)
+      address
     end
   end
 end
