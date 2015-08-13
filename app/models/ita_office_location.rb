@@ -47,7 +47,7 @@ class ItaOfficeLocation
   }.freeze
 
   self.source = {
-    full_name: 'ITA Office Locations',
+    full_name: 'ITA',
     code:      'ITAOL',
   }
 end

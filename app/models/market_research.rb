@@ -51,7 +51,7 @@ class MarketResearch
   }.freeze
 
   self.source = {
-    full_name: 'Market Research',
+    full_name: 'ITA',
     code:      'MR',
   }
 end

@@ -40,7 +40,7 @@ class BusinessServiceProvider
   }.freeze
 
   self.source = {
-    full_name: 'Parature FAQ',
+    full_name: 'ITA',
     code:      'PARATURE',
   }
 end
