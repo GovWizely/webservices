@@ -21,7 +21,7 @@ module Envirotech
     end
 
     def import
-      data = fetch_data
+      data = @resource =~ URI.regexp ? fetch_data : JSON.parse(File.open(@resource).read)
       articles = data.map { |article_hash| process_article_info article_hash }
       model_class.index articles
     end
