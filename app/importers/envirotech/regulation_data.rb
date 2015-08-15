@@ -19,8 +19,11 @@ module Envirotech
 
     def initialize(relation_data = RELATION_DATA, resource = ENDPOINT)
       @resource = resource
-      # get data from file if relation_data == RELATION_DATA
-      @relation_data = relation_data
+      if relation_data == RELATION_DATA
+        @relation_data = JSON.parse(open(relation_data).read)
+      else
+        @relation_data = relation_data
+      end
     end
 
     def import
@@ -41,7 +44,7 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
-      article[:issue_id] = @relation_data.select{ |_,v| v[:regulations].include?(article[:name_english]) }.keys
+      article[:issue_id] = @relation_data.select{ |_,v| v.with_indifferent_access[:regulations].include?(article[:name_english]) }.keys.map(&:to_i)
 
       sanitize_entry(article)
     end
