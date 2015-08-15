@@ -3,6 +3,8 @@ module Envirotech
     include Importable
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
 
+    RELATION_DATA = "#{Rails.root}/data/envirotech/issue_solution_regulation.json"
+
     COLUMN_HASH = {
       'id'              => :source_id,
       'name_chinese'    => :name_chinese,
@@ -14,8 +16,10 @@ module Envirotech
       'updated_at'      => :source_updated_at,
     }.freeze
 
-    def initialize(resource = ENDPOINT)
+    def initialize(resource = ENDPOINT, relation_data = RELATION_DATA)
       @resource = resource
+      # get data from file if relation_data == RELATION_DATA
+      @issue_solution_mapping = Envirotech::ToolkitScraper.new.all_issue_info
     end
 
     def import
@@ -36,6 +40,8 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
+
+      article[:issue_id] = @issue_solution_mapping.select{ |_,v| v[:solutions].include?(article[:name_english]) }.keys
       sanitize_entry(article)
     end
   end
