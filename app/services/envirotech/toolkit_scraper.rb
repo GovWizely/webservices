@@ -22,8 +22,8 @@ module Envirotech
 
     def all_issue_info
       issue_docs = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
-      issue_names_ids = issue_docs[:hits].map { |d|  [d[:_source][:name_english], d[:_source][:source_id]] }
-      Hash[issue_names_ids.map { |name, id| [id, lookup_issue(name)] }]
+      issue_ids_names = issue_docs[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
+      Hash[issue_ids_names.map { |id, name| [id, lookup_issue(name)] }]
     end
 
     private
