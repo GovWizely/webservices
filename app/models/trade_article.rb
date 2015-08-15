@@ -16,7 +16,7 @@ class TradeArticle
   }.freeze
 
   self.source = {
-    full_name: 'Trade Articles',
+    full_name: 'ITA',
     code:      'TRADEA',
   }
 end

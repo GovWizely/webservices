@@ -38,7 +38,7 @@ class ParatureFaq
   }.freeze
 
   self.source = {
-    full_name: 'Parature FAQ',
+    full_name: 'ITA',
     code:      'PFAQ',
   }
   end

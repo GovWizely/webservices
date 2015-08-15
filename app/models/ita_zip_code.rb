@@ -35,7 +35,7 @@ class ItaZipCode
   }.freeze
 
   self.source = {
-    full_name: 'ITA Zip Code',
+    full_name: 'ITA',
     code:      'ITAZC',
   }
 end

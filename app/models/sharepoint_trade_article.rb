@@ -61,7 +61,7 @@ class SharepointTradeArticle
   }.freeze
 
   self.source = {
-    full_name: 'Sharepoint Trade Article',
+    full_name: 'ITA',
     code:      'SPTA',
   }
 end

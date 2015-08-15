@@ -29,7 +29,7 @@ class ItaTaxonomy
   }.freeze
 
   self.source = {
-    full_name: 'ITA Taxonomy',
+    full_name: 'ITA',
     code:      'ITAT',
   }
 end
