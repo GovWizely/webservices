@@ -57,11 +57,11 @@ module Envirotech
             source_updated_at:   { type: 'date', format: 'YYYY-MM-dd' },
             source:              { type: 'string', analyzer: 'keyword' },
             url:                 { type: 'string' },
-            source_id:           { type: 'string' },
+            source_id:           { type: 'integer' },
 
-            issue_id:            { type: 'string' },
-            provider_id:         { type: 'string' },
-            solution_id:         { type: 'string' },
+            issue_id:            { type: 'integer' },
+            provider_id:         { type: 'integer' },
+            solution_id:         { type: 'integer' },
           },
         },
       }.freeze
