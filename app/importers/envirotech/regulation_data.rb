@@ -3,8 +3,6 @@ module Envirotech
     include Importer
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulations.json'
 
-    RELATION_DATA = "#{Rails.root}/data/envirotech/issue_solution_regulation.json"
-
     COLUMN_HASH = {
       'id'              => :source_id,
       'name_chinese'    => :name_chinese,
@@ -17,13 +15,9 @@ module Envirotech
       'url'             => :url,
     }.freeze
 
-    def initialize(relation_data = RELATION_DATA, resource = ENDPOINT)
+    def initialize(resource = ENDPOINT, relation_data = nil)
       @resource = resource
-      if relation_data == RELATION_DATA
-        @relation_data = JSON.parse(open(relation_data).read)
-      else
-        @relation_data = relation_data
-      end
+      @relation_data = relation_data
     end
 
     def import
@@ -44,9 +38,13 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
-      article[:issue_id] = @relation_data.select{ |_,v| v.with_indifferent_access[:regulations].include?(article[:name_english]) }.keys.map(&:to_i)
+      article[:issue_id] = get_issues_ids(article) if @relation_data.present?
 
       sanitize_entry(article)
+    end
+
+    def get_issues_ids(article)
+      @relation_data.select{ |_,v| v.with_indifferent_access[:regulations].include?(article[:name_english]) }.keys.map(&:to_i)
     end
   end
 end

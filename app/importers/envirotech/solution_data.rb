@@ -1,11 +1,7 @@
-require 'open-uri'
-
 module Envirotech
   class SolutionData < Envirotech::BaseData
     include Importer
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
-
-    RELATION_DATA = "#{Rails.root}/data/envirotech/issue_solution_regulation.json"
 
     COLUMN_HASH = {
       'id'              => :source_id,
@@ -18,14 +14,9 @@ module Envirotech
       'updated_at'      => :source_updated_at,
     }.freeze
 
-    def initialize(relation_data = RELATION_DATA, resource = ENDPOINT)
+    def initialize(resource = ENDPOINT, relation_data = nil)
       @resource = resource
-      # get data from file if relation_data == RELATION_DATA
-      if relation_data == RELATION_DATA
-        @relation_data = JSON.parse(open(relation_data).read)
-      else
-        @relation_data = relation_data
-      end
+      @relation_data = relation_data
     end
 
     def import
@@ -46,9 +37,13 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
-      article[:issue_id] = @relation_data.select{ |_,v| v.with_indifferent_access[:solutions].include?(article[:name_english]) }.keys.map(&:to_i)
+      article[:issue_id] = get_issues_ids(article) if @relation_data.present?
 
       sanitize_entry(article)
+    end
+
+    def get_issues_ids(article)
+      @relation_data.select{ |_,v| v.with_indifferent_access[:solutions].include?(article[:name_english]) }.keys.map(&:to_i)
     end
   end
 end
