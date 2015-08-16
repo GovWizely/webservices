@@ -1,4 +1,3 @@
-require 'pp'
 namespace :envirotech do
   desc 'Creates a dev admin user to access the api'
   task :lookup_issue, [:issue_name] => :environment do |_t, args|
@@ -6,6 +5,6 @@ namespace :envirotech do
   end
 
   task all_issue_info: :environment do
-    pp Envirotech::ToolkitScraper.new.all_issue_info
+    puts Envirotech::ToolkitScraper.new.all_issue_info.to_json
   end
 end
