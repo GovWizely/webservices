@@ -14,7 +14,7 @@ module Envirotech
       'updated_at'      => :source_updated_at,
     }.freeze
 
-    def initialize(resource = ENDPOINT, relation_data = nil)
+    def initialize(resource = ENDPOINT, relation_data: nil)
       @resource = resource
       @relation_data = relation_data
     end

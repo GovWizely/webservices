@@ -13,16 +13,16 @@ module Envirotech
       scraper_data = Envirotech::ToolkitScraper.new.all_issue_info
 
       if scraper_data.present? && scraper_data.deep_stringify_keys != local_data
-        Airbrake.notify(EnvirotechToolkitDataMismatch.new)
+        Airbrake.notify(Exceptions::EnvirotechToolkitDataMismatch.new)
       end
 
       if scraper_data.blank?
         scraper_data = local_data
-        Airbrake.notify(EnvirotechToolkitNotFound.new)
+        Airbrake.notify(Exceptions::EnvirotechToolkitNotFound.new)
       end
 
-      Envirotech::RegulationData.new(scraper_data).import
-      Envirotech::SolutionData.new(scraper_data).import
+      Envirotech::RegulationData.new(relation_data: scraper_data).import
+      Envirotech::SolutionData.new(relation_data: scraper_data).import
       Envirotech::ProviderSolutionData.new.import
     end
   end
