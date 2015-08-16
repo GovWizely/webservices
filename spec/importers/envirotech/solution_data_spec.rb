@@ -4,6 +4,8 @@ describe Envirotech::SolutionData do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/solution" }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json" }
 
+  let(:relational_fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json" }
+  let(:relational_data) { JSON.parse(open(relational_fixtures_file).read) }
   let(:mechanize_agent) do
     agent = double('mechanize_agent')
 
@@ -28,7 +30,7 @@ describe Envirotech::SolutionData do
     agent
   end
 
-  let(:importer) { described_class.new('dummy_resource') }
+  let(:importer) { described_class.new('dummy_resource', relation_data: relational_data) }
 
   let(:articles_hash) { YAML.load_file("#{fixtures_dir}/solution_articles.yaml") }
 
