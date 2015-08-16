@@ -15,7 +15,7 @@ module Envirotech
       'url'             => :url,
     }.freeze
 
-    def initialize(resource = ENDPOINT, relation_data = nil)
+    def initialize(resource = ENDPOINT, relation_data: nil)
       @resource = resource
       @relation_data = relation_data
     end
