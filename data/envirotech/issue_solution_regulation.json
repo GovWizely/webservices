@@ -1,16 +1,29 @@
 {
-  "22": {
+  "24": {
     "regulations": [
-      "Safe Drinking Water Act - Arsenic Rule"
+      "Secondary Treatment Standards under the National Pollutant Discharge Elimination System (NPDES)"
     ],
     "solutions": [
-      "Adsorption Processes",
-      "Ion Exchange Processes",
-      "Membrane Processes",
-      "Point-of-Use (POU) Devices",
-      "Precipitative Processes",
-      "Related Technologies for Safe Water Drinking Act - Arsenic Rule: Arsenic Remediation",
-      "Residual Management Processes"
+      "Biological Treatment Processes",
+      "In-plant Wet Weather Management Processes",
+      "Physical and Chemical Treatment Processes",
+      "Process Monitoring Technologies",
+      "Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards"
+    ]
+  },
+  "23": {
+    "regulations": [
+      "Standards for the Use or Disposal of Sewage Sludge"
+    ],
+    "solutions": [
+      "Conditioning Technology or Processes",
+      "Dewatering Technology or Processes",
+      "Drying Technology or Processes",
+      "Re-use or Disposal Processes",
+      "Related Technologies for Standards for Use or Disposal of Sewage Sludge: Biosolid/Sludge Management",
+      "Stabilization Technology or Processes",
+      "Thermal Conversion Technology or Processes",
+      "Thickening Technology or Processes"
     ]
   },
   "21": {
@@ -40,6 +53,38 @@
       "Lamp Crushing Systems",
       "Mercury Recycling Technology",
       "Related Technologies for Standards for Universal Waste Management: Universal Waste"
+    ]
+  },
+  "15": {
+    "regulations": [
+      "Mercury and Air Toxics Standards"
+    ],
+    "solutions": [
+      "Acid Gases - Dry Sorbent Injection",
+      "Acid Gases - Dry Sorbent Injection with Electrostatic Precipitators",
+      "Acid Gases - Dry Sorbent Injection with Fabric Filters",
+      "Acid Gases - Flue-gas Desulfurization",
+      "Dioxins &amp; Furans - Work Practice Standard (inspection, adjustment, and/or maintenance and repairs to ensure optimal combustion)",
+      "Mercury - Activated Carbon Injection",
+      "Mercury - Activated Carbon Injection with Fabric Filter",
+      "Mercury - Electrostatic Precipitators",
+      "Mercury - Flue-gas Desulfurization",
+      "Mercury - Selective Catalytic Reduction",
+      "Non-Mercury Metals - Fabric Filter, Electrostatic Precipitators",
+      "Related Technologies for Mercury and Air Toxics Standards: Mercury Emissions Control from Power Plants",
+      "Sulphur Dioxide - Dry Sorbent Injection",
+      "Sulphur Dioxide - Flue-gas Desulphurization"
+    ]
+  },
+  "19": {
+    "regulations": [
+      "Standards of Performance for New Stationary Sources: Oil and Gas"
+    ],
+    "solutions": [
+      "Absorption Towers",
+      "Flash Tanks",
+      "Glycol Dehydrators",
+      "Related Technologies for NSPS: Oil and Gas Processing Emissions Control"
     ]
   },
   "14": {
@@ -94,6 +139,31 @@
       "Tertiary clarifier/tertiary filter"
     ]
   },
+  "22": {
+    "regulations": [
+      "Safe Drinking Water Act - Arsenic Rule"
+    ],
+    "solutions": [
+      "Adsorption Processes",
+      "Ion Exchange Processes",
+      "Membrane Processes",
+      "Point-of-Use (POU) Devices",
+      "Precipitative Processes",
+      "Related Technologies for Safe Water Drinking Act - Arsenic Rule: Arsenic Remediation",
+      "Residual Management Processes"
+    ]
+  },
+  "18": {
+    "regulations": [
+      "Cross-State Air Pollution Rule (CSAPR)"
+    ],
+    "solutions": [
+      "Low NOx Burners",
+      "Related Technologies for CSAPR: NOx Emissions Control from Power Plants",
+      "Selective Catalytic Reduction",
+      "Selective Non-Catalytic Reduction"
+    ]
+  },
   "12": {
     "regulations": [
       "Clean Water Act",
@@ -133,32 +203,6 @@
       "Tertiary clarifier/tertiary filter"
     ]
   },
-  "23": {
-    "regulations": [
-      "Standards for the Use or Disposal of Sewage Sludge"
-    ],
-    "solutions": [
-      "Conditioning Technology or Processes",
-      "Dewatering Technology or Processes",
-      "Drying Technology or Processes",
-      "Re-use or Disposal Processes",
-      "Related Technologies for Standards for Use or Disposal of Sewage Sludge: Biosolid/Sludge Management",
-      "Stabilization Technology or Processes",
-      "Thermal Conversion Technology or Processes",
-      "Thickening Technology or Processes"
-    ]
-  },
-  "19": {
-    "regulations": [
-      "Standards of Performance for New Stationary Sources: Oil and Gas"
-    ],
-    "solutions": [
-      "Absorption Towers",
-      "Flash Tanks",
-      "Glycol Dehydrators",
-      "Related Technologies for NSPS: Oil and Gas Processing Emissions Control"
-    ]
-  },
   "16": {
     "regulations": [
       "Non-road Exhaust Emissions Standards"
@@ -168,50 +212,6 @@
       "Diesel Particulate Filters",
       "NOx - Selective Catalytic Reduction",
       "Related Technologies for Non-road Exhaust Emission Standards: Non-road Diesel Emissions Control"
-    ]
-  },
-  "24": {
-    "regulations": [
-      "Secondary Treatment Standards under the National Pollutant Discharge Elimination System (NPDES)"
-    ],
-    "solutions": [
-      "Biological Treatment Processes",
-      "In-plant Wet Weather Management Processes",
-      "Physical and Chemical Treatment Processes",
-      "Process Monitoring Technologies",
-      "Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards"
-    ]
-  },
-  "18": {
-    "regulations": [
-      "Cross-State Air Pollution Rule (CSAPR)"
-    ],
-    "solutions": [
-      "Low NOx Burners",
-      "Related Technologies for CSAPR: NOx Emissions Control from Power Plants",
-      "Selective Catalytic Reduction",
-      "Selective Non-Catalytic Reduction"
-    ]
-  },
-  "15": {
-    "regulations": [
-      "Mercury and Air Toxics Standards"
-    ],
-    "solutions": [
-      "Acid Gases - Dry Sorbent Injection",
-      "Acid Gases - Dry Sorbent Injection with Electrostatic Precipitators",
-      "Acid Gases - Dry Sorbent Injection with Fabric Filters",
-      "Acid Gases - Flue-gas Desulfurization",
-      "Dioxins \u0026amp; Furans - Work Practice Standard (inspection, adjustment, and/or maintenance and repairs to ensure optimal combustion)",
-      "Mercury - Activated Carbon Injection",
-      "Mercury - Activated Carbon Injection with Fabric Filter",
-      "Mercury - Electrostatic Precipitators",
-      "Mercury - Flue-gas Desulfurization",
-      "Mercury - Selective Catalytic Reduction",
-      "Non-Mercury Metals - Fabric Filter, Electrostatic Precipitators",
-      "Related Technologies for Mercury and Air Toxics Standards: Mercury Emissions Control from Power Plants",
-      "Sulphur Dioxide - Dry Sorbent Injection",
-      "Sulphur Dioxide - Flue-gas Desulphurization"
     ]
   }
 }
