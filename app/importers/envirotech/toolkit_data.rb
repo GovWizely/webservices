@@ -1,5 +1,5 @@
 module Envirotech
-  class EnvirotechToolkitData
+  class ToolkitData
     RELATION_DATA = "#{Rails.root}/data/envirotech/issue_solution_regulation.json"
 
     def import
