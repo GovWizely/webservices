@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Envirotech::EnvirotechToolkitData do
+describe Envirotech::ToolkitData do
   let(:importer) { described_class.new }
 
   before do
@@ -44,7 +44,7 @@ describe Envirotech::EnvirotechToolkitData do
       end
     end
 
-    context 'scraper working as expected' do
+    context 'scraper compairing local data with imported data' do
       let(:all_issue_info) { { dummy: 1 } }
       let(:local_data) { { 'dummy' => 2 } }
       it 'notify Airbrake when data mismatch' do
@@ -53,7 +53,7 @@ describe Envirotech::EnvirotechToolkitData do
       end
     end
 
-    context 'scraper working as expected' do
+    context 'scraper fallback to local data' do
       let(:all_issue_info) { }
       let(:local_data) { { 'dummy' => 2 } }
       it 'notify Airbrake when UI tool disappear' do
