@@ -45,4 +45,6 @@ module ScreeningList
       :source_information_url,
     ]
   end
+
+  def foo; puts 'bar'; end
 end
