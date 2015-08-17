@@ -1,10 +1,7 @@
 namespace :envirotech do
-  desc 'Creates a dev admin user to access the api'
-  task :lookup_issue, [:issue_name] => :environment do |_t, args|
-    puts Envirotech::ToolkitScraper.new.fetch_issue_info(args.issue_name)
-  end
-
-  task all_issue_info: :environment do
-    puts Envirotech::ToolkitScraper.new.all_issue_info.to_json
+  desc 'Update issue_solution_regulation.json file with latest data from toolkit scraper'
+  task update_local_relational_data: :environment do
+    $stdout.reopen("data/envirotech/issue_solution_regulation.json", "w")
+    puts JSON.pretty_generate(Envirotech::ToolkitScraper.new.all_issue_info)
   end
 end
