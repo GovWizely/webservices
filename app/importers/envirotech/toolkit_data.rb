@@ -8,7 +8,7 @@ module Envirotech
       Envirotech::AnalysisLinkData.new.import
       Envirotech::ProviderData.new.import
 
-      # Fixme: this solution is valid until we have full control over the toolkit
+      # FIXME: this solution is valid until we have full control over the toolkit
       local_data = JSON.parse(open(RELATION_DATA).read)
       scraper_data = Envirotech::ToolkitScraper.new.all_issue_info
 
