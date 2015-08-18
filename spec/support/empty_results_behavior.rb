@@ -7,7 +7,7 @@ shared_examples "an empty result when a query doesn't match any documents" do |o
   # Allows this shared example to support queries that involves extra parameters
   # ie.: a specific source for tariff rates
   original_params ||= {}
-  let(:params) { original_params.merge({ q: 'asdzxcasd' }) }
+  let(:params) { original_params.merge(q: 'asdzxcasd') }
   it_behaves_like 'an empty result'
 end
 
