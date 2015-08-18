@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'BISN Nonproliferation Sanctions API V1', type: :request do
   include_context 'ScreeningList::Isn data'
 
-  describe 'GET /consolidated_screening_list/isn/search' do
+  describe 'GET /v1/consolidated_screening_list/isn/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/isn/search', params }
+    before { get '/v1/consolidated_screening_list/isn/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

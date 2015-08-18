@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'FTA Costa Rica Tariff Rates API V1', type: :request do
   include_context 'TariffRate::CostaRica data'
 
-  describe 'GET /tariff_rates/search?sources=CR' do
+  describe 'GET /v1/tariff_rates/search?sources=CR' do
     let(:params) { { sources: 'cr' } }
-    before { get '/tariff_rates/search', params }
+    before { get '/v1/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

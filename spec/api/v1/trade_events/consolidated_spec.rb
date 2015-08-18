@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Consolidated Trade Events API V1', type: :request do
   include_context 'all Trade Events fixture data'
 
-  describe 'GET /trade_events/search' do
+  describe 'GET /v1/trade_events/search' do
     let(:params) { { size: 100 } }
-    before { get '/trade_events/search', params }
+    before { get '/v1/trade_events/search', params }
     subject { response }
 
     context 'when search parameters are empty' do

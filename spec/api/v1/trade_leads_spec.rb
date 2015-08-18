@@ -16,9 +16,9 @@ describe 'Trade Leads API V1', type: :request do
 
   let(:expected_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/trade_leads/expected_results.json").read }
 
-  describe 'GET /trade_leads/search.json' do
+  describe 'GET /v1/trade_leads/search.json' do
     context 'when search parameters are empty' do
-      before { get '/trade_leads/search' }
+      before { get '/v1/trade_leads/search' }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -34,7 +34,7 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when size is specified' do
-      before { get '/trade_leads/search', size: 100 }
+      before { get '/v1/trade_leads/search', size: 100 }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -51,7 +51,7 @@ describe 'Trade Leads API V1', type: :request do
 
     context 'when countries is populated' do
       let(:params) { { countries: 'CA' } }
-      before { get '/trade_leads/search', params }
+      before { get '/v1/trade_leads/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -73,7 +73,7 @@ describe 'Trade Leads API V1', type: :request do
 
     context 'when industries is populated' do
       let(:params) { { industries: 'dental' } }
-      before { get '/trade_leads/search', params }
+      before { get '/v1/trade_leads/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -91,7 +91,7 @@ describe 'Trade Leads API V1', type: :request do
 
     context 'when q matches a title' do
       let(:params) { { q: 'physician service' } }
-      before { get '/trade_leads/search', params }
+      before { get '/v1/trade_leads/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -108,7 +108,7 @@ describe 'Trade Leads API V1', type: :request do
     end
 
     context 'when q matches a description' do
-      before { get '/trade_leads/search', q: 'ambulatory' }
+      before { get '/v1/trade_leads/search', q: 'ambulatory' }
       subject { response }
 
       it_behaves_like 'a successful search request'

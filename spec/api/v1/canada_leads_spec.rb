@@ -7,10 +7,10 @@ describe 'Canada Leads API V1', type: :request do
       "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
   end
 
-  let(:search_path) { '/canada_leads/search' }
+  let(:search_path) { '/v1/canada_leads/search' }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/trade_leads/canada/results.json").read }
 
-  describe 'GET /canada_leads/search.json' do
+  describe 'GET /v1/canada_leads/search' do
     context 'when search parameters are empty' do
       before { get search_path, size: 100 }
       subject { response }

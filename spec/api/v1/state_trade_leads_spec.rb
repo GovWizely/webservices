@@ -8,9 +8,9 @@ describe 'State Trade Leads API V1', type: :request do
   end
   let(:expected_results) { JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/state/results.json").read) }
 
-  describe 'GET /state_trade_leads/search' do
+  describe 'GET /v1/state_trade_leads/search' do
     let(:params) { {} }
-    before { get '/state_trade_leads/search', params }
+    before { get '/v1/state_trade_leads/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

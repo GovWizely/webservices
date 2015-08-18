@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'BIS Entities API V1', type: :request do
   include_context 'ScreeningList::El data'
 
-  describe 'GET /consolidated_screening_list/el/search' do
+  describe 'GET /v1/consolidated_screening_list/el/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/el/search', params }
+    before { get '/v1/consolidated_screening_list/el/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

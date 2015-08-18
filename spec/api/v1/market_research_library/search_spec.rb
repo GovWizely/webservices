@@ -3,10 +3,10 @@ require 'spec_helper'
 describe 'Market Researches API V1', type: :request do
   include_context 'MarketResearch data'
 
-  let(:search_path) { '/market_research_library/search' }
+  let(:search_path) { '/v1/market_research_library/search' }
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/results.json").read }
 
-  describe 'GET /market_research_library/search.json' do
+  describe 'GET /v1/market_research_library/search' do
     context 'when search parameters are empty' do
       before { get search_path, {} }
       subject { response }

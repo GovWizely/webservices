@@ -11,9 +11,9 @@ describe 'UK Trade Leads API V1', type: :request do
                symbolize_names: true)
   end
 
-  describe 'GET /uk_trade_leads/search' do
+  describe 'GET /v1/uk_trade_leads/search' do
     let(:params) { {} }
-    before { get '/uk_trade_leads/search', params }
+    before { get '/v1/uk_trade_leads/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

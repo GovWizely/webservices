@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'DDTC ITAR Debarred Parties API V1', type: :request do
   include_context 'ScreeningList::Dtc data'
 
-  describe 'GET /consolidated_screening_list/dtc/search' do
+  describe 'GET /v1/consolidated_screening_list/dtc/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/dtc/search', params }
+    before { get '/v1/consolidated_screening_list/dtc/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

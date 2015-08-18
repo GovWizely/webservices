@@ -18,7 +18,7 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_v1_routable do
-    path = {
+    mapping = {
       'australian_trade_leads' => 'AUSTRALIA',
       'canada_leads'           => 'CANADA',
       'fbopen_leads'           => 'FBO',
@@ -26,7 +26,7 @@ Webservices::Application.routes.draw do
       'uk_trade_leads'         => 'UK',
     }
 
-    path.each do |path, source|
+    mapping.each do |path, source|
       get "/#{path}/search(.json)" => 'trade_leads/consolidated#search', format: false, defaults: { sources: source }
     end
 
@@ -53,17 +53,17 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_routable do
-    path = { 'market_researches'          => 'market_research_library',
-             'parature_faq'               => 'ita_faqs',
-             'ita_office_locations'       => 'ita_office_locations',
-             'country_commercial_guides'  => 'country_commercial_guides',
-             'business_service_providers' => 'business_service_providers',
-             'ita_zip_codes'              => 'ita_zipcode_to_post',
-             'ita_taxonomy'               => 'ita_taxonomies',
+    mapping = { 'market_researches'          => 'market_research_library',
+                'parature_faq'               => 'ita_faqs',
+                'ita_office_locations'       => 'ita_office_locations',
+                'country_commercial_guides'  => 'country_commercial_guides',
+                'business_service_providers' => 'business_service_providers',
+                'ita_zip_codes'              => 'ita_zipcode_to_post',
+                'ita_taxonomy'               => 'ita_taxonomies',
      }
-    path['eccn'] = 'eccns' unless Rails.env.production?
+    mapping['eccn'] = 'eccns' unless Rails.env.production?
 
-    path.each do |controller, path|
+    mapping.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false
     end
 
@@ -102,8 +102,8 @@ Webservices::Application.routes.draw do
     concerns :api_routable
   end
 
-  scope module: 'api/v1', defaults: { format: :json } do
-    concerns :api_v1_routable
+  scope module: 'api/v2', defaults: { format: :json } do
+    concerns :api_v2_routable
     concerns :api_routable
   end
 

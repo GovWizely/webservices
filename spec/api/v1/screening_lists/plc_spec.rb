@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Palestinian Legislative Council List API V1', type: :request do
   include_context 'ScreeningList::Plc data'
 
-  describe 'GET /consolidated_screening_list/plc/search' do
+  describe 'GET /v1/consolidated_screening_list/plc/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/plc/search', params }
+    before { get '/v1/consolidated_screening_list/plc/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

@@ -7,10 +7,10 @@ describe 'Business Service Providers API V1', type: :request do
       "#{Rails.root}/spec/fixtures/business_service_providers/articles.json").import
   end
 
-  describe 'GET /business_service_providers/search.json' do
+  describe 'GET /v1/business_service_providers/search' do
     context 'when search parameters are empty' do
       let(:all_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/business_service_providers/all_results.json").read }
-      before { get '/business_service_providers/search', {} }
+      before { get '/v1/business_service_providers/search', {} }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +30,7 @@ describe 'Business Service Providers API V1', type: :request do
     context 'when one document matches a query and filter' do
       let(:one_match) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/business_service_providers/one_match.json").read }
       let(:params) { { q: 'consult', ita_offices: 'el salvador' } }
-      before { get '/business_service_providers/search', params }
+      before { get '/v1/business_service_providers/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'

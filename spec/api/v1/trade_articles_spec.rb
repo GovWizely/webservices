@@ -9,8 +9,8 @@ describe 'Trade Articles API V1', type: :request do
 
   let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/trade_articles/results.json").read }
 
-  describe 'GET /trade_articles/search.json' do
-    before { get '/trade_articles/search', params }
+  describe 'GET /v1/trade_articles/search' do
+    before { get '/v1/trade_articles/search', params }
 
     context 'when all params are specified' do
       let(:params) do

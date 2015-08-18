@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'BIS Denied Persons API V1', type: :request do
   include_context 'ScreeningList::Dpl data'
 
-  describe 'GET /consolidated_screening_list/dpl/search' do
+  describe 'GET /v1/consolidated_screening_list/dpl/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/dpl/search', params }
+    before { get '/v1/consolidated_screening_list/dpl/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

@@ -7,10 +7,10 @@ describe 'ECCN API V1', type: :request do
       "#{Rails.root}/spec/fixtures/eccns/eccns.csv").import
   end
 
-  describe 'GET /eccns/search.json' do
+  describe 'GET /v1/eccns/search' do
     context 'when search parameters are empty' do
       let(:all_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/eccns/all_results.json").read }
-      before { get '/eccns/search', {} }
+      before { get '/v1/eccns/search', {} }
       subject { response }
 
       it_behaves_like 'a successful search request'
@@ -30,7 +30,7 @@ describe 'ECCN API V1', type: :request do
     context 'when one document matches a query' do
       let(:one_match) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/eccns/one_match.json").read }
       let(:params) { { q: 'planar absorbers' } }
-      before { get '/eccns/search', params }
+      before { get '/v1/eccns/search', params }
       subject { response }
 
       it_behaves_like 'a successful search request'

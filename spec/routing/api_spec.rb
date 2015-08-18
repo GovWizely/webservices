@@ -13,7 +13,7 @@ describe 'routes for Trade Events' do
 
     it 'route to the first API trade_events version' do
       expect(get: request_path)
-        .to route_to(controller: 'api/v1/trade_events/consolidated', action: 'search', format: :json)
+        .to route_to(controller: 'api/v2/trade_events/consolidated', action: 'search', format: :json)
     end
   end
 
