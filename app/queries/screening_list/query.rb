@@ -12,6 +12,7 @@ module ScreeningList
     end
 
     include ScreeningList::GenerateFuzzyNameQuery
+    include ScreeningList::GenerateFuzzyAddressQuery
 
     private
 
@@ -27,6 +28,7 @@ module ScreeningList
       @issue_date = options[:issue_date] if options[:issue_date].present?
       @expiration_date = options[:expiration_date] if options[:expiration_date].present?
       @fuzzy_name = true if options[:fuzzy_name].present? && options[:fuzzy_name].try(:downcase) == 'true'
+      @fuzzy_address = true if options[:fuzzy_address].present? && options[:fuzzy_address].try(:downcase) == 'true'
     end
 
     def generate_query(json)
@@ -49,7 +51,11 @@ module ScreeningList
           end
 
           if @address
-            generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
+            if @fuzzy_address
+              generate_fuzzy_address_query(json)
+            else
+              generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
+            end
           end
         end
       end if [@q, @name, @distance, @address].any?
