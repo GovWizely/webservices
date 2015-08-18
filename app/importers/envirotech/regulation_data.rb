@@ -44,7 +44,7 @@ module Envirotech
     end
 
     def get_issues_ids(article)
-      @relation_data.select{ |_,v| v.with_indifferent_access[:regulations].include?(article[:name_english]) }.keys.map(&:to_i)
+      @relation_data.select { |_, v| v.with_indifferent_access[:regulations].include?(article[:name_english]) }.keys.map(&:to_i)
     end
   end
 end
