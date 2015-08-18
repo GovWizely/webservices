@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'OFAC Specially Designated Nationals API V1', type: :request do
   include_context 'ScreeningList::Sdn data'
 
-  describe 'GET /consolidated_screening_list/sdn/search' do
+  describe 'GET /v1/consolidated_screening_list/sdn/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/sdn/search', params }
+    before { get '/v1/consolidated_screening_list/sdn/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

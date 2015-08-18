@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'FTA Nicaragua Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Nicaragua data'
 
-  describe 'GET /tariff_rates/search?sources=NI' do
+  describe 'GET /v1/tariff_rates/search?sources=NI' do
     let(:params) { { sources: 'ni' } }
-    before { get '/tariff_rates/search', params }
+    before { get '/v1/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

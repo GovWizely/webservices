@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'ITA Trade Events API V1', type: :request do
   include_context 'TradeEvent::Ita data'
 
-  describe 'GET /trade_events/ita/search' do
+  describe 'GET /v1/trade_events/ita/search' do
     let(:params) { {} }
-    before { get '/trade_events/ita/search', params }
+    before { get '/v1/trade_events/ita/search', params }
     subject { response }
 
     context 'when search parameters are empty' do

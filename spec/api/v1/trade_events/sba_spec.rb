@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'SBA Trade Events API V1', type: :request do
   include_context 'TradeEvent::Sba data'
 
-  describe 'GET /trade_events/sba/search' do
+  describe 'GET /v1/trade_events/sba/search' do
     let(:params) { { size: 100 } }
-    before { get '/trade_events/sba/search', params }
+    before { get '/v1/trade_events/sba/search', params }
     subject { response }
 
     context 'when search parameters are empty' do

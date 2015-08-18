@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Consolidated Screening List API V1', type: :request do
   include_context 'all CSL fixture data'
 
-  describe 'GET /consolidated_screening_list/search' do
+  describe 'GET /v1/consolidated_screening_list/search' do
     let(:params) { { size: 100 } }
-    before { get '/consolidated_screening_list/search', params }
+    before { get '/v1/consolidated_screening_list/search', params }
 
     context 'when search parameters are empty' do
       subject { response }
@@ -271,8 +271,8 @@ describe 'Consolidated Screening List API V1', type: :request do
       end
     end
   end
-  describe 'GET /consolidated_screening_list/search.csv' do
-    before { get '/consolidated_screening_list/search.csv' }
+  describe 'GET /v1/consolidated_screening_list/search.csv' do
+    before { get '/v1/consolidated_screening_list/search.csv' }
     it 'is a CSV' do
       expect(response.status).to eq(200)
       expect(response.content_type.symbol).to eq(:csv)

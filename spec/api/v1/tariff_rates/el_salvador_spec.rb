@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'FTA El Salvador Tariff Rates API V1', type: :request do
   include_context 'TariffRate::ElSalvador data'
 
-  describe 'GET /tariff_rates/search?sources=SV' do
+  describe 'GET /v1/tariff_rates/search?sources=SV' do
     let(:params) { { sources: 'sv' } }
-    before { get '/tariff_rates/search', params }
+    before { get '/v1/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

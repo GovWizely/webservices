@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Trade Events API V1', type: :request do
   include_context 'TradeEvent::Ustda data'
 
-  describe 'GET /trade_events/ustda/search.json' do
+  describe 'GET /v1/trade_events/ustda/search.json' do
     let(:params) { { size: 100 } }
-    before { get '/trade_events/ustda/search', params }
+    before { get '/v1/trade_events/ustda/search', params }
     subject { response }
 
     context 'when search parameters are empty' do

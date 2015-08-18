@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'FTA Bahrain Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Bahrain data'
 
-  describe 'GET /tariff_rates/search?sources=BH' do
+  describe 'GET /v1/tariff_rates/search?sources=BH' do
     let(:params) { { sources: 'bh' } }
-    before { get '/tariff_rates/search', params }
+    before { get '/v1/tariff_rates/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

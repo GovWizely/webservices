@@ -7,12 +7,12 @@ describe 'Fbopen Leads API V1', type: :request do
       "#{Rails.root}/spec/fixtures/trade_leads/fbopen/patch_source_short_input").import
   end
 
-  let(:search_path) { '/fbopen_leads/search' }
+  let(:search_path) { '/v1/fbopen_leads/search' }
   let(:expected_results) do
     JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/fbopen/results.json").read)
   end
 
-  describe 'GET /fbopen_leads/search.json' do
+  describe 'GET /v1/fbopen_leads/search' do
     context 'when search parameters are empty' do
       before { get search_path, size: 100 }
       subject { response }

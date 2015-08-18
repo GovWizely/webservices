@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'Sectoral Sanctions Identifications List API V1', type: :request do
   include_context 'ScreeningList::Ssi data'
 
-  describe 'GET /consolidated_screening_list/ssi/search' do
+  describe 'GET /v1/consolidated_screening_list/ssi/search' do
     let(:params) { {} }
-    before { get '/consolidated_screening_list/ssi/search', params }
+    before { get '/v1/consolidated_screening_list/ssi/search', params }
 
     context 'when search parameters are empty' do
       subject { response }

@@ -3,9 +3,9 @@ require 'spec_helper'
 describe 'EXIM Trade Events API V1', type: :request do
   include_context 'TradeEvent::Exim data'
 
-  describe 'GET /trade_events/exim/search' do
+  describe 'GET /v1/trade_events/exim/search' do
     let(:params) { { size: 100 } }
-    before { get '/trade_events/exim/search', params }
+    before { get '/v1/trade_events/exim/search', params }
     subject { response }
 
     context 'when search parameters are empty' do
