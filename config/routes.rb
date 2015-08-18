@@ -102,8 +102,8 @@ Webservices::Application.routes.draw do
     concerns :api_routable
   end
 
-  scope module: 'api/v1', defaults: { format: :json } do
-    concerns :api_v1_routable
+  scope module: 'api/v2', defaults: { format: :json } do
+    concerns :api_v2_routable
     concerns :api_routable
   end
 
