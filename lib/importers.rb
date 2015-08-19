@@ -10,6 +10,6 @@ module Importers
 
     constants
       .map { |constant| const_get(constant) }
-      .select { |klass| klass.include?(Importer) }
+      .select { |klass| klass.include?(Importable) }
   end
 end

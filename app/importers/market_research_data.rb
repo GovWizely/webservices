@@ -2,7 +2,7 @@ require 'csv'
 require 'open-uri'
 
 class MarketResearchData
-  include Importer
+  include Importable
   include VersionableResource
 
   ENDPOINT = 'http://mr.export.gov/nextgen/ng.txt'

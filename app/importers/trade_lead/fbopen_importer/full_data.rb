@@ -3,7 +3,7 @@ require 'open-uri'
 module TradeLead
   module FbopenImporter
     class FullData
-      include Importer
+      include Importable
 
       XPATHS = {
         publish_date:                     '//DATE',

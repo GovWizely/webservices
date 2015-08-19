@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class SharepointTradeArticleData
-  include Importer
+  include Importable
 
   SINGLE_VALUE_XPATHS = {
     id:                       '//id',

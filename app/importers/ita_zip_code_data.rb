@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class ItaZipCodeData
-  include Importer
+  include Importable
   POST_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type=odo'
   ZIP_CODE_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?ZipCode=all'
 

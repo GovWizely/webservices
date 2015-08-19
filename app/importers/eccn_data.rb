@@ -3,7 +3,7 @@ require 'csv'
 require 'digest/md5'
 
 class EccnData
-  include ::Importer
+  include Importable
 
   EXPECTED_CSV_HEADERS = %w(description eccn1 eccn2 eccn3 eccn4 eccn5)
 

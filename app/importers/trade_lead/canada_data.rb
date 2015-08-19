@@ -3,7 +3,7 @@ require 'csv'
 
 module TradeLead
   class CanadaData
-    include Importer
+    include Importable
     ENDPOINT = 'https://buyandsell.gc.ca/procurement-data/csv/tender/active'
 
     COLUMN_HASH = {

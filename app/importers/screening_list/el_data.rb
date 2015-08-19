@@ -4,7 +4,7 @@ require 'digest/md5'
 
 module ScreeningList
   class ElData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     include ::CanEnsureCsvHeaders

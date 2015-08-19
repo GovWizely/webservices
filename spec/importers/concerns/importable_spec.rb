@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Importer do
+describe Importable do
   before do
     class Mock
       include Indexable
@@ -15,7 +15,7 @@ describe Importer do
     end
 
     class MockData
-      include Importer
+      include Importable
       def initialize(docs = nil)
         @docs = docs
       end

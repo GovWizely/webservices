@@ -1,6 +1,6 @@
 module TariffRate
   class PeruData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Peru_Data.csv'

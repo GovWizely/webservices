@@ -4,7 +4,7 @@ require 'digest/md5'
 
 module ScreeningList
   class DplData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     include ::CanEnsureCsvHeaders

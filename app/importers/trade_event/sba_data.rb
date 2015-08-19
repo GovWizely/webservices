@@ -2,7 +2,7 @@ require 'net/https'
 
 module TradeEvent
   class SbaData
-    include ::Importer
+    include Importable
 
     attr_accessor :html_entities_coder, :reject_if_ends_before
 

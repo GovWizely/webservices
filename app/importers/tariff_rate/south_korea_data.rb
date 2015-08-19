@@ -1,6 +1,6 @@
 module TariffRate
   class SouthKoreaData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Korea_Data.csv'

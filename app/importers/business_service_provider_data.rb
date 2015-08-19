@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class BusinessServiceProviderData
-  include Importer
+  include Importable
   include VersionableResource
   ENDPOINT = 'http://emenuapps.ita.doc.gov/ePublic/bsp/alljson/en/bsp.xml'
 

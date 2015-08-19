@@ -2,7 +2,7 @@ require 'csv'
 
 module TradeLead
   class UkData
-    include Importer
+    include Importable
 
     def initialize(resource = nil)
       @resource = resource

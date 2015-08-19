@@ -1,6 +1,6 @@
 module Envirotech
   class RegulationData < Envirotech::BaseData
-    include Importer
+    include Importable
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulations.json'
 
     COLUMN_HASH = {

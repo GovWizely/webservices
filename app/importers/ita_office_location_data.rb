@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class ItaOfficeLocationData
-  include Importer
+  include Importable
   COMMON_URL_FRAGMENT = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type='
   OFFICE_TYPES = %w(odo oio)
   DEFAULT_RESOURCES = OFFICE_TYPES.map { |office_type| [COMMON_URL_FRAGMENT, office_type].join }

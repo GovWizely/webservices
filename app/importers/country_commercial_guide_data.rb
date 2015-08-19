@@ -1,5 +1,5 @@
 class CountryCommercialGuideData
-  include Importer
+  include Importable
 
   URI = 'https://github.com/GovWizely/ccg.git'
   NAME = 'ccg'

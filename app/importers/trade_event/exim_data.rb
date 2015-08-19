@@ -2,7 +2,7 @@ require 'open-uri'
 
 module TradeEvent
   class EximData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     attr_accessor :reject_if_ends_before
