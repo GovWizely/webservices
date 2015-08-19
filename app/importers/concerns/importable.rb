@@ -5,6 +5,13 @@ module Importable
 
   included do
     send(:prepend, ParentInstanceMethods)
+
+    class << self
+      attr_accessor :disabled
+      def disabled?
+        !!disabled
+      end
+    end
   end
 
   def available_version

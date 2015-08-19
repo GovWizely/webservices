@@ -12,6 +12,11 @@ shared_examples_for 'CanImportAllSources' do
       offenders = subject.find_all { |i| i.class != Class || !i.include?(Importable) }
       expect(offenders.length).to eq(0)
     end
+
+    it 'only contains enabled importers' do
+      offenders = subject.find_all(&:disabled?)
+      expect(offenders.length).to eq(0)
+    end
   end
 
   describe '.import_all_sources' do

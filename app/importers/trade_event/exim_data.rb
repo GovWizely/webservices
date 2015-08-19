@@ -5,6 +5,8 @@ module TradeEvent
     include Importable
     include ::VersionableResource
 
+    self.disabled = true
+
     attr_accessor :reject_if_ends_before
 
     ENDPOINT = 'http://www.exim.gov/customcf/feeds/events/'
