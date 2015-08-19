@@ -1,8 +1,5 @@
 module CanImportAllSources
   extend ActiveSupport::Concern
-  # This module can be used to extend a module which contains importer classes.
-  # It adds a module method which returns the list of importers that the module
-  # contains.
 
   module ClassMethods
     def importers
@@ -13,6 +10,20 @@ module CanImportAllSources
       constants
         .map { |constant| const_get(constant) }
         .select { |klass| klass.include?(Importable) }
+    end
+
+    def import_all_sources
+      importers.each do |i|
+        next if disabled.include?(i)
+        ImportWorker.perform_async(i.name)
+      end
+      true
+    end
+
+    private
+
+    def disabled
+      [TradeEvent::EximData]
     end
   end
 end
