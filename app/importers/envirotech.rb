@@ -1,3 +1,3 @@
 module Envirotech
-  extend ::Importers
+  include CanImportAllSources
 end

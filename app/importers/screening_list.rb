@@ -1,3 +1,3 @@
 module ScreeningList
-  extend ::Importers
+  include CanImportAllSources
 end

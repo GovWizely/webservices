@@ -1,3 +1,3 @@
 module TradeEvent
-  extend ::Importers
+  include CanImportAllSources
 end

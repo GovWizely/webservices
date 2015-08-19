@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Importers do
+describe CanImportAllSources do
   let(:importers) do
     [TradeEvent::DlData, TradeEvent::EximData, TradeEvent::ItaData,
      TradeEvent::SbaData, TradeEvent::UstdaData]

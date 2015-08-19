@@ -1,3 +1,3 @@
 module TariffRate
-  extend ::Importers
+  include CanImportAllSources
 end
