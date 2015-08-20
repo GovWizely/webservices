@@ -1,6 +1,10 @@
 require 'spec_helper'
 
 describe TradeEvent::SbaData do
+  before(:all) do
+    TradeEvent::Sba.recreate_index
+  end
+
   let(:resource) { "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0" }
   let(:importer) do
     described_class.new(resource,
@@ -25,4 +29,12 @@ describe TradeEvent::SbaData do
       importer.import
     end
   end
+
+  describe '#available_version' do
+    it 'is as expected' do
+      expect(importer.available_version)
+        .to eq('bd0efd6f71aa718956eb55dcd030a3814199129744badf8464e73ccdde74b385e798c18522d3ba9d')
+    end
+  end
+
 end
