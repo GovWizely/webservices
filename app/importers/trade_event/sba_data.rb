@@ -16,17 +16,31 @@ module TradeEvent
     end
 
     def import
-      url = URI.parse(@resource)
-
-      loop do
-        docs = import_single(url.to_s)
-        break unless docs.any?
-        Sba.index remove_invalid(docs)
-        url.query.sub!(/offset=(\d+)/) { "offset=#{Regexp.last_match[1].to_i + 100}" }
+      iterate_over_source_urls do |_body, docs|
+        Sba.index(remove_invalid(docs))
       end
     end
 
+    def available_version
+      checksums = []
+      iterate_over_source_urls do |body, _docs|
+        checksums.push(Digest::SHA1.hexdigest(body))
+      end
+      checksums.join
+    end
+
     private
+
+    def iterate_over_source_urls
+      url = URI.parse(@resource)
+      loop do
+        body = get_url_body(url.to_s)
+        docs = extract_docs(body)
+        break unless docs.any?
+        yield(body, docs)
+        url.query.sub!(/offset=(\d+)/) { "offset=#{Regexp.last_match[1].to_i + 100}" }
+      end
+    end
 
     SINGLE_VALUED_XPATHS = {
       cost:              './fee',
@@ -58,10 +72,13 @@ module TradeEvent
       venue:   './location_name',
     }.freeze
 
-    def import_single(url)
-      body = (url =~ /^http/) ? open_with_tlsv1(url) : File.open(url).read
+    def extract_docs(body)
       xml = Nokogiri::XML(body)
       xml.xpath('//result/item').map { |item| process_item(item) }
+    end
+
+    def get_url_body(url)
+      url =~ /^http/ ? open_with_tlsv1(url) : File.open(url).read
     end
 
     # :nocov:
