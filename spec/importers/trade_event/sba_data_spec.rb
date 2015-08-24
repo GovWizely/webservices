@@ -36,5 +36,4 @@ describe TradeEvent::SbaData do
         .to eq('bd0efd6f71aa718956eb55dcd030a3814199129744badf8464e73ccdde74b385e798c18522d3ba9d')
     end
   end
-
 end
