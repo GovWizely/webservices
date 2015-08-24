@@ -41,4 +41,4 @@ class ParatureFaq
     full_name: 'ITA',
     code:      'PFAQ',
   }
-  end
+end
