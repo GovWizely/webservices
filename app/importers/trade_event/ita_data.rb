@@ -2,7 +2,7 @@ require 'open-uri'
 
 module TradeEvent
   class ItaData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     ENDPOINT = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020"

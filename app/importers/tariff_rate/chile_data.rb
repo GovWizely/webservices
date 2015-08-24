@@ -1,6 +1,6 @@
 module TariffRate
   class ChileData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Chile_Data.csv'

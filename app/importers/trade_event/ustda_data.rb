@@ -3,7 +3,7 @@ require 'csv'
 
 module TradeEvent
   class UstdaData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     ENDPOINT = 'http://www.ustda.gov/events/USTDATradeEvents.csv'

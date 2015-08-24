@@ -26,6 +26,7 @@ end
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
 Dir[Rails.root.join('spec/support/**/*.rb')].each { |f| require f }
+require Rails.root.join('spec/importers/concerns/can_import_all_sources_behavior.rb')
 
 RSpec.configure do |config|
   config.before(:suite) do

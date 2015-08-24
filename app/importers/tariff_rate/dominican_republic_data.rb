@@ -1,6 +1,6 @@
 module TariffRate
   class DominicanRepublicData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Dominican_Republic_Data.csv'

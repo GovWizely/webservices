@@ -3,7 +3,7 @@ require 'open-uri'
 module TradeLead
   module FbopenImporter
     class PatchData
-      include Importer
+      include Importable
 
       COLUMN_HASH = {
         'ntype'      => :notice_type,

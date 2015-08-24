@@ -4,7 +4,7 @@ require 'digest/md5'
 
 module ScreeningList
   class UvlData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     include ::CanEnsureCsvHeaders

@@ -2,7 +2,7 @@ require 'open-uri'
 require 'csv'
 
 class ParatureFaqData
-  include Importer
+  include Importable
 
   COLUMN_HASH = {
     id:           :id,

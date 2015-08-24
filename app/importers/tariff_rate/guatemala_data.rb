@@ -1,6 +1,6 @@
 module TariffRate
   class GuatemalaData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Guatemala_Data.csv'

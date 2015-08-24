@@ -1,10 +1,16 @@
-module Importer
+module Importable
+  extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
   # can be included into any class that will do so.
 
-  def self.included(base)
-    base.class_eval do
-      base.send(:prepend, ParentInstanceMethods)
+  included do
+    send(:prepend, ParentInstanceMethods)
+
+    class << self
+      attr_accessor :disabled
+      def disabled?
+        !!disabled
+      end
     end
   end
 
@@ -77,7 +83,7 @@ module Importer
   end
 
   def country_name_mappings
-    @@country_name_mappings ||= YAML.load_file(File.join(__dir__, 'country_mappings.yaml'))
+    @@country_name_mappings ||= YAML.load_file(File.join(Rails.root, 'config', 'country_mappings.yaml'))
   end
 
   def normalize_country(country_str)

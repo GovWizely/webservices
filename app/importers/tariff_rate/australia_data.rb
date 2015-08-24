@@ -1,6 +1,6 @@
 module TariffRate
   class AustraliaData
-    include ::Importer
+    include Importable
     include TariffRate::Importer
 
     self.default_endpoint = 'FTA_Australia_Data.csv'

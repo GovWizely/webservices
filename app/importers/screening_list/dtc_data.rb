@@ -2,7 +2,7 @@ require 'csv'
 
 module ScreeningList
   class DtcData
-    include ::Importer
+    include Importable
     include ::VersionableResource
 
     include ::CanEnsureCsvHeaders

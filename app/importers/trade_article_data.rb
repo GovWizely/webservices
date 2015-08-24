@@ -1,7 +1,7 @@
 require 'open-uri'
 
 class TradeArticleData
-  include Importer
+  include Importable
   include VersionableResource
   ENDPOINT = 'https://new.export.gov/community/posts/content.json'
 

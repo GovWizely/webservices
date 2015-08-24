@@ -3,7 +3,7 @@ require 'open-uri'
 
 module TradeLead
   class AustraliaData
-    include Importer
+    include Importable
     include VersionableResource
 
     # Original source: http://data.gov.au/dataset/austender-contract-notice-export

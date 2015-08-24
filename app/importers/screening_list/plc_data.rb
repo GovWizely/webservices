@@ -1,6 +1,6 @@
 module ScreeningList
   class PlcData
-    include ::Importer
+    include Importable
     include ScreeningList::TreasuryListImporter
     include ScreeningList::MakeNameVariants
     self.default_endpoint =

@@ -2,7 +2,7 @@ require 'open-uri'
 
 module TradeLead
   class McaData
-    include Importer
+    include Importable
     ENDPOINT = 'http://www.dgmarket.com/tenders/RssFeedAction.do?locationISO=&keywords=Millennium+Challenge+Account&sub=&noticeType=gpn%2cpp%2cspn%2crfc&language'
     FUNDING_SOURCE = 'Millennium Challenge Account (MCA)'
 
