@@ -1,6 +1,8 @@
 module Envirotech
   class BackgroundLinkData < Envirotech::BaseData
     include Importable
+    include ::VersionableResource
+
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulatory_background_links.json'
 
     COLUMN_HASH = {
@@ -21,7 +23,7 @@ module Envirotech
     end
 
     def import
-      data = @resource =~ URI.regexp ? fetch_data : JSON.parse(File.open(@resource).read)
+      data = @resource =~ URI.regexp ? fetch_data : JSON.parse(loaded_resource)
       articles = data.map { |article_hash| process_article_info article_hash }
       model_class.index articles
     end

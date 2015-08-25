@@ -1,6 +1,8 @@
 module Envirotech
   class AnalysisLinkData < Envirotech::BaseData
     include Importable
+    include ::VersionableResource
+
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulatory_analysis_links.json'
 
     COLUMN_HASH = {

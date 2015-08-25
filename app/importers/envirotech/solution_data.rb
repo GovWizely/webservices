@@ -2,6 +2,7 @@ module Envirotech
   class SolutionData < Envirotech::BaseData
     include Importable
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_solutions.json'
+    include ::VersionableResource
 
     COLUMN_HASH = {
       'id'              => :source_id,
