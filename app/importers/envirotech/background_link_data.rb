@@ -22,8 +22,11 @@ module Envirotech
       @resource = resource
     end
 
+    def loaded_resource
+      @loaded_resource ||= data.to_s
+    end
+
     def import
-      data = @resource =~ URI.regexp ? fetch_data : JSON.parse(loaded_resource)
       articles = data.map { |article_hash| process_article_info article_hash }
       model_class.index articles
     end
@@ -41,6 +44,10 @@ module Envirotech
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
       sanitize_entry(article)
+    end
+
+    def data
+      @data ||= fetch_data
     end
   end
 end

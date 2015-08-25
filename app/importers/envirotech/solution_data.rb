@@ -20,8 +20,11 @@ module Envirotech
       @relation_data = relation_data
     end
 
+    def loaded_resource
+      @loaded_resource ||= data.to_s
+    end
+
     def import
-      data = fetch_data
       articles = data.map { |article_hash| process_article_info article_hash }
       model_class.index articles
     end
@@ -45,6 +48,10 @@ module Envirotech
 
     def get_issues_ids(article)
       @relation_data.select { |_, v| v.with_indifferent_access[:solutions].include?(article[:name_english]) }.keys.map(&:to_i)
+    end
+
+    def data
+      @data ||= fetch_data
     end
   end
 end
