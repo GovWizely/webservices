@@ -4,6 +4,7 @@ describe Envirotech::BaseData do
   let(:fixtures_file) do
     "#{Rails.root}/spec/fixtures/envirotech/base/base.json"
   end
+
   subject do
     base = described_class.new
     base.instance_variable_set('@resource', 'http://example.com')
