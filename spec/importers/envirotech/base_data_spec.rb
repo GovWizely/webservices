@@ -28,6 +28,7 @@ describe Envirotech::BaseData do
     allow(agent).to receive(:get).with('http://example.com?page=1') do
       double(body: File.open(fixtures_file).read)
     end
+    
     allow(agent).to receive(:get).with('http://example.com?page=2') do
       double(body: '[]')
     end

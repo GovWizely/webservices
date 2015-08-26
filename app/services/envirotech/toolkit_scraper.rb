@@ -3,7 +3,6 @@ module Envirotech
     def initialize
       agent.get('https://new.export.gov/envirotech/toolkit')
     rescue Mechanize::ResponseCodeError
-      nil
     end
 
     def lookup_issue(issue_name)
