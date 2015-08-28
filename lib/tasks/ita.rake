@@ -30,6 +30,8 @@ namespace :ita do
 
   desc 'Recreate indices that have had their Model.mappings modified'
   task import_empty_indices: :environment do
-    ImportEmptyIndices.call
+    # Make this a no-op for now while the Envirotech endpoints still need
+    # manual importd on staging.
+    #ImportEmptyIndices.call
   end
 end
