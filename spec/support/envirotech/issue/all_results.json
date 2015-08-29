@@ -1,11 +1,13 @@
 [
   {
+    "source_id": 24,
+    "regulation_ids": [19],
+    "solution_ids": [200],
     "abstract_chinese": "城市污水的一个重要特点是它适合于生物处理。城市处理厂的生物处理组件被称为二级处理，通常继简单沉淀（初级处理）之后。二级处理标准由EPA针对公有处理厂（POTW）而设定，反映二级污水处理厂的工作表现。二级处理标准还适用于与合流污水渠、工业废物、废物稳定塘、合并和单独下水道浓度较低污水流相关的特别注意事项，替代标准适用于被视为与二级处理同等的处理设施。",
     "abstract_english": "An important aspect of municipal wastewater is that it is amenable to biological treatment. The biological treatment component of a municipal treatment plant is termed secondary treatment and is usually preceded by simple settling (primary treatment). Secondary treatment standards are established by EPA for publicly owned treatment works (POTWs) and reflect the performance of secondary wastewater treatment plants. The secondary treatment standards also provide for special considerations regarding combined sewers, industrial wastes, waste stabilization ponds, less concentrated influent wastewater for combined and separate sewers, and alternative standards for treatment facilities considered equivalent to secondary treatment.",
     "abstract_french": "Un des aspects le plus importants des eaux usées municipales est que celles-ci réagissent à un traitement biologique. Le composant de traitement biologique d'une station d'épuration municipale est appelé le traitement secondaire, et il est habituellement précédé d'une simple préparation (traitement primaire). Les normes de traitement secondaire sont établies par l'EPA pour les stations d'épurations des eaux usées de propriété publique (POTW en anglais) et reflètent la performance de stations d'épurations des eaux usées secondaires. Les normes de traitement secondaire offrent également des considérations particulières concernant les égouts unitaires, les déchets industriels, les étangs de stabilisation de déchets, des eaux usées de pénétration moins concentrées pour les égouts unitaires et séparatifs ainsi que des normes alternatives pour les stations d'épurations considérées comme équivalentes au traitement secondaire.",
     "abstract_portuguese": "Um aspecto importante dos efluentes municipais é que é passível de tratamento biológico. O componente do tratamento biológico de uma estação de tratamento municipal é denominado tratamento secundário e geralmente é precedido pela simples sedimentação (tratamento primário). Os padrões de tratamento secundário são estabelecidos pela EPA para obras de tratamento públicas e refletem o desempenho das estações de tratamento secundário de águas residuais. Os padrões de tratamento secundário também incluem considerações especiais sobre esgotos combinados, resíduos industriais, lagoas de estabilização, águas residuais afluentes menos concentradas para esgotos combinados e separados, e padrões alternativos para estações de tratamento considerados equivalentes ao tratamento secundário.",
     "abstract_spanish": "Un aspecto importante de las aguas residuales municipales es que responden al tratamiento biológico. El componente de tratamiento biológico de una planta municipal de tratamiento se denomina tratamiento secundario y usualmente la precede el tratamiento primario. La EPA establece las normas sobre el tratamiento secundario para el tratamiento público (POTWs) y reflejan el funcionamiento de las plantas de tratamiento secundario de aguas residuales. Las normas de tratamiento secundario también disponen consideraciones especiales sobre alcantarillados combinados, desechos industriales, lagunas de estabilización de desechos, agua residual influente menos concentrada para alcantarillados combinados y separados, y normas de instalaciones para tratamientos que se consideran equivalentes al tratamiento secundario.",
-    "source_id": 24,
     "name_chinese": "二级或高级污水处理",
     "name_english": "Secondary or Advanced Wastewater Treatment",
     "name_french": "Traitement secondaire ou avancé des eaux usées",
@@ -16,6 +18,8 @@
   },
   {
     "source_id": 23,
+    "regulation_ids": [21],
+    "solution_ids": [201],
     "name_chinese": "生物固体/污泥处理、利用或处置",
     "name_english": "Biosolid/Sludge Management, Use, or Disposal",
     "name_french": "Gestion, utilisation et élimination de biosolides",
