@@ -20,13 +20,13 @@ module Envirotech
       issue_documents = []
       articles.each do |article|
         next if article[:issue_ids].blank?
-        issues = Envirotech::Consolidated.search_for(sources: 'issues',
+        issues = Envirotech::Consolidated.search_for(sources:    'issues',
                                                      source_ids: article[:issue_ids].map(&:inspect).join(','),
-                                                     size: 100)
+                                                     size:       100)
         issue_documents << issues[:hits].map { |hit| { hit[:_id] => article[:source_id] } }
       end
       issue_documents = issue_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
-      issue_documents.map { |k,v| { id: k, issue_document_key => v } }
+      issue_documents.map { |k, v| { id: k, issue_document_key => v } }
     end
   end
 end

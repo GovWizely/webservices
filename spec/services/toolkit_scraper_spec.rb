@@ -22,11 +22,11 @@ describe Envirotech::ToolkitScraper do
         allow(Envirotech::Consolidated).to receive(:search_for) do
           {
             hits: [{
-                     _source: {
-                       source_id:    1,
-                       name_english: 'foo',
-                     },
-                   }],
+              _source: {
+                source_id:    1,
+                name_english: 'foo',
+              },
+            }],
           }
         end
         scraper
@@ -52,18 +52,17 @@ describe Envirotech::ToolkitScraper do
         allow(Envirotech::Consolidated).to receive(:search_for) do
           {
             hits: [{
-                     _source: {
-                       source_id:    1,
-                       name_english: 'foo',
-                     },
-                   }],
+              _source: {
+                source_id:    1,
+                name_english: 'foo',
+              },
+            }],
           }
         end
 
         allow(Mechanize).to receive(:new).and_return(agent)
         described_class.new
       end
-
 
       it 'returns nil' do
         expect(scraper.all_issue_info).to be_nil
