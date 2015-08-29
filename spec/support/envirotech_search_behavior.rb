@@ -1,6 +1,6 @@
 shared_context 'all Envirotech fixture data' do
-  include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
+  include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Regulation data'
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
