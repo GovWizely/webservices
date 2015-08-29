@@ -8,7 +8,6 @@ module Envirotech
     Envirotech::ProviderData.new.import
 
     relational_data = Envirotech::ToolkitData.fetch_relational_data
-
     Envirotech::RegulationData.new(relation_data: relational_data).import
     Envirotech::SolutionData.new(relation_data: relational_data).import
     Envirotech::ProviderSolutionData.new.import

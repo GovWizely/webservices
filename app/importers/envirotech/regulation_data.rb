@@ -44,7 +44,7 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
-      article[:issue_id] = get_issue_ids(article) if @relation_data.present?
+      article[:issue_ids] = get_issue_ids(article) if @relation_data.present?
 
       sanitize_entry(article)
     end

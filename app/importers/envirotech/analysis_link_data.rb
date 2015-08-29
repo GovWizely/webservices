@@ -15,7 +15,7 @@ module Envirotech
       'created_at'          => :source_created_at,
       'updated_at'          => :source_updated_at,
       'url'                 => :url,
-      'envirotech_issue_id' => :issue_id,
+      'envirotech_issue_id' => :issue_ids,
     }.freeze
 
     def initialize(resource = ENDPOINT)

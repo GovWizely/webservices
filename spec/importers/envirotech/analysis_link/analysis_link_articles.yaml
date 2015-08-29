@@ -8,7 +8,7 @@
   :source: ANALYSIS_LINKS
   :source_created_at: '2013-11-13'
   :source_id: 21
-  :issue_id: 19
+  :issue_ids: 19
   :source_updated_at: '2013-11-13'
   :url: 'http://www.epa.gov/ttn/ecas/regdata/RIAs/oilnaturalgasfinalria.pdf'
 - :id: c518e53772d00305f59428a9f0095674b51be621
@@ -20,6 +20,6 @@
   :source: ANALYSIS_LINKS
   :source_created_at: '2013-10-31'
   :source_id: 10
-  :issue_id: 22
+  :issue_ids: 22
   :source_updated_at: '2013-10-31'
   :url: 'http://water.epa.gov/drink/info/arsenic/upload/2005_11_10_arsenic_methods.pdf'

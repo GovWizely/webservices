@@ -9,7 +9,7 @@
     "source_created_at": "2013-08-08",
     "source_updated_at": "2013-11-13",
     "url": "http://www.gpo.gov/fdsys/pkg/CFR-2011-title40-vol6/xml/CFR-2011-title40-vol6-part60.xml",
-    "issue_id": [23]
+    "issue_ids": [23]
   },
   {
     "source_id": 19,
@@ -21,7 +21,7 @@
     "source_created_at": "2013-08-08",
     "source_updated_at": "2013-12-09",
     "url": "http://www.gpo.gov/fdsys/pkg/CFR-2011-title40-vol6/xml/CFR-2011-title40-vol6-part60.xml",
-    "issue_id": [24]
+    "issue_ids": [24]
   }
 ]
 

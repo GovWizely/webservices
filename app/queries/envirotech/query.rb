@@ -29,9 +29,9 @@ module Envirotech
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.source_id @source_ids } } if @source_ids.any?
-            json.child! { json.terms { json.issue_id @issue_ids } } if @issue_ids.any?
+            json.child! { json.terms { json.issue_ids @issue_ids } } if @issue_ids.any?
             json.child! { json.terms { json.provider_id @provider_ids } } if @provider_ids.any?
-            json.child! { json.terms { json.solution_id @solution_ids } } if @solution_ids.any?
+            json.child! { json.terms { json.solution_ids @solution_ids } } if @solution_ids.any?
           end
         end
       end if any_field_exist?

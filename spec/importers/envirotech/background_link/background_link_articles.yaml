@@ -8,7 +8,7 @@
   :source: BACKGROUND_LINKS
   :source_created_at: '2013-08-16'
   :source_id: 1
-  :issue_id: 12
+  :issue_ids: 12
   :source_updated_at: '2013-08-16'
   :url: 'http://www.epa.gov/superfund/policy/index.htm'
 - :id: ac167d127fc31f99edb3a2fbcefa20419515d2cb
@@ -20,6 +20,6 @@
   :source: BACKGROUND_LINKS
   :source_created_at: '2013-08-16'
   :source_id: 5
-  :issue_id: 16
+  :issue_ids: 16
   :source_updated_at: '2013-08-16'
   :url: 'http://www.gpo.gov/fdsys/pkg/FR-2012-08-16/pdf/2012-16806.pdf'
