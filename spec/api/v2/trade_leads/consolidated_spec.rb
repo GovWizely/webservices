@@ -12,14 +12,13 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       subject { response }
       it_behaves_like 'a successful search request'
 
-      it_behaves_like 'it contains all TradeLead::Australia results'
       it_behaves_like 'it contains all TradeLead::Fbopen results'
       it_behaves_like 'it contains all TradeLead::State results'
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains all TradeLead::Canada results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
-          [TradeLead::Australia, TradeLead::Fbopen, TradeLead::State,
+          [TradeLead::Fbopen, TradeLead::State,
            TradeLead::Uk, TradeLead::Canada, TradeLead::Mca]
         end
       end
@@ -29,17 +28,6 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:source) { TradeLead::Mca }
       let(:expected) { [0, 1, 2] }
       it_behaves_like 'it contains all expected results of source'
-    end
-
-    context 'when source is specified' do
-      subject { response }
-
-      let(:params) { { sources: 'AUSTRALIA' } }
-      it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Australia results'
-      it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [TradeLead::Australia] }
-      end
     end
 
     context 'when source is set to "FBO"' do
@@ -81,7 +69,6 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
     context "when search query is set to 'equipment'" do
       let(:params) { { q: 'equipment' } }
-      it_behaves_like 'it contains all TradeLead::Australia results that match "equipment"'
       it_behaves_like 'it contains all TradeLead::Fbopen results that match "equipment"'
       it_behaves_like 'it contains all TradeLead::State results that match "equipment"'
       it_behaves_like 'it contains all TradeLead::Uk results that match "equipment"'
@@ -95,17 +82,8 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
     it_behaves_like "an empty result when a query doesn't match any documents"
 
-    context "when search query is set to 'equipment' and source is set to 'AUSTRALIA'" do
-      let(:params) { { q: 'equipment', sources: 'AUSTRALIA' } }
-      it_behaves_like 'it contains all TradeLead::Australia results that match "equipment"'
-      it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [TradeLead::Australia] }
-      end
-    end
-
     context "when industries is set to 'Medical'" do
       let(:params) { { industries: 'Health Care and Social Assistance,G009E: Medical/Dental Clinic Services' } }
-      it_behaves_like 'it contains all TradeLead::Australia results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Fbopen results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::State results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Canada results that match industries "Health Care Medical"'
@@ -121,13 +99,6 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     context "when contries is set to 'CA'" do
       let(:params) { { countries: 'CA' } }
       it_behaves_like 'it contains all TradeLead::Canada results'
-    end
-
-    context 'when publish_date_amended_start or publish_date_amended_end is specified' do
-      subject { response }
-      let(:params) { { sources: 'Australia', publish_date_amended: '2013-01-04 TO 2013-01-04' } }
-      it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04'
     end
 
     context 'when publish_date_start or publish_date_end is specified' do

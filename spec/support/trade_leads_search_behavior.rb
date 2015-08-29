@@ -1,46 +1,9 @@
 shared_context 'all Trade Leads fixture data' do
-  include_context 'TradeLead::Australia data'
   include_context 'TradeLead::Fbopen data'
   include_context 'TradeLead::Canada data'
   include_context 'TradeLead::State data'
   include_context 'TradeLead::Uk data'
   include_context 'TradeLead::Mca data'
-end
-
-shared_context 'TradeLead::Australia data' do
-  before(:all) do
-    TradeLead::Australia.recreate_index
-    TradeLead::AustraliaData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv").import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeLead::Australia] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read)
-  end
-end
-
-shared_examples 'it contains all TradeLead::Australia results' do
-  let(:source) { TradeLead::Australia }
-  let(:expected) { [0, 1, 2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Australia results that match "equipment"' do
-  let(:source) { TradeLead::Australia }
-  let(:expected) { [1, 2] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Australia results that match industries "Health Care Medical"' do
-  let(:source) { TradeLead::Australia }
-  let(:expected) { [] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04' do
-  let(:source) { TradeLead::Australia }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
 end
 
 shared_context 'TradeLead::Canada data' do

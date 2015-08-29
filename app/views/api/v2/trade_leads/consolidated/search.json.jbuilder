@@ -1,5 +1,4 @@
 field_lists = {
-  australia: [:agency, :contract_value, :description, :parent_id, :procurement_method, :publish_date_amended, :status, :topic, :url, :source],
   canada:    [:country, :title, :reference_number, :contract_number, :publish_date, :end_date,
               :publish_date_amended, :status, :industry,
               :specific_location, :notice_type, :trade_agreement, :bid_type,
