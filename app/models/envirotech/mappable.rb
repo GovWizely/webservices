@@ -62,6 +62,7 @@ module Envirotech
             issue_id:            { type: 'integer' },
             provider_id:         { type: 'integer' },
             solution_id:         { type: 'integer' },
+            regulation_ids:      { type: 'integer' },
           },
         },
       }.freeze
