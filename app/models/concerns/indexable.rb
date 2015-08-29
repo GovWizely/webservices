@@ -84,6 +84,11 @@ module Indexable
       Rails.logger.info "Imported #{records.size} entries to index #{index_name}"
     end
 
+    def update(records)
+      records.each { |record| ES.client.update(prepare_record_for_updating(record)) }
+      ES.client.indices.refresh(index: index_name)
+    end
+
     def purge_old(before_time)
       fail 'This model is unable to purge old documents' unless can_purge_old?
       body = {
@@ -124,6 +129,15 @@ module Indexable
       prepared.merge!(ttl: record[:ttl]) if record[:ttl]
       prepared.merge!(timestamp: record[:timestamp]) if record[:timestamp]
       prepared
+    end
+
+    def prepare_record_for_updating(record)
+      {
+        index: index_name,
+        type:  index_type,
+        id:    record[:id],
+        body:  { doc: record.except(:id) },
+      }
     end
   end
 end

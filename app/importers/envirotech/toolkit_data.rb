@@ -15,5 +15,18 @@ module Envirotech
 
       scraped || local
     end
+
+    def self.process_issue_relations(articles, issue_document_key)
+      issue_documents = []
+      articles.each do |article|
+        next if article[:issue_id].blank?
+        issues = Envirotech::Consolidated.search_for(sources: 'issues',
+                                                     source_ids: article[:issue_id].map(&:inspect).join(','),
+                                                     size: 100)
+        issue_documents << issues[:hits].map { |hit| { hit[:_id] => article[:source_id] } }
+      end
+      issue_documents = issue_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
+      issue_documents.map { |k,v| { id: k, issue_document_key => v } }
+    end
   end
 end
