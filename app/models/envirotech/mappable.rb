@@ -59,9 +59,9 @@ module Envirotech
             url:                 { type: 'string' },
             source_id:           { type: 'integer' },
 
-            issue_id:            { type: 'integer' },
+            issue_ids:           { type: 'integer' },
             provider_id:         { type: 'integer' },
-            solution_id:         { type: 'integer' },
+            solution_ids:        { type: 'integer' },
             regulation_ids:      { type: 'integer' },
           },
         },

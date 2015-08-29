@@ -19,9 +19,9 @@ module Envirotech
     def self.process_issue_relations(articles, issue_document_key)
       issue_documents = []
       articles.each do |article|
-        next if article[:issue_id].blank?
+        next if article[:issue_ids].blank?
         issues = Envirotech::Consolidated.search_for(sources: 'issues',
-                                                     source_ids: article[:issue_id].map(&:inspect).join(','),
+                                                     source_ids: article[:issue_ids].map(&:inspect).join(','),
                                                      size: 100)
         issue_documents << issues[:hits].map { |hit| { hit[:_id] => article[:source_id] } }
       end
