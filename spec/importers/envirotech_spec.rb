@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe Envirotech do
-  describe '.import_all_sources' do
+  describe '.import_sequentially' do
     let(:all_issue_info) { { dummy: 1 } }
     let(:local_data) { { 'dummy' => 1 } }
 
@@ -32,7 +32,15 @@ describe Envirotech do
       expect_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data)
       expect(Envirotech::ToolkitData).to receive(:fetch_relational_data)
 
-      described_class.import_all_sources
+      described_class.import_sequentially
+    end
+  end
+
+  describe '.import_all_sources' do
+    subject { described_class.import_all_sources }
+    it 'kicks off background import job' do
+      expect(Envirotech::ImportWorker).to receive(:perform_async)
+      subject
     end
   end
 end
