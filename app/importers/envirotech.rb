@@ -2,6 +2,10 @@ module Envirotech
   include CanImportAllSources
 
   def self.import_all_sources
+    Envirotech::ImportWorker.perform_async
+  end
+
+  def self.import_sequentially
     Envirotech::IssueData.new.import
     Envirotech::BackgroundLinkData.new.import
     Envirotech::AnalysisLinkData.new.import
