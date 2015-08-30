@@ -11,6 +11,15 @@ shared_context 'all Envirotech fixture data' do
   end
 end
 
+shared_context 'empty Envirotech indices' do
+  before(:all) do
+    %w(Issue Solution Regulation Provider
+       AnalysisLink BackgroundLink ProviderSolution).each do |model_name|
+      "Envirotech::#{model_name}".constantize.recreate_index
+    end
+  end
+end
+
 shared_context 'Envirotech::Solution data' do
   before(:all) do
     Envirotech::Solution.recreate_index

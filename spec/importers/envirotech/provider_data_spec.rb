@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe Envirotech::ProviderData do
+  include_context 'empty Envirotech indices'
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json" }
   let(:importer) { described_class.new(fixtures_file) }
   let(:articles_hash) { YAML.load_file("#{File.dirname(__FILE__)}/provider/provider_articles.yaml") }
