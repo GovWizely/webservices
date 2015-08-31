@@ -1,6 +1,7 @@
 module ScreeningList
   class IsaData
     include Importable
+    include VersionableResource
     include ScreeningList::TreasuryListImporter
     include ScreeningList::MakeNameVariants
     self.default_endpoint =

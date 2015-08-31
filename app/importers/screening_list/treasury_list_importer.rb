@@ -3,7 +3,6 @@ require 'uri'
 
 module ScreeningList
   module TreasuryListImporter
-    include ::VersionableResource
     def self.included(base)
       base.class_eval do
         class << self

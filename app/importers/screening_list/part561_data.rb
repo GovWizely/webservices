@@ -1,6 +1,7 @@
 module ScreeningList
   class Part561Data
     include Importable
+    include VersionableResource
     include ScreeningList::TreasuryListImporter
     include ScreeningList::MakeNameVariants
     self.default_endpoint =
