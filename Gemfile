@@ -31,7 +31,7 @@ gem 'jquery-rails'
 
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git', tag: 'v0.1.1'
 
-group :staging, :production do
+group :staging, :staging2, :production do
   gem 'newrelic_rpm'
 end
 
