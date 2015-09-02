@@ -14,6 +14,7 @@ module ScreeningList
     self.group_by = %i(name)
 
     include ScreeningList::MakeNameVariants
+    include ScreeningList::MakeAddressVariants
 
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
@@ -62,7 +63,7 @@ module ScreeningList
         .delete_if { |alt_name| alt_name == doc[:name] }
 
       make_names(doc)
-
+      make_addresses(doc)
       doc
     end
   end

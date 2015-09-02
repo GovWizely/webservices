@@ -22,6 +22,7 @@ module ScreeningList
     self.group_by = %i(name federal_register_notice effective_date)
 
     include ScreeningList::MakeNameVariants
+    include ScreeningList::MakeAddressVariants
 
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
@@ -87,7 +88,7 @@ module ScreeningList
       doc[:source_information_url] = UrlMapper.get_bitly_url(@source_list_url, model_class)
 
       make_names(doc)
-
+      make_addresses(doc)
       doc
     end
 

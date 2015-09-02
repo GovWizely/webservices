@@ -4,22 +4,26 @@ module ScreeningList
       stopwords    = %w( and the los )
       common_words = %w( box st ave )
 
-      addr = %w(addresses.address)
+      # address variants
+      addrs        = %w( address_idx address_rev  )
+      addrs_kw     = %w( address_idx.keyword address_rev.keyword  )
+      addrs_no_wss = %w( address_no_ws address_no_ws_rev
+                         address_no_ws_with_common address_no_ws_rev_with_common )
 
-      # name variants
-      @address = @address.gsub(/[\]\[!"#$%&()*+,.:;<=>?@^_`{|}\/~]/, "")
+      @address = @address.gsub(/[\]\[!"#$%&()*+,.:;<=>?@^_`{|}\/~]/, '')
       @address = @address.split.delete_if { |addr| stopwords.include?(addr.downcase) }.join(' ')
       @address = @address.split.delete_if { |addr| common_words.include?(addr.downcase) }.join(' ')
 
-      single_token = addr
+      single_token = addrs_kw + addrs_no_wss
+      all_fields   = single_token + addrs
 
       score_hash = {
         score_100: { fields: single_token, fuzziness: 0, weight: 10 },
-        # score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
+        score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
         score_90:  { fields: single_token, fuzziness: 1, weight: 10 },
-        # score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
+        score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
         score_80:  { fields: single_token, fuzziness: 2, weight: 80 },
-        # score_75:  { fields: all_fields, fuzziness: 2, weight: 75 },
+        score_75:  { fields: all_fields, fuzziness: 2, weight: 75 },
       }
 
       json.disable_coord true

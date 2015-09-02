@@ -24,6 +24,10 @@
     :state:
     :country: DK
     :postal_code:
+  :address_idx: BAGSVAERD HOVEDGADE 99 1 2880 BAGSVAERD
+  :address_rev: BAGSVAERD 2880 1 99 HOVEDGADE BAGSVAERD
+  :address_no_ws: BAGSVAERDHOVEDGADE9912880BAGSVAERD
+  :address_no_ws_rev: BAGSVAERD2880199HOVEDGADEBAGSVAERD
 - :name: KAL TEK LABS
   :start_date: '1988-08-26'
   :end_date: '2008-08-26'
@@ -44,6 +48,10 @@
     :state: CA
     :country: US
     :postal_code:
+  :address_idx: 250 BONITA GLEN DRIVE 3D
+  :address_rev: 3D DRIVE GLEN BONITA 250
+  :address_no_ws: 250BONITAGLENDRIVE3D
+  :address_no_ws_rev: 3DDRIVEGLENBONITA250
 - :name: KATSUTA KEISUKE
   :start_date: '1993-08-02'
   :end_date: '2003-03-03'
@@ -64,6 +72,10 @@
     :state:
     :country: JP
     :postal_code:
+  :address_idx: 1-25-4 MINAMI-AZABU MINATOKU
+  :address_rev: MINATOKU MINAMI-AZABU 1-25-4
+  :address_no_ws: 1-25-4MINAMI-AZABUMINATOKU
+  :address_no_ws_rev: MINATOKUMINAMI-AZABU1-25-4
 - :name: KINTRACO
   :start_date: '1987-03-19'
   :end_date: '2007-03-19'
@@ -84,6 +96,10 @@
     :state:
     :country: NL
     :postal_code: 1822 BH
+  :address_idx: BERENKOOG 29
+  :address_rev: 29 BERENKOOG
+  :address_no_ws: BERENKOOG29
+  :address_no_ws_rev: 29BERENKOOG
 - :name: ABELAIRAS, AMANCIO J.
   :start_date: '1995-06-05'
   :end_date: '2005-06-05'
@@ -104,6 +120,10 @@
     :state: FL
     :country: US
     :postal_code: '33144'
+  :address_idx: 6486 SW 9 STREET
+  :address_rev: STREET 9 SW 6486
+  :address_no_ws: 6486SW9STREET
+  :address_no_ws_rev: STREET9SW6486
 - :name: ABRISHAMI, ELHAM
   :start_date: '1998-08-03'
   :end_date: '2007-08-29'
@@ -124,6 +144,10 @@
     :state: OH
     :country: US
     :postal_code: '43017'
+  :address_idx: 271 MONSARRAT DRIVE
+  :address_rev: DRIVE MONSARRAT 271
+  :address_no_ws: 271MONSARRATDRIVE
+  :address_no_ws_rev: DRIVEMONSARRAT271
 - :name: ACE, IAN
   :start_date: '1997-08-08'
   :end_date: '2017-08-08'
@@ -144,6 +168,10 @@
     :state:
     :country: ZA
     :postal_code:
+  :address_idx: 4 MIMOSA WAY
+  :address_rev: WAY MIMOSA 4
+  :address_no_ws: 4MIMOSAWAY
+  :address_no_ws_rev: WAYMIMOSA4
 - :name: ADT ANALOG AND DIGITAL TECHNIK
   :start_date: '1981-09-10'
   :end_date:
@@ -164,6 +192,10 @@
     :state:
     :country: DE
     :postal_code:
+  :address_idx: 8019 NIEDERSEEON HOUSE 21
+  :address_rev: 21 HOUSE NIEDERSEEON 8019
+  :address_no_ws: 8019NIEDERSEEONHOUSE21
+  :address_no_ws_rev: 21HOUSENIEDERSEEON8019
 - :name: AGNESE, ANDREE
   :start_date: '1985-07-11'
   :end_date:
@@ -184,3 +216,7 @@
     :state:
     :country: FR
     :postal_code:
+  :address_idx: 22 RUE DU 11 NOVEMBER 1918
+  :address_rev: 1918 NOVEMBER 11 DU RUE 22
+  :address_no_ws: 22RUEDU11NOVEMBER1918
+  :address_no_ws_rev: 1918NOVEMBER11DURUE22

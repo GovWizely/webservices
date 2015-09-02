@@ -35,6 +35,10 @@
   :alt_rev: [Farid Rahim Fazel, Farid, Idris Engineer]
   :alt_no_ws: [FazelRahimFarid, Farid, EngineerIdris]
   :alt_no_ws_rev: [FaridRahimFazel, Farid, IdrisEngineer]
+  :address_idx: Microrayan 3rd Apt 45 block 21
+  :address_rev: 21 block 45 Apt 3rd Microrayan
+  :address_no_ws: Microrayan3rdApt45block21
+  :address_no_ws_rev: 21block45Apt3rdMicrorayan
 - :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -60,6 +64,10 @@
   :name_rev: Construction Khalil Fazel
   :name_no_ws: FazelKhalilConstruction
   :name_no_ws_rev: ConstructionKhalilFazel
+  :address_idx: Wazir Akbar Khan Road Number 10 In front of National Bank District 10
+  :address_rev: 10 District Bank National of front In 10 Number Road Khan Akbar Wazir
+  :address_no_ws: WazirAkbarKhanRoadNumber10InfrontofNationalBankDistrict10
+  :address_no_ws_rev: 10DistrictBankNationaloffrontIn10NumberRoadKhanAkbarWazir
 - :name: Zurmat Construction Company offices
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -115,6 +123,10 @@
   :name_rev: offices Construction Zurmat
   :name_no_ws: ZurmatConstructionoffices
   :name_no_ws_rev: officesConstructionZurmat
+  :address_idx: House No 319 10th Street Wazeer Akbar Khan
+  :address_rev: Khan Akbar Wazeer Street 10th 319 No House
+  :address_no_ws: HouseNo31910thStreetWazeerAkbarKhan
+  :address_no_ws_rev: KhanAkbarWazeerStreet10th319NoHouse
 - :name: Murat Peker
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'
@@ -137,6 +149,10 @@
   :name_rev: Peker Murat
   :name_no_ws: MuratPeker
   :name_no_ws_rev: PekerMurat
+  :address_idx: Mah Idris Kosku Caddesi Kutu Sokak No1 PierrelotiEyup
+  :address_rev: PierrelotiEyup No1 Sokak Kutu Caddesi Kosku Idris Mah
+  :address_no_ws: MahIdrisKoskuCaddesiKutuSokakNo1PierrelotiEyup
+  :address_no_ws_rev: PierrelotiEyupNo1SokakKutuCaddesiKoskuIdrisMah
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
@@ -164,6 +180,10 @@
   :alt_rev: [Abd-al-Salam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbd-al-Salam]
   :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
+  :address_idx: Microrayan 3rd Apt 45 block 21
+  :address_rev: 21 block 45 Apt 3rd Microrayan
+  :address_no_ws: Microrayan3rdApt45block21
+  :address_no_ws_rev: 21block45Apt3rdMicrorayan
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 10001
   :start_date: '2011-11-21'
@@ -191,6 +211,10 @@
   :alt_rev: [Abd-al-Salam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbd-al-Salam]
   :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
+  :address_idx: Microrayan 3rd Apt 45 block 21
+  :address_rev: 21 block 45 Apt 3rd Microrayan
+  :address_no_ws: Microrayan3rdApt45block21
+  :address_no_ws_rev: 21block45Apt3rdMicrorayan
 - :name: Qazi Abdallah
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-22'
@@ -218,3 +242,7 @@
   :alt_rev: [Abd-al-Salam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbd-al-Salam]
   :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
+  :address_idx: Microrayan 3rd Apt 45 block 21
+  :address_rev: 21 block 45 Apt 3rd Microrayan
+  :address_no_ws: Microrayan3rdApt45block21
+  :address_no_ws_rev: 21block45Apt3rdMicrorayan

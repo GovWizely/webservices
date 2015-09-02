@@ -16,6 +16,7 @@ module ScreeningList
     self.group_by = %i(name beginning_date ending_date fr_citation)
 
     include ScreeningList::MakeNameVariants
+    include ScreeningList::MakeAddressVariants
 
     ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
 
@@ -80,6 +81,8 @@ module ScreeningList
       doc[:addresses] = rows.map do |row|
         remap_keys(ADDRESS_HASH, row)
       end
+
+      make_addresses(doc)
       doc
     end
   end

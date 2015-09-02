@@ -47,6 +47,10 @@ describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list
         addresses:               [{
           address: '', city: 'Guaruja', state: 'SP', country: 'Brazil', postal_code: '1234'
         }],
+        address_idx:              '',
+        address_rev:              '',
+        address_no_ws:            '',
+        address_no_ws_rev:        '',
       }
 
       r = importer.send(:process_grouped_rows, '000abc', [sample])

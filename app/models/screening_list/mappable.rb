@@ -56,6 +56,27 @@ module ScreeningList
             alt_no_ws_rev:              { type: 'string', analyzer: 'standard_asciifolding_nostop' },
             alt_no_ws_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
+            # address variants
+            address:                       { type:     'string',
+                                             analyzer: 'standard_asciifolding_nostop',
+                                             fields:   {
+                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            adress_idx:                    { type:     'string',
+                                             analyzer: 'standard_asciifolding_nostop',
+                                             fields:   {
+                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            adress_rev:                    { type:     'string',
+                                             analyzer: 'standard_asciifolding_nostop',
+                                             fields:   {
+                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+
+            address_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            address_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            address_no_ws_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            address_no_ws_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+
             remarks:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
