@@ -62,12 +62,12 @@ module ScreeningList
                                              fields:   {
                                                keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            adress_idx:                    { type:     'string',
+            address_idx:                   { type:     'string',
                                              analyzer: 'standard_asciifolding_nostop',
                                              fields:   {
                                                keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
 
-            adress_rev:                    { type:     'string',
+            address_rev:                   { type:     'string',
                                              analyzer: 'standard_asciifolding_nostop',
                                              fields:   {
                                                keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
