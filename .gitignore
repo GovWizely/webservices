@@ -17,5 +17,5 @@
 /tags
 /capistrano
 dump.rdb
-elasticsearch.yml
+/elasticsearch.yml
 config/initializers/envirotech.rb
