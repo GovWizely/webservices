@@ -8,4 +8,5 @@ json.call(entry[:_source],
           :source_created_at,
           :source_updated_at,
           :issue_ids,
+          :regulation_ids,
          )

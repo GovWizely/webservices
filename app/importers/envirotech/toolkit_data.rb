@@ -28,5 +28,18 @@ module Envirotech
       issue_documents = issue_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
       issue_documents.map { |k, v| { id: k, issue_document_key => v } }
     end
+
+    def self.process_solution_relations(articles)
+      solution_documents = []
+      articles.each do |article|
+        next if article[:solution_ids].blank?
+        solutions = Envirotech::Consolidated.search_for(sources:    'solutions',
+                                                        source_ids: article[:solution_ids].map(&:inspect).join(','),
+                                                        size:       100)
+        solution_documents << solutions[:hits].map { |hit| { hit[:_id] => article[:source_id] } }
+      end
+      solution_documents = solution_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
+      solution_documents.map { |k, v| { id: k, regulation_ids: v } }
+    end
   end
 end
