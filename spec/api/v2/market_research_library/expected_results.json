@@ -138,7 +138,13 @@
         "Used & Reconditioned Equipment"
       ],
       "mapped": [
-        "Environmental Industries"
+        [
+          "Chemicals",
+          "Agribusiness"
+        ],
+        [
+          "Environmental Industries"
+        ]
       ]
     },
     "report_type": "Market Research Report",
