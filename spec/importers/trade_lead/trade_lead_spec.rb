@@ -3,7 +3,6 @@ require 'spec_helper'
 describe TradeLead do
   let(:importers)     do
     [TradeLead::FbopenImporter::FullData,
-     TradeLead::AustraliaData,
      TradeLead::CanadaData,
      TradeLead::StateData,
      TradeLead::UkData,

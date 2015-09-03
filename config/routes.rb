@@ -19,7 +19,6 @@ Webservices::Application.routes.draw do
 
   concern :api_v1_routable do
     mapping = {
-      'australian_trade_leads' => 'AUSTRALIA',
       'canada_leads'           => 'CANADA',
       'fbopen_leads'           => 'FBO',
       'state_trade_leads'      => 'STATE',
