@@ -63,7 +63,7 @@ module ScreeningList
         .delete_if { |alt_name| alt_name == doc[:name] }
 
       make_names(doc)
-      make_addresses(doc)
+      make_addresses(doc) if doc[:addresses][0][:address].present?
       doc
     end
   end

@@ -82,7 +82,7 @@ module ScreeningList
         remap_keys(ADDRESS_HASH, row)
       end
 
-      make_addresses(doc)
+      make_addresses(doc) if doc[:addresses][0][:address].present?
       doc
     end
   end

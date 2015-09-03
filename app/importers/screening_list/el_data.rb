@@ -88,7 +88,7 @@ module ScreeningList
       doc[:source_information_url] = UrlMapper.get_bitly_url(@source_list_url, model_class)
 
       make_names(doc)
-      make_addresses(doc)
+      make_addresses(doc) if doc[:addresses][0][:address].present?
       doc
     end
 

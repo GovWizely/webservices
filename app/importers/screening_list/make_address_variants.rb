@@ -5,7 +5,7 @@ module ScreeningList
 
     def make_addresses(doc)
 
-      addr = doc[:addresses][0][:address] if doc[:addresses].present?
+      addr = doc[:addresses][0][:address]
       doc[:address_idx] = strip(addr, 'punct')
       doc[:address_idx] = filter_words(doc[:address_idx], STOPWORDS)
 
