@@ -7,7 +7,7 @@ module Envirotech
 
     def lookup_issue(issue_name)
       agent.get(
-        url(issue_name),
+        get_url(issue_name),
         [],
         agent.page.uri,
         'X-Requested-With' => 'XMLHttpRequest',
@@ -16,9 +16,19 @@ module Envirotech
       html_doc = Nokogiri::HTML(clean_html(agent.page.body))
 
       regulations = option_labels(html_doc.css('select[name=regulation] option'))
-      solutions = option_labels(html_doc.css('select[name=solution] option'))
+      solutions = []
+      regulations.each do |regulation|
+        agent.get(
+          get_url(issue_name, regulation),
+          [],
+          agent.page.uri,
+          'X-Requested-With' => 'XMLHttpRequest',
+        )
+        html_doc = Nokogiri::HTML(clean_html(agent.page.body))
+        solutions << option_labels(html_doc.css('select[name=solution] option'))
+      end
 
-      { regulations: regulations, solutions: solutions }
+      { regulations: regulations, solutions: solutions.flatten.uniq }
     end
 
     def all_issue_info
@@ -35,8 +45,9 @@ module Envirotech
       @agent ||= Mechanize.new
     end
 
-    def url(issue_name)
-      "https://new.export.gov/envirotech/toolkit?issue_submit=#{issue_name}"
+    def get_url(issue_name, regulation_name = nil)
+      url = "https://new.export.gov/envirotech/toolkit?issue_submit=#{issue_name}"
+      regulation_name.present? ? url + "&regulation_submit=#{regulation_name}" : url
     end
 
     def clean_html(body)
