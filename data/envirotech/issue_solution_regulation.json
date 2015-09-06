@@ -1,17 +1,19 @@
 {
-  "24": {
+  "Arsenic Remediation in Drinking Water": {
     "regulations": [
-      "Secondary Treatment Standards under the National Pollutant Discharge Elimination System (NPDES)"
+      "Safe Drinking Water Act - Arsenic Rule"
     ],
     "solutions": [
-      "Biological Treatment Processes",
-      "In-plant Wet Weather Management Processes",
-      "Physical and Chemical Treatment Processes",
-      "Process Monitoring Technologies",
-      "Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards"
+      "Adsorption Processes",
+      "Ion Exchange Processes",
+      "Membrane Processes",
+      "Point-of-Use (POU) Devices",
+      "Precipitative Processes",
+      "Related Technologies for Safe Water Drinking Act - Arsenic Rule: Arsenic Remediation",
+      "Residual Management Processes"
     ]
   },
-  "23": {
+  "Biosolid/Sludge Management, Use, or Disposal": {
     "regulations": [
       "Standards for the Use or Disposal of Sewage Sludge"
     ],
@@ -26,36 +28,80 @@
       "Thickening Technology or Processes"
     ]
   },
-  "21": {
+  "Drinking Water Treatment Requirements for Surface Water Sources": {
     "regulations": [
-      "Standards of Performance for New Stationary Sources: Landfills and Municipal Waste"
+
     ],
     "solutions": [
-      "Bioreactors",
-      "Controlled Injection Systems",
-      "Landfill Control Systems",
-      "Landfill Covers",
-      "Landfill Gas Air Monitoring",
-      "Landfill Gas Collection",
-      "Landfill Groundwater Monitoring",
-      "Leachate Collection Systems",
-      "Liners",
-      "Related Technologies for NSPS: Municipal Landfill Standards"
+
     ]
   },
-  "20": {
+  "Emissions Control for Oil and Natural Gas Processing": {
     "regulations": [
-      "Standards for Universal Waste Management"
+      "Standards of Performance for New Stationary Sources: Oil and Gas"
     ],
     "solutions": [
-      "CRT Recycling Technology",
-      "E-Waste Recycling Technology",
-      "Lamp Crushing Systems",
-      "Mercury Recycling Technology",
-      "Related Technologies for Standards for Universal Waste Management: Universal Waste"
+      "Absorption Towers",
+      "Flash Tanks",
+      "Glycol Dehydrators",
+      "Related Technologies for NSPS: Oil and Gas Processing Emissions Control"
     ]
   },
-  "15": {
+  "Emissions Control from Large Marine Diesel Engines": {
+    "regulations": [
+      "Control of Emissions from New and In-Use Marine Engines and Vessels"
+    ],
+    "solutions": [
+      "Fuel Switching - Low Sulphur Diesel",
+      "Fuel Switching - Natural Gas",
+      "Fuel Switching - SOx Scrubbers",
+      "NOx - Exhaust Gas Recirculation",
+      "NOx - Natural Gas Engine",
+      "NOx - Selective Catalytic Reduction",
+      "NOx - Water Injection",
+      "Related Technologies for Marine Diesel Engine Emissions Control: Large Marine Diesel Engines"
+    ]
+  },
+  "Groundwater Remediation": {
+    "regulations": [
+      "Clean Water Act",
+      "Comprehensive Environmental Response, Compensation and Liability Act"
+    ],
+    "solutions": [
+      "Air Sparging",
+      "Anaerobic/anoxic/oxic (A2O)",
+      "Anoxic zone (following aeration)",
+      "Anoxic/oxic (A/O)",
+      "Biological aerated filtration",
+      "Bioremediation",
+      "Chemical Precipitation for Nitrogen and Phosphorus",
+      "Chemical Precipitation for Phosphorus",
+      "Chemical Treatment",
+      "Denitrification Filters for Nitrogen",
+      "Denitrification Filters for Nitrogen and Phosphorus",
+      "Enhanced biological phosphorus removal (EBPR) with volatile fatty acids (VFA) addition and filters",
+      "Filtration",
+      "Flushing",
+      "In-Well Air Stripping",
+      "Integrated fixed-film activated sludge (IFAS)",
+      "MLE/3-stage Westbank",
+      "Membrane Filter",
+      "Membrane bioreactor (MBR)",
+      "Moving bed biofilm reactor (MBBR)",
+      "Multi-Phase Extraction",
+      "Permeable Reactive Barrier",
+      "Phytoremediation",
+      "Pump and Treat",
+      "Related Technologies for Clean Water Act: Groundwater Remediation",
+      "Related Technologies for Clean Water Act: Municipal Nutrient Removal",
+      "Sequencing batch reactor (SBR)/cyclic activated sludge",
+      "Step-feed activated sludge (AS)",
+      "Step-feed with selector",
+      "Tertiary clarifier/tertiary filter",
+      "Related Technologies for CERCLA: Groundwater Remediation"
+    ]
+  },
+  "Mercury Emissions Control from Power Plants": {
     "regulations": [
       "Mercury and Air Toxics Standards"
     ],
@@ -76,33 +122,24 @@
       "Sulphur Dioxide - Flue-gas Desulphurization"
     ]
   },
-  "19": {
+  "Municipal Landfill Standards": {
     "regulations": [
-      "Standards of Performance for New Stationary Sources: Oil and Gas"
+      "Standards of Performance for New Stationary Sources: Landfills and Municipal Waste"
     ],
     "solutions": [
-      "Absorption Towers",
-      "Flash Tanks",
-      "Glycol Dehydrators",
-      "Related Technologies for NSPS: Oil and Gas Processing Emissions Control"
+      "Bioreactors",
+      "Controlled Injection Systems",
+      "Landfill Control Systems",
+      "Landfill Covers",
+      "Landfill Gas Air Monitoring",
+      "Landfill Gas Collection",
+      "Landfill Groundwater Monitoring",
+      "Leachate Collection Systems",
+      "Liners",
+      "Related Technologies for NSPS: Municipal Landfill Standards"
     ]
   },
-  "14": {
-    "regulations": [
-      "Control of Emissions from New and In-Use Marine Engines and Vessels"
-    ],
-    "solutions": [
-      "Fuel Switching - Low Sulphur Diesel",
-      "Fuel Switching - Natural Gas",
-      "Fuel Switching - SOx Scrubbers",
-      "NOx - Exhaust Gas Recirculation",
-      "NOx - Natural Gas Engine",
-      "NOx - Selective Catalytic Reduction",
-      "NOx - Water Injection",
-      "Related Technologies for Marine Diesel Engine Emissions Control: Large Marine Diesel Engines"
-    ]
-  },
-  "13": {
+  "Municipal Nutrient Removal": {
     "regulations": [
       "Clean Water Act"
     ],
@@ -139,21 +176,7 @@
       "Tertiary clarifier/tertiary filter"
     ]
   },
-  "22": {
-    "regulations": [
-      "Safe Drinking Water Act - Arsenic Rule"
-    ],
-    "solutions": [
-      "Adsorption Processes",
-      "Ion Exchange Processes",
-      "Membrane Processes",
-      "Point-of-Use (POU) Devices",
-      "Precipitative Processes",
-      "Related Technologies for Safe Water Drinking Act - Arsenic Rule: Arsenic Remediation",
-      "Residual Management Processes"
-    ]
-  },
-  "18": {
+  "NOx Emission Controls for Power Plants": {
     "regulations": [
       "Cross-State Air Pollution Rule (CSAPR)"
     ],
@@ -164,46 +187,7 @@
       "Selective Non-Catalytic Reduction"
     ]
   },
-  "12": {
-    "regulations": [
-      "Clean Water Act",
-      "Comprehensive Environmental Response, Compensation and Liability Act"
-    ],
-    "solutions": [
-      "Air Sparging",
-      "Anaerobic/anoxic/oxic (A2O)",
-      "Anoxic zone (following aeration)",
-      "Anoxic/oxic (A/O)",
-      "Biological aerated filtration",
-      "Bioremediation",
-      "Chemical Precipitation for Nitrogen and Phosphorus",
-      "Chemical Precipitation for Phosphorus",
-      "Chemical Treatment",
-      "Denitrification Filters for Nitrogen",
-      "Denitrification Filters for Nitrogen and Phosphorus",
-      "Enhanced biological phosphorus removal (EBPR) with volatile fatty acids (VFA) addition and filters",
-      "Filtration",
-      "Flushing",
-      "In-Well Air Stripping",
-      "Integrated fixed-film activated sludge (IFAS)",
-      "MLE/3-stage Westbank",
-      "Membrane Filter",
-      "Membrane bioreactor (MBR)",
-      "Moving bed biofilm reactor (MBBR)",
-      "Multi-Phase Extraction",
-      "Permeable Reactive Barrier",
-      "Phytoremediation",
-      "Pump and Treat",
-      "Related Technologies for CERCLA: Groundwater Remediation",
-      "Related Technologies for Clean Water Act: Groundwater Remediation",
-      "Related Technologies for Clean Water Act: Municipal Nutrient Removal",
-      "Sequencing batch reactor (SBR)/cyclic activated sludge",
-      "Step-feed activated sludge (AS)",
-      "Step-feed with selector",
-      "Tertiary clarifier/tertiary filter"
-    ]
-  },
-  "16": {
+  "Non-road Diesel Emissions Control": {
     "regulations": [
       "Non-road Exhaust Emissions Standards"
     ],
@@ -212,6 +196,30 @@
       "Diesel Particulate Filters",
       "NOx - Selective Catalytic Reduction",
       "Related Technologies for Non-road Exhaust Emission Standards: Non-road Diesel Emissions Control"
+    ]
+  },
+  "Secondary or Advanced Wastewater Treatment": {
+    "regulations": [
+      "Secondary Treatment Standards under the National Pollutant Discharge Elimination System (NPDES)"
+    ],
+    "solutions": [
+      "Biological Treatment Processes",
+      "In-plant Wet Weather Management Processes",
+      "Physical and Chemical Treatment Processes",
+      "Process Monitoring Technologies",
+      "Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards"
+    ]
+  },
+  "Universal Waste": {
+    "regulations": [
+      "Standards for Universal Waste Management"
+    ],
+    "solutions": [
+      "CRT Recycling Technology",
+      "E-Waste Recycling Technology",
+      "Lamp Crushing Systems",
+      "Mercury Recycling Technology",
+      "Related Technologies for Standards for Universal Waste Management: Universal Waste"
     ]
   }
 }

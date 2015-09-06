@@ -29,7 +29,10 @@ module Envirotech
     end
 
     def issues_for_regulation(regulation)
-      Relationships.relational_data.select { |_, v| v.with_indifferent_access[:regulations].include?(regulation[:name_english]) }.keys.map(&:to_i)
+      issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
+      issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
+      issues_from_relation = Relationships.relational_data.select { |_, v| v.with_indifferent_access[:regulations].include?(regulation[:name_english]) }
+      issue_ids_names.select {|issue| issues_from_relation.include?(issue.last)}.map(&:first)
     end
 
     def solutions_for_regulation(regulation)
@@ -42,7 +45,10 @@ module Envirotech
     end
 
     def issues_for_solution(solution)
-      relational_data.select { |_, v| v.with_indifferent_access[:solutions].include?(solution[:name_english]) }.keys.map(&:to_i)
+      issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
+      issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
+      issues_from_relation = Relationships.relational_data.select { |_, v| v.with_indifferent_access[:solutions].include?(solution[:name_english]) }
+      issue_ids_names.select {|issue| issues_from_relation.include?(issue.last)}.map(&:first)
     end
 
     def Relationships.relational_data

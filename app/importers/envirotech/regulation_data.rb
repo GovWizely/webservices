@@ -44,7 +44,8 @@ module Envirotech
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
       if Envirotech::Relationships.relational_data.present?
-        article[:issue_ids] = Envirotech::Relationships.new.issues_for_regulation(article)
+        issue_ids = Envirotech::Relationships.new.issues_for_regulation(article)
+        article[:issue_ids] = issue_ids if issue_ids.present?
 
         solution_ids = Envirotech::Relationships.new.solutions_for_regulation(article)
         article[:solution_ids] = solution_ids if solution_ids.present?

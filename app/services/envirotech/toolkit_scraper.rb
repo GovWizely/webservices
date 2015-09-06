@@ -32,9 +32,9 @@ module Envirotech
     end
 
     def all_issue_info
-      issue_docs = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
-      issue_ids_names = issue_docs[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      Hash[issue_ids_names.map { |id, name| [id, lookup_issue(name)] }]
+      html_doc = Nokogiri::HTML(agent.page.body)
+      issue_names = option_labels(html_doc.css('select[name=issue] option'))
+      Hash[issue_names.map { |issue_name| [issue_name, lookup_issue(issue_name)] }]
     rescue Mechanize::ResponseCodeError
       nil
     end
