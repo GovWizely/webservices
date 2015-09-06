@@ -7,13 +7,11 @@ module Envirotech
 
   def self.import_sequentially
     Envirotech::IssueData.new.import
-    Envirotech::BackgroundLinkData.new.import
-    Envirotech::AnalysisLinkData.new.import
+    Envirotech::SolutionData.new.import
+    Envirotech::RegulationData.new.import
     Envirotech::ProviderData.new.import
-
-    relational_data = Envirotech::ToolkitData.fetch_relational_data
-    Envirotech::SolutionData.new(relation_data: relational_data).import
-    Envirotech::RegulationData.new(relation_data: relational_data).import
+    Envirotech::AnalysisLinkData.new.import
+    Envirotech::BackgroundLinkData.new.import
     Envirotech::ProviderSolutionData.new.import
     true
   end

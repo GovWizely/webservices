@@ -1,0 +1,61 @@
+module Envirotech
+  class Relationships
+    cattr_accessor :relational_data, :solution_ids_names
+
+    def issues_with_relations(articles, issue_document_key)
+      issue_documents = []
+      articles.each do |article|
+        next if article[:issue_ids].blank?
+        issues = Envirotech::Consolidated.search_for(sources:    'issues',
+                                                     source_ids: article[:issue_ids].map(&:inspect).join(','),
+                                                     size:       100)
+        issue_documents << issues[:hits].map { |hit| { hit[:_id] => article[:source_id] } }
+      end
+      issue_documents = issue_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
+      issue_documents.map { |k, v| { id: k, issue_document_key => v } }
+    end
+
+    def solutions_for_regulations(regulations)
+      solution_documents = []
+      regulations.each do |regulation|
+        next if regulation[:solution_ids].blank?
+        solutions = Envirotech::Consolidated.search_for(sources:    'solutions',
+                                                        source_ids: regulation[:solution_ids].map(&:inspect).join(','),
+                                                        size:       100)
+        solution_documents << solutions[:hits].map { |hit| { hit[:_id] => regulation[:source_id] } }
+      end
+      solution_documents = solution_documents.flatten.reduce({}) { |hash, pairs| pairs.each { |k, v| (hash[k] ||= []) << v }; hash }
+      solution_documents.map { |k, v| { id: k, regulation_ids: v } }
+    end
+
+    def issues_for_regulation(regulation)
+      Relationships.relational_data.select { |_, v| v.with_indifferent_access[:regulations].include?(regulation[:name_english]) }.keys.map(&:to_i)
+    end
+
+    def solutions_for_regulation(regulation)
+      related_solutions = Relationships.relational_data.select do |_, v|
+        v.with_indifferent_access[:regulations].include?(regulation[:name_english])
+      end
+      related_solutions = related_solutions.map { |_, hash| hash.with_indifferent_access[:solutions] }.flatten
+
+      Relationships.solution_ids_names.select { |_, name_english| related_solutions.include?(name_english) }.map(&:first)
+    end
+
+    def issues_for_solution(solution)
+      relational_data.select { |_, v| v.with_indifferent_access[:solutions].include?(solution[:name_english]) }.keys.map(&:to_i)
+    end
+
+    def Relationships.relational_data
+      @@relational_data ||= Envirotech::ToolkitData.fetch_relational_data
+    end
+
+    def Relationships.solution_ids_names
+      if @@solution_ids_names.blank?
+        solution_documents = Envirotech::Consolidated.search_for(sources: 'solutions', size: 100)
+        @@solution_ids_names = solution_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
+      else
+        @@solution_ids_names
+      end
+    end
+  end
+end

@@ -30,7 +30,6 @@ describe Envirotech do
       expect_any_instance_of(Envirotech::RegulationData).to receive(:fetch_data)
       expect_any_instance_of(Envirotech::SolutionData).to receive(:fetch_data)
       expect_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data)
-      expect(Envirotech::ToolkitData).to receive(:fetch_relational_data)
 
       described_class.import_sequentially
     end

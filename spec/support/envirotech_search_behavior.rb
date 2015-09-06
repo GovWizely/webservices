@@ -26,9 +26,10 @@ shared_context 'Envirotech::Solution data' do
 
     relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
     relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::Relationships.relational_data = relational_data
 
     fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
-    Envirotech::SolutionData.new(fixtures_file, relation_data: relational_data).import
+    Envirotech::SolutionData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
@@ -108,9 +109,10 @@ shared_context 'Envirotech::Regulation data' do
 
     relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
     relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::Relationships.relational_data = relational_data
 
     fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
-    Envirotech::RegulationData.new(fixtures_file, relation_data: relational_data).import
+    Envirotech::RegulationData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
