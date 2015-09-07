@@ -23,3 +23,14 @@ shared_examples 'an importer which indexes the correct documents' do
     importer.import
   end
 end
+
+shared_examples 'a versionable resource' do
+  it 'updates version properly' do
+    expect(importer.stored_version).not_to eq importer.available_version
+    importer.import
+
+    # When resource is unchanged, stored_version should be equal available_version
+    new_importer = importer.class.new(resource)
+    expect(new_importer.stored_version).to eq new_importer.available_version
+  end
+end
