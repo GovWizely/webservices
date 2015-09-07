@@ -4,6 +4,7 @@ require 'pp'
 
 class ItaTaxonomyData
   include Importable
+  include VersionableResource
   #  This is the staging URL, need to make sure this gets changed to prod
   PROTEGE_URL = 'http://52.4.82.207:8080/webprotege/download?ontology=0aa09276-58a6-4350-a0bb-60eb2ab4be00'
 
