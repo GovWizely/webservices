@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe TradeLead::UkData do
+  before { TradeLead::Uk.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/uk" }
   let(:importer) { described_class.new(fixtures_file) }
 
@@ -19,5 +20,11 @@ describe TradeLead::UkData do
     it 'indexes the correct documents' do
       expect { importer.import }.to raise_error
     end
+  end
+
+  context 'when importing data' do
+    let(:fixtures_file) { "#{fixtures_dir}/Notices.xml" }
+    let(:resource) { fixtures_file }
+    it_behaves_like 'a versionable resource'
   end
 end

@@ -4,6 +4,7 @@ require 'csv'
 module TradeLead
   class CanadaData
     include Importable
+    include VersionableResource
     ENDPOINT = 'https://buyandsell.gc.ca/procurement-data/csv/tender/active'
 
     COLUMN_HASH = {
