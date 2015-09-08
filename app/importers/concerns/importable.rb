@@ -98,7 +98,7 @@ module Importable
   end
 
   def model_class
-    self.class.name.sub(/Data$/, '').constantize
+    self.class.model_class
   end
 
   def lookup_state(state_str)
@@ -112,4 +112,10 @@ module Importable
   end
 
   delegate :can_purge_old?, to: :model_class
+
+  module ClassMethods
+    def model_class
+      name.sub(/Data$/, '').constantize
+    end
+  end
 end
