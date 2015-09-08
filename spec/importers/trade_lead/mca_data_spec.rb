@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe TradeLead::McaData do
-  before { TradeLead::Mca.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/mca" }
   let(:fixtures_file) { "#{fixtures_dir}/mca_leads.xml" }
   let(:resource) { fixtures_file }

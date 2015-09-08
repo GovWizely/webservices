@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe TradeLead::UkData do
-  before { TradeLead::Uk.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/uk" }
   let(:importer) { described_class.new(fixtures_file) }
 

@@ -1,7 +1,6 @@
 require 'spec_helper'
 
 describe TradeLead::StateData do
-  before { TradeLead::State.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/state" }
   let(:fixtures_file) { "#{fixtures_dir}/state_trade_leads.json" }
   let(:resource) { fixtures_file }
