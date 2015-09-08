@@ -1,6 +1,7 @@
 module ScreeningList
   class FseData
     include Importable
+    include VersionableResource
     include ScreeningList::TreasuryListImporter
     include ScreeningList::MakeNameVariants
     self.default_endpoint = 'http://www.treasury.gov/ofac/downloads/consolidated/consolidated.xml'

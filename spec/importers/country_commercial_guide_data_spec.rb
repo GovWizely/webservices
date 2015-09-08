@@ -1,6 +1,7 @@
 require 'spec_helper'
 
 describe CountryCommercialGuideData do
+  before(:all) { CountryCommercialGuide.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/country_commercial_guides" }
   let(:importer) { described_class.new(fixtures_dir) }
 
