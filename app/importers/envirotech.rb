@@ -13,6 +13,7 @@ module Envirotech
     Envirotech::AnalysisLinkData.new.import
     Envirotech::BackgroundLinkData.new.import
     Envirotech::ProviderSolutionData.new.import
+    Envirotech::RelationalData.new.import
     true
   end
 end

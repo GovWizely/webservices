@@ -25,7 +25,6 @@ module Envirotech
 
     def import
       articles = data.map { |article_hash| process_article_info article_hash }
-      process_relations(articles) if Envirotech::Relationships.relational_data.present?
       model_class.index articles
     end
 
@@ -41,17 +40,10 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
-      if Envirotech::Relationships.relational_data.present?
-        issue_ids = Envirotech::Relationships.new.issues_for_solution(article)
-        article[:issue_ids] = issue_ids if issue_ids.present?
-      end
+
+      article[:issue_ids] = article[:regulation_ids] = []
 
       sanitize_entry(article)
-    end
-
-    def process_relations(articles)
-      issue_documents = Envirotech::Relationships.new.issues_with_relations(articles, :solution_ids)
-      Envirotech::Issue.update(issue_documents)
     end
 
     def data

@@ -13,6 +13,7 @@ describe Envirotech do
       allow_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data).and_return({})
       allow_any_instance_of(Envirotech::RegulationData).to receive(:fetch_data).and_return({})
       allow_any_instance_of(Envirotech::SolutionData).to receive(:fetch_data).and_return({})
+      allow_any_instance_of(Envirotech::RelationalData).to receive(:import).and_return({})
 
       scraper = double('Envirotech::ToolkitScraper')
       allow(Envirotech::ToolkitScraper).to receive(:new).and_return(scraper)
@@ -30,6 +31,7 @@ describe Envirotech do
       expect_any_instance_of(Envirotech::RegulationData).to receive(:fetch_data)
       expect_any_instance_of(Envirotech::SolutionData).to receive(:fetch_data)
       expect_any_instance_of(Envirotech::ProviderSolutionData).to receive(:fetch_data)
+      expect_any_instance_of(Envirotech::RelationalData).to receive(:import)
 
       described_class.import_sequentially
     end

@@ -6,6 +6,7 @@ shared_context 'all Envirotech fixture data' do
   include_context 'Envirotech::AnalysisLink data'
   include_context 'Envirotech::BackgroundLink data'
   include_context 'Envirotech::ProviderSolution data'
+  include_context 'Envirotech::Relational data'
   before do
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -286,4 +287,14 @@ shared_examples 'it contains all Envirotech::ProviderSolution results that match
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results without source'
+end
+
+shared_context 'Envirotech::Relational data' do
+  before(:all) do
+    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
+    relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::Relationships.relational_data = relational_data
+
+    Envirotech::RelationalData.new.import
+  end
 end

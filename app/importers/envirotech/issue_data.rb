@@ -43,6 +43,8 @@ module Envirotech
         article[field] &&= Date.parse(article[field]).iso8601 rescue nil
       end
 
+      article[:solution_ids] = article[:regulation_ids] = []
+
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
