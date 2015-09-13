@@ -55,6 +55,14 @@ describe 'Consolidated Envirotech API V1', type: :request do
         it_behaves_like 'it contains all Envirotech::Issue results that match source_id 23'
       end
     end
+
+    context 'when regulation_ids are specified' do
+      context 'when one document matches regulation_ids 19' do
+        let(:params) { { regulation_ids: 19 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Issue results that match regulation_ids 19'
+      end
+    end
   end
 
   describe 'GET /v1/envirotech/regulations/search' do

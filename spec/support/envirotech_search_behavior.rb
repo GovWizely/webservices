@@ -104,6 +104,12 @@ shared_examples 'it contains all Envirotech::Issue results that match source_id 
   it_behaves_like 'it contains all expected results without source'
 end
 
+shared_examples 'it contains all Envirotech::Issue results that match regulation_ids 19' do
+  let(:source) { Envirotech::Issue }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results without source'
+end
+
 shared_context 'Envirotech::Regulation data' do
   before(:all) do
     Envirotech::Regulation.recreate_index

@@ -58,6 +58,14 @@ describe 'Consolidated Envirotech API V2', type: :request do
         it_behaves_like 'it contains all Envirotech::Issue results matches a query with Chinese character'
       end
     end
+
+    context 'when regulation_ids are specified' do
+      context 'when one document matches regulation_ids 19' do
+        let(:params) { { regulation_ids: 19 } }
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all Envirotech::Issue results that match regulation_ids 19'
+      end
+    end
   end
 
   describe 'GET /v2/envirotech/regulations/search.json' do
