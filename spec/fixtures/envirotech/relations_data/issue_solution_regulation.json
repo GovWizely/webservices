@@ -1,17 +1,11 @@
 {
   "Biosolid/Sludge Management, Use, or Disposal": {
-    "regulations": [
-      "Standards of Performance for New Stationary Sources: Oil and Gas"
-    ],
-    "solutions": [
+    "Standards of Performance for New Stationary Sources: Oil and Gas": [
       "Mercury - Electrostatic Precipitators"
     ]
   },
   "Secondary or Advanced Wastewater Treatment": {
-    "regulations": [
-      "Standards of Performance for New Stationary Sources: Landfills and Municipal Waste"
-    ],
-    "solutions": [
+    "Standards of Performance for New Stationary Sources: Landfills and Municipal Waste": [
       "Related Technologies for NPDES: Secondary or Advanced Wastewater Treatment Standards"
     ]
   }

@@ -16,7 +16,7 @@ module Envirotech
       html_doc = Nokogiri::HTML(clean_html(agent.page.body))
 
       regulations = option_labels(html_doc.css('select[name=regulation] option'))
-      solutions = []
+      relations = {}
       regulations.each do |regulation|
         agent.get(
           get_url(issue_name, regulation),
@@ -25,10 +25,10 @@ module Envirotech
           'X-Requested-With' => 'XMLHttpRequest',
         )
         html_doc = Nokogiri::HTML(clean_html(agent.page.body))
-        solutions << option_labels(html_doc.css('select[name=solution] option'))
+        relations[regulation] = option_labels(html_doc.css('select[name=solution] option')).flatten.uniq
       end
 
-      { regulations: regulations, solutions: solutions.flatten.uniq }
+      relations
     end
 
     def all_issue_info

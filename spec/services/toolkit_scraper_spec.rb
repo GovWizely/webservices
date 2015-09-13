@@ -35,7 +35,7 @@ describe Envirotech::ToolkitScraper do
       end
 
       it 'is as expected' do
-        expect(scraper.all_issue_info).to eq('foo' => { regulations: ['bar'], solutions: ['baz'] })
+        expect(scraper.all_issue_info).to eq('foo' => { 'bar' => ['baz'] })
       end
     end
 

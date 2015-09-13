@@ -4,8 +4,8 @@ module Envirotech
 
     def import
       return unless  RelationalData.relations.present?
-      process_regulation_relations
       process_solution_relations
+      process_regulation_relations
     end
 
     private
@@ -74,15 +74,14 @@ module Envirotech
     def issues_for_regulation(regulation)
       issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
       issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      issues_from_relation = RelationalData.relations.select { |_, v| v.with_indifferent_access[:regulations].include?(regulation[:name_english]) }
+      issues_from_relation = RelationalData.relations.select { |_, v| v.with_indifferent_access[regulation[:name_english]].present? }
       issue_ids_names.select {|issue| issues_from_relation.include?(issue.last)}.map(&:first)
     end
 
     def solutions_for_regulation(regulation)
       related_solutions = RelationalData.relations.select do |_, v|
-        v.with_indifferent_access[:regulations].include?(regulation[:name_english])
-      end
-      related_solutions = related_solutions.map { |_, hash| hash.with_indifferent_access[:solutions] }.flatten
+        v.with_indifferent_access[regulation[:name_english]].present?
+      end.map { |_,v| v.with_indifferent_access[regulation[:name_english]] }.uniq.flatten
 
       RelationalData.solution_ids_names.select { |_, name_english| related_solutions.include?(name_english) }.map(&:first)
     end
@@ -90,7 +89,9 @@ module Envirotech
     def issues_for_solution(solution)
       issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 100)
       issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      issues_from_relation = RelationalData.relations.select { |_, v| v.with_indifferent_access[:solutions].include?(solution[:name_english]) }
+      issues_from_relation = RelationalData.relations.select do |_, v|
+        v.map { |__, val| val }.flatten.include?(solution[:name_english])
+      end
       issue_ids_names.select {|issue| issues_from_relation.include?(issue.last)}.map(&:first)
     end
 
