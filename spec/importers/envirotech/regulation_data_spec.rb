@@ -11,8 +11,8 @@ describe Envirotech::RegulationData do
   let(:importer) { described_class.new(fixtures_file) }
 
   before do
-    Envirotech::Relationships.relational_data = relational_data
-    Envirotech::Relationships.solution_ids_names = []
+    Envirotech::RelationalData.relations = relational_data
+    Envirotech::RelationalData.solution_ids_names = []
   end
 
   it_behaves_like 'an importer which can purge old documents'
