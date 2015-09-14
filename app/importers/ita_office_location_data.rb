@@ -2,6 +2,7 @@ require 'open-uri'
 
 class ItaOfficeLocationData
   include Importable
+  include VersionableResource
   COMMON_URL_FRAGMENT = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type='
   OFFICE_TYPES = %w(odo oio)
   DEFAULT_RESOURCES = OFFICE_TYPES.map { |office_type| [COMMON_URL_FRAGMENT, office_type].join }
@@ -23,13 +24,13 @@ class ItaOfficeLocationData
     address: './ADDRESS',
   }
 
-  def initialize(resources = DEFAULT_RESOURCES)
-    resources = [resources] unless resources.is_a? Array
-    @resources = resources
+  def initialize(resource = DEFAULT_RESOURCES)
+    resource  = [resource] unless resource.is_a? Array
+    @resource = resource
   end
 
   def import
-    @resources.each do |resource|
+    @resource.each do |resource|
       doc = Nokogiri::XML(open(resource))
       ita_office_locations = doc.xpath('//POSTINFO')
                              .map { |location_info| process_location_info(location_info) }

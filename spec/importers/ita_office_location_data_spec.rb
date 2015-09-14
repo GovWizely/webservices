@@ -3,7 +3,10 @@ require 'spec_helper'
 describe ItaOfficeLocationData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_office_locations" }
   let(:resources_dir) { "#{File.dirname(__FILE__)}/ita_office_location" }
+  let(:resource) { [resources_dir + '/odo.yaml', resources_dir + '/oio.yaml'] }
+  let(:importer) { described_class.new(resource) }
 
+  it_behaves_like 'a versionable resource'
   it_behaves_like 'an importer which cannot purge old documents'
 
   describe '#import' do

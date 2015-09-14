@@ -26,7 +26,7 @@ shared_examples 'a versionable resource' do
     importer.import
 
     # When resource is unchanged, stored_version should be equal available_version
-    new_importer = importer.class.new(resource)
+    new_importer = (defined?(splat_resources) && !!splat_resources) ? importer.class.new(*resource) : importer.class.new(resource)
     expect(new_importer.stored_metadata[:version]).to eq new_importer.available_version
   end
 
