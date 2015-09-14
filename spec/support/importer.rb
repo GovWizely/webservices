@@ -19,7 +19,7 @@ shared_examples 'an importer which indexes the correct documents' do
 end
 
 shared_examples 'a versionable resource' do
-  before { described_class.name.gsub(/Data$/, '').constantize.recreate_index }
+  before { described_class.model_class.recreate_index }
 
   it 'updates version properly' do
     expect(importer.stored_metadata[:version]).not_to eq importer.available_version
