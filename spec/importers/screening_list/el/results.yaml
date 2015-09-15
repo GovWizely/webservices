@@ -64,10 +64,12 @@
   :name_rev: Construction Khalil Fazel
   :name_no_ws: FazelKhalilConstruction
   :name_no_ws_rev: ConstructionKhalilFazel
-  :address_idx: Wazir Akbar Khan Road Number 10 In front of National Bank District 10
-  :address_rev: 10 District Bank National of front In 10 Number Road Khan Akbar Wazir
-  :address_no_ws: WazirAkbarKhanRoadNumber10InfrontofNationalBankDistrict10
-  :address_no_ws_rev: 10DistrictBankNationaloffrontIn10NumberRoadKhanAkbarWazir
+  :address_idx: Wazir Akbar Khan 10 In front of National Bank District 10
+  :address_rev: 10 District Bank National of front In 10 Khan Akbar Wazir
+  :address_no_ws_with_common: WazirAkbarKhanRoadNumber10InfrontofNationalBankDistrict10
+  :address_no_ws_rev_with_common: 10DistrictBankNationaloffrontIn10NumberRoadKhanAkbarWazir
+  :address_no_ws: WazirAkbarKhan10InfrontofNationalBankDistrict10
+  :address_no_ws_rev: 10DistrictBankNationaloffrontIn10KhanAkbarWazir
 - :name: Zurmat Construction Company offices
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
@@ -123,10 +125,12 @@
   :name_rev: offices Construction Zurmat
   :name_no_ws: ZurmatConstructionoffices
   :name_no_ws_rev: officesConstructionZurmat
-  :address_idx: House No 319 10th Street Wazeer Akbar Khan
-  :address_rev: Khan Akbar Wazeer Street 10th 319 No House
-  :address_no_ws: HouseNo31910thStreetWazeerAkbarKhan
-  :address_no_ws_rev: KhanAkbarWazeerStreet10th319NoHouse
+  :address_idx: House No 319 10th Wazeer Akbar Khan
+  :address_rev: Khan Akbar Wazeer 10th 319 No House
+  :address_no_ws_with_common: HouseNo31910thStreetWazeerAkbarKhan
+  :address_no_ws_rev_with_common: KhanAkbarWazeerStreet10th319NoHouse
+  :address_no_ws: HouseNo31910thWazeerAkbarKhan
+  :address_no_ws_rev: KhanAkbarWazeer10th319NoHouse
 - :name: Murat Peker
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'

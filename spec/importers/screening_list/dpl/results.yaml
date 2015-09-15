@@ -48,10 +48,12 @@
     :state: CA
     :country: US
     :postal_code:
-  :address_idx: 250 BONITA GLEN DRIVE 3D
-  :address_rev: 3D DRIVE GLEN BONITA 250
-  :address_no_ws: 250BONITAGLENDRIVE3D
-  :address_no_ws_rev: 3DDRIVEGLENBONITA250
+  :address_idx: 250 BONITA GLEN 3D
+  :address_no_ws_with_common: 250BONITAGLENDRIVE3D
+  :address_no_ws_rev_with_common: 3DDRIVEGLENBONITA250
+  :address_rev: 3D GLEN BONITA 250
+  :address_no_ws: 250BONITAGLEN3D
+  :address_no_ws_rev: 3DGLENBONITA250
 - :name: KATSUTA KEISUKE
   :start_date: '1993-08-02'
   :end_date: '2003-03-03'
@@ -120,10 +122,12 @@
     :state: FL
     :country: US
     :postal_code: '33144'
-  :address_idx: 6486 SW 9 STREET
-  :address_rev: STREET 9 SW 6486
-  :address_no_ws: 6486SW9STREET
-  :address_no_ws_rev: STREET9SW6486
+  :address_idx: 6486 SW 9
+  :address_rev: 9 SW 6486
+  :address_no_ws_with_common: 6486SW9STREET
+  :address_no_ws_rev_with_common: STREET9SW6486
+  :address_no_ws: 6486SW9
+  :address_no_ws_rev: 9SW6486
 - :name: ABRISHAMI, ELHAM
   :start_date: '1998-08-03'
   :end_date: '2007-08-29'
@@ -144,10 +148,12 @@
     :state: OH
     :country: US
     :postal_code: '43017'
-  :address_idx: 271 MONSARRAT DRIVE
-  :address_rev: DRIVE MONSARRAT 271
-  :address_no_ws: 271MONSARRATDRIVE
-  :address_no_ws_rev: DRIVEMONSARRAT271
+  :address_idx: 271 MONSARRAT
+  :address_rev: MONSARRAT 271
+  :address_no_ws_with_common: 271MONSARRATDRIVE
+  :address_no_ws_rev_with_common: DRIVEMONSARRAT271
+  :address_no_ws: 271MONSARRAT
+  :address_no_ws_rev: MONSARRAT271
 - :name: ACE, IAN
   :start_date: '1997-08-08'
   :end_date: '2017-08-08'

@@ -19,10 +19,12 @@
   :name_rev: ImportExport Plant National China
   :name_no_ws: ChinaNationalPlantImportExport
   :name_no_ws_rev: ImportExportPlantNationalChina
-  :address_idx: Room 2135 Jingxin Building A No Dong San Huan North Road Beijing
-  :address_rev: Beijing Road North Huan San Dong No A Building Jingxin 2135 Room
-  :address_no_ws: Room2135JingxinBuildingANoDongSanHuanNorthRoadBeijing
-  :address_no_ws_rev: BeijingRoadNorthHuanSanDongNoABuildingJingxin2135Room
+  :address_idx: 2135 Jingxin A No Dong San Huan North Beijing
+  :address_rev: Beijing North Huan San Dong No A Jingxin 2135
+  :address_no_ws_with_common: Room2135JingxinBuildingANoDongSanHuanNorthRoadBeijing
+  :address_no_ws_rev_with_common: BeijingRoadNorthHuanSanDongNoABuildingJingxin2135Room
+  :address_no_ws: 2135JingxinANoDongSanHuanNorthBeijing
+  :address_no_ws_rev: BeijingNorthHuanSanDongNoAJingxin2135
 - :name: Brilliance Technology Ltd
   :id: cc91dc115ff25e9f2e3cab1b9d8adf75f5956982
   :source: *1
@@ -46,10 +48,12 @@
   :name_rev: Technology Brilliance
   :name_no_ws: BrillianceTechnology
   :name_no_ws_rev: TechnologyBrilliance
-  :address_idx: Flat A 11F Adolfo Mansion 114-116 Austin Road Tsim Sha Tsui Kowloon
-  :address_rev: Kowloon Tsui Sha Tsim Road Austin 114-116 Mansion Adolfo 11F A Flat
-  :address_no_ws: FlatA11FAdolfoMansion114-116AustinRoadTsimShaTsuiKowloon
-  :address_no_ws_rev: KowloonTsuiShaTsimRoadAustin114-116MansionAdolfo11FAFlat
+  :address_idx: A 11F Adolfo Mansion 114-116 Austin Tsim Sha Tsui Kowloon
+  :address_rev: Kowloon Tsui Sha Tsim Austin 114-116 Mansion Adolfo 11F A
+  :address_no_ws_with_common: FlatA11FAdolfoMansion114-116AustinRoadTsimShaTsuiKowloon
+  :address_no_ws_rev_with_common: KowloonTsuiShaTsimRoadAustin114-116MansionAdolfo11FAFlat
+  :address_no_ws: A11FAdolfoMansion114-116AustinTsimShaTsuiKowloon
+  :address_no_ws_rev: KowloonTsuiShaTsimAustin114-116MansionAdolfo11FA
 - :name: Dynasense Photonics Co., Limited
   :id: 91b38427499bf36988a61096f665301b890c9ec2
   :source: *1
@@ -68,10 +72,12 @@
   :name_rev: Photonics Dynasense
   :name_no_ws: DynasensePhotonics
   :name_no_ws_rev: PhotonicsDynasense
-  :address_idx: Unit 2209 22F Wu Chung House 213 Queen's Road East Wanchai
-  :address_rev: Wanchai East Road Queen's 213 House Chung Wu 22F 2209 Unit
-  :address_no_ws: Unit220922FWuChungHouse213Queen'sRoadEastWanchai
-  :address_no_ws_rev: WanchaiEastRoadQueen's213HouseChungWu22F2209Unit
+  :address_idx: 2209 22F Wu Chung House 213 Queen's East Wanchai
+  :address_rev: Wanchai East Queen's 213 House Chung Wu 22F 2209
+  :address_no_ws_with_common: Unit220922FWuChungHouse213Queen'sRoadEastWanchai
+  :address_no_ws_rev_with_common: WanchaiEastRoadQueen's213HouseChungWu22F2209Unit
+  :address_no_ws: 220922FWuChungHouse213Queen'sEastWanchai
+  :address_no_ws_rev: WanchaiEastQueen's213HouseChungWu22F2209
 - :name: Hi-Shine Technology (HK) Limited
   :id: 6e18b2585a002248ecb071d5fa8b26cdfd2f4144
   :source: *1
@@ -97,10 +103,12 @@
   :name_rev: HK Technology Hi-Shine
   :name_no_ws: Hi-ShineTechnologyHK
   :name_no_ws_rev: HKTechnologyHi-Shine
-  :address_idx: Flat D12 11F King Yip Factory Bldg 59 King Yip Street Kwun Tong Kowloon
-  :address_rev: Kowloon Tong Kwun Street Yip King 59 Bldg Factory Yip King 11F D12 Flat
-  :address_no_ws: FlatD1211FKingYipFactoryBldg59KingYipStreetKwunTongKowloon
-  :address_no_ws_rev: KowloonTongKwunStreetYipKing59BldgFactoryYipKing11FD12Flat
+  :address_idx: D12 11F King Yip Factory 59 King Yip Kwun Tong Kowloon
+  :address_rev: Kowloon Tong Kwun Yip King 59 Factory Yip King 11F D12
+  :address_no_ws_with_common: FlatD1211FKingYipFactoryBldg59KingYipStreetKwunTongKowloon
+  :address_no_ws_rev_with_common: KowloonTongKwunStreetYipKing59BldgFactoryYipKing11FD12Flat
+  :address_no_ws: D1211FKingYipFactory59KingYipKwunTongKowloon
+  :address_no_ws_rev: KowloonTongKwunYipKing59FactoryYipKing11FD12
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
   :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
   :source: *1
@@ -119,10 +127,12 @@
   :name_rev: Development Info-Tec Haimao Kong Hong
   :name_no_ws: HongKongHaimaoInfo-TecDevelopment
   :name_no_ws_rev: DevelopmentInfo-TecHaimaoKongHong
-  :address_idx: Rm 1013B Well Fung Ind Center Ta Chuen Ping Street Kwai Chung
-  :address_rev: Chung Kwai Street Ping Chuen Ta Center Ind Fung Well 1013B Rm
-  :address_no_ws: Rm1013BWellFungIndCenterTaChuenPingStreetKwaiChung
-  :address_no_ws_rev: ChungKwaiStreetPingChuenTaCenterIndFungWell1013BRm
+  :address_idx: Rm 1013B Well Fung Ind Ta Chuen Ping Kwai Chung
+  :address_rev: Chung Kwai Ping Chuen Ta Ind Fung Well 1013B Rm
+  :address_no_ws_with_common: Rm1013BWellFungIndCenterTaChuenPingStreetKwaiChung
+  :address_no_ws_rev_with_common: ChungKwaiStreetPingChuenTaCenterIndFungWell1013BRm
+  :address_no_ws: Rm1013BWellFungIndTaChuenPingKwaiChung
+  :address_no_ws_rev: ChungKwaiPingChuenTaIndFungWell1013BRm
 - :name: Lianqi (HK) Electronics Co Ltd
   :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
   :source: *1
@@ -141,10 +151,12 @@
   :name_rev: Electronics HK Lianqi
   :name_no_ws: LianqiHKElectronics
   :name_no_ws_rev: ElectronicsHKLianqi
-  :address_idx: Unit N 3F Hopewell House 175 Hip Wo Street KwunTong Kowloon
-  :address_rev: Kowloon KwunTong Street Wo Hip 175 House Hopewell 3F N Unit
-  :address_no_ws: UnitN3FHopewellHouse175HipWoStreetKwunTongKowloon
-  :address_no_ws_rev: KowloonKwunTongStreetWoHip175HouseHopewell3FNUnit
+  :address_idx: N 3F Hopewell House 175 Hip Wo KwunTong Kowloon
+  :address_rev: Kowloon KwunTong Wo Hip 175 House Hopewell 3F N
+  :address_no_ws_with_common: UnitN3FHopewellHouse175HipWoStreetKwunTongKowloon
+  :address_no_ws_rev_with_common: KowloonKwunTongStreetWoHip175HouseHopewell3FNUnit
+  :address_no_ws: N3FHopewellHouse175HipWoKwunTongKowloon
+  :address_no_ws_rev: KowloonKwunTongWoHip175HouseHopewell3FN
 - :name: Lion Chip Electronics Ltd
   :id: f117b1dab0d802e5f6c3a02113f67f3f72893a6e
   :source: *1
@@ -163,10 +175,12 @@
   :name_rev: Electronics Chip Lion
   :name_no_ws: LionChipElectronics
   :name_no_ws_rev: ElectronicsChipLion
-  :address_idx: Unit N 3F Hopewell House 175 Hip Wo Street KwunTong Kowloon
-  :address_rev: Kowloon KwunTong Street Wo Hip 175 House Hopewell 3F N Unit
-  :address_no_ws: UnitN3FHopewellHouse175HipWoStreetKwunTongKowloon
-  :address_no_ws_rev: KowloonKwunTongStreetWoHip175HouseHopewell3FNUnit
+  :address_idx: N 3F Hopewell House 175 Hip Wo KwunTong Kowloon
+  :address_rev: Kowloon KwunTong Wo Hip 175 House Hopewell 3F N
+  :address_no_ws_with_common: UnitN3FHopewellHouse175HipWoStreetKwunTongKowloon
+  :address_no_ws_rev_with_common: KowloonKwunTongStreetWoHip175HouseHopewell3FNUnit
+  :address_no_ws: N3FHopewellHouse175HipWoKwunTongKowloon
+  :address_no_ws_rev: KowloonKwunTongWoHip175HouseHopewell3FN
 - :name: Security 2 Business Academy
   :id: 5b5a164dd0e4ca3acb6397dbeb2d5713c4f13f90
   :source: *1
@@ -188,10 +202,12 @@
   :name_rev: Academy Business 2 Security
   :name_no_ws: Security2BusinessAcademy
   :name_no_ws_rev: AcademyBusiness2Security
-  :address_idx: Deguninskaya Street 10 Moscow
-  :address_rev: Moscow 10 Street Deguninskaya
-  :address_no_ws: DeguninskayaStreet10Moscow
-  :address_no_ws_rev: Moscow10StreetDeguninskaya
+  :address_idx: Deguninskaya 10 Moscow
+  :address_rev: Moscow 10 Deguninskaya
+  :address_no_ws_with_common: DeguninskayaStreet10Moscow
+  :address_no_ws_rev_with_common: Moscow10StreetDeguninskaya
+  :address_no_ws: Deguninskaya10Moscow
+  :address_no_ws_rev: Moscow10Deguninskaya
 - :name: S2BA
   :id: 8cc44eee211bbc678fa468cfa5d44065b4c5d749
   :source: *1
@@ -213,10 +229,12 @@
   :name_rev: S2BA
   :name_no_ws: S2BA
   :name_no_ws_rev: S2BA
-  :address_idx: Deguninskaya Street 10 Moscow
-  :address_rev: Moscow 10 Street Deguninskaya
-  :address_no_ws: DeguninskayaStreet10Moscow
-  :address_no_ws_rev: Moscow10StreetDeguninskaya
+  :address_idx: Deguninskaya 10 Moscow
+  :address_rev: Moscow 10 Deguninskaya
+  :address_no_ws_with_common: DeguninskayaStreet10Moscow
+  :address_no_ws_rev_with_common: Moscow10StreetDeguninskaya
+  :address_no_ws: Deguninskaya10Moscow
+  :address_no_ws_rev: Moscow10Deguninskaya
 - :name: Academy of Business Security
   :id: b5f1189bc3a5d4a969a9980d946f30c9dd74ea84
   :source: *1
@@ -238,10 +256,12 @@
   :name_rev: Security Business of Academy
   :name_no_ws: AcademyofBusinessSecurity
   :name_no_ws_rev: SecurityBusinessofAcademy
-  :address_idx: Deguninskaya Street 10 Moscow
-  :address_rev: Moscow 10 Street Deguninskaya
-  :address_no_ws: DeguninskayaStreet10Moscow
-  :address_no_ws_rev: Moscow10StreetDeguninskaya
+  :address_idx: Deguninskaya 10 Moscow
+  :address_rev: Moscow 10 Deguninskaya
+  :address_no_ws_with_common: DeguninskayaStreet10Moscow
+  :address_no_ws_rev_with_common: Moscow10StreetDeguninskaya
+  :address_no_ws: Deguninskaya10Moscow
+  :address_no_ws_rev: Moscow10Deguninskaya
 - :name: T2BA
   :id: c46ba5ffd6da15f8e524b58f59123894bb63e2f8
   :source: *1
@@ -258,10 +278,12 @@
   :name_rev: T2BA
   :name_no_ws: T2BA
   :name_no_ws_rev: T2BA
-  :address_idx: Deguninskaya Street 30 Moscow Russia
-  :address_rev: Russia Moscow 30 Street Deguninskaya
-  :address_no_ws: DeguninskayaStreet30MoscowRussia
-  :address_no_ws_rev: RussiaMoscow30StreetDeguninskaya
+  :address_idx: Deguninskaya 30 Moscow Russia
+  :address_rev: Russia Moscow 30 Deguninskaya
+  :address_no_ws_with_common: DeguninskayaStreet30MoscowRussia
+  :address_no_ws_rev_with_common: RussiaMoscow30StreetDeguninskaya
+  :address_no_ws: Deguninskaya30MoscowRussia
+  :address_no_ws_rev: RussiaMoscow30Deguninskaya
 - :name: Training 2 Business Academy, a.k.a. T2BA, a.k.a. Academy of Business Training
   :id: 385c6ccf9a8683027c6a981a8467a1ee357a4ee2
   :source: *1
@@ -302,7 +324,9 @@
   - AcademyBusiness2Training
   - T2BA
   - TrainingBusinessofAcademy
-  :address_idx: Deguninskaya Street 20 Moscow Russia
-  :address_rev: Russia Moscow 20 Street Deguninskaya
-  :address_no_ws: DeguninskayaStreet20MoscowRussia
-  :address_no_ws_rev: RussiaMoscow20StreetDeguninskaya
+  :address_idx: Deguninskaya 20 Moscow Russia
+  :address_rev: Russia Moscow 20 Deguninskaya
+  :address_no_ws_with_common: DeguninskayaStreet20MoscowRussia
+  :address_no_ws_rev_with_common: RussiaMoscow20StreetDeguninskaya
+  :address_no_ws: Deguninskaya20MoscowRussia
+  :address_no_ws_rev: RussiaMoscow20Deguninskaya

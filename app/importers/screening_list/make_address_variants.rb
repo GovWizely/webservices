@@ -1,7 +1,7 @@
 module ScreeningList
   module MakeAddressVariants
     STOPWORDS    = %w( and the los )
-    COMMON_WORDS = %w( box st ave )
+    COMMON_WORDS = %w( avenue box building bldg center circle court dr drive flat floor number place road room street unit )
 
     def make_addresses(doc)
 

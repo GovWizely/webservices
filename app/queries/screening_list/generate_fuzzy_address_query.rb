@@ -2,7 +2,7 @@ module ScreeningList
   module GenerateFuzzyAddressQuery
     def generate_fuzzy_address_query(json)
       stopwords    = %w( and the los )
-      common_words = %w( box st ave )
+      common_words = %w( avenue box building center circle court dr drive floor number place road room street unit )
 
       # address variants
       addrs        = %w( address_idx address_rev  )
