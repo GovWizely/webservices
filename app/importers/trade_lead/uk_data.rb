@@ -10,7 +10,7 @@ module TradeLead
     end
 
     def import
-      xml_body = @resource ? File.open(@resource).read : fetch_xml.body
+      xml_body = loaded_resource
 
       # The source XML file states that its content in encoded in utf-16, but
       # it appears to actually be encoded in utf-8. Go figure. Despite telling
@@ -25,6 +25,10 @@ module TradeLead
       end.compact
 
       model_class.index(leads)
+    end
+
+    def loaded_resource
+      @resource ? File.open(@resource).read : fetch_xml.body
     end
 
     private
