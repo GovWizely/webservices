@@ -29,7 +29,11 @@ module VersionableResource
   end
 
   def loaded_resource
-    @loaded_resource ||= open(@resource).read
+    if @resource.is_a? Array
+      @loaded_resource ||= @resource.map { |r| open(r).read }.join
+    else
+      @loaded_resource ||= open(@resource).read
+    end
   end
 
   def available_version

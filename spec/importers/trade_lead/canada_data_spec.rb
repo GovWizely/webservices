@@ -7,6 +7,7 @@ describe TradeLead::CanadaData do
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'
+  it_behaves_like 'a versionable resource'
 
   describe '#process_entry' do
     let(:original) do

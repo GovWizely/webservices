@@ -20,4 +20,10 @@ describe TradeLead::UkData do
       expect { importer.import }.to raise_error
     end
   end
+
+  context 'when importing data' do
+    let(:fixtures_file) { "#{fixtures_dir}/Notices.xml" }
+    let(:resource) { fixtures_file }
+    it_behaves_like 'a versionable resource'
+  end
 end

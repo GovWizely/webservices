@@ -3,6 +3,7 @@ require 'spec_helper'
 describe TradeLead::McaData do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/mca" }
   let(:fixtures_file) { "#{fixtures_dir}/mca_leads.xml" }
+  let(:resource) { fixtures_file }
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/results.yaml") }
 

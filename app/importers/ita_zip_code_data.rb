@@ -2,6 +2,7 @@ require 'open-uri'
 
 class ItaZipCodeData
   include Importable
+  include VersionableResource
   POST_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?type=odo'
   ZIP_CODE_URL = 'http://emenuapps.ita.doc.gov/ePublic/GetPost?ZipCode=all'
 
@@ -30,6 +31,7 @@ class ItaZipCodeData
   def initialize(post_resource = POST_URL, zip_code_resource = ZIP_CODE_URL)
     @post_resource = post_resource
     @zip_code_resource = zip_code_resource
+    @resource = [@post_resource, @zip_code_resource]
   end
 
   def import

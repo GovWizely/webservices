@@ -150,5 +150,4 @@ describe Importable do
       Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
     end
   end
-
 end
