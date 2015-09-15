@@ -3,7 +3,13 @@ namespace :ita do
   task :import, [:arg] => :environment do |_t, args|
     args.to_a.each do |module_or_importer_class_name|
       module_or_importer_class = module_or_importer_class_name.constantize
-      module_or_importer_class.try(:import_all_sources) || ImportWorker.perform_async(module_or_importer_class_name)
+      if module_or_importer_class.respond_to?(:import_all_sources)
+        module_or_importer_class.import_all_sources
+      elsif !module_or_importer_class_name.constantize.disabled?
+        ImportWorker.perform_async(module_or_importer_class_name)
+      else
+        puts 'Nothing to do.'
+      end
     end
   end
 
