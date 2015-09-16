@@ -59,7 +59,7 @@ module Envirotech
 
     def option_labels(options)
       options
-        .map { |o| o.children.to_s }
+        .map { |o| o.children.text }
         .reject { |s| ['', 'Select An Option'].include?(s) }
     end
   end
