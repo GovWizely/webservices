@@ -51,7 +51,6 @@ describe Envirotech::ToolkitScraper do
           fail Mechanize::ResponseCodeError, double(code: '')
         end
 
-
         allow(Mechanize).to receive(:new).and_return(agent)
         described_class.new
       end
