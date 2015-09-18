@@ -14,6 +14,8 @@
   :source_created_at: '2013-10-31'
   :source_id: 24
   :source_updated_at: '2015-05-29'
+  :solution_ids: []
+  :regulation_ids: []
 - :abstract_chinese: 生物固体是污水污泥处理产生的养分丰富的有机材料（是指在处理设施中进行生活污水处理期间所产生的固体，半固体或未处理的液体残留）。污水污泥经处理后变成生物固体，它可被安全回收并用作肥料来持续改善维持土壤生产力并促进农作物生长。
   :abstract_english: Biosolids are the nutrient-rich organic materials resulting from the treatment of sewage sludge (the name for the solid, semisolid or liquid untreated residue generated during the treatment of domestic sewage in a treatment facility). When treated and processed, sewage sludge becomes biosolids which can be safely recycled and applied as fertilizer to sustainably improve and maintain productive soils and stimulate plant growth.
   :abstract_french: Les biosolides sont des matériaux organiques riches en nutriments résultant du traitement de boues d'épurations (le nom que l'on donne aux résidus solides, semi-solides et liquides non traités générés par le traitement d'égouts domestiques dans une station d'épuration). Une fois traitées, les boues d'épurations deviennent des biosolides pouvant être recyclés et réutilisés en toute sécurité sous forme d'engrais, afin d'améliorer et de maintenir des terres productives et de stimuler la croissance des plantes de manière durable.
@@ -29,3 +31,5 @@
   :source_created_at: '2013-10-31'
   :source_id: 23
   :source_updated_at: '2015-05-29'
+  :solution_ids: []
+  :regulation_ids: []

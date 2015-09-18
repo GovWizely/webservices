@@ -1,6 +1,6 @@
 module Envirotech
   class Query < ::Query
-    attr_reader :sources, :source_ids, :issue_ids, :provider_ids, :solution_ids
+    attr_reader :sources, :source_ids, :issue_ids, :provider_ids, :solution_ids, :regulation_ids
 
     setup_query(q: %i(name_chinese
                       name_english
@@ -20,6 +20,7 @@ module Envirotech
       @issue_ids  = options[:issue_ids].try { |s| s.split(',') } || []
       @provider_ids = options[:provider_ids].try { |s| s.split(',') } || []
       @solution_ids = options[:solution_ids].try { |s| s.split(',') } || []
+      @regulation_ids = options[:regulation_ids].try { |s| s.split(',') } || []
       @q = options[:q]
     end
 
@@ -29,9 +30,10 @@ module Envirotech
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
             json.child! { json.terms { json.source_id @source_ids } } if @source_ids.any?
-            json.child! { json.terms { json.issue_id @issue_ids } } if @issue_ids.any?
+            json.child! { json.terms { json.issue_ids @issue_ids } } if @issue_ids.any?
             json.child! { json.terms { json.provider_id @provider_ids } } if @provider_ids.any?
-            json.child! { json.terms { json.solution_id @solution_ids } } if @solution_ids.any?
+            json.child! { json.terms { json.solution_ids @solution_ids } } if @solution_ids.any?
+            json.child! { json.terms { json.regulation_ids @regulation_ids } } if @regulation_ids.any?
           end
         end
       end if any_field_exist?
@@ -40,7 +42,7 @@ module Envirotech
     private
 
     def any_field_exist?
-      @sources.any? || @source_ids.any? || @issue_ids.any? || @provider_ids.any? || @solution_ids.any?
+      @sources.any? || @source_ids.any? || @issue_ids.any? || @provider_ids.any? || @solution_ids.any? || @regulation_ids.any?
     end
   end
 end

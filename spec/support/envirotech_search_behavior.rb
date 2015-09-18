@@ -1,11 +1,12 @@
 shared_context 'all Envirotech fixture data' do
-  include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Issue data'
+  include_context 'Envirotech::Solution data'
   include_context 'Envirotech::Regulation data'
   include_context 'Envirotech::Provider data'
   include_context 'Envirotech::AnalysisLink data'
   include_context 'Envirotech::BackgroundLink data'
   include_context 'Envirotech::ProviderSolution data'
+  include_context 'Envirotech::Relational data'
   before do
     allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
   end
@@ -23,6 +24,11 @@ end
 shared_context 'Envirotech::Solution data' do
   before(:all) do
     Envirotech::Solution.recreate_index
+
+    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
+    relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::RelationalData.relations = relational_data
+
     fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
     Envirotech::SolutionData.new(fixtures_file).import
 
@@ -98,9 +104,20 @@ shared_examples 'it contains all Envirotech::Issue results that match source_id 
   it_behaves_like 'it contains all expected results without source'
 end
 
+shared_examples 'it contains all Envirotech::Issue results that match regulation_ids 19' do
+  let(:source) { Envirotech::Issue }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results without source'
+end
+
 shared_context 'Envirotech::Regulation data' do
   before(:all) do
     Envirotech::Regulation.recreate_index
+
+    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
+    relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::RelationalData.relations = relational_data
+
     fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
     Envirotech::RegulationData.new(fixtures_file).import
 
@@ -276,4 +293,14 @@ shared_examples 'it contains all Envirotech::ProviderSolution results that match
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results without source'
+end
+
+shared_context 'Envirotech::Relational data' do
+  before(:all) do
+    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
+    relational_data = JSON.parse(open(relational_fixtures_file).read)
+    Envirotech::RelationalData.relations = relational_data
+
+    Envirotech::RelationalData.new.import
+  end
 end

@@ -1,5 +1,12 @@
 module Envirotech
   class Login
+    # To set login creds, create a config file at:
+    # config/initializers/envirotech.rb
+    # and populate with the creds as follows:
+    # Envirotech::Login.username = ''
+    # Envirotech::Login.password = ''
+    # Envirotech::Login.web_auth = ''
+
     LOGIN_URL = 'https://admin.export.gov/site_login'
     cattr_accessor :web_auth, :username, :password, :mechanize_agent
 

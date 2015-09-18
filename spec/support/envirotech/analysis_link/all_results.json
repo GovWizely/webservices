@@ -9,7 +9,7 @@
     "source_created_at": "2013-11-13",
     "source_updated_at": "2013-11-13",
     "url": "http://www.epa.gov/ttn/ecas/regdata/RIAs/oilnaturalgasfinalria.pdf",
-    "issue_id": 19
+    "issue_ids": 19
   },
   {
     "source_id": 10,
@@ -21,7 +21,7 @@
     "source_created_at": "2013-10-31",
     "source_updated_at": "2013-10-31",
     "url": "http://water.epa.gov/drink/info/arsenic/upload/2005_11_10_arsenic_methods.pdf",
-    "issue_id": 22
+    "issue_ids": 22
   }
 ]
 

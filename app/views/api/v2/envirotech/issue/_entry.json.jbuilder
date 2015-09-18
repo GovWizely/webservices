@@ -12,4 +12,6 @@ json.call(entry[:_source],
           :abstract_spanish,
           :source_created_at,
           :source_updated_at,
+          :regulation_ids,
+          :solution_ids,
          )

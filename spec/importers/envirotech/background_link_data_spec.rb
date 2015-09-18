@@ -4,17 +4,10 @@ describe Envirotech::BackgroundLinkData do
   include_context 'empty Envirotech indices'
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json" }
   let(:importer) { described_class.new(fixtures_file) }
-  let(:articles_hash) { YAML.load_file("#{File.dirname(__FILE__)}/background_link/background_link_articles.yaml") }
+  let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/background_link/background_link_articles.yaml") }
+  let(:resource) { fixtures_file }
 
   it_behaves_like 'an importer which can purge old documents'
-
-  describe '#import' do
-    it 'loads background link articles from specified resource' do
-      expect(Envirotech::BackgroundLink).to receive(:index) do |articles|
-        expect(articles.size).to eq(2)
-        2.times { |x| expect(articles[x]).to eq(articles_hash[x]) }
-      end
-      importer.import
-    end
-  end
+  it_behaves_like 'a versionable resource'
+  it_behaves_like 'an importer which indexes the correct documents'
 end

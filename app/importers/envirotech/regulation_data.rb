@@ -1,6 +1,8 @@
 module Envirotech
   class RegulationData < Envirotech::BaseData
     include Importable
+    include ::VersionableResource
+
     ENDPOINT = 'https://admin.export.gov/admin/envirotech_regulations.json'
 
     COLUMN_HASH = {
@@ -19,8 +21,11 @@ module Envirotech
       @resource = resource
     end
 
+    def loaded_resource
+      @loaded_resource ||= data.to_s
+    end
+
     def import
-      data = fetch_data
       articles = data.map { |article_hash| process_article_info article_hash }
       model_class.index articles
     end
@@ -37,7 +42,14 @@ module Envirotech
       article[:source] = model_class.source[:code]
 
       article[:id] = Utils.generate_id(article, %i(source_id source))
+
+      article[:issue_ids] = article[:solution_ids] = []
+
       sanitize_entry(article)
+    end
+
+    def data
+      @data ||= fetch_data
     end
   end
 end
