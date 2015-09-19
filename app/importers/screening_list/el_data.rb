@@ -16,6 +16,7 @@ module ScreeningList
       license_policy license_requirement name postal_code programs remarksnotes
       sdn_type source_list standard_order stateprovince title vessel_flag
       vessel_owner vessel_type web_link)
+    expected_csv_headers << :"" # See INVALID CSV note below
 
     include ScreeningList::CanGroupRows
     self.group_by = %i(name federal_register_notice effective_date)
@@ -40,9 +41,16 @@ module ScreeningList
     end
 
     def import
+      # INVALID CSV note
+      # They send us empty headers (eg. name,addr,,,,)
+      # Those become nil and the :symbol header_converter chokes on it
+      # So we run another converter first to turn nils into ""
+      # ... And we end up with a strange "expected csv header" above: :""
+      # Facepalm.
+      CSV::HeaderConverters[:nil_to_blank] = ->(h) { h || '' }
       rows = CSV.parse(loaded_resource,
                        headers:           true,
-                       header_converters: :symbol)
+                       header_converters: [:nil_to_blank, :symbol])
 
       ensure_expected_headers(rows.first)
 
