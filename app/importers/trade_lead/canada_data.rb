@@ -40,11 +40,16 @@ module TradeLead
     end
 
     def leads
-      doc = CSV.parse(open(@resource, 'r:UTF-8').read, headers: true, header_converters: :symbol, encoding: 'UTF-8')
+      raw = strip_bom(open(@resource, 'r:utf-8').read)
+      doc = CSV.parse(raw, headers: true, header_converters: :symbol, encoding: 'UTF-8')
       doc.map { |entry| process_entry entry.to_h }.compact
     end
 
     private
+
+    def strip_bom(text)
+      text.sub(/^\xef\xbb\xbf/, '')
+    end
 
     def process_entry(entry)
       lead = sanitize_entry(remap_keys(COLUMN_HASH, entry))
