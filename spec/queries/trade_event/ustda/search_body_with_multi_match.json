@@ -11,9 +11,9 @@
               "venues.city",
               "venues.state",
               "venues.country",
-              "contacts.first_name",
-              "contacts.last_name",
-              "contacts.person_title"
+              "first_name",
+              "last_name",
+              "person_title"
             ],
             "operator": "and",
             "query": "workboat"
