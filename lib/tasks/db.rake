@@ -16,8 +16,8 @@ namespace :db do
     User.create_index!
   end
 
-  desc 'Delete all indices'
+  desc 'Delete all indices relating to this project and environment'
   task drop: :environment do
-    ES.client.indices.delete(index: [Rails.env, '*'].join(':'))
+    ES.client.indices.delete(index: [ES::INDEX_PREFIX, '*'].join(':'))
   end
 end
