@@ -5,8 +5,8 @@
       {
         "multi_match": {
           "fields": [
-            "industries.original.tokenized",
-            "industries.mapped.tokenized"
+            "tags_original_source.tokenized",
+            "ita_industries.tokenized"
             ],
           "operator": "and",
           "query": "fishing"
