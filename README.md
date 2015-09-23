@@ -48,32 +48,34 @@ You'll need to have redis installed on your machine. `brew install redis`, `apt-
 
 ### Running it
 
-Fire up a server and try it all out.
+Create the indexes:
+
+    bundle exec rake db:create
+    
+Generate an admin user:
+
+    bundle exec rake db:devseed    
+
+Fire up a server and import some data.
 
     foreman start -f Procfile.dev
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
 
-<http://127.0.0.1:3000/consolidated_screening_list/search?size=5&offset=8>
-
-<http://127.0.0.1:3000/consolidated_screening_list/search?q=john>
-
-<http://127.0.0.1:3000/consolidated_screening_list/search?sources=SDN,EL>
-
-<http://127.0.0.1:3000/market_research_library/search?q=oil>
-
-<http://127.0.0.1:3000/market_research_library/search?countries=HU,CA>
-
 #### Authentication
 
-Since v2 of the API, an authentication token is required to every request.
+Since v2 of the API, an authentication token is required to every request. Pass it on the query string:
 
-You can generate one with:
+<http://localhost:3000/v2/market_research_library/search?api_key=devkey>
 
-    bundle exec rake db:devseed
+<http://localhost:3000/consolidated_screening_list/search?api_key=devkey&size=5&offset=8>
 
-Then pass it on the query string:
+<http://localhost:3000/consolidated_screening_list/search?api_key=devkey&q=john>
 
-<http://localhost:3000/v2/market_research_library/search?api_key=devkey'>
+<http://localhost:3000/consolidated_screening_list/search?api_key=devkey&sources=SDN,EL>
+
+<http://localhost:3000/market_research_library/search?api_key=devkey&q=oil>
+
+<http://localhost:3000/market_research_library/search?api_key=devkey&countries=HU,CA>
 
 Or using http headers:
 
