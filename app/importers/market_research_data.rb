@@ -12,7 +12,7 @@ class MarketResearchData
     country:  :countries,
     descrip:  :description,
     expdate:  :expiration_date,
-    industry: :tags_original_source,
+    industry: :industries,
     origform: :report_type,
     ttitle:   :title,
     doc:      :url,
@@ -42,8 +42,8 @@ class MarketResearchData
     entry[:countries] = entry[:countries].present? ? extract_countries(entry[:countries]) : []
     entry[:expiration_date] = parse_date(entry[:expiration_date])
 
-    entry[:tags_original_source] = str_to_a(entry[:tags_original_source] || '')
-    entry[:ita_industries] = entry[:tags_original_source].map { |i| normalize_industry(i) }.compact.flatten.uniq
+    entry[:industries] = str_to_a(entry[:industries] || '')
+    entry[:ita_industries] = entry[:industries].map { |i| normalize_industry(i) }.compact.flatten.uniq
 
     entry[:report_type] = detect_report_type(entry[:report_type])
     entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?

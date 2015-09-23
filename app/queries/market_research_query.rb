@@ -15,7 +15,7 @@ class MarketResearchQuery < CountryIndustryQuery
             generate_multi_match(json, %w(description title), @q)
           end if @q
           json.child! do
-            generate_multi_match(json, %w(tags_original_source.tokenized ita_industries.tokenized), @industry)
+            generate_multi_match(json, %w(industries.tokenized ita_industries.tokenized), @industry)
           end if @industry
         end
       end

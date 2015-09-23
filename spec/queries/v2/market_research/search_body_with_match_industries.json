@@ -10,7 +10,8 @@
                            "multi_match" : {
                               "operator" : "and",
                               "fields" : [
-                                 "ita_industries.keyword"
+                                 "ita_industries.keyword",
+                                 "industries.keyword"
                               ],
                               "query" : "fishing"
                            }
@@ -21,7 +22,8 @@
                            "multi_match" : {
                               "operator" : "and",
                               "fields" : [
-                                 "ita_industries.keyword"
+                                 "ita_industries.keyword",
+                                 "industries.keyword"
                               ],
                               "query" : "swimming"
                            }

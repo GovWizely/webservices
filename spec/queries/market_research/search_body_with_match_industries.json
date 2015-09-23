@@ -5,7 +5,7 @@
       {
         "multi_match": {
           "fields": [
-            "tags_original_source.tokenized",
+            "industries.tokenized",
             "ita_industries.tokenized"
             ],
           "operator": "and",

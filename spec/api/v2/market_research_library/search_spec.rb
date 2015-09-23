@@ -92,11 +92,12 @@ describe 'Market Researches API V2', type: :request do
 
           it 'returns market researches' do
             json_response = JSON.parse(response.body)
-            expect(json_response['total']).to eq(1)
+            expect(json_response['total']).to eq(2)
             expect(json_response['offset']).to eq(0)
 
             results = json_response['results']
-            expect(results[0]).to eq(expected_results[5])
+            expect(results[0]).to eq(expected_results[2])
+            expect(results[1]).to eq(expected_results[5])
           end
         end
       end

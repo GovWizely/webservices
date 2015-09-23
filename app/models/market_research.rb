@@ -22,14 +22,14 @@ class MarketResearch
         expiration_date: { type: 'date', format: 'YYYY-MM-dd' },
         countries:       { type: 'string', analyzer: 'keyword' },
         description:     { type: 'string', analyzer: 'custom_analyzer' },
-        tags_original_source: {
+        industries:      {
           type:   'string',
           fields: {
             tokenized: { type: 'string', analyzer: 'custom_analyzer' },
             keyword:   { type: 'string', analyzer: 'title_keyword_analyzer' },
           },
         },
-        ita_industries:   {
+        ita_industries:  {
           type:   'string',
           fields: {
             tokenized: { type: 'string', analyzer: 'custom_analyzer' },
