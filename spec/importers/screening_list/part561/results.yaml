@@ -80,3 +80,7 @@
   :alt_no_ws_rev:
   - COOPERATIVESCREDITURBANKARAMAY
   - BANKCOMMERCIALCITYKARAMAY
+  :address_idx: 172 Xibin Rd Ranghulu District Daqing Heilongjiang Branch
+  :address_rev: Branch Heilongjiang Daqing District Ranghulu Rd Xibin 172
+  :address_no_ws: 172XibinRdRanghuluDistrictDaqingHeilongjiangBranch
+  :address_no_ws_rev: BranchHeilongjiangDaqingDistrictRanghuluRdXibin172

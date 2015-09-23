@@ -69,7 +69,7 @@ module ScreeningList
       doc.merge!(extract_complex_nested_fields(node))
 
       make_names(doc)
-
+      make_addresses(doc) if doc[:addresses].present? && doc[:addresses][0][:address].present?
       doc
     end
 

@@ -40,6 +40,12 @@
   :name_rev: PTE S OIL KUO
   :name_no_ws: KUOOILSPTE
   :name_no_ws_rev: PTESOILKUO
+  :address_idx: 200 Cantonment 15-00 Southpoint
+  :address_no_ws_with_common: 200CantonmentRoad15-00Southpoint
+  :address_no_ws_rev_with_common: Southpoint15-00RoadCantonment200
+  :address_rev: Southpoint 15-00 Cantonment 200
+  :address_no_ws: 200Cantonment15-00Southpoint
+  :address_no_ws_rev: Southpoint15-00Cantonment200
 - :entity_number: '13043'
   :title: 
   :call_sign: 
@@ -84,3 +90,9 @@
   :name_rev: OIL FAL
   :name_no_ws: FALOIL
   :name_no_ws_rev: OILFAL
+  :address_idx: Sultan Al Awal Sheikh Sultan Bin Awal Near Mina Sea Port Near Mina Khalid Al Khan Area
+  :address_no_ws_with_common: SultanAlAwalStreetSheikhSultanBinAwalRoadNearMinaSeaPortNearMinaKhalidRoadAlKhanArea
+  :address_no_ws_rev_with_common: AreaKhanAlRoadKhalidMinaNearPortSeaMinaNearRoadAwalBinSultanSheikhStreetAwalAlSultan
+  :address_rev: Area Khan Al Khalid Mina Near Port Sea Mina Near Awal Bin Sultan Sheikh Awal Al Sultan
+  :address_no_ws: SultanAlAwalSheikhSultanBinAwalNearMinaSeaPortNearMinaKhalidAlKhanArea
+  :address_no_ws_rev: AreaKhanAlKhalidMinaNearPortSeaMinaNearAwalBinSultanSheikhAwalAlSultan
