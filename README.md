@@ -65,7 +65,7 @@ Fire up a server and import some data.
 
 Since v2 of the API, an authentication token is required to every request. Pass it on the query string:
 
-<http://localhost:3000/v2/market_research_library/search?api_key=devkey>
+<http://localhost:3000/market_research_library/search?api_key=devkey>
 
 <http://localhost:3000/consolidated_screening_list/search?api_key=devkey&size=5&offset=8>
 
