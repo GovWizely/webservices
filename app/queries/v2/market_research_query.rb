@@ -44,7 +44,7 @@ class V2::MarketResearchQuery < CountryIndustryQuery
           Array(industries).each do |industry|
             json.child! do
               json.query do
-                generate_multi_match(json, %w(industries.mapped.keyword), industry)
+                generate_multi_match(json, %w(ita_industries.keyword industries.keyword), industry)
               end
             end
           end
