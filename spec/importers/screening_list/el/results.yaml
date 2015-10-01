@@ -1,0 +1,220 @@
+---
+- :name: Fazal Rahim Farid
+  :federal_register_notice: 76 FR 71867
+  :start_date: '2011-11-21'
+  :standard_order: 
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title:
+  :id: fabe2145af20dcff1163dbf2a6292f379aa9f27f
+  :alt_names:
+  - Fazel Rahim Farid
+  - Farid
+  - Engineer Idris
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  - :address: A2 Ground Floor, City Computer Plaza, Shar-e-Naw
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  :source: &1
+    :full_name: Entity List (EL) - Bureau of Industry and Security
+    :code: EL
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Fazal Rahim Farid
+  :name_rev: Farid Rahim Fazal
+  :name_no_ws: FazalRahimFarid
+  :name_no_ws_rev: FaridRahimFazal
+  :alt_idx: [Fazel Rahim Farid, Farid, Engineer Idris]
+  :alt_rev: [Farid Rahim Fazel, Farid, Idris Engineer]
+  :alt_no_ws: [FazelRahimFarid, Farid, EngineerIdris]
+  :alt_no_ws_rev: [FaridRahimFazel, Farid, IdrisEngineer]
+- :name: Fazel Khalil Construction Company
+  :federal_register_notice: 77 FR 25055
+  :start_date: '2012-04-27'
+  :standard_order: 
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title:
+  :id: 82637ba282f441104f3aa8413aefdd5c303b9fe6
+  :alt_names: []
+  :addresses:
+  - :address: Wazir Akbar Khan, Road Number 10, In front of National Bank, District
+      10
+    :city: Kabul
+    :country: AF
+    :postal_code: 
+    :state: 
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Fazel Khalil Construction
+  :name_no_ws_with_common: FazelKhalilConstructionCompany
+  :name_no_ws_rev_with_common: CompanyConstructionKhalilFazel
+  :name_rev: Construction Khalil Fazel
+  :name_no_ws: FazelKhalilConstruction
+  :name_no_ws_rev: ConstructionKhalilFazel
+- :name: Zurmat Construction Company offices
+  :federal_register_notice: 77 FR 25055
+  :start_date: '2012-04-27'
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title:
+  :id: 0a10ca0bd89967d7a80efc9f4ffecaa71af1ee79
+  :alt_names: []
+  :addresses:
+  - :address: House No. 319, 10th Street Wazeer Akbar Khan
+    :city: Kabul
+    :country: AF
+    :postal_code:
+    :state:
+  - :address: Wazir Akbar Khan, District 10, Apartment 319
+    :city: Kabul
+    :country: AF
+    :postal_code:
+    :state:
+  - :address:
+    :city: Tarin Cot City
+    :country: AF
+    :postal_code:
+    :state:
+  - :address: Behind UNAMA Office, Pir Bagh Office
+    :city: Gardez
+    :country: AF
+    :postal_code:
+    :state:
+  - :address: House No. 01, Street No. 01, Muhaqeq Road (Behind Pakistan and Turkish
+      Embassies)
+    :city: Mazar-e-Sharif
+    :country: AF
+    :postal_code:
+    :state:
+  - :address: Hazratan Street (Behind Jalalalabad Teaching Hospital)
+    :city: Jalalalabad
+    :country: AF
+    :postal_code:
+    :state:
+  - :address: Aino Mena, Street No. 22 (Blue Color House Left Side of Road)
+    :city: Kandahar
+    :country: AF
+    :postal_code:
+    :state:
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Zurmat Construction offices
+  :name_no_ws_with_common: ZurmatConstructionCompanyoffices
+  :name_no_ws_rev_with_common: officesCompanyConstructionZurmat
+  :name_rev: offices Construction Zurmat
+  :name_no_ws: ZurmatConstructionoffices
+  :name_no_ws_rev: officesConstructionZurmat
+- :name: Murat Peker
+  :federal_register_notice: '78 FR 75485 '
+  :start_date: '2013-12-12'
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title:
+  :id: 946f840d05372d41c4baeebc61dddf1363929de5
+  :alt_names: []
+  :addresses:
+  - :address: Mah. Idris Kosku Caddesi Kutu, Sokak No:1 Pierreloti/Eyup
+    :city: Istanbul
+    :country: TR
+    :postal_code:
+    :state:
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Murat Peker
+  :name_rev: Peker Murat
+  :name_no_ws: MuratPeker
+  :name_no_ws_rev: PekerMurat
+- :name: Qazi Abdallah
+  :federal_register_notice: 76 FR 71867
+  :start_date: '2011-11-21'
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title:
+  :id: d741e2b6c40aa24508bd53f45fd0b7e76d7a657c
+  :alt_names:
+  - Jawid, Said Jan Abd-al-Salam
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code:
+    :state:
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
+  :name_no_ws: QaziAbdallah
+  :name_no_ws_rev: AbdallahQazi
+  :alt_idx: [Jawid Said Jan Abd-al-Salam]
+  :alt_rev: [Abd-al-Salam Jan Said Jawid]
+  :alt_no_ws: [JawidSaidJanAbd-al-Salam]
+  :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
+- :name: Qazi Abdallah
+  :federal_register_notice: 76 FR 10001
+  :start_date: '2011-11-21'
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title: Title 1
+  :id: 6ee67838b242db8f5ec639678c518b8636c57c23
+  :alt_names:
+  - Jawid, Said Jan Abd-al-Salam
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code:
+    :state:
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
+  :name_no_ws: QaziAbdallah
+  :name_no_ws_rev: AbdallahQazi
+  :alt_idx: [Jawid Said Jan Abd-al-Salam]
+  :alt_rev: [Abd-al-Salam Jan Said Jawid]
+  :alt_no_ws: [JawidSaidJanAbd-al-Salam]
+  :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
+- :name: Qazi Abdallah
+  :federal_register_notice: 76 FR 71867
+  :start_date: '2011-11-22'
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_policy: Presumption of denial.
+  :source_list_url: http://1.usa.gov/1L47xrV
+  :title: Title 2
+  :id: c04d65011854dc1a2b7ce94a1af2b41ca58d6760
+  :alt_names:
+  - Jawid, Said Jan Abd-al-Salam
+  :addresses:
+  - :address: 'Microrayan 3rd Apt. 45, block #21'
+    :city: Kabul
+    :country: AF
+    :postal_code:
+    :state:
+  :source: *1
+  :source_information_url: http://1.usa.gov/1L47xrV
+  :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
+  :name_no_ws: QaziAbdallah
+  :name_no_ws_rev: AbdallahQazi
+  :alt_idx: [Jawid Said Jan Abd-al-Salam]
+  :alt_rev: [Abd-al-Salam Jan Said Jawid]
+  :alt_no_ws: [JawidSaidJanAbd-al-Salam]
+  :alt_no_ws_rev: [Abd-al-SalamJanSaidJawid]
