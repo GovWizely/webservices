@@ -23,7 +23,7 @@ describe UrlMapper do
   describe '#call_bitly_api' do
     context 'When URI is invalid' do
       it 'Returns the original URL string' do
-        allow(UrlMapper).to receive_message_chain(:open, :read) { '{"status_code": 500}' }
+        allow(UrlMapper).to receive_message_chain(:open, :read) { '{"status_code": 500, "status_txt": "INVALID_URI"}' }
         expect(UrlMapper.call_bitly_api('request_string', 'url_string')).to eq('url_string')
       end
     end

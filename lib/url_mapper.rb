@@ -56,7 +56,7 @@ class UrlMapper
     sleep 5 if !Rails.env.test?
     response = JSON.parse(open(request_string).read)
 
-    return url_string if response["status_code"].to_i == 500
+    return url_string if(response["status_code"].to_i == 500 && response["status_txt"] == "INVALID_URI")
 
     # Not sure if there's a sensible way to test this...
     # :nocov:
