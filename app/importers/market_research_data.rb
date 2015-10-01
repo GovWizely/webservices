@@ -46,7 +46,7 @@ class MarketResearchData
     entry[:ita_industries] = entry[:industries].map { |i| normalize_industry(i) }.compact.flatten.uniq
 
     entry[:report_type] = detect_report_type(entry[:report_type])
-    entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?
+    entry[:url] = "http://files.export.gov/#{entry[:url]}" if entry[:url].present?
     entry
   end
 
