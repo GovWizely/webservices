@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.pmddtc.state.gov/compliance/debar_intro.html&title=ScreeningList::Dtc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 21:31:29 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '247'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"9eade8a7db21803e93841d2f3adc9dbe2ed9f1c4"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi3I0b",
+        "aggregate_link": "http://bit.ly/1Qi3I0c", "long_url": "http://www.pmddtc.state.gov/compliance/debar_intro.html",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 21:31:29 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.pmddtc.state.gov/compliance/debar.html&title=ScreeningList::Dtc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 21:31:31 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '239'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"268695a35c26baff9e3254633311ffb693a0ad2d"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi3Igw",
+        "aggregate_link": "http://bit.ly/nZTcy", "long_url": "http://www.pmddtc.state.gov/compliance/debar.html",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 21:31:31 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.pmddtc.state.gov/compliance/debar_admin.html&title=ScreeningList::Dtc
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 21:31:32 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '247'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"6a880de3e54e114977573328fce4c110a1acbec2"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi3IgB",
+        "aggregate_link": "http://bit.ly/1rR3Ews", "long_url": "http://www.pmddtc.state.gov/compliance/debar_admin.html",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 21:31:32 GMT
+recorded_with: VCR 2.9.3

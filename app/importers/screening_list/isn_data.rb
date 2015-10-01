@@ -65,6 +65,7 @@ module ScreeningList
         doc[field] &&= parse_american_date(doc[field])
       end
 
+      doc[:source_list_url] = get_bitly_url(doc[:source_list_url])
       doc[:source_information_url] = doc[:source_list_url]
 
       doc[:programs] = rows.map { |row| row[:programs] }

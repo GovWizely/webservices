@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx&title=ScreeningList::Sdn
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 18:49:05 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '268'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"044d5b8925a098e35b02fec8e2017b5810bdecd7"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi4rhP",
+        "aggregate_link": "http://bit.ly/efgDN5", "long_url": "http://www.treasury.gov/resource-center/sanctions/SDN-List/Pages/default.aspx",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 18:49:05 GMT
+recorded_with: VCR 2.9.3

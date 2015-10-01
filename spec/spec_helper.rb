@@ -20,6 +20,7 @@ VCR.configure do |c|
   c.hook_into :webmock
   c.debug_logger = File.open('log/vcr.log', 'w')
   c.default_cassette_options = { record: :none }
+  c.filter_sensitive_data('<BITLY_API_TOKEN>') { Rails.configuration.bitly_api_token }
   c.configure_rspec_metadata!
 end
 
@@ -36,6 +37,7 @@ RSpec.configure do |config|
     # attempt to communicate with the user index, give ES a little time to
     # complete the index creation.
     sleep 1
+    UrlMapper.recreate_index
   end
 
   config.after(:suite) do

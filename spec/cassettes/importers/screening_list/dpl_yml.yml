@@ -1,0 +1,77 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.bis.doc.gov/index.php/the-denied-persons-list&title=ScreeningList::Dpl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 18:49:09 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '248'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"3526596c66ea269c4efc7e2b1e4a5dbb46f02dc4"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1iwvBr5",
+        "aggregate_link": "http://bit.ly/1nm0eAd", "long_url": "http://www.bis.doc.gov/index.php/the-denied-persons-list",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 18:49:08 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list&title=ScreeningList::Dpl
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Wed, 16 Sep 2015 18:49:10 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '288'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"64b70ca766899d2d1102b57927890549f9ac8957"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi3F4l",
+        "aggregate_link": "http://bit.ly/1lPIIlc", "long_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Wed, 16 Sep 2015 18:49:09 GMT
+recorded_with: VCR 2.9.3

@@ -1,3 +1,6 @@
+require 'cgi'
+require 'open-uri'
+
 module Importable
   extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
@@ -109,6 +112,20 @@ module Importable
     event_hash[:address].grep(/[A-Z]{2} [0-9]{5}(-\d{4})*$/) do |address_line|
       address_line.split(',').reverse[1].to_s.squish
     end.compact.first
+  end
+
+  def url_lookups
+    @url_lookups ||= {}
+  end
+
+  def get_bitly_url(url_string)
+    url_string = "http://#{url_string}" unless url_string[/^https?/]
+
+    return url_lookups[url_string] if url_lookups.has_key?(url_string)
+
+    short_link = UrlMapper.process_url(url_string, model_class.to_s)
+    url_lookups[url_string] = short_link
+    return short_link
   end
 
   delegate :can_purge_old?, to: :model_class
