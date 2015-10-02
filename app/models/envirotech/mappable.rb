@@ -42,7 +42,13 @@ module Envirotech
           },
           properties: {
             name_chinese:        { type: 'string', analyzer: 'chinese_analyzer' },
-            name_english:        { type: 'string', analyzer: 'english_analyzer' },
+            name_english:        {
+              type:     'string',
+              analyzer: 'english_analyzer',
+              fields:   {
+                sort: { type: 'string', analyzer: 'keyword' },
+              },
+            },
             name_french:         { type: 'string', analyzer: 'french_analyzer' },
             name_portuguese:     { type: 'string', analyzer: 'portuguese_analyzer' },
             name_spanish:        { type: 'string', analyzer: 'spanish_analyzer' },
