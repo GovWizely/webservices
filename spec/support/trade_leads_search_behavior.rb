@@ -201,7 +201,7 @@ end
 
 shared_examples 'it contains all TradeLead::Uk results that match "equipment"' do
   let(:source) { TradeLead::Uk }
-  let(:expected) { [0, 7] }
+  let(:expected) { [0, 6, 7] }
   it_behaves_like 'it contains all expected results of source'
 end
 

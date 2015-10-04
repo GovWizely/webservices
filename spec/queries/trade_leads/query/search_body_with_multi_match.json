@@ -4,7 +4,7 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["title", "description", "topic", "tags", "procurement_organization"],
+            "fields": ["title", "description", "industry", "tags", "procurement_organization"],
             "operator": "and",
             "query": "women"
           }

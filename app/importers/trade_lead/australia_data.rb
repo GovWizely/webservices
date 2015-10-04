@@ -12,13 +12,18 @@ module TradeLead
     COLUMN_HASH = {
       agency:             :agency,
       amendment_date:     :publish_date_amended,
-      category:           :topic,
+      category:           :industry,
       cn_id:              :id,
       value:              :contract_value,
       description:        :description,
       parent_cn_id:       :parent_id,
       procurement_method: :procurement_method,
       status:             :status,
+      agency_ref_id:      :project_number,
+      publish_date:       :publish_date,
+      agency:             :agency,
+      startdate:          :start_date,
+      enddate:            :end_date,
     }
 
     def loaded_resource
