@@ -1,6 +1,6 @@
 shared_context 'all Trade Events fixture data' do
   include_context 'TradeEvent::Dl data'
-  include_context 'TradeEvent::Exim data'
+  #include_context 'TradeEvent::Exim data'
   include_context 'TradeEvent::Ita data'
   include_context 'TradeEvent::Sba data'
   include_context 'TradeEvent::Ustda data'
@@ -8,7 +8,7 @@ end
 
 shared_context 'all Trade Events v2 fixture data' do
   include_context 'TradeEvent::Dl data v2'
-  include_context 'TradeEvent::Exim data v2'
+  #include_context 'TradeEvent::Exim data v2'
   include_context 'TradeEvent::Ita data v2'
   include_context 'TradeEvent::Sba data v2'
   include_context 'TradeEvent::Ustda data v2'
