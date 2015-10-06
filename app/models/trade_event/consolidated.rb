@@ -3,7 +3,7 @@ module TradeEvent
     include Searchable
     self.model_classes = [TradeEvent::Ita,
                           TradeEvent::Sba,
-                          TradeEvent::Exim,
+                          #TradeEvent::Exim,
                           TradeEvent::Ustda,
                           TradeEvent::Dl]
   end

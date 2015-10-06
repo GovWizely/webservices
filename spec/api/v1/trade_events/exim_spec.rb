@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'EXIM Trade Events API V1', type: :request do
+xdescribe 'EXIM Trade Events API V1', type: :request do
   include_context 'TradeEvent::Exim data'
 
   describe 'GET /v1/trade_events/exim/search' do
