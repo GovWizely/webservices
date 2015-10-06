@@ -18,8 +18,8 @@ module ScreeningList
     ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
     def import
-      @source_list_url = get_bitly_url('http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html')
-      @source_information_url = get_bitly_url('http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list')
+      @source_list_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html', model_class)
+      @source_information_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list', model_class)
 
       rows = CSV.parse(loaded_resource, encoding: 'UTF-8').map do |row|
         { country: row[0],
@@ -44,7 +44,7 @@ module ScreeningList
         id:                     id,
         source:                 model_class.source,
         source_list_url:        @source_list_url,
-        source_information_url: @source_information_url
+        source_information_url: @source_information_url,
       }
 
       doc[:addresses] = rows.map do |row|

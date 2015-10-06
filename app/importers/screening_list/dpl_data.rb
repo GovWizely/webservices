@@ -37,8 +37,8 @@ module ScreeningList
     }
 
     def import
-      @source_list_url = get_bitly_url('http://www.bis.doc.gov/index.php/the-denied-persons-list')
-      @source_information_url = get_bitly_url('http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list')
+      @source_list_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/index.php/the-denied-persons-list', model_class)
+      @source_information_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list', model_class)
       model_class.index(entries)
     end
 

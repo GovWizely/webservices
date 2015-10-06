@@ -19,8 +19,8 @@ module ScreeningList
     def import
       source = Nokogiri::XML(loaded_resource)
       @source_list_url = @resource =~ URI.regexp ? @resource : nil
-      @source_list_url = get_bitly_url(@source_list_url) if @source_list_url
-      @source_information_url = get_bitly_url(self.class.source_information_url) if self.class.source_information_url
+      @source_list_url = UrlMapper.get_bitly_url(@source_list_url, model_class) if @source_list_url
+      @source_information_url = UrlMapper.get_bitly_url(self.class.source_information_url, model_class) if self.class.source_information_url
 
       docs = source.xpath(document_node_xpath).map do |node|
         process_node(node) if should_process?(node)

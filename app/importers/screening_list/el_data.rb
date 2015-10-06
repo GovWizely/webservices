@@ -83,8 +83,8 @@ module ScreeningList
 
       doc[:start_date] &&= parse_american_date(doc[:start_date])
       doc[:source]          = model_class.source
-      doc[:source_list_url] = get_bitly_url(@source_list_url)
-      doc[:source_information_url] = get_bitly_url(@source_list_url)
+      doc[:source_list_url] = UrlMapper.get_bitly_url(@source_list_url, model_class)
+      doc[:source_information_url] = UrlMapper.get_bitly_url(@source_list_url, model_class)
 
       make_names(doc)
 

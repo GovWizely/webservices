@@ -22,9 +22,9 @@ module ScreeningList
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
     def import
-      @source_information_url = get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_intro.html')
-      @source_list_url = get_bitly_url('http://www.pmddtc.state.gov/compliance/debar.html')
-      @admin_source_list_url = get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_admin.html')
+      @source_information_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_intro.html', model_class)
+      @source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar.html', model_class)
+      @admin_source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_admin.html', model_class)
 
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
@@ -49,7 +49,7 @@ module ScreeningList
       make_names(doc)
 
       doc[:source_list_url] = row[:type] == 'Administrative' ? @admin_source_list_url : @source_list_url
- 
+
       doc[:id] = generate_id(doc)
       sanitize_entry(doc)
     end
