@@ -60,6 +60,7 @@ Webservices::Application.routes.draw do
                 'business_service_providers' => 'business_service_providers',
                 'ita_zip_codes'              => 'ita_zipcode_to_post',
                 'ita_taxonomy'               => 'ita_taxonomies',
+                'country_fact_sheets'        => 'country_fact_sheets',
      }
     mapping['eccn'] = 'eccns' unless Rails.env.production?
 
