@@ -9,7 +9,11 @@ class CountryFactSheetData
 
   def initialize(resource = ENDPOINT, options = {})
     @resource = resource
-    @per_page = options[:per_page] || 10
+    @per_page = options[:per_page] || 5
+  end
+
+  def loaded_resource
+    @loaded_resource ||= data.to_s
   end
 
   def import
@@ -20,8 +24,7 @@ class CountryFactSheetData
   private
 
   def process_fact_sheet_info(fact_sheet_hash)
-    fact_sheet = remap_keys COLUMN_HASH, fact_sheet_hash
-    fact_sheet
+    fact_sheet_hash
   end
 
   def data
