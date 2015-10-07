@@ -23,7 +23,7 @@ class ItaTaxonomy
       properties: {
         name:         { type: 'string', analyzer: 'standard' },
         taxonomy:     { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
-        parent_names: { type: 'string', analyzer: 'standard' },
+        parent_names: { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
       },
     },
   }.freeze

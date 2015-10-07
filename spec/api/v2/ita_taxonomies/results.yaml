@@ -1,8 +1,4 @@
 ---
-- :id: 54952563f974458a03aa35a7ea5eb1e44ceec2b6
-  :name: Construction
-  :taxonomy: Industries
-  :parent_names: []
 - :id: 66a4638e56d9fa6967d7382f248014c2f22dde13
   :name: Building Products and Equipment
   :taxonomy: Industries
@@ -19,19 +15,33 @@
   :taxonomy: Industries
   :parent_names:
   - Metals
+- :id: 54952563f974458a03aa35a7ea5eb1e44ceec2b6
+  :name: Construction
+  :taxonomy: Industries
+  :parent_names:
+  - Industries
 - :id: 8951e4b33c70339b2075ac4e90be1e78243da452
   :name: Industrial Materials
   :taxonomy: Industries
-  :parent_names: []
+  :parent_names:
+  - Industries
+- :id: c7cf1f4a59fe6e973180f328022816fe62562b58
+  :name: Chile
+  :taxonomy: Countries
+  :parent_names:
+  - Countries
+- :id: 9b3b713ab378af7264fb4bfaea43eb769b189185
+  :name: Transport and Logistics
+  :taxonomy: Topics
+  :parent_names:
+  - Topics
 - :id: 81f5585597deabf11ac77bb989e383573bdbbeb1
   :name: South America
   :taxonomy: World Regions
-  :parent_names: []
-- :id: 1938a696c66ca108e3dfbae2388023dbb65f5176
-  :name: Chile
-  :taxonomy: Countries
-  :parent_names: []
-- :id: 2704bb4abea292a97cd2779f0aa00d46e99a1aea
-  :name: Look South
-  :taxonomy: Initiatives
-  :parent_names: []
+  :parent_names:
+  - World Regions
+- :id: a6939d84214ef83541d9edd88bcf54e452741607
+  :name: African Growth and Opportunity Act
+  :taxonomy: Trade Regions
+  :parent_names:
+  - Trade Regions

@@ -22,8 +22,17 @@ describe ItaTaxonomyQuery do
     end
 
     context 'when options include taxonomies' do
-      let(:query) { ItaTaxonomyQuery.new(taxonomies: 'initiatives') }
+      let(:query) { ItaTaxonomyQuery.new(taxonomies: 'industries') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_taxonomies.json").read }
+
+      it 'generates search body with queries' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
+
+    context 'when options include parent_names' do
+      let(:query) { ItaTaxonomyQuery.new(parent_names: 'industries') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_parent_names.json").read }
 
       it 'generates search body with queries' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
