@@ -13,13 +13,9 @@ class ParatureFaqData
     Folders:      :folders,
   }.freeze
 
-  # The PARATURE_API_ACCESS_TOKEN environment variable must be set correctly for these sources to be valid
-  ENDPOINT = "https://g1.parature.com/api/v1/28023/28026/Article/%d/?_token_=#{ENV['PARATURE_API_ACCESS_TOKEN']}"
-  FOLDER_ENDPOINT = "https://g1.parature.com/api/v1/28023/28026/ArticleFolder/?_token_=#{ENV['PARATURE_API_ACCESS_TOKEN']}&_pageSize_=100"
-
-  def initialize(resource = ENDPOINT, folder_resource = FOLDER_ENDPOINT)
-    @resource = resource
-    @folder_resource = folder_resource
+  def initialize(resource = nil, folder_resource = nil)
+    @resource = resource || "https://g1.parature.com/api/v1/28023/28026/Article/%d/?_token_=#{Rails.configuration.try(:parature_api_access_token)}"
+    @folder_resource = folder_resource || "https://g1.parature.com/api/v1/28023/28026/ArticleFolder/?_token_=#{Rails.configuration.try(:parature_api_access_token)}&_pageSize_=100"
   end
 
   def import
