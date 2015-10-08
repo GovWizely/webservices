@@ -84,7 +84,9 @@ Webservices::Application.routes.draw do
     end
 
     namespace :envirotech do
-      get ':sources/search', to: 'consolidated#search'
+      get ':sources/search', to: 'consolidated#search', constraints: lambda { |request|
+        %w(solutions issues regulations providers analysis_links background_links provider_solutions).include? request.params[:sources]
+      }
     end unless Rails.env.production?
   end
 

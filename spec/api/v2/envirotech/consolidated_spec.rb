@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe 'Consolidated Envirotech API V2', type: :request do
@@ -222,6 +223,14 @@ describe 'Consolidated Envirotech API V2', type: :request do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 931 and solution_id 128'
       end
+    end
+  end
+
+  describe 'GET /v2/envirotech/invalid_source/search' do
+    let(:params) { { size: 100 } }
+
+    context 'when :sources are invalid' do
+      it { expect { get '/v2/envirotech/invalid_source/search', params }.to raise_error ActionController::RoutingError }
     end
   end
 end
