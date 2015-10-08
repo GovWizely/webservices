@@ -1,5 +1,3 @@
-require 'open-uri'
-
 module Importable
   extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
