@@ -48,7 +48,5 @@ module Webservices
     config.filter_parameters += [:current_password, :password, :password_confirmation]
 
     config.staff_email_domains = %w(govwizely.com rrsoft.co)
-
-    config.bitly_api_token = ENV['BITLY_ACCESS_TOKEN']
   end
 end

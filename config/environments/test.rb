@@ -46,4 +46,6 @@ Webservices::Application.configure do
       secret_access_key: 'FAKE' } }
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.bitly_api_token = 'NOTAREALBITLYAPITOKENIHOPE'
 end
