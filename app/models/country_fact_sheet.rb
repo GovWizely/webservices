@@ -4,14 +4,16 @@ class CountryFactSheet
   self.settings = {
     index: {
       analysis: {
-        analyzer:
-                  { custom_analyzer:        {
-                    tokenizer: 'standard',
-                    filter:    %w(standard asciifolding lowercase snowball) },
-                    title_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    %w(asciifolding lowercase) },
-            },
+        analyzer: {
+          custom_analyzer: {
+            tokenizer: 'standard',
+            filter:    %w(standard asciifolding lowercase snowball)
+          },
+          title_keyword_analyzer: {
+            tokenizer: 'keyword',
+            filter:    %w(asciifolding lowercase)
+          },
+        },
       },
     },
   }.freeze
@@ -24,21 +26,18 @@ class CountryFactSheet
       },
       dynamic:    'false',
       properties: {
-        title:         { type: 'string', analyzer: 'title_keyword_analyzer' },
-        site_url:      { type: 'string', analyzer: 'not_analyzed' },
-        content_url:   { type: 'string', analyzer: 'not_analyzed' },
-        full_url:      { type: 'string', analyzer: 'not_analyzed' },
-        mobile_url:    { type: 'string', analyzer: 'not_analyzed' },
-        bureau:        { type: 'string', analyzer: 'title_keyword_analyzer' },
-        official_name: { type: 'string', analyzer: 'title_keyword_analyzer' },
-        content_html:  { type: 'string', analyzer: 'standard' },
-        full_html:     { type: 'string', analyzer: 'standard' },
+        title:          { type: 'string', analyzer: 'title_keyword_analyzer' },
+        content_html:   { type: 'string', analyzer: 'standard' },
+        country:        { type: 'string', analyzer: 'title_keyword_analyzer' },
+        source:         { type: 'string', analyzer: 'title_keyword_analyzer' },
+        topic:          { type: 'string', analyzer: 'title_keyword_analyzer' },
+        published_date: { type: 'date', format: 'YYYY-MM-dd' }
       },
     },
   }.freeze
 
   self.source = {
     full_name: 'CountryFactSheet',
-    code:      'CountryFactSheet'
+    code:      'CFS'
   }
 end

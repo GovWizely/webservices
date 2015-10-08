@@ -4,7 +4,14 @@ class CountryFactSheetData
   include Importable
   include ::VersionableResource
 
-  FIELDS = %w(id title site_url content_url content_html full_url full_html mobile_url date terms bureau official_name)
+  COLUMN_HASH = {
+    'id'           => :id,
+    'title'        => :title,
+    'content_html' => :content_html,
+    'date'         => :published_date
+  }.freeze
+
+  FIELDS = %w(id title content_html date terms bureau)
   ENDPOINT = "http://www.state.gov/api/v1/?command=get_country_fact_sheets&fields=#{FIELDS.join(',')}"
 
   def initialize(resource = ENDPOINT, options = {})
@@ -24,7 +31,14 @@ class CountryFactSheetData
   private
 
   def process_fact_sheet_info(fact_sheet_hash)
-    fact_sheet_hash
+    fact_sheet = remap_keys(COLUMN_HASH, fact_sheet_hash)
+    fact_sheet[:topic] = ['Foreign Relations']
+    fact_sheet[:source] = []
+    fact_sheet[:country] = fact_sheet_hash['terms'].map do |term|
+      lookup_country(term)
+    end.compact
+    fact_sheet[:country].push('US').uniq!
+    fact_sheet
   end
 
   def data
