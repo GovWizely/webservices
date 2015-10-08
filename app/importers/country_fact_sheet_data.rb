@@ -33,7 +33,7 @@ class CountryFactSheetData
   def process_fact_sheet_info(fact_sheet_hash)
     fact_sheet = remap_keys(COLUMN_HASH, fact_sheet_hash)
     fact_sheet[:topic] = ['Foreign Relations']
-    fact_sheet[:source] = []
+    fact_sheet[:source] = ['U.S. Department of State', 'STATE']
     fact_sheet[:country] = fact_sheet_hash['terms'].map do |term|
       lookup_country(term)
     end.compact
