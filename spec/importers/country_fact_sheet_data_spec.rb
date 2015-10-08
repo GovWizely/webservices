@@ -7,7 +7,7 @@ describe CountryFactSheetData do
   let(:importer) { CountryFactSheetData.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{fixtures_dir}/country_fact_sheets.yaml") }
 
-  it_behaves_like 'an importer which cannot purge old documents'
+  it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'
   it_behaves_like 'a versionable resource'
 end
