@@ -45,7 +45,6 @@ module Webservices
       }.compact
     end
 
-
     config.filter_parameters += [:current_password, :password, :password_confirmation]
 
     config.staff_email_domains = %w(govwizely.com rrsoft.co)

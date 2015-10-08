@@ -13,7 +13,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results'
       it_behaves_like 'it contains all TradeEvent::Sba results'
-      #it_behaves_like 'it contains all TradeEvent::Exim results'
+      # it_behaves_like 'it contains all TradeEvent::Exim results'
       it_behaves_like 'it contains all TradeEvent::Ustda results'
       it_behaves_like 'it contains all TradeEvent::Dl results'
       it_behaves_like 'it contains only results with sources' do
@@ -44,7 +44,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
       context 'and is "Baltimore"' do
         let(:params) { { q: 'Baltimore' } }
         it_behaves_like 'a successful search request'
-        #it_behaves_like 'it contains all TradeEvent::Exim results that match "Baltimore"'
+        # it_behaves_like 'it contains all TradeEvent::Exim results that match "Baltimore"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [TradeEvent::Exim] }
         end
@@ -70,7 +70,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all TradeEvent::Ita results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match "international"'
-        #it_behaves_like 'it contains all TradeEvent::Exim results that match "international"'
+        # it_behaves_like 'it contains all TradeEvent::Exim results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Exim, TradeEvent::Ustda] }
