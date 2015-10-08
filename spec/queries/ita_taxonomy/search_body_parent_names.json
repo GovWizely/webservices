@@ -4,7 +4,7 @@
       "must": [
         {
           "terms": {
-            "taxonomy": [
+            "parent_names": [
               "industries"
             ]
           }

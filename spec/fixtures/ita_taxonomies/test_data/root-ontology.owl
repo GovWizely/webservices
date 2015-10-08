@@ -37,30 +37,61 @@
     ///////////////////////////////////////////////////////////////////////////////////////
      -->
 
-    
 
-    <!-- http://webprotege.stanford.edu/R726vSYxI0jXwyHlza0N7BF -->
+    <!-- http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R726vSYxI0jXwyHlza0N7BF">
-        <rdfs:label>Countries</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM">
+        <rdfs:label>Topics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
     </owl:Class>
 
-    <!-- http://webprotege.stanford.edu/RBnyPrFDx37HXBDZF6TBabH -->
+    <!-- http://webprotege.stanford.edu/R9jLPKfWTh1Ahmu7TUPDD3r -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/RBnyPrFDx37HXBDZF6TBabH">
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R9jLPKfWTh1Ahmu7TUPDD3r">
+        <rdfs:label>Transport and Logistics</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM"/>
+    </owl:Class>
+
+    <!-- http://webprotege.stanford.edu/R7ySyiNxcfeZ6bfNjhocNun -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R7ySyiNxcfeZ6bfNjhocNun">
+        <rdfs:label>Trade Regions</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>Trade regions as defined by the International Trade Administration</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://webprotege.stanford.edu/RBYST5TkMsG3aOT9QMbCYFF -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBYST5TkMsG3aOT9QMbCYFF">
+        <rdfs:label>African Growth and Opportunity Act</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R7ySyiNxcfeZ6bfNjhocNun"/>
+        <altLabel>AGOA</altLabel>
+        <prefLabel>African Growth and Opportunity Act</prefLabel>
+    </owl:Class>
+    
+    <!-- http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae">
+        <rdfs:label>ISO 3166 Countries</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:comment>The International Standards Organization (ISO) maintains a list of country codes since 1974. Other standards bodies have adopted the ISO 3166 code list.</rdfs:comment>
+    </owl:Class>
+
+    <!-- http://webprotege.stanford.edu/RBjxUaSQ4rQJHg0p6rppxuI -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/RBjxUaSQ4rQJHg0p6rppxuI">
         <rdfs:label>Chile</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R726vSYxI0jXwyHlza0N7BF"/>
+        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9t9rQuC16WMg86VUoGJisX"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R9jSaucvJw69zgjpG1RSWT8"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <rdfs:subClassOf>
             <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RDXeNHoFixnGOD5YGB1qcUW"/>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBNKtRqwNgoer4ubUCrN8Ae"/>
             </owl:Restriction>
         </rdfs:subClassOf>
         <prefLabel>Chile</prefLabel>
@@ -81,7 +112,7 @@
         <altLabel>Geographic Regions</altLabel>
     </owl:Class>
 
-        <!-- http://webprotege.stanford.edu/RDXeNHoFixnGOD5YGB1qcUW -->
+    <!-- http://webprotege.stanford.edu/RDXeNHoFixnGOD5YGB1qcUW -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RDXeNHoFixnGOD5YGB1qcUW">
         <rdfs:label>South America</rdfs:label>
@@ -101,25 +132,9 @@
         <prefLabel>South America</prefLabel>
     </owl:Class>
 
-    <!-- http://webprotege.stanford.edu/R8QmvyiJMoWCYKFdHuYLN0f -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R8QmvyiJMoWCYKFdHuYLN0f">
-        <rdfs:label>Initiatives</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#ConceptScheme"/>
-    </owl:Class>
 
-     <!-- http://webprotege.stanford.edu/R9t9rQuC16WMg86VUoGJisX -->
 
-    <owl:Class rdf:about="http://webprotege.stanford.edu/R9t9rQuC16WMg86VUoGJisX">
-        <rdfs:label>Look South</rdfs:label>
-        <rdfs:subClassOf rdf:resource="http://webprotege.stanford.edu/R8QmvyiJMoWCYKFdHuYLN0f"/>
-        <rdfs:subClassOf>
-            <owl:Restriction>
-                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#narrower"/>
-                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBnyPrFDx37HXBDZF6TBabH"/>
-            </owl:Restriction>
-        </rdfs:subClassOf>
-    </owl:Class>
 
     <!-- http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru -->
 

@@ -1,6 +1,5 @@
 require 'open-uri'
 require 'zip'
-require 'pp'
 
 class ItaTaxonomyData
   include Importable
@@ -11,14 +10,16 @@ class ItaTaxonomyData
   def initialize(resource = PROTEGE_URL)
     @resource = resource
     @terms = []
-    @industries_root = {}
-    @world_regions_root = {}
-    @countries_root = {}
-    @initiatives_root = {}
     @industry_terms = []
     @world_region_terms = []
     @country_terms = []
-    @initiative_terms = []
+    @trade_region_terms = []
+    @topic_terms = []
+    @industries_root = {}
+    @world_regions_root = {}
+    @countries_root = {}
+    @trade_regions_root = {}
+    @topics_root = {}
   end
 
   def import
@@ -26,7 +27,6 @@ class ItaTaxonomyData
     parse_terms_from_xml(xml)
 
     find_parent_names
-
     extract_actual_taxonomy_terms
 
     ItaTaxonomy.index build_json_entries
@@ -35,7 +35,7 @@ class ItaTaxonomyData
   private
 
   def build_json_entries
-    entries = @industry_terms + @world_region_terms + @country_terms + @initiative_terms
+    entries = @industry_terms + @world_region_terms + @country_terms + @trade_region_terms + @topic_terms
     entries.each do |entry|
       entry.delete(:parent_ids)
       entry[:id] = Utils.generate_id(entry, %i(id name taxonomy))
@@ -45,24 +45,28 @@ class ItaTaxonomyData
 
   def extract_actual_taxonomy_terms
     @terms.each do |term|
-      if get_taxonomy_type_of_term(term) == @industries_root
+      case get_taxonomy_type_of_term(term)
+      when @industries_root
         term[:taxonomy] = @industries_root[:name]
         @industry_terms.push(term)
-      elsif get_taxonomy_type_of_term(term) == @world_regions_root
+      when @world_regions_root
         term[:taxonomy] = @world_regions_root[:name]
         @world_region_terms.push(term)
-      elsif get_taxonomy_type_of_term(term) == @countries_root
+      when @countries_root
         term[:taxonomy] = @countries_root[:name]
         @country_terms.push(term)
-      elsif get_taxonomy_type_of_term(term) == @initiatives_root
-        term[:taxonomy] = @initiatives_root[:name]
-        @initiative_terms.push(term)
+      when @trade_regions_root
+        term[:taxonomy] = @trade_regions_root[:name]
+        @trade_region_terms.push(term)
+      when @topics_root
+        term[:taxonomy] = @topics_root[:name]
+        @topic_terms.push(term)
       end
     end
   end
 
   def get_taxonomy_type_of_term(term)
-    root_terms = [@industries_root, @world_regions_root, @countries_root, @initiatives_root]
+    root_terms = [@industries_root, @world_regions_root, @countries_root, @trade_regions_root, @topics_root]
     if root_terms.map { |root| root[:id] }.include? term[:parent_ids][0]
       return root_terms.find { |root| root[:id] == term[:parent_ids][0] }
     elsif ['skos:Concept', 'Concept Scheme', 'Collection'].include?(term[:name]) || term[:parent_ids] == []
@@ -101,13 +105,15 @@ class ItaTaxonomyData
         @industries_root = term_hash
       when 'World Regions'
         @world_regions_root = term_hash
-      when 'Countries'
+      when 'ISO 3166 Countries'
+        term_hash[:name] = 'Countries'
         @countries_root = term_hash
-      when 'Initiatives'
-        @initiatives_root = term_hash
-      else
-        @terms << term_hash
+      when 'Trade Regions'
+        @trade_regions_root = term_hash
+      when 'Topics'
+        @topics_root = term_hash
       end
+      @terms << term_hash
     end
   end
 
