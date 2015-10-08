@@ -47,13 +47,13 @@ class UrlMapper
     first_entry = search_result.first[:_source]
     short_link = entry_needs_update?(first_entry, title) ? call_bitly_api(request_string, url_string) : first_entry[:link]
     update([build_json(url_string, title).merge(link: short_link)]) if short_link != url_string
-    return short_link
+    short_link
   end
 
   def self.index_url(url_string, title, request_string)
     short_link = call_bitly_api(request_string, url_string)
     index([build_json(url_string, title).merge(link: short_link)]) if short_link != url_string
-    return short_link
+    short_link
   end
 
   def self.entry_needs_update?(entry, title)
@@ -82,15 +82,13 @@ class UrlMapper
       response = JSON.parse(open(request_string).read)
     end
     # :nocov:
-    return validate_response(response)
+    validate_response(response)
   end
 
   def self.validate_response(response)
-    begin
-      return response['data']['link_save']['link']
-    rescue
-      raise 'Invalid Bitly API Response: ' + response.to_s
-    end
+    return response['data']['link_save']['link']
+  rescue
+    raise 'Invalid Bitly API Response: ' + response.to_s
   end
 
   def self.search_for_url(url_string)
