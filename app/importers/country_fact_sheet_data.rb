@@ -42,15 +42,23 @@ class CountryFactSheetData
   end
 
   def data
+    @resource =~ URI.regexp ? from_web : from_file
+  end
+
+  def from_web
     page = 0
     results = []
     loop do
-      response = JSON.parse(open("#{ENDPOINT}&per_page=#{@per_page}&page=#{page}").read)
+      response = JSON.parse(open("#{@resource}&per_page=#{@per_page}&page=#{page}").read)
       results.concat(response['country_fact_sheets'])
       break if last_page?(page, response['pages'])
       page += 1
     end
     results
+  end
+
+  def from_file
+    JSON.parse(File.open(@resource).read)['country_fact_sheets']
   end
 
   def last_page?(current_page, total_page)
