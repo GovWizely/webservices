@@ -1,3 +1,4 @@
 class Api::V2::CountryFactSheetsController < Api::V2Controller
-  search_by :q
+  include Searchable
+  search_by :q, :countries, :sources, :topics
 end
