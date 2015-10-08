@@ -28,7 +28,7 @@ class RegistrationsController < Devise::RegistrationsController
 
   def ensure_user_authenticated
     unless current_user
-      render json: { error: 'Unauthorized' }, status: :unauthorized
+      render json: { error: 'Unauthorized - Please get a new key at https://api.trade.gov' }, status: :unauthorized
     end
   end
 end
