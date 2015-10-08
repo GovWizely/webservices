@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe Envirotech do
+  include_context 'empty Envirotech indices'
+
   describe '.import_sequentially' do
     let(:all_issue_info) { { dummy: 1 } }
     let(:local_data) { { 'dummy' => 1 } }
