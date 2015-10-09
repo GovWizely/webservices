@@ -151,16 +151,18 @@ describe 'Market Researches API V2', type: :request do
   end
 
   describe 'GET /market_resarch_library/search.json' do
-    let(:params) { { industries: 'Construction\, Building & Heavy Equipment' } }
+    let(:params) { { industries: 'Construction\, Building & Heavy Equipment,Services' } }
 
     before { get search_path, params, @v2_headers }
     subject { response }
 
-    it_behaves_like 'a successful search request'
+    context 'when industries filtered by Construction\, Building & Heavy Equipment,Services' do
+      it_behaves_like 'a successful search request'
 
-    it 'returns all market researches and ignore query params' do
-      json_response = JSON.parse(response.body)
-      expect(json_response['total']).to eq(1)
+      it 'returns matching market researches' do
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(2)
+      end
     end
   end
 end
