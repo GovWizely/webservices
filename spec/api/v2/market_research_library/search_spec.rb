@@ -151,7 +151,7 @@ describe 'Market Researches API V2', type: :request do
   end
 
   describe 'GET /market_resarch_library/search.json' do
-    let(:params) { { industries: 'Construction, Building &Heavy Equipment' } }
+    let(:params) { { industries: 'Construction\, Building & Heavy Equipment' } }
 
     before { get search_path, params, @v2_headers }
     subject { response }
