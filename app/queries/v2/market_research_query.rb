@@ -5,8 +5,7 @@ class V2::MarketResearchQuery < CountryIndustryQuery
 
     @industries = options[:industries]
       .split(/(?<!\\),/)
-      .map { |industry| industry.delete("\\") }
-      .map(&:strip) if options[:industries].present?
+      .map { |industry| industry.delete("\\").strip } if options[:industries].present?
 
     @expiration_date = options[:expiration_date] if options[:expiration_date].present?
     # Just to be sure, at this point, that no
