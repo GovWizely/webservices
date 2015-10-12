@@ -5,13 +5,13 @@ class CountryFactSheet
     index: {
       analysis: {
         analyzer: {
-          custom_analyzer: {
+          custom_analyzer:        {
             tokenizer: 'standard',
-            filter:    %w(standard asciifolding lowercase snowball)
+            filter:    %w(standard asciifolding lowercase snowball),
           },
           title_keyword_analyzer: {
             tokenizer: 'keyword',
-            filter:    %w(asciifolding lowercase)
+            filter:    %w(asciifolding lowercase),
           },
         },
       },
@@ -31,13 +31,13 @@ class CountryFactSheet
         country:        { type: 'string', analyzer: 'title_keyword_analyzer' },
         source:         { type: 'string', analyzer: 'title_keyword_analyzer' },
         topic:          { type: 'string', analyzer: 'title_keyword_analyzer' },
-        published_date: { type: 'date', format: 'YYYY-MM-dd' }
+        published_date: { type: 'date', format: 'YYYY-MM-dd' },
       },
     },
   }.freeze
 
   self.source = {
     full_name: 'CountryFactSheet',
-    code:      'CFS'
+    code:      'CFS',
   }
 end

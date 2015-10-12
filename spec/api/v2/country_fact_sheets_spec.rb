@@ -66,6 +66,5 @@ describe 'Country Fact Sheets API V2', type: :request do
         expect(results).to eq expected_results
       end
     end
-
   end
 end

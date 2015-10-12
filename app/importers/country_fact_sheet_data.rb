@@ -8,7 +8,7 @@ class CountryFactSheetData
     'id'           => :id,
     'title'        => :title,
     'content_html' => :content_html,
-    'date'         => :published_date
+    'date'         => :published_date,
   }.freeze
 
   FIELDS = %w(id title content_html date terms bureau)
