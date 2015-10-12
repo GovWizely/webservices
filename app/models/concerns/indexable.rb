@@ -18,6 +18,25 @@ module Indexable
   end
 
   module ClassMethods
+    def analyze_by(*analyzers)
+      self.settings ||= {
+        index: {
+          analysis: { analyzer: {}, filter: {} },
+        },
+      }
+      analyzers.each do |analyzer|
+        self.settings[:index][:analysis][:analyzer][analyzer] = Analyzers.definitions[analyzer]
+      end
+    end
+
+    def filter_by(*_filters)
+      self.settings ||= {
+        index: {
+          analysis: { analyzer: {}, filter: {} },
+        },
+      }
+    end
+
     def index_name
       @index_name ||= [ES::INDEX_PREFIX, name.indexize].join(':')
     end
