@@ -25,42 +25,6 @@ module Analyzers
     keyword_uppercase:            {
       tokenizer: 'keyword',
       filter:    %w(standard uppercase),
-    },
-    phrase_match_analyzer:             {
-      tokenizer: 'keyword',
-      filter:    'lowercase',
-    },
-    case_insensitive_keyword_analyzer: {
-      tokenizer: 'keyword',
-      filter:    %w(standard lowercase),
-    },
-    location_name_analyzer:            {
-      tokenizer: 'standard',
-      filter:    %w(standard asciifolding lowercase synonym stopword),
-    },
-    location_name_sort:                {
-      tokenizer: 'keyword',
-      filter:    %w(lowercase asciifolding)
-    },
-    english_analyzer:                  {
-      tokenizer: 'standard',
-      filter:    %w(standard asciifolding lowercase snowball)
-    },
-    french_analyzer:                   {
-      tokenizer: 'standard',
-      filter:    %w(standard asciifolding lowercase french)
-    },
-    chinese_analyzer:                  {
-      tokenizer: 'standard',
-      filter:    %w(standard lowercase)
-    },
-    portuguese_analyzer:               {
-      tokenizer: 'standard',
-      filter:    %w(standard asciifolding lowercase portuguese)
-    },
-    spanish_analyzer:                  {
-      tokenizer: 'standard',
-      filter:    %w(standard asciifolding lowercase spanish)
-    },
+    }
   }.freeze
 end
