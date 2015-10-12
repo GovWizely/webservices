@@ -25,6 +25,7 @@ gem 'smarter_csv'
 gem 'sidekiq'
 gem 'sinatra', require: nil
 gem 'mechanize'
+gem 'haml'
 
 gem 'sass'
 gem 'jquery-rails'

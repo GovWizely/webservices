@@ -1,0 +1,20 @@
+require 'elasticsearch/persistence/model'
+
+Class.new do
+  def self.model_name
+    ActiveModel::Name.new(self, nil, '<%= data_source.api.classify %>')
+  end
+
+  include Elasticsearch::Persistence::Model
+
+  index_name [ES::INDEX_PREFIX, "api_models", data_source.api].join(':')
+
+
+  <% data_source.yaml_dictionary.each_pair do |field, metadata| %>
+    <% if TYPE_TO_MAPPING[metadata[:type]][:mapping].present? %>
+      attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>, mapping: <%= TYPE_TO_MAPPING[metadata[:type]][:mapping] %>
+    <% else %>
+      attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>
+    <% end %>
+  <% end %>
+end

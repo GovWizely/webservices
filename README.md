@@ -33,7 +33,7 @@ We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fullte
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
-Webservices uses foreman to start all necessary services in development environments, including elasticsearch. elasticsearch attempts to use ./elasticsearch.yml as its config file, but that file doesn't actually exist in the repository. You must symlink your system's actual elasticsearch config file to ./elasticsearch.yml. If using homebrew on OSX, you can do this as follows:
+Webservices can use foreman to start all necessary services in development environments, including elasticsearch. elasticsearch attempts to use ./elasticsearch.yml as its config file, but that file doesn't actually exist in the repository. You must symlink your system's actual elasticsearch config file to ./elasticsearch.yml. If using homebrew on OSX, you can do this as follows:
 
     $ brew info elasticsearch
     ...
@@ -56,9 +56,16 @@ Generate an admin user:
 
     bundle exec rake db:devseed    
 
-Fire up a server and import some data.
+Fire up a server:
 
     foreman start -f Procfile.dev
+    
+Or, if you already have Elasticsearch and Redis running because the web and sidekiq actions timeout in `Procfile.dev`, you can start foreman like this:
+
+    foreman start -f Procfile_no_es_redis.dev
+    
+    
+Import some data:    
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
 
 #### Authentication

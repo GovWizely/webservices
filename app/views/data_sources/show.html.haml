@@ -1,0 +1,38 @@
+%p
+  %b Name:
+  = @data_source.name
+%p
+  %b Description:
+  = @data_source.description
+%p
+  %b Api:
+  = @data_source.api
+- if @data_source.filter_fields.present?
+  %p
+    %b Filtered Fields:
+    = param_table(@data_source.filter_fields)
+    %p
+      Filter on multiple values by passing in a comma-separated list (e.g.,
+      %i FR,US,DE
+      )
+    %hr
+- if @data_source.fulltext_fields.present?
+  %p
+    %b Fulltext Fields :
+    = param_table(@data_source.fulltext_fields)
+    %p Use the param `q` to search across all fulltext fields
+    %hr
+- if @data_source.date_fields.present?
+  %p
+    %b Date Range Fields:
+    = param_table(@data_source.date_fields)
+    %p Specify a date range in this format (e.g., 2013-10-01+TO+2015-10-04)
+    %hr
+%p
+  %b Sample API call:
+  = sample_api_call @data_source
+
+= link_to 'Edit', edit_data_source_path(@data_source)
+\|
+= link_to 'Back', "/"
+= button_to 'Delete', data_source_path(@data_source), method: :delete, data: { confirm: 'Are you sure you wish to delete this API and data source?' }
