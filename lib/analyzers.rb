@@ -10,21 +10,25 @@ module Analyzers
       tokenizer: 'standard',
       filter:    %w(standard asciifolding lowercase),
     },
-    keyword_lowercase:            {
+    keyword_asciifolding_lowercase:            {
       tokenizer: 'keyword',
       filter:    %w(lowercase asciifolding),
     },
-    keyword_uppercase:            {
+    keyword_asciifolding_uppercase:            {
       tokenizer: 'keyword',
       filter:    %w(uppercase asciifolding),
+    },
+    keyword_lowercase:            {
+      tokenizer: 'keyword',
+      filter:    %w(standard lowercase),
+    },
+    keyword_uppercase:            {
+      tokenizer: 'keyword',
+      filter:    %w(standard uppercase),
     },
     phrase_match_analyzer:             {
       tokenizer: 'keyword',
       filter:    'lowercase',
-    },
-    title_keyword_analyzer:            {
-      tokenizer: 'keyword',
-      filter:    %w(asciifolding lowercase),
     },
     case_insensitive_keyword_analyzer: {
       tokenizer: 'keyword',
