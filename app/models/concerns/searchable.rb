@@ -5,7 +5,7 @@
 # have a module that can perform searches but cannot index documents. A
 # specific example is the case where the model represents a consolidated
 # endpoint. In such a case, you must set the model_classes attribute, so that
-# Seachable can use those models to figure out which indexes it should perform
+# Searchable can use those models to figure out which indexes it should perform
 # the search against.
 
 module Searchable

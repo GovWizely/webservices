@@ -33,14 +33,7 @@ We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fullte
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
-Webservices uses foreman to start all necessary services in development environments, including elasticsearch. elasticsearch attempts to use ./elasticsearch.yml as its config file, but that file doesn't actually exist in the repository. You must symlink your system's actual elasticsearch config file to ./elasticsearch.yml. If using homebrew on OSX, you can do this as follows:
-
-    $ brew info elasticsearch
-    ...
-    Or, if you don't want/need launchctl, you can just run:
-        elasticsearch --config=/path/to/config/elasticsearch.yml
-
-    $ ln -s /path/to/config/elasticsearch.yml .
+Webservices can use foreman to start Rails and Sidekiq in development environments. 
 
 ### Redis
 
@@ -56,14 +49,18 @@ Generate an admin user:
 
     bundle exec rake db:devseed    
 
-Fire up a server and import some data.
+Fire up a server:
 
     foreman start -f Procfile.dev
+    
+This Procfile assumes you already have Elasticsearch and Redis running.
+    
+Import some data:    
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
 
 #### Authentication
 
-Since v2 of the API, an authentication token is required to every request. Pass it on the query string:
+Since v2 of the API, an authentication token is required for every request. Pass it on the query string:
 
 <http://localhost:3000/market_research_library/search?api_key=devkey>
 
@@ -80,6 +77,18 @@ Since v2 of the API, an authentication token is required to every request. Pass 
 Or using http headers:
 
     curl -H'Api-Key: devkey' 'http://localhost:3000/v2/market_research_library/search'
+
+### CSV APIs
+
+Admin users can create and administer search APIs from uploaded CSV files. The initial admin user created with
+the `db:devseed` task has the `admin` flag set to true already. To toggle an existing user, you can do this from the 
+Rails console:
+    
+    email = "admin@rrsoft.co"
+    u = User.search(filter: { bool: { must: { term: { email: email } } } }).first
+    u.update_attribute(:admin, true)
+
+To create an API, click the `+` next to the CSV APIs subnav heading.
 
 ### Specs
 

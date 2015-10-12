@@ -32,16 +32,13 @@ require Rails.root.join('spec/importers/concerns/can_import_all_sources_behavior
 RSpec.configure do |config|
   config.before(:suite) do
     User.create_index!
-
-    # Since create_index! is asynchronous, and since specs may immediately
-    # attempt to communicate with the user index, give ES a little time to
-    # complete the index creation.
-    sleep 1
+    DataSource.create_index!
     UrlMapper.recreate_index
   end
 
   config.after(:suite) do
     User.gateway.delete_index!
+    DataSource.gateway.delete_index!
   end
   # ## Mock Framework
   #

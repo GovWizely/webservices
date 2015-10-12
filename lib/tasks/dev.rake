@@ -7,6 +7,7 @@ namespace :db do
                        company:               'Rapid River',
                        full_name:             'Admin I. Strator',
                        api_key:               'devkey',
+                       admin:                 true,
                        confirmed_at:          Time.now.utc)
     puts user.errors.messages unless user.valid?
   end
