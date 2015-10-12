@@ -1,20 +1,8 @@
 class BusinessServiceProvider
   include Indexable
+  analyze_by :snowball_asciifolding_nostop, :keyword_lowercase
 
-  self.settings = {
-    index: {
-      analysis: {
-        analyzer:
-                  { custom_analyzer:        {
-                    tokenizer: 'standard',
-                    filter:    %w(standard asciifolding lowercase snowball) },
-                    title_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    %w(asciifolding lowercase) },
-            },
-      },
-    },
-  }.freeze
+  self.settings.freeze
 
   self.mappings = {
     name.typeize => {
