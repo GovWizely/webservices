@@ -37,7 +37,7 @@ class CountryFactSheet
   }.freeze
 
   self.source = {
-    full_name: 'CountryFactSheet',
-    code:      'CFS',
+    full_name: 'U.S. Department of State',
+    code:      'STATE',
   }
 end

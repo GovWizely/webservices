@@ -9,9 +9,7 @@
   :country:
   - AF
   - US
-  :source:
-  - U.S. Department of State
-  - STATE
+  :source: STATE
   :topic:
   - Foreign Relations
 - :id: '3235'
@@ -24,8 +22,6 @@
   :country:
   - AL
   - US
-  :source:
-  - U.S. Department of State
-  - STATE
+  :source: STATE
   :topic:
   - Foreign Relations
