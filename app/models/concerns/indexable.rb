@@ -29,14 +29,6 @@ module Indexable
       end
     end
 
-    def filter_by(*_filters)
-      self.settings ||= {
-        index: {
-          analysis: { analyzer: {}, filter: {} },
-        },
-      }
-    end
-
     def index_name
       @index_name ||= [ES::INDEX_PREFIX, name.indexize].join(':')
     end
