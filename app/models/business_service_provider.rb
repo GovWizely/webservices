@@ -2,7 +2,7 @@ class BusinessServiceProvider
   include Indexable
   analyze_by :snowball_asciifolding_nostop, :keyword_asciifolding_lowercase
 
-  self.settings.freeze
+  settings.freeze
 
   self.mappings = {
     name.typeize => {

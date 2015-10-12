@@ -2,7 +2,7 @@ class SharepointTradeArticle
   include Indexable
   analyze_by :snowball_asciifolding_nostop, :keyword_lowercase
 
-  self.settings.freeze
+  settings.freeze
 
   self.mappings = {
 

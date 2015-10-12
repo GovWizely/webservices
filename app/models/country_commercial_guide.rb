@@ -2,7 +2,7 @@ class CountryCommercialGuide
   include Indexable
   analyze_by :snowball_asciifolding_nostop, :keyword_asciifolding_lowercase
 
-  self.settings.freeze
+  settings.freeze
 
   self.mappings = {
     country_commercial_guide: {
