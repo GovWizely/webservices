@@ -6,6 +6,5 @@ describe MarketResearchData, vcr: { cassette_name: 'industry_mapping_client/mark
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/market_research/expected_indexed_data.yaml") }
 
   it_behaves_like 'an importer which cannot purge old documents'
-  it_behaves_like 'a versionable resource'
   it_behaves_like 'an importer which indexes the correct documents'
 end

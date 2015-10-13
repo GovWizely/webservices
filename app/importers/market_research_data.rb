@@ -3,9 +3,9 @@ require 'open-uri'
 
 class MarketResearchData
   include Importable
-  include VersionableResource
 
-  ENDPOINT = 'http://mr.export.gov/nextgen/ng.txt'
+  MR_ENDPOINT = 'http://files.export.gov/ng_mr.txt'
+  CCG_ENDPOINT = 'http://files.export.gov/ng_cgg.txt'
 
   COLUMN_HASH = {
     id:       :id,
@@ -23,15 +23,18 @@ class MarketResearchData
     'ccg1'  => 'Country Commercial Guide',
   }
 
-  def loaded_resource
-    @loaded_resource ||= open(@resource, 'r:windows-1252:utf-8').read
+  def initialize(resource = nil)
+    @resources = resource.nil? ? [MR_ENDPOINT, CCG_ENDPOINT] : [resource]
   end
 
   def import
     entries = []
-    MrlParser.foreach(loaded_resource) do |source_hash|
-      entries << process_source_hash(source_hash)
+    @resources.each do |resource|  
+      MrlParser.foreach(open(resource, 'r:windows-1252:utf-8').read) do |source_hash|
+        entries << process_source_hash(source_hash)
+      end
     end
+
     MarketResearch.index entries
   end
 
@@ -46,7 +49,7 @@ class MarketResearchData
     entry[:ita_industries] = entry[:industries].map { |i| normalize_industry(i) }.compact.flatten.uniq
 
     entry[:report_type] = detect_report_type(entry[:report_type])
-    entry[:url] = "http://mr.export.gov/docs/#{entry[:url]}" if entry[:url].present?
+    entry[:url] = "http://files.export.gov/#{entry[:url]}" if entry[:url].present?
     entry
   end
 
