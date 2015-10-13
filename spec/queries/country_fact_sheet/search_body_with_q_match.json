@@ -1,0 +1,1 @@
+{"query":{"bool":{"must":[{"multi_match":{"fields":["title","content_html"],"operator":"and","query":"albania"}}]}}}

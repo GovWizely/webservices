@@ -61,7 +61,11 @@ Webservices::Application.routes.draw do
                 'ita_zip_codes'              => 'ita_zipcode_to_post',
                 'ita_taxonomy'               => 'ita_taxonomies',
      }
-    mapping['eccn'] = 'eccns' unless Rails.env.production?
+
+    unless Rails.env.production?
+      mapping['eccn'] = 'eccns'
+      mapping['country_fact_sheets'] = 'country_fact_sheets'
+    end
 
     mapping.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false

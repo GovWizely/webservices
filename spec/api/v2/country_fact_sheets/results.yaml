@@ -1,0 +1,27 @@
+---
+- :id: '5380'
+  :title: Afghanistan
+  :content_html: "<p><b><b>More information about Afghanistan is available on the
+    <a href=\"http://www.state.gov/p/sca/ci/af/\">Afghanistan Page </a>and from other
+    Department of State publications and other sources listed at the end of this fact
+    sheet. </b></b></p>\r\n"
+  :published_date: '2014-10-31'
+  :country:
+  - AF
+  - US
+  :source: STATE
+  :topic:
+  - Foreign Relations
+- :id: '3235'
+  :title: Albania
+  :content_html: "<p><b>More information about Albania is available on the </b><b><a
+    href=\"http://www.state.gov/p/eur/ci/al/\">Albania Page</a></b><b> and from other
+    Department of State publications and other sources listed at the end of this fact
+    sheet.</b></p>\r\n"
+  :published_date: '2015-03-11'
+  :country:
+  - AL
+  - US
+  :source: STATE
+  :topic:
+  - Foreign Relations
