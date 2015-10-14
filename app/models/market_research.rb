@@ -32,7 +32,7 @@ class MarketResearch
         },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',

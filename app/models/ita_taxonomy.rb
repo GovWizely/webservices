@@ -26,7 +26,7 @@ class ItaTaxonomy
         parent_names: { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',

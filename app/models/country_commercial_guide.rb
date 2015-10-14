@@ -25,7 +25,7 @@ class CountryCommercialGuide
         section_url:   { type: 'string' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'Country Commercial Guide',

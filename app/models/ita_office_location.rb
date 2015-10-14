@@ -44,7 +44,7 @@ class ItaOfficeLocation
         city:        { type: 'string', analyzer: 'location_name_analyzer' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',

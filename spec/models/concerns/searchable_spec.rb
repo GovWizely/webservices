@@ -56,7 +56,7 @@ describe Searchable do
   end
 
   before(:each) do
-    MockModel.update_metadata(9989, 'a few minutes ago')
+    MockModel.update_metadata(9989, '2001-01-01T01:01:01Z')
   end
 
   after(:all) do
@@ -75,16 +75,16 @@ describe Searchable do
     describe '#touch_metadata' do
       subject { MockModel.stored_metadata }
       it 'updates only the import_time field' do
-        MockModel.touch_metadata('just now')
-        expect(subject).to eq(version: 9989, last_updated: 'a few minutes ago', last_imported: 'just now')
+        MockModel.touch_metadata('3000-03-03T03:03:03Z')
+        expect(subject).to eq(version: 9989, last_updated: '2001-01-01T01:01:01Z', last_imported: '3000-03-03T03:03:03Z')
       end
     end
 
     describe '#update_metadata' do
       subject { MockModel.stored_metadata }
       it 'updates all fields' do
-        MockModel.update_metadata(4321, 'NOW!')
-        expect(subject).to eq(version: 4321, last_updated: 'NOW!', last_imported: 'NOW!')
+        MockModel.update_metadata(4321, '4000-04-04T04:04:04Z')
+        expect(subject).to eq(version: 4321, last_updated: '4000-04-04T04:04:04Z', last_imported: '4000-04-04T04:04:04Z')
       end
     end
   end
@@ -108,7 +108,7 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: 'a few minutes ago', last_imported: 'a few minutes ago', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
 
       # too wide test for the description
       expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used])
@@ -120,7 +120,7 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: 'a few minutes ago', last_imported: 'a few minutes ago', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
 
       # too wide test for the description
       expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used])

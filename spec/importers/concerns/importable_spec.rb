@@ -150,4 +150,19 @@ describe Importable do
       Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
     end
   end
+  describe '#import' do
+    before do
+      Mock.update_metadata('', '0000-01-01T00:00:00Z')
+    end
+    it 'stores the last_imported time' do
+      expect {
+        MockData.new([{ id: 3, content: 'ping pong'}]).import
+      }.to change {
+        Mock.stored_metadata[:last_imported]
+      }.from('0000-01-01T00:00:00Z')
+
+      last_imported_time = DateTime.parse(Mock.stored_metadata[:last_imported])
+      expect(last_imported_time.to_time).to be_within(60.seconds).of(Time.now)
+    end
+  end
 end

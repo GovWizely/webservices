@@ -35,7 +35,7 @@ module TariffRate
             source:                      { type: 'string', analyzer: 'keyword' },
           },
         },
-      }.freeze
+      }.merge(klass.metadata_mappings).freeze
 
       klass.class_eval do
         class << self

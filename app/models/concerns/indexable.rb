@@ -8,6 +8,25 @@ module Indexable
   included do
     class << self
       attr_accessor :mappings, :settings, :source
+      def metadata_mappings
+        {
+          metadata: {
+            properties: {
+              last_imported: {
+                type:   'date',
+                format: 'dateOptionalTime',
+              },
+              last_updated:  {
+                type:   'date',
+                format: 'dateOptionalTime',
+              },
+              version:       {
+                type: 'string',
+              },
+            },
+          },
+        }
+      end
     end
 
     # If the model class doesn't define the source full_name,
@@ -114,7 +133,7 @@ module Indexable
         },
       }
 
-      ES.client.delete_by_query(index: index_name, body: body)
+      ES.client.delete_by_query(index: index_name, type: index_type, body: body)
     end
 
     def can_purge_old?

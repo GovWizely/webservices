@@ -44,7 +44,7 @@ class SharepointTradeArticle
         url_xml_source:           { type: 'string' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',
