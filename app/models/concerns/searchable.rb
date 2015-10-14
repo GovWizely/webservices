@@ -70,8 +70,8 @@ module Searchable
       nil
     end
 
-    def fetch_all
-      search_options = { scroll: '5m', index: index_names, type: index_types }
+    def fetch_all(sources = nil)
+      search_options = { scroll: '5m', index: index_names, type: index_types(sources) }
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
