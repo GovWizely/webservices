@@ -52,7 +52,7 @@ class ApiController < ActionController::Base
 
   def sources
     sources = Array(params.fetch(:sources, []))
-    sources.map! { |s| s.upcase }
+    sources.map!(&:upcase)
     sources.empty? ? nil : sources
   end
 

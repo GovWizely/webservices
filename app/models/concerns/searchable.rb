@@ -76,7 +76,7 @@ module Searchable
 
       response = ES.client.search(search_options)
       results = { offset:       0,
-                  sources_used: index_meta,
+                  sources_used: index_meta(sources),
                   hits:         response['hits'].deep_symbolize_keys[:hits],
                   total:        response['hits']['total'] }
 

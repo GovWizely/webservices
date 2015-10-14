@@ -34,6 +34,18 @@ describe 'Consolidated Envirotech API V2', type: :request do
         it_behaves_like 'it contains all Envirotech::Solution results matches a query with Chinese character'
       end
     end
+
+    context 'when size is -1' do
+      let(:params) { { size: -1 } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all Envirotech::Solution results'
+
+      it 'only contains solutions' do
+        sources_used = JSON.parse(subject.body)['sources_used']
+        expect(sources_used.count).to eq(1)
+        expect(sources_used.first['source']).to eq('SOLUTIONS')
+      end
+    end
   end
 
   describe 'GET /v2/envirotech/issues/search' do
