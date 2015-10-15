@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::UvlData do
+describe ScreeningList::UvlData, vcr: { cassette_name: 'importers/screening_list/uvl.yml' } do
   before { ScreeningList::Uvl.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv" }
   let(:resource) { fixtures_file }

@@ -1,0 +1,40 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list&title=ScreeningList::El
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Tue, 22 Sep 2015 20:25:53 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '263'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"cbae3bf23e350dd9a994f1aa8975e48b25450f44"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1L47xrV",
+        "aggregate_link": "http://bit.ly/1cU2zMk", "long_url": "http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Tue, 22 Sep 2015 20:25:53 GMT
+recorded_with: VCR 2.9.3

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::IsnData do
+describe ScreeningList::IsnData, vcr: { cassette_name: 'importers/screening_list/isn.yml' } do
   before { ScreeningList::Isn.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv" }
   let(:resource) { fixtures_file }

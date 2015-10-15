@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::DtcData do
+describe ScreeningList::DtcData, vcr: { cassette_name: 'importers/screening_list/dtc.yml' } do
   before { ScreeningList::Dtc.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv" }
   let(:resource) { fixtures_file }

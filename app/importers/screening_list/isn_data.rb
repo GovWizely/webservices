@@ -65,6 +65,7 @@ module ScreeningList
         doc[field] &&= parse_american_date(doc[field])
       end
 
+      doc[:source_list_url] = UrlMapper.get_bitly_url(doc[:source_list_url], model_class)
       doc[:source_information_url] = doc[:source_list_url]
 
       doc[:programs] = rows.map { |row| row[:programs] }

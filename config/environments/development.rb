@@ -29,4 +29,6 @@ Webservices::Application.configure do
   config.developerportal_url = 'http://localhost:4000/developerportal'
 
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
+
+  config.bitly_api_token = 'NOTAREALBITLYAPITOKENIHOPE'
 end

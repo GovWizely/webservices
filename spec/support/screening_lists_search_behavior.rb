@@ -15,8 +15,10 @@ end
 shared_context 'ScreeningList::Part561 data' do
   before(:all) do
     ScreeningList::Part561.recreate_index
-    ScreeningList::Part561Data.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    VCR.use_cassette('importers/screening_list/part561.yml', record: :once) do
+      ScreeningList::Part561Data.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Part561] = JSON.parse(open(
@@ -51,8 +53,10 @@ end
 shared_context 'ScreeningList::Isa data' do
   before(:all) do
     ScreeningList::Isa.recreate_index
-    ScreeningList::IsaData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    VCR.use_cassette('importers/screening_list/isa.yml', record: :once) do
+      ScreeningList::IsaData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isa] = JSON.parse(open(
@@ -87,8 +91,10 @@ end
 shared_context 'ScreeningList::Sdn data' do
   before(:all) do
     ScreeningList::Sdn.recreate_index
-    ScreeningList::SdnData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml").import
+    VCR.use_cassette('importers/screening_list/sdn.yml', record: :once) do
+      ScreeningList::SdnData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Sdn] = JSON.parse(open(
@@ -195,8 +201,10 @@ end
 shared_context 'ScreeningList::Fse data' do
   before(:all) do
     ScreeningList::Fse.recreate_index
-    ScreeningList::FseData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    VCR.use_cassette('importers/screening_list/fse.yml', record: :once) do
+      ScreeningList::FseData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Fse] = JSON.parse(open(
@@ -231,8 +239,10 @@ end
 shared_context 'ScreeningList::El data' do
   before(:all) do
     ScreeningList::El.recreate_index
-    ScreeningList::ElData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv").import
+    VCR.use_cassette('importers/screening_list/el.yml', record: :once) do
+      ScreeningList::ElData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::El] = JSON.parse(open(
@@ -255,8 +265,10 @@ end
 shared_context 'ScreeningList::Dpl data' do
   before(:all) do
     ScreeningList::Dpl.recreate_index
-    ScreeningList::DplData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt").import
+    VCR.use_cassette('importers/screening_list/dpl.yml', record: :once) do
+      ScreeningList::DplData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dpl] = JSON.parse(open(
@@ -291,8 +303,10 @@ end
 shared_context 'ScreeningList::Uvl data' do
   before(:all) do
     ScreeningList::Uvl.recreate_index
-    ScreeningList::UvlData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv").import
+    VCR.use_cassette('importers/screening_list/uvl.yml', record: :once) do
+      ScreeningList::UvlData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Uvl] = JSON.parse(open(
@@ -319,8 +333,10 @@ end
 shared_context 'ScreeningList::Isn data' do
   before(:all) do
     ScreeningList::Isn.recreate_index
-    ScreeningList::IsnData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv").import
+    VCR.use_cassette('importers/screening_list/isn.yml', record: :once) do
+      ScreeningList::IsnData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isn] = JSON.parse(open(
@@ -337,8 +353,10 @@ end
 shared_context 'ScreeningList::Dtc data' do
   before(:all) do
     ScreeningList::Dtc.recreate_index
-    ScreeningList::DtcData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv").import
+    VCR.use_cassette('importers/screening_list/dtc.yml', record: :once) do
+      ScreeningList::DtcData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dtc] = JSON.parse(open(
@@ -355,8 +373,10 @@ end
 shared_context 'ScreeningList::Plc data' do
   before(:all) do
     ScreeningList::Plc.recreate_index
-    ScreeningList::PlcData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    VCR.use_cassette('importers/screening_list/plc.yml', record: :once) do
+      ScreeningList::PlcData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Plc] = JSON.parse(open(
@@ -391,8 +411,10 @@ end
 shared_context 'ScreeningList::Ssi data' do
   before(:all) do
     ScreeningList::Ssi.recreate_index
-    ScreeningList::SsiData.new(
-      "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    VCR.use_cassette('importers/screening_list/ssi.yml', record: :once) do
+      ScreeningList::SsiData.new(
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Ssi] = JSON.parse(open(

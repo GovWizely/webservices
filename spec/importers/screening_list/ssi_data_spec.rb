@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::SsiData do
+describe ScreeningList::SsiData, vcr: { cassette_name: 'importers/screening_list/ssi.yml' } do
   before { ScreeningList::Ssi.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml" }
   let(:resource) { fixtures_file }

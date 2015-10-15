@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::SdnData do
+describe ScreeningList::SdnData, vcr: { cassette_name: 'importers/screening_list/sdn.yml' } do
   before { ScreeningList::Sdn.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml" }
   let(:resource) { fixtures_file }

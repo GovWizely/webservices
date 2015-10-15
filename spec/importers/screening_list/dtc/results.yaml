@@ -6,26 +6,26 @@
   :source: &1
     :full_name: ITAR Debarred (DTC) - State Department
     :code: DTC
-  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'Juwhan Yun'
   :name_rev: 'Yun Juwhan'
   :name_no_ws: 'JuwhanYun'
   :name_no_ws_rev: 'YunJuwhan'
-  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :source_list_url: http://1.usa.gov/1Qi3Igw
   :id: '1857dfc050bc7adea46922f09996649de18495d7'
 - :name: Dilligas Trading Co., Inc.
   :alt_names: []
   :start_date: '1991-12-13'
   :federal_register_notice: 57 FR 37184
   :source: *1
-  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: Dilligas Trading
   :name_no_ws_with_common: DilligasTradingCoInc
   :name_no_ws_rev_with_common: IncCoTradingDilligas
   :name_rev: Trading Dilligas
   :name_no_ws: DilligasTrading
   :name_no_ws_rev: TradingDilligas
-  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :source_list_url: http://1.usa.gov/1Qi3Igw
   :id: 'afd9dbfe97d679d161eaed68203399296abf631c'
 - :name: Brian Joseph Fleming
   :alt_names:
@@ -33,7 +33,7 @@
   :start_date: '1990-07-03'
   :federal_register_notice: 58 FR 6835
   :source: *1
-  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'Brian Joseph Fleming'
   :name_rev: 'Fleming Joseph Brian'
   :name_no_ws: 'BrianJosephFleming'
@@ -42,7 +42,7 @@
   :alt_rev: ['McSulla Joseph Brian']
   :alt_no_ws: ['BrianJosephMcSulla']
   :alt_no_ws_rev: ['McSullaJosephBrian']
-  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar.html'
+  :source_list_url: http://1.usa.gov/1Qi3Igw
   :id: 'ba449382749d0c16fd862d7b3da698fb65b5d7aa'
 - :name: John Smith
   :alt_names:
@@ -50,7 +50,7 @@
   :start_date: '1990-12-01'
   :federal_register_notice: 57 FR 40000
   :source: *1
-  :source_information_url: http://www.pmddtc.state.gov/compliance/debar_intro.html
+  :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'John Smith'
   :name_rev: 'Smith John'
   :name_no_ws: 'JohnSmith'
@@ -59,5 +59,5 @@
   :alt_rev: ['Smith Brian']
   :alt_no_ws: ['BrianSmith']
   :alt_no_ws_rev: ['SmithBrian']
-  :source_list_url: 'http://www.pmddtc.state.gov/compliance/debar_admin.html'
+  :source_list_url: http://1.usa.gov/1Qi3IgB
   :id: '5989fe6f23c0b7b07aade5e4782acbbceb57be71'

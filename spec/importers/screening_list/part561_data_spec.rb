@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::Part561Data do
+describe ScreeningList::Part561Data, vcr: { cassette_name: 'importers/screening_list/part561.yml' } do
   before { ScreeningList::Part561.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml" }
   let(:resource) { fixtures_file }

@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::DplData do
+describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list/dpl.yml' } do
   before { ScreeningList::Dpl.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt" }
   let(:resource) { fixtures_file }
@@ -42,8 +42,8 @@ describe ScreeningList::DplData do
         federal_register_notice: '',
         id:                      '000abc',
         source:                  { full_name: 'Denied Persons List (DPL) - Bureau of Industry and Security', code: 'DPL' },
-        source_list_url:         'http://www.bis.doc.gov/index.php/the-denied-persons-list',
-        source_information_url:  'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/denied-persons-list',
+        source_list_url:         nil,
+        source_information_url:  nil,
         addresses:               [{
           address: '', city: 'Guaruja', state: 'SP', country: 'Brazil', postal_code: '1234'
         }],

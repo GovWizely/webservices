@@ -22,6 +22,10 @@ module ScreeningList
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
 
     def import
+      @source_information_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_intro.html', model_class)
+      @source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar.html', model_class)
+      @admin_source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_admin.html', model_class)
+
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       ensure_expected_headers(rows.first)
@@ -39,14 +43,12 @@ module ScreeningList
         start_date:              parse_american_date(row[:eff_date]),
         federal_register_notice: (row[:corrected_notice] || row[:notice]),
         source:                  model_class.source,
-        source_information_url:  'http://www.pmddtc.state.gov/compliance/debar_intro.html',
+        source_information_url:  @source_information_url,
       }
 
       make_names(doc)
 
-      doc[:source_list_url] = row[:type] == 'Administrative' ?
-        'http://www.pmddtc.state.gov/compliance/debar_admin.html' :
-        'http://www.pmddtc.state.gov/compliance/debar.html'
+      doc[:source_list_url] = row[:type] == 'Administrative' ? @admin_source_list_url : @source_list_url
 
       doc[:id] = generate_id(doc)
       sanitize_entry(doc)

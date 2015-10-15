@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::ElData do
+describe ScreeningList::ElData, vcr: { cassette_name: 'importers/screening_list/el.yml', record: :once } do
   before { ScreeningList::El.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv" }
   let(:resource) { fixtures_file }
