@@ -1,31 +1,9 @@
 module ScreeningList
   module Mappable
     def self.included(klass)
-      klass.settings = {
-        index: {
-          analysis: {
-            analyzer: {
-              snowball_asciifolding_nostop: {
-                tokenizer: 'standard',
-                filter:    %w(standard asciifolding lowercase snowball),
-              },
-              standard_asciifolding_nostop: {
-                analyzer:  'standard',
-                tokenizer: 'standard',
-                filter:    %w(standard asciifolding lowercase),
-              },
-              keyword_lowercase:            {
-                tokenizer: 'keyword',
-                filter:    %w(lowercase asciifolding),
-              },
-              keyword_uppercase:            {
-                tokenizer: 'keyword',
-                filter:    %w(uppercase asciifolding),
-              },
-            },
-          },
-        },
-      }.freeze
+      klass.analyze_by :snowball_asciifolding_nostop, :standard_asciifolding_nostop, :keyword_asciifolding_lowercase, :keyword_asciifolding_uppercase
+
+      klass.settings.freeze
 
       klass.mappings = {
         klass.name.typeize => {
@@ -38,33 +16,33 @@ module ScreeningList
             name:                       { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             name_idx:                   { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             alt_names:                  { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             alt_idx:                    { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             # reversed
             name_rev:                   { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             alt_rev:                    { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             # whitespace removed
             name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
@@ -81,14 +59,14 @@ module ScreeningList
             remarks:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            type:                       { type: 'string', analyzer: 'keyword_lowercase' },
+            type:                       { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
             source:                     { properties: { full_name: { type: 'string', index: 'no' },
                                                         code:      { type: 'string', analyzer: 'keyword' } } },
             federal_register_notice:    { type: 'string', analyzer: 'keyword' },
 
             ### Note to self: (I went back and forth so many times that I need a note to break me out of this loop)
             # uppercase is relevant here because
-            addresses:                  { properties: { country:         { type: 'string', analyzer: 'keyword_uppercase' } } },
+            addresses:                  { properties: { country:         { type: 'string', analyzer: 'keyword_asciifolding_uppercase' } } },
             # we currently use both filter/term and query/match on this field using different parameters (countries and address,
             # respectively) and we want the query/match not to care about casing.
             # This ensures the query gets analyzed and uppercased during search and the existing terms filter can remain as is.

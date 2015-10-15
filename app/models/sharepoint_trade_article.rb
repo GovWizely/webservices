@@ -1,22 +1,8 @@
 class SharepointTradeArticle
   include Indexable
+  analyze_by :snowball_asciifolding_nostop, :keyword_lowercase
 
-  self.settings = {
-    index: {
-      analysis: {
-        analyzer: {
-          custom_analyzer:       {
-            tokenizer: 'standard',
-            filter:    %w(standard asciifolding lowercase snowball),
-          },
-          phrase_match_analyzer: {
-            tokenizer: 'keyword',
-            filter:    'lowercase',
-          },
-        },
-      },
-    },
-  }.freeze
+  settings.freeze
 
   self.mappings = {
 
@@ -26,9 +12,9 @@ class SharepointTradeArticle
         store:   true,
       },
       properties: {
-        title:                    { type: 'string', analyzer: 'custom_analyzer' },
-        short_title:              { type: 'string', analyzer: 'custom_analyzer' },
-        summary:                  { type: 'string', analyzer: 'custom_analyzer' },
+        title:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+        short_title:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+        summary:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         creation_date:            { type: 'date', format: 'YYYY-MM-dd' },
         release_date:             { type: 'date', format: 'YYYY-MM-dd' },
         expiration_date:          { type: 'date', format: 'YYYY-MM-dd' },
@@ -36,18 +22,18 @@ class SharepointTradeArticle
         source_business_units:    { type: 'string' },
         source_offices:           { type: 'string' },
         evergreen:                { type: 'boolean' },
-        content:                  { type: 'string', analyzer: 'custom_analyzer' },
-        keyword:                  { type: 'string', analyzer: 'custom_analyzer' },
-        export_phases:            { type: 'string', analyzer: 'phrase_match_analyzer'  },
-        industries:               { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        countries:                { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        trade_regions:            { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        trade_programs:           { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        trade_initiatives:        { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        geo_regions:              { type: 'string', analyzer: 'phrase_match_analyzer'   },
-        geo_subregions:           { type: 'string', analyzer: 'phrase_match_analyzer'  },
-        topics:                   { type: 'string', analyzer: 'phrase_match_analyzer'  },
-        sub_topics:               { type: 'string', analyzer: 'phrase_match_analyzer'  },
+        content:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+        keyword:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+        export_phases:            { type: 'string', analyzer: 'keyword_lowercase' },
+        industries:               { type: 'string', analyzer: 'keyword_lowercase' },
+        countries:                { type: 'string', analyzer: 'keyword_lowercase' },
+        trade_regions:            { type: 'string', analyzer: 'keyword_lowercase' },
+        trade_programs:           { type: 'string', analyzer: 'keyword_lowercase' },
+        trade_initiatives:        { type: 'string', analyzer: 'keyword_lowercase' },
+        geo_regions:              { type: 'string', analyzer: 'keyword_lowercase' },
+        geo_subregions:           { type: 'string', analyzer: 'keyword_lowercase' },
+        topics:                   { type: 'string', analyzer: 'keyword_lowercase' },
+        sub_topics:               { type: 'string', analyzer: 'keyword_lowercase' },
         seo_metadata_title:       { type: 'string' },
         seo_metadata_description: { type: 'string' },
         seo_metadata_keyword:     { type: 'string' },

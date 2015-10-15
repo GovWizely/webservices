@@ -1,22 +1,9 @@
 module TariffRate
   module Mappable
     def self.included(klass)
-      klass.settings = {
-        index: {
-          analysis: {
-            analyzer: {
-              snowball_asciifolding_nostop: {
-                tokenizer: 'standard',
-                filter:    %w(standard asciifolding lowercase snowball),
-              },
-              keyword_lowercase:            {
-                tokenizer: 'keyword',
-                filter:    %w(lowercase),
-              },
-            },
-          },
-        },
-      }.freeze
+      klass.analyze_by :snowball_asciifolding_nostop
+
+      klass.settings.freeze
 
       klass.mappings = {
         klass.to_s.typeize => {

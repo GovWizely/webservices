@@ -1,45 +1,33 @@
 class MarketResearch
   include Indexable
+  analyze_by :snowball_asciifolding_nostop, :keyword_asciifolding_lowercase
 
-  self.settings = {
-    index: {
-      analysis: {
-        analyzer:
-                  { custom_analyzer:        {
-                    tokenizer: 'standard',
-                    filter:    %w(standard asciifolding lowercase snowball) },
-                    title_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    %w(asciifolding lowercase) },
-            },
-      },
-    },
-  }.freeze
+  settings.freeze
 
   self.mappings = {
     name.typeize => {
       properties: {
         expiration_date: { type: 'date', format: 'YYYY-MM-dd' },
         countries:       { type: 'string', analyzer: 'keyword' },
-        description:     { type: 'string', analyzer: 'custom_analyzer' },
+        description:     { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         industries:      {
           type:   'string',
           fields: {
-            tokenized: { type: 'string', analyzer: 'custom_analyzer' },
-            keyword:   { type: 'string', analyzer: 'title_keyword_analyzer' },
+            tokenized: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            keyword:   { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
           },
         },
         ita_industries:  {
           type:   'string',
           fields: {
-            tokenized: { type: 'string', analyzer: 'custom_analyzer' },
-            keyword:   { type: 'string', analyzer: 'title_keyword_analyzer' },
+            tokenized: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            keyword:   { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
           },
         },
         title:           {
-          type: 'string', analyzer: 'custom_analyzer',
+          type: 'string', analyzer: 'snowball_asciifolding_nostop',
           fields: {
-            keyword: { type: 'string', analyzer: 'title_keyword_analyzer' },
+            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
           }
         },
       },

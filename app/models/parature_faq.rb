@@ -1,23 +1,8 @@
 class ParatureFaq
   include Indexable
+  analyze_by :snowball_asciifolding_nostop, :keyword_lowercase
 
-  self.settings = {
-    index: {
-      analysis: {
-        analyzer:
-                  {
-                    custom_analyzer:       {
-                      tokenizer: 'standard',
-                      filter:    %w(standard asciifolding lowercase snowball),
-                    },
-                    phrase_match_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    'lowercase',
-                    },
-                  },
-      },
-    },
-  }.freeze
+  settings.freeze
 
   self.mappings = {
     name.typeize => {
@@ -27,11 +12,11 @@ class ParatureFaq
       },
       dynamic:    'false',
       properties: {
-        question:    { type: 'string', analyzer: 'custom_analyzer' },
-        answer:      { type: 'string', analyzer: 'custom_analyzer' },
+        question:    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+        answer:      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         update_date: { type: 'date', format: 'YYYY-MM-dd' },
-        topic:       { type: 'string', analyzer: 'phrase_match_analyzer' },
-        industry:    { type: 'string', analyzer: 'phrase_match_analyzer' },
+        topic:       { type: 'string', analyzer: 'keyword_lowercase' },
+        industry:    { type: 'string', analyzer: 'keyword_lowercase' },
         country:     { type: 'string' },
       },
     },
