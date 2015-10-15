@@ -60,17 +60,17 @@ module ScreeningList
             address:                       { type:     'string',
                                              analyzer: 'standard_asciifolding_nostop',
                                              fields:   {
-                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                               keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             address_idx:                   { type:     'string',
                                              analyzer: 'standard_asciifolding_nostop',
                                              fields:   {
-                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                               keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             address_rev:                   { type:     'string',
                                              analyzer: 'standard_asciifolding_nostop',
                                              fields:   {
-                                               keyword: { type: 'string', analyzer: 'keyword_lowercase' } } },
+                                               keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
 
             address_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
             address_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
