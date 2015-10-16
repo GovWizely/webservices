@@ -29,7 +29,7 @@ class MarketResearchData
 
   def import
     entries = []
-    @resources.each do |resource|  
+    @resources.each do |resource|
       MrlParser.foreach(open(resource, 'r:windows-1252:utf-8').read) do |source_hash|
         entries << process_source_hash(source_hash)
       end

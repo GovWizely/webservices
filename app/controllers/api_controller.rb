@@ -35,7 +35,7 @@ class ApiController < ActionController::Base
         @query_info_fields = query_info_fields
         @search =
           if s[:size].to_i == -1
-            search_class.fetch_all
+            search_class.fetch_all(sources)
           else
             search_class.search_for(s)
           end
@@ -49,6 +49,12 @@ class ApiController < ActionController::Base
   end
 
   private
+
+  def sources
+    sources = Array(params.fetch(:sources, []))
+    sources.map!(&:upcase)
+    sources.empty? ? nil : sources
+  end
 
   def api_version
     self.class.name.match(/Api::V(\d+)::/) { |m| m[1] }

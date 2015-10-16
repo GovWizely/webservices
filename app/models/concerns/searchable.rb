@@ -70,13 +70,13 @@ module Searchable
       nil
     end
 
-    def fetch_all
-      search_options = { scroll: '5m', index: index_names, type: index_types }
+    def fetch_all(sources = nil)
+      search_options = { scroll: '5m', index: index_names, type: index_types(sources) }
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
       results = { offset:       0,
-                  sources_used: index_meta,
+                  sources_used: index_meta(sources),
                   hits:         response['hits'].deep_symbolize_keys[:hits],
                   total:        response['hits']['total'] }
 

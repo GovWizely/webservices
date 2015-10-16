@@ -8,5 +8,6 @@ module Envirotech
                           Envirotech::AnalysisLink,
                           Envirotech::BackgroundLink,
                           Envirotech::ProviderSolution]
+    self.fetch_all_sort_by = 'name_english.sort'
   end
 end
