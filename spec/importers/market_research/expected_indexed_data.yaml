@@ -10,11 +10,11 @@
   :expiration_date: '2018-01-01'
   :industries:
   - Services
-  :ita_industries: []
   :report_type: Market Research Report
   :title: Brazilian Rodeo Industry and Potential for U.S. Companies and U.S. Travel
     and Tourism Destinations to Engage
-  :url: http://files.export.gov/x_9678533.pdf
+  :url: http://1.usa.gov/1G82dSq
+  :ita_industries: []
 - :id: '14271734'
   :countries:
   - AF
@@ -40,10 +40,10 @@
     as recruitment of consultants for projects that are funded by the ADB.
   :expiration_date: '2014-11-26'
   :industries: []
-  :ita_industries: []
   :report_type: Market Research Report
   :title: ADVANCE Procurement Notices, October 2013
-  :url: http://files.export.gov/x_9944661.pdf
+  :url: http://1.usa.gov/1G82dSs
+  :ita_industries: []
 - :id: '14271733'
   :countries: []
   :description: The Government of the Republic of Kenya has received financing from
@@ -56,11 +56,11 @@
   :expiration_date: '2013-12-31'
   :industries:
   - Aerospace & Defense
-  :ita_industries: []
   :report_type: Market Research Report
   :title: 'Kenya: Renovation and Expansion of Passenger Terminal Facilities at Jomo
     Kenyatta International Airport - Information Technology Systems'
-  :url: http://files.export.gov/x_4660043.pdf
+  :url: http://1.usa.gov/1G82fK8
+  :ita_industries: []
 - :id: '14271731'
   :countries:
   - AR
@@ -93,13 +93,15 @@
   - Security & Safety
   - Services
   - Used & Reconditioned Equipment
+  :report_type: Market Research Report
+  :title: Process Obstacles to Exporting to Argentina
+  :url: http://1.usa.gov/1LPHJKe
   :ita_industries:
   - Chemicals
   - Agribusiness
-  - Environmental Industries
-  :report_type: Market Research Report
-  :title: Process Obstacles to Exporting to Argentina
-  :url: http://files.export.gov/x_4268342.pdf
+  - Travel and Tourism
+  - Automotive
+  - Consumer Goods
 - :id: '14272199'
   :countries:
   - IN
@@ -109,11 +111,11 @@
     business opportunities and the prevailing challenges in the Indian aviation market.
   :expiration_date: '2015-03-31'
   :industries:
-   - Aerospace & Defense
-  :ita_industries: []
+  - Aerospace & Defense
   :report_type: Best Market Research
   :title: Commercial Aviation in India
-  :url: http://files.export.gov/x_813718.pdf
+  :url: http://1.usa.gov/1LPHJKg
+  :ita_industries: []
 - :id: '14272168'
   :countries:
   - BA
@@ -121,7 +123,7 @@
     business in the country.
   :expiration_date: '2016-01-01'
   :industries: []
-  :ita_industries: []
   :report_type: Country Commercial Guide
   :title: Bosnia and Herzogovina Country Commercial Guide
-  :url: http://files.export.gov/x_3092299.pdf
+  :url: http://1.usa.gov/1LPHJKk
+  :ita_industries: []

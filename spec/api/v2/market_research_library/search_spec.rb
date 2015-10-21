@@ -67,7 +67,7 @@ describe 'Market Researches API V2', type: :request do
 
       context 'when industries is specified' do
         context 'as single entry' do
-          let(:params) { { industries: 'Environmental Industries' } }
+          let(:params) { { industries: 'Travel and Tourism' } }
           before { get search_path, params, @v2_headers }
           subject { response }
 

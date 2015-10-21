@@ -49,7 +49,7 @@ class MarketResearchData
     entry[:ita_industries] = entry[:industries].map { |i| normalize_industry(i) }.compact.flatten.uniq
 
     entry[:report_type] = detect_report_type(entry[:report_type])
-    entry[:url] = "http://files.export.gov/#{entry[:url]}" if entry[:url].present?
+    entry[:url] = UrlMapper.get_bitly_url("http://files.export.gov/#{entry[:url]}", model_class) if entry[:url].present?
     entry
   end
 
