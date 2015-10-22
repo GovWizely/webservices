@@ -120,8 +120,12 @@ describe Indexable do
 
   describe '.create_index' do
     include_context 'a working Mock model class'
-    it 'creates metadata with the last_imported time' do
-      Mock.recreate_index
+    before { Mock.recreate_index }
+    it 'creates metadata' do
+      m = Mock.stored_metadata
+      expect(m.keys).to match_array %i(last_imported last_updated version)
+    end
+    it 'sets last_imported to the current time' do
       last_imported_time = DateTime.parse(Mock.stored_metadata[:last_imported])
       expect(last_imported_time.to_time).to be_within(60.seconds).of(Time.now)
     end

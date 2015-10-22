@@ -13,12 +13,10 @@ module Indexable
           metadata: {
             properties: {
               last_imported: {
-                type:   'date',
-                format: 'dateOptionalTime',
+                type: 'string',
               },
               last_updated:  {
-                type:   'date',
-                format: 'dateOptionalTime',
+                type: 'string',
               },
               version:       {
                 type: 'string',
@@ -84,7 +82,7 @@ module Indexable
     end
 
     # If any field is not present, we initialize it with those values.
-    EMPTY_METADATA = { version: '', last_updated: '0000-01-01T00:00:00Z', last_imported: '0000-01-01T00:00:00Z' }
+    EMPTY_METADATA = { version: '', last_updated: '', last_imported: '' }
 
     def stored_metadata
       stored = ES.client.get(
