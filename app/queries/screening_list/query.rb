@@ -31,6 +31,7 @@ module ScreeningList
 
     def generate_query(json)
       multi_fields = %i(alt_names name remarks title)
+      name_fields  = %i(alt_names name)
       json.query do
         json.bool do
           json.must do
@@ -42,7 +43,7 @@ module ScreeningList
               generate_fuzzy_name_query(json)
             else
               json.must do
-                json.child! { generate_multi_match(json, multi_fields, @name) }
+                json.child! { generate_multi_match(json, name_fields, @name) }
               end
             end
           end

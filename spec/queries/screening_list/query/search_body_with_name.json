@@ -6,9 +6,7 @@
                     "multi_match": {
                         "fields": [
                             "alt_names",
-                            "name",
-                            "remarks",
-                            "title"
+                            "name"
                         ],
                         "operator": "and",
                         "query": "mohamed"
