@@ -6,10 +6,7 @@ SimpleCov.start 'rails'
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
-require File.expand_path('../../config/environment', __FILE__)
-require 'rspec/rails'
-require 'shoulda/matchers'
-# require 'rspec/autorun'
+
 require 'vcr'
 VCR.configure do |c|
   c.ignore_request do |request|
@@ -23,6 +20,11 @@ VCR.configure do |c|
   c.filter_sensitive_data('<BITLY_API_TOKEN>') { Rails.configuration.bitly_api_token }
   c.configure_rspec_metadata!
 end
+
+require File.expand_path('../../config/environment', __FILE__)
+require 'rspec/rails'
+require 'shoulda/matchers'
+# require 'rspec/autorun'
 
 # Requires supporting ruby files with custom matchers and macros, etc,
 # in spec/support/ and its subdirectories.
