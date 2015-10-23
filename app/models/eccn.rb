@@ -24,7 +24,7 @@ class Eccn
         url2:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'Eccn',

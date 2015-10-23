@@ -8,6 +8,23 @@ module Indexable
   included do
     class << self
       attr_accessor :mappings, :settings, :source
+      def metadata_mappings
+        {
+          metadata: {
+            properties: {
+              last_imported: {
+                type: 'string',
+              },
+              last_updated:  {
+                type: 'string',
+              },
+              version:       {
+                type: 'string',
+              },
+            },
+          },
+        }
+      end
     end
 
     # If the model class doesn't define the source full_name,
@@ -45,6 +62,7 @@ module Indexable
       ES.client.indices.create(
         index: index_name,
         body:  { settings: settings, mappings: mappings })
+      touch_metadata
     end
 
     def update_metadata(version, time = DateTime.now.utc)
@@ -63,6 +81,9 @@ module Indexable
         body:  body)
     end
 
+    # If any field is not present, we initialize it with those values.
+    EMPTY_METADATA = { version: '', last_updated: '', last_imported: '' }
+
     def stored_metadata
       stored = ES.client.get(
         index: index_name,
@@ -70,13 +91,7 @@ module Indexable
         id:    0,
       )['_source'].symbolize_keys rescue {}
 
-      if stored[:time] && !stored[:last_updated]
-        stored[:last_updated] = stored.delete(:time)
-        _update_metadata(stored)
-        stored_metadata
-      else
-        stored
-      end
+      EMPTY_METADATA.merge(stored)
     end
 
     def index_exists?
@@ -116,7 +131,7 @@ module Indexable
         },
       }
 
-      ES.client.delete_by_query(index: index_name, body: body)
+      ES.client.delete_by_query(index: index_name, type: index_type, body: body)
     end
 
     def can_purge_old?

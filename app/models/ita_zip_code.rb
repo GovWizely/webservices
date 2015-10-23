@@ -32,7 +32,7 @@ class ItaZipCode
         address:           { type: 'string' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',

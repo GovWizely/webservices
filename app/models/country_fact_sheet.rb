@@ -34,7 +34,7 @@ class CountryFactSheet
         published_date: { type: 'date', format: 'YYYY-MM-dd' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'U.S. Department of State',

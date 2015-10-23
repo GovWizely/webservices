@@ -40,7 +40,7 @@ module TradeLead
             categories:               { type: 'string', analyzer: 'keyword' },
           },
         },
-      }.freeze
+      }.merge(klass.metadata_mappings).freeze
 
       klass.class_eval do
         class << self

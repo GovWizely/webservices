@@ -25,7 +25,7 @@ class BusinessServiceProvider
         category:            { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
       },
     },
-  }.freeze
+  }.merge(metadata_mappings).freeze
 
   self.source = {
     full_name: 'ITA',

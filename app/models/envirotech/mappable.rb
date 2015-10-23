@@ -71,7 +71,7 @@ module Envirotech
             regulation_ids:      { type: 'integer' },
           },
         },
-      }.freeze
+      }.merge(klass.metadata_mappings).freeze
 
       klass.class_eval do
         class << self
