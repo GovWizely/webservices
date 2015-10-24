@@ -155,9 +155,9 @@ describe Importable do
       Mock.update_metadata('', '')
     end
     it 'stores the last_imported time' do
-      expect {
-        MockData.new([{ id: 3, content: 'ping pong'}]).import
-      }.to change {
+      expect do
+        MockData.new([{ id: 3, content: 'ping pong' }]).import
+      end.to change {
         Mock.stored_metadata[:last_imported]
       }.from('')
 
