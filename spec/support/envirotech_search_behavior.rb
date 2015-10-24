@@ -25,11 +25,7 @@ shared_context 'Envirotech::Solution data' do
   before(:all) do
     Envirotech::Solution.recreate_index
 
-    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
-    relational_data = JSON.parse(open(relational_fixtures_file).read)
-    Envirotech::RelationalData.relations = relational_data
-
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/solutions.json"
     Envirotech::SolutionData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -71,7 +67,7 @@ end
 shared_context 'Envirotech::Issue data' do
   before(:all) do
     Envirotech::Issue.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/issue_articles/issue_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/issues.json"
     Envirotech::IssueData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -114,11 +110,7 @@ shared_context 'Envirotech::Regulation data' do
   before(:all) do
     Envirotech::Regulation.recreate_index
 
-    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
-    relational_data = JSON.parse(open(relational_fixtures_file).read)
-    Envirotech::RelationalData.relations = relational_data
-
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulation_articles/regulation_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/regulations.json"
     Envirotech::RegulationData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -154,7 +146,7 @@ end
 shared_context 'Envirotech::Provider data' do
   before(:all) do
     Envirotech::Provider.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_articles/provider_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/providers.json"
     Envirotech::ProviderData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -184,7 +176,7 @@ end
 shared_context 'Envirotech::AnalysisLink data' do
   before(:all) do
     Envirotech::AnalysisLink.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/analysis_link_articles/analysis_link_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/analysis_links.json"
     Envirotech::AnalysisLinkData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -220,7 +212,7 @@ end
 shared_context 'Envirotech::BackgroundLink data' do
   before(:all) do
     Envirotech::BackgroundLink.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/background_links.json"
     Envirotech::BackgroundLinkData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -256,7 +248,7 @@ end
 shared_context 'Envirotech::ProviderSolution data' do
   before(:all) do
     Envirotech::ProviderSolution.recreate_index
-    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solution_articles/provider_solution_articles.json"
+    fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/provider_solutions.json"
     Envirotech::ProviderSolutionData.new(fixtures_file).import
 
     @all_possible_full_results ||= {}
@@ -297,10 +289,12 @@ end
 
 shared_context 'Envirotech::Relational data' do
   before(:all) do
-    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
-    relational_data = JSON.parse(open(relational_fixtures_file).read)
-    Envirotech::RelationalData.relations = relational_data
+    importer = Envirotech::RelationalData.new
 
-    Envirotech::RelationalData.new.import
+    relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations.json"
+    relational_data = JSON.parse(open(relational_fixtures_file).read)
+    importer.instance_variable_set(:@relations, relational_data)
+
+    importer.import
   end
 end

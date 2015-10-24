@@ -29,7 +29,7 @@ describe Envirotech::ToolkitData do
     end
 
     context 'scraper fallback to local data' do
-      let(:all_issue_info) {}
+      let(:all_issue_info) { {} }
       let(:local_data) { { 'dummy' => 2 } }
       it 'notify Airbrake when UI tool disappear' do
         expect(Airbrake).to receive(:notify).with(Exceptions::EnvirotechToolkitNotFound.new)

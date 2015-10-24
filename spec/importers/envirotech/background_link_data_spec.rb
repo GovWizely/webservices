@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Envirotech::BackgroundLinkData do
   include_context 'empty Envirotech indices'
-  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/background_link_articles/background_link_articles.json" }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/background_links.json" }
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/background_link/background_link_articles.yaml") }
   let(:resource) { fixtures_file }
