@@ -1,6 +1,5 @@
 module Envirotech
   class RelationalData
-
     def import
       process_solution_relations
       process_regulation_relations
