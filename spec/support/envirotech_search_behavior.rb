@@ -289,10 +289,12 @@ end
 
 shared_context 'Envirotech::Relational data' do
   before(:all) do
+    importer = Envirotech::RelationalData.new
+
     relational_fixtures_file = "#{Rails.root}/spec/fixtures/envirotech/relations_data/issue_solution_regulation.json"
     relational_data = JSON.parse(open(relational_fixtures_file).read)
-    Envirotech::RelationalData.relations = relational_data
+    importer.instance_variable_set(:@relations, relational_data)
 
-    Envirotech::RelationalData.new.import
+    importer.import
   end
 end

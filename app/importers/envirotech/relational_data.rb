@@ -1,9 +1,7 @@
 module Envirotech
   class RelationalData
-    cattr_accessor :relations, :solution_ids_names
 
     def import
-      return unless  RelationalData.relations.present?
       process_solution_relations
       process_regulation_relations
     end
@@ -74,38 +72,37 @@ module Envirotech
     def issues_for_regulation(regulation)
       issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 150)
       issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      issues_from_relation = RelationalData.relations.select { |_, v| v.with_indifferent_access[regulation[:name_english]].present? }
+      issues_from_relation = relations.select { |_, v| v.with_indifferent_access[regulation[:name_english]].present? }
       issue_ids_names.select { |issue| issues_from_relation.include?(issue.last) }.map(&:first)
     end
 
     def solutions_for_regulation(regulation)
-      related_solutions = RelationalData.relations.select do |_, v|
+      related_solutions = relations.select do |_, v|
         v.with_indifferent_access[regulation[:name_english]].present?
       end.map { |_, v| v.with_indifferent_access[regulation[:name_english]] }.uniq.flatten
 
-      RelationalData.solution_ids_names.select { |_, name_english| related_solutions.include?(name_english) }.map(&:first)
+      solution_ids_names.select { |_, name_english| related_solutions.include?(name_english) }.map(&:first)
     end
 
     def issues_for_solution(solution)
       issues_documents = Envirotech::Consolidated.search_for(sources: 'issues', size: 150)
       issue_ids_names = issues_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      issues_from_relation = RelationalData.relations.select do |_, v|
+      issues_from_relation = relations.select do |_, v|
         v.map { |__, val| val }.flatten.include?(solution[:name_english])
       end
       issue_ids_names.select { |issue| issues_from_relation.include?(issue.last) }.map(&:first)
     end
 
-    def self.relations
-      @@relations ||= Envirotech::ToolkitData.fetch_relational_data
+    def relations
+      @relations ||= Envirotech::ToolkitData.fetch_relational_data
     end
 
-    def self.solution_ids_names
-      if @@solution_ids_names.blank?
+    def solution_ids_names
+      if @solution_ids_names.blank?
         solution_documents = Envirotech::Consolidated.search_for(sources: 'solutions', size: 150)
-        @@solution_ids_names = solution_documents[:hits].map { |d|  [d[:_source][:source_id], d[:_source][:name_english]] }
-      else
-        @@solution_ids_names
+        @solution_ids_names = solution_documents[:hits].map { |d| [d[:_source][:source_id], d[:_source][:name_english]] }
       end
+      @solution_ids_names
     end
   end
 end
