@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe Envirotech::SolutionData do
   include_context 'empty Envirotech indices'
-  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/solution_articles/solution_articles.json" }
+  let(:fixtures_file) { "#{Rails.root}/spec/fixtures/envirotech/solutions.json" }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/solution/solution_articles.yaml") }
   let(:resource) { fixtures_file }
   let(:importer) { described_class.new(fixtures_file) }
