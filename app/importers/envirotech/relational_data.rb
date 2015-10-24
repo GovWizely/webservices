@@ -7,6 +7,40 @@ module Envirotech
 
     private
 
+
+    def new_data_process
+
+    
+
+      # relations = {issue: {regulation: [solutions]}}
+
+      relations.keys.each do |issue_name|
+        # issue_hit = Envirotech::Consolidated.search_for(sources: 'issues', q: issue_name)[:hits].first
+        # issue_hit[:_source][:id] = issue_hit[:_id]
+        # issue = issue_hit[:_source]
+
+        issue = get_updatable_document(q: issue_name, index_name: 'issues')
+
+        relations[issue_name].each do |regulation_name|
+          # regulation_hit = Envirotech::Consolidated.search_for(sources: 'regulations', q: regulation_name)[:hits].first
+          # regulation_hit[:_source][:id] = regulation_hit[:_id]
+          # regulation = regulation_hit[:_source]
+
+          regulation = get_updatable_document(q: regulation_name, index_name: 'regulations')
+
+          issue[:regulation_ids] << regulation[:id]
+        end
+        # issue[:hits].first[:_source][:solution_ids] << 1111
+        # Envirotech::Issue.update(issue_documents)
+      end
+    end
+
+    def get_updatable_document(q: '', index_name: '')
+      hit = Envirotech::Consolidated.search_for(sources: index_name, q: q)[:hits].first
+      hit[:_source][:id] = hit[:_id]
+      hit[:_source]
+    end
+
     def process_regulation_relations
       regulations = Envirotech::Consolidated.fetch_all(['REGULATIONS'])
       regulations = regulations[:hits].map { |hit| { id: hit[:_id] }.merge(hit[:_source].except(:id))  }
