@@ -4,7 +4,7 @@ module Envirotech
 
     # This solution is valid until we have full control over the toolkit.
     def self.fetch_relational_data
-      local = JSON.parse(open(RELATION_DATA).read).deep_symbolize_keys
+      local = JSON.parse(open(RELATION_DATA).read)
 
       scraped = Envirotech::ToolkitScraper.new.all_issue_info rescue {}
 
