@@ -1,8 +1,7 @@
 module Envirotech
   class RelationalData
     def import
-      process_solution_relations
-      process_regulation_relations
+      new_data_process
     end
 
     private
@@ -15,23 +14,30 @@ module Envirotech
       # relations = {issue: {regulation: [solutions]}}
 
       relations.keys.each do |issue_name|
-        # issue_hit = Envirotech::Consolidated.search_for(sources: 'issues', q: issue_name)[:hits].first
-        # issue_hit[:_source][:id] = issue_hit[:_id]
-        # issue = issue_hit[:_source]
 
         issue = get_updatable_document(q: issue_name, index_name: 'issues')
 
-        relations[issue_name].each do |regulation_name|
-          # regulation_hit = Envirotech::Consolidated.search_for(sources: 'regulations', q: regulation_name)[:hits].first
-          # regulation_hit[:_source][:id] = regulation_hit[:_id]
-          # regulation = regulation_hit[:_source]
+        relations[issue_name].keys.each do |regulation_name|
 
           regulation = get_updatable_document(q: regulation_name, index_name: 'regulations')
 
-          issue[:regulation_ids] << regulation[:id]
+          issue[:regulation_ids].uniq_push!(regulation[:source_id])
+          regulation[:issue_ids].uniq_push!(issue[:source_id])
+
+          relations[issue_name][regulation_name].each do |solution_name|
+            solution = get_updatable_document(q: solution_name, index_name: 'solutions')
+
+            issue[:solution_ids].uniq_push!(solution[:source_id])
+            regulation[:solution_ids].uniq_push!(solution[:source_id])
+
+            solution[:regulation_ids].uniq_push!(regulation[:source_id])
+            solution[:issue_ids].uniq_push!(issue[:source_id])
+
+            Envirotech::Solution.update([solution])
+          end
+          Envirotech::Regulation.update([regulation])
         end
-        # issue[:hits].first[:_source][:solution_ids] << 1111
-        # Envirotech::Issue.update(issue_documents)
+        Envirotech::Issue.update([issue])
       end
     end
 
