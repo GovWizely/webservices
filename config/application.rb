@@ -19,6 +19,7 @@ module Webservices
 
     require 'ext/string'
     require 'ext/hash'
+    require 'ext/array'
 
     # Disable the asset pipeline.
     config.assets.enabled = false
