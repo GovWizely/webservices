@@ -10,11 +10,9 @@ module Envirotech
       # relations = {issue: {regulation: [solutions]}}
 
       relations.keys.each do |issue_name|
-
         issue = get_updatable_document(q: issue_name, index_name: 'issues')
 
         relations[issue_name].keys.each do |regulation_name|
-
           regulation = get_updatable_document(q: regulation_name, index_name: 'regulations')
 
           issue[:regulation_ids].uniq_push!(regulation[:source_id])
