@@ -29,7 +29,7 @@ gem 'mechanize'
 gem 'sass'
 gem 'jquery-rails'
 
-gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git', tag: 'v0.1.1'
+gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 
 group :staging, :staging2, :production do
   gem 'newrelic_rpm'
