@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Services
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Services&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:12 GMT
+      - Mon, 26 Oct 2015 21:28:42 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - dc0b1a42-42d6-4d47-8b66-3b27e1fbb6ba
+      - f5996c72-eeb5-49da-9bed-c1c3136f71b8
       Status:
       - 200 OK
       Vary:
@@ -48,7 +48,7 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:12 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:42 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_9678533.pdf&title=MarketResearch
@@ -70,22 +70,22 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:12 GMT
+      - Mon, 26 Oct 2015 21:28:42 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '212'
+      - '229'
       Connection:
       - keep-alive
       Etag:
-      - '"f231cda315b19ecb671a54d8563e583478f1da62"'
+      - '"26613fd3506f8db5a1845f6ca1aece5bc2c679cf"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1G82dSq",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1G82dSq",
         "aggregate_link": "http://bit.ly/1G82dSr", "long_url": "http://files.export.gov/x_9678533.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:12 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:42 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_9944661.pdf&title=MarketResearch
@@ -107,25 +107,25 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:12 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '212'
+      - '229'
       Connection:
       - keep-alive
       Etag:
-      - '"1ce434d1f5557b842a31d55573006f594409416b"'
+      - '"e36de5ff9b3c524ef1e56f974054e89604063d9a"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1G82dSs",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1G82dSs",
         "aggregate_link": "http://bit.ly/1G82dSt", "long_url": "http://files.export.gov/x_9944661.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:12 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Aerospace%20%26%20Defense
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Aerospace%20%26%20Defense&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -142,7 +142,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -156,7 +156,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 37f32e33-50f8-4f4a-8b0d-2e7446b95cfc
+      - bccca0ea-747a-41bc-9ba1-0d78c4e6a24e
       Status:
       - 200 OK
       Vary:
@@ -171,7 +171,7 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_4660043.pdf&title=MarketResearch
@@ -193,25 +193,25 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '212'
+      - '229'
       Connection:
       - keep-alive
       Etag:
-      - '"fcf510d5c0a957c14ba3ea67ec0d6fe76af85b0f"'
+      - '"be6bd6414e6a3ff1b9ea9ee4dd7c8d57e33edd58"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1G82fK8",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1G82fK8",
         "aggregate_link": "http://bit.ly/1G82fK9", "long_url": "http://files.export.gov/x_4660043.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Agribusiness
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Agribusiness&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -228,56 +228,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
-      Server:
-      - Apache
-      X-Frame-Options:
-      - SAMEORIGIN
-      X-Xss-Protection:
-      - 1; mode=block
-      X-Content-Type-Options:
-      - nosniff
-      Etag:
-      - '"afd76f4ff4faa58e1d89c879bde781f2"'
-      Cache-Control:
-      - max-age=0, private, must-revalidate
-      X-Request-Id:
-      - e99c0c95-5f8b-4123-bd69-5f5eddb41b30
-      Status:
-      - 200 OK
-      Vary:
-      - Accept-Encoding
-      Content-Length:
-      - '69'
-      Connection:
-      - close
-      Content-Type:
-      - application/json; charset=utf-8
-    body:
-      encoding: UTF-8
-      string: '[{"id":55,"name":"Chemicals"},{"id":66,"name":"Agribusiness"}]'
-    http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
-- request:
-    method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Apparel%20%26%20Textiles
-    body:
-      encoding: US-ASCII
-      string: ''
-    headers:
-      Accept-Encoding:
-      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
-      Accept:
-      - "*/*"
-      User-Agent:
-      - Ruby
-  response:
-    status:
-      code: 200
-      message: OK
-    headers:
-      Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -291,7 +242,56 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 10740f96-468d-42bf-b812-9f1462b5ee4f
+      - d09f6afe-9558-4dc5-aa46-29d5fc0f4b40
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: '[{"id":55,"name":"Chemicals"},{"id":66,"name":"Agribusiness"}]'
+    http_version: 
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Apparel%20%26%20Textiles&source=MarketResearch
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 26 Oct 2015 21:28:43 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - cf05e493-6a99-4337-875c-d126a197523b
       Status:
       - 200 OK
       Vary:
@@ -306,10 +306,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Automotive%20%26%20Ground%20Transportation
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Automotive%20%26%20Ground%20Transportation&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -326,7 +326,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -336,17 +336,17 @@ http_interactions:
       X-Content-Type-Options:
       - nosniff
       Etag:
-      - '"a433fb42ba6b1bcf760393d856ace0cb"'
+      - '"d751713988987e9331980363e24189ce"'
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 03b5656c-7f5a-4471-9497-4453a1b791f1
+      - 5cd25da9-97d6-4255-a21e-f981fa44abab
       Status:
       - 200 OK
       Vary:
       - Accept-Encoding
       Content-Length:
-      - '95'
+      - '22'
       Connection:
       - close
       Content-Type:
@@ -356,10 +356,10 @@ http_interactions:
       string: '[{"id":62,"name":"Travel and Tourism"},{"id":63,"name":"Automotive"},{"id":69,"name":"Consumer
         Goods"}]'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Chemicals,%20Petrochemicals%20%26%20Composites
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Chemicals,%20Petrochemicals%20%26%20Composites&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -376,7 +376,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -390,7 +390,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 40c5281e-0448-4b61-8381-07e22ad06960
+      - cce4a898-d429-42d7-8f0b-9c27161b485f
       Status:
       - 200 OK
       Vary:
@@ -405,10 +405,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Construction,%20Building%20%26%20Heavy%20Equipment
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Construction,%20Building%20%26%20Heavy%20Equipment&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -425,7 +425,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -439,7 +439,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 3b7ea900-04ef-4ccb-8131-af941f28b0ae
+      - 05a69131-835b-4f4f-874f-f57cecd29dad
       Status:
       - 200 OK
       Vary:
@@ -454,10 +454,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Consumer%20Goods%20%26%20Home%20Furnishings
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Consumer%20Goods%20%26%20Home%20Furnishings&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -474,7 +474,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -488,7 +488,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 9c98aca3-98b6-4a2b-8b52-d3e7c10f6d6b
+      - b690dee8-3b89-4f71-a005-e434e29f36c5
       Status:
       - 200 OK
       Vary:
@@ -503,10 +503,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Energy%20%26%20Mining
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Energy%20%26%20Mining&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -523,7 +523,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -537,7 +537,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 116d9c40-6818-430a-a904-67e79abb6f45
+      - 2987fb50-018b-40d1-bf11-25c1c28d3119
       Status:
       - 200 OK
       Vary:
@@ -552,10 +552,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Environmental%20Technologies
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Environmental%20Technologies&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -572,7 +572,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:43 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -586,7 +586,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - ac4f4b1a-4514-4c97-ba27-e82b6cd778f1
+      - 33de36a7-6c05-4cff-b895-8ab6e48863f0
       Status:
       - 200 OK
       Vary:
@@ -601,10 +601,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:43 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Food%20Processing%20%26%20Packaging
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Food%20Processing%20%26%20Packaging&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -621,7 +621,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -635,7 +635,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 31b0e5a4-394c-4d06-89f1-fccc8f891825
+      - 8803dd3e-ee4a-4137-89ff-1c2ab8f836ff
       Status:
       - 200 OK
       Vary:
@@ -650,10 +650,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Health%20Technologies
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Health%20Technologies&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -670,7 +670,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -684,7 +684,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 55468ea9-1ffb-4776-8d42-01c456ede639
+      - c0357507-177c-4c03-a0bb-4da95ea26be3
       Status:
       - 200 OK
       Vary:
@@ -699,10 +699,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Industrial%20Equipment%20%26%20Supplies
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Industrial%20Equipment%20%26%20Supplies&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -719,7 +719,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -733,7 +733,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 74cb71fa-9faf-4711-86b8-871badeae428
+      - fa941f66-b441-4cb3-a47e-63520c20987b
       Status:
       - 200 OK
       Vary:
@@ -748,10 +748,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Information%20%26%20Communication
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Information%20%26%20Communication&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -768,7 +768,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:13 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -782,7 +782,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 7f1bebd8-172c-49bb-b3bb-668fa84467a1
+      - 4f89f0b1-c30d-401a-b568-bb0b98bdf8e8
       Status:
       - 200 OK
       Vary:
@@ -797,10 +797,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:13 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Marine%20Industries
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Marine%20Industries&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -817,7 +817,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -831,7 +831,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 6c24c818-51ff-4f73-86c3-52a52aa33f1d
+      - 8139228a-9ee0-4e16-83b6-e2a3e4e9a627
       Status:
       - 200 OK
       Vary:
@@ -846,10 +846,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Paper,%20Printing,%20Graphic%20Arts
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Paper,%20Printing,%20Graphic%20Arts&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -866,7 +866,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -880,7 +880,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 49481923-fa76-4eda-ae2d-308df825c966
+      - 1018863f-2481-46c9-be3d-23726858845b
       Status:
       - 200 OK
       Vary:
@@ -895,10 +895,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Security%20%26%20Safety
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Security%20%26%20Safety&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -915,7 +915,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -929,7 +929,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - 4a065ab1-b698-4366-813d-d494d4fd24a0
+      - ef29cf8a-c027-4532-9253-f188d7d1efdc
       Status:
       - 200 OK
       Vary:
@@ -944,10 +944,10 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
-    uri: http://im.govwizely.com/api/industries.json?log_failed=false&source=MarketResearch&topic=Used%20%26%20Reconditioned%20Equipment
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Used%20%26%20Reconditioned%20Equipment&source=MarketResearch
     body:
       encoding: US-ASCII
       string: ''
@@ -964,7 +964,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -978,7 +978,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d84c3692-e853-4157-9d18-4073110a85ba
+      - 74129595-8a67-4319-930a-e21660b49212
       Status:
       - 200 OK
       Vary:
@@ -993,7 +993,7 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_4268342.pdf&title=MarketResearch
@@ -1015,22 +1015,22 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '212'
+      - '229'
       Connection:
       - keep-alive
       Etag:
-      - '"154b2b04e1594f069bed6bb219027d26bfbbcd9b"'
+      - '"27d08383c52469299439788f41a5b80cc7498480"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKe",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKe",
         "aggregate_link": "http://bit.ly/1LPHJKf", "long_url": "http://files.export.gov/x_4268342.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_813718.pdf&title=MarketResearch
@@ -1052,22 +1052,22 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '211'
+      - '228'
       Connection:
       - keep-alive
       Etag:
-      - '"4a254b482fda6b1bca9c12900aa03ee103077e39"'
+      - '"d0957b5b6deeb3d1f995bd2d89247d59ebea6d26"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKg",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKg",
         "aggregate_link": "http://bit.ly/1LPHJKh", "long_url": "http://files.export.gov/x_813718.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 - request:
     method: get
     uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://files.export.gov/x_3092299.pdf&title=MarketResearch
@@ -1089,20 +1089,20 @@ http_interactions:
       Server:
       - nginx
       Date:
-      - Thu, 15 Oct 2015 18:28:14 GMT
+      - Mon, 26 Oct 2015 21:28:44 GMT
       Content-Type:
       - application/json; charset=utf-8
       Content-Length:
-      - '212'
+      - '229'
       Connection:
       - keep-alive
       Etag:
-      - '"345e7a4edf8eee5e86a5bbf0724f07660ceef7ae"'
+      - '"3628f1f25c70572622290515f9163a9882bbacb0"'
     body:
       encoding: UTF-8
-      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKk",
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1LPHJKk",
         "aggregate_link": "http://bit.ly/1LPHJKl", "long_url": "http://files.export.gov/x_3092299.pdf",
-        "new_link": 1}}, "status_txt": "OK"}'
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
-  recorded_at: Thu, 15 Oct 2015 18:28:14 GMT
+  recorded_at: Mon, 26 Oct 2015 21:28:44 GMT
 recorded_with: VCR 2.9.3
