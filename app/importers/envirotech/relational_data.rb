@@ -1,13 +1,7 @@
 module Envirotech
   class RelationalData
     def import
-      new_data_process
-    end
-
-    private
-
-    def new_data_process
-      # relations = {issue: {regulation: [solutions]}}
+      # relations = {issue: {regulation: [solution]}}
 
       relations.keys.each do |issue_name|
         issue = get_updatable_document(q: issue_name, index_name: 'issues')
@@ -34,6 +28,8 @@ module Envirotech
         Envirotech::Issue.update([issue])
       end
     end
+
+    private
 
     def get_updatable_document(q: '', index_name: '')
       hit = Envirotech::Consolidated.search_for(sources: index_name, q: q)[:hits].first
