@@ -41,7 +41,7 @@ module Envirotech
 
       article[:source] = model_class.source[:code]
 
-      article[:id] = Utils.generate_id(article, %i(source_id source))
+      article[:id] = article[:source_id]
 
       article[:issue_ids] = article[:solution_ids] = []
 
