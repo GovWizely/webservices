@@ -9,17 +9,17 @@ module Envirotech
         relations[issue_name].keys.each do |regulation_name|
           regulation = get_updatable_document(q: regulation_name, index_name: 'regulations')
 
-          issue[:regulation_ids].uniq_push!(regulation[:source_id])
-          regulation[:issue_ids].uniq_push!(issue[:source_id])
+          issue[:regulation_ids] |= [regulation[:source_id]]
+          regulation[:issue_ids] |= [issue[:source_id]]
 
           relations[issue_name][regulation_name].each do |solution_name|
             solution = get_updatable_document(q: solution_name, index_name: 'solutions')
 
-            issue[:solution_ids].uniq_push!(solution[:source_id])
-            regulation[:solution_ids].uniq_push!(solution[:source_id])
+            issue[:solution_ids] |= [solution[:source_id]]
+            regulation[:solution_ids] |= [solution[:source_id]]
 
-            solution[:regulation_ids].uniq_push!(regulation[:source_id])
-            solution[:issue_ids].uniq_push!(issue[:source_id])
+            solution[:regulation_ids] |= [regulation[:source_id]]
+            solution[:issue_ids] |= [issue[:source_id]]
 
             Envirotech::Solution.update([solution])
           end
