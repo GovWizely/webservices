@@ -28,16 +28,20 @@ module Envirotech
             json.child! { json.terms { json.source_id @source_ids } } if @source_ids.any?
             json.child! { json.terms { json.issue_ids @issue_ids } } if @issue_ids.any?
             json.child! { json.terms { json.provider_id @provider_ids } } if @provider_ids.any?
-            json.child! { json.terms { json.solution_ids @solution_ids } } if @solution_ids.any?
             json.child! { json.terms { json.regulation_ids @regulation_ids } } if @regulation_ids.any?
-          end
+          end if any_field_exists? && @solution_ids.empty?
+
+          json.set! 'should' do
+            json.child! { json.terms { json.solution_ids @solution_ids } }
+            json.child! { json.terms { json.solution_id @solution_ids } }
+          end if @solution_ids.any?
         end
-      end if any_field_exist?
+      end if any_field_exists?
     end
 
     private
 
-    def any_field_exist?
+    def any_field_exists?
       @sources.any? || @source_ids.any? || @issue_ids.any? || @provider_ids.any? || @solution_ids.any? || @regulation_ids.any?
     end
   end

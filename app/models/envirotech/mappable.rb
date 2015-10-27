@@ -66,9 +66,12 @@ module Envirotech
             source_id:           { type: 'integer' },
 
             issue_ids:           { type: 'integer' },
-            provider_id:         { type: 'integer' },
             solution_ids:        { type: 'integer' },
             regulation_ids:      { type: 'integer' },
+
+            # For ProviderSolution documents:
+            provider_id:         { type: 'integer' },
+            solution_id:         { type: 'integer' },
           },
         },
       }.merge(klass.metadata_mappings).freeze

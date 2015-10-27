@@ -9,7 +9,7 @@ module Envirotech
       'id'                     => :source_id,
       'url'                    => :url,
       'envirotech_provider_id' => :provider_id,
-      'envirotech_solution_id' => :solution_ids,
+      'envirotech_solution_id' => :solution_id,
     }.freeze
 
     def initialize(resource = ENDPOINT)
