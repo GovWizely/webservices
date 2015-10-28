@@ -6,7 +6,7 @@ module Envirotech
       q:    %i(name_chinese name_english name_french name_portuguese name_spanish
                abstract_chinese abstract_english abstract_french
                abstract_portuguese abstract_spanish),
-      sort: %i(_score name_english.sort),
+      sort: %i(_score name_english.sort solution_name provider_name),
     )
 
     def initialize(options = {})
