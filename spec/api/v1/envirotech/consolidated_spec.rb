@@ -208,26 +208,26 @@ describe 'Consolidated Envirotech API V1', type: :request do
     end
 
     context 'when solution_ids are specified' do
-      context 'when one document matches solution_ids 196' do
-        let(:params) { { solution_ids: 196 } }
+      context 'when one document matches solution_ids 201' do
+        let(:params) { { solution_ids: 201 } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match solution_id 196'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match solution_id 201'
       end
     end
 
     context 'when provider_ids are specified' do
-      context 'when one document matches provider_ids 931' do
-        let(:params) { { provider_ids: 931 } }
+      context 'when one document matches provider_ids 977' do
+        let(:params) { { provider_ids: 977 } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 931'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 977'
       end
     end
 
     context 'when provider_ids and solution_id are specified' do
-      context 'when one document matches provider_ids 931' do
-        let(:params) { { provider_ids: 931, solution_ids: 128 } }
+      context 'when one document matches provider_ids 977' do
+        let(:params) { { provider_ids: 977, solution_ids: 200 } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 931 and solution_id 128'
+        it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 977 and solution_id 200'
       end
     end
   end

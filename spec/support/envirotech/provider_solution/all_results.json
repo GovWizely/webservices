@@ -1,14 +1,14 @@
 [
   {
     "source_id": 743,
-    "provider_id": 951,
-    "solution_ids": 196,
+    "provider_id": 984,
+    "solution_id": 201,
     "url": "http://abcov.com/"
   },
   {
     "source_id": 422,
-    "provider_id": 931,
-    "solution_ids": 128,
+    "provider_id": 977,
+    "solution_id": 200,
     "url": "http://www.ada-cs.com"
   }
 ]

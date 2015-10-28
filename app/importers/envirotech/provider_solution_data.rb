@@ -9,7 +9,7 @@ module Envirotech
       'id'                     => :source_id,
       'url'                    => :url,
       'envirotech_provider_id' => :provider_id,
-      'envirotech_solution_id' => :solution_ids,
+      'envirotech_solution_id' => :solution_id,
     }.freeze
 
     def initialize(resource = ENDPOINT)
@@ -21,7 +21,7 @@ module Envirotech
     end
 
     def import
-      articles = data.map { |article_hash| process_article_info article_hash }
+      articles = data.map { |article_hash| process_article_info(article_hash) }
       model_class.index articles
     end
 
@@ -32,8 +32,17 @@ module Envirotech
 
       article[:source] = model_class.source[:code]
 
-      article[:id] = Utils.generate_id(article, %i(source_id source))
+      article[:id] = article[:source_id]
+
+      article[:provider_name] = fetch_name('provider', article[:provider_id])
+      article[:solution_name] = fetch_name('solution', article[:solution_id])
+
       sanitize_entry(article)
+    end
+
+    def fetch_name(type, id)
+      index = "Envirotech::#{type.capitalize}".constantize.index_name
+      ES.client.get(index: index, id: id)['_source']['name_english']
     end
 
     def data

@@ -269,19 +269,19 @@ shared_examples 'it contains all Envirotech::ProviderSolution results that match
   it_behaves_like 'it contains all expected results without source'
 end
 
-shared_examples 'it contains all Envirotech::ProviderSolution results that match solution_id 196' do
+shared_examples 'it contains all Envirotech::ProviderSolution results that match solution_id 201' do
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results without source'
 end
 
-shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 931' do
+shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 977' do
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results without source'
 end
 
-shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 931 and solution_id 128' do
+shared_examples 'it contains all Envirotech::ProviderSolution results that match provider_id 977 and solution_id 200' do
   let(:source) { Envirotech::ProviderSolution }
   let(:expected) { [1] }
   it_behaves_like 'it contains all expected results without source'
