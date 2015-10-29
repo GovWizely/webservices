@@ -1,5 +1,5 @@
 field_lists = {
-  australia: [:agency, :contract_value, :description, :parent_id, :procurement_method, :publish_date_amended, :status, :topic, :url, :source],
+  australia: [:agency, :contract_value, :description, :parent_id, :procurement_method, :publish_date_amended, :status, :industry, :project_number, :publish_date, :start_date, :end_date, :country, :url, :source],
   canada:    [:country, :title, :reference_number, :contract_number, :publish_date, :end_date,
               :publish_date_amended, :status, :industry,
               :specific_location, :notice_type, :trade_agreement, :bid_type,
@@ -26,7 +26,7 @@ json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys
     source = entry[:_source][:source].downcase
-    json.id hit[:_id] if %(state uk).include?(source)
+    json.id hit[:_id] if %(australia state uk).include?(source)
     json.call(entry[:_source], *field_lists[source.to_sym])
   end
 end

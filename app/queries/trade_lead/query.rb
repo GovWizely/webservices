@@ -18,7 +18,7 @@ module TradeLead
     private
 
     def generate_query(json)
-      multi_fields = %i(title description topic tags procurement_organization)
+      multi_fields = %i(title description industry tags procurement_organization)
       json.query do
         json.bool do
           json.must do

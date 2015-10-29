@@ -1,5 +1,5 @@
 field_lists = {
-  australia: [:agency, :contract_value, :description, :parent_id, :procurement_method, :publish_date_amended, :status, :topic, :url],
+  australia: [:agency, :contract_value, :description, :parent_id, :procurement_method, :publish_date_amended, :status, :industry, :project_number, :publish_date, :start_date, :end_date, :country, :url, :source],
   canada:    [:country, :title, :reference_number, :contract_number, :publish_date, :end_date,
               :publish_date_amended, :status, :industry,
               :specific_location, :notice_type, :trade_agreement, :bid_type,
@@ -38,7 +38,7 @@ json.results do
       end
     end
 
-    json.id hit[:_id] if %w(state uk).include?(source)
+    json.id hit[:_id] if %w(australia state uk).include?(source)
     json.source entry[:_source][:lead_source] if source == 'state'
     json.call(entry[:_source], *field_lists[source.to_sym])
   end
