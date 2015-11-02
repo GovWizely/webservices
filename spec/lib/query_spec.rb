@@ -31,9 +31,16 @@ describe Query do
         expect { subject }.to raise_error(Query::InvalidParamsException)
       end
     end
-    context 'when given an empty :q parameter' do
+    context 'when given an empty parameter' do
       before do
         class TestWithSetupQuery < Query
+          attr_accessor :countries
+
+          def initialize(options = {})
+            super
+            @countries = options[:countries] if options[:countries].present?
+          end
+
           setup_query(
             q:     %i(title description),
             query: %i(q),
@@ -49,6 +56,9 @@ describe Query do
       end
       it 'should behave like no :q parameter was passed2' do
         expect(ScreeningList::Query.new(q: '').q).to be_nil
+      end
+      it 'should behave like no :countries parameter was passed' do
+        expect(TestWithSetupQuery.new(countries: '').countries).to be_nil
       end
     end
   end

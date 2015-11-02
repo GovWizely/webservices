@@ -29,8 +29,8 @@ class Query
   end
 
   def initialize(options = {})
+    options.delete_if { |_k, v| v == '' }
     options.reverse_merge!(size: DEFAULT_SIZE)
-    options.delete(:q) if options[:q].try(:empty?)
 
     cleanup_invalid_bytes(options, [:q])
 
