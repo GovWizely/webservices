@@ -1,4 +1,27 @@
 {
+    "highlight": {
+        "fields": {
+            "alt_inx": {},
+            "alt_no_ws": {},
+            "alt_no_ws_rev": {},
+            "alt_no_ws_rev_with_common": {},
+            "alt_no_ws_with_common": {},
+            "alt_rev": {},
+            "name_idx": {},
+            "name_no_ws": {},
+            "name_no_ws_rev": {},
+            "name_no_ws_rev_with_common": {},
+            "name_no_ws_with_common": {},
+            "name_rev": {}
+        },
+        "order": "score",
+        "post_tags": [
+            ""
+        ],
+        "pre_tags": [
+            ""
+        ]
+    },
     "query": {
         "bool": {
             "disable_coord": true,
