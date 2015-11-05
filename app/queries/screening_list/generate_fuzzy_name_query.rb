@@ -18,12 +18,15 @@ module ScreeningList
       all_fields   = single_token + names
 
       score_hash = {
-        score_100: { fields: single_token, fuzziness: 0, weight: 10 },
-        # score_95:  { fields: all_fields, fuzziness: 0, weight: 5 },
-        score_90:  { fields: single_token, fuzziness: 1, weight: 5 },
-        score_85:  { fields: all_fields, fuzziness: 1, weight: 5 },
-        score_80:  { fields: single_token, fuzziness: 2, weight: 5 },
-        score_75:  { fields: all_fields, fuzziness: 2, weight: 75 },
+        # full string matches
+        full_string_0:      { fields: single_token, fuzziness: 0, weight: 5 },
+        full_string_1:      { fields: single_token, fuzziness: 1, weight: 5 },
+        full_string_2:      { fields: single_token, fuzziness: 2, weight: 5 },
+
+        # individual token matches
+        individual_token_0: { fields: all_fields, fuzziness: 0, weight: 5 },
+        individual_token_1: { fields: all_fields, fuzziness: 1, weight: 5 },
+        individual_token_2: { fields: all_fields, fuzziness: 2, weight: 75 },
       }
 
       json.disable_coord true
