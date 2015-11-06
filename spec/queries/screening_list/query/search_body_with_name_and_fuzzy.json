@@ -1,7 +1,7 @@
 {
     "highlight": {
         "fields": {
-            "alt_inx": {},
+            "alt_idx": {},
             "alt_no_ws": {},
             "alt_no_ws_rev": {},
             "alt_no_ws_rev_with_common": {},
@@ -14,13 +14,7 @@
             "name_no_ws_with_common": {},
             "name_rev": {}
         },
-        "order": "score",
-        "post_tags": [
-            ""
-        ],
-        "pre_tags": [
-            ""
-        ]
+        "order": "score"
     },
     "query": {
         "bool": {

@@ -36,7 +36,7 @@ module ScreeningList
         if @fuzzy_name
           json.highlight do
             json.fields do
-              json.alt_inx({})
+              json.alt_idx({})
               json.alt_no_ws({})
               json.alt_no_ws_rev({})
               json.alt_no_ws_rev_with_common({})
@@ -51,8 +51,6 @@ module ScreeningList
               json.name_rev({})
             end
             json.order 'score'
-            json.pre_tags [""]
-            json.post_tags [""]
           end
         end
       end
