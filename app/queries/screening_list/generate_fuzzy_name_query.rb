@@ -10,7 +10,7 @@ module ScreeningList
       name_no_wss   = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
                           name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
 
-      @name = @name.gsub(/[\]\[!"#$%&()*+,.:;<=>?@^_`{|}\/~]/, '')
+      @name = @name.gsub(/[^a-z0-9\s]/i, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
       @name = @name.split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
 

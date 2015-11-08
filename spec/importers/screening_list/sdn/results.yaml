@@ -113,14 +113,14 @@
     :issue_date: '2001-10-01'
     :number: A0181988
     :type: Passport
-  :name_idx: "JIM'ALE Ahmed Nur Ali"
-  :name_rev: "Ali Nur Ahmed JIM'ALE"
-  :name_no_ws: "JIM'ALEAhmedNurAli"
-  :name_no_ws_rev: "AliNurAhmedJIM'ALE"
+  :name_idx: JIMALE Ahmed Nur Ali
+  :name_rev: Ali Nur Ahmed JIMALE
+  :name_no_ws: JIMALEAhmedNurAli
+  :name_no_ws_rev: AliNurAhmedJIMALE
   :alt_idx:
   - JUMALI Ahmed Ali
   - JIMALE Ahmad Ali
-  - "JIM'ALE Ahmad Nur Ali"
+  - JIMALE Ahmad Nur Ali
   - JUMALE Ahmed Nur
   - JIMALE Ahmed Ali
   - JIMALE Shaykh Ahmed Nur
@@ -129,7 +129,7 @@
   :alt_rev:
   - Ali Ahmed JUMALI
   - Ali Ahmad JIMALE
-  - "Ali Nur Ahmad JIM'ALE"
+  - Ali Nur Ahmad JIMALE
   - Nur Ahmed JUMALE
   - Ali Ahmed JIMALE
   - Nur Ahmed Shaykh JIMALE
@@ -138,7 +138,7 @@
   :alt_no_ws:
   - JUMALIAhmedAli
   - JIMALEAhmadAli
-  - "JIM'ALEAhmadNurAli"
+  - JIMALEAhmadNurAli
   - JUMALEAhmedNur
   - JIMALEAhmedAli
   - JIMALEShaykhAhmedNur
@@ -147,7 +147,7 @@
   :alt_no_ws_rev:
   - AliAhmedJUMALI
   - AliAhmadJIMALE
-  - "AliNurAhmadJIM'ALE"
+  - AliNurAhmadJIMALE
   - NurAhmedJUMALE
   - AliAhmedJIMALE
   - NurAhmedShaykhJIMALE
