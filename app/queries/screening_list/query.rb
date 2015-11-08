@@ -30,8 +30,30 @@ module ScreeningList
     end
 
     def generate_query(json)
-      multi_fields = %i(alt_names name remarks title)
-      name_fields  = %i(alt_names name)
+      multi_fields      = %i(alt_names name remarks title)
+      name_fields       = %i(alt_names name)
+      if @name
+        if @fuzzy_name
+          json.highlight do
+            json.fields do
+              json.alt_idx({})
+              json.alt_no_ws({})
+              json.alt_no_ws_rev({})
+              json.alt_no_ws_rev_with_common({})
+              json.alt_no_ws_with_common({})
+              json.alt_rev({})
+              # json.name({})
+              json.name_idx({})
+              json.name_no_ws({})
+              json.name_no_ws_rev({})
+              json.name_no_ws_rev_with_common({})
+              json.name_no_ws_with_common({})
+              json.name_rev({})
+            end
+            json.order 'score'
+          end
+        end
+      end
       json.query do
         json.bool do
           json.must do
