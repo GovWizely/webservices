@@ -79,12 +79,12 @@
     :postal_code: 
     :country: HK
   :alt_names: []
-  :name_idx: Hi-Shine Technology HK
-  :name_no_ws_with_common: Hi-ShineTechnologyHKLimited
-  :name_no_ws_rev_with_common: LimitedHKTechnologyHi-Shine
-  :name_rev: HK Technology Hi-Shine
-  :name_no_ws: Hi-ShineTechnologyHK
-  :name_no_ws_rev: HKTechnologyHi-Shine
+  :name_idx: HiShine Technology HK
+  :name_no_ws_with_common: HiShineTechnologyHKLimited
+  :name_no_ws_rev_with_common: LimitedHKTechnologyHiShine
+  :name_rev: HK Technology HiShine
+  :name_no_ws: HiShineTechnologyHK
+  :name_no_ws_rev: HKTechnologyHiShine
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
   :id: b7b7b4366f4441a70c163fe63706375ac2d4d520
   :source: *1
@@ -97,12 +97,12 @@
     :postal_code: 
     :country: HK
   :alt_names: []
-  :name_idx: Hong Kong Haimao Info-Tec Development
-  :name_no_ws_with_common: HongKongHaimaoInfo-TecDevelopmentCoLtd
-  :name_no_ws_rev_with_common: LtdCoDevelopmentInfo-TecHaimaoKongHong
-  :name_rev: Development Info-Tec Haimao Kong Hong
-  :name_no_ws: HongKongHaimaoInfo-TecDevelopment
-  :name_no_ws_rev: DevelopmentInfo-TecHaimaoKongHong
+  :name_idx: Hong Kong Haimao InfoTec Development
+  :name_no_ws_with_common: HongKongHaimaoInfoTecDevelopmentCoLtd
+  :name_no_ws_rev_with_common: LtdCoDevelopmentInfoTecHaimaoKongHong
+  :name_rev: Development InfoTec Haimao Kong Hong
+  :name_no_ws: HongKongHaimaoInfoTecDevelopment
+  :name_no_ws_rev: DevelopmentInfoTecHaimaoKongHong
 - :name: Lianqi (HK) Electronics Co Ltd
   :id: 93d5f755bf946ab838126ffa4cee213d6e55e806
   :source: *1
