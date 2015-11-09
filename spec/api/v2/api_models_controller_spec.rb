@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe 'API models V2', type: :request do
+describe Api::V2::ApiModelsController, type: :request do
   include_context 'V2 headers'
   before(:all) do
     csv = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv"
@@ -20,9 +20,23 @@ describe 'API models V2', type: :request do
       it_behaves_like 'a successful search request'
 
       it 'returns the only result matching the query and filter' do
-        results = JSON.parse(response.body)
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(1)
+        expect(json_response['offset']).to eq(0)
+
+        results = json_response['results']
         expect(results.first).to match(a_hash_including(one_match.first))
       end
+
+      it 'includes metadata' do
+        data_source = DataSource.find 'de_minimis_currencies'
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:sources_used]).to eq(source: data_source.name,
+                                                   source_last_updated: data_source.updated_at.as_json,
+                                                   last_imported: data_source.updated_at.as_json)
+      end
+
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
   end
 end

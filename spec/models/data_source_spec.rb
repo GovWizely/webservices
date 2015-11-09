@@ -45,11 +45,12 @@ describe DataSource do
       data_source.ingest
     end
 
-    it 'creates entries in the new api index' do
+    it 'creates entries in the new api index with the new class constant' do
       results = data_source.with_api_model do |klass|
         klass.search(filter: { term: { country_name: 'Armenia' } })
       end
       expect(results.first.iso2_code).to eq('AM')
+      expect(Webservices::ApiModels.constants).to include(:TestCurrency)
     end
   end
 end

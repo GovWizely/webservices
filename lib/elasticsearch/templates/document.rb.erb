@@ -18,6 +18,14 @@ module Webservices
           attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>
         <% end %>
       <% end %>
+
+      def attributes
+        hash = {}
+        <% data_source.yaml_dictionary.each_key do |field| %>
+          hash['<%= field %>'] = nil
+        <% end %>
+        hash
+      end
     end
   end
 end

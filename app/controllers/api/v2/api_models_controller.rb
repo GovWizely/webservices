@@ -6,7 +6,8 @@ class Api::V2::ApiModelsController < Api::V2Controller
   def search
     query = ApiModelQuery.new(@data_source, params.permit(search_params).with_indifferent_access)
     @data_source.with_api_model do |api_model_klass|
-      respond_with api_model_klass.search(query.generate_search_body_hash)
+      results = api_model_klass.search(query.generate_search_body_hash)
+      respond_with response_hash(query, results)
     end
   end
 
@@ -23,5 +24,13 @@ class Api::V2::ApiModelsController < Api::V2Controller
       @data_source.filter_fields.keys +
       fulltext_fields +
       @data_source.date_fields.keys
+  end
+
+  def response_hash(query, results)
+    { total: results.total, offset: query.offset, sources_used: sources_used, results: results }
+  end
+
+  def sources_used
+    { source: @data_source.name, source_last_updated: @data_source.updated_at, last_imported: @data_source.updated_at }
   end
 end

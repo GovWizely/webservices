@@ -1,4 +1,5 @@
 require 'elasticsearch/persistence/model'
+require 'api_models'
 class DataSource
   include Elasticsearch::Persistence::Model
   VALID_CONTENT_TYPES = %w(text/csv text/plain).freeze
@@ -17,7 +18,10 @@ class DataSource
   after_destroy :delete_api_index
 
   def with_api_model
-    yield ModelBuilder.load_model_class(self)
+    klass = ModelBuilder.load_model_class(self)
+    klass_symbol = api.classify.to_sym
+    Webservices::ApiModels.redefine_model_constant(klass_symbol, klass)
+    yield klass
   end
 
   def ingest

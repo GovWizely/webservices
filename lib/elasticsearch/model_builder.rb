@@ -8,10 +8,6 @@ module ModelBuilder
 
   def self.load_model_class(data_source)
     template = ERB.new(Rails.root.join(TEMPLATE_PATH).read, nil, '<>').result(binding)
-    klass = eval(template, binding, __FILE__, __LINE__)
-    klass_symbol = data_source.api.classify.to_sym
-    Webservices::ApiModels.send(:remove_const, klass_symbol) if Webservices::ApiModels.constants.include?(klass_symbol)
-    Webservices::ApiModels.const_set(klass_symbol, klass)
-    klass
+    eval(template, binding, __FILE__, __LINE__)
   end
 end
