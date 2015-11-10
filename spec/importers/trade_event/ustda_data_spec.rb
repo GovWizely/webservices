@@ -11,7 +11,7 @@ describe TradeEvent::UstdaData do
 
   describe '#cost' do
     it 'processes the cost correctly' do
-      entry = {cost: 10, cost_currency: 'USD'}
+      entry = { cost: 10, cost_currency: 'USD' }
       expect(importer.send(:cost, entry)).to eq([10.00, 'USD'])
     end
   end

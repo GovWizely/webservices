@@ -100,7 +100,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
     end
 
     context 'when industry is specified' do
-      let(:params) { { industries: "Dental Eq.,Renewable Energy" } }
+      let(:params) { { industries: 'Dental Eq.,Renewable Energy' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
       it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"'

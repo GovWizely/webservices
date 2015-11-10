@@ -250,13 +250,13 @@ end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match "google"' do
   let(:source) { TradeEvent::Ustda }
-  let(:expected) { [4] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"' do
   let(:source) { TradeEvent::Ustda }
-  let(:expected) { [4] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 

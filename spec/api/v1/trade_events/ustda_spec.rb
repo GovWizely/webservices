@@ -25,7 +25,7 @@ describe 'Trade Events API V1', type: :request do
       it_behaves_like 'a successful search request'
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
-    
+
     context 'when industry is specified' do
       let(:params) { { industry: 'Renewable Energy' } }
       it_behaves_like 'a successful search request'

@@ -12,7 +12,7 @@ module TradeEvent
       event_name:         './Title',
       start_date:         './Start-Date',
       end_date:           './End-Date',
-      event_time:         './Start-Time',
+      start_time:         './Start-Time',
       end_time:           './End-Time',
       cost:               './Cost',
       cost_currency:      './Cost-Currency',
@@ -26,14 +26,14 @@ module TradeEvent
       post:               './Post',
       person_title:       './Person_Title',
       phone:              './Phone',
-      email:              './Email'
+      email:              './Email',
     }.freeze
 
     VENUE_XPATHS = {
       venue:   './Venue-%d',
       city:    './City-%d',
       state:   './State-%d',
-      country: './Country-%d'
+      country: './Country-%d',
     }
 
     def loaded_resource
@@ -42,7 +42,7 @@ module TradeEvent
 
     def import
       doc = Nokogiri::XML(loaded_resource)
-      events = doc.xpath('//node').map do |event| 
+      events = doc.xpath('//node').map do |event|
         event = process_entry(event)
       end.compact
       Ustda.index(events)
@@ -53,15 +53,31 @@ module TradeEvent
     def process_entry(entry)
       event = extract_fields(entry, SINGLE_VALUED_XPATHS)
 
-      event[:start_date] = Date.strptime(event[:start_date], '%Y/%m/%d') rescue nil if event[:start_date]
-      event[:end_date] = Date.strptime(event[:end_date], '%Y/%m/%d') rescue nil if event[:end_date]
+      event = process_dates_and_times(event)
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
 
       event[:venues] = venues(entry)
       event[:event_type] = nil
       event[:source] = model_class.source[:code]
       event[:id] = Utils.generate_id(event, %i(event_name start_date
-                                              event_time end_date end_time time_zone))
+                                               event_time end_date end_time time_zone))
+      event[:industries] = [event[:industries]]
+
+      event
+    end
+
+    def process_dates_and_times(event)
+      event[:start_date] = Date.strptime(event[:start_date], '%m/%d/%Y') rescue nil if event[:start_date]
+      event[:end_date] = Date.strptime(event[:end_date], '%m/%d/%Y') rescue nil if event[:end_date]
+      if event[:start_date]
+        event[:start_date] = Date.valid_date?(event[:start_date].year, event[:start_date].month, event[:start_date].mday) ? event[:start_date] : nil
+      end
+      if event[:end_date]
+        event[:end_date] = Date.valid_date?(event[:end_date].year, event[:end_date].month, event[:end_date].mday) ? event[:end_date] : nil
+      end
+
+      event[:start_time] = Time.parse(event[:start_time]).strftime('%H:%M') if event[:start_time]
+      event[:end_time] = Time.parse(event[:end_time]).strftime('%H:%M') if event[:end_time]
 
       event
     end
@@ -82,6 +98,5 @@ module TradeEvent
         venue.values.all?(&:blank?) ? nil : venue
       end.compact
     end
-
   end
 end

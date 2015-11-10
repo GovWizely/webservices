@@ -1,8 +1,8 @@
 ---
 - :event_name: 'Live Google Hangout: Opportunities in India Smart City Development'
-  :start_date: 
-  :end_date: 
-  :event_time: 
+  :start_date: 2015-03-16
+  :end_date: 2015-03-16
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: 
@@ -24,7 +24,8 @@
     (Uttar Pradesh) and Vishakhapatnam (Andhra Pradesh). Under these Memoranda of
     Understanding, USTDA plans to sponsor activities that will help each city develop
     safe, efficient and integrated energy, transportation and communications infrastructure.\uFEFF&nbsp;"
-  :industries: Renewable Energy
+  :industries:
+  - Renewable Energy
   :url: 
   :first_name: 
   :last_name: 
@@ -35,11 +36,11 @@
   :venues: []
   :event_type: 
   :source: USTDA
-  :id: 096a3aa14634447a1d6b0a72886965e2bf85f95b
+  :id: e67f89faef3f59202899e5080347be3908263d45
 - :event_name: 'Jordan: Smart Grid Technologies Reverse Trade Mission'
-  :start_date: 
-  :end_date: 0006-08-20
-  :event_time: 
+  :start_date: 2015-05-30
+  :end_date: 2015-06-08
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: 
@@ -60,7 +61,8 @@
     Understanding (BCIU) is organizing this visit on behalf of USTDA.&nbsp; For more
     information, please contact Ms. Nina Kundra by email at n-kundra@bciu.org or by
     phone at (212) 997-3584.
-  :industries: Telecommunications
+  :industries:
+  - Telecommunications
   :url: 
   :first_name: 
   :last_name: 
@@ -75,11 +77,11 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: 36e6c042c229cec4b3123b15f36bca43d524ed5d
+  :id: 760c0f2b78e65c19d78eba91fde1d5b2482a916f
 - :event_name: 'Colombia and Peru: Green Port Technologies Reverse Trade Mission'
-  :start_date: 
-  :end_date: 0006-10-20
-  :event_time: 
+  :start_date: 2015-05-31
+  :end_date: 2015-06-10
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: 
@@ -95,7 +97,8 @@
     Center is organizing this visit on behalf of USTDA. For more information, please
     contact Ms. Lauren Paraggio by e-mail at lparaggio@meridian.org or by phone at
     (202) 939-5863.
-  :industries: Green Port Technologies
+  :industries:
+  - Green Port Technologies
   :url: 
   :first_name: 
   :last_name: 
@@ -110,12 +113,12 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: 4c4a677d97ac8e5b4b47e7224906c5828035a898
+  :id: 85002753aed29875028b5e98ae12225ecd6d3283
 - :event_name: 'Colombia and Peru: Green Port Technologies Industry Roundtable for
     U.S. Companies'
-  :start_date: 0006-05-20
-  :end_date: 0006-05-20
-  :event_time: 
+  :start_date: 2015-06-05
+  :end_date: 2015-06-05
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: 
@@ -133,7 +136,8 @@
     and resource conversation. &nbsp;Meridian International Center is organizing this
     visit on behalf of USTDA. For more information, please contact Ms. Lauren Paraggio
     by e-mail at&nbsp;lparaggio@meridian.org&nbsp;or by phone at (202) 939-5863.
-  :industries: Green Port Technologies
+  :industries:
+  - Green Port Technologies
   :url: 
   :first_name: 
   :last_name: 
@@ -148,11 +152,11 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: c922f8bd3c128aa0d002e7680cee5c8e493e904e
+  :id: e192f278bac8df094d6efaea1d39ed06bb603177
 - :event_name: 'Jordan: Smart Grid Technologies Business Briefing for U.S. Companies'
-  :start_date: 0006-08-20
-  :end_date: 0006-08-20
-  :event_time: 
+  :start_date: 2015-06-08
+  :end_date: 2015-06-08
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: USD
@@ -167,7 +171,8 @@
     Understanding (BCIU) is organizing this business briefing on behalf of USTDA.&nbsp;
     For more information, please contact Ms. Nina Kundra by email at&nbsp;n-kundra@bciu.org&nbsp;or
     by phone at (212) 997-3584.
-  :industries: Electricity Transmission & Distribution
+  :industries:
+  - Electricity Transmission & Distribution
   :url: http://www.ustda.gov/learnmore
   :first_name: 
   :last_name: 
@@ -182,11 +187,11 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: 3d966ab213f1a8fecf578636f62ad2b1c6a489f6
+  :id: 5dd39f6a508d2f27cd0e62c55efeab786a5ddd55
 - :event_name: 'Brazil: Green Port Technologies Reverse Trade Mission'
-  :start_date: 0007-12-20
-  :end_date: 0007-12-20
-  :event_time: 
+  :start_date: 2015-07-12
+  :end_date: 2015-07-12
+  :start_time: 
   :end_time: 
   :cost: 
   :cost_currency: 
@@ -201,7 +206,8 @@
     and can meet with senior-level delegates. Meridian International Center is organizing
     this visit on behalf of USTDA. For more information, please contact Ms. Lauren
     Paraggio by e-mail at lparaggio@meridian.org or by phone at (202) 939-5863.
-  :industries: Green Port Technologies
+  :industries:
+  - Green Port Technologies
   :url: 
   :first_name: 
   :last_name: 
@@ -216,4 +222,4 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: 14ef02e50a1d72ff3bebcd38fabcacd705f8ed80
+  :id: d4c2f2c7fc1b622030e6358c64155384f4768d26
