@@ -55,6 +55,12 @@
   :alt_rev: [FERLAND]
   :alt_no_ws: [FERLAND]
   :alt_no_ws_rev: [FERLAND]
+  :address_idx: 29 A Anna Komnini St PO 2303
+  :address_no_ws_with_common: 29AAnnaKomniniStPOBox2303
+  :address_no_ws_rev_with_common: 2303BoxPOStKomniniAnnaA29
+  :address_rev: 2303 PO St Komnini Anna A 29
+  :address_no_ws: 29AAnnaKomniniStPO2303
+  :address_no_ws_rev: 2303POStKomniniAnnaA29
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
   :call_sign: 

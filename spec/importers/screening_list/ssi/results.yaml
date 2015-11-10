@@ -155,6 +155,10 @@
   - JOINT-STOCKCLOSEDROSSIIVNESHTORGBANK
   - JOINT-STOCKOPENBANKVTB
   - OAOVTBBANK
+  :address_idx: 29 Bolshaya Morskaya str
+  :address_rev: str Morskaya Bolshaya 29
+  :address_no_ws: 29BolshayaMorskayastr
+  :address_no_ws_rev: strMorskayaBolshaya29
 - :entity_number: '17017'
   :title:
   :call_sign:
@@ -255,6 +259,10 @@
   :alt_no_ws_rev:
   - STOCKJOINTOPENMOSCOWOFBANK-BANKCOMMERCIALSTOCKJOINT
   - OBSCHCHESTVOAKTSIONERNOEOTKRYTOEMOSKVYBANKBANKKOMMERCHESKIAKTSIONERNY
+  :address_idx: 815 Korp 3 ul Rozhdestvenka
+  :address_rev: Rozhdestvenka ul 3 Korp 815
+  :address_no_ws: 815Korp3ulRozhdestvenka
+  :address_no_ws_rev: Rozhdestvenkaul3Korp815
 - :entity_number: '17254'
   :title:
   :call_sign:
@@ -373,6 +381,10 @@
   - JSCTRANSNEFT
   - OJSCTRANSNEFT
   - TRANSNEFT
+  :address_idx: 57 B Polyanka ul
+  :address_rev: ul Polyanka B 57
+  :address_no_ws: 57BPolyankaul
+  :address_no_ws_rev: ulPolyankaB57
 - :entity_number: '17260'
   :title:
   :call_sign:
@@ -491,3 +503,7 @@
   - PRODUCTINDUSTRIALTECHNOLOGYADVANCEDOFEXPORTPRODUCTIONDEVELOPMENTTOASSISTANCEFORSTATETECHNOLOGIESRUSSIAN
   - TECHNOLOGIESRUSSIAN
   - ROSTECHNOLOGIISTATE
+  :address_idx: 24 Usacheva ul
+  :address_rev: ul Usacheva 24
+  :address_no_ws: 24Usachevaul
+  :address_no_ws_rev: ulUsacheva24
