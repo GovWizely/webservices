@@ -2,8 +2,8 @@
 - :event_name: 'Live Google Hangout: Opportunities in India Smart City Development'
   :start_date: 2015-03-16
   :end_date: 2015-03-16
-  :start_time: 
-  :end_time: 
+  :start_time: "15:00"
+  :end_time: "15:30"
   :cost: 
   :cost_currency: 
   :registration_link: 
@@ -36,9 +36,9 @@
   :venues: []
   :event_type: 
   :source: USTDA
-  :id: e67f89faef3f59202899e5080347be3908263d45
+  :id: fc72356f32c847c77bdb3efd9d512765fd4a0093
 - :event_name: 'Jordan: Smart Grid Technologies Reverse Trade Mission'
-  :start_date: 2015-05-30
+  :start_date: 
   :end_date: 2015-06-08
   :start_time: 
   :end_time: 
@@ -77,7 +77,7 @@
     :country: 
   :event_type: 
   :source: USTDA
-  :id: 760c0f2b78e65c19d78eba91fde1d5b2482a916f
+  :id: 94c3d1baec60e3622d956ca03daaa0eb3feb7303
 - :event_name: 'Colombia and Peru: Green Port Technologies Reverse Trade Mission'
   :start_date: 2015-05-31
   :end_date: 2015-06-10

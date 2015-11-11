@@ -67,19 +67,26 @@ module TradeEvent
     end
 
     def process_dates_and_times(event)
-      event[:start_date] = Date.strptime(event[:start_date], '%m/%d/%Y') rescue nil if event[:start_date]
-      event[:end_date] = Date.strptime(event[:end_date], '%m/%d/%Y') rescue nil if event[:end_date]
-      if event[:start_date]
-        event[:start_date] = Date.valid_date?(event[:start_date].year, event[:start_date].month, event[:start_date].mday) ? event[:start_date] : nil
-      end
-      if event[:end_date]
-        event[:end_date] = Date.valid_date?(event[:end_date].year, event[:end_date].month, event[:end_date].mday) ? event[:end_date] : nil
-      end
-
-      event[:start_time] = Time.parse(event[:start_time]).strftime('%H:%M') if event[:start_time]
-      event[:end_time] = Time.parse(event[:end_time]).strftime('%H:%M') if event[:end_time]
-
+      event[:start_date] &&= extract_date(event[:start_date])
+      event[:end_date] &&= extract_date(event[:end_date])
+      event[:start_time] &&= extract_time(event[:start_time])
+      event[:end_time] &&= extract_time(event[:end_time])
       event
+    end
+
+    def extract_date(date_str)
+      date = Date.strptime(date_str, '%m/%d/%Y')
+      valid_date?(date) ? date : nil
+    rescue ArgumentError
+      nil
+    end
+
+    def extract_time(time_str)
+      Time.parse(time_str).strftime('%H:%M')
+    end
+
+    def valid_date?(date)
+      Date.valid_date?(date.year, date.month, date.mday)
     end
 
     def cost(entry)

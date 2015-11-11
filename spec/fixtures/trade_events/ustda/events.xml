@@ -4,8 +4,8 @@
     <Title>Live Google Hangout: Opportunities in India Smart City Development</Title>
     <Start-Date>03/16/2015</Start-Date>
     <End-Date>03/16/2015</End-Date>
-    <Start-Time></Start-Time>
-    <End-Time></End-Time>
+    <Start-Time>3:00 pm</Start-Time>
+    <End-Time>3:30pm</End-Time>
     <Registration-Link></Registration-Link>
     <Learn-More-URL></Learn-More-URL>
     <Industry>Renewable Energy</Industry>
@@ -50,7 +50,7 @@ This Google Hangout follows USTDA’s efforts to catalyze nearly $2 billion in c
   </node>
   <node>
     <Title>Jordan: Smart Grid Technologies Reverse Trade Mission</Title>
-    <Start-Date>05/30/2015</Start-Date>
+    <Start-Date>foo</Start-Date>
     <End-Date>06/08/2015</End-Date>
     <Start-Time></Start-Time>
     <End-Time></End-Time>
