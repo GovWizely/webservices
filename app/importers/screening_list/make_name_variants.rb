@@ -34,7 +34,7 @@ module ScreeningList
     end
 
     def strip(name, target)
-      pattern = target == 'punct' ? /[\]\[!"#$%&()*+,.:;<=>?@^_`{|}\/~]/ : /\s+/
+      pattern = target == 'punct' ? /[^a-z0-9\s]/i : /\s+/
       name.class == String ? name.gsub(pattern, '') : name.map { |n| n.gsub(pattern, '') }
     end
 
