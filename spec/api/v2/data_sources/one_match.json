@@ -1,0 +1,12 @@
+[
+  {
+    "country": "Azerbaijan",
+    "iso2_code": "AZ",
+    "de_minimis_value": 200,
+    "de_minimis_currency": "USD",
+    "vat_amount": null,
+    "vat_currency": null,
+    "date": "2015-10-01T00:00:00+00:00",
+    "notes": "Non-commercial shipments not exceeding 1000 USD and 50kg; Postal shipments not exceeding 200 USD and 20kg"
+  }
+]

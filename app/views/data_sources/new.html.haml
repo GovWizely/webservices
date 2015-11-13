@@ -1,0 +1,17 @@
+%h1 New data source
+
+= form_for @data_source, html: {class: :data_source} do |f|
+  - if @data_source.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@data_source.errors.count, "error")} prohibited this data source from being saved:"
+      %ul
+        - @data_source.errors.full_messages.each do |msg|
+          %li= msg
+  = render f
+  .field
+    = f.label :path
+    = f.file_field :path, accept: DataSource::VALID_CONTENT_TYPES.join(',')
+  .actions
+    = f.submit 'Create'
+
+= link_to 'Back', '/'

@@ -17,6 +17,8 @@ Webservices::Application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
+  resources :data_sources
+
   concern :api_v1_routable do
     mapping = {
       'australian_trade_leads' => 'AUSTRALIA',
@@ -111,6 +113,10 @@ Webservices::Application.routes.draw do
   scope module: 'api/v2', defaults: { format: :json } do
     concerns :api_v2_routable
     concerns :api_routable
+  end
+
+  scope module: 'api/v2', defaults: { format: :json } do
+    get '/*resource/search(.json)', to: 'api_models#search'
   end
 
   match '404', via: :all, to: 'api#not_found'

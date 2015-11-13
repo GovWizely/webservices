@@ -242,7 +242,7 @@ describe 'Consolidated Envirotech API V2', type: :request do
     let(:params) { { size: 100 } }
 
     context 'when :sources are invalid' do
-      it { expect { get '/v2/envirotech/invalid_source/search', params }.to raise_error ActionController::RoutingError }
+      it { expect { get '/v2/envirotech/invalid_source/search', params, @v2_headers }.to raise_error ActionController::RoutingError }
     end
   end
 end

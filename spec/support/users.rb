@@ -4,7 +4,8 @@ def build_user(args = {})
                password_confirmation: 'p4ssword',
                full_name:             'Rod',
                company:               "Rod's Corp",
-               confirmed_at:          Time.now.utc }
+               confirmed_at:          Time.now.utc,
+               admin:                 false }
 
   User.new(defaults.merge(args))
 end

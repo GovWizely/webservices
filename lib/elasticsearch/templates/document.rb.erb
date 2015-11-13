@@ -1,0 +1,31 @@
+require 'elasticsearch/persistence/model'
+
+module Webservices
+  module ApiModels
+    Class.new do
+      def self.model_name
+        ActiveModel::Name.new(self, Webservices::ApiModels, '<%= data_source.api.classify %>')
+      end
+
+      include Elasticsearch::Persistence::Model
+
+      index_name [ES::INDEX_PREFIX, "api_models", '<%= data_source.api %>'].join(':')
+
+      <% data_source.yaml_dictionary.each_pair do |field, metadata| %>
+        <% if TYPE_TO_MAPPING[metadata[:type]][:mapping].present? %>
+          attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>, mapping: <%= TYPE_TO_MAPPING[metadata[:type]][:mapping] %>
+        <% else %>
+          attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>
+        <% end %>
+      <% end %>
+
+      def attributes
+        hash = {}
+        <% data_source.yaml_dictionary.each_key do |field| %>
+          hash['<%= field %>'] = nil
+        <% end %>
+        hash
+      end
+    end
+  end
+end

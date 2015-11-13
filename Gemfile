@@ -25,6 +25,7 @@ gem 'smarter_csv'
 gem 'sidekiq'
 gem 'sinatra', require: nil
 gem 'mechanize'
+gem 'haml'
 
 gem 'sass'
 gem 'jquery-rails'
@@ -57,6 +58,8 @@ group :test do
   gem 'vcr'
   gem 'codeclimate-test-reporter', require: false
   gem 'simplecov', require: false
+  gem 'capybara'
+  gem 'launchy'
 end
 
 # To use ActiveModel has_secure_password

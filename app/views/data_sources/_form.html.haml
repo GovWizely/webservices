@@ -1,0 +1,12 @@
+.field
+  = form.label :name
+  = form.text_field :name
+  %p A short, memorable, humanized name for this endpoint (e.g., "De Minimis Currencies")
+.field
+  = form.label :description
+  = form.text_field :description
+  %p A description of the endpoint (optional; only you see this)
+.field
+  = form.label :api
+  = form.text_field :api
+  %p The underscored name that will be in the endpoint URL (e.g., 'de_minimis_currencies')

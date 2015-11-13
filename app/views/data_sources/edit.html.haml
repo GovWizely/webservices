@@ -1,0 +1,53 @@
+%h1 Editing data source
+
+= form_for @data_source, html: {class: :data_source} do |f|
+  - if @data_source.errors.any?
+    #error_explanation
+      %h2= "#{pluralize(@data_source.errors.count, "error")} prohibited this data source from being saved:"
+      %ul
+        - @data_source.errors.full_messages.each do |msg|
+          %li= msg
+  = render f
+  .field
+    = f.label :dictionary
+    = f.text_area :dictionary
+  .actions
+    = f.submit 'Update'
+    %p
+      This is a YAML representation of the mapping from the CSV file to what Elasticsearch will index.
+      It also informs how the search API endpoint for
+      %b= @data_source.api
+      will behave.
+    %p
+      There are five possibilities for the type field. The parser makes a guess at what they types should be,
+      but you can override this.
+      %dl
+        %dt string
+        %dd Freeform text, indexed and searched using the snowball analyzer
+        %dt enum
+        %dd Controlled vocabulary, used for exact-match filters
+        %dt date
+        %dd ISO 8601 date (with optional time), used for date range filters
+        %dt float
+        %dd Floating point number
+        %dt integer
+        %dd Integer
+    %p
+      The
+      %b :source:
+      field refers to the heading in the CSV document. Do not modify this. If you want to change the name of the field
+      that gets used for the API call, change the top level entry for that YAML item. Remember to underscore
+      the top level name (e.g. de_minimis_currency)
+    %p
+      If you don't want a field returned in the API results, delete the whole YAML entry (all 5 lines).
+    %p
+      If you want fields returned in a different order then they are listed in the CSV file, just rearrange the 5-line blocks.
+    %p
+      If you want a field returned in the API results but not be searchable or filterable, set the
+      %b :indexed:
+      value to false.
+    %p
+      The
+      %b :description:
+      field is optional, and is just for your own records. You can delete the whole line if you don't want to see it.
+

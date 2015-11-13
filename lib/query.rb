@@ -61,6 +61,14 @@ class Query
     end
   end
 
+  def generate_search_body_hash
+    Jbuilder.new do |json|
+      generate_from_size_sort(json)
+      generate_query(json)
+      generate_filter(json)
+    end.attributes!
+  end
+
   def generate_multi_match(json, fields, query, operator = :and)
     json.multi_match do
       json.fields fields
@@ -133,6 +141,11 @@ class Query
     true
   rescue
     raise Exceptions::InvalidDateRangeFormat
+  end
+
+  def generate_from_size_sort(json)
+    json.from @offset
+    json.size @size
   end
 
   private

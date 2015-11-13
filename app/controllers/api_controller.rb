@@ -1,5 +1,5 @@
 class ApiController < ActionController::Base
-  class_attribute :search_params, instance_writer: false
+  class_attribute :search_params
   self.search_params = %i(api_key callback format offset size)
 
   def self.search_by(*permitted)
