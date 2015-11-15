@@ -6,6 +6,8 @@ module TradeEvent
     include Importable
     include ::VersionableResource
 
+    attr_accessor :reject_if_ends_before
+
     ENDPOINT = 'http://www.ustda.gov/api/events/xml'
 
     SINGLE_VALUED_XPATHS = {
@@ -36,6 +38,11 @@ module TradeEvent
       country: './Country-%d',
     }
 
+    def initialize(resource = ENDPOINT, options = {})
+      @resource = resource
+      self.reject_if_ends_before = options.fetch(:reject_if_ends_before, Date.current)
+    end
+
     def loaded_resource
       @loaded_resource ||= open(@resource, 'r:utf-8').read
     end
@@ -54,6 +61,7 @@ module TradeEvent
       event = extract_fields(entry, SINGLE_VALUED_XPATHS)
 
       event = process_dates_and_times(event)
+      return nil if event[:end_date] && event[:end_date] < reject_if_ends_before
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
 
       event[:venues] = venues(entry)
