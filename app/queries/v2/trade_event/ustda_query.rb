@@ -7,8 +7,8 @@ module V2::TradeEvent
         json,
         [
           :registration_title, :description, :event_name, :'venues.city',
-          :'venues.state', :'venues.country', :'contacts.first_name',
-          :'contacts.last_name', :'contacts.person_title'
+          :'venues.state', :'venues.country', :first_name,
+          :last_name, :person_title
         ],
       )
     end

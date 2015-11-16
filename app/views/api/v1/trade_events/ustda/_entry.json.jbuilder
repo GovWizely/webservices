@@ -1,21 +1,7 @@
-json.id entry[:_id]
+json.id(entry[:_id])
 json.call(entry[:_source],
-          :event_name,
-          :event_type,
-          :start_date,
-          :end_date,
-          :cost,
-          :cost_currency,
-          :registration_link,
-          :registration_title,
-          :description,
-          :industries,
-          :url,
-          :contacts,
-          :source)
-json.call(entry[:_source][:venues][0].deep_symbolize_keys,
-          :venue,
-          :city,
-          :state,
-          :country,
+          :event_name, :start_date, :end_date, :start_time, :end_time, :cost,
+          :cost_currency, :registration_link, :registration_title,
+          :description, :industries, :url, :venues, :first_name, :last_name,
+          :post, :person_title, :phone, :email, :source, :event_type
          )

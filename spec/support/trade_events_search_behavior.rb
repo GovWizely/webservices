@@ -215,7 +215,8 @@ end
 shared_context 'TradeEvent::Ustda data' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml",
+      reject_if_ends_before: Date.parse('2014-01-01')).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
@@ -230,7 +231,8 @@ end
 shared_context 'TradeEvent::Ustda data v2' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.csv").import
+    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml", 
+      reject_if_ends_before: Date.parse('2014-01-01')).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
@@ -244,36 +246,19 @@ end
 
 shared_examples 'it contains all TradeEvent::Ustda results' do
   let(:source) { TradeEvent::Ustda }
-  let(:expected) { (0..4).to_a }
+  let(:expected) { (0..5).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ustda results that match "international"' do
+shared_examples 'it contains all TradeEvent::Ustda results that match "google"' do
   let(:source) { TradeEvent::Ustda }
-  let(:expected) { [4] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ustda results that match "Wichita"' do
+shared_examples 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"' do
   let(:source) { TradeEvent::Ustda }
-  let(:expected) { [4] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeEvent::Ustda results that match "aeronautical"' do
-  let(:source) { TradeEvent::Ustda }
-  let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeEvent::Ustda results that match countries "US"' do
-  let(:source) { TradeEvent::Ustda }
-  let(:expected) { (0..4).to_a }
-  it_behaves_like 'it contains all expected results of source'
-end
-shared_examples 'it contains all TradeEvent::Ustda results that match industry "mining"' do
-  let(:source) { TradeEvent::Ustda }
-  let(:expected) { [0, 3] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 

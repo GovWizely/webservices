@@ -6,71 +6,95 @@ module TradeEvent
     include Importable
     include ::VersionableResource
 
-    ENDPOINT = 'http://www.ustda.gov/events/USTDATradeEvents.csv'
+    attr_accessor :reject_if_ends_before
 
-    COLUMN_HASH = {
-      id:                 :id,
-      event_name:         :event_name,
-      description:        :description,
-      start_date:         :start_date,
-      end_date:           :end_date,
-      cost:               :cost,
-      registration_link:  :registration_link,
-      registration_title: :registration_title,
-      url:                :url,
-      industry:           :industries,
+    ENDPOINT = 'http://www.ustda.gov/api/events/xml'
+
+    SINGLE_VALUED_XPATHS = {
+      event_name:         './Title',
+      start_date:         './Start-Date',
+      end_date:           './End-Date',
+      start_time:         './Start-Time',
+      end_time:           './End-Time',
+      cost:               './Cost',
+      cost_currency:      './Cost-Currency',
+      registration_link:  './Registration-Link',
+      registration_title: './Registration-Title',
+      description:        './Body',
+      industries:         './Industry',
+      url:                './Learn-More-URL',
+      first_name:         './First-Name',
+      last_name:          './Last-Name',
+      post:               './Post',
+      person_title:       './Person_Title',
+      phone:              './Phone',
+      email:              './Email',
     }.freeze
 
-    EMPTY_RECORD = {
-      id:                 '',
-      event_name:         '',
-      description:        '',
-      start_date:         '',
-      end_date:           '',
-      cost:               '',
-      cost_currency:      '',
-      registration_link:  '',
-      registration_title: '',
-      url:                '',
-      venues:             [],
-      event_type:         '',
-      industries:         [],
-      contacts:           [],
-      source:             '',
-    }.freeze
+    VENUE_XPATHS = {
+      venue:   './Venue-%d',
+      city:    './City-%d',
+      state:   './State-%d',
+      country: './Country-%d',
+    }
+
+    def initialize(resource = ENDPOINT, options = {})
+      @resource = resource
+      self.reject_if_ends_before = options.fetch(:reject_if_ends_before, Date.current)
+    end
 
     def loaded_resource
       @loaded_resource ||= open(@resource, 'r:utf-8').read
     end
 
     def import
+      doc = Nokogiri::XML(loaded_resource)
+      events = doc.xpath('//node').map do |event|
+        event = process_entry(event)
+      end.compact
       Ustda.index(events)
-    end
-
-    def events
-      content = loaded_resource.encode('UTF-16le', invalid: :replace, replace: '', universal_newline: true).encode('UTF-8')
-      doc = CSV.parse(content, headers: true, header_converters: :symbol, encoding: 'UTF-8', skip_lines: /^"Last updated/)
-      doc.map { |entry| process_entry entry.to_h }.compact
     end
 
     private
 
     def process_entry(entry)
-      event = sanitize_entry remap_keys(COLUMN_HASH, entry)
+      event = extract_fields(entry, SINGLE_VALUED_XPATHS)
 
-      %i(start_date end_date).each do |field|
-        format = (event[field] =~ /\/\d{2}$/) ? '%m/%d/%y' : '%m/%d/%Y'
-        event[field] = Date.strptime(event[field], format).iso8601 rescue nil if event[field]
-      end
-
+      event = process_dates_and_times(event)
+      return nil if event[:end_date] && event[:end_date] < reject_if_ends_before
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
-      event[:country] &&= lookup_country(event[:country])
-      event[:industries] = Array(event[:industries])
-      event[:contacts] = contact(entry)
-      event[:venues] = venues(entry)
-      event[:source] = model_class.source[:code]
 
-      EMPTY_RECORD.dup.merge(event)
+      event[:venues] = venues(entry)
+      event[:event_type] = nil
+      event[:source] = model_class.source[:code]
+      event[:id] = Utils.generate_id(event, %i(event_name start_date
+                                               event_time end_date end_time time_zone))
+      event[:industries] = [event[:industries]]
+
+      event
+    end
+
+    def process_dates_and_times(event)
+      event[:start_date] &&= extract_date(event[:start_date])
+      event[:end_date] &&= extract_date(event[:end_date])
+      event[:start_time] &&= extract_time(event[:start_time])
+      event[:end_time] &&= extract_time(event[:end_time])
+      event
+    end
+
+    def extract_date(date_str)
+      date = Date.strptime(date_str, '%m/%d/%Y')
+      valid_date?(date) ? date : nil
+    rescue ArgumentError
+      nil
+    end
+
+    def extract_time(time_str)
+      Time.parse(time_str).strftime('%H:%M')
+    end
+
+    def valid_date?(date)
+      Date.valid_date?(date.year, date.month, date.mday)
     end
 
     def cost(entry)
@@ -78,25 +102,13 @@ module TradeEvent
       [cost.to_f, cost.currency_as_string]
     end
 
-    def contact(entry)
-      [
-        entry
-          .slice(:first_name, :last_name, :post, :person_title, :phone, :email)
-          .map { |k, v| { k => v.blank? ? '' : v.strip } }
-          .reduce(:merge),
-      ]
-    end
-
     def venues(entry)
-      (1..6).map do|id|
-        fields = %w(country state city venue).map { |fname| "#{fname}#{id}".to_sym }
-        venue = entry
-                .slice(*fields)
-                .map do |k, v|
-          { k.to_s.chop => v.blank? ? '' : v.strip }
+      (1..3).map do |venue_number|
+        venue_xpaths = {}
+        VENUE_XPATHS.each do |key, value|
+          venue_xpaths[key] = value % venue_number
         end
-                .reduce(:merge)
-                .symbolize_keys
+        venue = extract_fields(entry, venue_xpaths)
         venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
         venue.values.all?(&:blank?) ? nil : venue
       end.compact

@@ -49,18 +49,10 @@ describe 'Consolidated Trade Events API V2', type: :request do
           let(:sources) { [TradeEvent::Exim] }
         end
       end
-      context 'and is "Wichita"' do
-        let(:params) { { q: 'Wichita' } }
+      context 'and is "google"' do
+        let(:params) { { q: 'google' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all TradeEvent::Ustda results that match "Wichita"'
-        it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [TradeEvent::Ustda] }
-        end
-      end
-      context 'and is "aeronautical"' do
-        let(:params) { { q: 'aeronautical' } }
-        it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all TradeEvent::Ustda results that match "aeronautical"'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match "google"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [TradeEvent::Ustda] }
         end
@@ -71,7 +63,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all TradeEvent::Ita results that match "international"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match "international"'
         # it_behaves_like 'it contains all TradeEvent::Exim results that match "international"'
-        it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Exim, TradeEvent::Ustda] }
         end
@@ -101,19 +92,18 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all TradeEvent::Ita results that match countries "US"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match countries "US"'
-        it_behaves_like 'it contains all TradeEvent::Ustda results that match countries "US"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Ustda] }
+          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba] }
         end
       end
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
     context 'when industry is specified' do
-      let(:params) { { industries: "Dental Eq.,Energy \u0026 Mining" } }
+      let(:params) { { industries: 'Dental Eq.,Renewable Energy' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "mining"'
+      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita, TradeEvent::Ustda] }
       end

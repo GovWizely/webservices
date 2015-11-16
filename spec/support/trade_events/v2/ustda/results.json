@@ -1,231 +1,195 @@
-[  
-	{  
-		"id":"China Shale Gas Reverse Trade Mission",
-		"event_name":"China Shale Gas Reverse Trade Mission",
-		"event_type":"",
-		"start_date":"2014-06-23",
-		"end_date":"2014-07-03",
-		"cost":60.0,
-		"cost_currency":"USD",
-		"registration_link":"http://www.cvent.com/d/24qxnc",
-		"registration_title":"USTDA China Shale Gas Development and Technologies Business Briefing",
-		"description":"USTDA is sponsoring a reverse trade mission (RTM) to the United States of key individuals representing China's Shale Gas Sector. The RTM will introduce the delegation to U.S. firms that export technology, services and products that can assist China in developing the country's shale gas resources. The reverse trade mission will take place June 23 July 3, 2014 and will include stops in Washington, D.C and Pittsburgh, PA. As part of its 11-day tour in the U.S., the Chinese delegation will brief U.S. companies on the status of the China shale gas industry in Houston on July 1, 2014 at the Omni Houston Hotel from 9 a.m. until 5:00 p.m. The Energy Information Administration estimates that China's risked technically recoverable shale gas reserves are 1,115 trillion cubic feet (Tcf), trailing only the United States. China is fully committed to developing this resource. Attending companies will be able to meet one-on-one with the delegates as part of the program. To learn more about this Business Briefing and register for this excellent opportunity to learn from key stakeholders about the future opportunities in China, go to http://goveventscenter.com/china-rtm. Or, contact Kaitlin Blackborow at Experient, Inc. at chinartm@experient-inc.com or (703) 239-7516. Sponsorship opportunities are available. Current sponsors include ExxonMobil and Baker Hughes.",
-		"industries":[  
-			"Energy \u0026 Mining"
-		],
-		"url":"http://www.ustda.gov/news/events/2014/EastAsia/China/ChinaShaleGasRTM.asp",
-		"venues":[  
-			{  
-				"country":"US",
-				"state":"DC",
-				"city":"Washington",
-				"venue":"GreatVenue"
-			},
-			{  
-				"country":"US",
-				"state":"PA",
-				"city":"Pittsburgh",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"TX",
-				"city":"Houston",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"",
-				"city":"",
-				"venue":""
-			}
-		],
-		"contacts":[  
-			{  
-				"first_name":"Kaitlin",
-				"last_name":"Blackborow",
-				"post":"Experient, Inc.",
-				"person_title":"Program Manager",
-				"phone":"703-239-7516",
-				"email":"chinartm@experient-inc.com"
-			}
-		],
-		"source":"USTDA"
-	},
-	{  
-		"id":"Vietnam Airport Development and Operations Reverse Trade Mission",
-		"event_name":"Vietnam Airport Development and Operations Reverse Trade Mission",
-		"event_type":"",
-		"start_date":"2014-07-22",
-		"end_date":"2014-07-31",
-		"cost":null,
-		"cost_currency":"",
-		"registration_link":null,
-		"registration_title":null,
-		"description":"The U.S. Trade and Development Agency (USTDA) will host a delegation of key officials from Vietnam's Ministry of Transport, Airports Corporation of Vietnam, and the Civil Aviation Administration of Vietnam (CAAV) on a visit to the United States to participate in the Airport Operations and Development RTM. During this RTM, the delegation will have the opportunity to meet with U.S. companies to learn about airport safety, security, terminal design, and airport operations; aeronautical services; maintenance, repair and overhaul (MRO) facilities; and cargo operations that can support efforts to upgrade aviation infrastructure in order to meet growing air travel demand in Vietnam. The RTM will also include a Business Briefing to be held in Washington D.C. on July 22, 2014, where U.S. companies can learn about upcoming airport and aviation project opportunities, and meet with the senior level decision-making delegates. If you are interested in participating in the Business Briefing, or for more information, please contact AJ Bownas, Sr. Director of Meetings \u0026 Conferences - The Webster Group at AJ@webstergroupinc.com or at (202)741-1297.",
-		"industries":[  
-			"Aviation Services"
-		],
-		"url":"http://www.ustda.gov/news/events/2014/SouthAsia/Vietnam/VietnamAirportDevelopmentOperationsRTM.asp",
-		"venues":[  
-			{  
-				"country":"US",
-				"state":"DC",
-				"city":"Washington",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"KY",
-				"city":"Louisville",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"OH",
-				"city":"Cincinnati",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"CA",
-				"city":"San Francisco",
-				"venue":""
-			}
-		],
-		"contacts":[  
-			{  
-				"first_name":"AJ",
-				"last_name":"Bownas",
-				"post":"The Webster Group",
-				"person_title":"Sr. Director of Meetings \u0026 Conferences",
-				"phone":"202-741-1297",
-				"email":"aj@webstergroupinc.com"
-			}
-		],
-		"source":"USTDA"
-	},
-	{  
-		"id":"African Leaders' Visit: Transport",
-		"event_name":"African Leaders' Visit: Transport",
-		"event_type":"",
-		"start_date":"2014-07-30",
-		"end_date":"2014-08-01",
-		"cost":null,
-		"cost_currency":"",
-		"registration_link":null,
-		"registration_title":null,
-		"description":"USTDA and the U.S. Department of Transportation will co-host the African Leaders' Visit: Transport for high-level delegates who have recently announced plans for significant near-term expansions in both rail and aviation infrastructure. The Visit will introduce delegates to policymakers, financiers, technical experts, and equipment and services suppliers from the U.S. aviation and rail sectors. Meetings and site visits will showcase Chicago's position as a rail and aviation hub and offer participants a chance to see a confluence of advanced transportation infrastructure. Invited delegates include: Angola, Ethiopia, Nigeria, South Africa, Common Market for Eastern and Southern Africa (COMESA), and the Southern African Development Community (SADC).",
-		"industries":[  
-			"Transportation Services"
-		],
-		"url":"http://www.ustda.gov/africanleadersvisits",
-		"venues":[  
-			{  
-				"country":"US",
-				"state":"IL",
-				"city":"Chicago",
-				"venue":""
-			}
-		],
-		"contacts":[  
-			{  
-				"first_name":"Steve",
-				"last_name":"Lewis",
-				"post":"U.S. Trade and Development Agency",
-				"person_title":"Digital Media Manager",
-				"phone":"703-875-4357",
-				"email":"ALVTransport@ustda.gov"
-			}
-		],
-		"source":"USTDA"
-	},
-	{  
-		"id":"African Leaders' Visit: Energy",
-		"event_name":"African Leaders' Visit: Energy",
-		"event_type":"",
-		"start_date":"2014-07-30",
-		"end_date":"2014-08-01",
-		"cost":null,
-		"cost_currency":"",
-		"registration_link":null,
-		"registration_title":null,
-		"description":"USTDA and the U.S. Department of Energy will co-host the African Leaders' Visit: Energy for delegates facing important decisions on how best to develop recent discoveries of significant natural gas reserves. The Visit will showcase U.S. experience in developing its natural gas sector, as well as opportunities for strengthening partnerships with the United States as the countries harness their newly discovered resources and build critical supporting infrastructure. It will also emphasize the need for good governance and transparency to ensure a sound marketplace. Site visits near Houston, TX will showcase gas infrastructure installations and pipeline architecture. Invited delegates include: Ghana, Kenya, Mozambique, Tanzania, Arab Maghreb Union (AMU), and the East African Community (EAC). ?Economic Community of West African States (ECOWAS)",
-		"industries":[  
-			"Energy \u0026 Mining"
-		],
-		"url":"http://www.ustda.gov/africanleadersvisits",
-		"venues":[  
-			{  
-				"country":"US",
-				"state":"TX",
-				"city":"Houston",
-				"venue":""
-			}
-		],
-		"contacts":[  
-			{  
-				"first_name":"Steve",
-				"last_name":"Lewis",
-				"post":"U.S. Trade and Development Agency",
-				"person_title":"Digital Media Manager",
-				"phone":"703-875-4357",
-				"email":"ALVEnergy@ustda.gov"
-			}
-		],
-		"source":"USTDA"
-	},
-	{  
-		"id":"Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission",
-		"event_name":"Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission",
-		"event_type":"",
-		"start_date":"2014-10-18",
-		"end_date":"2014-10-30",
-		"cost":null,
-		"cost_currency":"",
-		"registration_link":null,
-		"registration_title":null,
-		"description":"The U.S. Trade and Development Agency (USTDA) is sponsoring a Sub-Saharan Africa Light Aircraft and Helicopter Reverse Trade Mission (RTM), to introduce delegates from across sub-Saharan Africa to U.S. technology and industry best practices in the aviation sector. Delegates from private sector aviation companies in sub-Saharan Africa will participate in site-visits where they will meet with U.S. industry experts and suppliers of light aircraft and helicopters. Futron Corporation is organizing the RTM on behalf of USTDA. For more information on the event, please contact Program Manager, Ian Christensen, by e-mail at ichristensen@futron.com or by phone at 301-280-2645. international",
-		"industries":[  
-			"Aviation Services"
-		],
-		"url":"http://www.ustda.gov/news/events/2014/SubSaharanAfrica/SubSaharanAfricaLightAircraftHelicopterRTM.asp",
-		"venues":[  
-			{  
-				"country":"US",
-				"state":"DC",
-				"city":"Washington",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"KS",
-				"city":"Wichita",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"FL",
-				"city":"Orlando",
-				"venue":""
-			},
-			{  
-				"country":"US",
-				"state":"PA",
-				"city":"Philadelphia",
-				"venue":""
-			}
-		],
-		"contacts":[  
-			{  
-				"first_name":"Ian",
-				"last_name":"Christianson",
-				"post":"Futron Corporation",
-				"person_title":"Program Manager",
-				"phone":"301-280-2645",
-				"email":"ichristensen@futron.com"
-			}
-		],
-		"source":"USTDA"
-	}
+[
+  {
+    "id": "fc72356f32c847c77bdb3efd9d512765fd4a0093",
+    "event_name": "Live Google Hangout: Opportunities in India Smart City Development",
+    "start_date": "2015-03-16",
+    "end_date": "2015-03-16",
+    "start_time": "15:00",
+    "end_time": "15:30",
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Live Google Hangout: Opportunities in India Smart City Development",
+    "description": "Join the U.S. Trade and Development Agency on Monday, Mar. 16, 2015 from 9:30 AM – 10:30 AM EST, as we explore upcoming smart city development projects and opportunities in India. &nbsp;This live Google Hangout will feature a Q & A session with smart city experts and thought leaders with insight into India’s development plans. Henry Steingass, USTDA’s Regional Director for South and Southeast Asia will moderate the Q & A. Panelists include: Mr. Pratap Padode - &nbsp;Executive Director of Smart Cities Council India Nolty Theriot &nbsp;- &nbsp;Director, U.S.-India Business Council Lux Rao – CTO & Leader, HP Future Cities Click here to access and RSVP for the Google Hangout This Google Hangout follows USTDA’s efforts to catalyze nearly $2 billion in capital for priority renewable energy projects in India. &nbsp;As part of these efforts, USTDA Director Leocadia I. Zak signed agreements on Jan. 26, 2015 with three Indian state governments to mobilize U.S. industry expertise and technologies to modernize the cities of Ajmer (Rajasthan), Allahabad (Uttar Pradesh) and Vishakhapatnam (Andhra Pradesh). Under these Memoranda of Understanding, USTDA plans to sponsor activities that will help each city develop safe, efficient and integrated energy, transportation and communications infrastructure.﻿&nbsp;",
+    "industries": [
+      "Renewable Energy"
+    ],
+    "url": null,
+    "venues": [
+
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null
+  },
+  {
+    "id": "94c3d1baec60e3622d956ca03daaa0eb3feb7303",
+    "event_name": "Jordan: Smart Grid Technologies Reverse Trade Mission",
+    "start_date": null,
+    "end_date": "2015-06-08",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Jordan: Smart Grid Technologies Reverse Trade Mission",
+    "description": "The Smart Grid Technologies Reverse Trade Mission (RTM) will connect Jordanian utility and government representatives with U.S.&nbsp;grid modernization technologies.&nbsp; The RTM will focus on distribution technologies, which include communications platforms, advanced metering infrastructure, utility management software and other components of real-time data infrastructure from leading U.S. smart grid technology companies.&nbsp; In addition to U.S. company consultations, the RTM will include a day of procurement training under USTDA’s Global Procurement Initiative (GPI) Program, which will advise delegates on smart grid procurement best practices. The RTM will feature a Business Briefing in San Francisco on June 8, 2015, where U.S. companies can learn about upcoming smart grid opportunities with Jordanian electricity distribution companies and meet with Jordanian senior-level government and utility representatives. The Business Council for International Understanding (BCIU) is organizing this visit on behalf of USTDA.&nbsp; For more information, please contact Ms. Nina Kundra by email at n-kundra@bciu.org or by phone at (212) 997-3584.",
+    "industries": [
+      "Telecommunications"
+    ],
+    "url": null,
+    "venues": [
+      {
+        "venue": "Washington, DC and San Francisco, CA",
+        "city": null,
+        "state": null,
+        "country": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null
+  },
+  {
+    "id": "85002753aed29875028b5e98ae12225ecd6d3283",
+    "event_name": "Colombia and Peru: Green Port Technologies Reverse Trade Mission",
+    "start_date": "2015-05-31",
+    "end_date": "2015-06-10",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Colombia and Peru: Green Port Technologies Reverse Trade Mission",
+    "description": "This visit is designed to introduce delegates from Colombia and Peru to U.S. green port technologies and U.S. best practices for environmental management at port operations. The delegates will have the opportunity to learn about green port programs related to energy efficiency, pollution prevention, waste reduction, and resource conversation. The visit will include an Industry Roundtable in Houston, Texas on June 5, where U.S. companies can learn about upcoming opportunities in Colombia and the Peru and can meet with senior-level delegates. Meridian International Center is organizing this visit on behalf of USTDA. For more information, please contact Ms. Lauren Paraggio by e-mail at lparaggio@meridian.org or by phone at (202) 939-5863.",
+    "industries": [
+      "Green Port Technologies"
+    ],
+    "url": null,
+    "venues": [
+      {
+        "venue": "Miami, FL; Houston, TX; and Los Angeles, CA",
+        "city": null,
+        "state": null,
+        "country": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null
+  },
+  {
+    "id": "e192f278bac8df094d6efaea1d39ed06bb603177",
+    "event_name": "Colombia and Peru: Green Port Technologies Industry Roundtable for U.S. Companies",
+    "start_date": "2015-06-05",
+    "end_date": "2015-06-05",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Colombia and Peru: Green Port Technologies Industry Roundtable for U.S. Companies",
+    "description": "The U.S. Trade and Development Agency will host an Industry&nbsp;Roundtable&nbsp;in Houston, Texas on June 5, 2015, where U.S. companies can learn about upcoming opportunities in&nbsp;Colombia and the Peru and meet with senior-level delegates participating in the Green Port Technologies Reverse Trade Mission. The Reverse Trade Mission is designed to introduce delegates from Colombia and the Peru to U.S. green port technologies and U.S. best practices for environmental management at port operations. The delegates will have the opportunity to learn about green port programs related to energy efficiency, pollution prevention, waste reduction, and resource conversation. &nbsp;Meridian International Center is organizing this visit on behalf of USTDA. For more information, please contact Ms. Lauren Paraggio by e-mail at&nbsp;lparaggio@meridian.org&nbsp;or by phone at (202) 939-5863.",
+    "industries": [
+      "Green Port Technologies"
+    ],
+    "url": null,
+    "venues": [
+      {
+        "venue": "Los Angeles, CA",
+        "city": null,
+        "state": null,
+        "country": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null
+  },
+  {
+    "id": "5dd39f6a508d2f27cd0e62c55efeab786a5ddd55",
+    "event_name": "Jordan: Smart Grid Technologies Business Briefing for U.S. Companies",
+    "start_date": "2015-06-08",
+    "end_date": "2015-06-08",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": "USD",
+    "registration_link": "http://www.ustda.gov/register",
+    "registration_title": "Jordan: Smart Grid Technologies Business Briefing for U.S. Companies",
+    "description": "The U.S. Trade and Development Agency is hosting a Business Briefing in San Francisco on June 8, 2015, where U.S. companies can learn about upcoming smart grid opportunities with Jordanian electricity distribution companies and meet with Jordanian senior-level government and utility representatives participating in a Smart Grid Technologies Reverse Trade Mission. The Business Council for International Understanding (BCIU) is organizing this business briefing on behalf of USTDA.&nbsp; For more information, please contact Ms. Nina Kundra by email at&nbsp;n-kundra@bciu.org&nbsp;or by phone at (212) 997-3584.",
+    "industries": [
+      "Electricity Transmission & Distribution"
+    ],
+    "url": "http://www.ustda.gov/learnmore",
+    "venues": [
+      {
+        "venue": "San Francisco, CA",
+        "city": "San Francisco",
+        "state": "California",
+        "country": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": "ed@email.com",
+    "source": "USTDA",
+    "event_type": null
+  },
+  {
+    "id": "d4c2f2c7fc1b622030e6358c64155384f4768d26",
+    "event_name": "Brazil: Green Port Technologies Reverse Trade Mission",
+    "start_date": "2015-07-12",
+    "end_date": "2015-07-12",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Brazil: Green Port Technologies Reverse Trade Mission",
+    "description": "This visit is designed to introduce delegates from Brazil to U.S. green port technologies and U.S. best practices for environmental management at port operations. The delegates will have the opportunity to learn about green port programs related to energy efficiency, pollution prevention, waste reduction, and resource conversation. The visit will include an Industry Roundtable in Los Angeles, where U.S. companies can learn about upcoming opportunities in Brazil and can meet with senior-level delegates. Meridian International Center is organizing this visit on behalf of USTDA. For more information, please contact Ms. Lauren Paraggio by e-mail at lparaggio@meridian.org or by phone at (202) 939-5863.",
+    "industries": [
+      "Green Port Technologies"
+    ],
+    "url": null,
+    "venues": [
+      {
+        "venue": "Miami, FL; Houston, TX; and Los Angeles, CA",
+        "city": null,
+        "state": null,
+        "country": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null
+  }
 ]

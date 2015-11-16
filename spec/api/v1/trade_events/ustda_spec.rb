@@ -14,27 +14,22 @@ describe 'Trade Events API V1', type: :request do
     end
 
     context 'when q is specified' do
-      let(:params) { { q: 'international' } }
+      let(:params) { { q: 'google' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match "international"'
+      it_behaves_like 'it contains all TradeEvent::Ustda results that match "google"'
       it_behaves_like "an empty result when a query doesn't match any documents"
-    end
-
-    context 'when q is specified' do
-      let(:params) { { q: 'Wichita' } }
-      it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match "Wichita"'
     end
 
     context 'when countries is specified' do
       let(:params) { { countries: 'us' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match countries "US"'
+      it_behaves_like "an empty result when a query doesn't match any documents"
     end
+
     context 'when industry is specified' do
-      let(:params) { { industry: 'mining' } }
+      let(:params) { { industry: 'Renewable Energy' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "mining"'
+      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"'
     end
   end
 end
