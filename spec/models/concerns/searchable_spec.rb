@@ -107,11 +107,12 @@ describe Searchable do
     end
 
     it 'response includes metadata' do
-      expect(subject.keys).to include(:sources_used)
+      expect(subject.keys).to include(:sources_used, :search_performed_at)
       expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
+      expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
-      expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used])
+      expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used, :search_performed_at])
     end
   end
 
@@ -119,11 +120,12 @@ describe Searchable do
     subject { MockModel.search_for({}) }
 
     it 'response includes metadata' do
-      expect(subject.keys).to include(:sources_used)
+      expect(subject.keys).to include(:sources_used, :search_performed_at)
       expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
+      expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
-      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used])
+      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used, :search_performed_at])
     end
   end
 

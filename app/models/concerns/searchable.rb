@@ -42,6 +42,7 @@ module Searchable
       hits = ES.client.search(search_options)['hits'].deep_symbolize_keys
       hits[:offset] = query.offset
       hits[:sources_used] = index_meta(query.try(:sources))
+      hits[:search_performed_at] = search_performed_at
       hits.deep_symbolize_keys
     end
 
@@ -75,10 +76,11 @@ module Searchable
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
-      results = { offset:       0,
-                  sources_used: index_meta(sources),
-                  hits:         response['hits'].deep_symbolize_keys[:hits],
-                  total:        response['hits']['total'] }
+      results = { offset:              0,
+                  sources_used:        index_meta(sources),
+                  search_performed_at: search_performed_at,
+                  hits:                response['hits'].deep_symbolize_keys[:hits],
+                  total:               response['hits']['total'] }
 
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         batch = response['hits'].deep_symbolize_keys
@@ -104,6 +106,10 @@ module Searchable
     end
 
     private
+
+    def search_performed_at
+      DateTime.now.utc
+    end
 
     def models(sources)
       models = model_classes
