@@ -7,6 +7,14 @@ describe DataSource do
       is_expected.to validate_presence_of(:api)
       is_expected.to validate_presence_of(:data)
     end
+
+    ['foo bar', 'de-minimis', "loren's", 'Currencies'].each do |bad_value|
+      it { is_expected.not_to allow_value(bad_value).for(:api) }
+    end
+
+    %w(de_minimis_currencies area_51_residents).each do |ok_value|
+      it { is_expected.to allow_value(ok_value).for(:api) }
+    end
   end
 
   describe 'lifecycle callbacks' do

@@ -8,7 +8,7 @@ class DataSource
   attribute :name, String, mapping: { type: 'string', analyzer: 'english' }
   validates :name, presence: true
   attribute :api, String, mapping: { type: 'string', index: 'not_analyzed' }
-  validates :api, presence: true
+  validates :api, presence: true, format: { with: /\A[a-z0-9_]+\z/ }
   attribute :description, String, mapping: { type: 'string', analyzer: 'english' }
   attribute :dictionary, String, mapping: { type: 'string', index: 'no' }
   attribute :data, String, mapping: { type: 'string', index: 'no' }
