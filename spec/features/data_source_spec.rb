@@ -29,6 +29,7 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_text('Data source was successfully created. Review the schema and make any changes')
       expect(page).to have_text('Editing data source')
       expect(page).to have_field('Name', with: 'Some human readable name')
+      expect(page).to have_field('Api', readonly: true)
 
       fill_in 'Name', with: 'Some other human readable name'
       click_button 'Update'

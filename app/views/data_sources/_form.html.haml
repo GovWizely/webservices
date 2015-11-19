@@ -8,5 +8,7 @@
   %p A description of the endpoint (optional; only you see this)
 .field
   = form.label :api
-  = form.text_field :api
-  %p The underscored name that will be in the endpoint URL (e.g., 'de_minimis_currencies')
+  = form.text_field :api, readonly: action_name == 'edit'
+  %p
+    The underscored name that will be in the endpoint URL (e.g., 'de_minimis_currencies').
+    REST conventions suggest using a plural noun to describe the resource in the endpoint.
