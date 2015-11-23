@@ -36,8 +36,6 @@
   :ids: []
   :name_idx: KUO OIL S PTE
   :name_no_ws_with_common: KUOOILSPTELIMITED
-  :name_no_ws_rev_with_common: LIMITEDPTESOILKUO
-  :name_rev: PTE S OIL KUO
   :name_no_ws: KUOOILSPTE
   :name_no_ws_rev: PTESOILKUO
 - :entity_number: '13043'
@@ -80,7 +78,5 @@
   :ids: []
   :name_idx: FAL OIL
   :name_no_ws_with_common: FALOILCOMPANYLTD
-  :name_no_ws_rev_with_common: LTDCOMPANYOILFAL
-  :name_rev: OIL FAL
   :name_no_ws: FALOIL
   :name_no_ws_rev: OILFAL

@@ -15,8 +15,6 @@
   :alt_names: []
   :name_idx: China National Plant ImportExport
   :name_no_ws_with_common: ChinaNationalPlantImportExportCo
-  :name_no_ws_rev_with_common: CoImportExportPlantNationalChina
-  :name_rev: ImportExport Plant National China
   :name_no_ws: ChinaNationalPlantImportExport
   :name_no_ws_rev: ImportExportPlantNationalChina
 - :name: Brilliance Technology Ltd
@@ -38,8 +36,6 @@
   :alt_names: []
   :name_idx: Brilliance Technology
   :name_no_ws_with_common: BrillianceTechnologyLtd
-  :name_no_ws_rev_with_common: LtdTechnologyBrilliance
-  :name_rev: Technology Brilliance
   :name_no_ws: BrillianceTechnology
   :name_no_ws_rev: TechnologyBrilliance
 - :name: Dynasense Photonics Co., Limited
@@ -56,8 +52,6 @@
   :alt_names: []
   :name_idx: Dynasense Photonics
   :name_no_ws_with_common: DynasensePhotonicsCoLimited
-  :name_no_ws_rev_with_common: LimitedCoPhotonicsDynasense
-  :name_rev: Photonics Dynasense
   :name_no_ws: DynasensePhotonics
   :name_no_ws_rev: PhotonicsDynasense
 - :name: Hi-Shine Technology (HK) Limited
@@ -81,8 +75,6 @@
   :alt_names: []
   :name_idx: HiShine Technology HK
   :name_no_ws_with_common: HiShineTechnologyHKLimited
-  :name_no_ws_rev_with_common: LimitedHKTechnologyHiShine
-  :name_rev: HK Technology HiShine
   :name_no_ws: HiShineTechnologyHK
   :name_no_ws_rev: HKTechnologyHiShine
 - :name: Hong Kong Haimao Info-Tec Development Co Ltd
@@ -99,8 +91,6 @@
   :alt_names: []
   :name_idx: Hong Kong Haimao InfoTec Development
   :name_no_ws_with_common: HongKongHaimaoInfoTecDevelopmentCoLtd
-  :name_no_ws_rev_with_common: LtdCoDevelopmentInfoTecHaimaoKongHong
-  :name_rev: Development InfoTec Haimao Kong Hong
   :name_no_ws: HongKongHaimaoInfoTecDevelopment
   :name_no_ws_rev: DevelopmentInfoTecHaimaoKongHong
 - :name: Lianqi (HK) Electronics Co Ltd
@@ -117,8 +107,6 @@
   :alt_names: []
   :name_idx: Lianqi HK Electronics
   :name_no_ws_with_common: LianqiHKElectronicsCoLtd
-  :name_no_ws_rev_with_common: LtdCoElectronicsHKLianqi
-  :name_rev: Electronics HK Lianqi
   :name_no_ws: LianqiHKElectronics
   :name_no_ws_rev: ElectronicsHKLianqi
 - :name: Lion Chip Electronics Ltd
@@ -135,8 +123,6 @@
   :alt_names: []
   :name_idx: Lion Chip Electronics
   :name_no_ws_with_common: LionChipElectronicsLtd
-  :name_no_ws_rev_with_common: LtdElectronicsChipLion
-  :name_rev: Electronics Chip Lion
   :name_no_ws: LionChipElectronics
   :name_no_ws_rev: ElectronicsChipLion
 - :name: Security 2 Business Academy
@@ -157,7 +143,6 @@
     :country: RU
   :alt_names: []
   :name_idx: Security 2 Business Academy
-  :name_rev: Academy Business 2 Security
   :name_no_ws: Security2BusinessAcademy
   :name_no_ws_rev: AcademyBusiness2Security
 - :name: S2BA
@@ -178,7 +163,6 @@
     :country: RU
   :alt_names: []
   :name_idx: S2BA
-  :name_rev: S2BA
   :name_no_ws: S2BA
   :name_no_ws_rev: S2BA
 - :name: Academy of Business Security
@@ -199,7 +183,6 @@
     :country: RU
   :alt_names: []
   :name_idx: Academy of Business Security
-  :name_rev: Security Business of Academy
   :name_no_ws: AcademyofBusinessSecurity
   :name_no_ws_rev: SecurityBusinessofAcademy
 - :name: T2BA
@@ -215,7 +198,6 @@
     :country: RU
   :alt_names: []
   :name_idx: T2BA
-  :name_rev: T2BA
   :name_no_ws: T2BA
   :name_no_ws_rev: T2BA
 - :name: Training 2 Business Academy, a.k.a. T2BA, a.k.a. Academy of Business Training
@@ -239,17 +221,12 @@
   - T2BA
   - Academy of Business Training
   :name_idx: Training 2 Business Academy aka T2BA aka Academy of Business Training
-  :name_rev: Training Business of Academy aka T2BA aka Academy Business 2 Training
   :name_no_ws: Training2BusinessAcademyakaT2BAakaAcademyofBusinessTraining
   :name_no_ws_rev: TrainingBusinessofAcademyakaT2BAakaAcademyBusiness2Training
   :alt_idx:
   - Training 2 Business Academy
   - T2BA
   - Academy of Business Training
-  :alt_rev:
-  - Academy Business 2 Training
-  - T2BA
-  - Training Business of Academy
   :alt_no_ws:
   - Training2BusinessAcademy
   - T2BA

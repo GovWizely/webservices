@@ -9,9 +9,8 @@ module ScreeningList
 
       make_names_with_common(doc, 'name') unless (doc[:name_idx].downcase.split & COMMON_WORDS).empty?
 
-      doc[:name_rev]       = name_rev(doc[:name_idx])
       doc[:name_no_ws]     = strip(doc[:name_idx], 'whitespace')
-      doc[:name_no_ws_rev] = strip(doc[:name_rev], 'whitespace')
+      doc[:name_no_ws_rev] = strip(name_rev(doc[:name_idx]), 'whitespace')
 
       make_alt_names(doc) if doc[:alt_names].present?
     end
@@ -22,14 +21,12 @@ module ScreeningList
 
       make_names_with_common(doc, 'alt') unless (doc[:alt_idx].map(&:downcase).join(' ').split & COMMON_WORDS).empty?
 
-      doc[:alt_rev]       = name_rev(doc[:alt_idx])
       doc[:alt_no_ws]     = strip(doc[:alt_idx], 'whitespace')
-      doc[:alt_no_ws_rev] = strip(doc[:alt_rev], 'whitespace')
+      doc[:alt_no_ws_rev] = strip(name_rev(doc[:alt_idx]), 'whitespace')
     end
 
     def make_names_with_common(doc, prefix)
       doc[:"#{prefix}_no_ws_with_common"]     = strip(doc[:"#{prefix}_idx"], 'whitespace')
-      doc[:"#{prefix}_no_ws_rev_with_common"] = strip(name_rev(doc[:"#{prefix}_idx"]), 'whitespace')
       doc[:"#{prefix}_idx"]                   = filter_words(doc[:"#{prefix}_idx"], COMMON_WORDS)
     end
 

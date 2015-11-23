@@ -28,11 +28,9 @@
     :code: EL
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Fazal Rahim Farid
-  :name_rev: Farid Rahim Fazal
   :name_no_ws: FazalRahimFarid
   :name_no_ws_rev: FaridRahimFazal
   :alt_idx: [Fazel Rahim Farid, Farid, Engineer Idris]
-  :alt_rev: [Farid Rahim Fazel, Farid, Idris Engineer]
   :alt_no_ws: [FazelRahimFarid, Farid, EngineerIdris]
   :alt_no_ws_rev: [FaridRahimFazel, Farid, IdrisEngineer]
 - :name: Fazel Khalil Construction Company
@@ -56,8 +54,6 @@
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Fazel Khalil Construction
   :name_no_ws_with_common: FazelKhalilConstructionCompany
-  :name_no_ws_rev_with_common: CompanyConstructionKhalilFazel
-  :name_rev: Construction Khalil Fazel
   :name_no_ws: FazelKhalilConstruction
   :name_no_ws_rev: ConstructionKhalilFazel
 - :name: Zurmat Construction Company offices
@@ -111,8 +107,6 @@
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Zurmat Construction offices
   :name_no_ws_with_common: ZurmatConstructionCompanyoffices
-  :name_no_ws_rev_with_common: officesCompanyConstructionZurmat
-  :name_rev: offices Construction Zurmat
   :name_no_ws: ZurmatConstructionoffices
   :name_no_ws_rev: officesConstructionZurmat
 - :name: Murat Peker
@@ -134,7 +128,6 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Murat Peker
-  :name_rev: Peker Murat
   :name_no_ws: MuratPeker
   :name_no_ws_rev: PekerMurat
 - :name: Qazi Abdallah
@@ -157,11 +150,9 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
-  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
-  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
@@ -184,11 +175,9 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
-  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
-  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
@@ -211,10 +200,8 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
-  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
-  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]
