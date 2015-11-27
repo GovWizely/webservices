@@ -8,11 +8,14 @@ class DataSource
   attribute :name, String, mapping: { type: 'string', analyzer: 'english' }
   validates :name, presence: true
   attribute :api, String, mapping: { type: 'string', index: 'not_analyzed' }
-  validates :api, presence: true, format: { with: /\A[a-z0-9_]+\z/ }
+  validates :api, presence: true, format: { with: /\A[a-z0-9_]+\z/ }, reserved_api: true
   attribute :description, String, mapping: { type: 'string', analyzer: 'english' }
   attribute :dictionary, String, mapping: { type: 'string', index: 'no' }
   attribute :data, String, mapping: { type: 'string', index: 'no' }
   validates :data, presence: true
+  attribute :version_number, Integer
+  validates :version_number, numericality: true, presence: true
+  attribute :published, Boolean
 
   before_save :build_dictionary
   after_destroy :delete_api_index
@@ -55,10 +58,32 @@ class DataSource
     fields_of_type 'date'
   end
 
+  def oldest_version?
+    version_number == versions.first
+  end
+
+  def newest_version?
+    version_number == versions.last
+  end
+
+  def versions
+    @versions ||= DataSource.search(query:   { filtered: { filter: { term: { api: api } } } },
+                                    _source: { include: ['version_number'] },
+                                    sort:    :version_number).collect(&:version_number)
+  end
+
+  def self.id_from_params(api, version_number)
+    [api, ['v', version_number || '1'].join].join(':')
+  end
+
+  def self.directory
+    all(_source: { exclude: ['data'] }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
+  end
+
   private
 
   def delete_api_index
-    ES.client.indices.delete(index: [ES::INDEX_PREFIX, 'api_models', api].join(':'), ignore: 404)
+    ES.client.indices.delete(index: [ES::INDEX_PREFIX, 'api_models', api, "v#{version_number}"].join(':'), ignore: 404)
     DataSource.refresh_index!
   end
 

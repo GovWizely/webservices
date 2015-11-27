@@ -1,14 +1,23 @@
 .field
   = form.label :name
   = form.text_field :name
-  %p A short, memorable, humanized name for this endpoint (e.g., "De Minimis Currencies")
+  %p A short, memorable, humanized name for this endpoint (e.g., "De Minimis Currencies").
 .field
   = form.label :description
   = form.text_field :description
-  %p A description of the endpoint (optional; only you see this)
+  %p A description of the endpoint (optional; only you see this).
 .field
   = form.label :api
   = form.text_field :api, readonly: action_name == 'edit'
   %p
     The underscored name that will be in the endpoint URL (e.g., 'de_minimis_currencies').
     REST conventions suggest using a plural noun to describe the resource in the endpoint.
+.field
+  = form.label :version_number
+  = form.text_field :version_number, readonly: true
+  %p Versions start with 1, and are referenced in the endpoint as /v1/some_resource.
+- if action_name == 'edit'
+  .field
+    = form.label :published
+    = form.check_box :published
+    %p Whether or not this version of the endpoint has been published to developers yet.

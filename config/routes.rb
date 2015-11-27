@@ -17,7 +17,9 @@ Webservices::Application.routes.draw do
     mount Sidekiq::Web => '/sidekiq'
   end
 
-  resources :data_sources
+  resources :data_sources do
+    member { get :iterate_version }
+  end
 
   concern :api_v1_routable do
     mapping = {
@@ -116,7 +118,7 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    get '/*resource/search(.json)', to: 'api_models#search'
+    get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
   end
 
   match '404', via: :all, to: 'api#not_found'
