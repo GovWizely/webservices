@@ -28,7 +28,7 @@ class ApiModelQuery < Query
 
   def terms_child(json, field)
     value = instance_variable_get("@#{field}")
-    json.child! { json.terms { json.set! field, csv_to_array(value) } } if value
+    json.child! { json.terms { json.set! field, csv_to_normalized_array(value) } } if value
   end
 
   def date_range_child(json, field)
@@ -36,7 +36,9 @@ class ApiModelQuery < Query
     generate_date_range(json, field, value) if value
   end
 
-  def csv_to_array(value)
-    value.split(',').map(&:strip)
+  def csv_to_normalized_array(value)
+    value.split(',').map do |entry|
+      entry.downcase.squish
+    end
   end
 end
