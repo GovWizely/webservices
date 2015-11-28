@@ -216,7 +216,7 @@ shared_context 'TradeEvent::Ustda data' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
     TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml",
-      reject_if_ends_before: Date.parse('2014-01-01')).import
+                              reject_if_ends_before: Date.parse('2014-01-01')).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
@@ -231,8 +231,8 @@ end
 shared_context 'TradeEvent::Ustda data v2' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
-    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml", 
-      reject_if_ends_before: Date.parse('2014-01-01')).import
+    TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml",
+                              reject_if_ends_before: Date.parse('2014-01-01')).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
