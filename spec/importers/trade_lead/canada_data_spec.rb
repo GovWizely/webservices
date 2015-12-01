@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::CanadaData do
+describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/canada.yml', record: :once }do
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/canada/expected_canada_leads.yaml") }
@@ -18,7 +18,7 @@ describe TradeLead::CanadaData do
         date_closing:                         '2014-06-06 14:00 Eastern Daylight Time (EDT)',
         amendment_date:                       '2014-05-23',
         publishing_status:                    'Active',
-        gsin:                                 'G009D: Health, U006C: Technical, U099SA: Safety',
+        gsin:                                 nil,
         region_opportunity:                   'Canada',
         region_delivery:                      'Alberta',
         notice_type:                          'PAC-ACAN',
@@ -44,7 +44,8 @@ describe TradeLead::CanadaData do
                         end_date:                             '2014-06-06',
                         publish_date_amended:                 '2014-05-23',
                         status:                               'Active',
-                        industry:                             'G009D: Health, U006C: Technical, U099SA: Safety',
+                        industry:                             nil,
+                        ita_industries:                       [],
                         region_opportunity:                   'Canada',
                         specific_location:                    'Alberta',
                         notice_type:                          'PAC-ACAN',

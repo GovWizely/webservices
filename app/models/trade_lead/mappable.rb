@@ -21,6 +21,13 @@ module TradeLead
                                           keyword:   { type: 'string', analyzer: 'keyword' },
                                         },
                                       },
+            ita_industries:           {
+              type:   'string',
+              fields: {
+                tokenized: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+                keyword:   { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
+              },
+            },
             title:                    {
               type: 'string', analyzer: 'snowball_asciifolding_nostop',
               fields: {

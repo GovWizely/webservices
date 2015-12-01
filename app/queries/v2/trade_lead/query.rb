@@ -17,7 +17,7 @@ module V2::TradeLead
     private
 
     def generate_query(json)
-      multi_fields = %i(title description industry tags procurement_organization)
+      multi_fields = %w(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
       json.query do
         json.bool do
           json.must do
@@ -51,13 +51,18 @@ module V2::TradeLead
         json.bool do
           json.set! 'should' do
             Array(@industries).each do |ind|
-              json.child! do
-                json.query { json.match { json.set! 'industry.keyword', ind } }
-              end
+              industry_match(json, 'industry.keyword', ind)
+              industry_match(json, 'ita_industries.keyword', ind)
             end
           end
         end
       end if @industries
+    end
+
+    def industry_match(json, field, industry)
+      json.child! do
+        json.query { json.match { json.set! field, industry } }
+      end
     end
   end
 end

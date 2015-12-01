@@ -90,6 +90,10 @@ module Importable
     end
   end
 
+  def get_mapper_terms_from_array(array)
+    return array.map { |i| normalize_industry(i) }.compact.flatten.uniq
+  end
+
   def parse_date(date_str)
     Date.parse(date_str).to_s rescue nil
   end
