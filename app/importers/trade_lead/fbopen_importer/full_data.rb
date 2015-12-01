@@ -72,10 +72,16 @@ module TradeLead
         entry = process_xml_dates(entry)
         return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.today
 
+        entry = process_additional_fields(entry)
+        entry
+      end
+
+      def process_additional_fields(entry)
         entry[:description] &&= Nokogiri::HTML.fragment(entry[:description]).inner_text.squish
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
         entry[:source] = TradeLead::Fbopen.source[:code]
         entry[:id]      = entry[:contract_number]
+        entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
         entry
       end
 

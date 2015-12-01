@@ -7,6 +7,7 @@
   :country: CO
   :status: Pipeline
   :industry: Health Care and Social Assistance
+  :ita_industries: []
   :specific_location: Colombia
   :project_size: 13500000
   :procurement_organization: INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería,
@@ -31,6 +32,7 @@
   :title: Learning; Equity and Accountability Program Support Project
   :project_number: P118904
   :industry: Educational Services
+  :ita_industries: []
   :project_size: 300000000
   :description: The project development objective is to improve the quality of grade
     1 to 3 reading and math skills of children in Target Regions and Target Schools,
@@ -55,6 +57,7 @@
   :title: Hamad Bin Khalifa Medical City - Construction of Simulation Centre
   :project_number: PWA/GTC/087/12-13
   :industry: Health Care and Social Assistance
+  :ita_industries: []
   :project_size: 1797625
   :description: 'The project is comprised but not limited to the following: The Simulation
     Center is a 13,000 m2 facility on the campus of Hamad Medical Corporation (HMC)
@@ -91,6 +94,7 @@
   :title: Kenya - Enhancing Water Security & Climate Resilience
   :project_number: P117635
   :industry: Utilities
+  :ita_industries: []
   :project_size: 350000000
   :description: The project objective is to support the institutionalization of processes
     and water related investments to strengthen climate-resilient water resources

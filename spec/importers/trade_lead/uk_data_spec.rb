@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::UkData do
+describe TradeLead::UkData, vcr: { cassette_name: 'importers/trade_leads/uk.yml', record: :once } do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/uk" }
   let(:importer) { described_class.new(fixtures_file) }
 

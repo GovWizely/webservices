@@ -1,0 +1,15 @@
+{
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": ["title", "description", "industry.tokenized", "ita_industries.tokenized", "tags", "procurement_organization"],
+            "operator": "and",
+            "query": "women"
+          }
+        }
+      ]
+    }
+  }
+}

@@ -88,10 +88,16 @@ module TradeLead
         lead.delete(:resp_date)
         lead.delete(:arch_date)
 
+        lead = process_additional_fields(lead)
+        EMPTY_RECORD.dup.merge(lead)
+      end
+
+      def process_additional_fields(lead)
         lead[:description] &&= Nokogiri::HTML.fragment(lead[:description]).inner_text.squish
         lead[:source] = TradeLead::Fbopen.source[:code]
         lead[:id]      = lead[:contract_number]
-        EMPTY_RECORD.dup.merge(lead)
+        lead[:ita_industries] = lead[:industry] ? [normalize_industry(lead[:industry])].compact.flatten.uniq : []
+        lead
       end
 
       def valid?(entry)
