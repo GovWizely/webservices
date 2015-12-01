@@ -3,8 +3,10 @@ require 'spec_helper'
 describe 'Australian Trade Leads API V1', type: :request do
   before(:all) do
     TradeLead::Australia.recreate_index
-    TradeLead::AustraliaData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv").import
+    VCR.use_cassette('importers/trade_leads/australia.yml', record: :once) do
+      TradeLead::AustraliaData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv").import
+    end
   end
 
   let(:expected_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/trade_leads/australia/results.json").read }

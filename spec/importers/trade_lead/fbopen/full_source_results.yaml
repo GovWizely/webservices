@@ -5,6 +5,7 @@
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
   :industry: '331318'
+  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0425
@@ -34,6 +35,7 @@
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
   :industry: '331318'
+  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0431
@@ -53,6 +55,7 @@
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -92,6 +95,7 @@
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -131,6 +135,7 @@
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-003

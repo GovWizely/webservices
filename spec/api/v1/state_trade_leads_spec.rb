@@ -3,8 +3,10 @@ require 'spec_helper'
 describe 'State Trade Leads API V1', type: :request do
   before(:all) do
     TradeLead::State.recreate_index
-    TradeLead::StateData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    VCR.use_cassette('importers/trade_leads/state.yml', record: :once) do
+      TradeLead::StateData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    end
   end
   let(:expected_results) { JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/state/results.json").read) }
 

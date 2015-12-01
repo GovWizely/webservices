@@ -7,7 +7,9 @@
   :end_date: '2014-07-24'
   :publish_date_amended: '2014-07-10'
   :status: Active
-  :industry: 'G009E: Medical/Dental Clinic Services'
+  :industry: 
+  - 'G009E: Medical/Dental Clinic Services'
+  :ita_industries: []
   :region_opportunity: Alberta
   :specific_location: Alberta
   :notice_type: DDP-RFP
@@ -64,7 +66,10 @@
   :end_date: '2014-07-21'
   :publish_date_amended: '2014-06-11'
   :status: Active
-  :industry: 'N8305: Textile Fabrics, N8415: Clothing, Special Purpose'
+  :industry: 
+  - 'N8305: Textile Fabrics'
+  - 'N8415: Clothing, Special Purpose'
+  :ita_industries: []
   :region_opportunity:
   :specific_location: Quebec
   :notice_type: APM-NPP
@@ -138,7 +143,9 @@
   :end_date: '2015-01-19'
   :publish_date_amended: '2014-04-04'
   :status: Active
-  :industry: 'N8905Z: Meat, Poultry and Fish'
+  :industry: 
+  - 'N8905Z: Meat, Poultry and Fish'
+  :ita_industries: []
   :region_opportunity:
   :specific_location: Quebec
   :notice_type: APM-NPP
@@ -208,7 +215,9 @@
   :end_date: '2014-12-31'
   :publish_date_amended: '2014-04-03'
   :status: Active
-  :industry: 'C119F: Engineering Services - Buildings'
+  :industry: 
+  - 'C119F: Engineering Services - Buildings'
+  :ita_industries: []
   :region_opportunity: Quebec
   :specific_location: Quebec
   :notice_type: AO-ITT
@@ -241,7 +250,9 @@
   :end_date: '2014-08-11'
   :publish_date_amended:
   :status: Active
-  :industry: 'U099D: Language Training Services'
+  :industry: 
+  - 'U099D: Language Training Services'
+  :ita_industries: []
   :region_opportunity:
   :specific_location: Alberta, British Columbia, Manitoba, National Capital Region,
     New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia,

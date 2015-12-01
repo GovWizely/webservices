@@ -2,6 +2,7 @@
 - :agency: Defence Materiel Organisation
   :publish_date_amended:
   :industry: Fire fighting equipment
+  :ita_industries: []
   :id: CN1121942
   :contract_value: '11731.17'
   :description: 'Motor Windscreen Wiper, Electric. C/W Crank & Plate Assembly, 9.64inch
@@ -19,6 +20,7 @@
 - :agency: Defence Materiel Organisation
   :publish_date_amended: '2013-01-04'
   :industry: Footwear
+  :ita_industries: []
   :id: CN389204-A1
   :contract_value: '25022000.00'
   :description: COMBAT BOOTS, VERSION 5, KHAKI
@@ -35,6 +37,7 @@
 - :agency: Defence Materiel Organisation
   :publish_date_amended:
   :industry: Fire fighting equipment
+  :ita_industries: []
   :id: CN1122002
   :contract_value: '29546.00'
   :description: Fire Hose Nozzle, Aluminium Alloy, Select-O-Matic Nozzle, Automatic
