@@ -14,13 +14,15 @@ class Api::V2::ApiModelsController < Api::V2Controller
   private
 
   def setup_data_source
-    @data_source = DataSource.search(filter: { term: { _id: params[:resource] } }, _source: { exclude: ['data'] }).first
-    fail ActionController::RoutingError.new('Search index cannot be found') unless @data_source.present?
+    versioned_id = DataSource.id_from_params params[:api], params[:version_number]
+    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
+    @data_source = DataSource.search(query_hash, _source: { exclude: ['data'] }).first
+    not_found unless @data_source.present?
   end
 
   def setup_search_params
     fulltext_fields = @data_source.fulltext_fields.present? ? %i(q) : []
-    self.search_params = %i(api_key callback format offset size resource) +
+    self.search_params = %i(api_key callback format offset size api version_number) +
       @data_source.filter_fields.keys +
       fulltext_fields +
       @data_source.date_fields.keys

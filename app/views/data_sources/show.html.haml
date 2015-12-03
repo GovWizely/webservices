@@ -7,6 +7,12 @@
 %p
   %b Api:
   = @data_source.api
+%p
+  %b Published:
+  = @data_source.published
+%p
+  %b Version:
+  = @data_source.version_number
 - if @data_source.filter_fields.present?
   %p
     %b Filtered Fields:
@@ -29,10 +35,17 @@
     %p Specify a date range in this format (e.g., 2013-10-01+TO+2015-10-04)
     %hr
 %p
+  %b API call showing the first page of available data:
+  = sample_api_call @data_source, false
+%p
   %b Sample API call:
   = sample_api_call @data_source
 
-= link_to 'Edit', edit_data_source_path(@data_source)
-\|
+- if @data_source.newest_version?
+  = link_to 'Iterate API Version', iterate_version_data_source_path(@data_source)
+  \|
+  = link_to 'Edit', edit_data_source_path(@data_source)
+  \|
 = link_to 'Back', "/"
-= button_to 'Delete', data_source_path(@data_source), method: :delete, data: { confirm: 'Are you sure you wish to delete this API and data source?' }
+- if @data_source.oldest_version? || @data_source.newest_version?
+  = button_to 'Delete', data_source_path(@data_source), method: :delete, data: { confirm: 'Are you sure you wish to delete this API and data source?' }

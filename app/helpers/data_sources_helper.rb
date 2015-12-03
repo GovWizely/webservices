@@ -1,6 +1,6 @@
 module DataSourcesHelper
-  def sample_api_call(data_source)
-    url = "/#{data_source.api}/search.json?#{sample_params_from_data_source(data_source)}"
+  def sample_api_call(data_source, with_params = true)
+    url = "/v#{data_source.version_number}/#{data_source.api}/search.json?#{sample_params_from_data_source(data_source, with_params)}"
     link_to url, url
   end
 
@@ -15,11 +15,13 @@ module DataSourcesHelper
 
   private
 
-  def sample_params_from_data_source(data_source)
+  def sample_params_from_data_source(data_source, with_params)
     groups = ["api_key=#{current_user.api_key}"]
-    groups << keys_map(data_source.filter_fields, 'VALUE')
-    groups << keys_map(data_source.date_fields, 'YYYY-MM-DD+TO+YYYY-MM-DD')
-    groups << 'q=TEXT' if data_source.fulltext_fields.present?
+    if with_params
+      groups << keys_map(data_source.filter_fields, 'VALUE')
+      groups << keys_map(data_source.date_fields, 'YYYY-MM-DD+TO+YYYY-MM-DD')
+      groups << 'q=TEXT' if data_source.fulltext_fields.present?
+    end
     groups.compact.join('&')
   end
 
