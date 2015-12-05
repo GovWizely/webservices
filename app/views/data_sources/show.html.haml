@@ -13,14 +13,19 @@
 %p
   %b Version:
   = @data_source.version_number
-- if @data_source.filter_fields.present?
+- if @data_source.plural_filter_fields.present?
   %p
-    %b Filtered Fields:
-    = param_table(@data_source.filter_fields)
+    %b Plural Filtered Fields:
+    = param_table(@data_source.pluralized_filter_fields)
     %p
       Filter on multiple values by passing in a comma-separated list (e.g.,
       %i FR,US,DE
       )
+    %hr
+- if @data_source.singular_filter_fields.present?
+  %p
+    %b Singular Filtered Fields:
+    = param_table(@data_source.singular_filter_fields)
     %hr
 - if @data_source.fulltext_fields.present?
   %p

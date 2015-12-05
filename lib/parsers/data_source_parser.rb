@@ -17,6 +17,7 @@ class DataSourceParser
       dictionary[sanitized_header] = { source:      header,
                                        description: "Description of #{header}",
                                        indexed:     true,
+                                       plural:      false,
                                        type:        guessed_column_type } if guessed_column_type.present?
     end
     dictionary

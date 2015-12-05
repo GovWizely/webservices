@@ -4,7 +4,7 @@ class Api::V2::ApiModelsController < Api::V2Controller
   before_action :setup_search_params
 
   def search
-    query = ApiModelQuery.new(@data_source, params.permit(search_params).with_indifferent_access)
+    query = ApiModelQuery.new(@data_source, params.permit(search_params))
     @data_source.with_api_model do |api_model_klass|
       results = api_model_klass.search(query.generate_search_body_hash)
       respond_with response_hash(query, results)
@@ -21,11 +21,7 @@ class Api::V2::ApiModelsController < Api::V2Controller
   end
 
   def setup_search_params
-    fulltext_fields = @data_source.fulltext_fields.present? ? %i(q) : []
-    self.search_params = %i(api_key callback format offset size api version_number) +
-      @data_source.filter_fields.keys +
-      fulltext_fields +
-      @data_source.date_fields.keys
+    self.search_params = %i(api_key callback format offset size api version_number) + @data_source.search_params
   end
 
   def response_hash(query, results)

@@ -37,7 +37,7 @@
       %b :source:
       field refers to the heading in the CSV document. Do not modify this. If you want to change the name of the field
       that gets used for the API call, change the top level entry for that YAML item. Remember to underscore
-      the top level name (e.g. de_minimis_currency)
+      the top level name (e.g. de_minimis_currency), and keep it a singluar noun.
     %p
       If you don't want a field returned in the API results, delete the whole YAML entry (all 5 lines).
     %p
@@ -46,6 +46,10 @@
       If you want a field returned in the API results but not be searchable or filterable, set the
       %b :indexed:
       value to false.
+    %p
+      If you want a field to be filterable on multiple values (comma-separated), set the
+      %b :plurals:
+      value to true. Do not pluralize the name of the field.
     %p
       The
       %b :description:
