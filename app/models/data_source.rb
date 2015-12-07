@@ -47,15 +47,27 @@ class DataSource
   end
 
   def filter_fields
-    fields_of_type 'enum'
+    fields_matching_hash type: 'enum'
+  end
+
+  def plural_filter_fields
+    fields_matching_hash type: 'enum', indexed: true, plural: true
+  end
+
+  def pluralized_filter_fields
+    plural_filter_fields.map { |singular_key, value| [singular_key.to_s.pluralize.to_sym , value ]}.to_h
+  end
+
+  def singular_filter_fields
+    fields_matching_hash type: 'enum', indexed: true, plural: false
   end
 
   def fulltext_fields
-    fields_of_type 'string'
+    fields_matching_hash type: 'string', indexed: true
   end
 
   def date_fields
-    fields_of_type 'date'
+    fields_matching_hash type: 'date', indexed: true
   end
 
   def oldest_version?
@@ -70,6 +82,11 @@ class DataSource
     @versions ||= DataSource.search(query:   { filtered: { filter: { term: { api: api } } } },
                                     _source: { include: ['version_number'] },
                                     sort:    :version_number).collect(&:version_number)
+  end
+  
+  def search_params
+    fulltext_field_keys = fulltext_fields.present? ? %i(q) : []
+    pluralized_filter_fields.keys + singular_filter_fields.keys + fulltext_field_keys + date_fields.keys
   end
 
   def self.id_from_params(api, version_number)
@@ -96,7 +113,7 @@ class DataSource
     yaml_dictionary.find { |entry| entry.last[:source] == source }.first rescue '*DELETED FIELD*'
   end
 
-  def fields_of_type(type)
-    Hash[yaml_dictionary.find_all { |entry| entry.last[:type] == type && entry.last[:indexed] == true }.map { |entry| [entry.first, entry.last[:description]] }]
+  def fields_matching_hash(hash)
+    Hash[yaml_dictionary.find_all { |entry| entry.last.include_hash?(hash) }.map { |entry| [entry.first, entry.last[:description]] }]
   end
 end
