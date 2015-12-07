@@ -1,8 +1,13 @@
 require 'spec_helper'
 
 describe NavHelper do
-  describe '#available_apis' do
-    subject { helper.available_apis }
+  describe '#top_apis' do
+    subject { helper.top_apis }
+    it { is_expected.to be_a Hash }
+  end
+
+  describe '#api_resources' do
+    subject { helper.api_resources }
     it { is_expected.to be_a Hash }
   end
 
