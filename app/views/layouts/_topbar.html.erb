@@ -18,10 +18,11 @@
           <ul class="dropdown-menu" role="menu">
             <h3 id="additional-resources">Additional Resources</h3>
             <li><%= link_to('App Gallery', "#{Rails.configuration.developerportal_url}/app-gallery.html") %></li>
-            <li><%= link_to('API List', "#{Rails.configuration.developerportal_url}/api-list.html") %></li>
+            <li><%= link_to('List of all APIs', "#{Rails.configuration.developerportal_url}/api-list.html") %></li>
             <li><%= link_to('Search Widgets', "#{Rails.configuration.developerportal_url}/search-widgets.html") %></li>
             <li><%= link_to('API FAQs', "#{Rails.configuration.developerportal_url}/api-faqs.html") %></li>
             <li><%= link_to('Change Log', "#{Rails.configuration.developerportal_url}/change-log.html") %></li>
+            <li><%= link_to('APIs from Trade Agencies', "#{Rails.configuration.developerportal_url}/trade-agency-apis.html") %></li>
             <li><%= link_to('Terms of Service', "#{Rails.configuration.developerportal_url}/tos.html") %></li>
           </ul>
         </li>
@@ -44,13 +45,18 @@
         <header id="mob" class="navbar-toggle collapsed" aria-expanded="false">
           <h3>API Key</h3>
           <p class="view"><%= link_to('Get an API Key', authenticated_root_path, :class => 'current') %></p>
-          <h3>Available APIs</h3>
-          <% available_apis.each do |text, path| %>
-            <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
+          <p class="view"><%= link_to('Manage Your API Key', authenticated_root_path) %></p>
+          <h3>Top APIs</h3>
+          <% top_apis.each do |text, path| %>
+              <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
+          <% end %>
+          <h3>API Resources</h3>
+          <% api_resources.each do |text, path| %>
+              <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
           <% end %>
           <h3>Additional Resources</h3>
           <% additional_resources.each do |text, path| %>
-            <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
+              <p class="view"><%= link_to(text, "#{Rails.configuration.developerportal_url}/#{path}") %></p>
           <% end %>
           <p class="view"><a href="https://github.com/InternationalTradeAdministration/developerportal">ITA on Github</a></p>
         </header>
