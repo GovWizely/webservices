@@ -8,19 +8,19 @@ module NavHelper
   end
 
   def api_resources
-    { 'List of all APIs'            => 'api-list.html',
-      'Search Widgets'              => 'search-widgets.html' }
+    { 'List of all APIs' => 'api-list.html',
+      'Search Widgets'   => 'search-widgets.html' }
   end
 
   def additional_resources
-    { 'Guidance'         => 'guidance.html',
-      'Contact'          => 'contact.html',
-      'App Gallery'      => 'app-gallery.html',
-      'List of all APIs' => 'api-list.html',
-      'Search Widgets'   => 'search-widgets.html',
-      'API FAQs'         => 'api-faqs.html',
-      'Change Log'       => 'change-log.html',
-      'API from Trade Agencies'       => 'trade-agency-apis.html',
-      'Terms of Service' => 'tos.html' }
+    { 'Guidance'                => 'guidance.html',
+      'Contact'                 => 'contact.html',
+      'App Gallery'             => 'app-gallery.html',
+      'List of all APIs'        => 'api-list.html',
+      'Search Widgets'          => 'search-widgets.html',
+      'API FAQs'                => 'api-faqs.html',
+      'Change Log'              => 'change-log.html',
+      'API from Trade Agencies' => 'trade-agency-apis.html',
+      'Terms of Service'        => 'tos.html' }
   end
 end
