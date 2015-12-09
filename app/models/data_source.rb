@@ -55,7 +55,7 @@ class DataSource
   end
 
   def pluralized_filter_fields
-    plural_filter_fields.map { |singular_key, value| [singular_key.to_s.pluralize.to_sym , value ]}.to_h
+    plural_filter_fields.map { |singular_key, value| [singular_key.to_s.pluralize.to_sym, value] }.to_h
   end
 
   def singular_filter_fields
@@ -83,7 +83,7 @@ class DataSource
                                     _source: { include: ['version_number'] },
                                     sort:    :version_number).collect(&:version_number)
   end
-  
+
   def search_params
     fulltext_field_keys = fulltext_fields.present? ? %i(q) : []
     pluralized_filter_fields.keys + singular_filter_fields.keys + fulltext_field_keys + date_fields.keys

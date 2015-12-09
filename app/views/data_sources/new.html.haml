@@ -8,10 +8,6 @@
         - @data_source.errors.full_messages.each do |msg|
           %li= msg
   = render f
-  .field
-    = f.label :path
-    = f.file_field :path, accept: DataSource::VALID_CONTENT_TYPES.join(',')
-    %p Make sure the CSV file was created or exported using UTF-8 characters.
   .actions
     = f.submit 'Create'
 

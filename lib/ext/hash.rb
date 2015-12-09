@@ -4,6 +4,6 @@ class Hash
   end
 
   def include_hash?(other)
-    self.merge(other) == self
+    merge(other) == self
   end
 end
