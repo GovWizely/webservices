@@ -67,6 +67,7 @@ module TradeLead
 
     def process_additional_fields(lead)
       lead[:urls] = lead[:urls].split(',').map(&:squish) if lead[:urls]
+      lead[:urls] = lead[:urls].map{ |url| UrlMapper.get_bitly_url(url, model_class) } if lead[:urls]
       lead[:industry] = split_industries(lead[:industry]) if lead[:industry]
       lead[:ita_industries] = lead[:industry] ? get_mapper_terms_from_array(lead[:industry]) : []
       lead[:country] = 'CA'

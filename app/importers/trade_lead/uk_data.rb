@@ -72,6 +72,7 @@ module TradeLead
       end
 
       lead = process_additional_fields(lead)
+      lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
       sanitize_entry(lead)
     end
 

@@ -70,6 +70,7 @@ module TradeLead
       %i(comments description title tags contact).each do |field|
         entry[field].squish! if entry[field]
       end
+      entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
       entry
     end
   end

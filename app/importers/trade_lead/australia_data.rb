@@ -48,6 +48,7 @@ module TradeLead
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
       entry[:country] = 'AU'
       entry[:url] = "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=#{entry[:id]}"
+      entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
       entry[:source] = TradeLead::Australia.source[:code]
       entry
     end

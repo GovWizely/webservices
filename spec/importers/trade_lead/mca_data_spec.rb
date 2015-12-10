@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::McaData do
+describe TradeLead::McaData, vcr: { cassette_name: 'importers/trade_leads/mca.yml', record: :once } do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/mca" }
   let(:fixtures_file) { "#{fixtures_dir}/mca_leads.xml" }
   let(:resource) { fixtures_file }

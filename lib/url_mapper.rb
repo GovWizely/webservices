@@ -81,13 +81,13 @@ class UrlMapper
       response = JSON.parse(open(request_string).read)
     end
     # :nocov:
-    validate_response(response)
+    validate_response(response, request_string)
   end
 
-  def self.validate_response(response)
+  def self.validate_response(response, request_string)
     return response['data']['link_save']['link']
   rescue
-    raise 'Invalid Bitly API Response: ' + response.to_s
+    raise 'Invalid Bitly API Response: ' + response.to_s + '.  Request: ' + request_string.to_s 
   end
 
   def self.search_for_url(url_string)

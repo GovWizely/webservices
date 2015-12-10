@@ -97,6 +97,7 @@ module TradeLead
         lead[:source] = TradeLead::Fbopen.source[:code]
         lead[:id]      = lead[:contract_number]
         lead[:ita_industries] = lead[:industry] ? [normalize_industry(lead[:industry])].compact.flatten.uniq : []
+        lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
         lead
       end
 

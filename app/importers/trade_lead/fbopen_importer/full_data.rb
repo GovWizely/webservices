@@ -73,6 +73,7 @@ module TradeLead
         return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.today
 
         entry = process_additional_fields(entry)
+        entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
         entry
       end
 
