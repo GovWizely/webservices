@@ -45,6 +45,7 @@ module TradeLead
       item_hash[:funding_source] = FUNDING_SOURCE
       item_hash[:source] = TradeLead::Mca.source[:code]
       item_hash[:id] = Utils.generate_id(item_hash, %i(url description title id))
+      item_hash[:url] = UrlMapper.get_bitly_url(item_hash[:url], model_class) if item_hash[:url].present?
       item_hash
     end
 

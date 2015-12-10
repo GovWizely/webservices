@@ -2,6 +2,117 @@
 http_interactions:
 - request:
     method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.bl.bravosolution.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '205'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"f5f1fc11511a4f7f6b0040a0958a516f80e67022"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB7XY",
+        "aggregate_link": "http://bit.ly/1MtB7XZ", "long_url": "http://www.bl.bravosolution.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:40 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ncsgrp.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"d2077b356385f8a4b0ba8333438b80fee3319606"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB66p",
+        "aggregate_link": "http://bit.ly/1MtB66q", "long_url": "http://www.ncsgrp.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:41 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.kentpolice.bravosolution.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"e1fea2e57e309efa27d2289a1b28bb7a432e55ec"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB8er",
+        "aggregate_link": "http://bit.ly/1MtB8es", "long_url": "http://www.kentpolice.bravosolution.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:42 GMT
+- request:
+    method: get
     uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Construction%20and%20Real%20Estate&source=TradeLead::Uk
     body:
       encoding: US-ASCII

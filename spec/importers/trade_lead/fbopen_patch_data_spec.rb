@@ -44,7 +44,7 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
         'POPCOUNTRY' => 'BR',
         'SETASIDE'   => 'N/A',
         'SOLNBR'     => '2013-N-15012',
-        'LINK'       => 'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
+        'LINK'       => nil,
         'OFFICE'     => 'Centers for Disease Control and Prevention',
         'ZIP'        => '30341-4146',
         'EMAIL'      => 'sample@example.net',
@@ -72,7 +72,7 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
                         specific_location:                'BR',
                         title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
-                        url:                              'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
+                        url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
                        )

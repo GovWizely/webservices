@@ -218,8 +218,10 @@ end
 shared_context 'TradeLead::Mca data' do
   before do
     TradeLead::Mca.recreate_index
-    TradeLead::McaData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+    VCR.use_cassette('importers/trade_leads/mca.yml', record: :once) do
+      TradeLead::McaData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+    end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeLead::Mca] = JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/mca/results.json").read)

@@ -30,7 +30,7 @@ describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/can
         end_user_entity:                      'Public Health Agency of Canada',
         description:                          "  Before awarding a Contract, \t  the government (...)  ",
         contact:                              "Reynolds(  ), \t (888) 000-0000",
-        document:                             'https://example.net/123/abc.pdf',
+        document:                             nil,
       }
     end
 
@@ -57,7 +57,7 @@ describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/can
                         implementing_entity:                  'Public Health Agency of Canada',
                         description:                          'Before awarding a Contract, the government (...)',
                         contact:                              'Reynolds( ), (888) 000-0000',
-                        urls:                                 ['https://example.net/123/abc.pdf'],
+                        urls:                                 nil,
                         country:                              'CA',
                         source:                               'CANADA',
                        )

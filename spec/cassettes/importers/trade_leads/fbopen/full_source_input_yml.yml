@@ -19,7 +19,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 Dec 2015 20:48:00 GMT
+      - Thu, 10 Dec 2015 19:13:45 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -33,7 +33,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - b32147ec-b7da-499f-9d59-2349ba8bdf18
+      - 0ab05c70-82b1-41fe-b20a-469658d7dd92
       Status:
       - 200 OK
       Vary:
@@ -48,7 +48,44 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 20:48:00 GMT
+  recorded_at: Thu, 10 Dec 2015 19:13:45 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.fbo.gov/spg/DLA/J3/DSCC-BSM/SPE7M815Q0425/listing.html&title=TradeLead::Fbopen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Dec 2015 19:13:45 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '258'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"6c1ef24df048ec71592904a9c729d66a4ed21b97"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1OVuFHt",
+        "aggregate_link": "http://bit.ly/1JeXyZb", "long_url": "https://www.fbo.gov/spg/DLA/J3/DSCC-BSM/SPE7M815Q0425/listing.html",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 10 Dec 2015 19:13:45 GMT
 - request:
     method: get
     uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=339994&source=TradeLead::Fbopen
@@ -68,7 +105,7 @@ http_interactions:
       message: OK
     headers:
       Date:
-      - Tue, 01 Dec 2015 20:48:00 GMT
+      - Thu, 10 Dec 2015 19:13:45 GMT
       Server:
       - Apache
       X-Frame-Options:
@@ -82,7 +119,7 @@ http_interactions:
       Cache-Control:
       - max-age=0, private, must-revalidate
       X-Request-Id:
-      - d6009cdf-15d1-4d22-b490-0a4e67d267a0
+      - 0efad97d-94f3-46ad-b816-459d7d8e671a
       Status:
       - 200 OK
       Vary:
@@ -97,5 +134,79 @@ http_interactions:
       encoding: UTF-8
       string: "[]"
     http_version: 
-  recorded_at: Tue, 01 Dec 2015 20:48:00 GMT
+  recorded_at: Thu, 10 Dec 2015 19:13:45 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.fbo.gov/notices/5eaf5409ca1351bb517077dfa0637e2e&title=TradeLead::Fbopen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Dec 2015 19:13:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '235'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"7e75d4022ec8e9bfcfe29360e172a73768afe0b8"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1Z1Mrh9",
+        "aggregate_link": "http://bit.ly/1YkNUzu", "long_url": "https://www.fbo.gov/notices/5eaf5409ca1351bb517077dfa0637e2e",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 10 Dec 2015 19:13:46 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.fbo.gov/notices/4a5d49fddc31fdc4c5433fa49311fdda&title=TradeLead::Fbopen
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 10 Dec 2015 19:13:46 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '235'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"0c93844154560d020a86bbb781985e3f0b11f69a"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1Z1Mrhb",
+        "aggregate_link": "http://bit.ly/1YkNVn8", "long_url": "https://www.fbo.gov/notices/4a5d49fddc31fdc4c5433fa49311fdda",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 10 Dec 2015 19:13:46 GMT
 recorded_with: VCR 2.9.3

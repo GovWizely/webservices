@@ -20,7 +20,9 @@ describe 'Trade Leads API V1', type: :request do
     VCR.use_cassette('importers/trade_leads/state.yml', record: :once) do
       TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
     end
-    TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+    VCR.use_cassette('importers/trade_leads/mca.yml', record: :once) do
+      TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
+    end
   end
 
   let(:expected_results) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/trade_leads/expected_results.json").read }
