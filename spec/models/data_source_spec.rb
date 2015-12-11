@@ -47,7 +47,7 @@ describe DataSource do
   end
 
   describe 'ingest' do
-    let(:data_source) { DataSource.create(_id: 'test_currencies:v1', published: true, version_number: 1, name: 'test', description: 'test API', api: 'test_currencies', data: "Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,VAT currency,date,Notes\r\nAndorra,AD,12,EUR,15.5,,2015-10-01,\r\nArmenia,AM,150000,AMD,,,2015-10-02,\r\n", dictionary: "---\r\n:country:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso2_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:de_minimis_value:\r\n  :source: de minimis value\r\n  :description: Description of de minimis value\r\n  :indexed: true\r\n  :plural: false\r\n  :type: integer\r\n:de_minimis_currency:\r\n  :source: de minimis currency\r\n  :description: Description of de minimis currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:vat_amount:\r\n  :source: VAT amount\r\n  :description: Description of VAT amount\r\n  :indexed: true\r\n  :plural: false\r\n  :type: float\r\n:vat_currency:\r\n  :source: VAT currency\r\n  :description: Description of VAT currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:notes:\r\n  :source: Notes\r\n  :description: Description of Notes\r\n  :indexed: true\r\n  :plural: false\r\n  :type: string\r\n") }
+    let(:data_source) { DataSource.create(_id: 'test_currencies:v1', published: true, version_number: 1, name: 'test', description: 'test API', api: 'test_currencies', data: "Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,vatcurrency,date,Notes\r\nAndorra,AD,12,EUR,15.5,EUR,2015-10-01,\r\nArmenia,AM,150000,AMD,,,2015-10-02,some notes\r\n", dictionary: '') }
 
     before do
       data_source.ingest
@@ -55,7 +55,7 @@ describe DataSource do
         expect(klass.count).to eq(2)
         query = ApiModelQuery.new(data_source, ActionController::Parameters.new(country: 'Armenia'))
         expect(klass.search(query.generate_search_body_hash).first.iso2_code).to eq('AM')
-        data_source.update(dictionary: "---\r\n:country_name:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso2_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:de_minimis_value:\r\n  :source: de minimis value\r\n  :description: Description of de minimis value\r\n  :indexed: true\r\n  :plural: false\r\n  :type: integer\r\n:de_minimis_currency:\r\n  :source: de minimis currency\r\n  :description: Description of de minimis currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:vat_amount:\r\n  :source: VAT amount\r\n  :description: Description of VAT amount\r\n  :indexed: true\r\n  :plural: false\r\n  :type: float\r\n:vat_currency:\r\n  :source: VAT currency\r\n  :description: Description of VAT currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:notes:\r\n  :source: Notes\r\n  :description: Description of Notes\r\n  :indexed: true\r\n  :plural: false\r\n  :type: string\r\n")
+        data_source.update(dictionary: "---\r\n:country_name:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:de_minimis_value:\r\n  :source: de minimis value\r\n  :description: Description of de minimis value\r\n  :indexed: true\r\n  :plural: false\r\n  :type: integer\r\n:de_minimis_currency:\r\n  :source: de minimis currency\r\n  :description: Description of de minimis currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:vat_amount:\r\n  :source: VAT amount\r\n  :description: Description of VAT amount\r\n  :indexed: true\r\n  :plural: false\r\n  :type: float\r\n:vat_currency:\r\n  :source: vatcurrency\r\n  :description: Description of VAT currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:notes:\r\n  :source: Notes\r\n  :description: Description of Notes\r\n  :indexed: true\r\n  :plural: false\r\n  :type: string\r\n")
       end
       data_source.ingest
     end
@@ -65,7 +65,7 @@ describe DataSource do
         query = ApiModelQuery.new(data_source, ActionController::Parameters.new(country_name: 'Armenia'))
         klass.search(query.generate_search_body_hash)
       end
-      expect(results.first.iso2_code).to eq('AM')
+      expect(results.first.iso_code).to eq('AM')
       expect(Webservices::ApiModels.constants).to include(:TestCurrency)
     end
   end

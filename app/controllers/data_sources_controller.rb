@@ -27,11 +27,13 @@ class DataSourcesController < ApplicationController
   end
 
   def edit
+    @data_source.dictionary = @data_source.yaml_dictionary.deep_stringify_keys.to_yaml
   end
 
   def update
     attributes = params.require(:data_source).permit(:name, :api, :description, :dictionary, :version_number, :published, :path)
     attributes.merge!(data: params['data_source']['path'].read) if params['data_source']['path'].present?
+    attributes[:dictionary] = YAML.load(attributes[:dictionary]).deep_symbolize_keys.to_yaml
     @data_source.update(attributes) && @data_source.ingest
     redirect_to data_source_path(@data_source), notice: 'Data source was successfully updated and data uploaded.'
   end
