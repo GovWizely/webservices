@@ -4,7 +4,7 @@
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
-  :industry: '331318'
+  :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
   :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
@@ -34,7 +34,7 @@
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
-  :industry: '331318'
+  :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
   :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
@@ -54,7 +54,7 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
   :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
@@ -94,7 +94,7 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
   :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
@@ -134,7 +134,7 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
   :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms

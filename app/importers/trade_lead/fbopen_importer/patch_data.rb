@@ -54,6 +54,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || default_endpoint
         @encoding = encoding
+        @naics_mapper = NaicsMapper.new
       end
 
       def import
@@ -96,8 +97,8 @@ module TradeLead
         lead[:description] &&= Nokogiri::HTML.fragment(lead[:description]).inner_text.squish
         lead[:source] = TradeLead::Fbopen.source[:code]
         lead[:id]      = lead[:contract_number]
-        lead[:ita_industries] = lead[:industry] ? [normalize_industry(lead[:industry])].compact.flatten.uniq : []
         lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
+        lead = process_industries(lead)
         lead
       end
 

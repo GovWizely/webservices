@@ -30,6 +30,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || DEFAULT_SOURCE
         @encoding = encoding
+        @naics_mapper = NaicsMapper.new
       end
 
       def import
@@ -82,7 +83,7 @@ module TradeLead
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
         entry[:source] = TradeLead::Fbopen.source[:code]
         entry[:id]      = entry[:contract_number]
-        entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
+        entry = process_industries(entry)
         entry
       end
 

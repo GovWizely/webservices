@@ -90,7 +90,7 @@ module TradeLead
     end
 
     def split_industries(industry)
-      return industry.split(',').map(&:squish) 
+      industry.split(',').map(&:squish)
     end
   end
 end

@@ -47,9 +47,14 @@ module TradeLead
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
       entry[:country] = 'AU'
+      entry = process_urls(entry)
+      entry[:source] = TradeLead::Australia.source[:code]
+      entry
+    end
+
+    def process_urls(entry)
       entry[:url] = "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=#{entry[:id]}"
       entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
-      entry[:source] = TradeLead::Australia.source[:code]
       entry
     end
   end

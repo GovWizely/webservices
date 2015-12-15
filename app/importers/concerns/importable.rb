@@ -91,7 +91,7 @@ module Importable
   end
 
   def get_mapper_terms_from_array(array)
-    return array.map { |i| normalize_industry(i) }.compact.flatten.uniq
+    array.map { |i| normalize_industry(i) }.compact.flatten.uniq
   end
 
   def parse_date(date_str)
@@ -114,6 +114,12 @@ module Importable
     event_hash[:address].grep(/[A-Z]{2} [0-9]{5}(-\d{4})*$/) do |address_line|
       address_line.split(',').reverse[1].to_s.squish
     end.compact.first
+  end
+
+  def process_industries(entry)
+    entry[:industry] = entry[:industry] + ': ' + @naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
+    entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
+    entry
   end
 
   delegate :can_purge_old?, to: :model_class

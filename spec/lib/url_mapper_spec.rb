@@ -34,8 +34,8 @@ describe UrlMapper do
         request_string = 'request_string'
         allow(UrlMapper).to receive_message_chain(:open, :read) { '{"status_code": "1337"}' }
         expect { UrlMapper.call_bitly_api(request_string, 'url_string') }.to raise_error(
-          'Invalid Bitly API Response: ' + JSON.parse(bogus_response).to_s + ".  Request: " + request_string
-          )
+          'Invalid Bitly API Response: ' + JSON.parse(bogus_response).to_s + '.  Request: ' + request_string,
+        )
       end
     end
   end
