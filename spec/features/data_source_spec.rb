@@ -2,7 +2,7 @@ require 'spec_helper'
 
 RSpec.feature 'Data Source management' do
   context 'with an admin user' do
-    before { create_user(email: 'test@gov.gov', admin: true) }
+    before(:all) { @user = create_user(email: 'test@gov.gov', admin: true) }
 
     scenario 'admin user creates, edits, and deletes an API' do
       visit '/'
@@ -136,6 +136,35 @@ RSpec.feature 'Data Source management' do
       check('Published')
       click_button('Update')
       expect(page).to have_text('Published: true')
+    end
+
+    scenario 'admin user updates the data in the data source file (non-breaking change)' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Some new API'
+      fill_in 'Description', with: 'Not published yet'
+      fill_in 'Api', with: 'csv_edits'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
+      click_button('Create')
+
+      expect(page).not_to have_field('Path')
+      check('Published')
+      click_button('Update')
+
+      visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
+      expect(page).to have_text('Andorra')
+
+      visit '/data_sources/csv_edits:v1/edit'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/updated_de_minimis_date.csv")
+      click_button('Update')
+
+      visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
+      expect(page).to have_text('Andorraaah')
     end
   end
 end

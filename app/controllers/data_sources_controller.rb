@@ -20,7 +20,7 @@ class DataSourcesController < ApplicationController
     attributes = data_source_params.merge(_id: versioned_id, data: params['data_source']['path'].read, published: false)
     @data_source = DataSource.new(attributes)
     if @data_source.save(op_type: :create, refresh: true)
-      redirect_to edit_data_source_path(@data_source), notice: 'Data source was successfully created. Review the schema and make any changes.'
+      redirect_to edit_data_source_path(@data_source, just_created: true), notice: 'Data source was successfully created. Review the schema and make any changes.'
     else
       render :new
     end
@@ -30,7 +30,8 @@ class DataSourcesController < ApplicationController
   end
 
   def update
-    attributes = params.require(:data_source).permit(:name, :api, :description, :dictionary, :version_number, :published)
+    attributes = params.require(:data_source).permit(:name, :api, :description, :dictionary, :version_number, :published, :path)
+    attributes.merge!(data: params['data_source']['path'].read) if params['data_source']['path'].present?
     @data_source.update(attributes) && @data_source.ingest
     redirect_to data_source_path(@data_source), notice: 'Data source was successfully updated and data uploaded.'
   end
