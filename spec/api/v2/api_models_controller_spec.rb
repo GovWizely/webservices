@@ -4,9 +4,8 @@ describe Api::V2::ApiModelsController, type: :request do
   include_context 'V2 headers'
   before(:all) do
     csv = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv"
-    dictionary_yaml = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_dictionary.yaml"
     data_source = DataSource.create(_id: 'de_minimis_currencies:v1', name: 'test', description: 'test API',
-                                    api: 'de_minimis_currencies', data: csv, dictionary: dictionary_yaml,
+                                    api: 'de_minimis_currencies', data: csv, dictionary: '',
                                     version_number: 1, published: true)
     data_source.ingest
   end

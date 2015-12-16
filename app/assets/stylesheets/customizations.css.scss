@@ -113,6 +113,9 @@
 
 textarea#data_source_dictionary {
   width: 100%;
+  font-family:Monaco, Bitstream Vera Sans Mono, Lucida Console, Terminal, monospace;
+  color:#333;
+  font-size:14px;
 }
 
 .data_source .field input

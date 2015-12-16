@@ -31,15 +31,17 @@ class DataSource
     delete_api_index
     with_api_model do |klass|
       klass.create_index!
-      CSV.parse(data,
-                converters:        [->(f) { f ? f.strip : nil }, :date, :numeric],
-                headers:           true,
-                header_converters: [->(f) { convert_header(f) }],
-                skip_blanks:       true) do |row|
-        klass.create(row.to_hash.slice(*yaml_dictionary.keys))
-      end
+      ingest_csv(klass)
       klass.refresh_index!
     end
+  end
+
+  def ingest_csv(klass)
+    ingest_csv_options = { converters:        [->(f) { f ? f.squish : nil }, :date, :numeric],
+                           header_converters: [->(f) { convert_header(f) }],
+                           headers:           true,
+                           skip_blanks:       true }
+    CSV.parse(data, ingest_csv_options) { |row| klass.create(transform(row.to_hash.slice(*yaml_dictionary.keys))) }
   end
 
   def yaml_dictionary
@@ -99,6 +101,10 @@ class DataSource
 
   private
 
+  def transform(hash)
+    hash.keys.collect { |field_sym| [field_sym, transformers[field_sym].transform(hash[field_sym])] }.to_h
+  end
+
   def delete_api_index
     ES.client.indices.delete(index: [ES::INDEX_PREFIX, 'api_models', api, "v#{version_number}"].join(':'), ignore: 404)
     DataSource.refresh_index!
@@ -109,11 +115,15 @@ class DataSource
     @dictionary = parser.generate_dictionary.to_yaml
   end
 
+  def transformers
+    yaml_dictionary.map { |field, meta| [field, DataSources::Transformer.new(meta)] }.to_h
+  end
+
   def convert_header(source)
-    yaml_dictionary.find { |entry| entry.last[:source] == source }.first rescue '*DELETED FIELD*'
+    yaml_dictionary.detect { |_, meta| meta[:source] == source }.first rescue '*DELETED FIELD*'
   end
 
   def fields_matching_hash(hash)
-    Hash[yaml_dictionary.find_all { |entry| entry.last.include_hash?(hash) }.map { |entry| [entry.first, entry.last[:description]] }]
+    yaml_dictionary.find_all { |_, meta| meta.include_hash?(hash) }.map { |field, meta| [field, meta[:description]] }.to_h
   end
 end
