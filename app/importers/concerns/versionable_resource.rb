@@ -18,6 +18,7 @@ module VersionableResource
         update_metadata(available_version)
         Rails.logger.info "#{self.class.name}: resource updated, new data indexed."
       else
+        super if self.class.const_defined?(:CONTAINS_MAPPER_LOOKUPS) # Run the importer anyways to catch Mapper updates
         touch_metadata
         Rails.logger.info "#{self.class.name}: resource unchanged, no new data indexed."
       end

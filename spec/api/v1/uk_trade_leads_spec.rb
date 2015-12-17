@@ -3,8 +3,10 @@ require 'spec_helper'
 describe 'UK Trade Leads API V1', type: :request do
   before(:all) do
     TradeLead::Uk.recreate_index
-    TradeLead::UkData.new(
-      "#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
+    VCR.use_cassette('importers/trade_leads/uk.yml', record: :once) do
+      TradeLead::UkData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
+    end
   end
   let(:expected_results) do
     JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/uk/results.json").read,

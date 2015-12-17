@@ -1,0 +1,28 @@
+{
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "bool": {
+            "should":[
+              {
+                "query":{
+                  "match": {
+                    "industry.keyword": "dental"
+                  }
+                }
+                },
+              {
+                "query":{
+                  "match": {
+                    "ita_industries.keyword": "dental"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      ]
+    }
+  }
+}

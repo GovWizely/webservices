@@ -8,10 +8,18 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::State.recreate_index
     TradeLead::Uk.recreate_index
     TradeLead::Mca.recreate_index
-    TradeLead::FbopenImporter::PatchData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/presol_source").import
-    TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
-    TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
-    TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    VCR.use_cassette('importers/trade_leads/fbopen/presol_source.yml', record: :once) do
+      TradeLead::FbopenImporter::PatchData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/presol_source").import
+    end
+    VCR.use_cassette('importers/trade_leads/canada.yml', record: :once) do
+      TradeLead::CanadaData.new("#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv").import
+    end
+    VCR.use_cassette('importers/trade_leads/uk.yml', record: :once) do
+      TradeLead::UkData.new("#{Rails.root}/spec/fixtures/trade_leads/uk/Notices.xml").import
+    end
+    VCR.use_cassette('importers/trade_leads/state.yml', record: :once) do
+      TradeLead::StateData.new("#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json").import
+    end
     TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
   end
 
