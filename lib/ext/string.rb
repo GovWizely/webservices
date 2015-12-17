@@ -10,4 +10,8 @@ class String
   def strip_tags
     ActionController::Base.helpers.strip_tags(self)
   end
+
+  def reformat_date(format)
+    Date.strptime(self, format).to_s
+  end
 end

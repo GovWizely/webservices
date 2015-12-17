@@ -56,6 +56,14 @@ describe DataSources::Transformer do
     end
   end
 
+  context 'reformatting non-standard date strings' do
+    let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: [{ reformat_date: '%m/%d/%Y' }])) }
+
+    it 'returns the value in the new format' do
+      expect(transformer.transform('6/7/2015')).to eq('2015-06-07')
+    end
+  end
+
   context 'default values' do
     let(:transformer) { DataSources::Transformer.new(metadata.merge(default: 'USD')) }
 
