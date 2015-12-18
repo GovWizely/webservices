@@ -6,6 +6,7 @@ module TradeLead
      TradeLead::CanadaData,
      TradeLead::StateData,
      TradeLead::UkData,
-     TradeLead::McaData]
+     TradeLead::McaData,
+     TradeLead::UstdaData]
   end
 end

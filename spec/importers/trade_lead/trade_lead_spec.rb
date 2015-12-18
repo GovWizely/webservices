@@ -7,7 +7,8 @@ describe TradeLead do
      TradeLead::CanadaData,
      TradeLead::StateData,
      TradeLead::UkData,
-     TradeLead::McaData]
+     TradeLead::McaData,
+     TradeLead::UstdaData]
   end
 
   describe '#importers' do

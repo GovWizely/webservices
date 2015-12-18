@@ -21,10 +21,11 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::State results'
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains all TradeLead::Canada results'
+      it_behaves_like 'it contains all TradeLead::Ustda results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
           [TradeLead::Australia, TradeLead::Fbopen, TradeLead::State,
-           TradeLead::Uk, TradeLead::Canada, TradeLead::Mca]
+           TradeLead::Uk, TradeLead::Canada, TradeLead::Mca, TradeLead::Ustda]
         end
       end
       it_behaves_like 'it contains all expected aggregations' do
@@ -91,6 +92,14 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       end
     end
 
+    context 'and is set to "USTDA" source' do
+      let(:params) { { sources: 'USTDA' } }
+      it_behaves_like 'it contains all TradeLead::Ustda results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Ustda] }
+      end
+    end
+
     context 'and is set to "CANADA" source' do
       let(:params) { { sources: 'CANADA' } }
       it_behaves_like 'it contains all TradeLead::Canada results'
@@ -120,6 +129,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all expected aggregations' do
         let(:expected_json) { 'trade_leads/all_sources/aggregations_with_query_equipment.json' }
       end
+      it_behaves_like 'it contains all TradeLead::Ustda results that match "equipment"'
     end
 
     context "when search query is set to 'sanitation'" do

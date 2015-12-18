@@ -6,6 +6,7 @@ module TradeLead
                           TradeLead::Fbopen,
                           TradeLead::State,
                           TradeLead::Uk,
-                          TradeLead::Mca]
+                          TradeLead::Mca,
+                          TradeLead::Ustda]
   end
 end
