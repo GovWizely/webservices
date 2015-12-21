@@ -16,6 +16,7 @@ class DataSource
   attribute :version_number, Integer
   validates :version_number, numericality: true, presence: true
   attribute :published, Boolean
+  attribute :tab_delimited, Boolean
 
   before_save :build_dictionary
   after_destroy :delete_api_index
@@ -40,8 +41,13 @@ class DataSource
     ingest_csv_options = { converters:        [->(f) { f ? f.squish : nil }, :date, :numeric],
                            header_converters: [->(f) { convert_header(f) }],
                            headers:           true,
+                           col_sep:           col_sep,
                            skip_blanks:       true }
     CSV.parse(data, ingest_csv_options) { |row| klass.create(transform(row.to_hash.slice(*yaml_dictionary.keys))) }
+  end
+
+  def col_sep
+    tab_delimited ? "\t" : ','
   end
 
   def yaml_dictionary
@@ -111,7 +117,7 @@ class DataSource
   end
 
   def build_dictionary
-    parser = DataSourceParser.new(data)
+    parser = DataSourceParser.new(data, col_sep)
     @dictionary = parser.generate_dictionary.to_yaml
   end
 

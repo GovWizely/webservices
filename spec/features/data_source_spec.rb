@@ -166,5 +166,36 @@ RSpec.feature 'Data Source management' do
       visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
       expect(page).to have_text('Andorraaah')
     end
+
+    scenario 'admin user changes the data source file from TSV to CSV' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Testing tabs/commas'
+      fill_in 'Description', with: 'Testing tabs/commas: Not published yet'
+      fill_in 'Api', with: 'tabs_commas'
+      check('Tab delimited')
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/tabs.tsv")
+      click_button('Create')
+
+      check('Published')
+      click_button('Update')
+
+      visit("/v1/tabs_commas/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('from tabs')
+
+      visit '/data_sources/tabs_commas:v1/edit'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/commas.csv")
+      uncheck('Tab delimited')
+
+      click_button('Update')
+
+      visit("/v1/tabs_commas/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('from commas')
+    end
   end
 end

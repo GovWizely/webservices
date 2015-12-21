@@ -3,13 +3,14 @@ class DataSourceParser
   TYPES = %w(string enum integer float date)
   PROBABLY_TOO_LONG_FOR_ENUM = 8
 
-  def initialize(csv_string)
+  def initialize(csv_string, col_sep)
     @csv_string = csv_string
+    @col_sep = col_sep
   end
 
   def generate_dictionary
     dictionary = {}
-    csv = CSV.parse(@csv_string, converters: [:date, :numeric], headers: true)
+    csv = CSV.parse(@csv_string, converters: [:date, :numeric], headers: true, col_sep: @col_sep)
     csv.headers.each do |header|
       sanitized_header = sanitize_header(header)
       column_values = csv.map { |r| r[header] }
