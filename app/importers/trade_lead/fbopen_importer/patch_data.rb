@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class PatchData
       include Importable
+      attr_accessor :naics_mapper
 
       COLUMN_HASH = {
         'ntype'      => :notice_type,
@@ -54,7 +55,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || default_endpoint
         @encoding = encoding
-        @naics_mapper = NaicsMapper.new
+        self.naics_mapper = NaicsMapper.new
       end
 
       def import

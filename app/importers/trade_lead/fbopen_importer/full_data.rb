@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class FullData
       include Importable
+      attr_accessor :naics_mapper
 
       XPATHS = {
         publish_date:                     '//DATE',
@@ -30,7 +31,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || DEFAULT_SOURCE
         @encoding = encoding
-        @naics_mapper = NaicsMapper.new
+        self.naics_mapper = NaicsMapper.new
       end
 
       def import

@@ -117,7 +117,8 @@ module Importable
   end
 
   def process_industries(entry)
-    entry[:industry] = entry[:industry] + ': ' + @naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
+    fail 'must implement naics_mapper' unless self.class.method_defined?(:naics_mapper)
+    entry[:industry] = entry[:industry] + ': ' + naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
     entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
     entry
   end

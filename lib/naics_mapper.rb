@@ -12,26 +12,20 @@ class NaicsMapper
   end
 
   def lookup_naics_code(code)
-    Rails.cache.fetch("#{code}", expires_in: 60.minutes) do
-      result = search_for_2012_code(code)
+    result = search_for_code(code, :code_2012)
+    if result
+      return result[:title_2012]
+    else
+      result = search_for_code(code, :code_2007)
       if result
-        return result[:title_2012]
+        return result[:title_2007]
       else
-        result = search_for_2007_code(code)
-        if result
-          return result[:title_2007]
-        else
-          fail 'NAICS code not found: ' + code
-        end
+        fail 'NAICS code not found: ' + code
       end
     end
   end
 
-  def search_for_2012_code(code)
-    @lookup_hash.find { |entry| entry[:code_2012] == code.to_i }
-  end
-
-  def search_for_2007_code(code)
-    @lookup_hash.find { |entry| entry[:code_2007] == code.to_i }
+  def search_for_code(code, key)
+    @lookup_hash.find { |entry| entry[key] == code.to_i }
   end
 end
