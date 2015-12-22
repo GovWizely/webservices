@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::AustraliaData do
+describe TradeLead::AustraliaData, vcr: { cassette_name: 'importers/trade_leads/australia.yml', record: :once } do
   let(:fixtures_dir) { '' }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv" }
   let(:resource) { fixtures_file }

@@ -4,6 +4,7 @@ module TradeLead
   class UkData
     include Importable
     include VersionableResource
+    CONTAINS_MAPPER_LOOKUPS = true
 
     def initialize(resource = nil)
       @resource = resource
@@ -70,11 +71,26 @@ module TradeLead
         fail "Should not be any docs with status #{lead[:status]}"
       end
 
+      lead = process_additional_fields(lead)
+      lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
+      sanitize_entry(lead)
+    end
+
+    def process_additional_fields(lead)
       lead[:publish_date] = lead[:publish_date] ? parse_date(lead[:publish_date]) : nil
       lead[:source] = model_class.source[:code]
       lead[:country] = 'GB'
+      process_industries(lead)
+      lead
+    end
 
-      sanitize_entry(lead)
+    def process_industries(lead)
+      lead[:industry] = split_industries(lead[:industry]) if lead[:industry]
+      lead[:ita_industries] = lead[:industry] ? get_mapper_terms_from_array(lead[:industry]) : []
+    end
+
+    def split_industries(industry)
+      industry.split(',').map(&:squish)
     end
   end
 end

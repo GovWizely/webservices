@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::FbopenImporter::PatchData do
+describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/trade_leads/fbopen/complete_source.yml', record: :once } do
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
@@ -30,7 +30,7 @@ describe TradeLead::FbopenImporter::PatchData do
       {
         'ntype'      => 'PRESOL',
         'CONTACT'    => 'Juanita A. Waters, Contract Administrator, Phone 7704882933, Fax N/A',
-        'NAICS'      => '541990',
+        'NAICS'      => nil,
         'YEAR'       => '13',
         'SUBJECT'    => 'National Health and Nutrition Examination Survey (NHANES) Survey',
         'DATE'       => '0616',
@@ -44,7 +44,7 @@ describe TradeLead::FbopenImporter::PatchData do
         'POPCOUNTRY' => 'BR',
         'SETASIDE'   => 'N/A',
         'SOLNBR'     => '2013-N-15012',
-        'LINK'       => 'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
+        'LINK'       => nil,
         'OFFICE'     => 'Centers for Disease Control and Prevention',
         'ZIP'        => '30341-4146',
         'EMAIL'      => 'sample@example.net',
@@ -61,7 +61,8 @@ describe TradeLead::FbopenImporter::PatchData do
                         contract_number:                  '2013-N-15012',
                         id:                               '2013-N-15012',
                         description:                      "The National Health and Nutrition Examination Survey (NHANES) is a prog. The NHANES program began in the early 1960's and has been conducted as a s",
-                        industry:                         '541990',
+                        industry:                         nil,
+                        ita_industries:                   [],
                         notice_type:                      'PRESOL',
                         procurement_office:               'Centers for Disease Control and Prevention',
                         procurement_office_address:       '2920 Brandywine Road, Room 3000 Atlanta GA 30341-4146',
@@ -71,7 +72,7 @@ describe TradeLead::FbopenImporter::PatchData do
                         specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
                         specific_location:                'BR',
                         title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
-                        url:                              'https://www.fbo.gov/spg/HHS/CDCP/PGOA/2013-N-15012/listing.html',
+                        url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
                        )

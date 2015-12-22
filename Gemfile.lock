@@ -6,7 +6,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/industry_mapping_client.git
-  revision: 7d23ed06f9815081d8de30b45a564506a22c3d87
+  revision: 2c2b4bd4300f0b10b1e32bcf864c9e587b78e354
   specs:
     industry_mapping_client (0.1.1)
       httparty

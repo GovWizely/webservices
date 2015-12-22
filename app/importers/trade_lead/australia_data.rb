@@ -8,6 +8,7 @@ module TradeLead
 
     # Original source: http://data.gov.au/dataset/austender-contract-notice-export
     ENDPOINT = "#{Rails.root}/data/australian_trade_leads/trade_leads_full.csv"
+    CONTAINS_MAPPER_LOOKUPS = true
 
     COLUMN_HASH = {
       agency:             :agency,
@@ -43,10 +44,17 @@ module TradeLead
 
       return unless entry[:id]
 
+      entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
       entry[:country] = 'AU'
-      entry[:url] = "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=#{entry[:id]}"
+      entry = process_urls(entry)
       entry[:source] = TradeLead::Australia.source[:code]
+      entry
+    end
+
+    def process_urls(entry)
+      entry[:url] = "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=#{entry[:id]}"
+      entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
       entry
     end
   end

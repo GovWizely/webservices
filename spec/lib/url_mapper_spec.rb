@@ -31,8 +31,11 @@ describe UrlMapper do
     context 'When response from Bitly API is unexpected' do
       it 'Raises an exception' do
         bogus_response = '{"status_code": "1337"}'
+        request_string = 'request_string'
         allow(UrlMapper).to receive_message_chain(:open, :read) { '{"status_code": "1337"}' }
-        expect { UrlMapper.call_bitly_api('request_string', 'url_string') }.to raise_error('Invalid Bitly API Response: ' + JSON.parse(bogus_response).to_s)
+        expect { UrlMapper.call_bitly_api(request_string, 'url_string') }.to raise_error(
+          'Invalid Bitly API Response: ' + JSON.parse(bogus_response).to_s + '.  Request: ' + request_string,
+        )
       end
     end
   end

@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class FullData
       include Importable
+      attr_accessor :naics_mapper
 
       XPATHS = {
         publish_date:                     '//DATE',
@@ -30,6 +31,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || DEFAULT_SOURCE
         @encoding = encoding
+        self.naics_mapper = NaicsMapper.new
       end
 
       def import
@@ -72,10 +74,17 @@ module TradeLead
         entry = process_xml_dates(entry)
         return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.today
 
+        entry = process_additional_fields(entry)
+        entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
+        entry
+      end
+
+      def process_additional_fields(entry)
         entry[:description] &&= Nokogiri::HTML.fragment(entry[:description]).inner_text.squish
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
         entry[:source] = TradeLead::Fbopen.source[:code]
         entry[:id]      = entry[:contract_number]
+        entry = process_industries(entry)
         entry
       end
 

@@ -4,7 +4,8 @@
   :procurement_office: Forest Service
   :procurement_organization_address: R-4 SW Idaho/Nevada Acquisition Center
   :classification_code: '81'
-  :industry: '322211'
+  :industry: '322211: Corrugated and Solid Fiber Box Manufacturing'
+  :ita_industries: []
   :procurement_office_address: 1249 S. Vinnell Way, SUITE 200 Boise ID 83709
   :title: SEEDLING BOXES
   :contact: Diana J. Early, Purchasing Agent, Phone 208373-4134, Fax 208-373-4168,
@@ -34,7 +35,7 @@
     Point of Contact: Diana Early, Contracting Officer, Phone (208) 373-4134, E-mail:
     dearly@fs.fed.us'
   :competitive_procurement_strategy: Total Small Business
-  :url: https://www.fbo.gov/spg/USDA/FS/261/AG-0261-S-13-0079/listing.html
+  :url: http://1.usa.gov/1Z1MVDN
   :specific_location: BR
   :specific_address: Ada County Boise, ID
   :contract_number: AG-0261-S-13-0079
@@ -47,7 +48,8 @@
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Aviation - BSM
   :classification_code: '29'
-  :industry: '336412'
+  :industry: '336412: Aircraft Engine and Engine Parts Manufacturing'
+  :ita_industries: []
   :procurement_office_address: 8000 Jefferson Davis Highway Richmond VA 23297-5000
   :title: Procurement of NSN 2915-01-566-6706, SPRAYBAR, MAIN, AIRCRAFT
   :contact: Christopher L. Robinson, Contracting Officer, Phone 8042793647, Fax 8042793813,
@@ -75,7 +77,7 @@
     The anticipated solicitation issue date is June 16, 2013. The anticipated closing
     date is July 15, 2013.
   :competitive_procurement_strategy: N/A
-  :url: https://www.fbo.gov/spg/DLA/J3/DSCR-BSM/SPE4A5-13-R-0992/listing.html
+  :url: http://1.usa.gov/1Z1MSI8
   :specific_location: BR
   :specific_address: 8000 Jefferson Davis Highway Richmond, VA
   :contract_number: SPE4A5-13-R-0992

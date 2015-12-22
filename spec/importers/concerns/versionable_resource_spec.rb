@@ -66,6 +66,22 @@ describe VersionableResource do
       end
     end
 
+    context 'when source is unchanged but the importer performs Mapper lookups' do
+      before do
+        class MockDataMapper < MockData
+          CONTAINS_MAPPER_LOOKUPS = true
+          def model_class
+            Mock
+          end
+        end
+      end
+      it 're-indexes the same content anyways' do
+        expect(Mock).to receive(:index).twice
+        MockDataMapper.new([{ id: 1, content: 'foo' }]).import
+        MockDataMapper.new([{ id: 1, content: 'foo' }]).import
+      end
+    end
+
     describe 'resource-versioning logic' do
       it 're-indexes when there is a new version available' do
         expect(Mock).to receive(:index).twice

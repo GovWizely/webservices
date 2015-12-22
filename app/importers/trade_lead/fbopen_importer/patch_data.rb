@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class PatchData
       include Importable
+      attr_accessor :naics_mapper
 
       COLUMN_HASH = {
         'ntype'      => :notice_type,
@@ -54,6 +55,7 @@ module TradeLead
       def initialize(resource = nil, encoding = 'ISO8859-1')
         @resource = resource || default_endpoint
         @encoding = encoding
+        self.naics_mapper = NaicsMapper.new
       end
 
       def import
@@ -88,10 +90,17 @@ module TradeLead
         lead.delete(:resp_date)
         lead.delete(:arch_date)
 
+        lead = process_additional_fields(lead)
+        EMPTY_RECORD.dup.merge(lead)
+      end
+
+      def process_additional_fields(lead)
         lead[:description] &&= Nokogiri::HTML.fragment(lead[:description]).inner_text.squish
         lead[:source] = TradeLead::Fbopen.source[:code]
         lead[:id]      = lead[:contract_number]
-        EMPTY_RECORD.dup.merge(lead)
+        lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
+        lead = process_industries(lead)
+        lead
       end
 
       def valid?(entry)

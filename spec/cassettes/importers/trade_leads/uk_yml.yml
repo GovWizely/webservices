@@ -1,0 +1,457 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.bl.bravosolution.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:40 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '205'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"f5f1fc11511a4f7f6b0040a0958a516f80e67022"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB7XY",
+        "aggregate_link": "http://bit.ly/1MtB7XZ", "long_url": "http://www.bl.bravosolution.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:40 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ncsgrp.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:41 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '195'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"d2077b356385f8a4b0ba8333438b80fee3319606"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB66p",
+        "aggregate_link": "http://bit.ly/1MtB66q", "long_url": "http://www.ncsgrp.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:41 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.kentpolice.bravosolution.co.uk&title=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:42 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '213'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"e1fea2e57e309efa27d2289a1b28bb7a432e55ec"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB8er",
+        "aggregate_link": "http://bit.ly/1MtB8es", "long_url": "http://www.kentpolice.bravosolution.co.uk",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:42 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Construction%20and%20Real%20Estate&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 7b8965cb-b346-4132-8339-e1668dca253a
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Environment%20and%20Sanitation&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 42b87603-6dc1-4292-a2c1-5d4ea38f766d
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Other%20Services&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 98c9097e-90f1-4f5c-8f6d-f807c0645ba1
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Research%20and%20Development&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - d9f28e02-636d-401b-9b5f-d838742b3765
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Defence%20and%20security&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a367ac0f-1307-442c-aaa8-e8cd346eb840
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Computer%20and%20Related%20Services&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:03 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - f7bd210e-cf37-4001-bc0b-8463fb300614
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:03 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Technology%20and%20Equipment&source=TradeLead::Uk
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 07 Dec 2015 19:45:04 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - dc2a69a5-de64-4f7c-887e-677b4dd3a669
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 07 Dec 2015 19:45:04 GMT
+recorded_with: VCR 2.9.3

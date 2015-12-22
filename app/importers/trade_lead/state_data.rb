@@ -6,6 +6,7 @@ module TradeLead
     include VersionableResource
 
     ENDPOINT = 'http://bids.state.gov/geoserver/opengeo/ows?service=WFS&version=1.0.0&request=GetFeature&srsName=EPSG:4326&typeName=opengeo%3ADATATABLE&outputformat=json&FILTER=%3CFilter%3E%0A%3CPropertyIsEqualTo%3E%0A%09%09%09%3CPropertyName%3ECleared%3C%2FPropertyName%3E%0A%09%09%09%3CLiteral%3E1%3C%2FLiteral%3E%0A%09%09%3C%2FPropertyIsEqualTo%3E%0A%3C%2FFilter%3E'
+    CONTAINS_MAPPER_LOOKUPS = true
 
     COLUMN_HASH = {
       Project_Title:              :title,
@@ -54,7 +55,14 @@ module TradeLead
       entry[:id] = entry_hash[:id]
       entry[:country] = lookup_country(entry[:country].squish)
       entry[:source] = TradeLead::State.source[:code]
+      entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
 
+      entry = process_additional_fields(entry)
+
+      entry
+    end
+
+    def process_additional_fields(entry)
       %i(publish_date end_date).each do |field|
         entry[field] &&= Date.parse(entry[field]).iso8601 rescue nil
       end
@@ -62,7 +70,7 @@ module TradeLead
       %i(comments description title tags contact).each do |field|
         entry[field].squish! if entry[field]
       end
-
+      entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
       entry
     end
   end

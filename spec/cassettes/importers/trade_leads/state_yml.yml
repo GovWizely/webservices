@@ -1,0 +1,298 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.iadb.org/en/projects/project-description-title,1303.html?id=CO-L1146&title=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:34 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '268'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"f8d13b028e656b61561e53b28e86b089e98a8e06"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1LfhtNJ",
+        "aggregate_link": "http://bit.ly/1LfhtNK", "long_url": "http://www.iadb.org/en/projects/project-description-title,1303.html?id=CO-L1146",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:34 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://web.worldbank.org/external/projects/main?pagePK=64283627%26piPK=73230%26theSitePK=40941%26menuPK=22842&title=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:35 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '292'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"25c7734bc4a3f937b8098bdcf3f37122a37cfd8b"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1LfhjG4",
+        "aggregate_link": "http://bit.ly/1LfhjG5", "long_url": "http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=22842",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:35 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ashghal.gov.qa/English/Bids/Bids/Lists/TendersEn/DispForm2.aspx?List=63e70945%252D1f5e%252D4614%252Daa38%252Dca1eb77134e0%26ID=1315%26Source=http%253A%252F%252Fwww%252Eashghal%252Egov%252Eqa%252FEnglish%252FBids%252FBids%252FPages%252Flarge%255Ftnders%252Easpx&title=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:37 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '422'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"82e6c0a2348932777ee0a04f7d1ebb5ad809aa8a"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1Lfhrpe",
+        "aggregate_link": "http://bit.ly/1Lfhrpf", "long_url": "http://www.ashghal.gov.qa/English/Bids/Bids/Lists/TendersEn/DispForm2.aspx?List=63e70945%2D1f5e%2D4614%2Daa38%2Dca1eb77134e0&ID=1315&Source=http%3A%2F%2Fwww%2Eashghal%2Egov%2Eqa%2FEnglish%2FBids%2FBids%2FPages%2Flarge%5Ftnders%2Easpx",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:37 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://web.worldbank.org/external/projects/main?pagePK=64283627%26piPK=73230%26theSitePK=40941%26menuPK=228424%26Projectid=P117635&title=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:38 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '294'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"963bdee7a536c800919166772f5472a9760fc66c"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://bit.ly/1MtB7XS",
+        "aggregate_link": "http://bit.ly/1MtB7XT", "long_url": "http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=228424&Projectid=P117635",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:38 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Health%20Care%20and%20Social%20Assistance&source=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Dec 2015 20:53:08 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 0b477905-61c7-4922-a0a4-61b173874317
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 01 Dec 2015 20:53:08 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Educational%20Services&source=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Dec 2015 20:53:08 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6065b13f-10bd-4552-b0a2-3bbc037f6476
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 01 Dec 2015 20:53:08 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Utilities&source=TradeLead::State
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Tue, 01 Dec 2015 20:53:08 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 35fcb91b-e6c3-44a7-85c7-5244f60b0a24
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Tue, 01 Dec 2015 20:53:08 GMT
+recorded_with: VCR 2.9.3

@@ -1,0 +1,212 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.tenders.gov.au/?event=public.advancedsearch.keyword%26keyword=CN1121942&title=TradeLead::Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:23 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '270'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"08f417a8dc5388d7646150382c9711517c9d97a8"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1M995hi",
+        "aggregate_link": "http://bit.ly/1NzFtNx", "long_url": "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=CN1121942",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:23 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.tenders.gov.au/?event=public.advancedsearch.keyword%26keyword=CN389204-A1&title=TradeLead::Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:24 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '272'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"b4337f48ec6d9cab74396280278f95828ba2907e"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1KQmtJZ",
+        "aggregate_link": "http://bit.ly/1ibP5Aj", "long_url": "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=CN389204-A1",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:24 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.tenders.gov.au/?event=public.advancedsearch.keyword%26keyword=CN1122002&title=TradeLead::Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 17 Sep 2015 21:35:25 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '270'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"5a6645b1a59e11e2e5493f966910b27bff65a131"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 304, "data": {"link_save": {"link": "http://bit.ly/1KQmtK2",
+        "aggregate_link": "http://bit.ly/1ibP5Ap", "long_url": "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=CN1122002",
+        "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
+    http_version: 
+  recorded_at: Thu, 17 Sep 2015 21:35:25 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Fire%20fighting%20equipment&source=TradeLead::Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 30 Nov 2015 22:10:57 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 77bda063-c39c-489d-bdae-124829b286e6
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 30 Nov 2015 22:10:57 GMT
+- request:
+    method: get
+    uri: http://im.govwizely.com/api/terms.json?log_failed=false&mapped_term=Footwear&source=TradeLead::Australia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Date:
+      - Mon, 30 Nov 2015 22:10:57 GMT
+      Server:
+      - Apache
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Etag:
+      - '"d751713988987e9331980363e24189ce"'
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 9c3e8c62-c465-409e-9e2c-b8a820d15fb7
+      Status:
+      - 200 OK
+      Vary:
+      - Accept-Encoding
+      Content-Length:
+      - '22'
+      Connection:
+      - close
+      Content-Type:
+      - application/json; charset=utf-8
+    body:
+      encoding: UTF-8
+      string: "[]"
+    http_version: 
+  recorded_at: Mon, 30 Nov 2015 22:10:57 GMT
+recorded_with: VCR 2.9.3

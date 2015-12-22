@@ -5,7 +5,7 @@
   :min_contract_value: '9000000.0'
   :max_contract_value: 
   :status: Open
-  :url: www.bl.bravosolution.co.uk
+  :url: http://bit.ly/1MtB7XY
   :procurement_organization: British Library
   :contact: andy.kemp@bl.uk
   :title: Cleaning and Waste Management
@@ -38,7 +38,10 @@
     with the annual rates determined by the Living Wage Foundation http://www.livingwage.org.uk/calculation.'
   :notice_type: Contract
   :specific_location: Any region
-  :industry: Construction and Real Estate, Environment and Sanitation
+  :industry: 
+  - Construction and Real Estate
+  - Environment and Sanitation
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: 4947c4d3-ee37-4a68-bab9-00e4218a4ce1
@@ -47,7 +50,7 @@
   :min_contract_value: '25000.0'
   :max_contract_value: '35000.0'
   :status: Open
-  :url: http://www.ncsgrp.co.uk
+  :url: http://bit.ly/1MtB66p
   :procurement_organization: Norse Commercial Services Limited
   :contact: info@ncsgrp.co.uk
   :title: Laboratory Utilities and Equipment Works at the Innovation Centre, Norwich
@@ -65,7 +68,9 @@
     with your details by Friday 3rd July 2015.
   :notice_type: Contract
   :specific_location: East of England
-  :industry: Other Services
+  :industry:
+  - Other Services
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: 5def2dd2-8aa8-475d-8096-015a9faebce2
@@ -81,7 +86,9 @@
   :description: Purple Zone Car Pak Enabling Works
   :notice_type: Contract
   :specific_location: 
-  :industry: Construction and Real Estate
+  :industry: 
+  - Construction and Real Estate
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: 562894a0-2f91-47d0-9f3b-fe9971cc0bd2
@@ -106,7 +113,9 @@
     laid out in ISO 17025 for supplying evidence that may be used as part of a prosecution.'
   :notice_type: Contract
   :specific_location: 
-  :industry: Research and Development
+  :industry: 
+  - Research and Development
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: 12a70e6d-c8d3-4720-aea8-feafca9f21da
@@ -124,7 +133,9 @@
     JUICE mission, as fully describe in Schedule 1 of this tender.
   :notice_type: Contract
   :specific_location: London
-  :industry: Research and Development
+  :industry: 
+  - Research and Development
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: b92d9569-142a-4b9d-b71b-fed51dd2edd5
@@ -140,7 +151,10 @@
   :description: please see the attached Specification Document.
   :notice_type: Contract
   :specific_location: Any region
-  :industry: Other Services, Defence and security
+  :industry: 
+  - Other Services
+  - Defence and security
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: cea13b7c-bf6d-4170-b717-ff1a8ebbb581
@@ -159,7 +173,10 @@
     to register.
   :notice_type: Contract
   :specific_location: London
-  :industry: Computer and Related Services, Technology and Equipment
+  :industry: 
+  - Computer and Related Services
+  - Technology and Equipment
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: b1c09393-74a6-4676-98a2-ff38d2a662b3
@@ -178,7 +195,9 @@
     with acute pain and symptoms before the NHS treatment becomes available.
   :notice_type: Contract
   :specific_location: East of England
-  :industry: Other Services
+  :industry: 
+  - Other Services
+  :ita_industries: []
   :source: UK
   :country: GB
 - :id: a7e10dc7-b260-4bbe-b1ce-ff57db8cc005
@@ -187,7 +206,7 @@
   :min_contract_value: '8000000.0'
   :max_contract_value: '20000000.0'
   :status: Open
-  :url: www.kentpolice.bravosolution.co.uk
+  :url: http://bit.ly/1MtB8er
   :procurement_organization: Kent Police and Essex Police Procurement Services
   :contact: timothy.heads@kent.pnn.police.uk
   :title: Framework Agreement for the Provision of Property Consultancy Services
@@ -226,6 +245,8 @@
     the call-off contract concerned.'
   :notice_type: Contract
   :specific_location: East of England,South East
-  :industry: Construction and Real Estate
+  :industry: 
+  - Construction and Real Estate
+  :ita_industries: []
   :source: UK
   :country: GB

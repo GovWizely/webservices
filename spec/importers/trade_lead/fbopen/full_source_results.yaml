@@ -4,7 +4,8 @@
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
-  :industry: '331318'
+  :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
+  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0425
@@ -20,7 +21,7 @@
     available. Military Specifications and Standards may be retrieved, or ordered,
     electronically.All responsible sources may submit a quote which, if timely received,
     shall be considered.Quotes may be submitted electronically.'
-  :url: https://www.fbo.gov/spg/DLA/J3/DSCC-BSM/SPE7M815Q0425/listing.html
+  :url: http://1.usa.gov/1OVuFHt
   :competitive_procurement_strategy: Total Small Business
   :specific_location: AF
   :specific_address: 
@@ -33,13 +34,14 @@
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
-  :industry: '331318'
+  :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
+  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0431
   :contact: Not available.
   :description: Not available.
-  :url: https://www.fbo.gov/spg/DLA/J3/DSCC-BSM/SPE7M815Q0425/listing.html
+  :url: http://1.usa.gov/1OVuFHt
   :competitive_procurement_strategy: Total Small Business
   :specific_location: AF
   :specific_address:
@@ -52,7 +54,8 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -78,7 +81,7 @@
     offers. Late proposals will be processed in accordance with FAR 52.212-1(f), Late
     submission, modifications, revisions and withdrawals of offers. (d) All quotes
     are due no later than 5 February 2015 / 12PM CST.'
-  :url: https://www.fbo.gov/notices/5eaf5409ca1351bb517077dfa0637e2e
+  :url: http://1.usa.gov/1Z1Mrh9
   :competitive_procurement_strategy: N/A
   :specific_location: AF
   :specific_address: RCC Phoenix , APO AE
@@ -91,7 +94,8 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -117,7 +121,7 @@
     offers. Late proposals will be processed in accordance with FAR 52.212-1(f), Late
     submission, modifications, revisions and withdrawals of offers. (d) All quotes
     are due no later than 9 February 2015 / 12PM CST.'
-  :url: https://www.fbo.gov/notices/4a5d49fddc31fdc4c5433fa49311fdda
+  :url: http://1.usa.gov/1Z1Mrhb
   :competitive_procurement_strategy: N/A
   :specific_location: AF
   :specific_address: RCC Phoenix , APO AE
@@ -130,7 +134,8 @@
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
-  :industry: '339994'
+  :industry: '339994: Broom, Brush, and Mop Manufacturing'
+  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-003
@@ -156,7 +161,7 @@
     offers. Late proposals will be processed in accordance with FAR 52.212-1(f), Late
     submission, modifications, revisions and withdrawals of offers. (d) All quotes
     are due no later than 5 February 2015 / 12PM CST.'
-  :url: https://www.fbo.gov/notices/5eaf5409ca1351bb517077dfa0637e2e
+  :url: http://1.usa.gov/1Z1Mrh9
   :competitive_procurement_strategy: N/A
   :specific_location: AF
   :specific_address: RCC Phoenix , APO AE

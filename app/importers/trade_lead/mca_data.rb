@@ -33,7 +33,6 @@ module TradeLead
     def process_entry(item)
       item_hash = extract_fields(item, SINGLE_VALUED_XPATHS)
       item_hash.reverse_merge! extract_multi_valued_fields(item, MULTI_VALUED_XPATHS)
-      item_hash[:url].gsub!(/www\./, 'mcc.')
       country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
       item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
 
@@ -44,7 +43,14 @@ module TradeLead
       end
       item_hash[:funding_source] = FUNDING_SOURCE
       item_hash[:source] = TradeLead::Mca.source[:code]
+      item_hash = process_urls(item_hash)
+      item_hash
+    end
+
+    def process_urls(item_hash)
+      item_hash[:url].gsub!(/www\./, 'mcc.')
       item_hash[:id] = Utils.generate_id(item_hash, %i(url description title id))
+      item_hash[:url] = UrlMapper.get_bitly_url(item_hash[:url], model_class) if item_hash[:url].present?
       item_hash
     end
 

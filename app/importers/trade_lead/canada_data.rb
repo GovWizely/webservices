@@ -6,6 +6,7 @@ module TradeLead
     include Importable
     include VersionableResource
     ENDPOINT = 'https://buyandsell.gc.ca/procurement-data/csv/tender/active'
+    CONTAINS_MAPPER_LOOKUPS = true
 
     COLUMN_HASH = {
       language:                             :language,
@@ -59,11 +60,27 @@ module TradeLead
         lead[field] = Date.parse(lead[field]).iso8601 rescue nil if lead[field]
       end
 
-      lead[:urls] = lead[:urls].split(',').map(&:squish) if lead[:urls]
-
-      lead[:country] = 'CA'
+      lead = process_additional_fields(lead)
       lead[:source] = TradeLead::Canada.source[:code]
       lead
+    end
+
+    def process_additional_fields(lead)
+      lead = process_urls(lead)
+      lead[:industry] = split_industries(lead[:industry]) if lead[:industry]
+      lead[:ita_industries] = lead[:industry] ? get_mapper_terms_from_array(lead[:industry]) : []
+      lead[:country] = 'CA'
+      lead
+    end
+
+    def process_urls(lead)
+      lead[:urls] = lead[:urls].split(',').map(&:squish) if lead[:urls]
+      lead[:urls] = lead[:urls].map { |url| UrlMapper.get_bitly_url(url, model_class) } if lead[:urls]
+      lead
+    end
+
+    def split_industries(industry)
+      industry.split(/,* *([0-9A-Z]+:)/).delete_if(&:empty?).each_slice(2).map(&:join)
     end
   end
 end

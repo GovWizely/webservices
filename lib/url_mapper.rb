@@ -72,22 +72,22 @@ class UrlMapper
     sleep 5 unless Rails.env.test?
     response = JSON.parse(open(request_string).read)
 
-    return url_string if response['status_code'].to_i == 500 && response['status_txt'] == 'INVALID_URI'
+    return url_string if (response["status_txt"] == "ALREADY_A_BITLY_LINK" || response['status_txt'] == 'INVALID_URI')
     # Not sure if there's a sensible way to test this...
     # :nocov:
-    while (response['status_txt'] == 'RATE_LIMIT_EXCEEDED') # || response["status_txt"] == "ALREADY_A_BITLY_LINK")
+    while (response['status_txt'] == 'RATE_LIMIT_EXCEEDED')
       Rails.logger.info 'Rate limit exceeded, pausing for 60 seconds.'
       sleep 60
       response = JSON.parse(open(request_string).read)
     end
     # :nocov:
-    validate_response(response)
+    validate_response(response, request_string)
   end
 
-  def self.validate_response(response)
+  def self.validate_response(response, request_string)
     return response['data']['link_save']['link']
   rescue
-    raise 'Invalid Bitly API Response: ' + response.to_s
+    raise 'Invalid Bitly API Response: ' + response.to_s + '.  Request: ' + request_string.to_s
   end
 
   def self.search_for_url(url_string)
