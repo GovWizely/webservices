@@ -125,7 +125,7 @@ describe Searchable do
       expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
-      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used, :search_performed_at])
+      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used, :search_performed_at, :aggregations])
     end
   end
 
