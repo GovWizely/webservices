@@ -11,6 +11,12 @@ class Query
 
   validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
 
+  class_attribute :aggregation_terms
+  self.aggregation_terms = {}
+  def self.aggregate_terms_by(terms)
+    self.aggregation_terms = terms
+  end
+
   def self.query_fields=(value)
     class_variable_set('@@fields', value)
   end
@@ -58,6 +64,7 @@ class Query
     Jbuilder.encode do |json|
       generate_query(json)
       generate_filter(json)
+      generate_aggregations(json)
     end
   end
 
@@ -66,6 +73,7 @@ class Query
       generate_from_size_sort(json)
       generate_query(json)
       generate_filter(json)
+      generate_aggregations(json)
     end.attributes!
   end
 
@@ -146,6 +154,19 @@ class Query
   def generate_from_size_sort(json)
     json.from @offset
     json.size @size
+  end
+
+  def generate_aggregations(json)
+    json.aggs do
+      aggregation_terms.each do |k, v|
+        json.set! k do
+          json.terms do
+            json.field v[:field]
+            json.size v[:size] || 0
+          end
+        end
+      end
+    end
   end
 
   private

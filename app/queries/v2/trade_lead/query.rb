@@ -1,6 +1,9 @@
 module V2::TradeLead
   class Query < ::Query
     attr_reader :countries, :sources
+    aggregate_terms_by countries:  { field: 'country' },
+                       industries: { field: 'industry.keyword' },
+                       sources:    { field: 'source' }
 
     def initialize(options = {})
       super

@@ -7,8 +7,10 @@ module V2::TradeEvent
     #       ... I should know better. You can make fun of me when you read this comment
     #       years later.
     #
-
     attr_reader :sources
+    aggregate_terms_by countries:  { field: 'venues.country' },
+                       industries: { field: 'industries.keyword' },
+                       sources:    { field: 'source' }
 
     def initialize(options = {})
       super
