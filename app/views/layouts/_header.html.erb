@@ -12,7 +12,7 @@
   <% end %>
   <%- if current_user && current_user.admin? %>
       <br>
-      <h3>CSV APIs <%= link_to("+", new_data_source_path ) %></h3>
+      <h3>Dynamic APIs <%= link_to("+", new_data_source_path ) %></h3>
       <% DataSource.directory.each do |data_source| %>
           <p class="view"><%= link_to("#{data_source.name} (v#{data_source.version_number})", url_for(data_source) ) %></p>
       <% end %>

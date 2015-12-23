@@ -11,7 +11,7 @@ RSpec.feature 'Data Source management' do
       fill_in 'Password', with: 'p4ssword'
       click_button('Log in')
       expect(page).to have_text('Your API Key is')
-      expect(page).to have_text('CSV APIs')
+      expect(page).to have_text('Dynamic APIs')
 
       click_link('+')
       expect(page).to have_text('New data source')
@@ -167,7 +167,7 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_text('Andorraaah')
     end
 
-    scenario 'admin user changes the data source file from TSV to CSV' do
+    scenario 'admin user uploads TSV file' do
       visit '/'
 
       fill_in 'Email', with: 'test@gov.gov'
@@ -175,27 +175,38 @@ RSpec.feature 'Data Source management' do
       click_button 'Log in'
 
       click_link('+')
-      fill_in 'Name', with: 'Testing tabs/commas'
-      fill_in 'Description', with: 'Testing tabs/commas: Not published yet'
-      fill_in 'Api', with: 'tabs_commas'
-      check('Tab delimited')
+      fill_in 'Name', with: 'Testing tabs'
+      fill_in 'Description', with: 'Testing tabs: Not published yet'
+      fill_in 'Api', with: 'tabs'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/tabs.tsv")
       click_button('Create')
 
       check('Published')
       click_button('Update')
 
-      visit("/v1/tabs_commas/search.json?api_key=#{@user.api_key}")
+      visit("/v1/tabs/search.json?api_key=#{@user.api_key}")
       expect(page).to have_text('from tabs')
+    end
 
-      visit '/data_sources/tabs_commas:v1/edit'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/commas.csv")
-      uncheck('Tab delimited')
+    scenario 'admin user uploads XML file' do
+      visit '/'
 
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Testing XML'
+      fill_in 'Description', with: 'Testing XML: Not published yet'
+      fill_in 'Api', with: 'xml_records'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/posts.xml")
+      click_button('Create')
+
+      check('Published')
       click_button('Update')
 
-      visit("/v1/tabs_commas/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('from commas')
+      visit("/v1/xml_records/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('"officename":"from XML"')
     end
   end
 end

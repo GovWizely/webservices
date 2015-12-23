@@ -1,11 +1,11 @@
 class ApiModelQuery < Query
-  def initialize(data_source, options = {})
-    @date_fields = data_source.date_fields.keys
-    @plural_filter_fields = data_source.plural_filter_fields.keys
-    @singular_filter_fields = data_source.singular_filter_fields.keys
-    pluralized_key_strings = data_source.pluralized_filter_fields.keys
+  def initialize(metadata, options = {})
+    @date_fields = metadata.date_fields.keys
+    @plural_filter_fields = metadata.plural_filter_fields.keys
+    @singular_filter_fields = metadata.singular_filter_fields.keys
+    pluralized_key_strings = metadata.pluralized_filter_fields.keys
     options.keys.each { |k| options[k.singularize] = options.delete(k) if pluralized_key_strings.include?(k.to_sym) }
-    self.class.setup_query(q: data_source.fulltext_fields.keys, filter: data_source.filter_fields.keys + @date_fields)
+    self.class.setup_query(q: metadata.fulltext_fields.keys, filter: metadata.filter_fields.keys + @date_fields)
     super(options)
   end
 

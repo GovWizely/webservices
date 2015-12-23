@@ -1,4 +1,5 @@
 module Importable
+  include XMLUtils
   extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
   # can be included into any class that will do so.
@@ -25,14 +26,6 @@ module Importable
     end
   end
 
-  def extract_fields(parent_node, path_hash)
-    Hash[path_hash.map { |key, path| [key, extract_node(parent_node.xpath(path).first)] }]
-  end
-
-  def extract_multi_valued_fields(parent_node, xpath_hash)
-    Hash[xpath_hash.map { |key, xpath| [key, extract_nodes(parent_node.xpath(xpath))] }]
-  end
-
   def remap_keys(mapping, article_hash)
     Hash[article_hash.slice(*mapping.keys).map { |k, v| [mapping[k], v] }]
   end
@@ -44,15 +37,6 @@ module Importable
       entry[k] = v.present? ? @html_entities_coder.decode(Sanitize.clean(v)).squish : nil
     end
     entry
-  end
-
-  def extract_nodes(nodes)
-    nodes.map { |node| extract_node(node) }.compact
-  end
-
-  def extract_node(node)
-    node_content = node ? node.inner_text.squish : nil
-    node_content.present? ? node_content : nil
   end
 
   def lookup_country(country_str)

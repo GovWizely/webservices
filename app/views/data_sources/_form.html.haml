@@ -25,12 +25,5 @@
   .field
     = form.label :path
     = form.file_field :path, accept: DataSource::VALID_CONTENT_TYPES.join(',')
-    %p
-      Make sure the CSV file was created or exported using UTF-8 characters.
-      - if action_name == 'edit'
-        If any column names have changed, be sure to update the dictionary, too.
-  .field
-    = form.label :tab_delimited
-    = form.check_box :tab_delimited
-    %p
-      Mark if the file is tab-delimited instead of comma-delimited
+    - if action_name == 'edit'
+      %p If any column names have changed, be sure to update the dictionary, too.

@@ -78,9 +78,9 @@ Or using http headers:
 
     curl -H'Api-Key: devkey' 'http://localhost:3000/v2/market_research_library/search'
 
-### CSV APIs
+### Dynamic APIs
 
-Admin users can create and administer search APIs from uploaded CSV files. The initial admin user created with
+Admin users can create and administer search APIs from uploaded CSV, TSV, or XML files. The initial admin user created with
 the `db:devseed` task has the `admin` flag set to true already. To toggle an existing user, you can do this from the 
 Rails console:
     
@@ -88,7 +88,7 @@ Rails console:
     u = User.search(filter: { bool: { must: { term: { email: email } } } }).first
     u.update_attribute(:admin, true)
 
-To create an API, click the `+` next to the CSV APIs subnav heading.
+To create an API, click the `+` next to the Dynamic APIs subnav heading.
 
 ### Specs
 
