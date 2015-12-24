@@ -22,27 +22,34 @@ module V2::TradeLead
     def generate_query(json)
       multi_fields = %w(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
       json.query do
+        generate_filtered_query(json)
         json.bool do
           json.must do
             json.child! { generate_multi_match(json, multi_fields, @q) }
           end
-        end
-      end if @q
+        end if @q
+      end if @q || any_field_exist?
     end
 
-    def generate_filter(json)
-      json.filter do
-        json.bool do
-          json.must do
-            json.child! { json.terms { json.source @sources } } if @sources.any?
-            json.child! { json.terms { json.country @countries } } if @countries
-            generate_date_range(json, 'publish_date', @publish_date) if @publish_date
-            generate_date_range(json, 'publish_date_amended', @publish_date_amended) if @publish_date_amended
-            generate_date_range(json, 'end_date', @end_date) if @end_date
-            generate_industries_filter(json)
+    def generate_filtered_query(json)
+      json.filtered do
+        json.filter do
+          json.bool do
+            json.must do
+              json.child! { json.terms { json.source @sources } } if @sources.any?
+              json.child! { json.terms { json.country @countries } } if @countries
+              generate_date_range(json, 'publish_date', @publish_date) if @publish_date
+              generate_date_range(json, 'publish_date_amended', @publish_date_amended) if @publish_date_amended
+              generate_date_range(json, 'end_date', @end_date) if @end_date
+              generate_industries_filter(json)
+            end
           end
         end
       end if any_field_exist?
+    end
+
+    def generate_filter(_json)
+      nil
     end
 
     def any_field_exist?
