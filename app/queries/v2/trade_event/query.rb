@@ -48,17 +48,7 @@ module V2::TradeEvent
             json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
             generate_date_range(json, 'start_date', @start_date) if @start_date
             generate_date_range(json, 'end_date', @end_date) if @end_date
-            json.child! do
-              json.bool do
-                json.set! 'should' do
-                  Array(@industries).each do |ind|
-                    json.child! do
-                      json.query { json.match { json.set! 'industries.keyword', ind } }
-                    end
-                  end
-                end
-              end
-            end if @industries
+            generate_industries_filter(json)
           end
         end
       end if any_field_exist?
@@ -70,6 +60,20 @@ module V2::TradeEvent
 
     def any_field_exist?
       @sources.any? || @countries || @industries || @start_date || @end_date
+    end
+
+    def generate_industries_filter(json)
+      json.child! do
+        json.bool do
+          json.set! 'should' do
+            Array(@industries).each do |ind|
+              json.child! do
+                json.query { json.match { json.set! 'industries.keyword', ind } }
+              end
+            end
+          end
+        end
+      end if @industries
     end
   end
 end
