@@ -1,28 +1,32 @@
 {
-  "filter": {
-    "bool": {
-      "must": [
-        {
-          "bool": {
-            "should":[
-              {
-                "query":{
-                  "match": {
-                    "industry.keyword": "dental"
+  "query": {
+    "filtered": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "bool": {
+                "should":[
+                  {
+                    "query":{
+                      "match": {
+                        "industry.keyword": "dental"
+                      }
+                    }
+                  },
+                  {
+                    "query":{
+                      "match": {
+                        "ita_industries.keyword": "dental"
+                      }
+                    }
                   }
-                }
-                },
-              {
-                "query":{
-                  "match": {
-                    "ita_industries.keyword": "dental"
-                  }
-                }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
-      ]
+      }
     }
   },
   "aggs" : {

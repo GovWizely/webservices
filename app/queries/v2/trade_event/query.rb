@@ -22,6 +22,11 @@ module V2::TradeEvent
       # Just to be sure, at this point, that no
       # filtering/sorting/scoring is being done on @industry
       @industry = nil
+      @multi_fields = %i(
+        registration_title description event_name industries.keyword city
+        venues.city venues.state venues.country
+        contacts.first_name contacts.last_name contacts.person_title
+      )
     end
 
     private
@@ -29,29 +34,13 @@ module V2::TradeEvent
     def generate_query(json)
       json.query do
         json.filtered do
-          filter_json(json)
-          query_json(json)
+          generate_filtered(json)
+          generate_multi_query(json, @multi_fields)
         end
-      end if @q || any_field_exist?
+      end
     end
 
-    def query_json(json)
-      multi_fields = %i(
-        registration_title description event_name industries.keyword city
-        venues.city venues.state venues.country
-        contacts.first_name contacts.last_name contacts.person_title
-      )
-      json.query do
-        json.bool do
-          json.must do |must_json|
-            must_json.child! { must_json.match { must_json.set! 'industries.tokenized', @industry } } if @industry
-            must_json.child! { generate_multi_match(must_json, multi_fields, @q) }
-          end
-        end
-      end if @q
-    end
-
-    def filter_json(json)
+    def generate_filtered(json)
       json.filter do
         json.bool do
           json.must do

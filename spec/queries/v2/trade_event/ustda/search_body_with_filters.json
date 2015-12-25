@@ -1,16 +1,20 @@
 {
-  "filter": {
-    "bool": {
-      "must": [
-        {
-          "terms": {
-            "venues.country": [
-              "IL",
-              "US"
-            ]
-          }
+  "query": {
+    "filtered": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "terms": {
+                "venues.country": [
+                  "IL",
+                  "US"
+                ]
+              }
+            }
+          ]
         }
-      ]
+      }
     }
   },
   "aggs" : {

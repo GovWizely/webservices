@@ -15,6 +15,7 @@ module V2::TradeLead
       @publish_date = options[:publish_date] if options[:publish_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
+      @multi_fields = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
     end
 
     private
@@ -22,24 +23,19 @@ module V2::TradeLead
     def generate_query(json)
       json.query do
         json.filtered do
-          filter_json(json)
-          query_json(json)
+          generate_filtered(json)
+          json.query do
+            json.bool do
+              json.must do
+                json.child! { generate_multi_match(json, @multi_fields, @q) }
+              end
+            end
+          end if @q
         end
       end if @q || any_field_exist?
     end
 
-    def query_json(json)
-      multi_fields = %w(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
-      json.query do
-        json.bool do
-          json.must do
-            json.child! { generate_multi_match(json, multi_fields, @q) }
-          end
-        end
-      end if @q
-    end
-
-    def filter_json(json)
+    def generate_filtered(json)
       json.filter do
         json.bool do
           json.must do

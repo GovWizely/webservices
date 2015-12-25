@@ -1,28 +1,32 @@
 {
-  "filter" : {
-    "bool" : {
-      "must" : [
-        {
-          "bool" : {
-            "should" : [
-              {
-                "query" : {
-                  "match" : {
-                    "industries.keyword" : "fishing"
+  "query" : {
+    "filtered" : {
+      "filter" : {
+        "bool" : {
+          "must" : [
+            {
+              "bool" : {
+                "should" : [
+                  {
+                    "query" : {
+                      "match" : {
+                        "industries.keyword" : "fishing"
+                      }
+                    }
+                  },
+                  {
+                    "query" : {
+                      "match" : {
+                        "industries.keyword" : "hunting"
+                      }
+                    }
                   }
-                }
-              },
-              {
-                "query" : {
-                  "match" : {
-                    "industries.keyword" : "hunting"
-                  }
-                }
+                ]
               }
-            ]
-          }
+            }
+          ]
         }
-      ]
+      }
     }
   },
   "aggs" : {
