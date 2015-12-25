@@ -27,50 +27,60 @@ module V2::TradeEvent
     private
 
     def generate_query(json)
+      json.query do
+        json.filtered do
+          filter_json(json)
+          query_json(json)
+        end
+      end if @q || any_field_exist?
+    end
+
+    def query_json(json)
       multi_fields = %i(
         registration_title description event_name industries.keyword city
         venues.city venues.state venues.country
         contacts.first_name contacts.last_name contacts.person_title
       )
       json.query do
-        generate_filtered_query(json)
         json.bool do
           json.must do |must_json|
             must_json.child! { must_json.match { must_json.set! 'industries.tokenized', @industry } } if @industry
-            must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
+            must_json.child! { generate_multi_match(must_json, multi_fields, @q) }
           end
         end
-      end
+      end if @q
     end
 
-    def generate_filtered_query(json)
-      json.filtered do
-        json.filter do
-          json.bool do
-            json.must do
-              json.child! { json.terms { json.source @sources } } if @sources.any?
-              json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
-              generate_date_range(json, 'start_date', @start_date) if @start_date
-              generate_date_range(json, 'end_date', @end_date) if @end_date
-              json.child! do
-                json.bool do
-                  json.set! 'should' do
-                    Array(@industries).each do |ind|
-                      json.child! do
-                        json.query { json.match { json.set! 'industries.keyword', ind } }
-                      end
+    def filter_json(json)
+      json.filter do
+        json.bool do
+          json.must do
+            json.child! { json.terms { json.source @sources } } if @sources.any?
+            json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
+            generate_date_range(json, 'start_date', @start_date) if @start_date
+            generate_date_range(json, 'end_date', @end_date) if @end_date
+            json.child! do
+              json.bool do
+                json.set! 'should' do
+                  Array(@industries).each do |ind|
+                    json.child! do
+                      json.query { json.match { json.set! 'industries.keyword', ind } }
                     end
                   end
                 end
-              end if @industries
-            end
+              end
+            end if @industries
           end
-        end if @sources.any? || @countries || @industries || @start_date || @end_date
-      end
+        end
+      end if any_field_exist?
     end
 
     def generate_filter(_json)
       nil
+    end
+
+    def any_field_exist?
+      @sources.any? || @countries || @industries || @start_date || @end_date
     end
   end
 end
