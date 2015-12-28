@@ -71,7 +71,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_query_google.json' }
         end
-
       end
       context 'and is "international"' do
         let(:params) { { q: 'international', size: 100 } }
@@ -85,7 +84,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_query_international.json' }
         end
-
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -101,7 +99,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_countries_il.json' }
         end
-
       end
       context 'and is "fr,de"' do
         let(:params) { { countries: 'fr,de' } }
@@ -113,7 +110,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_countries_fr_de.json' }
         end
-
       end
       context 'and is "US"' do
         let(:params) { { countries: 'US', size: 100 } }
@@ -126,7 +122,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_countries_us.json' }
         end
-
       end
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
@@ -186,7 +181,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/ustda/aggregations.json' }
         end
-
       end
       context 'and is set to "DL"' do
         let(:params) { { sources: 'DL', size: 100 } }
@@ -198,7 +192,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/dl/aggregations.json' }
         end
-
       end
     end
 
@@ -210,7 +203,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
         let(:sources) { [TradeEvent::Ita] }
       end
       it_behaves_like 'it contains all expected aggregations' do
-          let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_query_sao.json' }
+        let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_query_sao.json' }
       end
     end
 
