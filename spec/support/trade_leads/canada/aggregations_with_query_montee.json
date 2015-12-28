@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "key": "CANADA",
+      "doc_count": 1
+    }
+  ],
+  "industries": [
+    {
+      "key": "N8905Z: Meat, Poultry and Fish",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "CA",
+      "doc_count": 1
+    }
+  ]
+}

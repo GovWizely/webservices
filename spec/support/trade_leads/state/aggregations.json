@@ -1,0 +1,40 @@
+{
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 4
+    }
+  ],
+  "industries": [
+    {
+      "key": "Health Care and Social Assistance",
+      "doc_count": 2
+    },
+    {
+      "key": "Educational Services",
+      "doc_count": 1
+    },
+    {
+      "key": "Utilities",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "CO",
+      "doc_count": 1
+    },
+    {
+      "key": "KE",
+      "doc_count": 1
+    },
+    {
+      "key": "PH",
+      "doc_count": 1
+    },
+    {
+      "key": "QA",
+      "doc_count": 1
+    }
+  ]
+}

@@ -1,0 +1,72 @@
+{
+  "sources": [
+    {
+      "key": "UK",
+      "doc_count": 3
+    },
+    {
+      "key": "AUSTRALIA",
+      "doc_count": 2
+    },
+    {
+      "key": "CANADA",
+      "doc_count": 1
+    },
+    {
+      "key": "FBO",
+      "doc_count": 1
+    },
+    {
+      "key": "MCA",
+      "doc_count": 1
+    }
+  ],
+  "industries": [
+    {
+      "key": "Fire fighting equipment",
+      "doc_count": 2
+    },
+    {
+      "key": "561790: Other Services to Buildings and Dwellings",
+      "doc_count": 1
+    },
+    {
+      "key": "Computer and Related Services",
+      "doc_count": 1
+    },
+    {
+      "key": "Other Services",
+      "doc_count": 1
+    },
+    {
+      "key": "Research and Development",
+      "doc_count": 1
+    },
+    {
+      "key": "Technology and Equipment",
+      "doc_count": 1
+    },
+    {
+      "key": "U099D: Language Training Services",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "GB",
+      "doc_count": 3
+    },
+    {
+      "key": "AU",
+      "doc_count": 2
+    },
+    {
+      "key": "CA",
+      "doc_count": 1
+    },
+    {
+      "key": "SN",
+      "doc_count": 1
+    }
+  ]
+}

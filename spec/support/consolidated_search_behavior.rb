@@ -70,31 +70,7 @@ shared_examples 'it contains all expected results' do
 end
 
 shared_examples 'it contains all expected aggregations' do
-  let(:response_body) { JSON.parse(response.body, symbolize_names: true) }
-  let(:aggregations) { response_body[:aggregations] }
-  let(:results) { response_body[:results] }
-  let(:initial) { Hash[aggregations.keys.map { |term| [term, 0] }] }
-  let(:got) do
-    Hash[
-      aggregations.map do |term, value|
-        [term, value.map { |v| v[:doc_count] }.sum]
-      end
-    ]
-  end
-  let(:expected) do
-    aggregation_mappings ||= {}
-    results.each_with_object(initial) do |result, hash|
-      puts result
-      aggregations.keys.each do |term|
-        result_term = aggregation_mappings[term] || term
-        next unless result[result_term]
-        if result[result_term].is_a? Array
-          hash[term] += result[result_term].count
-        else
-          hash[term] += 1
-        end
-      end
-    end
-  end
+  let(:got) { JSON.parse(response.body)['aggregations'] }
+  let(:expected) { JSON.parse(open("#{File.dirname(__FILE__)}/#{expected_json}").read) }
   it { expect(got).to eql(expected) }
 end

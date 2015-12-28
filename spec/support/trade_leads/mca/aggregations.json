@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "key": "MCA",
+      "doc_count": 3
+    }
+  ],
+  "industries": [
+
+  ],
+  "countries": [
+    {
+      "key": "SN",
+      "doc_count": 2
+    },
+    {
+      "key": "ZM",
+      "doc_count": 1
+    }
+  ]
+}

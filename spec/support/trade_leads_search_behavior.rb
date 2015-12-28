@@ -66,6 +66,14 @@ shared_examples 'it contains all TradeLead::Canada results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeLead::Canada aggregations' do
+  let(:expected) do
+    JSON.parse(open(
+      "#{File.dirname(__FILE__)}/trade_leads/canada/aggregations.json").read)
+  end
+  it_behaves_like 'it contains all expected aggregations'
+end
+
 shared_examples 'it contains all TradeLead::Canada results that match "equipment"' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [2] }

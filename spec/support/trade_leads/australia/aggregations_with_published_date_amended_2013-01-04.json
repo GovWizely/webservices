@@ -1,0 +1,20 @@
+{
+  "sources": [
+    {
+      "key": "AUSTRALIA",
+      "doc_count": 1
+    }
+  ],
+  "industries": [
+    {
+      "key": "Footwear",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "AU",
+      "doc_count": 1
+    }
+  ]
+}

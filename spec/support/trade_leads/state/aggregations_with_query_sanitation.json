@@ -1,0 +1,36 @@
+{
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 1
+    },
+    {
+      "key": "UK",
+      "doc_count": 1
+    }
+  ],
+  "industries": [
+    {
+      "key": "Construction and Real Estate",
+      "doc_count": 1
+    },
+    {
+      "key": "Environment and Sanitation",
+      "doc_count": 1
+    },
+    {
+      "key": "Utilities",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "GB",
+      "doc_count": 1
+    },
+    {
+      "key": "KE",
+      "doc_count": 1
+    }
+  ]
+}
