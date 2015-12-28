@@ -1,0 +1,21 @@
+{
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 2
+    }
+  ],
+  "industries": [
+
+  ],
+  "countries": [
+    {
+      "key": "DE",
+      "doc_count": 1
+    },
+    {
+      "key": "FR",
+      "doc_count": 1
+    }
+  ]
+}

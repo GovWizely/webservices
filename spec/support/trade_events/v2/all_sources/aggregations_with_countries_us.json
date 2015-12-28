@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 15
+    },
+    {
+      "key": "ITA",
+      "doc_count": 2
+    }
+  ],
+  "industries": [
+    {
+      "key": "Commercial Fishing Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "Commercial Vessel/Eq. (Non-Fisheries)",
+      "doc_count": 1
+    },
+    {
+      "key": "Electronic Components",
+      "doc_count": 1
+    },
+    {
+      "key": "Operations/Maintenance Services",
+      "doc_count": 1
+    },
+    {
+      "key": "Pleasure Boats/Accessories",
+      "doc_count": 1
+    },
+    {
+      "key": "Port/Shipbuilding Eq.",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "US",
+      "doc_count": 17
+    }
+  ]
+}

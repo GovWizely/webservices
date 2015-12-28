@@ -1,0 +1,44 @@
+{
+  "sources": [
+    {
+      "key": "ITA",
+      "doc_count": 1
+    },
+    {
+      "key": "USTDA",
+      "doc_count": 1
+    }
+  ],
+  "industries": [
+    {
+      "key": "Dental Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "General Industrial Eq./Supplies",
+      "doc_count": 1
+    },
+    {
+      "key": "Medical Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "Plastics Materials/Resins",
+      "doc_count": 1
+    },
+    {
+      "key": "Renewable Energy",
+      "doc_count": 1
+    },
+    {
+      "key": "Robotics",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "IL",
+      "doc_count": 1
+    }
+  ]
+}

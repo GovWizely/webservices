@@ -1,0 +1,108 @@
+{
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 17
+    },
+    {
+      "key": "USTDA",
+      "doc_count": 6
+    },
+    {
+      "key": "ITA",
+      "doc_count": 4
+    },
+    {
+      "key": "DL",
+      "doc_count": 2
+    }
+  ],
+  "industries": [
+    {
+      "key": "Green Port Technologies",
+      "doc_count": 3
+    },
+    {
+      "key": "Medical Eq.",
+      "doc_count": 2
+    },
+    {
+      "key": "Commercial Fishing Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "Commercial Vessel/Eq. (Non-Fisheries)",
+      "doc_count": 1
+    },
+    {
+      "key": "Dental Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "Electricity Transmission & Distribution",
+      "doc_count": 1
+    },
+    {
+      "key": "Electronic Components",
+      "doc_count": 1
+    },
+    {
+      "key": "General Industrial Eq./Supplies",
+      "doc_count": 1
+    },
+    {
+      "key": "Laboratory Scientific Instruments",
+      "doc_count": 1
+    },
+    {
+      "key": "Operations/Maintenance Services",
+      "doc_count": 1
+    },
+    {
+      "key": "Plastics Materials/Resins",
+      "doc_count": 1
+    },
+    {
+      "key": "Pleasure Boats/Accessories",
+      "doc_count": 1
+    },
+    {
+      "key": "Port/Shipbuilding Eq.",
+      "doc_count": 1
+    },
+    {
+      "key": "Renewable Energy",
+      "doc_count": 1
+    },
+    {
+      "key": "Robotics",
+      "doc_count": 1
+    },
+    {
+      "key": "Telecommunications",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "US",
+      "doc_count": 17
+    },
+    {
+      "key": "BR",
+      "doc_count": 1
+    },
+    {
+      "key": "DE",
+      "doc_count": 1
+    },
+    {
+      "key": "FR",
+      "doc_count": 1
+    },
+    {
+      "key": "IL",
+      "doc_count": 1
+    }
+  ]
+}
