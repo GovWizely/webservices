@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::Australia data'
   include_context 'TradeLead::Fbopen data'
@@ -229,4 +230,7 @@ shared_context 'TradeLead::Mca data' do
 end
 
 shared_examples 'it contains all TradeLead::Mca results' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
 end

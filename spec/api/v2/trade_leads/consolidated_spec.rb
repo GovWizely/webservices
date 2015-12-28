@@ -31,11 +31,6 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all expected aggregations'
     end
 
-    context 'contains all TradeLead::Mca results' do
-      let(:source) { TradeLead::Mca }
-      let(:expected) { [0, 1, 2] }
-      it_behaves_like 'it contains all expected results of source'
-    end
 
     context 'when source is specified' do
       subject { response }
@@ -73,6 +68,15 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Uk] }
+      end
+    end
+
+    context 'and is set to "MCA" source' do
+      let(:params) { { sources: 'MCA' } }
+      let(:expected) { [0, 1, 2] }
+      it_behaves_like 'it contains all TradeLead::Mca results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Mca] }
       end
     end
 
