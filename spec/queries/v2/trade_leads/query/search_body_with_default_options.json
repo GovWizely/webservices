@@ -4,7 +4,7 @@
       "terms" : { "field" : "country", "size" : 0 }
     },
     "industries" : {
-      "terms" : { "field" : "industry.keyword", "size" : 0 }
+      "terms" : { "field" : "ita_industries.keyword", "size" : 0 }
     },
     "sources" : {
       "terms" : { "field" : "source", "size" : 0 }
