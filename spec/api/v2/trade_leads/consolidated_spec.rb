@@ -1,4 +1,3 @@
-# -*- coding: utf-8 -*-
 require 'spec_helper'
 
 describe 'Consolidated Trade Leads API V2', type: :request do
