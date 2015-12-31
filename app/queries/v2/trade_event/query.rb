@@ -8,8 +8,8 @@ module V2::TradeEvent
     #       years later.
     #
     attr_reader :sources
-    aggregate_terms_by countries:  { field: 'venues.country' },
-                       sources:    { field: 'source' }
+    aggregate_terms_by countries: { field: 'venues.country' },
+                       sources:   { field: 'source' }
 
     MULTI_FIELDS = %i(
       registration_title description event_name industries.keyword city

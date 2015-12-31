@@ -1,8 +1,8 @@
 module V2::TradeLead
   class Query < ::Query
     attr_reader :countries, :sources
-    aggregate_terms_by countries:  { field: 'country' },
-                       sources:    { field: 'source' }
+    aggregate_terms_by countries: { field: 'country' },
+                       sources:   { field: 'source' }
 
     MULTI_FIELDS = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
 
