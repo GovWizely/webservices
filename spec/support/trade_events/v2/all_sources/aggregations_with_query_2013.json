@@ -5,52 +5,6 @@
       "doc_count": 2
     }
   ],
-  "industries": [
-    {
-      "key": "Commercial Fishing Eq.",
-      "doc_count": 1
-    },
-    {
-      "key": "Commercial Vessel/Eq. (Non-Fisheries)",
-      "doc_count": 1
-    },
-    {
-      "key": "Dental Eq.",
-      "doc_count": 1
-    },
-    {
-      "key": "Electronic Components",
-      "doc_count": 1
-    },
-    {
-      "key": "General Industrial Eq./Supplies",
-      "doc_count": 1
-    },
-    {
-      "key": "Medical Eq.",
-      "doc_count": 1
-    },
-    {
-      "key": "Operations/Maintenance Services",
-      "doc_count": 1
-    },
-    {
-      "key": "Plastics Materials/Resins",
-      "doc_count": 1
-    },
-    {
-      "key": "Pleasure Boats/Accessories",
-      "doc_count": 1
-    },
-    {
-      "key": "Port/Shipbuilding Eq.",
-      "doc_count": 1
-    },
-    {
-      "key": "Robotics",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "IL",

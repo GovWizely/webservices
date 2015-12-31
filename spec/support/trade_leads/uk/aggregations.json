@@ -5,36 +5,6 @@
       "doc_count": 9
     }
   ],
-  "industries": [
-    {
-      "key": "Construction and Real Estate",
-      "doc_count": 3
-    },
-    {
-      "key": "Other Services",
-      "doc_count": 3
-    },
-    {
-      "key": "Research and Development",
-      "doc_count": 2
-    },
-    {
-      "key": "Computer and Related Services",
-      "doc_count": 1
-    },
-    {
-      "key": "Defence and security",
-      "doc_count": 1
-    },
-    {
-      "key": "Environment and Sanitation",
-      "doc_count": 1
-    },
-    {
-      "key": "Technology and Equipment",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "GB",

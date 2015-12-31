@@ -5,32 +5,6 @@
       "doc_count": 5
     }
   ],
-  "industries": [
-    {
-      "key": "C119F: Engineering Services - Buildings",
-      "doc_count": 1
-    },
-    {
-      "key": "G009E: Medical/Dental Clinic Services",
-      "doc_count": 1
-    },
-    {
-      "key": "N8305: Textile Fabrics",
-      "doc_count": 1
-    },
-    {
-      "key": "N8415: Clothing, Special Purpose",
-      "doc_count": 1
-    },
-    {
-      "key": "N8905Z: Meat, Poultry and Fish",
-      "doc_count": 1
-    },
-    {
-      "key": "U099D: Language Training Services",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "CA",

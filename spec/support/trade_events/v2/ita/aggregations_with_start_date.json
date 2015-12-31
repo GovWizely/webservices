@@ -5,16 +5,6 @@
       "doc_count": 1
     }
   ],
-  "industries": [
-    {
-      "key": "Laboratory Scientific Instruments",
-      "doc_count": 1
-    },
-    {
-      "key": "Medical Eq.",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "BR",

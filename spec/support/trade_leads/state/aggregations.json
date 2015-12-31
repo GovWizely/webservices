@@ -5,20 +5,6 @@
       "doc_count": 4
     }
   ],
-  "industries": [
-    {
-      "key": "Health Care and Social Assistance",
-      "doc_count": 2
-    },
-    {
-      "key": "Educational Services",
-      "doc_count": 1
-    },
-    {
-      "key": "Utilities",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "CO",

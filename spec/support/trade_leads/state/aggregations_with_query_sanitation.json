@@ -9,20 +9,6 @@
       "doc_count": 1
     }
   ],
-  "industries": [
-    {
-      "key": "Construction and Real Estate",
-      "doc_count": 1
-    },
-    {
-      "key": "Environment and Sanitation",
-      "doc_count": 1
-    },
-    {
-      "key": "Utilities",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "GB",

@@ -5,20 +5,6 @@
       "doc_count": 3
     }
   ],
-  "industries": [
-    {
-      "key": "561790: Other Services to Buildings and Dwellings",
-      "doc_count": 1
-    },
-    {
-      "key": "562991: Septic Tank and Related Services",
-      "doc_count": 1
-    },
-    {
-      "key": "812320: Drycleaning and Laundry Services (except Coin-Operated)",
-      "doc_count": 1
-    }
-  ],
   "countries": [
 
   ]

@@ -5,16 +5,6 @@
       "doc_count": 3
     }
   ],
-  "industries": [
-    {
-      "key": "Fire fighting equipment",
-      "doc_count": 2
-    },
-    {
-      "key": "Footwear",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "AU",

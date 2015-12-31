@@ -9,7 +9,6 @@ module V2::TradeEvent
     #
     attr_reader :sources
     aggregate_terms_by countries:  { field: 'venues.country' },
-                       industries: { field: 'industries.keyword' },
                        sources:    { field: 'source' }
 
     def initialize(options = {})

@@ -3,9 +3,6 @@
     "countries" : {
       "terms" : { "field" : "country", "size" : 0 }
     },
-    "industries" : {
-      "terms" : { "field" : "ita_industries.keyword", "size" : 0 }
-    },
     "sources" : {
       "terms" : { "field" : "source", "size" : 0 }
     }
