@@ -11,6 +11,12 @@ module V2::TradeEvent
     aggregate_terms_by countries:  { field: 'venues.country' },
                        sources:    { field: 'source' }
 
+    MULTI_FIELDS = %i(
+      registration_title description event_name industries.keyword city
+      venues.city venues.state venues.country
+      contacts.first_name contacts.last_name contacts.person_title
+    )
+
     def initialize(options = {})
       super
       @industries = options[:industries].split(',').map(&:strip) rescue nil
@@ -21,11 +27,6 @@ module V2::TradeEvent
       # Just to be sure, at this point, that no
       # filtering/sorting/scoring is being done on @industry
       @industry = nil
-      @multi_fields = %i(
-        registration_title description event_name industries.keyword city
-        venues.city venues.state venues.country
-        contacts.first_name contacts.last_name contacts.person_title
-      )
     end
 
     private
@@ -34,7 +35,7 @@ module V2::TradeEvent
       json.query do
         json.filtered do
           generate_filtered(json)
-          generate_multi_query(json, @multi_fields)
+          generate_multi_query(json, self.class::MULTI_FIELDS)
         end
       end
     end

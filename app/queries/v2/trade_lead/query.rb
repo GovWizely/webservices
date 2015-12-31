@@ -4,6 +4,8 @@ module V2::TradeLead
     aggregate_terms_by countries:  { field: 'country' },
                        sources:    { field: 'source' }
 
+    MULTI_FIELDS = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
+
     def initialize(options = {})
       super
       @countries = options[:countries].upcase.split(',') if options[:countries].present?
@@ -14,7 +16,6 @@ module V2::TradeLead
       @publish_date = options[:publish_date] if options[:publish_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
-      @multi_fields = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
     end
 
     private
@@ -26,7 +27,7 @@ module V2::TradeLead
           json.query do
             json.bool do
               json.must do
-                json.child! { generate_multi_match(json, @multi_fields, @q) }
+                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) }
               end
             end
           end if @q
