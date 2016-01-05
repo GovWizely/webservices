@@ -6,7 +6,7 @@ describe Api::V2::ApiModelsController, type: :request do
     csv = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv"
     data_source = DataSource.create(_id: 'de_minimis_currencies:v1', name: 'test', description: 'test API',
                                     api: 'de_minimis_currencies', data: csv, dictionary: '',
-                                    version_number: 1, published: true)
+                                    version_number: 1, published: true, tab_delimited: false)
     data_source.ingest
   end
 
@@ -43,7 +43,7 @@ describe Api::V2::ApiModelsController, type: :request do
       before do
         data_source = DataSource.new(_id: 'not_published:v1', name: 'test', description: 'test API',
                                         api: 'not_published', data: 'foo,bar', dictionary: {}.to_yaml,
-                                        version_number: 1, published: false)
+                                        version_number: 1, published: false, tab_delimited: false)
         data_source.save(refresh: true)
         get '/v1/not_published/search', {}, @v2_headers
       end

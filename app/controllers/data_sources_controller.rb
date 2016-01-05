@@ -2,6 +2,7 @@ class DataSourcesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_data_source, only: [:show, :edit, :update, :destroy, :iterate_version]
   rescue_from Elasticsearch::Transport::Transport::Errors::Conflict, with: :api_not_unique
+  COMMON_PARAMS = %i(name api description path version_number tab_delimited)
 
   def new
     @data_source = DataSource.new(version_number: 1)
@@ -15,7 +16,7 @@ class DataSourcesController < ApplicationController
   end
 
   def create
-    data_source_params = params.require(:data_source).permit(:name, :api, :description, :path, :version_number)
+    data_source_params = params.require(:data_source).permit(COMMON_PARAMS)
     versioned_id = DataSource.id_from_params(data_source_params['api'], data_source_params['version_number'])
     attributes = data_source_params.merge(_id: versioned_id, data: params['data_source']['path'].read, published: false)
     @data_source = DataSource.new(attributes)
@@ -31,7 +32,7 @@ class DataSourcesController < ApplicationController
   end
 
   def update
-    attributes = params.require(:data_source).permit(:name, :api, :description, :dictionary, :version_number, :published, :path)
+    attributes = params.require(:data_source).permit(COMMON_PARAMS + %i(dictionary published))
     attributes.merge!(data: params['data_source']['path'].read) if params['data_source']['path'].present?
     attributes[:dictionary] = YAML.load(attributes[:dictionary]).deep_symbolize_keys.to_yaml
     @data_source.update(attributes) && @data_source.ingest
