@@ -1,47 +1,68 @@
 ---
-- :id: 66a4638e56d9fa6967d7382f248014c2f22dde13
-  :name: Building Products and Equipment
-  :taxonomy: Industries
-  :parent_names:
-  - Construction
-- :id: b4265c4d3fd45cec2afe268375a118ac91da1126
-  :name: Metals
-  :taxonomy: Industries
-  :parent_names:
-  - Building Products and Equipment
-  - Industrial Materials
-- :id: 5ea825b91b53c6d755cd524a0a6d7140543ba59d
-  :name: Iron and Steel
-  :taxonomy: Industries
-  :parent_names:
-  - Metals
-- :id: 54952563f974458a03aa35a7ea5eb1e44ceec2b6
-  :name: Construction
-  :taxonomy: Industries
-  :parent_names:
+- :id: 08454288aa3d1ba10184d55e2d97bd1de9577885
+  :name: Aerospace and Defense
+  :path: "/Aerospace and Defense"
+  :taxonomies:
   - Industries
-- :id: 8951e4b33c70339b2075ac4e90be1e78243da452
-  :name: Industrial Materials
-  :taxonomy: Industries
-  :parent_names:
-  - Industries
-- :id: c7cf1f4a59fe6e973180f328022816fe62562b58
-  :name: Chile
-  :taxonomy: Countries
-  :parent_names:
+  :broader_terms: []
+  :narrower_terms:
+  - Aviation
+- :id: 5ba96fcb608285760038ef04ca718be5ae38b344
+  :name: Aviation
+  :path: "/Aerospace and Defense/Aviation"
+  :taxonomies:
+  - Sector
+  :broader_terms:
+  - Aerospace and Defense
+  :narrower_terms: []
+- :id: 3e49aed0cd39540d07abac69476bbeddf5da9ebd
+  :name: Afghanistan
+  :path: "/Afghanistan"
+  :taxonomies:
   - Countries
-- :id: 9b3b713ab378af7264fb4bfaea43eb769b189185
-  :name: Transport and Logistics
-  :taxonomy: Topics
-  :parent_names:
-  - Topics
-- :id: 81f5585597deabf11ac77bb989e383573bdbbeb1
-  :name: South America
-  :taxonomy: World Regions
-  :parent_names:
+  :broader_terms:
+  - Economic Cooperation Organization
+  - Central Asia
+  :narrower_terms: []
+- :id: 338eff6bde0d08c032125f75e14ac5c9fac62a5e
+  :name: Asia
+  :path: "/Asia"
+  :taxonomies:
   - World Regions
-- :id: a6939d84214ef83541d9edd88bcf54e452741607
-  :name: African Growth and Opportunity Act
-  :taxonomy: Trade Regions
-  :parent_names:
+  :broader_terms: []
+  :narrower_terms:
+  - Central Asia
+- :id: 9b0a770331cfa7820000c07e928de90cebb4739e
+  :name: Central Asia
+  :path: "/Asia/Central Asia"
+  :taxonomies:
+  - World Regions
+  :broader_terms:
+  - Asia
+  :narrower_terms:
+  - Afghanistan
+- :id: 087b1304e0074fadf917b57a2e385dd857340a81
+  :name: International Cooperation
+  :path: "/International Cooperation"
+  :taxonomies:
+  - Topics
+  :broader_terms: []
+  :narrower_terms:
+  - Regional Organizations
+- :id: 4510742103a4a174d586fcea9b6c250cafb0e6a0
+  :name: Regional Organizations
+  :path: "/International Cooperation/Regional Organizations"
+  :taxonomies: []
+  :broader_terms:
+  - International Cooperation
+  :narrower_terms:
+  - Economic Cooperation Organization
+- :id: 164737e9077abf08cc86e9d15a473c971e8e20d8
+  :name: Economic Cooperation Organization
+  :path: "/International Cooperation/Regional Organizations/Economic Cooperation Organization"
+  :taxonomies:
   - Trade Regions
+  :broader_terms:
+  - Regional Organizations
+  :narrower_terms:
+  - Afghanistan
