@@ -13,30 +13,33 @@
 %p
   %b Version:
   = @data_source.version_number
-- if @data_source.plural_filter_fields.present?
+%p
+  %b Data Format:
+  = @data_source.data_format
+- if @data_source.metadata.plural_filter_fields.present?
   %p
     %b Plural Filtered Fields:
-    = param_table(@data_source.pluralized_filter_fields)
+    = param_table(@data_source.metadata.pluralized_filter_fields)
     %p
       Filter on multiple values by passing in a comma-separated list (e.g.,
       %i FR,US,DE
       )
     %hr
-- if @data_source.singular_filter_fields.present?
+- if @data_source.metadata.singular_filter_fields.present?
   %p
     %b Singular Filtered Fields:
-    = param_table(@data_source.singular_filter_fields)
+    = param_table(@data_source.metadata.singular_filter_fields)
     %hr
-- if @data_source.fulltext_fields.present?
+- if @data_source.metadata.fulltext_fields.present?
   %p
     %b Fulltext Fields :
-    = param_table(@data_source.fulltext_fields)
+    = param_table(@data_source.metadata.fulltext_fields)
     %p Use the param `q` to search across all fulltext fields
     %hr
-- if @data_source.date_fields.present?
+- if @data_source.metadata.date_fields.present?
   %p
     %b Date Range Fields:
-    = param_table(@data_source.date_fields)
+    = param_table(@data_source.metadata.date_fields)
     %p Specify a date range in this format (e.g., 2013-10-01+TO+2015-10-04)
     %hr
 %p

@@ -12,7 +12,7 @@ module Webservices
       settings(index: { analysis: { analyzer: { keyword_lowercase: Analyzers.definitions[:keyword_lowercase]}}})
       index_name [ES::INDEX_PREFIX, "api_models", '<%= data_source.api %>', 'v<%= data_source.version_number %>'].join(':')
 
-      <% data_source.yaml_dictionary.each_pair do |field, metadata| %>
+      <% data_source.metadata.entries.each_pair do |field, metadata| %>
         <% if TYPE_TO_MAPPING[metadata[:type]][:mapping].present? %>
           attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>, mapping: <%= TYPE_TO_MAPPING[metadata[:type]][:mapping] %>
         <% else %>
@@ -22,7 +22,7 @@ module Webservices
 
       def attributes
         hash = {}
-        <% data_source.yaml_dictionary.each_key do |field| %>
+        <% data_source.metadata.entries.each_key do |field| %>
           hash['<%= field %>'] = nil
         <% end %>
         hash

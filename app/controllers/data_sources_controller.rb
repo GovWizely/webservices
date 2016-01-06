@@ -2,7 +2,7 @@ class DataSourcesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_data_source, only: [:show, :edit, :update, :destroy, :iterate_version]
   rescue_from Elasticsearch::Transport::Transport::Errors::Conflict, with: :api_not_unique
-  COMMON_PARAMS = %i(name api description path version_number tab_delimited)
+  COMMON_PARAMS = %i(name api description path version_number)
 
   def new
     @data_source = DataSource.new(version_number: 1)
@@ -28,13 +28,13 @@ class DataSourcesController < ApplicationController
   end
 
   def edit
-    @data_source.dictionary = @data_source.yaml_dictionary.deep_stringify_keys.to_yaml
+    @data_source.dictionary = @data_source.metadata.deep_stringified_yaml
   end
 
   def update
     attributes = params.require(:data_source).permit(COMMON_PARAMS + %i(dictionary published))
     attributes.merge!(data: params['data_source']['path'].read) if params['data_source']['path'].present?
-    attributes[:dictionary] = YAML.load(attributes[:dictionary]).deep_symbolize_keys.to_yaml
+    attributes[:dictionary] = symbolized_yaml(attributes[:dictionary])
     @data_source.update(attributes) && @data_source.ingest
     redirect_to data_source_path(@data_source), notice: 'Data source was successfully updated and data uploaded.'
   end
@@ -48,6 +48,10 @@ class DataSourcesController < ApplicationController
   end
 
   private
+
+  def symbolized_yaml(dictionary)
+    DataSources::Metadata.new(dictionary).deep_symbolized_yaml
+  end
 
   def set_data_source
     @data_source = DataSource.find(params[:id])

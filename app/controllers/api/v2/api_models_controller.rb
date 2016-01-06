@@ -4,7 +4,7 @@ class Api::V2::ApiModelsController < Api::V2Controller
   before_action :setup_search_params
 
   def search
-    query = ApiModelQuery.new(@data_source, params.permit(search_params))
+    query = ApiModelQuery.new(@data_source.metadata, params.permit(search_params))
     @data_source.with_api_model do |api_model_klass|
       results = api_model_klass.search(query.generate_search_body_hash)
       respond_with response_hash(query, results)
