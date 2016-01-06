@@ -31,5 +31,9 @@ Webservices::Application.configure do
   config.action_mailer.default_url_options = { host: 'localhost', port: 3000 }
 
   config.bitly_api_token = 'NOTAREALBITLYAPITOKENIHOPE'
+
   config.protege_url = 'replace_this_with_protege_url'
+
+  config.enable_bitly_lookup = false
+  config.enable_industry_mapping_lookups = false
 end
