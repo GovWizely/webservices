@@ -24,6 +24,8 @@ class UrlMapper
   def self.get_bitly_url(url_string, model_class)
     url_string = "http://#{url_string}" unless url_string[/^https?/]
 
+    return url_string unless Rails.application.config.enable_bitly_lookup
+
     Rails.cache.fetch("#{model_class}/#{url_string}", expires_in: 60.minutes) do
       UrlMapper.process_url(url_string, model_class.to_s)
     end
