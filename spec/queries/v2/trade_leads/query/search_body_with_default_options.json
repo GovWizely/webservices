@@ -1,0 +1,10 @@
+{
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "country", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
+    }
+  }
+}

@@ -1,15 +1,27 @@
 {
   "query": {
-    "bool": {
-      "must": [
-        {
-          "multi_match": {
-            "fields": ["title", "description", "industry.tokenized", "ita_industries.tokenized", "tags", "procurement_organization"],
-            "operator": "and",
-            "query": "women"
-          }
+    "filtered": {
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "multi_match": {
+                "fields": ["title", "description", "industry.tokenized", "ita_industries.tokenized", "tags", "procurement_organization"],
+                "operator": "and",
+                "query": "women"
+              }
+            }
+          ]
         }
-      ]
+      }
+    }
+  },
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "country", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
     }
   }
 }

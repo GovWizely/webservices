@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "key": "CANADA",
+      "doc_count": 5
+    }
+  ],
+  "countries": [
+    {
+      "key": "CA",
+      "doc_count": 5
+    }
+  ]
+}

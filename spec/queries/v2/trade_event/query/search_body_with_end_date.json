@@ -1,16 +1,28 @@
 {
-  "filter": {
-    "bool": {
-      "must": [
-        {
-          "range": {
-            "end_date": {
-              "from": "2015-08-27",
-              "to": "2015-08-28"
+  "query" : {
+    "filtered" : {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "range": {
+                "end_date": {
+                  "from": "2015-08-27",
+                  "to": "2015-08-28"
+                }
+              }
             }
-          }
+          ]
         }
-      ]
+      }
+    }
+  },
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "venues.country", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
     }
   }
 }

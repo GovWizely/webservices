@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "key": "AUSTRALIA",
+      "doc_count": 3
+    }
+  ],
+  "countries": [
+    {
+      "key": "AU",
+      "doc_count": 3
+    }
+  ]
+}

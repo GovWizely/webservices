@@ -1,0 +1,26 @@
+{
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 4
+    }
+  ],
+  "countries": [
+    {
+      "key": "CO",
+      "doc_count": 1
+    },
+    {
+      "key": "KE",
+      "doc_count": 1
+    },
+    {
+      "key": "PH",
+      "doc_count": 1
+    },
+    {
+      "key": "QA",
+      "doc_count": 1
+    }
+  ]
+}

@@ -72,7 +72,7 @@ class UrlMapper
     sleep 5 unless Rails.env.test?
     response = JSON.parse(open(request_string).read)
 
-    return url_string if (response["status_txt"] == "ALREADY_A_BITLY_LINK" || response['status_txt'] == 'INVALID_URI')
+    return url_string if response['status_txt'] == 'ALREADY_A_BITLY_LINK' || response['status_txt'] == 'INVALID_URI'
     # Not sure if there's a sensible way to test this...
     # :nocov:
     while (response['status_txt'] == 'RATE_LIMIT_EXCEEDED')

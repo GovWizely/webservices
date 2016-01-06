@@ -1,0 +1,14 @@
+{
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "QA",
+      "doc_count": 1
+    }
+  ]
+}

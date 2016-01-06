@@ -6,6 +6,10 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
   describe 'GET /trade_leads/search' do
     let(:params) { { size: 100 } }
+    let(:aggregation_mappings) do
+      { industries: :industry, countries: :country, sources: :source }
+    end
+
     before { get 'v2/trade_leads/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
@@ -23,12 +27,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
            TradeLead::Uk, TradeLead::Canada, TradeLead::Mca]
         end
       end
-    end
-
-    context 'contains all TradeLead::Mca results' do
-      let(:source) { TradeLead::Mca }
-      let(:expected) { [0, 1, 2] }
-      it_behaves_like 'it contains all expected results of source'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/all_sources/aggregations.json' }
+      end
     end
 
     context 'when source is specified' do
@@ -40,6 +41,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Australia] }
       end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/australia/aggregations.json' }
+      end
     end
 
     context 'when source is set to "FBO"' do
@@ -47,6 +51,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Fbopen results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Fbopen] }
+      end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/fbopen/aggregations.json' }
       end
     end
 
@@ -56,6 +63,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::State] }
       end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/state/aggregations.json' }
+      end
     end
 
     context 'and is set to "UK" source' do
@@ -63,6 +73,21 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Uk results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Uk] }
+      end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/uk/aggregations.json' }
+      end
+    end
+
+    context 'and is set to "MCA" source' do
+      let(:params) { { sources: 'MCA' } }
+      let(:expected) { [0, 1, 2] }
+      it_behaves_like 'it contains all TradeLead::Mca results'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Mca] }
+      end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/mca/aggregations.json' }
       end
     end
 
@@ -72,10 +97,16 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Canada] }
       end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/canada/aggregations.json' }
+      end
 
       context 'and searching for field with non ascii characters using ascii characters' do
         let(:params) { {  q: 'Montée', sources: 'CANADA' } }
         it_behaves_like 'it contains all TradeLead::Canada results that match "Montée"'
+        it_behaves_like 'it contains all expected aggregations' do
+          let(:expected_json) { 'trade_leads/canada/aggregations_with_query_montee.json' }
+        end
       end
     end
 
@@ -86,11 +117,17 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::State results that match "equipment"'
       it_behaves_like 'it contains all TradeLead::Uk results that match "equipment"'
       it_behaves_like 'it contains all TradeLead::Canada results that match "equipment"'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/all_sources/aggregations_with_query_equipment.json' }
+      end
     end
 
     context "when search query is set to 'sanitation'" do
       let(:params) { { q: 'sanitation' } }
       it_behaves_like 'it search among tags of TradeLead::State that match "sanitation"'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/state/aggregations_with_query_sanitation.json' }
+      end
     end
 
     it_behaves_like "an empty result when a query doesn't match any documents"
@@ -101,6 +138,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeLead::Australia] }
       end
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/australia/aggregations_with_query_equipment.json' }
+      end
     end
 
     context "when industries is set to 'Medical'" do
@@ -109,18 +149,27 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Fbopen results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::State results that match industries "Health Care Medical"'
       it_behaves_like 'it contains all TradeLead::Canada results that match industries "Health Care Medical"'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/all_sources/aggregations_with_query_health_care_medical.json' }
+      end
     end
     it_behaves_like "an empty result when an industries search doesn't match any documents"
 
     context "when contries is set to 'QA'" do
       let(:params) { { countries: 'QA' } }
       it_behaves_like 'it contains all TradeLead::State results that match country "QA"'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/state/aggregations_with_countries_qa.json' }
+      end
     end
     it_behaves_like "an empty result when a countries search doesn't match any documents"
 
     context "when contries is set to 'CA'" do
       let(:params) { { countries: 'CA' } }
       it_behaves_like 'it contains all TradeLead::Canada results'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/canada/aggregations.json' }
+      end
     end
 
     context 'when publish_date_amended_start or publish_date_amended_end is specified' do
@@ -128,6 +177,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'Australia', publish_date_amended: '2013-01-04 TO 2013-01-04' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/australia/aggregations_with_published_date_amended_2013-01-04.json' }
+      end
     end
 
     context 'when publish_date_start or publish_date_end is specified' do
@@ -135,6 +187,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'Canada', publish_date: '2014-03-20 TO 2014-03-20' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeLead::Canada results where publish_date is 2014-03-20'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/canada/aggregations_with_published_date_2014-03-20.json' }
+      end
     end
 
     context 'when end_date_start or end_date_end is specified' do
@@ -142,6 +197,9 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       let(:params) { { sources: 'State', end_date: '2014-03-06 TO 2014-03-06' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all TradeLead::State results where end_date is 2014-03-06'
+      it_behaves_like 'it contains all expected aggregations' do
+        let(:expected_json) { 'trade_leads/state/aggregations_with_end_date_2014-03-06.json' }
+      end
     end
   end
 end

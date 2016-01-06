@@ -1,0 +1,42 @@
+{
+  "sources": [
+    {
+      "key": "UK",
+      "doc_count": 3
+    },
+    {
+      "key": "AUSTRALIA",
+      "doc_count": 2
+    },
+    {
+      "key": "CANADA",
+      "doc_count": 1
+    },
+    {
+      "key": "FBO",
+      "doc_count": 1
+    },
+    {
+      "key": "MCA",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "GB",
+      "doc_count": 3
+    },
+    {
+      "key": "AU",
+      "doc_count": 2
+    },
+    {
+      "key": "CA",
+      "doc_count": 1
+    },
+    {
+      "key": "SN",
+      "doc_count": 1
+    }
+  ]
+}

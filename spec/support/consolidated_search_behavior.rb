@@ -68,3 +68,9 @@ shared_examples 'it contains all expected results' do
     expect(got).to match_array(expected)
   end
 end
+
+shared_examples 'it contains all expected aggregations' do
+  let(:got) { JSON.parse(response.body)['aggregations'] }
+  let(:expected) { JSON.parse(open("#{File.dirname(__FILE__)}/#{expected_json}").read) }
+  it { expect(got).to eql(expected) }
+end

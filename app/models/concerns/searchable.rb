@@ -26,20 +26,11 @@ module Searchable
   module ClassMethods
     def search_for(options)
       query = query_class(options[:api_version]).new(options)
+      search_options = build_search_options(query)
+      results = ES.client.search(search_options)
 
-      search_options = {
-        index: index_names(query.try(:sources)),
-        type:  (model_classes.map { |mc| mc.to_s.typeize } rescue nil),
-        body:  query.generate_search_body,
-        from:  query.offset,
-        size:  query.size,
-        sort:  query.sort,
-      }
-
-      search_options[:type] = index_type if index_type
-      search_options[:search_type] = query.search_type if query.search_type
-
-      hits = ES.client.search(search_options)['hits'].deep_symbolize_keys
+      hits = results['hits']
+      hits[:aggregations] = results['aggregations']
       hits[:offset] = query.offset
       hits[:sources_used] = index_meta(query.try(:sources))
       hits[:search_performed_at] = search_performed_at
@@ -127,6 +118,22 @@ module Searchable
 
     def index_types(sources = nil)
       models(sources).map(&:index_type)
+    end
+
+    def build_search_options(query)
+      search_options = {
+        index: index_names(query.try(:sources)),
+        type:  (model_classes.map { |mc| mc.to_s.typeize } rescue nil),
+        body:  query.generate_search_body,
+        from:  query.offset,
+        size:  query.size,
+        sort:  query.sort,
+      }
+
+      search_options[:type] = index_type if index_type
+      search_options[:search_type] = query.search_type if query.search_type
+
+      search_options
     end
   end
 end

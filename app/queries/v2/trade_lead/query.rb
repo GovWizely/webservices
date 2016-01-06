@@ -1,6 +1,10 @@
 module V2::TradeLead
   class Query < ::Query
     attr_reader :countries, :sources
+    aggregate_terms_by countries: { field: 'country' },
+                       sources:   { field: 'source' }
+
+    MULTI_FIELDS = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
 
     def initialize(options = {})
       super
@@ -17,17 +21,21 @@ module V2::TradeLead
     private
 
     def generate_query(json)
-      multi_fields = %w(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
       json.query do
-        json.bool do
-          json.must do
-            json.child! { generate_multi_match(json, multi_fields, @q) }
-          end
+        json.filtered do
+          generate_filtered(json)
+          json.query do
+            json.bool do
+              json.must do
+                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) }
+              end
+            end
+          end if @q
         end
-      end if @q
+      end if @q || any_field_exist?
     end
 
-    def generate_filter(json)
+    def generate_filtered(json)
       json.filter do
         json.bool do
           json.must do
@@ -40,6 +48,10 @@ module V2::TradeLead
           end
         end
       end if any_field_exist?
+    end
+
+    def generate_filter(_json)
+      nil
     end
 
     def any_field_exist?

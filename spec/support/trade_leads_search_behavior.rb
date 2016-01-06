@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::Australia data'
   include_context 'TradeLead::Fbopen data'
@@ -63,6 +64,14 @@ shared_examples 'it contains all TradeLead::Canada results' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [0, 1, 2, 3, 4] }
   it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Canada aggregations' do
+  let(:expected) do
+    JSON.parse(open(
+      "#{File.dirname(__FILE__)}/trade_leads/canada/aggregations.json").read)
+  end
+  it_behaves_like 'it contains all expected aggregations'
 end
 
 shared_examples 'it contains all TradeLead::Canada results that match "equipment"' do
@@ -229,4 +238,7 @@ shared_context 'TradeLead::Mca data' do
 end
 
 shared_examples 'it contains all TradeLead::Mca results' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
 end

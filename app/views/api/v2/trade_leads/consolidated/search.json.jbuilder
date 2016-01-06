@@ -22,6 +22,7 @@ field_lists = {
 }
 
 json.partial! 'shared/queryinfo'
+json.partial! 'shared/aggregation'
 json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys

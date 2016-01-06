@@ -1,0 +1,18 @@
+{
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 15
+    },
+    {
+      "key": "ITA",
+      "doc_count": 2
+    }
+  ],
+  "countries": [
+    {
+      "key": "US",
+      "doc_count": 17
+    }
+  ]
+}

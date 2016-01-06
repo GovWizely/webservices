@@ -28,9 +28,10 @@ describe V2::TradeEvent::Query do
 
     context 'when options include industry' do
       let(:query) { described_class.new(industry: 'fishing,hunting') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_default_options.json").read }
 
       it 'should not be considered on the search' do
-        expect(JSON.parse(query.generate_search_body)).to eq({})
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
 

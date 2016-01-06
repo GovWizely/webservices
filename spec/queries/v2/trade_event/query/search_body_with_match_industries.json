@@ -1,28 +1,40 @@
 {
-   "filter" : {
-      "bool" : {
-         "must" : [
+  "query" : {
+    "filtered" : {
+      "filter" : {
+        "bool" : {
+          "must" : [
             {
-               "bool" : {
-                  "should" : [
-                     {
-                        "query" : {
-                           "match" : {
-                              "industries.keyword" : "fishing"
-                           }
-                        }
-                     },
-                     {
-                        "query" : {
-                           "match" : {
-                              "industries.keyword" : "hunting"
-                           }
-                        }
-                     }
-                  ]
-               }
+              "bool" : {
+                "should" : [
+                  {
+                    "query" : {
+                      "match" : {
+                        "industries.keyword" : "fishing"
+                      }
+                    }
+                  },
+                  {
+                    "query" : {
+                      "match" : {
+                        "industries.keyword" : "hunting"
+                      }
+                    }
+                  }
+                ]
+              }
             }
-         ]
+          ]
+        }
       }
-   }
+    }
+  },
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "venues.country", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
+    }
+  }
 }
