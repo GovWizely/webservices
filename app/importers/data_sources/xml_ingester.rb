@@ -6,7 +6,7 @@ module DataSources
       xml = Nokogiri::XML(@data)
       xml_records = xml.xpath(@metadata.yaml_dictionary[:_collection_path])
       records = xml_records.map { |node| process_node_info(node) }
-      records.each { |row| insert_row(row) }
+      insert(records)
     end
 
     private

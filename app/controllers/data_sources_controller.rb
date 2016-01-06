@@ -17,9 +17,8 @@ class DataSourcesController < ApplicationController
 
   def create
     data_source_params = params.require(:data_source).permit(COMMON_PARAMS)
-    versioned_id = DataSource.id_from_params(data_source_params['api'], data_source_params['version_number'])
-    attributes = data_source_params.merge(_id: versioned_id, data: params['data_source']['path'].read, published: false)
-    @data_source = DataSource.new(attributes)
+    data_extractor = DataSources::TempfileDataExtractor.new(data_source_params.delete('path'))
+    @data_source = DataSource.new(data_source_params.merge(published: false, data: data_extractor.data))
     if @data_source.save(op_type: :create, refresh: true)
       redirect_to edit_data_source_path(@data_source, just_created: true), notice: 'Data source was successfully created. Review the schema and make any changes.'
     else
@@ -33,7 +32,10 @@ class DataSourcesController < ApplicationController
 
   def update
     attributes = params.require(:data_source).permit(COMMON_PARAMS + %i(dictionary published))
-    attributes.merge!(data: params['data_source']['path'].read) if params['data_source']['path'].present?
+    if attributes['path'].present?
+      data_extractor = DataSources::TempfileDataExtractor.new(attributes.delete('path'))
+      attributes.merge!(data: data_extractor.data)
+    end
     attributes[:dictionary] = symbolized_yaml(attributes[:dictionary])
     @data_source.update(attributes) && @data_source.ingest
     redirect_to data_source_path(@data_source), notice: 'Data source was successfully updated and data uploaded.'

@@ -14,9 +14,7 @@ class Api::V2::ApiModelsController < Api::V2Controller
   private
 
   def setup_data_source
-    versioned_id = DataSource.id_from_params params[:api], params[:version_number]
-    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
-    @data_source = DataSource.search(query_hash, _source: { exclude: ['data'] }).first
+    @data_source = DataSource.find_published(params[:api], params[:version_number])
     not_found unless @data_source.present?
   end
 
