@@ -178,11 +178,11 @@ describe Importable do
           .to receive(:map_industry)
           .with(industry, Mock.to_s)
           .once
-          .and_return(['Agribusiness', 'Chemicals'])
+          .and_return(%w(Agribusiness Chemicals))
       end
 
       it 'return mapped terms' do
-        expect(MockData.new.normalize_industry(industry)).to eq(['Agribusiness', 'Chemicals'])
+        expect(MockData.new.normalize_industry(industry)).to eq(%w(Agribusiness Chemicals))
       end
     end
 
