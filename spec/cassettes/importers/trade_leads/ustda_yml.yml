@@ -1,0 +1,114 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ustda.gov//business-opportunities/trade-leads/johannesburg-3mw-pipe-hydropower-scheme&title=TradeLead::Ustda
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 31 Dec 2015 21:22:48 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '271'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"f97a1b9b9a7d7328892d3617daff2030e1db2522"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1NV3e0e",
+        "aggregate_link": "http://bit.ly/1NV3e0f", "long_url": "http://www.ustda.gov//business-opportunities/trade-leads/johannesburg-3mw-pipe-hydropower-scheme",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 31 Dec 2015 21:22:48 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ustda.gov//business-opportunities/trade-leads/costa-rica-public-tender-consulting-services-master-planning-new&title=TradeLead::Ustda
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 31 Dec 2015 21:22:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '296'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"7693af815c06a2b07f827fec6accf6d82affb813"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1NV3exp",
+        "aggregate_link": "http://bit.ly/1NV3exq", "long_url": "http://www.ustda.gov//business-opportunities/trade-leads/costa-rica-public-tender-consulting-services-master-planning-new",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 31 Dec 2015 21:22:49 GMT
+- request:
+    method: get
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=http://www.ustda.gov//business-opportunities/trade-leads/rwanda-rwaza-i-ii-hydropower-projects&title=TradeLead::Ustda
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Server:
+      - nginx
+      Date:
+      - Thu, 31 Dec 2015 21:22:49 GMT
+      Content-Type:
+      - application/json; charset=utf-8
+      Content-Length:
+      - '269'
+      Connection:
+      - keep-alive
+      Etag:
+      - '"a928ab36a95b0214dc1ff582c70174db278bd52e"'
+    body:
+      encoding: UTF-8
+      string: '{"status_code": 200, "data": {"link_save": {"link": "http://1.usa.gov/1NV3exr",
+        "aggregate_link": "http://bit.ly/1NV3exs", "long_url": "http://www.ustda.gov//business-opportunities/trade-leads/rwanda-rwaza-i-ii-hydropower-projects",
+        "new_link": 1}}, "status_txt": "OK"}'
+    http_version: 
+  recorded_at: Thu, 31 Dec 2015 21:22:49 GMT
+recorded_with: VCR 2.9.3

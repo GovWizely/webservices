@@ -6,6 +6,7 @@ shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::State data'
   include_context 'TradeLead::Uk data'
   include_context 'TradeLead::Mca data'
+  include_context 'TradeLead::Ustda data'
 end
 
 shared_context 'TradeLead::Australia data' do
@@ -240,5 +241,31 @@ end
 shared_examples 'it contains all TradeLead::Mca results' do
   let(:source) { TradeLead::Mca }
   let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_context 'TradeLead::Ustda data' do
+  before do
+    TradeLead::Ustda.recreate_index
+    VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
+      TradeLead::UstdaData.new(
+        "#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
+        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml").import
+    end
+
+    @all_possible_full_results ||= {}
+    @all_possible_full_results[TradeLead::Ustda] = JSON.parse(open("#{File.dirname(__FILE__)}/trade_leads/ustda/results.json").read)
+  end
+end
+
+shared_examples 'it contains all TradeLead::Ustda results' do
+  let(:source) { TradeLead::Ustda }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Ustda results that match "equipment"' do
+  let(:source) { TradeLead::Ustda }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end

@@ -19,6 +19,7 @@ field_lists = {
               :status, :url, :procurement_organization, :contact, :title, :description, :notice_type,
               :industry, :specific_location],
   mca:       [:country, :publish_date, :url, :categories, :title, :description, :funding_source, :source],
+  ustda:     [:title, :publish_date, :end_date, :description, :url, :source],
 }
 
 json.partial! 'shared/queryinfo'
