@@ -68,7 +68,10 @@ module Importable
   end
 
   def normalize_industry(industry)
+    return [] unless Rails.application.config.enable_industry_mapping_lookup
+
     source = model_class.to_s
+
     Rails.cache.fetch("#{source}/#{industry}", expires_in: 90.seconds) do
       IndustryMappingClient.map_industry(industry, source)
     end

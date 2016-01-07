@@ -51,6 +51,6 @@ module Webservices
 
     # enable url shortener to shorten entries' urls.
     config.enable_bitly_lookup = true
-    config.enable_industry_mapping_lookups = true
+    config.enable_industry_mapping_lookup = true
   end
 end
