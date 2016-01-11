@@ -8,7 +8,6 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::State.recreate_index
     TradeLead::Uk.recreate_index
     TradeLead::Mca.recreate_index
-    TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/fbopen/presol_source.yml', record: :once) do
       TradeLead::FbopenImporter::PatchData.new("#{Rails.root}/spec/fixtures/trade_leads/fbopen/presol_source").import
     end
@@ -24,6 +23,11 @@ describe 'Trade Leads API V1', type: :request do
     VCR.use_cassette('importers/trade_leads/mca.yml', record: :once) do
       TradeLead::McaData.new("#{Rails.root}/spec/fixtures/trade_leads/mca/mca_leads.xml").import
     end
+  end
+
+  before do
+    allow(Date).to receive(:today).and_return(Date.parse('2015-12-18'))
+    TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
       TradeLead::UstdaData.new("#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
         "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml" ).import
