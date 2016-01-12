@@ -246,7 +246,7 @@ end
 
 shared_context 'TradeLead::Ustda data' do
   before do
-    allow(Date).to receive(:today).and_return(Date.parse('2015-12-18'))
+    allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
     TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
       TradeLead::UstdaData.new(

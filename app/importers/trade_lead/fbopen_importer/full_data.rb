@@ -72,7 +72,7 @@ module TradeLead
         return nil if !(entry[:specific_location].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:specific_location] == 'US'
 
         entry = process_xml_dates(entry)
-        return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.today
+        return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.current
 
         entry = process_additional_fields(entry)
         entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?

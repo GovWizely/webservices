@@ -47,7 +47,7 @@ module TradeLead
         lead = extract_fields(lead, SINGLE_VALUED_XPATHS)
         lead = set_lead_fields(lead)
         lead[:url] = extract_url(lead)
-        (lead[:end_date] && Date.parse(lead[:end_date]) < Date.today) ? nil : lead
+        (lead[:end_date] && Date.parse(lead[:end_date]) < Date.current) ? nil : lead
       end.compact
     end
 

@@ -46,7 +46,7 @@ describe UrlMapper do
                          link:      'http://bit.ly/someid',
                          long_url:  'http://www.someurl.com',
                          title:     'Old Entry',
-                         timestamp: (Date.today - 65) }])
+                         timestamp: (Date.current - 65) }])
       expect(UrlMapper.search_for_url('http://www.someurl.com')[:hits].count).to eq(1)
       UrlMapper.purge_old
       expect(UrlMapper.search_for_url('http://www.someurl.com')[:hits].count).to eq(0)
