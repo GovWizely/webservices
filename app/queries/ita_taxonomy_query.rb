@@ -3,7 +3,6 @@ class ItaTaxonomyQuery < Query
     super
     @q = options[:q].downcase if options[:q].present?
     @taxonomies = options[:taxonomies].downcase.split(',') if options[:taxonomies].present?
-    @parent_names = options[:parent_names].downcase.split(',') if options[:parent_names].present?
   end
 
   private
@@ -12,11 +11,10 @@ class ItaTaxonomyQuery < Query
     json.filter do
       json.bool do
         json.must do
-          json.child! { json.terms { json.taxonomy @taxonomies } } if @taxonomies
-          json.child! { json.terms { json.parent_names @parent_names } } if @parent_names
+          json.child! { json.terms { json.taxonomies @taxonomies } } if @taxonomies
         end
       end
-    end if @taxonomies || @parent_names
+    end if @taxonomies
   end
 
   def generate_query(json)
@@ -24,7 +22,7 @@ class ItaTaxonomyQuery < Query
       json.bool do
         json.must do
           json.child! do
-            generate_multi_match(json, %w(name parent_names), @q)
+            generate_multi_match(json, %w(name broader_terms narrower_terms), @q)
           end if @q
         end
       end

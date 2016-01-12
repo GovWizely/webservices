@@ -4,7 +4,7 @@
       "must": [
         {
           "multi_match": {
-            "fields": ["name", "parent_names"],
+            "fields": ["name", "broader_terms", "narrower_terms"],
             "operator": "and",
             "query": "algeria"
           }

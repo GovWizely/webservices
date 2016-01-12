@@ -37,7 +37,7 @@ module TradeEvent
     }.freeze
 
     def import
-      doc = Nokogiri::XML(loaded_resource, nil, 'utf8')
+      doc = Nokogiri::XML(loaded_resource)
       trade_events = doc.xpath('//EVENTINFO').map do |event_info|
         trade_event = process_event_info(event_info)
         trade_event

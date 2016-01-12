@@ -11,7 +11,7 @@ gem 'elasticsearch-persistence'
 gem 'iso_country_codes'
 gem 'jbuilder'
 gem 'monetize'
-gem 'nokogiri', '1.6.0'
+gem 'nokogiri', '~> 1.6.0'
 gem 'parslet'
 gem 'rack-contrib'
 gem 'rake'
@@ -31,6 +31,7 @@ gem 'sass'
 gem 'jquery-rails'
 
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
+gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
 
 group :staging, :staging2, :production do
   gem 'newrelic_rpm'

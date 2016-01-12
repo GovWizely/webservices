@@ -20,14 +20,14 @@ describe 'Ita Taxonomy API V2', type: :request do
 
       it 'returns ita taxonomies terms' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(9)
+        expect(json_response[:total]).to eq(8)
         results = json_response[:results]
         expect(results).to match_array expected_results
       end
     end
 
     context 'when q is specified' do
-      let(:params) { { q: 'transport' } }
+      let(:params) { { q: 'aviation' } }
       before { get search_path, params, @v2_headers }
       subject { response }
 
@@ -35,27 +35,11 @@ describe 'Ita Taxonomy API V2', type: :request do
 
       it 'returns ita taxonomies entries' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(1)
+        expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        expect(results[0]).to eq(expected_results[6])
-      end
-      it_behaves_like "an empty result when a query doesn't match any documents"
-    end
-
-    context 'when parent_names is specified' do
-      let(:params) { { parent_names: 'metals' } }
-      before { get search_path, params, @v2_headers }
-      subject { response }
-
-      it_behaves_like 'a successful search request'
-
-      it 'returns ita taxonomies entries' do
-        json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(1)
-
-        results = json_response[:results]
-        expect(results[0]).to eq(expected_results[2])
+        expect(results).to include(expected_results[1])
+        expect(results).to include(expected_results[0])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -72,7 +56,7 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        expect(results[0]).to eq(expected_results[6])
+        expect(results[0]).to eq(expected_results[5])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end

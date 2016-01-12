@@ -30,7 +30,7 @@ describe 'Trade Leads API V1', type: :request do
     TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
       TradeLead::UstdaData.new("#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
-        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml" ).import
+                               "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml").import
     end
   end
 
