@@ -6,7 +6,7 @@ describe TradeLead::UstdaData, vcr: { cassette_name: 'importers/trade_leads/ustd
   let(:rss) { "#{fixtures_dir}/rss.xml" }
   let(:importer) { described_class.new(resource, rss) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/ustda/results.yaml") }
-  before { allow(Date).to receive(:today).and_return(Date.parse('2015-12-18')) }
+  before { allow(Date).to receive(:current).and_return(Date.parse('2015-12-18')) }
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'

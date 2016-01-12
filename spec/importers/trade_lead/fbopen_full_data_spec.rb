@@ -4,7 +4,7 @@ describe TradeLead::FbopenImporter::FullData, vcr: { cassette_name: 'importers/t
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/full_source_input.xml" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/full_source_results.yaml") }
-  before { allow(Date).to receive(:today).and_return(Date.parse('2015-01-01')) }
+  before { allow(Date).to receive(:current).and_return(Date.parse('2015-01-01')) }
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'
