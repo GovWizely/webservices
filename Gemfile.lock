@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: 61b953f8a6bd7259aa8f49d3bf6a5a48d9e0eed2
+  revision: b92d8c9dcf7b913e55a5344e1fbd7884866a3593
   specs:
     taxonomy_parser (0.1.0)
       iso_country_codes

@@ -15,7 +15,8 @@ class ItaTaxonomyData
   }.freeze
 
   def initialize(resource = nil)
-    @parser = resource.nil? ? TaxonomyParser.new : TaxonomyParser.new(resource)
+    resource = Rails.configuration.protege_url if resource.nil?
+    @parser = TaxonomyParser.new(resource)
   end
 
   def import
