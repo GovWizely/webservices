@@ -12,7 +12,7 @@ module DataSources
     private
 
     def process_node_info(node)
-      extract_fields(node, @metadata.xpaths_map)
+      extract_fields(node, @metadata.paths_map)
     end
   end
 end

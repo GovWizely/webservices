@@ -11,7 +11,7 @@ module DataSources
                             headers:           true,
                             col_sep:           @col_sep,
                             skip_blanks:       true }
-      records = CSV.parse(@data, ingest_sv_options).map{|r|r}
+      records = CSV.parse(@data, ingest_sv_options).map { |r| r }
       insert(records)
     end
 

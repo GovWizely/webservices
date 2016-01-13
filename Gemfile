@@ -28,6 +28,7 @@ gem 'mechanize'
 gem 'haml'
 gem 'roo'
 gem 'roo-xls'
+gem 'jsonpath'
 
 gem 'sass'
 gem 'jquery-rails'

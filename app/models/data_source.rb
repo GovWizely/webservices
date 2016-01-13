@@ -3,7 +3,7 @@ require 'api_models'
 class DataSource
   include Elasticsearch::Persistence::Model
 
-  VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel).freeze
+  VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel application/json).freeze
 
   index_name [ES::INDEX_PREFIX, name.indexize].join(':')
   attribute :name, String, mapping: { type: 'string', analyzer: 'english' }
@@ -92,6 +92,8 @@ class DataSource
     case data
       when /\A<\?xml /
         'XML'
+      when /\A{/
+        'JSON'
       when /\t/
         'TSV'
       else

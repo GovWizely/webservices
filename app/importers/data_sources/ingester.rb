@@ -22,6 +22,5 @@ module DataSources
         bulk_array << @metadata.transform(record)
       end
     end
-
   end
 end

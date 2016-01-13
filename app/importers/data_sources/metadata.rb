@@ -34,7 +34,7 @@ module DataSources
       fields_matching_hash type: 'date', indexed: true
     end
 
-    def xpaths_map
+    def paths_map
       entries.map { |field, meta| [field, meta[:source]] }.to_h
     end
 
