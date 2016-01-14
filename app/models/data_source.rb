@@ -3,7 +3,7 @@ require 'api_models'
 class DataSource
   include Elasticsearch::Persistence::Model
 
-  VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml).freeze
+  VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel).freeze
 
   index_name [ES::INDEX_PREFIX, name.indexize].join(':')
   attribute :name, String, mapping: { type: 'string', analyzer: 'english' }
@@ -17,11 +17,16 @@ class DataSource
   attribute :version_number, Integer
   validates :version_number, numericality: true, presence: true
   attribute :published, Boolean
-  attribute :data_format, String, mapping: { type: 'string', index: 'not_analyzed' }
 
-  before_save :infer_data_format, :build_dictionary
+  before_save :build_dictionary
   after_update :refresh_metadata
   after_destroy :delete_api_index
+
+  def initialize(attributes = {})
+    attributes.merge!(_id: DataSource.id_from_params(attributes['api'], attributes['version_number'])) if
+      id.nil? && attributes['api'].present? && attributes['version_number'].present?
+    super(attributes)
+  end
 
   def with_api_model
     klass = ModelBuilder.load_model_class(self)
@@ -66,6 +71,12 @@ class DataSource
     [api, ['v', version_number || '1'].join].join(':')
   end
 
+  def self.find_published(api, version_number)
+    versioned_id = id_from_params(api, version_number)
+    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
+    search(query_hash, _source: { exclude: ['data'] }).first
+  end
+
   def self.directory
     all(_source: { exclude: ['data'] }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
   end
@@ -77,16 +88,15 @@ class DataSource
     DataSource.refresh_index!
   end
 
-  def infer_data_format
-    @data_format =
-      case data
-        when /\A<\?xml /
-          'XML'
-        when /\t/
-          'TSV'
-        else
-          'CSV'
-      end
+  def data_format
+    case data
+      when /\A<\?xml /
+        'XML'
+      when /\t/
+        'TSV'
+      else
+        'CSV'
+    end
   end
 
   def build_dictionary

@@ -26,6 +26,8 @@ gem 'sidekiq'
 gem 'sinatra', require: nil
 gem 'mechanize'
 gem 'haml'
+gem 'roo'
+gem 'roo-xls'
 
 gem 'sass'
 gem 'jquery-rails'

@@ -208,5 +208,26 @@ RSpec.feature 'Data Source management' do
       visit("/v1/xml_records/search.json?api_key=#{@user.api_key}")
       expect(page).to have_text('"officename":"from XML"')
     end
+
+    scenario 'admin user uploads XLS file' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Testing XLS'
+      fill_in 'Description', with: 'Testing XLS: Not published yet'
+      fill_in 'Api', with: 'xls_records'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/excel.xls")
+      click_button('Create')
+
+      check('Published')
+      click_button('Update')
+
+      visit("/v1/xls_records/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('"country":"ALGERIA"')
+    end
   end
 end
