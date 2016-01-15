@@ -2,9 +2,9 @@ require 'open-uri'
 require 'csv'
 
 module TradeEvent
-  class UstdaData
+  class UstdaData < BaseData
     include Importable
-    include ::VersionableResource
+    include VersionableResource
 
     attr_accessor :reject_if_ends_before
 
@@ -48,16 +48,12 @@ module TradeEvent
     end
 
     def import
-      doc = Nokogiri::XML(loaded_resource)
-      events = doc.xpath('//node').map do |event|
-        event = process_entry(event)
-      end.compact
-      Ustda.index(events)
+      Ustda.index(trade_events('//node'))
     end
 
     private
 
-    def process_entry(entry)
+    def process_event_info(entry)
       event = extract_fields(entry, SINGLE_VALUED_XPATHS)
 
       event = process_dates_and_times(event)

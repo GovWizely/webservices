@@ -13,6 +13,7 @@ class Query
 
   class_attribute :aggregation_terms
   self.aggregation_terms = {}
+
   def self.aggregate_terms_by(terms)
     self.aggregation_terms = terms
   end
@@ -20,9 +21,11 @@ class Query
   def self.query_fields=(value)
     class_variable_set('@@fields', value)
   end
+
   def self.query_fields
     class_variable_get('@@fields') rescue nil
   end
+
   def query_fields
     self.class.query_fields
   end
@@ -41,8 +44,8 @@ class Query
     cleanup_invalid_bytes(options, [:q])
 
     @offset = options[:offset].to_i
-    @size   = [options[:size].to_i, MAX_SIZE].min
-    @q      = options[:q]
+    @size = [options[:size].to_i, MAX_SIZE].min
+    @q = options[:q]
     initialize_search_fields(options)
 
     unless valid?
@@ -54,7 +57,7 @@ class Query
 
   def initialize_search_fields(options)
     if query_fields
-      query_fields[:query] .each { |f| instance_variable_set("@#{f}", options[f]) }
+      query_fields[:query].each { |f| instance_variable_set("@#{f}", options[f]) }
       query_fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
       instance_variable_set('@sort', query_fields[:sort].try(:join, ',')) unless q
     end
@@ -85,6 +88,12 @@ class Query
     end if query
   end
 
+  def generate_multi_match_query(json, multi_fields, query)
+    json.query do
+      generate_multi_match(json, multi_fields, query)
+    end if query
+  end
+
   def generate_match(json, field, query, operator = :and)
     json.match do
       json.set! field do
@@ -92,6 +101,10 @@ class Query
         json.query query
       end
     end if query
+  end
+
+  def generate_terms(json, field, filter_value)
+    json.terms { json.set! field, filter_value }
   end
 
   def query_from_fields(json, fields)
@@ -114,11 +127,27 @@ class Query
         json.must do
           fields[:filter].each do |field|
             search = send(field)
-            json.child! { json.query { json.match { json.set! field, search } } } if search
+            json.child! { filter_from_fields_child(json, field, search) } if search
           end
         end
       end
     end if fields[:filter].map { |f| send(f) }.any?
+  end
+
+  def terms_filter_from_field_mapping(json, field_mapping)
+    json.filter do
+      json.bool do
+        json.must do
+          field_mapping.each do |field, filter_value|
+            json.child! { generate_terms(json, field, filter_value) } if filter_value
+          end
+        end
+      end
+    end if field_mapping.values.any?
+  end
+
+  def filter_from_fields_child(json, field, search)
+    json.query { generate_match(json, field, search) }
   end
 
   def generate_query(json)

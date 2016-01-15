@@ -1,9 +1,9 @@
 require 'open-uri'
 
 module TradeEvent
-  class EximData
+  class EximData < BaseData
     include Importable
-    include ::VersionableResource
+    include VersionableResource
 
     self.disabled = true
 
@@ -33,12 +33,7 @@ module TradeEvent
     end
 
     def import
-      doc = Nokogiri::XML(loaded_resource)
-      trade_events = doc.xpath('//item').map do |event_info|
-        trade_event = process_event_info(event_info)
-        trade_event
-      end.compact
-      Exim.index trade_events
+      Exim.index(trade_events('//item'))
     end
 
     private

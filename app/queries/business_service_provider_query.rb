@@ -13,16 +13,7 @@ class BusinessServiceProviderQuery < Query
     @category = options[:categories].downcase.split(',') if options[:categories].present?
   end
 
-  def filter_from_fields(json, fields)
-    json.filter do
-      json.bool do
-        json.must do
-          fields[:filter].each do |field|
-            search = send(field)
-            json.child! { json.terms { json.set! field, search } } if search
-          end
-        end
-      end
-    end if fields[:filter].map { |f| send(f) }.any?
+  def filter_from_fields_child(json, field, search)
+    generate_terms(json, field, search)
   end
 end
