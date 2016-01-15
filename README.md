@@ -80,7 +80,7 @@ Or using http headers:
 
 ### Dynamic APIs
 
-Admin users can create and administer search APIs from uploaded CSV, TSV, or XML files. The initial admin user created with
+Admin users can create and administer search APIs from uploaded CSV, TSV, JSON, XLS, or XML files. The initial admin user created with
 the `db:devseed` task has the `admin` flag set to true already. To toggle an existing user, you can do this from the 
 Rails console:
     
