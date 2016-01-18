@@ -47,26 +47,50 @@ describe DataSource do
   end
 
   describe 'ingest' do
-    let(:data_source) { DataSource.create(_id: 'test_currencies:v1', published: true, version_number: 1, name: 'test', description: 'test API', api: 'test_currencies', data: "Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,vatcurrency,date,Notes\r\nAndorra,AD,12,EUR,15.5,EUR,2015-10-01,\r\nArmenia,AM,150000,AMD,,,2015-10-02,some notes\r\n", dictionary: '') }
+    context 'basic upload with header conversion' do
+      let(:data_source) { DataSource.create(_id: 'test_currencies:v1', published: true, version_number: 1, name: 'test', description: 'test API', api: 'test_currencies', data: "Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,vatcurrency,date,Notes\r\nAndorra,AD,12,EUR,15.5,EUR,2015-10-01,\r\nArmenia,AM,150000,AMD,,,2015-10-02,some notes\r\n", dictionary: '') }
 
-    before do
-      data_source.ingest
-      data_source.with_api_model do |klass|
-        expect(klass.count).to eq(2)
-        query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country: 'Armenia'))
-        expect(klass.search(query.generate_search_body_hash).first.iso2_code).to eq('AM')
-        data_source.update(dictionary: "---\r\n:country_name:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:de_minimis_value:\r\n  :source: de minimis value\r\n  :description: Description of de minimis value\r\n  :indexed: true\r\n  :plural: false\r\n  :type: integer\r\n:de_minimis_currency:\r\n  :source: de minimis currency\r\n  :description: Description of de minimis currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:vat_amount:\r\n  :source: VAT amount\r\n  :description: Description of VAT amount\r\n  :indexed: true\r\n  :plural: false\r\n  :type: float\r\n:vat_currency:\r\n  :source: vatcurrency\r\n  :description: Description of VAT currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:notes:\r\n  :source: Notes\r\n  :description: Description of Notes\r\n  :indexed: true\r\n  :plural: false\r\n  :type: string\r\n")
+      before do
+        data_source.ingest
+        data_source.with_api_model do |klass|
+          expect(klass.count).to eq(2)
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country: 'Armenia'))
+          expect(klass.search(query.generate_search_body_hash).first.iso2_code).to eq('AM')
+          data_source.update(dictionary: "---\r\n:country_name:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:de_minimis_value:\r\n  :source: de minimis value\r\n  :description: Description of de minimis value\r\n  :indexed: true\r\n  :plural: false\r\n  :type: integer\r\n:de_minimis_currency:\r\n  :source: de minimis currency\r\n  :description: Description of de minimis currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:vat_amount:\r\n  :source: VAT amount\r\n  :description: Description of VAT amount\r\n  :indexed: true\r\n  :plural: false\r\n  :type: float\r\n:vat_currency:\r\n  :source: vatcurrency\r\n  :description: Description of VAT currency\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:notes:\r\n  :source: Notes\r\n  :description: Description of Notes\r\n  :indexed: true\r\n  :plural: false\r\n  :type: string\r\n")
+        end
+        data_source.ingest
       end
-      data_source.ingest
+
+      it 'creates entries in the new api index with the new class constant' do
+        results = data_source.with_api_model do |klass|
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country_name: 'Armenia'))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.first.iso_code).to eq('AM')
+        expect(Webservices::ApiModels.constants).to include(:TestCurrency)
+      end
     end
 
-    it 'creates entries in the new api index with the new class constant' do
-      results = data_source.with_api_model do |klass|
-        query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country_name: 'Armenia'))
-        klass.search(query.generate_search_body_hash)
+    context 'specifying uniqueness constraints on column values' do
+      let(:data_source) { DataSource.create(_id: 'test_dupes:v1', published: true, version_number: 1, name: 'test', description: 'test dupes', api: 'test_dupes', data: File.read("#{Rails.root}/spec/fixtures/data_sources/dupes.csv"), dictionary: '') }
+
+      before do
+        data_source.ingest
+        data_source.with_api_model do |klass|
+          expect(klass.count).to eq(3)
+          data_source.update(dictionary: "---\n:f1:\n  :source: f1\n  :description: Description of f1\n  :indexed: true\n  :plural: false\n  :type: string\n:f2:\n  :source: f2\n  :description: Description of f2\n  :indexed: true\n  :plural: false\n  :type: integer\n:country_code:\n  :source: f3\n  :description: Description of f3\n  :indexed: true\n  :plural: false\n  :type: enum\n  :use_for_id: true\n:country_name:\n  :source: f4\n  :description: Description of f4\n  :indexed: true\n  :plural: false\n  :type: enum\n  :use_for_id: true\n")
+        end
+        data_source.ingest
       end
-      expect(results.first.iso_code).to eq('AM')
-      expect(Webservices::ApiModels.constants).to include(:TestCurrency)
+
+      it 'creates entries using an ID formed from a hash of use_for_id fields' do
+        results = data_source.with_api_model do |klass|
+          expect(klass.count).to eq(2)
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country_name: 'United Kingdom'))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.first.f1).to eq('val3 should override val1')
+      end
     end
   end
 

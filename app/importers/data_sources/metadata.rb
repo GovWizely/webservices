@@ -34,6 +34,10 @@ module DataSources
       fields_matching_hash type: 'date', indexed: true
     end
 
+    def unique_fields
+      fields_matching_hash use_for_id: true
+    end
+
     def paths_map
       entries.map { |field, meta| [field, meta[:source]] }.to_h
     end
