@@ -165,4 +165,32 @@ describe Importable do
       expect(last_imported_time.to_time).to be_within(60.seconds).of(Time.now)
     end
   end
+
+  describe '#normalize_industry' do
+    before(:each) do
+      Rails.application.config.enable_industry_mapping_lookup = enable_industry_mapping_lookup
+    end
+    let(:industry) { 'Agribusiness' }
+    context 'when config.enable_industry_mapping_lookup is true' do
+      let(:enable_industry_mapping_lookup) { true }
+      before(:each) do
+        expect(IndustryMappingClient)
+          .to receive(:map_industry)
+          .with(industry, Mock.to_s)
+          .once
+          .and_return(%w(Agribusiness Chemicals))
+      end
+
+      it 'return mapped terms' do
+        expect(MockData.new.normalize_industry(industry)).to eq(%w(Agribusiness Chemicals))
+      end
+    end
+
+    context 'when config.enable_industry_mapping_lookup is false' do
+      let(:enable_industry_mapping_lookup) { false }
+      it 'return mapped terms' do
+        expect(MockData.new.normalize_industry(industry)).to eq([])
+      end
+    end
+  end
 end

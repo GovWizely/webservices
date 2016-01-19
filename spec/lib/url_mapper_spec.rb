@@ -9,6 +9,44 @@ describe UrlMapper do
                        title:    'Title' }])
   end
 
+  describe '#get_bitly_url' do
+    let(:long_url) { 'http://www.google.com' }
+    let(:bitly_url) { 'http://bit.ly/randomid' }
+    let(:title) { 'Title' }
+    let(:model_class) { Object }
+    before(:each) do
+      Rails.application.config.enable_bitly_lookup = enable_bitly_lookup
+    end
+
+    context 'when config.enable_bitly_lookup is true' do
+      let(:enable_bitly_lookup) { true }
+      it 'return a shortened url' do
+        expect(UrlMapper).to receive(:process_url).once.and_return(bitly_url)
+        expect(UrlMapper.get_bitly_url(long_url, model_class)).to eq(bitly_url)
+      end
+    end
+
+    context 'when config.enable_bitly_lookup is false' do
+      let(:enable_bitly_lookup) { false }
+      before(:each) do
+        @actual = UrlMapper.get_bitly_url(long_url, model_class)
+      end
+
+      context 'when protocol is missing from the url' do
+        let(:long_url) { 'www.google.com' }
+        it 'return the original url with "http" prepended' do
+          expect(@actual).to eq("http://#{long_url}")
+        end
+      end
+
+      context 'when protocol is specified in the url' do
+        it 'return the original url' do
+          expect(@actual).to eq(long_url)
+        end
+      end
+    end
+  end
+
   describe '#search_for_url' do
     it 'returns the correct search result' do
       expected = { total: 1, max_score: 1.0, hits: [{ _index:  'test:webservices:url_mappers',
