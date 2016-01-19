@@ -9,6 +9,7 @@ module TradeEvent
     attr_accessor :reject_if_ends_before
 
     ENDPOINT = 'https://www.ustda.gov/api/events/xml'
+    CONTAINS_MAPPER_LOOKUPS = true
 
     SINGLE_VALUED_XPATHS = {
       event_name:         './Title',
@@ -106,6 +107,7 @@ module TradeEvent
         end
         venue = extract_fields(entry, venue_xpaths)
         venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
+        venue[:country] = get_missing_country(venue[:venue]) if venue[:country].blank? && !venue[:venue].blank?
         venue.values.all?(&:blank?) ? nil : venue
       end.compact
     end

@@ -7,12 +7,16 @@
     {
       "key": "ITA",
       "doc_count": 2
+    },
+    {
+      "key": "USTDA", 
+      "doc_count": 1
     }
   ],
   "countries": [
     {
       "key": "US",
-      "doc_count": 17
+      "doc_count": 18
     }
   ]
 }

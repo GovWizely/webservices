@@ -74,7 +74,7 @@
   - :venue: Washington, DC and San Francisco, CA
     :city: 
     :state: 
-    :country: 
+    :country:
   :event_type: 
   :source: USTDA
   :id: 94c3d1baec60e3622d956ca03daaa0eb3feb7303
@@ -184,7 +184,7 @@
   - :venue: San Francisco, CA
     :city: San Francisco
     :state: California
-    :country: 
+    :country: US
   :event_type: 
   :source: USTDA
   :id: 5dd39f6a508d2f27cd0e62c55efeab786a5ddd55

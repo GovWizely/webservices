@@ -22,7 +22,7 @@ module TradeLead
         description:                      '//DESC',
         url:                              '//LINK',
         competitive_procurement_strategy: '//SETASIDE',
-        specific_location:                '//POPCOUNTRY',
+        country:                          '//POPCOUNTRY',
         specific_address:                 '//POPADDRESS',
       }
 
@@ -69,7 +69,7 @@ module TradeLead
 
       def process_xml_entry(entry)
         entry.symbolize_keys!
-        return nil if !(entry[:specific_location].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:specific_location] == 'US'
+        return nil if !(entry[:country].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:country] == 'US'
 
         entry = process_xml_dates(entry)
         return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.current

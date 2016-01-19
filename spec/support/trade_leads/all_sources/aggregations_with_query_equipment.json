@@ -35,7 +35,15 @@
       "doc_count": 2
     },
     {
+      "key": "BR", 
+      "doc_count": 1
+    },
+    {
       "key": "CA",
+      "doc_count": 1
+    },
+    {
+      "key": "RW",
       "doc_count": 1
     },
     {

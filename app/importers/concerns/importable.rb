@@ -68,10 +68,9 @@ module Importable
   end
 
   def normalize_industry(industry)
-    return [] unless Rails.application.config.enable_industry_mapping_lookup
+    return nil unless Rails.application.config.enable_industry_mapping_lookup
 
     source = model_class.to_s
-
     Rails.cache.fetch("#{source}/#{industry}", expires_in: 90.seconds) do
       IndustryMappingClient.map_industry(industry, source)
     end
@@ -108,6 +107,11 @@ module Importable
     entry[:industry] = entry[:industry] + ': ' + naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
     entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
     entry
+  end
+
+  def get_missing_country(mappable_field)
+    country_array = normalize_industry('Missing Country: ' + mappable_field)
+    country_array.nil? ? nil : lookup_country(country_array.first)
   end
 
   delegate :can_purge_old?, to: :model_class

@@ -43,11 +43,19 @@
       "doc_count": 3
     },
     {
+      "key": "BR", 
+      "doc_count": 3
+    },
+    {
       "key": "SN",
       "doc_count": 2
     },
     {
       "key": "CO",
+      "doc_count": 1
+    },
+    {
+      "key": "CR", 
       "doc_count": 1
     },
     {
@@ -63,7 +71,11 @@
       "doc_count": 1
     },
     {
-      "key": "ZM",
+      "key": "RW",
+      "doc_count": 1
+    },
+    {
+      "key": "ZM", 
       "doc_count": 1
     }
   ]

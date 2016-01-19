@@ -7,6 +7,7 @@ module TradeLead
 
     ENDPOINT = 'https://www.ustda.gov/api/tradeleads/xml'
     RSS_FEED = 'https://www.ustda.gov/business-opportunities/trade-leads/feed'
+    CONTAINS_MAPPER_LOOKUPS = true
 
     KEYS_HASH = {
       'Title'       => :title,
@@ -61,6 +62,7 @@ module TradeLead
       lead[:publish_date] = parse_american_date(lead[:publish_date]) if lead[:publish_date]
       lead[:end_date] = parse_american_date(lead[:end_date]) if lead[:end_date]
       lead[:source] = model_class.source[:code]
+      lead[:country] = get_missing_country(lead[:title])
       lead
     end
   end

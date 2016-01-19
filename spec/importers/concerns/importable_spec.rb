@@ -192,7 +192,7 @@ describe Importable do
     context 'when config.enable_industry_mapping_lookup is false' do
       let(:enable_industry_mapping_lookup) { false }
       it 'return mapped terms' do
-        expect(MockData.new.normalize_industry(industry)).to eq([])
+        expect(MockData.new.normalize_industry(industry)).to eq(nil)
       end
     end
   end

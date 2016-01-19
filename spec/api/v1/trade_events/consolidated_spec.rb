@@ -92,7 +92,7 @@ describe 'Consolidated Trade Events API V1', type: :request do
         it_behaves_like 'it contains all TradeEvent::Ita results that match countries "US"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match countries "US"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba] }
+          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Ustda] }
         end
       end
       it_behaves_like "an empty result when a countries search doesn't match any documents"

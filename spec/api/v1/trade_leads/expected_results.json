@@ -6,7 +6,8 @@
     "end_date": null,
     "description": "Background: A USTDA grant to Rwandan energy developer DC HydroPower Ltd (Grantee) is funding Technical Assistance to support the company\u2019s plans to develop two small run-of-the-river hydropower plants on the Mukungwa River in Rwanda\u2019s northwest Musanze District (Project). The Project includes two hydropower plants, Rwaza I and Rwaza II, which would generate 2.6 Megawatts (MW) and 1.0 MW, respectively. The Project is intended to increase power generation capacity for the Musanze District. The projected timeline for construction is 18 months, with construction estimated to begin in October 2015. Equipment and services that will be needed for Project implementation include, but are not limited to: Construction of the following components: Diversion weir with intake Trash rack Sediment trap 1.5 km of a 5m wide by 2m depth channel Powerhouse (including installation of turbine & generator) Maintenance building Electrical switch yard Forebay and penstock 1 km access roadway 30kv transmission line (8 km long to existing 110 kv line) Pre-fabricated bridge structure and abutments These facilities will be constructed at each of the sites, except for the maintenance building which will be a shared facility. Point of Contact: For more information about this Project and how your company can participate, please contact Pete Hemingway with Ritoch-Powell & Associates via email at phemingway@ritochpowell.com.",
     "url": "http://1.usa.gov/1NV3exr",
-    "source": "USTDA"
+    "source": "USTDA",
+    "country": "RW"
   },
   {
     "type": "ustda_lead",
@@ -15,7 +16,8 @@
     "end_date": "2016-01-07",
     "description": "Background: The Central American Corporation for Air Navigation Services (COCESNA) has published an invitation to present quotes for professional consulting services to prepare the integrated master plan for the new Metropolitan International Airport that will replace the Juan Santamar\u00eda International Airport near San Jos\u00e9, Costa Rica. Detailed Information: Note: The following PDF document is in Spanish: Tender Document (Spanish) Link for More Information: http:\/\/www.cocesna.org\/pagina.php?id=292&lng=0 Proposal Deadline: January 7, 2016 Points of Contact: Gerencia Regional COCESNA Costa Rica Barrio El Cacique, contiguo a la escuela El Aeropuerto Edificio ATC-Radar Alajuela, Costa Rica Email: aeropuertointernacionalmetropolitano@cocesna.org Phone: +506 2443-4979 \/ +506 2442-2342 \/ +506 2430-0224 Ricardo Cardona Commercial Specialist U.S. Commercial Service U.S. Embassy \u2013 San Jos\u00e9 Email: Ricardo.Cardona@trade.gov Phone: +506 2519-2299",
     "url": "http://1.usa.gov/1NV3exp",
-    "source": "USTDA"
+    "source": "USTDA",
+    "country": "CR"
   },
   {
     "type": "uk_trade_lead",
@@ -440,7 +442,7 @@
     "description": "The National Health and Nutrition Examination Survey (NHANES) is a prog. The NHANES program began in the early 1960's and has been conducted as a s",
     "competitive_procurement_strategy": "N/A",
     "url": "http://1.usa.gov/1Z1MEku",
-    "specific_location": "BR",
+    "country": "BR",
     "specific_address": "At 15 different Primary Sampling Units (PSUs) yearly. The PSU location"
   },
   {

@@ -70,7 +70,7 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         procurement_organization_address: 'Procurement and Grants Office (Atlanta)',
                         publish_date:                     '2013-06-16',
                         specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
-                        specific_location:                'BR',
+                        country:                          'BR',
                         title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
                         url:                              nil,
                         end_date:                         '2014-05-30',
