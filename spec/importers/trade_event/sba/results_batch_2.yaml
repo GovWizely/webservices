@@ -19,6 +19,10 @@
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :venues:
   - :address: 661 West Imperial Highway
     :city: Los Angeles
@@ -47,6 +51,12 @@
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 600 Forbes Avenue Power Center Ballroom
     :city: Pittsburgh
@@ -72,6 +82,10 @@
     :last_name: Vira Bahr
     :phone: 801-863-8230
     :post: Small Business Administration
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :venues:
   - :address: 815 West 1250 South Room 110
     :city: Orem
@@ -106,6 +120,12 @@
     :last_name: Mary
     :phone: 607-937-6861
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 318 Madison Avenue
     :city: Elmira
@@ -133,6 +153,12 @@
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 301 West 1st Street
     :city: Los Angeles
@@ -161,6 +187,12 @@
     :last_name: Patrick Patrick
     :phone: 213-580-7548
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 404 S. Figueroa Street
     :city: Los Angeles
@@ -188,6 +220,12 @@
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 600 Forbes Avenue Power Center Ballroom
     :city: Pittsburgh
@@ -219,6 +257,12 @@
     :last_name: Precious Thompson
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: 398 East Main Street
     :city: Tupelo

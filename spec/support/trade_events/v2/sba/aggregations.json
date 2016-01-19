@@ -1,8 +1,30 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "SBA",
-      "doc_count": 17
+      "key": "North America",
+      "doc_count": 15
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 15
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 15
+    },
+    {
+      "key": "Europe",
+      "doc_count": 2
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 15
+    },
+    {
+      "key": "European Union - 28",
+      "doc_count": 2
     }
   ],
   "countries": [
@@ -17,6 +39,12 @@
     {
       "key": "FR",
       "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 17
     }
   ]
 }

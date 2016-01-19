@@ -1,13 +1,37 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "FBO",
+      "key": "Latin America",
+      "doc_count": 3
+    },
+    {
+      "key": "South America",
+      "doc_count": 3
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 3
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 3
+    },
+    {
+      "key": "Southern Common Market",
       "doc_count": 3
     }
   ],
   "countries": [
     {
-      "key": "BR", 
+      "key": "BR",
+      "doc_count": 3
+    }
+  ],
+  "sources": [
+    {
+      "key": "FBO",
       "doc_count": 3
     }
   ]

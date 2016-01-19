@@ -1,4 +1,50 @@
 {
+  "world_regions": [
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 7
+    },
+    {
+      "key": "North America",
+      "doc_count": 6
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 6
+    },
+    {
+      "key": "Latin America",
+      "doc_count": 1
+    },
+    {
+      "key": "South America",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 6
+    },
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 1
+    },
+    {
+      "key": "Southern Common Market",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "US",
+      "doc_count": 6
+    },
+    {
+      "key": "BR",
+      "doc_count": 1
+    }
+  ],
   "sources": [
     {
       "key": "USTDA",
@@ -11,16 +57,6 @@
     {
       "key": "SBA",
       "doc_count": 3
-    }
-  ],
-  "countries": [
-    {
-      "key": "US",
-      "doc_count": 6
-    },
-    {
-      "key": "BR",
-      "doc_count": 1
     }
   ]
 }

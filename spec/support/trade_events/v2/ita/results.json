@@ -33,7 +33,14 @@
       "city": "Tel Aviv",
       "state": null,
       "country": "IL"
-    }]
+    }],
+    "trade_regions": [
+    
+    ],
+    "world_regions": [
+      "Levant",
+      "Middle East"
+    ]
   },
   {
     "id": "33831",
@@ -65,7 +72,15 @@
       "city": "Pewaukee",
       "state": "WI",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "34436",
@@ -126,7 +141,15 @@
       "city": "New Orleans, Louisiana",
       "state": "LA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "34568",
@@ -183,6 +206,15 @@
       "city": "São Paulo",
       "state": null,
       "country": "BR"
-      }]
+      }],
+    "trade_regions": [
+      "Southern Common Market",
+      "Global System of Trade Preferences among Developing Countries"
+    ],
+    "world_regions": [
+      "South America",
+      "Western Hemisphere",
+      "Latin America"
+    ]
   }
 ]

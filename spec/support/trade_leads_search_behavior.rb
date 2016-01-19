@@ -270,3 +270,15 @@ shared_examples 'it contains all TradeLead::Ustda results that match "equipment"
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
+
+shared_examples 'it contains all TradeLead::Ustda results where trade_regions is "African Growth and Opportunity Act"' do
+  let(:source) { TradeLead::Ustda }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"' do
+  let(:source) { TradeLead::Ustda }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end

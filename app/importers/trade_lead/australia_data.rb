@@ -32,6 +32,7 @@ module TradeLead
     end
 
     def import
+      set_taxonomy_parser
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'windows-1252:utf-8')
       entries = rows.map { |row| process_row row.to_h }.compact
       TradeLead::Australia.index(entries)
@@ -47,6 +48,7 @@ module TradeLead
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
       entry[:country] = 'AU'
+      entry.merge! add_geo_fields([entry[:country]])
       entry = process_urls(entry)
       entry[:source] = TradeLead::Australia.source[:code]
       entry

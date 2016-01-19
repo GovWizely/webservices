@@ -11,6 +11,7 @@ module TradeLead
     end
 
     def import
+      set_taxonomy_parser
       xml_body = loaded_resource
 
       # The source XML file states that its content in encoded in utf-16, but
@@ -80,6 +81,7 @@ module TradeLead
       lead[:publish_date] = lead[:publish_date] ? parse_date(lead[:publish_date]) : nil
       lead[:source] = model_class.source[:code]
       lead[:country] = 'GB'
+      lead.merge! add_geo_fields([lead[:country]])
       process_industries(lead)
       lead
     end

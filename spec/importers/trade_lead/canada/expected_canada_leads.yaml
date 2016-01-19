@@ -7,16 +7,15 @@
   :end_date: '2014-07-24'
   :publish_date_amended: '2014-07-10'
   :status: Active
-  :industry: 
+  :industry:
   - 'G009E: Medical/Dental Clinic Services'
-  :ita_industries: []
   :region_opportunity: Alberta
   :specific_location: Alberta
   :notice_type: DDP-RFP
   :trade_agreement: None
   :bid_type: Open
-  :competitive_procurement_strategy:
-  :non_competitive_procurement_strategy:
+  :competitive_procurement_strategy: 
+  :non_competitive_procurement_strategy: 
   :procurement_organization: Correctional Service of Canada
   :implementing_entity: Correctional Service of Canada
   :description: 'Physician Services This requirement is for: The Correctional Service
@@ -56,8 +55,16 @@
   :urls:
   - http://bit.ly/1L4aclr
   - http://bit.ly/1Kyo80o
+  :ita_industries: []
   :country: CA
-  :source: "CANADA"
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Western Hemisphere
+  - North America
+  - Pacific Rim
+  :source: CANADA
 - :language: English
   :title: LINER,COVERALLS,CHEMICAL PROTECTIVE (W8486-140835/A)
   :reference_number: PW-$$PR-707-64882
@@ -66,17 +73,16 @@
   :end_date: '2014-07-21'
   :publish_date_amended: '2014-06-11'
   :status: Active
-  :industry: 
+  :industry:
   - 'N8305: Textile Fabrics'
   - 'N8415: Clothing, Special Purpose'
-  :ita_industries: []
-  :region_opportunity:
+  :region_opportunity: 
   :specific_location: Quebec
   :notice_type: APM-NPP
   :trade_agreement: Agreement on Internal Trade (AIT)
   :bid_type: If 3+ bids offer Canadian goods/services other bids will not be considered
   :competitive_procurement_strategy: Lowest/Lower Bid
-  :non_competitive_procurement_strategy:
+  :non_competitive_procurement_strategy: 
   :procurement_organization: Public Works & Government Services Canada
   :implementing_entity: Department of National Defence
   :description: 'Trade Agreement: Agreement on Internal Trade (AIT) Tendering Procedures:
@@ -133,8 +139,16 @@
   - http://bit.ly/1L4afxJ
   - http://bit.ly/1L4afO1
   - http://bit.ly/1L4afO7
+  :ita_industries: []
   :country: CA
-  :source: "CANADA"
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Western Hemisphere
+  - North America
+  - Pacific Rim
+  :source: CANADA
 - :language: English
   :title: CSC-MTL Meat - Poultry (21301-148239/A)
   :reference_number: PW-$MTR-110-12642
@@ -143,10 +157,9 @@
   :end_date: '2015-01-19'
   :publish_date_amended: '2014-04-04'
   :status: Active
-  :industry: 
+  :industry:
   - 'N8905Z: Meat, Poultry and Fish'
-  :ita_industries: []
-  :region_opportunity:
+  :region_opportunity: 
   :specific_location: Quebec
   :notice_type: APM-NPP
   :trade_agreement: Agreement on Internal Trade (AIT) Canada-Colombia Free Trade Agreement
@@ -155,7 +168,7 @@
     Free Trade Agreement
   :bid_type: All interested suppliers may submit a bid
   :competitive_procurement_strategy: Best Overall Proposal
-  :non_competitive_procurement_strategy:
+  :non_competitive_procurement_strategy: 
   :procurement_organization: Public Works & Government Services Canada
   :implementing_entity: Correctional Service of Canada
   :description: 'Trade Agreement: WTO-AGP/NAFTA/AIT/Canada FTAs with Peru/Colombia/Panama
@@ -205,8 +218,16 @@
   - http://bit.ly/1L4adWp
   - http://bit.ly/1L4adWz
   - http://bit.ly/1L4ag4G
+  :ita_industries: []
   :country: CA
-  :source: "CANADA"
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Western Hemisphere
+  - North America
+  - Pacific Rim
+  :source: CANADA
 - :language: English
   :title: Notice of interest consultant services agreement (open) (21301-14-2002178)
   :reference_number: PW-14-00609632
@@ -215,16 +236,15 @@
   :end_date: '2014-12-31'
   :publish_date_amended: '2014-04-03'
   :status: Active
-  :industry: 
+  :industry:
   - 'C119F: Engineering Services - Buildings'
-  :ita_industries: []
   :region_opportunity: Quebec
   :specific_location: Quebec
   :notice_type: AO-ITT
   :trade_agreement: North America Free Trade Agreement (NAFTA)
   :bid_type: Open
-  :competitive_procurement_strategy:
-  :non_competitive_procurement_strategy:
+  :competitive_procurement_strategy: 
+  :non_competitive_procurement_strategy: 
   :procurement_organization: Correctional Service of Canada
   :implementing_entity: Correctional Service of Canada
   :description: The Correctional Service of Canada (CSC) would like to know your interest
@@ -240,20 +260,27 @@
   - http://bit.ly/1L4agl5
   - http://bit.ly/1L4aetm
   - http://bit.ly/1L4agl7
+  :ita_industries: []
   :country: CA
-  :source: "CANADA"
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Western Hemisphere
+  - North America
+  - Pacific Rim
+  :source: CANADA
 - :language: English
   :title: SERVICES, LANGUAGE TRAINING PROGRA (51019-132011/A)
   :reference_number: PW-$$ZF-519-27769
   :contract_number: 51019-132011/A
   :publish_date: '2013-07-09'
   :end_date: '2014-08-11'
-  :publish_date_amended:
+  :publish_date_amended: 
   :status: Active
-  :industry: 
+  :industry:
   - 'U099D: Language Training Services'
-  :ita_industries: []
-  :region_opportunity:
+  :region_opportunity: 
   :specific_location: Alberta, British Columbia, Manitoba, National Capital Region,
     New Brunswick, Newfoundland and Labrador, Northwest Territories, Nova Scotia,
     Nunavut, Ontario, Prince Edward Island, Quebec, Saskatchewan, Yukon
@@ -262,8 +289,8 @@
     Canada-Peru Free Trade Agreement (CPFTA) North America Free Trade Agreement (NAFTA)
     World Trade Organization-Agreement on Government Procurement (WTO-AGP) Canada-Panama
     Free Trade Agreement
-  :bid_type:
-  :competitive_procurement_strategy:
+  :bid_type: 
+  :competitive_procurement_strategy: 
   :non_competitive_procurement_strategy: Government Objectives Representing Best Interests/Value
     to Govt
   :procurement_organization: Public Works & Government Services Canada
@@ -517,6 +544,14 @@
     956-2675, PSBID, PWGSC / DIASP,TPSGC 11 Laurier St. / 11, rue Laurier 10C1/Place
     du Portage, Phase III Gatineau Québec K1A 0S5 N° de téléphone : (819) 956-8348
     ( ) N° de télécopieur : (819) 956-2675'
-  :urls:
+  :urls: 
+  :ita_industries: []
   :country: CA
-  :source: "CANADA"
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Western Hemisphere
+  - North America
+  - Pacific Rim
+  :source: CANADA

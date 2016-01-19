@@ -1,13 +1,25 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "UK",
+      "key": "Europe",
+      "doc_count": 9
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "European Union - 28",
       "doc_count": 9
     }
   ],
   "countries": [
     {
       "key": "GB",
+      "doc_count": 9
+    }
+  ],
+  "sources": [
+    {
+      "key": "UK",
       "doc_count": 9
     }
   ]

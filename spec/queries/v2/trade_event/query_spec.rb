@@ -79,5 +79,14 @@ describe V2::TradeEvent::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+
+    context 'when options include trade_regions or world_regions' do
+      let(:query) { described_class.new(trade_regions: 'European Union - 28', world_regions: 'Asia') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_geo_terms.json").read }
+
+      it 'generates search body trade_regions and world_regions filter' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
   end
 end

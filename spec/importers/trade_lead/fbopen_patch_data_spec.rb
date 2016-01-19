@@ -4,6 +4,7 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
+  before { importer.set_taxonomy_parser }
 
   it_behaves_like 'an importer which indexes the correct documents'
 
@@ -75,6 +76,8 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
+                        trade_regions:                    ['Southern Common Market', 'Global System of Trade Preferences among Developing Countries'],
+                        world_regions:                    ['South America', 'Western Hemisphere', 'Latin America'],
                        )
     end
 

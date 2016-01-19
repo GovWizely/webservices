@@ -1,8 +1,82 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "STATE",
-      "doc_count": 4
+      "key": "Africa",
+      "doc_count": 1
+    },
+    {
+      "key": "Asia",
+      "doc_count": 1
+    },
+    {
+      "key": "Asia Pacific",
+      "doc_count": 1
+    },
+    {
+      "key": "Latin America",
+      "doc_count": 1
+    },
+    {
+      "key": "Middle East",
+      "doc_count": 1
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 1
+    },
+    {
+      "key": "Persian Gulf Region",
+      "doc_count": 1
+    },
+    {
+      "key": "South America",
+      "doc_count": 1
+    },
+    {
+      "key": "Southeast Asia",
+      "doc_count": 1
+    },
+    {
+      "key": "Sub-Saharan Africa",
+      "doc_count": 1
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 2
+    },
+    {
+      "key": "African Growth and Opportunity Act",
+      "doc_count": 1
+    },
+    {
+      "key": "Andean Community",
+      "doc_count": 1
+    },
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 1
+    },
+    {
+      "key": "Association of Southeast Asian Nations",
+      "doc_count": 1
+    },
+    {
+      "key": "Common Market for Eastern and Southern Africa",
+      "doc_count": 1
+    },
+    {
+      "key": "Gulf Cooperation Council",
+      "doc_count": 1
+    },
+    {
+      "key": "Organization of the Petroleum Exporting Countries",
+      "doc_count": 1
     }
   ],
   "countries": [
@@ -21,6 +95,12 @@
     {
       "key": "QA",
       "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 4
     }
   ]
 }

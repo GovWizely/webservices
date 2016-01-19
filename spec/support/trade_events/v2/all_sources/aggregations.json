@@ -1,20 +1,54 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "SBA",
-      "doc_count": 17
+      "key": "Western Hemisphere",
+      "doc_count": 19
     },
     {
-      "key": "USTDA",
-      "doc_count": 6
+      "key": "North America",
+      "doc_count": 18
     },
     {
-      "key": "ITA",
-      "doc_count": 4
+      "key": "Pacific Rim",
+      "doc_count": 18
     },
     {
-      "key": "DL",
+      "key": "Europe",
       "doc_count": 2
+    },
+    {
+      "key": "Latin America",
+      "doc_count": 1
+    },
+    {
+      "key": "Levant",
+      "doc_count": 1
+    },
+    {
+      "key": "Middle East",
+      "doc_count": 1
+    },
+    {
+      "key": "South America",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 18
+    },
+    {
+      "key": "European Union - 28",
+      "doc_count": 2
+    },
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 1
+    },
+    {
+      "key": "Southern Common Market",
+      "doc_count": 1
     }
   ],
   "countries": [
@@ -37,6 +71,24 @@
     {
       "key": "IL",
       "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 17
+    },
+    {
+      "key": "USTDA",
+      "doc_count": 6
+    },
+    {
+      "key": "ITA",
+      "doc_count": 4
+    },
+    {
+      "key": "DL",
+      "doc_count": 2
     }
   ]
 }

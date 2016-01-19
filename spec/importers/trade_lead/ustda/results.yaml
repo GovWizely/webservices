@@ -18,6 +18,12 @@
   :id: 2f5b2500e70deee8068acca0cf2dbcec8ed0a0cf
   :source: USTDA
   :country: CR
+  :trade_regions: []
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - Central America
+  - Latin America
   :url: http://1.usa.gov/1NV3exp
 - :title: 'Rwanda: Rwaza I & II Hydropower Projects'
   :publish_date: '2015-10-28'
@@ -43,4 +49,10 @@
   :id: 47153b82ff59e101f67ecf9ec78a8ac1582aefd8
   :source: USTDA
   :country: RW
+  :trade_regions:
+  - African Growth and Opportunity Act
+  - Common Market for Eastern and Southern Africa
+  :world_regions:
+  - Sub-Saharan Africa
+  - Africa
   :url: http://1.usa.gov/1NV3exr

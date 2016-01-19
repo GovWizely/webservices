@@ -19,6 +19,12 @@
     :last_name: SBDC
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Wisconsin SBDC Centers
     :city: Wisconsin
@@ -47,6 +53,12 @@
     :last_name: Desiree Albrecht
     :phone: "(206) 553-2664"
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Fourth and Battery Building 2401 4th Avenue, Suite 450
     :city: Seattle
@@ -74,6 +86,12 @@
     :last_name: SBDC
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Wisconsin SBDC Centers
     :city: Wisconsin
@@ -102,6 +120,12 @@
     :last_name: Maximus Smith
     :phone: "(206) 553-2664"
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Fourth and Battery Building 2401 4th Avenue, Suite 450
     :city: MaxiMUS
@@ -129,6 +153,12 @@
     :last_name: SBDC
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Wisconsin SBDC Centers
     :city: Wisconsin
@@ -157,6 +187,12 @@
     :last_name: Desiree Albrecht
     :phone: "(206) 553-2664"
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Fourth and Battery Building 2401 4th Avenue, Suite 450
     :city: Seattle
@@ -184,6 +220,12 @@
     :last_name: SBDC
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Wisconsin SBDC Centers
     :city: Wisconsin
@@ -212,6 +254,12 @@
     :last_name: Desiree Albrecht
     :phone: "(206) 553-2664"
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Fourth and Battery Building 2401 4th Avenue, Suite 450
     :city: Seattle
@@ -239,6 +287,12 @@
     :last_name: SBDC
     :phone: 
     :post: Small Business Administration
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :address: Wisconsin SBDC Centers
     :city: Wisconsin

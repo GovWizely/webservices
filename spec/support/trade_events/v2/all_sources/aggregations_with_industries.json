@@ -1,4 +1,23 @@
 {
+  "world_regions": [
+    {
+      "key": "Levant",
+      "doc_count": 1
+    },
+    {
+      "key": "Middle East",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+    {
+      "key": "IL",
+      "doc_count": 1
+    }
+  ],
   "sources": [
     {
       "key": "ITA",
@@ -6,12 +25,6 @@
     },
     {
       "key": "USTDA",
-      "doc_count": 1
-    }
-  ],
-  "countries": [
-    {
-      "key": "IL",
       "doc_count": 1
     }
   ]

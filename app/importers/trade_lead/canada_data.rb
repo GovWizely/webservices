@@ -32,11 +32,8 @@ module TradeLead
       document:                             :urls,
     }.freeze
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
+      set_taxonomy_parser
       TradeLead::Canada.index(leads)
     end
 
@@ -70,6 +67,7 @@ module TradeLead
       lead[:industry] = split_industries(lead[:industry]) if lead[:industry]
       lead[:ita_industries] = lead[:industry] ? get_mapper_terms_from_array(lead[:industry]) : []
       lead[:country] = 'CA'
+      lead.merge! add_geo_fields([lead[:country]])
       lead
     end
 

@@ -16,6 +16,7 @@ module TradeEvent
     end
 
     def import
+      set_taxonomy_parser
       iterate_over_source_urls do |_body, docs|
         Sba.index(remove_invalid(docs))
       end
@@ -100,6 +101,8 @@ module TradeEvent
       doc[:source] = model_class.source[:code]
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
+      doc.merge! add_geo_fields(doc[:venues].map { |v| v[:country] })
+
       doc[:id] = Utils.generate_id(doc, %i(city cost country event_name event_type start_date
                                            start_time end_date end_time time_zone))
       doc[:cost] &&= doc[:cost].gsub(/\s+/, '')

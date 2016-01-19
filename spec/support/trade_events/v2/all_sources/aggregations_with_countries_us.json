@@ -1,4 +1,30 @@
 {
+  "world_regions": [
+    {
+      "key": "North America",
+      "doc_count": 18
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 18
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 18
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 18
+    }
+  ],
+  "countries": [
+    {
+      "key": "US",
+      "doc_count": 18
+    }
+  ],
   "sources": [
     {
       "key": "SBA",
@@ -9,14 +35,8 @@
       "doc_count": 2
     },
     {
-      "key": "USTDA", 
+      "key": "USTDA",
       "doc_count": 1
-    }
-  ],
-  "countries": [
-    {
-      "key": "US",
-      "doc_count": 18
     }
   ]
 }

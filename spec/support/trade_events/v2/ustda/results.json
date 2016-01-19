@@ -25,7 +25,9 @@
     "phone": null,
     "email": null,
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [],
+    "world_regions": []
   },
   {
     "id": "94c3d1baec60e3622d956ca03daaa0eb3feb7303",
@@ -58,7 +60,9 @@
     "phone": null,
     "email": null,
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [],
+    "world_regions": []
   },
   {
     "id": "85002753aed29875028b5e98ae12225ecd6d3283",
@@ -91,7 +95,9 @@
     "phone": null,
     "email": null,
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [],
+    "world_regions": []
   },
   {
     "id": "e192f278bac8df094d6efaea1d39ed06bb603177",
@@ -124,7 +130,9 @@
     "phone": null,
     "email": null,
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [],
+    "world_regions": []
   },
   {
     "id": "5dd39f6a508d2f27cd0e62c55efeab786a5ddd55",
@@ -157,7 +165,15 @@
     "phone": null,
     "email": "ed@email.com",
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "d4c2f2c7fc1b622030e6358c64155384f4768d26",
@@ -190,6 +206,8 @@
     "phone": null,
     "email": null,
     "source": "USTDA",
-    "event_type": null
+    "event_type": null,
+    "trade_regions": [],
+    "world_regions": []
   }
 ]

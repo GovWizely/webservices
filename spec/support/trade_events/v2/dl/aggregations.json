@@ -1,11 +1,17 @@
 {
+  "world_regions": [
+
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+
+  ],
   "sources": [
     {
       "key": "DL",
       "doc_count": 2
     }
-  ],
-  "countries": [
-
   ]
 }

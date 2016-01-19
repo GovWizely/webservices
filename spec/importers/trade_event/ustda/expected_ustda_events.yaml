@@ -2,8 +2,8 @@
 - :event_name: 'Live Google Hangout: Opportunities in India Smart City Development'
   :start_date: 2015-03-16
   :end_date: 2015-03-16
-  :start_time: "15:00"
-  :end_time: "15:30"
+  :start_time: '15:00'
+  :end_time: '15:30'
   :cost: 
   :cost_currency: 
   :registration_link: 
@@ -33,6 +33,8 @@
   :person_title: 
   :phone: 
   :email: 
+  :trade_regions: []
+  :world_regions: []
   :venues: []
   :event_type: 
   :source: USTDA
@@ -70,11 +72,13 @@
   :person_title: 
   :phone: 
   :email: 
+  :trade_regions: []
+  :world_regions: []
   :venues:
   - :venue: Washington, DC and San Francisco, CA
     :city: 
     :state: 
-    :country:
+    :country: 
   :event_type: 
   :source: USTDA
   :id: 94c3d1baec60e3622d956ca03daaa0eb3feb7303
@@ -106,6 +110,8 @@
   :person_title: 
   :phone: 
   :email: 
+  :trade_regions: []
+  :world_regions: []
   :venues:
   - :venue: Miami, FL; Houston, TX; and Los Angeles, CA
     :city: 
@@ -145,6 +151,8 @@
   :person_title: 
   :phone: 
   :email: 
+  :trade_regions: []
+  :world_regions: []
   :venues:
   - :venue: Los Angeles, CA
     :city: 
@@ -180,6 +188,12 @@
   :person_title: 
   :phone: 
   :email: ed@email.com
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :venue: San Francisco, CA
     :city: San Francisco
@@ -215,6 +229,8 @@
   :person_title: 
   :phone: 
   :email: 
+  :trade_regions: []
+  :world_regions: []
   :venues:
   - :venue: Miami, FL; Houston, TX; and Los Angeles, CA
     :city: 

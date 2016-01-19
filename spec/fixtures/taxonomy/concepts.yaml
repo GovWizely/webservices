@@ -7,22 +7,22 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Trade Events
+  - Countertrade
+  - Government Procurement
+  - Exports
+  - Export Marketing
   - Trade Opportunities
   - Outsourcing
-  - Exports
-  - Trade Support Institutions
-  - Trade Promotion
-  - Government Procurement
-  - Export Marketing
-  - Trade Development
-  - Imports
-  - Countertrade
   - Export Diversification
-  - Trade Support Services
-  - Competitiveness
+  - Trade Promotion
+  - Trade Support Institutions
   - Import Management
+  - Trade Support Services
+  - Trade Development
+  - Competitiveness
+  - Trade Events
   - Export Potential
+  - Imports
 - :label: Government Procurement
   :leaf_node: true
   :path: "/Trade Development and Promotion/Government Procurement"
@@ -63,14 +63,14 @@
   :broader_terms:
   - Trade Development and Promotion
   :narrower_terms:
-  - Market Access Advocacy
+  - Export Trading Company Affairs
+  - Trade Advocacy
+  - International Buyer Program
   - Business Meeting Facilitation
   - Business Matchmaking
-  - International Buyer Program
-  - Trade Advocacy
-  - Trade Counseling
-  - Export Trading Company Affairs
   - Commercial Diplomacy
+  - Trade Counseling
+  - Market Access Advocacy
 - :label: Trade Counseling
   :leaf_node: true
   :path: "/Trade Development and Promotion/Trade Support Services/Trade Counseling"
@@ -146,12 +146,12 @@
   :broader_terms:
   - Trade Development and Promotion
   :narrower_terms:
-  - Trade Promotion Organizations
-  - District Export Councils
-  - Chambers of Commerce
-  - Trade Points
-  - Trade Associations
   - Trade Representation
+  - Trade Points
+  - Chambers of Commerce
+  - District Export Councils
+  - Trade Promotion Organizations
+  - Trade Associations
 - :label: Trade Points
   :leaf_node: true
   :path: "/Trade Development and Promotion/Trade Support Institutions/Trade Points"
@@ -184,8 +184,8 @@
   :subject: http://webprotege.stanford.edu/RBkKGGInt7APRE7uhQO4EsD
   :concept_groups: []
   :broader_terms:
-  - Trade Support Institutions
   - Non-Profits and Associations
+  - Trade Support Institutions
   :narrower_terms: []
 - :label: Trade Representation
   :leaf_node: true
@@ -241,8 +241,8 @@
   :broader_terms:
   - Trade Events
   :narrower_terms:
-  - Catalog Exhibitions
   - Certified Trade Fairs
+  - Catalog Exhibitions
 - :label: Certified Trade Fairs
   :leaf_node: true
   :path: "/Trade Development and Promotion/Trade Events/Trade Fairs/Certified Trade
@@ -340,17 +340,17 @@
   :broader_terms:
   - Trade Promotion
   :narrower_terms:
-  - Market Development Cooperator Program
-  - Featured U.S. Exporters Program
-  - Startup Global
   - Look South Initiative
-  - Made in Rural America Export and Investment Initiative
-  - Strategic Partnership Program
-  - Trade Fair Certification Program
+  - Startup Global
+  - Featured U.S. Exporters Program
   - Doing Business in Africa Initiative
-  - Renewable Energy and Energy Efficiency Export Initiative
   - Business Service Providers Program
+  - Made in Rural America Export and Investment Initiative
+  - Renewable Energy and Energy Efficiency Export Initiative
+  - Strategic Partnership Program
   - E-Awards
+  - Trade Fair Certification Program
+  - Market Development Cooperator Program
 - :label: Business Service Providers Program
   :leaf_node: true
   :path: "/Trade Development and Promotion/Trade Promotion/Export Promotion/Business
@@ -505,8 +505,8 @@
   :broader_terms:
   - Trade Development and Promotion
   :narrower_terms:
-  - Export Strategy
   - Foreign Trade
+  - Export Strategy
 - :label: Foreign Trade
   :leaf_node: true
   :path: "/Trade Development and Promotion/Trade Development/Foreign Trade"
@@ -577,45 +577,45 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Panama
-  - Russia
-  - South Korea
-  - Indonesia
-  - Colombia
-  - Philippines
-  - Timor-Leste
-  - Macau
-  - Canada
-  - Cook Islands
-  - Costa Rica
-  - Norfolk Island
-  - Vietnam
-  - New Zealand
   - Peru
-  - Tokelau
-  - Cocos (Keeling) Islands
-  - Mexico
-  - China
-  - Thailand
-  - North Korea
-  - El Salvador
-  - Japan
-  - Honduras
-  - Papua New Guinea
-  - Hong Kong
-  - United States
-  - Taiwan
-  - Malaysia
-  - Niue
   - Australia
-  - Brunei
-  - Cambodia
-  - Ecuador
-  - Christmas Island
+  - El Salvador
+  - Russia
+  - Honduras
+  - Cook Islands
+  - North Korea
+  - Cocos (Keeling) Islands
+  - Indonesia
+  - Hong Kong
+  - Colombia
+  - Mexico
+  - Costa Rica
   - Laos
+  - Vietnam
+  - Japan
   - Guatemala
-  - Singapore
+  - Macau
+  - Papua New Guinea
+  - Taiwan
   - Chile
+  - New Zealand
+  - South Korea
+  - Niue
+  - Canada
+  - Cambodia
+  - Malaysia
+  - Timor-Leste
+  - Norfolk Island
+  - Brunei
+  - Singapore
+  - Panama
+  - United States
+  - China
+  - Christmas Island
+  - Ecuador
+  - Thailand
+  - Philippines
+  - Tokelau
 - :label: Mozambique
   :leaf_node: true
   :path: "/Mozambique"
@@ -623,10 +623,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
-  - Global System of Trade Preferences among Developing Countries
-  - South African Development Community
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
+  - South African Development Community
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Lebanon
   :leaf_node: true
@@ -644,8 +644,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Persian Gulf Region
   - Gulf Cooperation Council
+  - Persian Gulf Region
   :narrower_terms: []
 - :label: Lithuania
   :leaf_node: true
@@ -654,8 +654,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Holy See
   :leaf_node: true
@@ -674,8 +674,8 @@
   - Countries
   :broader_terms:
   - West Africa
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Brunei
   :leaf_node: true
@@ -684,12 +684,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific
   - Trans Pacific Partnership
-  - Southeast Asia
+  - Asia Pacific
   - Pacific Rim
-  - Association of Southeast Asian Nations
+  - Southeast Asia
   - Asia Pacific Economic Cooperation
+  - Association of Southeast Asian Nations
   :narrower_terms: []
 - :label: Saint Helena, Ascension and Tristan da Cunha
   :leaf_node: true
@@ -708,9 +708,9 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Business Associations
   - Chambers of Commerce
   - Regional Economic Development
+  - Business Associations
 - :label: Regional Economic Development
   :leaf_node: true
   :path: "/Non-Profits and Associations/Regional Economic Development"
@@ -725,8 +725,8 @@
   :subject: http://webprotege.stanford.edu/RBkKGGInt7APRE7uhQO4EsD
   :concept_groups: []
   :broader_terms:
-  - Trade Support Institutions
   - Non-Profits and Associations
+  - Trade Support Institutions
   :narrower_terms: []
 - :label: Business Associations
   :leaf_node: true
@@ -744,8 +744,8 @@
   - Countries
   :broader_terms:
   - West African Economic and Monetary Union
-  - West Africa
   - Sub-Saharan Africa
+  - West Africa
   :narrower_terms: []
 - :label: Wallis and Futuna
   :leaf_node: true
@@ -763,9 +763,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
-  - Global System of Trade Preferences among Developing Countries
   - South America
+  - Global System of Trade Preferences among Developing Countries
+  - Western Hemisphere
   - Latin America
   - Southern Common Market
   :narrower_terms: []
@@ -787,8 +787,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Gabon
   :leaf_node: true
@@ -798,8 +798,8 @@
   - Countries
   :broader_terms:
   - Economic and Monetary Community of Central Africa
-  - Sub-Saharan Africa
   - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Libya
   :leaf_node: true
@@ -809,9 +809,9 @@
   - Countries
   :broader_terms:
   - North Africa
-  - Global System of Trade Preferences among Developing Countries
-  - Organization of the Petroleum Exporting Countries
   - Common Market for Eastern and Southern Africa
+  - Organization of the Petroleum Exporting Countries
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Maldives
   :leaf_node: true
@@ -820,8 +820,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South Asia
   - South Asian Association for Regional Cooperation
+  - South Asia
   :narrower_terms: []
 - :label: Kiribati
   :leaf_node: true
@@ -839,10 +839,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - West Africa
   - West African Economic and Monetary Union
-  - Sub-Saharan Africa
   - African Growth and Opportunity Act
+  - West Africa
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Environment
   :leaf_node: false
@@ -852,15 +852,15 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Environmental Legislation
-  - Waste Management
-  - Biodiversity
   - Climate
-  - Water Treatment
-  - Soil Conservation
-  - Environmental Management
-  - Forest Conservation
+  - Waste Management
+  - Environmental Legislation
   - Dangerous Substances
+  - Forest Conservation
+  - Biodiversity
+  - Soil Conservation
+  - Water Treatment
+  - Environmental Management
 - :label: Environmental Management
   :leaf_node: true
   :path: "/Environment/Environmental Management"
@@ -960,44 +960,44 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Informal Credit
-  - Debt
-  - Foreign Exchange
-  - Export Credit
-  - Commodity Markets
-  - Public Expenditures
-  - Credit
-  - Microfinancing
-  - Financial Market
-  - Project Financing
-  - Securities
-  - Subsidies
-  - Banks
-  - Loans
-  - Forfaiting
   - Import Financing
-  - Export Subsidies
-  - Countervailing Measures
-  - Central Banks
-  - Factoring
-  - Export Financing
-  - Feed-in Tariffs
+  - Credit
   - Export Credit Insurance
-  - Bills of Exchange
-  - Revenues
-  - Monetary Systems
-  - Import Credit
-  - Public Finance
-  - Taxes
-  - Letters of Credit
-  - Insurance
   - Monetary Policy
-  - Fiscal Policy
+  - Informal Credit
+  - Letters of Credit
+  - Taxes
+  - Securities
   - Currencies
+  - Banks
   - Trade Financing
   - Exchange Rates
-  - Devaluation
+  - Monetary Systems
+  - Revenues
+  - Factoring
+  - Debt
+  - Central Banks
+  - Bills of Exchange
+  - Project Financing
+  - Microfinancing
   - Payment
+  - Foreign Exchange
+  - Subsidies
+  - Devaluation
+  - Import Credit
+  - Export Subsidies
+  - Countervailing Measures
+  - Loans
+  - Export Credit
+  - Export Financing
+  - Public Expenditures
+  - Forfaiting
+  - Fiscal Policy
+  - Financial Market
+  - Commodity Markets
+  - Insurance
+  - Public Finance
+  - Feed-in Tariffs
 - :label: Letters of Credit
   :leaf_node: false
   :path: "/Finance/Letters of Credit"
@@ -1007,15 +1007,15 @@
   - Payment
   - Finance
   :narrower_terms:
-  - Transferable Letter of Credit
-  - Export Letter of Credit
-  - Standby Letter of Credit
-  - Confirmed Letter of Credit
-  - Revocable Letter of Credit
-  - Revolving Letter of Credit
   - Import Letter of Credit
-  - Irrevocable Letter of Credit
+  - Transferable Letter of Credit
   - Confirmed Export Letter of Credit
+  - Revocable Letter of Credit
+  - Irrevocable Letter of Credit
+  - Confirmed Letter of Credit
+  - Export Letter of Credit
+  - Revolving Letter of Credit
+  - Standby Letter of Credit
 - :label: Revolving Letter of Credit
   :leaf_node: true
   :path: "/Finance/Letters of Credit/Revolving Letter of Credit"
@@ -1038,9 +1038,9 @@
   :subject: http://webprotege.stanford.edu/R8gNPCdXCKV9yybQqEjZU3r
   :concept_groups: []
   :broader_terms:
-  - Finance
-  - Payment
   - Letters of Credit
+  - Payment
+  - Finance
   :narrower_terms: []
 - :label: Import Letter of Credit
   :leaf_node: true
@@ -1190,11 +1190,11 @@
   :broader_terms:
   - Finance
   :narrower_terms:
-  - Letters of Credit
-  - Documentary Credit
-  - Electronic Payment
-  - Bonds
   - Documentary Draft
+  - Documentary Credit
+  - Bonds
+  - Letters of Credit
+  - Electronic Payment
 - :label: Documentary Credit
   :leaf_node: true
   :path: "/Finance/Payment/Documentary Credit"
@@ -1212,15 +1212,15 @@
   - Payment
   - Finance
   :narrower_terms:
-  - Transferable Letter of Credit
-  - Export Letter of Credit
-  - Standby Letter of Credit
-  - Confirmed Letter of Credit
-  - Revocable Letter of Credit
-  - Revolving Letter of Credit
   - Import Letter of Credit
-  - Irrevocable Letter of Credit
+  - Transferable Letter of Credit
   - Confirmed Export Letter of Credit
+  - Revocable Letter of Credit
+  - Irrevocable Letter of Credit
+  - Confirmed Letter of Credit
+  - Export Letter of Credit
+  - Revolving Letter of Credit
+  - Standby Letter of Credit
 - :label: Revolving Letter of Credit
   :leaf_node: true
   :path: "/Finance/Payment/Letters of Credit/Revolving Letter of Credit"
@@ -1243,9 +1243,9 @@
   :subject: http://webprotege.stanford.edu/R8gNPCdXCKV9yybQqEjZU3r
   :concept_groups: []
   :broader_terms:
-  - Finance
-  - Payment
   - Letters of Credit
+  - Payment
+  - Finance
   :narrower_terms: []
 - :label: Import Letter of Credit
   :leaf_node: true
@@ -1385,10 +1385,10 @@
   :broader_terms:
   - Finance
   :narrower_terms:
-  - Development Banks
-  - Agricultural Banks
   - Cash in Advance
+  - Development Banks
   - Credit Cooperatives
+  - Agricultural Banks
 - :label: Credit Cooperatives
   :leaf_node: true
   :path: "/Finance/Banks/Credit Cooperatives"
@@ -1581,9 +1581,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
-  - Caribbean
   - Caribbean Community and Common Market
+  - Caribbean
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Tonga
   :leaf_node: true
@@ -1593,14 +1593,6 @@
   - Countries
   :broader_terms:
   - Oceania
-  :narrower_terms: []
-- :label: Palestine, State of
-  :leaf_node: true
-  :path: "/Palestine, State of"
-  :subject: http://webprotege.stanford.edu/R7ZPpf5xWtCQtss1SpwR9P
-  :concept_groups:
-  - Countries
-  :broader_terms: []
   :narrower_terms: []
 - :label: Marshall Islands
   :leaf_node: true
@@ -1637,8 +1629,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
   - Caribbean
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Textiles and Apparel
   :leaf_node: false
@@ -1648,13 +1640,13 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Used Textiles and Apparel
-  - Fabrics
   - Leather and Fur Products
-  - Medical Textiles
   - Textile Made-Ups
   - Textile Equipment and Machinery
+  - Medical Textiles
   - Yarns
+  - Fabrics
+  - Used Textiles and Apparel
   - Apparel
   - Footwear
 - :label: Footwear
@@ -1714,8 +1706,8 @@
   - Consumer Goods
   - Textiles and Apparel
   :narrower_terms:
-  - Protective and Safety Clothing
   - Used Clothing
+  - Protective and Safety Clothing
 - :label: Used Clothing
   :leaf_node: true
   :path: "/Textiles and Apparel/Apparel/Used Clothing"
@@ -1755,8 +1747,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Andorra
   :leaf_node: true
@@ -1785,8 +1777,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Solomon Islands
   :leaf_node: true
@@ -1804,9 +1796,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - South African Development Community
   - Sub-Saharan Africa
   - African Growth and Opportunity Act
-  - South African Development Community
   - Common Market for Eastern and Southern Africa
   :narrower_terms: []
 - :label: Hungary
@@ -1847,10 +1839,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
-  - Global System of Trade Preferences among Developing Countries
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   - Economic and Monetary Community of Central Africa
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Mauritius
   :leaf_node: true
@@ -1859,10 +1851,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South African Development Community
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  - South African Development Community
   :narrower_terms: []
 - :label: Nigeria
   :leaf_node: true
@@ -1873,9 +1865,9 @@
   :broader_terms:
   - Global System of Trade Preferences among Developing Countries
   - West Africa
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
   - Organization of the Petroleum Exporting Countries
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Colombia
   :leaf_node: true
@@ -1884,12 +1876,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
-  - Western Hemisphere
-  - South America
-  - Latin America
-  - Andean Community
   - Global System of Trade Preferences among Developing Countries
+  - South America
+  - Western Hemisphere
+  - Andean Community
+  - Pacific Rim
+  - Latin America
   :narrower_terms: []
 - :label: Burundi
   :leaf_node: true
@@ -1898,9 +1890,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
-  - African Growth and Opportunity Act
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Sao Tome and Principe
   :leaf_node: true
@@ -1909,8 +1901,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   - West Africa
   :narrower_terms: []
 - :label: Austria
@@ -1939,8 +1931,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Information Management
   :leaf_node: false
@@ -1949,11 +1941,11 @@
   :concept_groups: []
   :broader_terms: []
   :narrower_terms:
+  - Information Sciences
+  - Information Services
   - Information Networks
   - Knowledge Management
   - Information Technology
-  - Information Services
-  - Information Sciences
 - :label: Information Sciences
   :leaf_node: true
   :path: "/Information Management/Information Sciences"
@@ -2051,12 +2043,12 @@
   :broader_terms:
   - Aerospace and Defense
   :narrower_terms:
-  - Air Transportation
-  - Aircraft and Aircraft Parts
   - Avionics
-  - Helicopters
   - Airport and Ground Support Equipment
+  - Air Transportation
+  - Helicopters
   - Air Traffic Control
+  - Aircraft and Aircraft Parts
 - :label: Aircraft and Aircraft Parts
   :leaf_node: true
   :path: "/Aerospace and Defense/Aviation/Aircraft and Aircraft Parts"
@@ -2121,13 +2113,13 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Trans Pacific Partnership
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   - Global System of Trade Preferences among Developing Countries
   - Asia Pacific Economic Cooperation
   - Latin America
-  - Western Hemisphere
-  - Trans Pacific Partnership
-  - Pacific Rim
-  - North America
   :narrower_terms: []
 - :label: Energy
   :leaf_node: false
@@ -2139,12 +2131,12 @@
   :narrower_terms:
   - Civil Nuclear Power
   - Renewable Fuels
-  - Oil and Gas
-  - Grid Transmission Distribution
   - Mining Equipment and Machinery
-  - Electricity Infrastructure
-  - Coal
   - Renewable Energy
+  - Grid Transmission Distribution
+  - Electricity Infrastructure
+  - Oil and Gas
+  - Coal
 - :label: Oil and Gas
   :leaf_node: false
   :path: "/Energy/Oil and Gas"
@@ -2153,8 +2145,8 @@
   :broader_terms:
   - Energy
   :narrower_terms:
-  - Oil and Gas Field Machinery
   - Petroleum Refineries
+  - Oil and Gas Field Machinery
 - :label: Petroleum Refineries
   :leaf_node: true
   :path: "/Energy/Oil and Gas/Petroleum Refineries"
@@ -2169,8 +2161,8 @@
   :subject: http://webprotege.stanford.edu/R9p9KxsNksbQ83bnKETnnKQ
   :concept_groups: []
   :broader_terms:
-  - Equipment and Machinery
   - Oil and Gas
+  - Equipment and Machinery
   :narrower_terms: []
 - :label: Coal
   :leaf_node: false
@@ -2180,8 +2172,8 @@
   :broader_terms:
   - Energy
   :narrower_terms:
-  - Clean Coal Technology
   - Coal Gasification Systems
+  - Clean Coal Technology
 - :label: Coal Gasification Systems
   :leaf_node: true
   :path: "/Energy/Coal/Coal Gasification Systems"
@@ -2215,9 +2207,9 @@
   :broader_terms:
   - Energy
   :narrower_terms:
-  - Nuclear Reactors
-  - Nuclear Waste Processing
   - Nuclear Fuels
+  - Nuclear Waste Processing
+  - Nuclear Reactors
 - :label: Nuclear Waste Processing
   :leaf_node: true
   :path: "/Energy/Civil Nuclear Power/Nuclear Waste Processing"
@@ -2251,8 +2243,8 @@
   - Energy
   :narrower_terms:
   - Biodiesel
-  - Wood Pellets
   - Ethanol
+  - Wood Pellets
 - :label: Wood Pellets
   :leaf_node: true
   :path: "/Energy/Renewable Fuels/Wood Pellets"
@@ -2285,13 +2277,13 @@
   :broader_terms:
   - Energy
   :narrower_terms:
-  - Geothermal Energy
-  - Renewable Energy Equipment
-  - Hydropower
-  - Wind Energy
-  - Biomass Equipment
-  - Solar Energy
   - Ocean Energy
+  - Biomass Equipment
+  - Renewable Energy Equipment
+  - Wind Energy
+  - Solar Energy
+  - Geothermal Energy
+  - Hydropower
 - :label: Biomass Equipment
   :leaf_node: true
   :path: "/Energy/Renewable Energy/Biomass Equipment"
@@ -2373,8 +2365,8 @@
   :broader_terms:
   - Energy
   :narrower_terms:
-  - Stationary Fuel Cells
   - Smart Grid
+  - Stationary Fuel Cells
 - :label: Smart Grid
   :leaf_node: true
   :path: "/Energy/Electricity Infrastructure/Smart Grid"
@@ -2409,17 +2401,17 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Scientific Laboratory Equipment
-  - Materials Handling Machinery
-  - Process Controls
-  - Fluid Handling Equipment
-  - Construction Equipment and Machinery
-  - 3D Printing
   - Packaging Equipment
-  - Machinery and Tools
+  - Construction Equipment and Machinery
+  - Materials Handling Machinery
   - Plastics Production Machinery
   - Chemical Production Machinery
   - Used and Reconditioned Equipment
+  - Scientific Laboratory Equipment
+  - 3D Printing
+  - Fluid Handling Equipment
+  - Machinery and Tools
+  - Process Controls
 - :label: Chemical Production Machinery
   :leaf_node: true
   :path: "/Equipment and Machinery/Chemical Production Machinery"
@@ -2468,8 +2460,8 @@
   :subject: http://webprotege.stanford.edu/R9p9KxsNksbQ83bnKETnnKQ
   :concept_groups: []
   :broader_terms:
-  - Equipment and Machinery
   - Oil and Gas
+  - Equipment and Machinery
   :narrower_terms: []
 - :label: Scientific Laboratory Equipment
   :leaf_node: true
@@ -2487,8 +2479,8 @@
   :broader_terms:
   - Equipment and Machinery
   :narrower_terms:
-  - Pumps, Valves and Compressors
   - Fluid Power Components
+  - Pumps, Valves and Compressors
 - :label: Pumps, Valves and Compressors
   :leaf_node: true
   :path: "/Equipment and Machinery/Fluid Handling Equipment/Pumps, Valves and Compressors"
@@ -2545,15 +2537,15 @@
   :broader_terms:
   - Equipment and Machinery
   :narrower_terms:
-  - Woodworking Machinery
-  - Rolling Mills
-  - Electric Motors
-  - Hand Tools
-  - Nonroad Diesel Engines
-  - Machine Tools
-  - Cutting Tools
-  - Welding Equipment
   - Tooling Equipment and Supplies
+  - Nonroad Diesel Engines
+  - Electric Motors
+  - Welding Equipment
+  - Hand Tools
+  - Woodworking Machinery
+  - Cutting Tools
+  - Machine Tools
+  - Rolling Mills
 - :label: Cutting Tools
   :leaf_node: true
   :path: "/Equipment and Machinery/Machinery and Tools/Cutting Tools"
@@ -2669,8 +2661,8 @@
   :subject: http://webprotege.stanford.edu/RDrypiy0jegDGZKteOJMFf
   :concept_groups: []
   :broader_terms:
-  - Marine Technology
   - Distribution and Logistics
+  - Marine Technology
   :narrower_terms:
   - Shipbuilding Equipment
   - Commercial Vessel Equipment
@@ -2697,9 +2689,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean Community and Common Market
-  - Caribbean
   - Western Hemisphere
+  - Caribbean
+  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: Ukraine
   :leaf_node: true
@@ -2718,8 +2710,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South America
   - Western Hemisphere
+  - South America
   :narrower_terms: []
 - :label: Burma
   :leaf_node: true
@@ -2728,10 +2720,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific
-  - Association of Southeast Asian Nations
   - Global System of Trade Preferences among Developing Countries
+  - Association of Southeast Asian Nations
   - Southeast Asia
+  - Asia Pacific
   :narrower_terms: []
 - :label: Guyana
   :leaf_node: true
@@ -2740,10 +2732,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
   - Caribbean Community and Common Market
-  - Western Hemisphere
   - South America
+  - Global System of Trade Preferences among Developing Countries
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Czech Republic
   :leaf_node: true
@@ -2752,8 +2744,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Ireland
   :leaf_node: true
@@ -2762,8 +2754,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Tokelau
   :leaf_node: true
@@ -2782,10 +2774,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
-  - West Africa
   - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   - West African Economic and Monetary Union
+  - West Africa
   :narrower_terms: []
 - :label: Saint Vincent and the Grenadines
   :leaf_node: true
@@ -2794,9 +2786,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean
   - Caribbean Community and Common Market
   - Western Hemisphere
+  - Caribbean
   :narrower_terms: []
 - :label: Pitcairn Islands
   :leaf_node: true
@@ -2814,10 +2806,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Asia Pacific
+  - East Asia
   - Asia Pacific Economic Cooperation
   - Pacific Rim
-  - East Asia
-  - Asia Pacific
   :narrower_terms: []
 - :label: Sint Maarten
   :leaf_node: true
@@ -2826,8 +2818,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Netherlands Antilles
   - Western Hemisphere
+  - Netherlands Antilles
   :narrower_terms: []
 - :label: Greece
   :leaf_node: true
@@ -2847,8 +2839,8 @@
   - Countries
   :broader_terms:
   - Organization of the Petroleum Exporting Countries
-  - Persian Gulf Region
   - Gulf Cooperation Council
+  - Persian Gulf Region
   :narrower_terms: []
 - :label: Nicaragua
   :leaf_node: true
@@ -2857,9 +2849,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
-  - Latin America
   - Global System of Trade Preferences among Developing Countries
+  - Latin America
+  - Western Hemisphere
   - Central America
   :narrower_terms: []
 - :label: Djibouti
@@ -2869,8 +2861,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Common Market for Eastern and Southern Africa
   - African Growth and Opportunity Act
+  - Common Market for Eastern and Southern Africa
   - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Iraq
@@ -2892,14 +2884,14 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Dyes and Pigments
-  - Adhesives and Sealants
-  - Plastic Materials and Resins
-  - Plastic Products
   - Explosives
+  - Photographic and Cinematographic Chemicals
   - Coatings
   - Agricultural Chemicals
-  - Photographic and Cinematographic Chemicals
+  - Dyes and Pigments
+  - Plastic Products
+  - Adhesives and Sealants
+  - Plastic Materials and Resins
 - :label: Adhesives and Sealants
   :leaf_node: true
   :path: "/Chemicals/Adhesives and Sealants"
@@ -2944,20 +2936,18 @@
   :leaf_node: false
   :path: "/Chemicals/Agricultural Chemicals"
   :subject: http://webprotege.stanford.edu/RC88khJQKahdqzgfyBuqa1H
-  :concept_groups:
-  - Sector
+  :concept_groups: []
   :broader_terms:
   - Chemicals
   - Agribusiness
   :narrower_terms:
-  - Fertilizers
   - Pesticides
+  - Fertilizers
 - :label: Pesticides
   :leaf_node: true
   :path: "/Chemicals/Agricultural Chemicals/Pesticides"
   :subject: http://webprotege.stanford.edu/R7bTiAvIyjgzVDBNpNzY3FG
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Chemicals
   :narrower_terms: []
@@ -2965,8 +2955,7 @@
   :leaf_node: true
   :path: "/Chemicals/Agricultural Chemicals/Fertilizers"
   :subject: http://webprotege.stanford.edu/RgUmzO3J4wWkV3WzgGZrsj
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Chemicals
   :narrower_terms: []
@@ -3003,8 +2992,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - Commonwealth of Independent States
+  - Europe
   :narrower_terms: []
 - :label: Indonesia
   :leaf_node: true
@@ -3013,12 +3002,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
-  - Southeast Asia
-  - Pacific Rim
   - Asia Pacific Economic Cooperation
-  - Asia Pacific
+  - Pacific Rim
+  - Global System of Trade Preferences among Developing Countries
   - Association of Southeast Asian Nations
+  - Asia Pacific
+  - Southeast Asia
   :narrower_terms: []
 - :label: Bonaire
   :leaf_node: true
@@ -3036,17 +3025,16 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Common Market for Eastern and Southern Africa
-  - Sub-Saharan Africa
   - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   - South African Development Community
+  - Common Market for Eastern and Southern Africa
   :narrower_terms: []
 - :label: Germany
   :leaf_node: true
   :path: "/Germany"
   :subject: http://webprotege.stanford.edu/R8h5mFnkBFA9y99Ri6YJsbl
-  :concept_groups:
-  - Countries
+  :concept_groups: []
   :broader_terms:
   - Europe
   - European Union - 28
@@ -3071,14 +3059,14 @@
   - Middle East
   :narrower_terms:
   - Kuwait
-  - Bahrain
-  - Qatar
-  - Oman
-  - Iraq
-  - Yemen
   - Saudi Arabia
-  - Iran
   - United Arab Emirates
+  - Iraq
+  - Iran
+  - Oman
+  - Yemen
+  - Qatar
+  - Bahrain
 - :label: Levant
   :leaf_node: true
   :path: "/Middle East/Levant"
@@ -3088,11 +3076,11 @@
   :broader_terms:
   - Middle East
   :narrower_terms:
-  - Israel
+  - Syria
   - West Bank and Gaza
   - Lebanon
+  - Israel
   - Jordan
-  - Syria
 - :label: Retail Trade
   :leaf_node: false
   :path: "/Retail Trade"
@@ -3101,16 +3089,16 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - eCommerce Industry
-  - Furniture Retailing
-  - Convenience Stores
-  - Drug Stores
-  - Direct Selling
   - Discount Stores
   - Catalog and Mail Order
-  - Department Stores
+  - Furniture Retailing
+  - Drug Stores
+  - Convenience Stores
+  - eCommerce Industry
   - Food and Grocery Retailing
+  - Department Stores
   - Hardware Stores
+  - Direct Selling
 - :label: Department Stores
   :leaf_node: true
   :path: "/Retail Trade/Department Stores"
@@ -3189,8 +3177,8 @@
   :subject: http://webprotege.stanford.edu/RyxVdNmlJh6Ct6SOVX4nY5
   :concept_groups: []
   :broader_terms:
-  - Information and Communication Technology
   - Retail Trade
+  - Information and Communication Technology
   :narrower_terms: []
 - :label: South Korea
   :leaf_node: true
@@ -3199,11 +3187,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific Economic Cooperation
   - Asia Pacific
-  - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific Economic Cooperation
   - Pacific Rim
   - East Asia
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Barbados
   :leaf_node: true
@@ -3212,9 +3200,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean
   - Western Hemisphere
   - Caribbean Community and Common Market
+  - Caribbean
   :narrower_terms: []
 - :label: Peru
   :leaf_node: true
@@ -3223,14 +3211,14 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific Economic Cooperation
-  - Pacific Rim
-  - Trans Pacific Partnership
-  - Global System of Trade Preferences among Developing Countries
   - Latin America
-  - Western Hemisphere
-  - Andean Community
+  - Asia Pacific Economic Cooperation
   - South America
+  - Western Hemisphere
+  - Global System of Trade Preferences among Developing Countries
+  - Trans Pacific Partnership
+  - Andean Community
+  - Pacific Rim
   :narrower_terms: []
 - :label: United Arab Emirates
   :leaf_node: true
@@ -3239,9 +3227,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Gulf Cooperation Council
   - Persian Gulf Region
   - Organization of the Petroleum Exporting Countries
+  - Gulf Cooperation Council
   :narrower_terms: []
 - :label: Papua New Guinea
   :leaf_node: true
@@ -3262,11 +3250,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South African Customs Union
-  - African Growth and Opportunity Act
-  - Common Market for Eastern and Southern Africa
-  - South African Development Community
   - Sub-Saharan Africa
+  - South African Development Community
+  - African Growth and Opportunity Act
+  - South African Customs Union
+  - Common Market for Eastern and Southern Africa
   :narrower_terms: []
 - :label: Business Management
   :leaf_node: false
@@ -3276,39 +3264,39 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Product Development
-  - Communication
-  - Costing and Pricing
-  - Supply Chain
-  - Purchasing
-  - Foreign Trade Techniques
-  - Business Travel and Etiquette
-  - Enterprises
-  - Public Relations
-  - Entrepreneurship
-  - Subcontracting
-  - Business to Consumer
-  - Advertising
   - Distribution
-  - Mergers
-  - Consumer Behavior
-  - Bid
   - Tendering
-  - Business News
-  - Competition
-  - Design
-  - Business to Government
-  - Business to Business
-  - Risk Management
-  - Market Research
-  - Sales Promotion
-  - Business Registration
+  - Supply Chain
+  - Costing and Pricing
   - Credit Information
-  - eCommerce
-  - Negotiation
+  - Design
+  - Public Relations
   - Supply Management
+  - Subcontracting
+  - Business to Business
   - Marketing
+  - Foreign Trade Techniques
+  - Competition
+  - Business Travel and Etiquette
+  - Bid
+  - Market Research
+  - Consumer Behavior
+  - Entrepreneurship
+  - Negotiation
+  - Business News
+  - Product Development
+  - Mergers
+  - Risk Management
   - Management
+  - Advertising
+  - Business to Government
+  - Business Registration
+  - Communication
+  - Sales Promotion
+  - Enterprises
+  - Purchasing
+  - Business to Consumer
+  - eCommerce
 - :label: Negotiation
   :leaf_node: true
   :path: "/Business Management/Negotiation"
@@ -3349,16 +3337,16 @@
   :broader_terms:
   - Business Management
   :narrower_terms:
+  - Benchmarking
   - Evaluation
-  - Accounting
   - Auditing
   - Performance Management
-  - Monitoring
   - Training
   - Planning
   - Research and Development
+  - Accounting
+  - Monitoring
   - Personnel Management
-  - Benchmarking
 - :label: Planning
   :leaf_node: true
   :path: "/Business Management/Management/Planning"
@@ -3682,17 +3670,17 @@
   :broader_terms:
   - Business Management
   :narrower_terms:
+  - Traders
+  - Brokers
   - Retailers
   - Startups
-  - Exporters
-  - Brokers
-  - Agents
-  - Traders
-  - Importers
-  - Wholesalers
-  - Manufacturers
-  - Women Entrepreneurs
   - Small and Medium Enterprises
+  - Agents
+  - Women Entrepreneurs
+  - Exporters
+  - Wholesalers
+  - Importers
+  - Manufacturers
 - :label: Brokers
   :leaf_node: true
   :path: "/Business Management/Enterprises/Brokers"
@@ -3805,10 +3793,10 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - South Asia
   - Central Asia
   - Southeast Asia
   - East Asia
+  - South Asia
 - :label: Central Asia
   :leaf_node: true
   :path: "/Asia/Central Asia"
@@ -3818,12 +3806,12 @@
   :broader_terms:
   - Asia
   :narrower_terms:
-  - Tajikistan
-  - Kyrgyzstan
-  - Uzbekistan
-  - Kazakhstan
-  - Turkmenistan
   - Afghanistan
+  - Kazakhstan
+  - Kyrgyzstan
+  - Tajikistan
+  - Turkmenistan
+  - Uzbekistan
 - :label: Southeast Asia
   :leaf_node: true
   :path: "/Asia/Southeast Asia"
@@ -3833,18 +3821,18 @@
   :broader_terms:
   - Asia
   :narrower_terms:
-  - Singapore
-  - Philippines
+  - Malaysia
+  - Indonesia
+  - Brunei
+  - Laos
   - Burma
   - Thailand
+  - Singapore
+  - Philippines
   - Asia
-  - Malaysia
-  - Laos
-  - Brunei
-  - Vietnam
-  - Indonesia
-  - Timor-Leste
   - Cambodia
+  - Vietnam
+  - Timor-Leste
 - :label: East Asia
   :leaf_node: true
   :path: "/Asia/East Asia"
@@ -3854,14 +3842,14 @@
   :broader_terms:
   - Asia
   :narrower_terms:
-  - Japan
-  - Macau
-  - Hong Kong
   - North Korea
+  - Japan
+  - China
+  - Macau
+  - South Korea
   - Mongolia
   - Taiwan
-  - South Korea
-  - China
+  - Hong Kong
 - :label: South Asia
   :leaf_node: true
   :path: "/Asia/South Asia"
@@ -3871,15 +3859,15 @@
   :broader_terms:
   - Asia
   :narrower_terms:
-  - Afghanistan
+  - Bhutan
   - Bangladesh
   - British Indian Ocean Territory
-  - Maldives
-  - Bhutan
-  - Nepal
-  - Sri Lanka
   - Pakistan
+  - Sri Lanka
+  - Afghanistan
   - India
+  - Nepal
+  - Maldives
 - :label: Russia
   :leaf_node: true
   :path: "/Russia"
@@ -3887,12 +3875,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
   - Asia Pacific
+  - Pacific Rim
   - Commonwealth of Independent States
-  - Eurasian Economic Union
-  - Asia Pacific Economic Cooperation
   - Europe
+  - Asia Pacific Economic Cooperation
+  - Eurasian Economic Union
   :narrower_terms: []
 - :label: Zimbabwe
   :leaf_node: true
@@ -3901,10 +3889,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
   - South African Development Community
-  - Common Market for Eastern and Southern Africa
   - Global System of Trade Preferences among Developing Countries
+  - Sub-Saharan Africa
+  - Common Market for Eastern and Southern Africa
   :narrower_terms: []
 - :label: Financial Services
   :leaf_node: false
@@ -3914,14 +3902,14 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
+  - Asset Management
   - Leasing Services
   - Venture Capital
   - Private Equity
+  - Insurance Services
+  - Banking
   - Investment Services
   - Debt Collection
-  - Banking
-  - Insurance Services
-  - Asset Management
 - :label: Venture Capital
   :leaf_node: true
   :path: "/Financial Services/Venture Capital"
@@ -4011,8 +3999,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Saint Martin
   :leaf_node: true
@@ -4031,9 +4019,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean Community and Common Market
   - Western Hemisphere
   - Caribbean
+  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: San Marino
   :leaf_node: true
@@ -4051,8 +4039,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Safety and Security
   :leaf_node: false
@@ -4062,17 +4050,17 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Industrial Safety and Security
-  - Security Services
-  - Police Equipment
-  - Access Control Systems
-  - Home Security Systems
-  - Safety Services
   - Cybersecurity
-  - Fire Safety and Rescue Equipment
-  - Firearms and Accessories
-  - Security and Safety Equipment
   - Protective Equipment
+  - Security and Safety Equipment
+  - Home Security Systems
+  - Access Control Systems
+  - Police Equipment
+  - Firearms and Accessories
+  - Industrial Safety and Security
+  - Safety Services
+  - Security Services
+  - Fire Safety and Rescue Equipment
 - :label: Home Security Systems
   :leaf_node: true
   :path: "/Safety and Security/Home Security Systems"
@@ -4160,8 +4148,8 @@
   :subject: http://webprotege.stanford.edu/RJNRUK091Rf4dftYpEPlaN
   :concept_groups: []
   :broader_terms:
-  - Information and Communication Technology
   - Safety and Security
+  - Information and Communication Technology
   :narrower_terms: []
 - :label: Senegal
   :leaf_node: true
@@ -4170,10 +4158,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
-  - West Africa
-  - West African Economic and Monetary Union
   - African Growth and Opportunity Act
+  - West African Economic and Monetary Union
+  - West Africa
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Kenya
   :leaf_node: true
@@ -4194,21 +4182,21 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Seafood
-  - Confectionary Products
+  - Food Processing Equipment
   - Meat Processing
   - Grains and Legumes
-  - Beverages
-  - Snack Foods
   - Vegetable Products
-  - Food Processing Equipment
-  - Fruit Products
-  - Bakeries
-  - Dairy Products
-  - Baby Food
-  - Sweeteners
   - Vitamins and Supplements
+  - Baby Food
+  - Seafood
+  - Fruit Products
+  - Confectionary Products
+  - Snack Foods
+  - Sweeteners
+  - Beverages
+  - Dairy Products
   - Condiments and Seasonings
+  - Bakeries
 - :label: Confectionary Products
   :leaf_node: true
   :path: "/Food and Beverage/Confectionary Products"
@@ -4239,8 +4227,8 @@
   :subject: http://webprotege.stanford.edu/R83UPld5lTKYFMnGavvhk4s
   :concept_groups: []
   :broader_terms:
-  - Food and Beverage
   - Pharmaceuticals
+  - Food and Beverage
   :narrower_terms: []
 - :label: Grains and Legumes
   :leaf_node: true
@@ -4298,10 +4286,10 @@
   :broader_terms:
   - Food and Beverage
   :narrower_terms:
-  - Wine
+  - Distilled Spirits
   - Coffee
   - Beer
-  - Distilled Spirits
+  - Wine
 - :label: Beer
   :leaf_node: true
   :path: "/Food and Beverage/Beverages/Beer"
@@ -4391,8 +4379,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South Asian Association for Regional Cooperation
   - South Asia
+  - South Asian Association for Regional Cooperation
   :narrower_terms: []
 - :label: Tunisia
   :leaf_node: true
@@ -4401,8 +4389,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - North Africa
   - Global System of Trade Preferences among Developing Countries
+  - North Africa
   :narrower_terms: []
 - :label: Mongolia
   :leaf_node: true
@@ -4411,8 +4399,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - East Asia
   - Asia Pacific
+  - East Asia
   :narrower_terms: []
 - :label: Latvia
   :leaf_node: true
@@ -4431,10 +4419,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
-  - West Africa
   - Sub-Saharan Africa
   - African Growth and Opportunity Act
+  - Global System of Trade Preferences among Developing Countries
+  - West Africa
   - West African Economic and Monetary Union
   :narrower_terms: []
 - :label: Sudan
@@ -4444,9 +4432,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Common Market for Eastern and Southern Africa
   - Global System of Trade Preferences among Developing Countries
   - Sub-Saharan Africa
-  - Common Market for Eastern and Southern Africa
   :narrower_terms: []
 - :label: Cuba
   :leaf_node: true
@@ -4456,8 +4444,8 @@
   - Countries
   :broader_terms:
   - Western Hemisphere
-  - Latin America
   - Caribbean
+  - Latin America
   - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Bhutan
@@ -4467,8 +4455,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South Asia
   - South Asian Association for Regional Cooperation
+  - South Asia
   :narrower_terms: []
 - :label: French Polynesia
   :leaf_node: true
@@ -4511,29 +4499,29 @@
   :broader_terms:
   - Transport and Logistics
   :narrower_terms:
-  - Destination Control Statements
-  - Certificate of Analysis
-  - CE Marking
-  - Halal Certificate
-  - Export Licenses
-  - Delivery Verification Certificate
-  - Certificate of Weight
-  - ATA Carnet
-  - Certificate of Origin
-  - Pro Forma Invoice
-  - Export Packing List
-  - Dangerous Goods Certificate
-  - Ingredients Certificate
-  - Certificate of Free Sale
-  - Radiation Certificate
-  - Commercial Invoice
   - Phytosanitary Inspection Certificate
   - China Compulsory Certification
-  - Preshipment Inspection
-  - Insurance Certificate
-  - Certificate of Quality
   - Inspection Certificate
+  - Certificate of Free Sale
+  - Halal Certificate
+  - Delivery Verification Certificate
+  - Preshipment Inspection
+  - Destination Control Statements
+  - Certificate of Analysis
+  - Export Packing List
+  - Commercial Invoice
+  - Dangerous Goods Certificate
+  - ATA Carnet
   - Health Certificates
+  - Export Licenses
+  - CE Marking
+  - Certificate of Weight
+  - Pro Forma Invoice
+  - Ingredients Certificate
+  - Certificate of Quality
+  - Radiation Certificate
+  - Insurance Certificate
+  - Certificate of Origin
 - :label: Certificate of Analysis
   :leaf_node: true
   :path: "/Transport and Logistics/Trade Documents/Certificate of Analysis"
@@ -4810,13 +4798,13 @@
   :broader_terms:
   - Transport and Logistics
   :narrower_terms:
-  - Negotiable Bill of Lading
   - Ocean Bill of Lading
+  - Negotiable Bill of Lading
   - Liner Bill of Lading
   - Straight Bill of Lading
+  - Shipper's Letter of Instruction
   - Sea Waybill
   - Air Waybills
-  - Shipper's Letter of Instruction
 - :label: Air Waybills
   :leaf_node: true
   :path: "/Transport and Logistics/Transport Documents/Air Waybills"
@@ -4937,30 +4925,30 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Norfolk Island
-  - French Polynesia
-  - Christmas Island
-  - Cook Islands
-  - Micronesia
   - Tokelau
+  - Micronesia
   - Cocos (Keeling) Islands
-  - Solomon Islands
-  - Kiribati
-  - New Caledonia
-  - Vanuatu
-  - Fiji
-  - Palau
-  - Tuvalu
-  - Samoa
-  - Marshall Islands
-  - Niue
-  - Wallis and Futuna
-  - Papua New Guinea
-  - Australia
-  - Nauru
-  - New Zealand
+  - Cook Islands
   - Pitcairn Islands
+  - Wallis and Futuna
+  - Christmas Island
+  - Samoa
+  - New Caledonia
+  - Niue
+  - Vanuatu
+  - Nauru
+  - Kiribati
+  - Norfolk Island
+  - Marshall Islands
+  - French Polynesia
+  - Fiji
   - Tonga
+  - Palau
+  - Papua New Guinea
+  - Solomon Islands
+  - New Zealand
+  - Tuvalu
+  - Australia
 - :label: Dominican Republic
   :leaf_node: true
   :path: "/Dominican Republic"
@@ -4968,8 +4956,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean
   - Latin America
+  - Caribbean
   - Western Hemisphere
   :narrower_terms: []
 - :label: Curaçao
@@ -4979,8 +4967,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
   - Netherlands Antilles
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Morocco
   :leaf_node: true
@@ -5008,9 +4996,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Eurasian Economic Union
-  - Europe
   - Commonwealth of Independent States
+  - Europe
+  - Eurasian Economic Union
   :narrower_terms: []
 - :label: Distribution and Logistics
   :leaf_node: false
@@ -5020,16 +5008,16 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Intelligent Transportation Systems
-  - Moving Services
-  - Trucking
-  - Material Handling
-  - Maritime Transportation
   - Air Transportation
+  - Intelligent Transportation Systems
+  - Export Management
   - Freight Forwarding
+  - Material Handling
   - Rail Transportation
   - Express Delivery Services
-  - Export Management
+  - Moving Services
+  - Maritime Transportation
+  - Trucking
 - :label: Air Transportation
   :leaf_node: true
   :path: "/Distribution and Logistics/Air Transportation"
@@ -5094,8 +5082,8 @@
   :subject: http://webprotege.stanford.edu/RDrypiy0jegDGZKteOJMFf
   :concept_groups: []
   :broader_terms:
-  - Marine Technology
   - Distribution and Logistics
+  - Marine Technology
   :narrower_terms:
   - Shipbuilding Equipment
   - Commercial Vessel Equipment
@@ -5131,8 +5119,8 @@
   :broader_terms:
   - Distribution and Logistics
   :narrower_terms:
-  - Commission Agents
   - Custom Brokerage
+  - Commission Agents
 - :label: Commission Agents
   :leaf_node: true
   :path: "/Distribution and Logistics/Export Management/Commission Agents"
@@ -5183,18 +5171,18 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
+  - Construction Equipment and Machinery
+  - Architecture Services
   - Building Products
   - Infrastructure
-  - Architecture Services
-  - Construction Equipment and Machinery
 - :label: Engineering Services
   :leaf_node: true
   :path: "/Design and Construction/Engineering Services"
   :subject: http://webprotege.stanford.edu/R80OOc8tobqIttLwlHhD71R
   :concept_groups: []
   :broader_terms:
-  - Design and Construction
   - Business and Professional Services
+  - Design and Construction
   :narrower_terms:
   - Environmental Engineering Services
 - :label: Infrastructure
@@ -5237,8 +5225,8 @@
   :subject: http://webprotege.stanford.edu/RDTJaX1CbjDm4N9HZVkYLjh
   :concept_groups: []
   :broader_terms:
-  - Design and Construction
   - Business and Professional Services
+  - Design and Construction
   :narrower_terms: []
 - :label: Building Products
   :leaf_node: false
@@ -5248,21 +5236,21 @@
   :broader_terms:
   - Design and Construction
   :narrower_terms:
-  - Cement and Concrete
-  - Tile
-  - Wood Products
-  - Lumber
   - Plaster and Gypsum Board
-  - Glass
-  - Masonry and Stone
   - Insulation
-  - Metals
-  - Asphalt
-  - Plumbing
   - HVAC Equipment
+  - Wood Products
+  - Metals
+  - Lumber
+  - Plumbing
+  - Tile
   - Household Appliances
-  - Doors and Windows
+  - Cement and Concrete
+  - Glass
+  - Asphalt
+  - Masonry and Stone
   - Electrical Systems and Lighting
+  - Doors and Windows
 - :label: Electrical Systems and Lighting
   :leaf_node: true
   :path: "/Design and Construction/Building Products/Electrical Systems and Lighting"
@@ -5383,10 +5371,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Latin America
+  - Southern Common Market
   - South America
   - Western Hemisphere
-  - Southern Common Market
+  - Latin America
   - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Travel and Tourism
@@ -5397,12 +5385,12 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Hotel and Restaurant Equipment
-  - Passenger Transportation Services
   - Travel Agencies
-  - Food and Drink Establishments
   - Accommodations
+  - Food and Drink Establishments
+  - Passenger Transportation Services
   - Cruise Ships
+  - Hotel and Restaurant Equipment
 - :label: Passenger Transportation Services
   :leaf_node: false
   :path: "/Travel and Tourism/Passenger Transportation Services"
@@ -5411,15 +5399,15 @@
   :broader_terms:
   - Travel and Tourism
   :narrower_terms:
-  - Car Rentals
-  - Urban Transit Systems
-  - Rail Travel
-  - Water Transportation
-  - Sightseeing Transportation Services
-  - Bus Service
   - Air Travel
+  - Car Rentals
+  - Rail Travel
+  - Urban Transit Systems
+  - Bus Service
   - Parking Lots and Garages
   - Taxi Services
+  - Sightseeing Transportation Services
+  - Water Transportation
 - :label: Taxi Services
   :leaf_node: true
   :path: "/Travel and Tourism/Passenger Transportation Services/Taxi Services"
@@ -5540,9 +5528,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Caribbean Community and Common Market
   - Caribbean
   - Western Hemisphere
-  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: Samoa
   :leaf_node: true
@@ -5560,12 +5548,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
-  - Organization of the Petroleum Exporting Countries
-  - Southern Common Market
   - South America
   - Latin America
+  - Southern Common Market
+  - Organization of the Petroleum Exporting Countries
   - Western Hemisphere
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Saba
   :leaf_node: true
@@ -5574,8 +5562,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Netherlands Antilles
   - Western Hemisphere
+  - Netherlands Antilles
   :narrower_terms: []
 - :label: Western Sahara
   :leaf_node: true
@@ -5602,10 +5590,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South African Development Community
   - African Growth and Opportunity Act
-  - Sub-Saharan Africa
   - Common Market for Eastern and Southern Africa
+  - South African Development Community
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Poland
   :leaf_node: true
@@ -5614,8 +5602,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Mayotte
   :leaf_node: true
@@ -5642,9 +5630,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Caribbean Community and Common Market
   - Western Hemisphere
   - Caribbean
-  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: Montenegro
   :leaf_node: true
@@ -5663,26 +5651,26 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Brazil
-  - Haiti
-  - Argentina
-  - Panama
   - Venezuela
-  - Dominican Republic
-  - Bolivia
-  - Mexico
   - Ecuador
-  - Uruguay
+  - Dominican Republic
   - El Salvador
-  - Peru
-  - Costa Rica
+  - Brazil
+  - Argentina
   - Guatemala
+  - Costa Rica
   - Paraguay
-  - Chile
-  - Colombia
-  - Cuba
-  - Honduras
   - Nicaragua
+  - Panama
+  - Colombia
+  - Bolivia
+  - Haiti
+  - Mexico
+  - Honduras
+  - Cuba
+  - Uruguay
+  - Peru
+  - Chile
 - :label: Cayman Islands
   :leaf_node: true
   :path: "/Cayman Islands"
@@ -5690,8 +5678,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
   - Caribbean
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Chad
   :leaf_node: true
@@ -5700,9 +5688,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
-  - Economic and Monetary Community of Central Africa
   - African Growth and Opportunity Act
+  - Economic and Monetary Community of Central Africa
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Ecuador
   :leaf_node: true
@@ -5711,12 +5699,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
-  - Western Hemisphere
-  - Andean Community
-  - Organization of the Petroleum Exporting Countries
   - South America
+  - Andean Community
+  - Western Hemisphere
   - Latin America
+  - Organization of the Petroleum Exporting Countries
+  - Global System of Trade Preferences among Developing Countries
   - Pacific Rim
   :narrower_terms: []
 - :label: Canada
@@ -5727,10 +5715,10 @@
   - Countries
   :broader_terms:
   - Western Hemisphere
-  - Pacific Rim
   - North America
-  - Trans Pacific Partnership
   - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  - Pacific Rim
   :narrower_terms: []
 - :label: International Cooperation
   :leaf_node: false
@@ -5740,24 +5728,24 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Economic Integration
-  - ECDC
-  - Technology Transfer
-  - International Financial Institutions
+  - Globalization
   - Development Aid
   - Partnership
-  - Regional Integration
-  - Technical Cooperation
-  - Regional Organizations
-  - TCDC
-  - Donors
   - ECE
+  - Economic Integration
+  - Regional Organizations
   - NGOs
-  - International Organizations
   - ECLAC
-  - Cotonou Agreement
-  - Globalization
+  - Regional Integration
   - Networking
+  - Donors
+  - TCDC
+  - ECDC
+  - International Financial Institutions
+  - Cotonou Agreement
+  - Technology Transfer
+  - Technical Cooperation
+  - International Organizations
 - :label: Cotonou Agreement
   :leaf_node: true
   :path: "/International Cooperation/Cotonou Agreement"
@@ -5807,14 +5795,14 @@
   :broader_terms:
   - International Cooperation
   :narrower_terms:
+  - Organization of the Petroleum Exporting Countries
+  - ICC
+  - WTO
+  - UN
+  - OIML
   - ISO
   - World Customs Organization
-  - ICC
-  - UN
   - Intergovernmental Agency of the Francophone
-  - WTO
-  - Organization of the Petroleum Exporting Countries
-  - OIML
 - :label: Intergovernmental Agency of the Francophone
   :leaf_node: true
   :path: "/International Cooperation/International Organizations/Intergovernmental
@@ -5850,18 +5838,18 @@
   :broader_terms:
   - International Organizations
   :narrower_terms:
+  - Iran
+  - Kuwait
+  - Saudi Arabia
+  - Iraq
+  - Algeria
   - Qatar
   - Ecuador
+  - United Arab Emirates
+  - Angola
+  - Venezuela
   - Nigeria
   - Libya
-  - Angola
-  - Iran
-  - Iraq
-  - Saudi Arabia
-  - Venezuela
-  - United Arab Emirates
-  - Kuwait
-  - Algeria
 - :label: World Customs Organization
   :leaf_node: true
   :path: "/International Cooperation/International Organizations/World Customs Organization"
@@ -6077,13 +6065,13 @@
   :broader_terms:
   - International Cooperation
   :narrower_terms:
-  - Association of Southeast Asian Nations
-  - Asia Pacific Economic Cooperation
   - Economic Cooperation Organization
   - Commonwealth of Independent States
-  - South Asian Association for Regional Cooperation
-  - South African Development Community
   - Caribbean Community and Common Market
+  - South African Development Community
+  - Association of Southeast Asian Nations
+  - Asia Pacific Economic Cooperation
+  - South Asian Association for Regional Cooperation
 - :label: Asia Pacific Economic Cooperation
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/Asia Pacific Economic
@@ -6094,27 +6082,27 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Japan
-  - Malaysia
-  - Chile
-  - Vietnam
-  - Thailand
-  - Philippines
-  - Mexico
-  - Canada
-  - United States
-  - Hong Kong
   - Taiwan
-  - China
-  - Brunei
-  - Australia
+  - Vietnam
   - South Korea
-  - Russia
-  - Peru
   - Singapore
-  - Indonesia
+  - United States
+  - Peru
   - New Zealand
+  - Indonesia
   - Papua New Guinea
+  - Australia
+  - China
+  - Chile
+  - Canada
+  - Thailand
+  - Brunei
+  - Russia
+  - Malaysia
+  - Japan
+  - Hong Kong
+  - Mexico
+  - Philippines
 - :label: Caribbean Community and Common Market
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/Caribbean Community and
@@ -6125,21 +6113,21 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Saint Vincent and the Grenadines
-  - Trinidad and Tobago
-  - Haiti
-  - Jamaica
-  - Suriname
-  - Guyana
-  - Belize
   - Saint Kitts and Nevis
+  - Antigua and Barbuda
+  - Trinidad and Tobago
   - Saint Lucia
-  - Barbados
   - Bahamas
   - Montserrat
-  - Antigua and Barbuda
-  - Dominica
+  - Belize
   - Grenada
+  - Saint Vincent and the Grenadines
+  - Jamaica
+  - Guyana
+  - Barbados
+  - Haiti
+  - Suriname
+  - Dominica
 - :label: Association of Southeast Asian Nations
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/Association of Southeast
@@ -6150,16 +6138,16 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Cambodia
+  - Thailand
   - Indonesia
-  - Burma
   - Philippines
   - Vietnam
-  - Thailand
   - Malaysia
-  - Singapore
   - Laos
+  - Singapore
   - Brunei
+  - Burma
+  - Cambodia
 - :label: Commonwealth of Independent States
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/Commonwealth of Independent
@@ -6170,18 +6158,18 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Russia
-  - Kazakhstan
-  - Uzbekistan
+  - Azerbaijan
+  - Turkmenistan
   - Armenia
-  - Belarus
-  - Moldova
+  - Kyrgyzstan
   - Ukraine
   - Tajikistan
-  - Kyrgyzstan
+  - Moldova
   - Georgia
-  - Turkmenistan
-  - Azerbaijan
+  - Uzbekistan
+  - Russia
+  - Belarus
+  - Kazakhstan
 - :label: Economic Cooperation Organization
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/Economic Cooperation Organization"
@@ -6191,16 +6179,16 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Iran
-  - Uzbekistan
-  - Turkey
-  - Turkmenistan
   - Pakistan
-  - Kyrgyzstan
-  - Afghanistan
-  - Kazakhstan
+  - Turkey
   - Azerbaijan
+  - Kazakhstan
+  - Kyrgyzstan
   - Tajikistan
+  - Turkmenistan
+  - Uzbekistan
+  - Iran
+  - Afghanistan
 - :label: South African Development Community
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/South African Development
@@ -6211,21 +6199,21 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Madagascar
-  - Zimbabwe
-  - Angola
-  - Malawi
+  - Lesotho
   - Congo-Kinshasa
   - Mauritius
-  - South Africa
-  - Namibia
-  - Lesotho
-  - Seychelles
-  - Swaziland
+  - Malawi
+  - Zimbabwe
   - Botswana
   - Tanzania
-  - Zambia
+  - South Africa
+  - Swaziland
+  - Seychelles
+  - Angola
   - Mozambique
+  - Zambia
+  - Namibia
+  - Madagascar
 - :label: South Asian Association for Regional Cooperation
   :leaf_node: true
   :path: "/International Cooperation/Regional Organizations/South Asian Association
@@ -6236,14 +6224,14 @@
   :broader_terms:
   - Regional Organizations
   :narrower_terms:
-  - Afghanistan
-  - Maldives
   - India
-  - Bhutan
-  - Pakistan
-  - Nepal
   - Sri Lanka
   - Bangladesh
+  - Maldives
+  - Nepal
+  - Pakistan
+  - Afghanistan
+  - Bhutan
 - :label: ECE
   :leaf_node: true
   :path: "/International Cooperation/ECE"
@@ -6364,19 +6352,19 @@
   :broader_terms:
   - International Cooperation
   :narrower_terms:
-  - EBRD
-  - Caribbean Development Bank
-  - ECB
-  - IFAD
-  - CABEI
-  - IMF
   - World Bank
+  - IMF
+  - ECB
+  - CABEI
   - Asian Development Bank
   - ECA
   - African Development Bank
-  - IDB
-  - OPEC Fund
   - BIS
+  - OPEC Fund
+  - IFAD
+  - IDB
+  - Caribbean Development Bank
+  - EBRD
 - :label: IMF
   :leaf_node: true
   :path: "/International Cooperation/International Financial Institutions/IMF"
@@ -6393,9 +6381,9 @@
   :broader_terms:
   - International Financial Institutions
   :narrower_terms:
-  - IFC
   - IBRD
   - MIGA
+  - IFC
   - IDA
 - :label: MIGA
   :leaf_node: true
@@ -6497,18 +6485,18 @@
   :broader_terms:
   - International Organizations
   :narrower_terms:
+  - Iran
+  - Kuwait
+  - Saudi Arabia
+  - Iraq
+  - Algeria
   - Qatar
   - Ecuador
+  - United Arab Emirates
+  - Angola
+  - Venezuela
   - Nigeria
   - Libya
-  - Angola
-  - Iran
-  - Iraq
-  - Saudi Arabia
-  - Venezuela
-  - United Arab Emirates
-  - Kuwait
-  - Algeria
 - :label: ECB
   :leaf_node: true
   :path: "/International Cooperation/International Financial Institutions/ECB"
@@ -6550,8 +6538,8 @@
   - Countries
   :broader_terms:
   - Persian Gulf Region
-  - Organization of the Petroleum Exporting Countries
   - Gulf Cooperation Council
+  - Organization of the Petroleum Exporting Countries
   :narrower_terms: []
 - :label: Guadeloupe
   :leaf_node: true
@@ -6560,8 +6548,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
   - Caribbean
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Chile
   :leaf_node: true
@@ -6570,12 +6558,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South America
-  - Western Hemisphere
-  - Asia Pacific Economic Cooperation
   - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific Economic Cooperation
   - Latin America
+  - South America
   - Pacific Rim
+  - Western Hemisphere
   - Trans Pacific Partnership
   :narrower_terms: []
 - :label: Azerbaijan
@@ -6586,8 +6574,8 @@
   - Countries
   :broader_terms:
   - Commonwealth of Independent States
-  - Caucasus
   - Economic Cooperation Organization
+  - Caucasus
   :narrower_terms: []
 - :label: Italy
   :leaf_node: true
@@ -6607,17 +6595,17 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Executive Office of the President
-  - Policy
-  - Advisory Committees
-  - Institutional Framework
-  - Government Agencies
-  - Renewable Energy Targets
-  - National Export Strategy
   - Public Administration
-  - Labor
-  - Inter-agency Committees
+  - Executive Office of the President
   - Gender
+  - National Export Strategy
+  - Inter-agency Committees
+  - Institutional Framework
+  - Advisory Committees
+  - Government Agencies
+  - Policy
+  - Renewable Energy Targets
+  - Labor
 - :label: Public Administration
   :leaf_node: true
   :path: "/Government/Public Administration"
@@ -6642,10 +6630,10 @@
   :broader_terms:
   - Government
   :narrower_terms:
-  - President's Export Council
-  - Renewable Energy and Energy Efficiency Advisory Committee
   - United States Travel and Tourism Advisory Board
   - United States Manufacturing Council
+  - President's Export Council
+  - Renewable Energy and Energy Efficiency Advisory Committee
   - Industry Trade Advisory Committees
   - President's Advisory Council on Doing Business in Africa
 - :label: United States Travel and Tourism Advisory Board
@@ -6674,29 +6662,29 @@
   :broader_terms:
   - Advisory Committees
   :narrower_terms:
-  - Industry Trade Advisory Committee on Services and Finance
-  - Committee of Chairs of the Industry Trade Advisory Committees
   - Industry Trade Advisory Committee on Building Materials, Construction, and Nonferrous
     Metals
-  - Industry Trade Advisory Committee on Customs Matters and Trade Facilitation
-  - Environmental Technologies Trade Advisory Committee
-  - Industry Trade Advisory Committee on Energy and Energy Services
-  - Civil Nuclear Trade Advisory Committee
+  - Advisory Committee on Supply Chain Competitiveness
+  - Industry Trade Advisory Committee on Aerospace Equipment
   - Industry Trade Advisory Committee on Distribution Services
-  - Industry Trade Advisory Committee on Consumer Goods
-  - Industry Trade Advisory Committee on Standards and Technical Trade Barriers
+  - Environmental Technologies Trade Advisory Committee
   - Industry Trade Advisory Committee on Intellectual Property Rights
-  - Industry Trade Advisory Committee on Forest Products
+  - Industry Trade Advisory Committee on Energy and Energy Services
+  - Industry Trade Advisory Committee on Small and Minority Business
+  - Civil Nuclear Trade Advisory Committee
+  - Industry Trade Advisory Committee on Steel
+  - Industry Trade Advisory Committee on Textiles and Clothing
   - Industry Trade Advisory Committee on Chemicals, Pharmaceuticals, Health Science
     Products and Services
-  - Advisory Committee on Supply Chain Competitiveness
-  - Industry Trade Advisory Committee on Steel
-  - Industry Trade Advisory Committee on Small and Minority Business
-  - Industry Trade Advisory Committee on Aerospace Equipment
-  - Industry Trade Advisory Committee on Textiles and Clothing
+  - Committee of Chairs of the Industry Trade Advisory Committees
+  - Industry Trade Advisory Committee on Standards and Technical Trade Barriers
+  - Industry Trade Advisory Committee on Forest Products
+  - Industry Trade Advisory Committee on Automotive Equipment and Capital Goods
+  - Industry Trade Advisory Committee on Consumer Goods
+  - Industry Trade Advisory Committee on Services and Finance
+  - Industry Trade Advisory Committee on Customs Matters and Trade Facilitation
   - Industry Trade Advisory Committee on Information and Communications Technologies,
     Services, and Electronic Commerce
-  - Industry Trade Advisory Committee on Automotive Equipment and Capital Goods
 - :label: Industry Trade Advisory Committee on Chemicals, Pharmaceuticals, Health
     Science Products and Services
   :leaf_node: true
@@ -6915,22 +6903,22 @@
   :broader_terms:
   - Government
   :narrower_terms:
-  - U.S. Department of Energy
-  - U.S. Trade and Development Agency
   - Export-Import Bank
-  - Environmental Protection Agency
-  - U.S. Department of the Treasury
-  - Small Business Administration
+  - Office of the U.S. Trade Representative
+  - U.S. Department of Commerce
+  - U.S. Department of Transportation
+  - U.S. Department of State
+  - U.S. Department of Agriculture
+  - U.S. Trade and Development Agency
   - U.S. Department of the Interior
   - U.S. Agency for International Development
-  - U.S. Department of Defense
-  - U.S. Department of Transportation
-  - U.S. Department of Agriculture
-  - U.S. Department of Commerce
   - Overseas Private Investment Corporation
-  - Office of the U.S. Trade Representative
-  - U.S. Department of State
+  - Small Business Administration
+  - U.S. Department of Defense
+  - Environmental Protection Agency
   - U.S. Department of Labor
+  - U.S. Department of Energy
+  - U.S. Department of the Treasury
 - :label: U.S. Department of the Interior
   :leaf_node: true
   :path: "/Government/Government Agencies/U.S. Department of the Interior"
@@ -7019,13 +7007,13 @@
   :broader_terms:
   - Government Agencies
   :narrower_terms:
-  - U.S. State Department. Bureau of International Organization Affairs
-  - U.S. Department of State. Bureau of Near Eastern Affairs
-  - U.S. Department of State. Bureau of Western Hemisphere Affairs
-  - U.S. Department of State. Bureau of East Asian and Pacific Affairs
   - U.S. Department of State. Bureau of South and Central Asian Affairs
-  - U.S. Department of State. Bureau of European and Eurasian Affairs
   - U.S. Department of State. Bureau of African Affairs
+  - U.S. Department of State. Bureau of East Asian and Pacific Affairs
+  - U.S. State Department. Bureau of International Organization Affairs
+  - U.S. Department of State. Bureau of Western Hemisphere Affairs
+  - U.S. Department of State. Bureau of European and Eurasian Affairs
+  - U.S. Department of State. Bureau of Near Eastern Affairs
 - :label: U.S. Department of State. Bureau of South and Central Asian Affairs
   :leaf_node: true
   :path: "/Government/Government Agencies/U.S. Department of State/U.S. Department
@@ -7162,10 +7150,10 @@
   :broader_terms:
   - Government
   :narrower_terms:
+  - National Security Council
   - National Economic Council
   - Council of Economic Advisors
   - Office of Management and Budget
-  - National Security Council
 - :label: Council of Economic Advisors
   :leaf_node: true
   :path: "/Government/Executive Office of the President/Council of Economic Advisors"
@@ -7207,8 +7195,8 @@
   - Government
   :narrower_terms:
   - Trade Promotion Coordinating Committee
-  - Committee on the Implementation Textile Agreements
   - Committee on Foreign Investment in the United States
+  - Committee on the Implementation Textile Agreements
 - :label: Committee on Foreign Investment in the United States
   :leaf_node: true
   :path: "/Government/Inter-agency Committees/Committee on Foreign Investment in the
@@ -7276,8 +7264,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific
   - Southeast Asia
+  - Asia Pacific
   - Pacific Rim
   :narrower_terms: []
 - :label: Sweden
@@ -7297,10 +7285,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
   - Latin America
-  - Western Hemisphere
   - Central America
+  - Pacific Rim
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Namibia
   :leaf_node: true
@@ -7310,9 +7298,9 @@
   - Countries
   :broader_terms:
   - South African Customs Union
-  - Sub-Saharan Africa
-  - African Growth and Opportunity Act
   - South African Development Community
+  - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Kazakhstan
   :leaf_node: true
@@ -7321,10 +7309,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Commonwealth of Independent States
-  - Economic Cooperation Organization
   - Central Asia
   - Eurasian Economic Union
+  - Commonwealth of Independent States
+  - Economic Cooperation Organization
   :narrower_terms: []
 - :label: Estonia
   :leaf_node: true
@@ -7344,8 +7332,8 @@
   - Countries
   :broader_terms:
   - Gulf Cooperation Council
-  - Organization of the Petroleum Exporting Countries
   - Persian Gulf Region
+  - Organization of the Petroleum Exporting Countries
   :narrower_terms: []
 - :label: Honduras
   :leaf_node: true
@@ -7354,10 +7342,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Western Hemisphere
+  - Latin America
   - Pacific Rim
   - Central America
-  - Latin America
-  - Western Hemisphere
   :narrower_terms: []
 - :label: United States
   :leaf_node: false
@@ -7366,66 +7354,66 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific Economic Cooperation
-  - North America
-  - Pacific Rim
   - Western Hemisphere
+  - Asia Pacific Economic Cooperation
+  - Pacific Rim
+  - North America
   :narrower_terms:
-  - West Virginia
-  - Minnesota
-  - Wyoming
-  - Connecticut
-  - Louisiana
-  - Nebraska
-  - Missouri
-  - Florida
-  - Arizona
-  - Nevada
-  - Alabama
-  - Delaware
-  - New York
-  - Maryland
-  - Rhode Island
-  - Puerto Rico
-  - Ohio
-  - Maine
-  - Alaska
-  - Texas
-  - Idaho
-  - South Dakota
-  - Mississippi
-  - Massachusetts
-  - District of Columbia
-  - Utah
-  - Arkansas
-  - Washington
-  - North Carolina
-  - South Carolina
-  - Iowa
-  - Wisconsin
-  - New Hampshire
-  - Indiana
-  - Colorado
-  - Northern Mariana Islands
-  - Georgia (USA)
-  - Kansas
-  - Tennessee
-  - Michigan
-  - Virginia
-  - American Samoa
-  - Hawaii
-  - Montana
-  - Pennsylvania
-  - California
-  - Vermont
   - Kentucky
   - Oklahoma
-  - Guam
-  - New Jersey
-  - Illinois
+  - West Virginia
   - New Mexico
+  - Connecticut
+  - Rhode Island
+  - Pennsylvania
+  - Nebraska
+  - Florida
+  - Texas
+  - American Samoa
+  - Minnesota
+  - Nevada
+  - Illinois
+  - Georgia (USA)
+  - California
+  - Iowa
+  - New Jersey
   - North Dakota
+  - Vermont
+  - New Hampshire
+  - Maine
+  - Idaho
+  - Wisconsin
+  - South Dakota
+  - Wyoming
+  - Arkansas
+  - New York
+  - Maryland
+  - Delaware
+  - Tennessee
+  - Ohio
+  - Hawaii
+  - Michigan
+  - Puerto Rico
+  - Virginia
+  - South Carolina
+  - Massachusetts
+  - Utah
+  - Colorado
+  - Washington
+  - Arizona
+  - District of Columbia
+  - Montana
+  - Louisiana
+  - North Carolina
+  - Alabama
+  - Mississippi
   - U.S. Virgin Islands
+  - Northern Mariana Islands
+  - Missouri
+  - Guam
+  - Indiana
+  - Kansas
+  - Alaska
 - :label: South Carolina
   :leaf_node: true
   :path: "/United States/South Carolina"
@@ -7440,8 +7428,8 @@
   :subject: http://webprotege.stanford.edu/R44D6VIx7PvKMqSBEykq4i
   :concept_groups: []
   :broader_terms:
-  - United States
   - Oceania
+  - United States
   :narrower_terms: []
 - :label: Hawaii
   :leaf_node: true
@@ -7511,8 +7499,7 @@
   :leaf_node: true
   :path: "/United States/U.S. Virgin Islands"
   :subject: http://webprotege.stanford.edu/R8o0I9D8VkL15AsMOG6il2F
-  :concept_groups:
-  - Countries
+  :concept_groups: []
   :broader_terms:
   - United States
   :narrower_terms: []
@@ -7884,20 +7871,20 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Falkland Islands
-  - Ecuador
   - Paraguay
+  - Ecuador
+  - Colombia
+  - Falkland Islands
+  - Guyana
   - Suriname
   - Uruguay
-  - Guyana
-  - Chile
-  - Venezuela
-  - Colombia
-  - Brazil
   - Argentina
-  - Bolivia
-  - Peru
+  - Brazil
   - French Guiana
+  - Venezuela
+  - Peru
+  - Bolivia
+  - Chile
 - :label: El Salvador
   :leaf_node: true
   :path: "/El Salvador"
@@ -7917,12 +7904,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
   - Asia Pacific Economic Cooperation
-  - Southeast Asia
   - Association of Southeast Asian Nations
-  - Pacific Rim
+  - Global System of Trade Preferences among Developing Countries
   - Asia Pacific
+  - Pacific Rim
+  - Southeast Asia
   :narrower_terms: []
 - :label: Albania
   :leaf_node: true
@@ -7940,9 +7927,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific Economic Cooperation
-  - Asia Pacific
   - East Asia
+  - Asia Pacific
+  - Asia Pacific Economic Cooperation
   :narrower_terms: []
 - :label: Anguilla
   :leaf_node: true
@@ -7951,8 +7938,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean
   - Western Hemisphere
+  - Caribbean
   :narrower_terms: []
 - :label: Bolivia
   :leaf_node: true
@@ -7961,11 +7948,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Andean Community
   - Global System of Trade Preferences among Developing Countries
+  - Western Hemisphere
   - South America
   - Latin America
-  - Andean Community
-  - Western Hemisphere
   :narrower_terms: []
 - :label: Mali
   :leaf_node: true
@@ -7974,10 +7961,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
   - African Growth and Opportunity Act
-  - West African Economic and Monetary Union
   - West Africa
+  - Sub-Saharan Africa
+  - West African Economic and Monetary Union
   :narrower_terms: []
 - :label: Uzbekistan
   :leaf_node: true
@@ -7986,9 +7973,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Central Asia
-  - Economic Cooperation Organization
   - Commonwealth of Independent States
+  - Economic Cooperation Organization
+  - Central Asia
   :narrower_terms: []
 - :label: "Åland Islands"
   :leaf_node: true
@@ -8006,11 +7993,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Association of Southeast Asian Nations
-  - Global System of Trade Preferences among Developing Countries
-  - Southeast Asia
-  - Asia Pacific Economic Cooperation
   - Asia Pacific
+  - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific Economic Cooperation
+  - Association of Southeast Asian Nations
+  - Southeast Asia
   :narrower_terms: []
 - :label: Macedonia
   :leaf_node: true
@@ -8028,10 +8015,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - West Africa
-  - African Growth and Opportunity Act
-  - Sub-Saharan Africa
   - West African Economic and Monetary Union
+  - West Africa
+  - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Gibraltar
   :leaf_node: true
@@ -8049,12 +8036,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
   - Asia Pacific
-  - Asia Pacific Economic Cooperation
   - Association of Southeast Asian Nations
   - Southeast Asia
+  - Pacific Rim
   - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
   :narrower_terms: []
 - :label: Paraguay
@@ -8064,11 +8051,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Latin America
-  - South America
   - Global System of Trade Preferences among Developing Countries
   - Southern Common Market
+  - Latin America
   - Western Hemisphere
+  - South America
   :narrower_terms: []
 - :label: Malawi
   :leaf_node: true
@@ -8077,10 +8064,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
-  - South African Development Community
   - Sub-Saharan Africa
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  - South African Development Community
   :narrower_terms: []
 - :label: Uruguay
   :leaf_node: true
@@ -8089,11 +8076,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South America
-  - Southern Common Market
-  - Western Hemisphere
   - Latin America
   - Global System of Trade Preferences among Developing Countries
+  - Western Hemisphere
+  - South America
+  - Southern Common Market
   :narrower_terms: []
 - :label: Nauru
   :leaf_node: true
@@ -8111,9 +8098,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Commonwealth of Independent States
   - Economic Cooperation Organization
   - Central Asia
+  - Commonwealth of Independent States
   :narrower_terms: []
 - :label: Lesotho
   :leaf_node: true
@@ -8122,10 +8109,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
   - South African Customs Union
   - South African Development Community
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: British Indian Ocean Territory
   :leaf_node: true
@@ -8144,61 +8131,61 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Guernsey
-  - Bulgaria
-  - Lithuania
-  - Denmark
-  - Albania
-  - Ireland
-  - Austria
-  - Poland
-  - Monaco
+  - Russia
+  - Czech Republic
   - Iceland
-  - Gibraltar
-  - Spain
+  - Croatia
   - Belgium
-  - France
-  - Isle of Man
-  - Moldova
-  - Kosovo
-  - Germany
-  - Turkey
+  - Norway
+  - Svalbard
   - Estonia
+  - Netherlands
+  - France
+  - Andorra
   - Faroe Islands
+  - Cyprus
+  - Sweden
+  - Holy See
+  - Spain
+  - Luxembourg
+  - Isle of Man
+  - Ukraine
+  - Bulgaria
+  - Hungary
+  - Gibraltar
+  - Italy
+  - Lithuania
   - Latvia
   - Liechtenstein
-  - Montenegro
-  - Cyprus
-  - Slovakia
-  - Greece
-  - Sweden
-  - Luxembourg
-  - Bosnia and Herzegovina
-  - Italy
-  - Holy See
-  - Portugal
-  - Czech Republic
   - Caucasus
-  - Croatia
-  - Netherlands
-  - Jersey
-  - Ukraine
-  - Belarus
-  - Svalbard
+  - Moldova
+  - Albania
+  - Guernsey
   - Switzerland
-  - Russia
   - "Åland Islands"
+  - Jersey
+  - Montenegro
+  - Turkey
   - Macedonia
-  - San Marino
-  - Norway
-  - Hungary
-  - Malta
-  - Andorra
-  - Slovenia
-  - United Kingdom
-  - Serbia
   - Finland
+  - Germany
+  - Serbia
+  - Austria
+  - Portugal
+  - Slovakia
+  - Denmark
   - Romania
+  - United Kingdom
+  - Kosovo
+  - Bosnia and Herzegovina
+  - Monaco
+  - Ireland
+  - San Marino
+  - Poland
+  - Malta
+  - Greece
+  - Slovenia
+  - Belarus
 - :label: Caucasus
   :leaf_node: true
   :path: "/Europe/Caucasus"
@@ -8219,19 +8206,19 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
+  - Buses
   - Electric Vehicles
-  - Automotive Aftermarket
-  - Solar Vehicles
-  - Trailers
-  - Commercial Trucks
-  - Automotive Parts
-  - Automobiles
   - Automotive Repair Services
-  - Gasoline Service Stations
+  - Commercial Trucks
+  - Automobiles
   - Motorcycles
   - Recreational Vehicles
-  - Buses
+  - Trailers
+  - Gasoline Service Stations
+  - Solar Vehicles
+  - Automotive Aftermarket
   - Vehicle Electronics
+  - Automotive Parts
 - :label: Buses
   :leaf_node: true
   :path: "/Automotive/Buses"
@@ -8257,8 +8244,8 @@
   - Consumer Goods
   - Automotive
   :narrower_terms:
-  - Motorhomes
   - Travel Trailers
+  - Motorhomes
 - :label: Motorhomes
   :leaf_node: true
   :path: "/Automotive/Recreational Vehicles/Motorhomes"
@@ -8313,8 +8300,8 @@
   :subject: http://webprotege.stanford.edu/RCuqjAnOvMpzB9loFC7ZUCS
   :concept_groups: []
   :broader_terms:
-  - Consumer Electronics
   - Automotive
+  - Consumer Electronics
   :narrower_terms: []
 - :label: Motorcycles
   :leaf_node: false
@@ -8349,8 +8336,8 @@
   :broader_terms:
   - Automotive
   :narrower_terms:
-  - Vans
   - Light Trucks
+  - Vans
 - :label: Vans
   :leaf_node: true
   :path: "/Automotive/Automobiles/Vans"
@@ -8399,10 +8386,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific
-  - Global System of Trade Preferences among Developing Countries
-  - South Asia
   - South Asian Association for Regional Cooperation
+  - Asia Pacific
+  - South Asia
+  - Global System of Trade Preferences among Developing Countries
   :narrower_terms: []
 - :label: Tajikistan
   :leaf_node: true
@@ -8411,9 +8398,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Economic Cooperation Organization
   - Central Asia
   - Commonwealth of Independent States
+  - Economic Cooperation Organization
   :narrower_terms: []
 - :label: Caribbean
   :leaf_node: false
@@ -8423,28 +8410,28 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Montserrat
-  - Saint Lucia
-  - Saint Kitts and Nevis
-  - Netherlands Antilles
-  - Martinique
-  - Bermuda
-  - Dominica
-  - Grenada
-  - Dominican Republic
-  - Bahamas
-  - Trinidad and Tobago
-  - Haiti
-  - Cayman Islands
-  - Guadeloupe
-  - British Virgin Islands
-  - Antigua and Barbuda
-  - Saint Vincent and the Grenadines
-  - Turks and Caicos Islands
-  - Anguilla
-  - Jamaica
   - Cuba
+  - Turks and Caicos Islands
+  - Trinidad and Tobago
+  - Jamaica
+  - Cayman Islands
+  - Netherlands Antilles
+  - Bermuda
   - Barbados
+  - Montserrat
+  - British Virgin Islands
+  - Guadeloupe
+  - Grenada
+  - Bahamas
+  - Saint Kitts and Nevis
+  - Dominican Republic
+  - Saint Vincent and the Grenadines
+  - Haiti
+  - Anguilla
+  - Antigua and Barbuda
+  - Saint Lucia
+  - Dominica
+  - Martinique
 - :label: Netherlands Antilles
   :leaf_node: true
   :path: "/Caribbean/Netherlands Antilles"
@@ -8454,12 +8441,12 @@
   :broader_terms:
   - Caribbean
   :narrower_terms:
-  - Bonaire
   - Sint Maarten
-  - Saba
-  - Curaçao
-  - Sint Eustatius
   - Aruba
+  - Sint Eustatius
+  - Saba
+  - Bonaire
+  - Curaçao
 - :label: New Zealand
   :leaf_node: true
   :path: "/New Zealand"
@@ -8467,11 +8454,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Pacific Rim
   - Asia Pacific Economic Cooperation
   - Oceania
-  - Trans Pacific Partnership
-  - Pacific Rim
   - Asia Pacific
+  - Trans Pacific Partnership
   :narrower_terms: []
 - :label: North Korea
   :leaf_node: true
@@ -8480,9 +8467,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
-  - East Asia
   - Asia Pacific
+  - East Asia
+  - Pacific Rim
   :narrower_terms: []
 - :label: Healthcare
   :leaf_node: false
@@ -8494,10 +8481,10 @@
   :narrower_terms:
   - Medical Devices
   - Medical Biotechnology
-  - Health Information Technology
-  - Healthcare Facilities
-  - Healthcare Services
   - Pharmaceuticals
+  - Healthcare Services
+  - Healthcare Facilities
+  - Health Information Technology
 - :label: Pharmaceuticals
   :leaf_node: false
   :path: "/Healthcare/Pharmaceuticals"
@@ -8506,9 +8493,9 @@
   :broader_terms:
   - Healthcare
   :narrower_terms:
-  - Vitamins and Supplements
-  - Drug Development and Discovery
   - Generic Pharmaceuticals
+  - Drug Development and Discovery
+  - Vitamins and Supplements
 - :label: Drug Development and Discovery
   :leaf_node: true
   :path: "/Healthcare/Pharmaceuticals/Drug Development and Discovery"
@@ -8523,8 +8510,8 @@
   :subject: http://webprotege.stanford.edu/R83UPld5lTKYFMnGavvhk4s
   :concept_groups: []
   :broader_terms:
-  - Food and Beverage
   - Pharmaceuticals
+  - Food and Beverage
   :narrower_terms: []
 - :label: Generic Pharmaceuticals
   :leaf_node: true
@@ -8543,11 +8530,11 @@
   - Healthcare
   :narrower_terms:
   - Surgical and Medical Instruments
-  - Dental Equipment and Supplies
   - Electromedical and Electrotherapeutic Apparatus
   - Surgical Appliances
-  - Irradiation Appartus
   - Ophthalmic Goods
+  - Dental Equipment and Supplies
+  - Irradiation Appartus
 - :label: Electromedical and Electrotherapeutic Apparatus
   :leaf_node: true
   :path: "/Healthcare/Medical Devices/Electromedical and Electrotherapeutic Apparatus"
@@ -8613,10 +8600,10 @@
   - Information and Communication Technology
   - Healthcare
   :narrower_terms:
-  - Electronic Health Records
   - Mobile Health
-  - Telemedicine
   - Health Information Exchange
+  - Electronic Health Records
+  - Telemedicine
 - :label: Mobile Health
   :leaf_node: true
   :path: "/Healthcare/Health Information Technology/Mobile Health"
@@ -8666,9 +8653,9 @@
   - Healthcare
   :narrower_terms:
   - In Vitro Diagnostics
-  - Biopharmaceuticals
-  - Laboratory Supplies and Equipment
   - Vaccines
+  - Laboratory Supplies and Equipment
+  - Biopharmaceuticals
 - :label: Biopharmaceuticals
   :leaf_node: true
   :path: "/Healthcare/Medical Biotechnology/Biopharmaceuticals"
@@ -8708,12 +8695,12 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Association of Southeast Asian Nations
-  - Southeast Asia
-  - Trans Pacific Partnership
-  - Global System of Trade Preferences among Developing Countries
   - Pacific Rim
+  - Trans Pacific Partnership
   - Asia Pacific Economic Cooperation
+  - Southeast Asia
+  - Global System of Trade Preferences among Developing Countries
+  - Association of Southeast Asian Nations
   - Asia Pacific
   :narrower_terms: []
 - :label: Norway
@@ -8733,8 +8720,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Ghana
   :leaf_node: true
@@ -8743,10 +8730,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - West Africa
   - Sub-Saharan Africa
   - African Growth and Opportunity Act
   - Global System of Trade Preferences among Developing Countries
-  - West Africa
   :narrower_terms: []
 - :label: Sri Lanka
   :leaf_node: true
@@ -8755,9 +8742,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South Asia
   - Global System of Trade Preferences among Developing Countries
   - South Asian Association for Regional Cooperation
+  - South Asia
   :narrower_terms: []
 - :label: Western Hemisphere
   :leaf_node: true
@@ -8767,59 +8754,59 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - El Salvador
-  - Grenada
-  - Martinique
-  - United States
-  - Uruguay
-  - Dominica
-  - Nicaragua
   - Anguilla
-  - Venezuela
-  - Cuba
-  - British Virgin Islands
-  - Cayman Islands
   - Falkland Islands
-  - Aruba
-  - Argentina
-  - Montserrat
+  - Bermuda
   - Paraguay
-  - Haiti
-  - Peru
-  - Saint Vincent and the Grenadines
-  - Mexico
-  - Costa Rica
-  - Canada
-  - Guyana
-  - Trinidad and Tobago
-  - Sint Eustatius
   - Turks and Caicos Islands
   - Panama
-  - French Guiana
-  - Dominican Republic
-  - Bermuda
-  - Saint Kitts and Nevis
-  - Saint Martin
-  - Antigua and Barbuda
-  - Saint Pierre and Miquelon
-  - Bahamas
-  - Brazil
-  - Barbados
-  - Bonaire
-  - Honduras
-  - Saba
-  - Jamaica
-  - Saint Lucia
-  - Colombia
+  - Uruguay
   - Ecuador
-  - Guadeloupe
+  - Costa Rica
+  - Saint Pierre and Miquelon
   - Curaçao
-  - Belize
-  - Greenland
+  - Dominican Republic
+  - Montserrat
+  - French Guiana
+  - Bonaire
+  - Venezuela
+  - Saint Lucia
+  - Sint Eustatius
+  - Guadeloupe
   - Sint Maarten
-  - Bolivia
-  - Chile
+  - Saint Kitts and Nevis
+  - Saint Vincent and the Grenadines
+  - Jamaica
+  - Belize
+  - Bahamas
+  - Cayman Islands
   - Guatemala
+  - Cuba
+  - British Virgin Islands
+  - United States
+  - Bolivia
+  - Aruba
+  - Brazil
+  - Dominica
+  - Chile
+  - El Salvador
+  - Mexico
+  - Grenada
+  - Saint Martin
+  - Martinique
+  - Argentina
+  - Trinidad and Tobago
+  - Guyana
+  - Peru
+  - Nicaragua
+  - Colombia
+  - Haiti
+  - Saba
+  - Canada
+  - Barbados
+  - Antigua and Barbuda
+  - Honduras
+  - Greenland
 - :label: Belgium
   :leaf_node: true
   :path: "/Belgium"
@@ -8838,8 +8825,8 @@
   - Countries
   :broader_terms:
   - Economic and Monetary Community of Central Africa
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: South Africa
   :leaf_node: true
@@ -8871,10 +8858,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Sub-Saharan Africa
+  - African Growth and Opportunity Act
   - South African Development Community
   - Organization of the Petroleum Exporting Countries
-  - African Growth and Opportunity Act
-  - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Bulgaria
   :leaf_node: true
@@ -8903,8 +8890,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Netherlands Antilles
   - Western Hemisphere
+  - Netherlands Antilles
   :narrower_terms: []
 - :label: Mauritania
   :leaf_node: true
@@ -8913,9 +8900,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
-  - West Africa
   - Sub-Saharan Africa
+  - West Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: British Virgin Islands
   :leaf_node: true
@@ -8934,10 +8921,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caucasus
   - Commonwealth of Independent States
   - Eurasian Economic Union
   - Europe
+  - Caucasus
   :narrower_terms: []
 - :label: Slovakia
   :leaf_node: true
@@ -8956,13 +8943,13 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Southeast Asia
-  - Asia Pacific
-  - Association of Southeast Asian Nations
-  - Pacific Rim
   - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Association of Southeast Asian Nations
+  - Southeast Asia
+  - Pacific Rim
   - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific
   :narrower_terms: []
 - :label: Kyrgyzstan
   :leaf_node: true
@@ -8971,10 +8958,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Commonwealth of Independent States
-  - Economic Cooperation Organization
   - Central Asia
   - Eurasian Economic Union
+  - Economic Cooperation Organization
+  - Commonwealth of Independent States
   :narrower_terms: []
 - :label: Aruba
   :leaf_node: true
@@ -8983,8 +8970,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
   - Netherlands Antilles
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Jersey
   :leaf_node: true
@@ -9011,10 +8998,10 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Publishing
-  - Printing
-  - Entertainment
   - Photographic Services
+  - Entertainment
+  - Printing
+  - Publishing
 - :label: Publishing
   :leaf_node: false
   :path: "/Media and Entertainment/Publishing"
@@ -9048,9 +9035,9 @@
   :broader_terms:
   - Media and Entertainment
   :narrower_terms:
-  - Gambling
   - Film and Video Production
   - Sports
+  - Gambling
 - :label: Gambling
   :leaf_node: true
   :path: "/Media and Entertainment/Entertainment/Gambling"
@@ -9108,9 +9095,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Persian Gulf Region
   - Organization of the Petroleum Exporting Countries
   - Global System of Trade Preferences among Developing Countries
+  - Persian Gulf Region
   - Economic Cooperation Organization
   :narrower_terms: []
 - :label: Japan
@@ -9120,11 +9107,11 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Asia Pacific Economic Cooperation
   - Pacific Rim
-  - Trans Pacific Partnership
   - East Asia
+  - Asia Pacific Economic Cooperation
   - Asia Pacific
+  - Trans Pacific Partnership
   :narrower_terms: []
 - :label: Denmark
   :leaf_node: true
@@ -9154,27 +9141,27 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Balance of Trade
-  - Export-Oriented Industrialization
-  - Rural Development
-  - Digital Economy
-  - Informal Sector
-  - Private Sector
-  - Economic Indicators
-  - Investment
-  - Industry
-  - Economic Conditions
   - Investment Support Services
+  - Export-Oriented Industrialization
+  - Gross National Product
+  - Economic Conditions
+  - Economic Indicators
+  - Private Sector
+  - Economic Policy
+  - Economic Development
+  - Joint Ventures
+  - Agricultural Development
+  - Balance of Trade
+  - Investment Incentives
+  - Rural Development
+  - Informal Sector
   - Industrial Development
-  - Capital
+  - Digital Economy
+  - Investment
   - Monopolies
   - Investment Events
-  - Agricultural Development
-  - Gross National Product
-  - Economic Development
-  - Investment Incentives
-  - Joint Ventures
-  - Economic Policy
+  - Industry
+  - Capital
 - :label: Investment Incentives
   :leaf_node: true
   :path: "/Economic Development and Investment/Investment Incentives"
@@ -9224,9 +9211,9 @@
   :broader_terms:
   - Economic Development and Investment
   :narrower_terms:
-  - Foreign Direct Investment
-  - Foreign Investment
   - Investment Regulations
+  - Foreign Investment
+  - Foreign Direct Investment
   - Investment Policy
 - :label: Foreign Direct Investment
   :leaf_node: true
@@ -9434,12 +9421,12 @@
   :broader_terms:
   - Economic Development and Investment
   :narrower_terms:
-  - Sectoral Development
   - Structural Adjustment
-  - Global Cities Initiative
   - Development Plans
-  - Poverty Reduction
+  - Sectoral Development
   - Sustainable Development
+  - Poverty Reduction
+  - Global Cities Initiative
 - :label: Sustainable Development
   :leaf_node: true
   :path: "/Economic Development and Investment/Economic Development/Sustainable Development"
@@ -9534,9 +9521,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Western Hemisphere
-  - Caribbean Community and Common Market
   - Central America
+  - Caribbean Community and Common Market
+  - Western Hemisphere
   :narrower_terms: []
 - :label: Central African Republic
   :leaf_node: true
@@ -9555,8 +9542,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Trade Policy and Agreements
   :leaf_node: false
@@ -9566,16 +9553,16 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Intraregional Trade
-  - Trade Preference Programs
-  - Trade Agreements
-  - Doha Agreement
-  - Multilateral Trading System
   - Trade Liberalization
-  - Free Trade Areas
-  - Technical Barriers to Trade
+  - Intraregional Trade
+  - Doha Agreement
   - Trade Policy
+  - Multilateral Trading System
+  - Trade Preference Programs
+  - Free Trade Areas
+  - Trade Agreements
   - South-South Trade
+  - Technical Barriers to Trade
 - :label: Doha Agreement
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Doha Agreement"
@@ -9600,17 +9587,17 @@
   :broader_terms:
   - Trade Policy and Agreements
   :narrower_terms:
-  - South African Customs Union
   - European Union - 28
-  - West African Economic and Monetary Union
   - Global System of Trade Preferences among Developing Countries
-  - Southern Common Market
-  - Economic and Monetary Community of Central Africa
-  - Common Market for Eastern and Southern Africa
   - Eurasian Economic Union
-  - Gulf Cooperation Council
   - European Free Trade Association
+  - Gulf Cooperation Council
+  - West African Economic and Monetary Union
+  - Common Market for Eastern and Southern Africa
   - Andean Community
+  - South African Customs Union
+  - Economic and Monetary Community of Central Africa
+  - Southern Common Market
 - :label: South African Customs Union
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/South African Customs Union"
@@ -9620,11 +9607,11 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Botswana
-  - Lesotho
-  - South Africa
   - Swaziland
+  - South Africa
+  - Lesotho
   - Namibia
+  - Botswana
 - :label: European Free Trade Association
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/European Free Trade Association"
@@ -9634,9 +9621,9 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Switzerland
-  - Norway
   - Iceland
+  - Norway
+  - Switzerland
   - Liechtenstein
 - :label: Gulf Cooperation Council
   :leaf_node: true
@@ -9648,10 +9635,10 @@
   - Free Trade Areas
   :narrower_terms:
   - Saudi Arabia
+  - Kuwait
   - Bahrain
   - Qatar
   - United Arab Emirates
-  - Kuwait
   - Oman
 - :label: Global System of Trade Preferences among Developing Countries
   :leaf_node: true
@@ -9663,50 +9650,50 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Mozambique
-  - Philippines
-  - Libya
-  - Cuba
-  - Iraq
-  - Bolivia
-  - Benin
-  - Morocco
-  - Venezuela
-  - Egypt
-  - Ecuador
-  - Trinidad and Tobago
-  - Nicaragua
-  - Bangladesh
-  - Mexico
-  - Tanzania
-  - Paraguay
-  - Nigeria
   - Uruguay
-  - India
-  - Algeria
-  - Indonesia
-  - Tunisia
-  - Iran
-  - Vietnam
+  - Ecuador
   - Malaysia
-  - Argentina
-  - Colombia
-  - Singapore
-  - Guinea
-  - Thailand
-  - Chile
-  - Peru
-  - Burma
-  - South Korea
-  - Pakistan
-  - Cameroon
+  - Paraguay
+  - Tanzania
+  - Iraq
+  - Trinidad and Tobago
+  - Libya
   - North Korea
-  - Ghana
-  - Brazil
+  - Benin
+  - Indonesia
+  - Cuba
+  - Venezuela
+  - Singapore
+  - Chile
+  - South Korea
   - Guyana
+  - Mexico
+  - Nigeria
+  - Ghana
   - Sri Lanka
+  - Bolivia
+  - Thailand
+  - India
+  - Egypt
+  - Burma
+  - Nicaragua
+  - Tunisia
+  - Bangladesh
+  - Brazil
+  - Cameroon
   - Sudan
+  - Argentina
+  - Mozambique
+  - Iran
+  - Peru
   - Zimbabwe
+  - Philippines
+  - Morocco
+  - Colombia
+  - Vietnam
+  - Algeria
+  - Pakistan
+  - Guinea
 - :label: Andean Community
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/Andean Community"
@@ -9716,9 +9703,9 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
+  - Peru
   - Bolivia
   - Colombia
-  - Peru
 - :label: Eurasian Economic Union
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/Eurasian Economic Union"
@@ -9728,11 +9715,11 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Kyrgyzstan
-  - Kazakhstan
   - Belarus
-  - Armenia
   - Russia
+  - Armenia
+  - Kazakhstan
+  - Kyrgyzstan
 - :label: Economic and Monetary Community of Central Africa
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/Economic and Monetary Community
@@ -9743,12 +9730,12 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Congo-Brazzaville
-  - Central African Republic
-  - Chad
-  - Gabon
   - Cameroon
+  - Gabon
+  - Chad
+  - Central African Republic
   - Equatorial Guinea
+  - Congo-Brazzaville
 - :label: Common Market for Eastern and Southern Africa
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/Common Market for Eastern
@@ -9759,25 +9746,25 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Seychelles
-  - Mauritius
-  - Congo-Kinshasa
-  - Rwanda
-  - Kenya
-  - Burundi
-  - Egypt
-  - Sudan
-  - Swaziland
-  - Ethiopia
-  - Zimbabwe
-  - Libya
   - Djibouti
-  - Uganda
-  - Malawi
-  - Eritrea
-  - Zambia
-  - Madagascar
+  - Seychelles
+  - Sudan
   - Comoros
+  - Congo-Kinshasa
+  - Kenya
+  - Zambia
+  - Malawi
+  - Madagascar
+  - Uganda
+  - Rwanda
+  - Egypt
+  - Eritrea
+  - Ethiopia
+  - Mauritius
+  - Libya
+  - Swaziland
+  - Zimbabwe
+  - Burundi
 - :label: European Union - 28
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/European Union - 28"
@@ -9787,34 +9774,34 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Italy
-  - Slovenia
-  - Lithuania
-  - United Kingdom
-  - Cyprus
-  - Malta
-  - Romania
-  - Sweden
-  - Finland
-  - Slovakia
-  - Portugal
-  - Germany
   - Austria
-  - Greece
-  - Bulgaria
-  - Ireland
-  - Denmark
-  - Croatia
-  - Poland
-  - Estonia
-  - Belgium
-  - Hungary
-  - Latvia
-  - France
+  - Finland
   - Netherlands
+  - Estonia
+  - Sweden
+  - Greece
+  - Portugal
+  - Belgium
+  - Croatia
+  - Romania
+  - Cyprus
+  - Ireland
+  - United Kingdom
+  - Poland
   - Spain
-  - Luxembourg
+  - Lithuania
+  - Hungary
+  - Germany
+  - France
   - Czech Republic
+  - Latvia
+  - Slovakia
+  - Slovenia
+  - Italy
+  - Bulgaria
+  - Luxembourg
+  - Denmark
+  - Malta
 - :label: West African Economic and Monetary Union
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/West African Economic and
@@ -9825,15 +9812,15 @@
   :broader_terms:
   - Free Trade Areas
   :narrower_terms:
-  - Niger
-  - Burkina Faso
   - Togo
-  - Mali
   - West Africa
-  - Senegal
-  - Benin
-  - Côte d'Ivoire
+  - Niger
   - Guinea Bissau
+  - Mali
+  - Burkina Faso
+  - Senegal
+  - Côte d'Ivoire
+  - Benin
 - :label: Southern Common Market
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Free Trade Areas/Southern Common Market"
@@ -9844,10 +9831,10 @@
   - Free Trade Areas
   :narrower_terms:
   - Paraguay
-  - Uruguay
   - Brazil
-  - Venezuela
   - Argentina
+  - Uruguay
+  - Venezuela
 - :label: Intraregional Trade
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Intraregional Trade"
@@ -9864,12 +9851,12 @@
   :broader_terms:
   - Trade Policy and Agreements
   :narrower_terms:
-  - Intellectual Property License Agreements
+  - Commodity Agreements
   - Florence Agreement
+  - GATT
   - Free Trade Agreements
   - Trade Agreements Compliance Program
-  - Commodity Agreements
-  - GATT
+  - Intellectual Property License Agreements
 - :label: Intellectual Property License Agreements
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Trade Agreements/Intellectual Property License
@@ -9912,11 +9899,11 @@
   :broader_terms:
   - Trade Agreements
   :narrower_terms:
+  - NAFTA
   - Transatlantic Trade and Investment Partnership
   - U.S. Agency for International Development
   - Trans Pacific Partnership
   - CAFTA-DR
-  - NAFTA
 - :label: U.S. Trade Agreements Secretariat
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Trade Agreements/Free Trade Agreements/U.S.
@@ -10086,21 +10073,21 @@
   :concept_groups: []
   :broader_terms: []
   :narrower_terms:
+  - Agreement on Textiles and Clothing
+  - TRIMS
+  - GATS
   - Anti-Dumping Agreement
   - Agreement on Government Procurement
+  - Agreement on Preshipment Inspection
+  - Agreement on Agriculture
   - Customs Valuation Agreement
-  - Agreement on Textiles and Clothing
-  - Agreement on Safeguards
   - Agreement on Rules of Origin
   - TBT
-  - TRIMS
-  - TRIPS
-  - Agreement on Preshipment Inspection
-  - Agreement on the Application of Sanitary and Phytosanitary Measures
-  - GATS
-  - Agreement on Import Licensing
   - Agreement on Subsidies and Countervailing Measures
-  - Agreement on Agriculture
+  - Agreement on Safeguards
+  - Agreement on Import Licensing
+  - TRIPS
+  - Agreement on the Application of Sanitary and Phytosanitary Measures
 - :label: Agreement on the Application of Sanitary and Phytosanitary Measures
   :leaf_node: true
   :path: "/Trade Policy and Agreements/Trade Agreements/Uruguay Round/Agreement on
@@ -10311,11 +10298,11 @@
   - Countries
   :broader_terms:
   - Asia Pacific Economic Cooperation
-  - Asia Pacific
-  - Trans Pacific Partnership
-  - Pacific Rim
   - Oceania
   - Free Trade Agreement Countries
+  - Pacific Rim
+  - Asia Pacific
+  - Trans Pacific Partnership
   :narrower_terms: []
 - :label: Equatorial Guinea
   :leaf_node: true
@@ -10324,8 +10311,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Economic and Monetary Community of Central Africa
   - Sub-Saharan Africa
+  - Economic and Monetary Community of Central Africa
   :narrower_terms: []
 - :label: Romania
   :leaf_node: true
@@ -10344,10 +10331,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - South African Development Community
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - South African Development Community
   - Global System of Trade Preferences among Developing Countries
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Guinea
   :leaf_node: true
@@ -10356,10 +10343,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
   - West Africa
+  - Global System of Trade Preferences among Developing Countries
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Afghanistan
   :leaf_node: true
@@ -10370,16 +10357,8 @@
   :broader_terms:
   - Economic Cooperation Organization
   - Central Asia
-  - South Asian Association for Regional Cooperation
   - South Asia
-  :narrower_terms: []
-- :label: Antarctica
-  :leaf_node: true
-  :path: "/Antarctica"
-  :subject: http://webprotege.stanford.edu/REHuYCEav47llnlv7Tui6X
-  :concept_groups:
-  - Countries
-  :broader_terms: []
+  - South Asian Association for Regional Cooperation
   :narrower_terms: []
 - :label: Bermuda
   :leaf_node: true
@@ -10407,8 +10386,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Free Trade Association
+  - Europe
   :narrower_terms: []
 - :label: Bosnia and Herzegovina
   :leaf_node: true
@@ -10426,8 +10405,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Free Trade Association
   - Europe
+  - European Free Trade Association
   :narrower_terms: []
 - :label: New Caledonia
   :leaf_node: true
@@ -10447,8 +10426,8 @@
   :broader_terms: []
   :narrower_terms:
   - Mexico
-  - United States
   - Canada
+  - United States
 - :label: French Guiana
   :leaf_node: true
   :path: "/French Guiana"
@@ -10466,8 +10445,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Union - 28
   - Europe
+  - European Union - 28
   :narrower_terms: []
 - :label: Jordan
   :leaf_node: true
@@ -10495,14 +10474,14 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Legal Conditions
+  - Competition Law
   - International Trade Law
+  - Legal Conditions
+  - Commercial Law
+  - International Agreements
+  - Legislation
   - Dispute Resolution
   - Contracts
-  - Legislation
-  - International Agreements
-  - Competition Law
-  - Commercial Law
   - Company Law
 - :label: Competition Law
   :leaf_node: true
@@ -10602,8 +10581,8 @@
   :broader_terms:
   - Law
   :narrower_terms:
-  - Miscellaneous Tariff Bill
   - Licensing
+  - Miscellaneous Tariff Bill
 - :label: Miscellaneous Tariff Bill
   :leaf_node: true
   :path: "/Law/Legislation/Miscellaneous Tariff Bill"
@@ -10653,32 +10632,30 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Lawn and Garden Equipment
-  - Livestock
-  - Agricultural Biotechnology
-  - Agricultural Chemicals
-  - Veterinary Equipment and Supplies
   - Agricultural Commodities
-  - Forestry Equipment and Machinery
+  - Agricultural Biotechnology
   - Agricultural Equipment and Machinery
+  - Lawn and Garden Equipment
+  - Veterinary Equipment and Supplies
+  - Livestock
+  - Agricultural Chemicals
+  - Forestry Equipment and Machinery
 - :label: Agricultural Chemicals
   :leaf_node: false
   :path: "/Agribusiness/Agricultural Chemicals"
   :subject: http://webprotege.stanford.edu/RC88khJQKahdqzgfyBuqa1H
-  :concept_groups:
-  - Sector
+  :concept_groups: []
   :broader_terms:
   - Chemicals
   - Agribusiness
   :narrower_terms:
-  - Fertilizers
   - Pesticides
+  - Fertilizers
 - :label: Pesticides
   :leaf_node: true
   :path: "/Agribusiness/Agricultural Chemicals/Pesticides"
   :subject: http://webprotege.stanford.edu/R7bTiAvIyjgzVDBNpNzY3FG
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Chemicals
   :narrower_terms: []
@@ -10686,8 +10663,7 @@
   :leaf_node: true
   :path: "/Agribusiness/Agricultural Chemicals/Fertilizers"
   :subject: http://webprotege.stanford.edu/RgUmzO3J4wWkV3WzgGZrsj
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Chemicals
   :narrower_terms: []
@@ -10729,8 +10705,7 @@
   :leaf_node: true
   :path: "/Agribusiness/Agricultural Commodities/Bulk Commodities"
   :subject: http://webprotege.stanford.edu/RCP23AosteMszhEuQRCYj5b
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Commodities
   :narrower_terms: []
@@ -10738,8 +10713,7 @@
   :leaf_node: true
   :path: "/Agribusiness/Agricultural Commodities/Value-Added Agriculture"
   :subject: http://webprotege.stanford.edu/RJAgtSzm3bjX3jMXaVKSnT
-  :concept_groups:
-  - Product Class
+  :concept_groups: []
   :broader_terms:
   - Agricultural Commodities
   :narrower_terms: []
@@ -10777,15 +10751,15 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
+  - Trade Schools
+  - Secondary Education
+  - Exam Services
+  - Language Learning
+  - Higher Education
+  - Primary Education
   - Distance Learning
   - Education Technology
   - Adult Education and Training
-  - Exam Services
-  - Primary Education
-  - Higher Education
-  - Trade Schools
-  - Secondary Education
-  - Language Learning
 - :label: Primary Education
   :leaf_node: true
   :path: "/Education/Primary Education"
@@ -10883,9 +10857,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - West Africa
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
+  - African Growth and Opportunity Act
+  - West Africa
   :narrower_terms: []
 - :label: Wholesale Trade
   :leaf_node: true
@@ -10903,12 +10877,12 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - Costa Rica
-  - Belize
-  - El Salvador
   - Honduras
-  - Guatemala
+  - Costa Rica
   - Nicaragua
+  - Belize
+  - Guatemala
+  - El Salvador
   - Panama
 - :label: Trinidad and Tobago
   :leaf_node: true
@@ -10918,9 +10892,9 @@
   - Countries
   :broader_terms:
   - Western Hemisphere
+  - Caribbean Community and Common Market
   - Caribbean
   - Global System of Trade Preferences among Developing Countries
-  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: Christmas Island
   :leaf_node: true
@@ -10929,8 +10903,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Pacific Rim
   - Oceania
+  - Pacific Rim
   :narrower_terms: []
 - :label: Algeria
   :leaf_node: true
@@ -10939,9 +10913,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Organization of the Petroleum Exporting Countries
-  - Global System of Trade Preferences among Developing Countries
   - North Africa
+  - Global System of Trade Preferences among Developing Countries
+  - Organization of the Petroleum Exporting Countries
   :narrower_terms: []
 - :label: Liechtenstein
   :leaf_node: true
@@ -10950,8 +10924,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - European Free Trade Association
   - Europe
+  - European Free Trade Association
   :narrower_terms: []
 - :label: Micronesia
   :leaf_node: true
@@ -10970,24 +10944,24 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Furniture
   - Soaps and Detergents
+  - Consumer Electronics
+  - Firearms and Accessories
   - Cosmetics and Toiletries
+  - Pet Foods and Supplies
+  - Pleasure Boats and Accessories
+  - Jewelry
   - Sporting Goods
   - Musical Instruments
-  - Lawn and Garden Equipment
-  - Jewelry
-  - Consumer Electronics
-  - Housewares
-  - Household Appliances
-  - Pet Foods and Supplies
-  - Firearms and Accessories
-  - Artwork
-  - Toys and Games
-  - Giftware
-  - Pleasure Boats and Accessories
-  - Recreational Vehicles
   - Apparel
+  - Furniture
+  - Toys and Games
+  - Household Appliances
+  - Lawn and Garden Equipment
+  - Recreational Vehicles
+  - Housewares
+  - Artwork
+  - Giftware
 - :label: Household Appliances
   :leaf_node: true
   :path: "/Consumer Goods/Household Appliances"
@@ -11022,8 +10996,8 @@
   - Consumer Goods
   - Automotive
   :narrower_terms:
-  - Motorhomes
   - Travel Trailers
+  - Motorhomes
 - :label: Motorhomes
   :leaf_node: true
   :path: "/Consumer Goods/Recreational Vehicles/Motorhomes"
@@ -11106,8 +11080,8 @@
   :subject: http://webprotege.stanford.edu/RCuqjAnOvMpzB9loFC7ZUCS
   :concept_groups: []
   :broader_terms:
-  - Consumer Electronics
   - Automotive
+  - Consumer Electronics
   :narrower_terms: []
 - :label: Soaps and Detergents
   :leaf_node: true
@@ -11143,8 +11117,8 @@
   - Consumer Goods
   - Textiles and Apparel
   :narrower_terms:
-  - Protective and Safety Clothing
   - Used Clothing
+  - Protective and Safety Clothing
 - :label: Used Clothing
   :leaf_node: true
   :path: "/Consumer Goods/Apparel/Used Clothing"
@@ -11226,8 +11200,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Saint Kitts and Nevis
   :leaf_node: true
@@ -11236,8 +11210,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Caribbean Community and Common Market
   - Caribbean
+  - Caribbean Community and Common Market
   - Western Hemisphere
   :narrower_terms: []
 - :label: Information and Communication Technology
@@ -11248,19 +11222,19 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Computer Hardware
-  - Computer Systems
-  - Robotics
-  - Computer-Aided Technologies
+  - Information Technology Services
   - eCommerce Industry
   - Electronics
-  - Audio-Visual Equipment
+  - Computer Hardware
   - Computer Software
-  - Information Technology Services
-  - Health Information Technology
-  - Cybersecurity
-  - Business Equipment
+  - Computer Systems
   - Telecommunications
+  - Robotics
+  - Audio-Visual Equipment
+  - Health Information Technology
+  - Computer-Aided Technologies
+  - Business Equipment
+  - Cybersecurity
 - :label: Electronics
   :leaf_node: false
   :path: "/Information and Communication Technology/Electronics"
@@ -11269,10 +11243,10 @@
   :broader_terms:
   - Information and Communication Technology
   :narrower_terms:
-  - Semiconductor Manufacturing Equipment
   - Electronic Control Systems
-  - Semiconductors
   - Electronic Product Testing Equipment
+  - Semiconductors
+  - Semiconductor Manufacturing Equipment
   - Electronic Components
 - :label: Electronic Control Systems
   :leaf_node: true
@@ -11317,10 +11291,10 @@
   :broader_terms:
   - Electronics
   :narrower_terms:
-  - Optoelectronics
   - Integrated Circuits
   - Discrete Semiconductors
   - Microelectromechanical Systems
+  - Optoelectronics
 - :label: Integrated Circuits
   :leaf_node: true
   :path: "/Information and Communication Technology/Electronics/Semiconductors/Integrated
@@ -11381,9 +11355,9 @@
   :broader_terms:
   - Information and Communication Technology
   :narrower_terms:
+  - Telecommunications Equipment
   - Telecommunications Services
   - Wireless
-  - Telecommunications Equipment
 - :label: Telecommunications Services
   :leaf_node: true
   :path: "/Information and Communication Technology/Telecommunications/Telecommunications
@@ -11466,10 +11440,10 @@
   - Information and Communication Technology
   - Healthcare
   :narrower_terms:
-  - Electronic Health Records
   - Mobile Health
-  - Telemedicine
   - Health Information Exchange
+  - Electronic Health Records
+  - Telemedicine
 - :label: Mobile Health
   :leaf_node: true
   :path: "/Information and Communication Technology/Health Information Technology/Mobile
@@ -11557,9 +11531,9 @@
   :broader_terms:
   - Computer Systems
   :narrower_terms:
-  - Notebook Computers
   - Laptop Computers
   - Tablet Computers
+  - Notebook Computers
 - :label: Tablet Computers
   :leaf_node: true
   :path: "/Information and Communication Technology/Computer Systems/Portable Computers/Tablet
@@ -11620,8 +11594,8 @@
   :subject: http://webprotege.stanford.edu/RJNRUK091Rf4dftYpEPlaN
   :concept_groups: []
   :broader_terms:
-  - Information and Communication Technology
   - Safety and Security
+  - Information and Communication Technology
   :narrower_terms: []
 - :label: Audio-Visual Equipment
   :leaf_node: true
@@ -11645,8 +11619,8 @@
   :subject: http://webprotege.stanford.edu/RyxVdNmlJh6Ct6SOVX4nY5
   :concept_groups: []
   :broader_terms:
-  - Information and Communication Technology
   - Retail Trade
+  - Information and Communication Technology
   :narrower_terms: []
 - :label: Asia Pacific
   :leaf_node: true
@@ -11657,30 +11631,30 @@
   :broader_terms: []
   :narrower_terms:
   - Thailand
-  - India
-  - China
-  - Cambodia
   - American Samoa
-  - Brunei
-  - Timor-Leste
-  - Vietnam
-  - Russia
-  - Philippines
-  - North Korea
-  - Australia
+  - Cambodia
   - Malaysia
-  - Japan
-  - South Korea
+  - New Zealand
+  - Vietnam
   - Macau
-  - Laos
-  - Mongolia
-  - Singapore
-  - Papua New Guinea
+  - Philippines
+  - Japan
+  - North Korea
+  - China
   - Hong Kong
+  - Laos
   - Burma
   - Taiwan
-  - New Zealand
+  - Brunei
+  - Russia
+  - Papua New Guinea
+  - Timor-Leste
+  - Singapore
+  - South Korea
+  - Australia
+  - India
   - Indonesia
+  - Mongolia
 - :label: Franchising
   :leaf_node: true
   :path: "/Franchising"
@@ -11697,9 +11671,9 @@
   - World Regions
   :broader_terms: []
   :narrower_terms:
-  - North Africa
-  - Sub-Saharan Africa
   - West Africa
+  - Sub-Saharan Africa
+  - North Africa
 - :label: West Africa
   :leaf_node: true
   :path: "/Africa/West Africa"
@@ -11709,24 +11683,24 @@
   :broader_terms:
   - Africa
   :narrower_terms:
-  - Sao Tome and Principe
-  - Cape Verde
-  - Mali
-  - Nigeria
-  - Gambia
-  - Guinea Bissau
-  - Saint Helena, Ascension and Tristan da Cunha
-  - Côte d'Ivoire
-  - Burkina Faso
-  - Niger
-  - Mauritania
-  - Guinea
-  - Liberia
-  - Ghana
-  - Sierra Leone
-  - Benin
-  - Togo
   - Senegal
+  - Cape Verde
+  - Sao Tome and Principe
+  - Niger
+  - Benin
+  - Saint Helena, Ascension and Tristan da Cunha
+  - Gambia
+  - Burkina Faso
+  - Liberia
+  - Mauritania
+  - Sierra Leone
+  - Côte d'Ivoire
+  - Togo
+  - Nigeria
+  - Ghana
+  - Mali
+  - Guinea
+  - Guinea Bissau
 - :label: Sub-Saharan Africa
   :leaf_node: true
   :path: "/Africa/Sub-Saharan Africa"
@@ -11736,57 +11710,57 @@
   :broader_terms:
   - Africa
   :narrower_terms:
-  - Western Sahara
-  - Chad
+  - Equatorial Guinea
   - Burkina Faso
+  - Chad
   - Zambia
   - Nigeria
-  - Rwanda
-  - Benin
-  - Eritrea
-  - Mauritius
-  - Gabon
-  - South Africa
-  - Equatorial Guinea
-  - Lesotho
-  - Mozambique
-  - Niger
-  - Burundi
-  - Senegal
-  - Zimbabwe
-  - Réunion
-  - Kenya
-  - Djibouti
-  - Angola
   - Sudan
-  - Congo-Brazzaville
-  - Ethiopia
-  - Cape Verde
-  - South Sudan
-  - Central African Republic
-  - Ghana
-  - Guinea Bissau
-  - Sierra Leone
-  - Liberia
-  - Malawi
-  - Mauritania
-  - Gambia
-  - Tanzania
-  - Guinea
-  - Swaziland
-  - Sao Tome and Principe
-  - Seychelles
-  - Cameroon
-  - Botswana
-  - Uganda
-  - Namibia
-  - Togo
-  - Comoros
-  - Congo-Kinshasa
-  - Côte d'Ivoire
-  - Mali
-  - Somalia
   - Madagascar
+  - Sierra Leone
+  - Djibouti
+  - Swaziland
+  - Namibia
+  - Côte d'Ivoire
+  - Congo-Kinshasa
+  - Lesotho
+  - Western Sahara
+  - South Africa
+  - Benin
+  - Togo
+  - Seychelles
+  - Gabon
+  - Uganda
+  - Réunion
+  - Guinea Bissau
+  - Ghana
+  - Mali
+  - Niger
+  - Tanzania
+  - Malawi
+  - Gambia
+  - Kenya
+  - Comoros
+  - Mauritius
+  - Eritrea
+  - Botswana
+  - Mauritania
+  - Liberia
+  - Somalia
+  - Sao Tome and Principe
+  - Mozambique
+  - Central African Republic
+  - Rwanda
+  - Congo-Brazzaville
+  - Angola
+  - Cameroon
+  - Burundi
+  - Cape Verde
+  - Zimbabwe
+  - Guinea
+  - Senegal
+  - Ethiopia
+  - South Sudan
 - :label: North Africa
   :leaf_node: true
   :path: "/Africa/North Africa"
@@ -11796,11 +11770,11 @@
   :broader_terms:
   - Africa
   :narrower_terms:
-  - Egypt
-  - Morocco
-  - Libya
   - Algeria
   - Tunisia
+  - Libya
+  - Morocco
+  - Egypt
 - :label: Niue
   :leaf_node: true
   :path: "/Niue"
@@ -11828,11 +11802,11 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Metals
-  - Ceramics
   - Composites
-  - Pulp and Paper
+  - Metals
   - Plastic Materials and Resins
+  - Ceramics
+  - Pulp and Paper
 - :label: Ceramics
   :leaf_node: true
   :path: "/Industrial Materials/Ceramics"
@@ -11851,8 +11825,8 @@
   - Industrial Materials
   :narrower_terms:
   - Scrap Plastics
-  - Scrap Pulp and Paper
   - Scrap Metals
+  - Scrap Pulp and Paper
 - :label: Scrap Pulp and Paper
   :leaf_node: true
   :path: "/Industrial Materials/Scrap Materials/Scrap Pulp and Paper"
@@ -11920,10 +11894,10 @@
   :broader_terms:
   - Industrial Materials
   :narrower_terms:
-  - Nonferrous Metals
-  - Precious Metals
   - Iron and Steel
   - Rare Earth Metals
+  - Nonferrous Metals
+  - Precious Metals
 - :label: Rare Earth Metals
   :leaf_node: true
   :path: "/Industrial Materials/Metals/Rare Earth Metals"
@@ -11964,8 +11938,8 @@
   :broader_terms:
   - Industrial Materials
   :narrower_terms:
-  - Paper and Paperboard
   - Paper Product Machinery
+  - Paper and Paperboard
 - :label: Paper Product Machinery
   :leaf_node: true
   :path: "/Industrial Materials/Pulp and Paper/Paper Product Machinery"
@@ -11989,10 +11963,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Latin America
-  - Central America
   - Western Hemisphere
   - Pacific Rim
+  - Central America
+  - Latin America
   :narrower_terms: []
 - :label: Panama
   :leaf_node: true
@@ -12002,9 +11976,9 @@
   - Countries
   :broader_terms:
   - Central America
-  - Latin America
   - Pacific Rim
   - Western Hemisphere
+  - Latin America
   :narrower_terms: []
 - :label: Hong Kong
   :leaf_node: true
@@ -12014,8 +11988,8 @@
   - Countries
   :broader_terms:
   - Asia Pacific
-  - Pacific Rim
   - East Asia
+  - Pacific Rim
   :narrower_terms: []
 - :label: Suriname
   :leaf_node: true
@@ -12025,8 +11999,8 @@
   - Countries
   :broader_terms:
   - Western Hemisphere
-  - South America
   - Caribbean Community and Common Market
+  - South America
   :narrower_terms: []
 - :label: Pakistan
   :leaf_node: true
@@ -12036,9 +12010,9 @@
   - Countries
   :broader_terms:
   - South Asian Association for Regional Cooperation
-  - South Asia
   - Economic Cooperation Organization
   - Global System of Trade Preferences among Developing Countries
+  - South Asia
   :narrower_terms: []
 - :label: Comoros
   :leaf_node: true
@@ -12048,8 +12022,8 @@
   - Countries
   :broader_terms:
   - Sub-Saharan Africa
-  - African Growth and Opportunity Act
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Guernsey
   :leaf_node: true
@@ -12085,8 +12059,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Europe
   - European Union - 28
+  - Europe
   :narrower_terms: []
 - :label: Gambia
   :leaf_node: true
@@ -12095,9 +12069,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - West Africa
   - African Growth and Opportunity Act
   - Sub-Saharan Africa
-  - West Africa
   :narrower_terms: []
 - :label: Cambodia
   :leaf_node: true
@@ -12107,8 +12081,8 @@
   - Countries
   :broader_terms:
   - Asia Pacific
-  - Southeast Asia
   - Association of Southeast Asian Nations
+  - Southeast Asia
   :narrower_terms: []
 - :label: Haiti
   :leaf_node: true
@@ -12117,10 +12091,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Caribbean Community and Common Market
   - Latin America
   - Western Hemisphere
   - Caribbean
-  - Caribbean Community and Common Market
   :narrower_terms: []
 - :label: Sierra Leone
   :leaf_node: true
@@ -12129,9 +12103,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - West Africa
-  - Sub-Saharan Africa
   - African Growth and Opportunity Act
+  - Sub-Saharan Africa
+  - West Africa
   :narrower_terms: []
 - :label: Egypt
   :leaf_node: true
@@ -12140,8 +12114,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Global System of Trade Preferences among Developing Countries
   - Common Market for Eastern and Southern Africa
+  - Global System of Trade Preferences among Developing Countries
   - North Africa
   :narrower_terms: []
 - :label: Seychelles
@@ -12151,9 +12125,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - South African Development Community
   - African Growth and Opportunity Act
   - Common Market for Eastern and Southern Africa
-  - South African Development Community
   - Sub-Saharan Africa
   :narrower_terms: []
 - :label: Norfolk Island
@@ -12183,28 +12157,28 @@
   - Topics
   :broader_terms: []
   :narrower_terms:
-  - Quality Management
-  - Foreign Trade Regulations
-  - Testing
   - Trade Barriers
+  - Export Processing Zones
   - Packaging
-  - Metrology
-  - Weights and Measures
   - Intellectual Property
-  - Sanitary and Phytosanitary Measures
+  - Quality Management
   - Quality Assurance
-  - Tariff-Rate Quotas
-  - Foreign Trade Zones
+  - Eco-Labeling
+  - Safe Harbor
   - Safeguards
+  - Export Licenses
+  - Weights and Measures
+  - Metrology
+  - Quality Systems
   - Export Controls
   - Rules of Origin
-  - Quality Systems
+  - Foreign Trade Zones
   - Trade Facilitation
-  - Safe Harbor
-  - Export Processing Zones
-  - Export Licenses
   - Trade Practices
-  - Eco-Labeling
+  - Testing
+  - Tariff-Rate Quotas
+  - Foreign Trade Regulations
+  - Sanitary and Phytosanitary Measures
 - :label: Quality Assurance
   :leaf_node: true
   :path: "/Market Access/Quality Assurance"
@@ -12287,8 +12261,8 @@
   :broader_terms:
   - Market Access
   :narrower_terms:
-  - Export Regulations
   - Import Regulations
+  - Export Regulations
   - Local Content Requirements
 - :label: Local Content Requirements
   :leaf_node: true
@@ -12370,9 +12344,9 @@
   :broader_terms:
   - Market Access
   :narrower_terms:
-  - Copyright
   - Patents
   - Trademarks
+  - Copyright
   - Trade Secrets
 - :label: Trade Secrets
   :leaf_node: true
@@ -12472,9 +12446,9 @@
   :broader_terms:
   - Market Access
   :narrower_terms:
-  - Marking
   - Packaging Standards
   - Labeling
+  - Marking
 - :label: Marking
   :leaf_node: false
   :path: "/Market Access/Packaging/Marking"
@@ -12523,16 +12497,16 @@
   :broader_terms:
   - Market Access
   :narrower_terms:
-  - Standards
-  - Certification
-  - Standardization
   - Sampling
-  - Food Standards
-  - Quality Standards
-  - Conformity Assessment
-  - Accreditation
+  - Certification
   - Technical Regulations
   - HACCP
+  - Quality Standards
+  - Standardization
+  - Accreditation
+  - Food Standards
+  - Standards
+  - Conformity Assessment
 - :label: Accreditation
   :leaf_node: true
   :path: "/Market Access/Testing/Accreditation"
@@ -12725,20 +12699,20 @@
   :broader_terms:
   - Trade Barriers
   :narrower_terms:
-  - Duty Drawback
-  - Domestic Taxes
-  - Excise Taxes
-  - Import Fees
-  - Value Added Taxes
-  - Export Tariffs
-  - Ad Valorem Duties
-  - Sales Taxes
-  - Import Duties
   - Customs Fees
-  - Port Charges
+  - Excise Taxes
+  - Value Added Taxes
   - Customs Valuation
+  - Import Fees
   - Anti-Dumping and Countervailing Duties
+  - Ad Valorem Duties
+  - Port Charges
+  - Sales Taxes
+  - Domestic Taxes
+  - Duty Drawback
+  - Import Duties
   - Statistics Fees
+  - Export Tariffs
 - :label: Statistics Fees
   :leaf_node: true
   :path: "/Market Access/Trade Barriers/Tariffs/Statistics Fees"
@@ -12866,10 +12840,10 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - Sub-Saharan Africa
   - West African Economic and Monetary Union
-  - African Growth and Opportunity Act
+  - Sub-Saharan Africa
   - West Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Syria
   :leaf_node: true
@@ -12887,9 +12861,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
+  - Caribbean
   - Western Hemisphere
   - Caribbean Community and Common Market
-  - Caribbean
   :narrower_terms: []
 - :label: Environmental Technology
   :leaf_node: false
@@ -12899,9 +12873,9 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Waste Management and Recycling
   - Air Pollution Control
   - Environmental Remediation
+  - Waste Management and Recycling
   - Water and Wastewater
 - :label: Environmental Remediation
   :leaf_node: false
@@ -12911,10 +12885,10 @@
   :broader_terms:
   - Environmental Technology
   :narrower_terms:
-  - Soil Remediation
-  - Environmental Engineering Services
-  - Environmental Monitoring
   - Groundwater Remediation
+  - Environmental Engineering Services
+  - Soil Remediation
+  - Environmental Monitoring
 - :label: Environmental Engineering Services
   :leaf_node: true
   :path: "/Environmental Technology/Environmental Remediation/Environmental Engineering
@@ -12922,8 +12896,8 @@
   :subject: http://webprotege.stanford.edu/R7fgG9To8eNBgTFtOxOy5SW
   :concept_groups: []
   :broader_terms:
-  - Environmental Remediation
   - Engineering Services
+  - Environmental Remediation
   :narrower_terms: []
 - :label: Environmental Monitoring
   :leaf_node: true
@@ -12957,12 +12931,12 @@
   :broader_terms:
   - Environmental Technology
   :narrower_terms:
-  - Water Monitoring
   - Municipal Wastewater
-  - Process Water
-  - Industrial Waste Water
   - Water Treatment Services
+  - Industrial Waste Water
+  - Process Water
   - Municipal Drinking Water
+  - Water Monitoring
 - :label: Process Water
   :leaf_node: true
   :path: "/Environmental Technology/Water and Wastewater/Process Water"
@@ -13019,10 +12993,10 @@
   :broader_terms:
   - Environmental Technology
   :narrower_terms:
-  - Air Pollution Monitoring Services
-  - Mobile Source Air Pollution Control
   - Air Pollution Monitoring Equipment
   - Stationary Source Air Pollution Control
+  - Mobile Source Air Pollution Control
+  - Air Pollution Monitoring Services
 - :label: Air Pollution Monitoring Services
   :leaf_node: true
   :path: "/Environmental Technology/Air Pollution Control/Air Pollution Monitoring
@@ -13067,11 +13041,11 @@
   :broader_terms:
   - Environmental Technology
   :narrower_terms:
-  - Recycling
-  - Waste Management Services
-  - Municipal Solid Waste
-  - Hazardous Waste
   - Medical Waste
+  - Hazardous Waste
+  - Waste Management Services
+  - Recycling
+  - Municipal Solid Waste
 - :label: Waste Management Services
   :leaf_node: true
   :path: "/Environmental Technology/Waste Management and Recycling/Waste Management
@@ -13134,23 +13108,23 @@
   - Industries
   :broader_terms: []
   :narrower_terms:
-  - Event Management
   - Translation and Interpretation Services
-  - Legal Services
-  - Scientific and Technical Services
-  - Marketing Services
-  - Serviced Office Leasing
-  - Trade Promotion Services
-  - Due Diligence Investigation Services
-  - Advertising Services
-  - Accounting Services
-  - Operations and Maintenance Services
-  - Architecture Services
-  - Corporate Training Services
-  - Real Estate Services
-  - Management Consulting Services
-  - Engineering Services
   - Employment Services
+  - Engineering Services
+  - Serviced Office Leasing
+  - Corporate Training Services
+  - Advertising Services
+  - Scientific and Technical Services
+  - Legal Services
+  - Marketing Services
+  - Operations and Maintenance Services
+  - Trade Promotion Services
+  - Real Estate Services
+  - Event Management
+  - Architecture Services
+  - Due Diligence Investigation Services
+  - Accounting Services
+  - Management Consulting Services
 - :label: Real Estate Services
   :leaf_node: true
   :path: "/Business and Professional Services/Real Estate Services"
@@ -13165,8 +13139,8 @@
   :subject: http://webprotege.stanford.edu/R80OOc8tobqIttLwlHhD71R
   :concept_groups: []
   :broader_terms:
-  - Design and Construction
   - Business and Professional Services
+  - Design and Construction
   :narrower_terms:
   - Environmental Engineering Services
 - :label: Employment Services
@@ -13246,10 +13220,10 @@
   :broader_terms:
   - Business and Professional Services
   :narrower_terms:
-  - Internet Advertising
-  - Radio Advertising
   - Television Advertising
   - Outdoor Advertising
+  - Radio Advertising
+  - Internet Advertising
 - :label: Outdoor Advertising
   :leaf_node: true
   :path: "/Business and Professional Services/Advertising Services/Outdoor Advertising"
@@ -13304,8 +13278,8 @@
   :subject: http://webprotege.stanford.edu/RDTJaX1CbjDm4N9HZVkYLjh
   :concept_groups: []
   :broader_terms:
-  - Design and Construction
   - Business and Professional Services
+  - Design and Construction
   :narrower_terms: []
 - :label: Serviced Office Leasing
   :leaf_node: true
@@ -13339,8 +13313,8 @@
   :broader_terms:
   - Business and Professional Services
   :narrower_terms:
-  - Public Relations Services
   - Direct Marketing Services
+  - Public Relations Services
   - Market Research Services
 - :label: Public Relations Services
   :leaf_node: true
@@ -13402,9 +13376,9 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
   :narrower_terms: []
 - :label: Botswana
   :leaf_node: true
@@ -13413,8 +13387,8 @@
   :concept_groups:
   - Countries
   :broader_terms:
-  - African Growth and Opportunity Act
   - Sub-Saharan Africa
-  - South African Development Community
   - South African Customs Union
+  - African Growth and Opportunity Act
+  - South African Development Community
   :narrower_terms: []

@@ -1,4 +1,174 @@
 {
+  "world_regions": [
+    {
+      "key": "Pacific Rim",
+      "doc_count": 10
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 10
+    },
+    {
+      "key": "Europe",
+      "doc_count": 9
+    },
+    {
+      "key": "Africa",
+      "doc_count": 5
+    },
+    {
+      "key": "Latin America",
+      "doc_count": 5
+    },
+    {
+      "key": "North America",
+      "doc_count": 5
+    },
+    {
+      "key": "Sub-Saharan Africa",
+      "doc_count": 5
+    },
+    {
+      "key": "Asia Pacific",
+      "doc_count": 4
+    },
+    {
+      "key": "South America",
+      "doc_count": 4
+    },
+    {
+      "key": "Oceania",
+      "doc_count": 3
+    },
+    {
+      "key": "West Africa",
+      "doc_count": 2
+    },
+    {
+      "key": "Asia",
+      "doc_count": 1
+    },
+    {
+      "key": "Central America",
+      "doc_count": 1
+    },
+    {
+      "key": "Middle East",
+      "doc_count": 1
+    },
+    {
+      "key": "Persian Gulf Region",
+      "doc_count": 1
+    },
+    {
+      "key": "Southeast Asia",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 9
+    },
+    {
+      "key": "European Union - 28",
+      "doc_count": 9
+    },
+    {
+      "key": "Trans Pacific Partnership",
+      "doc_count": 8
+    },
+    {
+      "key": "African Growth and Opportunity Act",
+      "doc_count": 5
+    },
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 5
+    },
+    {
+      "key": "Common Market for Eastern and Southern Africa",
+      "doc_count": 3
+    },
+    {
+      "key": "Southern Common Market",
+      "doc_count": 3
+    },
+    {
+      "key": "West African Economic and Monetary Union",
+      "doc_count": 2
+    },
+    {
+      "key": "Andean Community",
+      "doc_count": 1
+    },
+    {
+      "key": "Association of Southeast Asian Nations",
+      "doc_count": 1
+    },
+    {
+      "key": "Gulf Cooperation Council",
+      "doc_count": 1
+    },
+    {
+      "key": "Organization of the Petroleum Exporting Countries",
+      "doc_count": 1
+    },
+    {
+      "key": "South African Development Community",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "GB",
+      "doc_count": 9
+    },
+    {
+      "key": "CA",
+      "doc_count": 5
+    },
+    {
+      "key": "AU",
+      "doc_count": 3
+    },
+    {
+      "key": "BR",
+      "doc_count": 3
+    },
+    {
+      "key": "SN",
+      "doc_count": 2
+    },
+    {
+      "key": "CO",
+      "doc_count": 1
+    },
+    {
+      "key": "CR",
+      "doc_count": 1
+    },
+    {
+      "key": "KE",
+      "doc_count": 1
+    },
+    {
+      "key": "PH",
+      "doc_count": 1
+    },
+    {
+      "key": "QA",
+      "doc_count": 1
+    },
+    {
+      "key": "RW",
+      "doc_count": 1
+    },
+    {
+      "key": "ZM",
+      "doc_count": 1
+    }
+  ],
   "sources": [
     {
       "key": "UK",
@@ -27,56 +197,6 @@
     {
       "key": "USTDA",
       "doc_count": 2
-    }
-  ],
-  "countries": [
-    {
-      "key": "GB",
-      "doc_count": 9
-    },
-    {
-      "key": "CA",
-      "doc_count": 5
-    },
-    {
-      "key": "AU",
-      "doc_count": 3
-    },
-    {
-      "key": "BR", 
-      "doc_count": 3
-    },
-    {
-      "key": "SN",
-      "doc_count": 2
-    },
-    {
-      "key": "CO",
-      "doc_count": 1
-    },
-    {
-      "key": "CR", 
-      "doc_count": 1
-    },
-    {
-      "key": "KE",
-      "doc_count": 1
-    },
-    {
-      "key": "PH",
-      "doc_count": 1
-    },
-    {
-      "key": "QA",
-      "doc_count": 1
-    },
-    {
-      "key": "RW",
-      "doc_count": 1
-    },
-    {
-      "key": "ZM", 
-      "doc_count": 1
     }
   ]
 }

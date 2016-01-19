@@ -38,12 +38,16 @@
     with the annual rates determined by the Living Wage Foundation http://www.livingwage.org.uk/calculation.'
   :notice_type: Contract
   :specific_location: Any region
-  :industry: 
+  :industry:
   - Construction and Real Estate
   - Environment and Sanitation
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: 4947c4d3-ee37-4a68-bab9-00e4218a4ce1
   :reference_number: MT155489
   :publish_date: '2015-06-24'
@@ -70,9 +74,13 @@
   :specific_location: East of England
   :industry:
   - Other Services
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: 5def2dd2-8aa8-475d-8096-015a9faebce2
   :reference_number: Z/2115
   :publish_date: '2015-07-16'
@@ -86,11 +94,15 @@
   :description: Purple Zone Car Pak Enabling Works
   :notice_type: Contract
   :specific_location: 
-  :industry: 
+  :industry:
   - Construction and Real Estate
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: 562894a0-2f91-47d0-9f3b-fe9971cc0bd2
   :reference_number: V4810/0008/6/0001
   :publish_date: '2015-07-27'
@@ -113,11 +125,15 @@
     laid out in ISO 17025 for supplying evidence that may be used as part of a prosecution.'
   :notice_type: Contract
   :specific_location: 
-  :industry: 
+  :industry:
   - Research and Development
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: 12a70e6d-c8d3-4720-aea8-feafca9f21da
   :reference_number: UCL-PROC-050
   :publish_date: '2015-07-15'
@@ -133,11 +149,15 @@
     JUICE mission, as fully describe in Schedule 1 of this tender.
   :notice_type: Contract
   :specific_location: London
-  :industry: 
+  :industry:
   - Research and Development
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: b92d9569-142a-4b9d-b71b-fed51dd2edd5
   :reference_number: Bravo Project 2271
   :publish_date: '2015-07-16'
@@ -151,12 +171,16 @@
   :description: please see the attached Specification Document.
   :notice_type: Contract
   :specific_location: Any region
-  :industry: 
+  :industry:
   - Other Services
   - Defence and security
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: cea13b7c-bf6d-4170-b717-ff1a8ebbb581
   :reference_number: 15/32
   :publish_date: '2015-06-24'
@@ -173,12 +197,16 @@
     to register.
   :notice_type: Contract
   :specific_location: London
-  :industry: 
+  :industry:
   - Computer and Related Services
   - Technology and Equipment
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: b1c09393-74a6-4676-98a2-ff38d2a662b3
   :reference_number: 2015-025
   :publish_date: '2015-06-18'
@@ -195,11 +223,15 @@
     with acute pain and symptoms before the NHS treatment becomes available.
   :notice_type: Contract
   :specific_location: East of England
-  :industry: 
+  :industry:
   - Other Services
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []
 - :id: a7e10dc7-b260-4bbe-b1ce-ff57db8cc005
   :reference_number: 2015 / 041
   :publish_date: '2015-07-01'
@@ -245,8 +277,12 @@
     the call-off contract concerned.'
   :notice_type: Contract
   :specific_location: East of England,South East
-  :industry: 
+  :industry:
   - Construction and Real Estate
-  :ita_industries: []
   :source: UK
   :country: GB
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
+  :ita_industries: []

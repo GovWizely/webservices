@@ -1,5 +1,4 @@
 ---
-
 - :cost: 0.0
   :description: We are delighted to invite U.S. suppliers and contractors to exhibit
     at MDDMI 2013
@@ -24,6 +23,10 @@
   - Medical Eq.
   - Plastics Materials/Resins
   - Robotics
+  :trade_regions: []
+  :world_regions:
+  - Levant
+  - Middle East
   :venues:
   - :city: Tel Aviv
     :country: IL
@@ -49,6 +52,12 @@
     :phone: 414-297-1853
     :post: Milwaukee
   :industries: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :city: Pewaukee
     :country: US
@@ -99,6 +108,12 @@
   - Operations/Maintenance Services
   - Pleasure Boats/Accessories
   - Port/Shipbuilding Eq.
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :venues:
   - :city: New Orleans, Louisiana
     :country: US
@@ -160,6 +175,13 @@
   :industries:
   - Laboratory Scientific Instruments
   - Medical Eq.
+  :trade_regions:
+  - Southern Common Market
+  - Global System of Trade Preferences among Developing Countries
+  :world_regions:
+  - South America
+  - Western Hemisphere
+  - Latin America
   :venues:
   - :city: São Paulo
     :country: BR

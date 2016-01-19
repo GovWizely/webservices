@@ -198,6 +198,22 @@ class Query
     end
   end
 
+  def set_geo_instance_variables(options)
+    @countries = options[:countries].upcase.split(',').map(&:strip) if options[:countries].present?
+    @trade_regions = split_to_array(options, :trade_regions)
+    @world_regions = split_to_array(options, :world_regions)
+  end
+
+  def split_to_array(options, key)
+    options[key].split(',').map(&:strip) if options[key].present?
+  end
+
+  def generate_geo_filters(json, country_field)
+    json.child! { json.terms { json.set! country_field, @countries } } if @countries
+    json.child! { json.terms { json.trade_regions @trade_regions } } if @trade_regions
+    json.child! { json.terms { json.world_regions @world_regions } } if @world_regions
+  end
+
   private
 
   def cleanup_invalid_bytes(obj, fields)
