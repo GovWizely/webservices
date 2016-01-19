@@ -229,5 +229,26 @@ RSpec.feature 'Data Source management' do
       visit("/v1/xls_records/search.json?api_key=#{@user.api_key}")
       expect(page).to have_text('"country":"ALGERIA"')
     end
+
+    scenario 'admin user uploads JSON file' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Testing JSON'
+      fill_in 'Description', with: 'Testing JSON: Not published yet'
+      fill_in 'Api', with: 'json_records'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json.json")
+      click_button('Create')
+
+      check('Published')
+      click_button('Update')
+
+      visit("/v1/json_records/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('"site":"United Kingdom"')
+    end
   end
 end
