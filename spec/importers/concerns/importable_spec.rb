@@ -170,6 +170,9 @@ describe Importable do
     before(:each) do
       Rails.application.config.enable_industry_mapping_lookup = enable_industry_mapping_lookup
     end
+    after(:each) do
+      Rails.application.config.enable_industry_mapping_lookup = true
+    end
     let(:industry) { 'Agribusiness' }
     context 'when config.enable_industry_mapping_lookup is true' do
       let(:enable_industry_mapping_lookup) { true }

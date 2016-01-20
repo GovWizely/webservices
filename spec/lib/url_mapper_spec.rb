@@ -17,6 +17,9 @@ describe UrlMapper do
     before(:each) do
       Rails.application.config.enable_bitly_lookup = enable_bitly_lookup
     end
+    after(:each) do 
+      Rails.application.config.enable_bitly_lookup = true
+    end
 
     context 'when config.enable_bitly_lookup is true' do
       let(:enable_bitly_lookup) { true }
