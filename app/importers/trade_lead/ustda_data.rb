@@ -5,8 +5,8 @@ module TradeLead
     include Importable
     include VersionableResource
 
-    ENDPOINT = 'http://www.ustda.gov/api/tradeleads/xml'
-    RSS_FEED = 'http://www.ustda.gov/business-opportunities/trade-leads/feed'
+    ENDPOINT = 'https://www.ustda.gov/api/tradeleads/xml'
+    RSS_FEED = 'https://www.ustda.gov/business-opportunities/trade-leads/feed'
 
     KEYS_HASH = {
       'Title'       => :title,
