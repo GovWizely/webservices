@@ -8,7 +8,7 @@ module TradeEvent
 
     attr_accessor :reject_if_ends_before
 
-    ENDPOINT = 'http://www.ustda.gov/api/events/xml'
+    ENDPOINT = 'https://www.ustda.gov/api/events/xml'
 
     SINGLE_VALUED_XPATHS = {
       event_name:         './Title',
