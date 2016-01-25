@@ -16,13 +16,7 @@ module TariffRate
 
     def generate_query(json)
       multi_fields = %i(subheading_description tariff_rate_quota_note rule_text tariff_line)
-      json.query do
-        json.bool do
-          json.must do
-            json.child! { generate_multi_match(json, multi_fields, @q) } if @q
-          end
-        end
-      end if @q
+      generate_multi_match_query(json, multi_fields, @q)
     end
 
     def generate_filter(json)

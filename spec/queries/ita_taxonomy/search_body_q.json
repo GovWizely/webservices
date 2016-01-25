@@ -1,15 +1,13 @@
 {
   "query": {
-    "bool": {
-      "must": [
-        {
-          "multi_match": {
-            "fields": ["name", "broader_terms", "narrower_terms"],
-            "operator": "and",
-            "query": "algeria"
-          }
-        }
-      ]
+    "multi_match": {
+      "fields": [
+        "name",
+        "broader_terms",
+        "narrower_terms"
+      ],
+      "operator": "and",
+      "query": "algeria"
     }
   }
 }

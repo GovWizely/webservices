@@ -1,38 +1,44 @@
 {
-   "query" : {
-      "bool" : {
-         "must" : [
-            {
-               "multi_match" : {
-                  "operator" : "and",
-                  "fields" : [
-                     "title",
-                     "description"
-                  ],
-                  "query" : "workboat"
-               }
+  "query": {
+    "bool": {
+      "must": [
+        {
+          "multi_match": {
+            "fields": [
+              "title",
+              "description"
+            ],
+            "operator": "and",
+            "query": "workboat"
+          }
+        }
+      ]
+    }
+  },
+  "filter": {
+    "bool": {
+      "must": [
+        {
+          "query": {
+            "match": {
+              "countries": {
+                "operator": "and",
+                "query": "canada"
+              }
             }
-         ]
-      }
-   },
-   "filter" : {
-      "bool" : {
-         "must" : [
-            {
-               "query" : {
-                  "match" : {
-                     "countries" : "canada"
-                  }
-               }
-            },
-            {
-               "query" : {
-                  "match" : {
-                     "industries" : "fishing"
-                  }
-               }
+          }
+        },
+        {
+          "query": {
+            "match": {
+              "industries": {
+                "operator": "and",
+                "query": "fishing"
+              }
             }
-         ]
-      }
-   }
+          }
+        }
+      ]
+    }
+  }
 }

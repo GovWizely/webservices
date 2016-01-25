@@ -31,7 +31,7 @@ class ApiModelQuery < Query
 
   def terms_child(json, field)
     value = instance_variable_get("@#{field}")
-    json.child! { json.terms { json.set! field, csv_to_normalized_array(value) } } if value
+    json.child! { generate_terms(json, field, csv_to_normalized_array(value)) } if value
   end
 
   def term_child(json, field)
