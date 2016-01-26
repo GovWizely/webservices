@@ -55,5 +55,12 @@ describe DataTypeGuesser do
         end
       end
     end
+
+    context 'mixed strings and numerics' do
+      it 'guesses enum' do
+        arr = ['Alabama', 5, 'Texas', 1.4]
+        expect(DataTypeGuesserImplementation.new.guess_column_type_from_data(arr)).to eq('enum')
+      end
+    end
   end
 end
