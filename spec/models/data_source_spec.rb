@@ -119,4 +119,15 @@ describe DataSource do
       end
     end
   end
+
+  describe '.find_published(api, version_number)' do
+    before do
+      query_hash = { _source: { exclude: ['data'] }, filter: { and: [{ term: { _id: 'my_api:v2' } }, { term: { published: true } }] } }
+      expect(DataSource).to receive(:search).with(query_hash).and_return ['expected data source']
+    end
+
+    it 'returns the first published DataSource without the data field that matches the api and version number' do
+      expect(DataSource.find_published('my_api', 2)).to eq('expected data source')
+    end
+  end
 end
