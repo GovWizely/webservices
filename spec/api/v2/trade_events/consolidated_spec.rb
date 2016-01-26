@@ -117,7 +117,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
         it_behaves_like 'it contains all TradeEvent::Ita results that match countries "US"'
         it_behaves_like 'it contains all TradeEvent::Sba results that match countries "US"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba] }
+          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Ustda] }
         end
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_countries_us.json' }

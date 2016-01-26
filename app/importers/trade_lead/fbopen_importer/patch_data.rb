@@ -23,7 +23,7 @@ module TradeLead
         'DESC'       => :description,
         'SETASIDE'   => :competitive_procurement_strategy,
         'LINK'       => :url,
-        'POPCOUNTRY' => :specific_location,
+        'POPCOUNTRY' => :country,
         'POPADDRESS' => :specific_address,
       }.freeze
 
@@ -40,7 +40,7 @@ module TradeLead
         description:                      '',
         competitive_procurement_strategy: '',
         url:                              '',
-        specific_location:                '',
+        country:                          '',
         specific_address:                 '',
         contract_number:                  nil,
         publish_date:                     nil,

@@ -6,6 +6,9 @@
     }
   ],
   "countries": [
-
+    {
+      "key": "BR", 
+      "doc_count": 3
+    }
   ]
 }

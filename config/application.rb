@@ -52,5 +52,7 @@ module Webservices
     # enable url shortener to shorten entries' urls.
     config.enable_bitly_lookup = true
     config.enable_industry_mapping_lookup = true
+
+    config.frozen_geo_terms_path = "#{Rails.root}/data/webprotege.zip"
   end
 end

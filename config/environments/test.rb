@@ -50,5 +50,4 @@ Webservices::Application.configure do
   config.developerportal_url = 'http://localhost:4000/developerportal'
 
   config.bitly_api_token = 'NOTAREALBITLYAPITOKENIHOPE'
-  config.enable_bitly_lookup = true
 end

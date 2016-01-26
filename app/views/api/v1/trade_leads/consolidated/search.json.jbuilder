@@ -8,7 +8,7 @@ field_lists = {
   fbo:       [:notice_type, :publish_date, :procurement_organization, :procurement_office,
               :procurement_organization_address, :classification_code, :industry,
               :procurement_office_address, :title, :contract_number, :end_date, :contact,
-              :description, :competitive_procurement_strategy, :url, :specific_location,
+              :description, :competitive_procurement_strategy, :url, :country,
               :specific_address],
   state:     [:country, :specific_location, :title,
               :project_number, :industry, :project_size, :description, :tags,
@@ -19,7 +19,7 @@ field_lists = {
               :status, :url, :procurement_organization, :contact, :title, :description, :notice_type,
               :industry, :specific_location],
   mca:       [:country, :publish_date, :url, :categories, :title, :description, :funding_source, :source],
-  ustda:     [:title, :publish_date, :end_date, :description, :url, :source],
+  ustda:     [:title, :publish_date, :end_date, :description, :url, :source, :country],
 }
 
 json.partial! 'shared/queryinfo'
