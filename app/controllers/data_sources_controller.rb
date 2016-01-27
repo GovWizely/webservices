@@ -56,7 +56,8 @@ class DataSourcesController < ApplicationController
   end
 
   def set_data_source
-    @data_source = DataSource.find(params[:id])
+    args = request['action'] == 'update' ? {} : { _source_exclude: 'data' }
+    @data_source = DataSource.find(params[:id], args)
   end
 
   def api_not_unique

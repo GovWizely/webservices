@@ -24,6 +24,8 @@ module DataTypeGuesser
 
   def numbers_seem_reasonable?(column_values)
     column_values.max < PROBABLY_TOO_BIG_FOR_NUMERIC
+  rescue ArgumentError
+    false
   end
 
   def sanitize_header(header)

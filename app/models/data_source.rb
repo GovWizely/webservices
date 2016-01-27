@@ -73,12 +73,12 @@ class DataSource
 
   def self.find_published(api, version_number)
     versioned_id = id_from_params(api, version_number)
-    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
-    search(query_hash, _source: { exclude: ['data'] }).first
+    query_hash = { _source: { exclude: ['data'] }, filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
+    search(query_hash).first
   end
 
   def self.directory
-    all(_source: { exclude: ['data'] }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
+    all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
   end
 
   private
