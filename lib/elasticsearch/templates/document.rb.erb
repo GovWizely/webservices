@@ -19,6 +19,7 @@ module Webservices
           attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>
         <% end %>
       <% end %>
+      attribute :_updated_at, DateTime
 
       def attributes
         hash = {}

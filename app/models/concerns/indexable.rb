@@ -117,20 +117,7 @@ module Indexable
 
     def purge_old(before_time)
       fail 'This model is unable to purge old documents' unless can_purge_old?
-      body = {
-        query: {
-          filtered: {
-            filter: {
-              range: {
-                _timestamp: {
-                  lt: (before_time.to_f * 1000.0).to_i,
-                },
-              },
-            },
-          },
-        },
-      }
-
+      body = Utils.older_than(:_timestamp, (before_time.to_f * 1000.0).to_i)
       ES.client.delete_by_query(index: index_name, type: index_type, body: body)
     end
 

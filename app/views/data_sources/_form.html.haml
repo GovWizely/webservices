@@ -23,6 +23,9 @@
     %p Whether or not this version of the endpoint has been published to developers yet.
 - unless params["just_created"] == "true"
   .field
+    = form.label :url
+    = form.text_field :url
+  .field
     = form.label :path
     = form.file_field :path, accept: DataSource::VALID_CONTENT_TYPES.join(',')
     - if action_name == 'edit'
