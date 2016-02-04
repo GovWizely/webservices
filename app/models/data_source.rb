@@ -1,6 +1,7 @@
 require 'elasticsearch/persistence/model'
 require 'api_models'
 class DataSource
+  include Utils
   include Elasticsearch::Persistence::Model
 
   VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel application/json).freeze
@@ -17,14 +18,15 @@ class DataSource
   attribute :version_number, Integer
   validates :version_number, numericality: true, presence: true
   attribute :published, Boolean
+  attribute :url, String, mapping: { type: 'string', index: 'no' }
+  attribute :message_digest, String, mapping: { type: 'string', index: 'no' }
 
   before_save :build_dictionary
   after_update :refresh_metadata
   after_destroy :delete_api_index
 
   def initialize(attributes = {})
-    attributes.merge!(_id: DataSource.id_from_params(attributes['api'], attributes['version_number'])) if
-      id.nil? && attributes['api'].present? && attributes['version_number'].present?
+    attributes.merge!(_id: DataSource.id_from_params(attributes['api'], attributes['version_number'])) if id.nil? && attributes['api'].present? && attributes['version_number'].present?
     super(attributes)
   end
 
@@ -39,8 +41,21 @@ class DataSource
     delete_api_index
     with_api_model do |klass|
       klass.create_index!
-      "DataSources::#{data_format}Ingester".constantize.new(klass, metadata, data).ingest
+      _ingest(klass)
       klass.refresh_index!
+    end
+  end
+
+  def freshen
+    data_extractor = DataSources::DataExtractor.new(url)
+    data = data_extractor.data
+    new_message_digest = Digest::SHA1.hexdigest data
+    if message_digest != new_message_digest
+      update(data: data, message_digest: new_message_digest)
+      with_api_model do |klass|
+        _ingest(klass)
+        ES.client.delete_by_query(index: klass.index_name, type: klass.document_type, body: older_than(:_updated_at, updated_at))
+      end
     end
   end
 
@@ -81,6 +96,12 @@ class DataSource
     all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
   end
 
+  def self.freshen(api)
+    current_version = new(api: api).versions.last
+    data_source = find_published(api, current_version)
+    data_source.freshen
+  end
+
   private
 
   def delete_api_index
@@ -108,5 +129,9 @@ class DataSource
 
   def refresh_metadata
     @metadata = nil
+  end
+
+  def _ingest(klass)
+    "DataSources::#{data_format}Ingester".constantize.new(klass, metadata, data).ingest
   end
 end

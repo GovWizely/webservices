@@ -1,5 +1,6 @@
 module Importable
   include XMLUtils
+  include HTMLEntityUtils
   extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
   # can be included into any class that will do so.
@@ -28,15 +29,6 @@ module Importable
 
   def remap_keys(mapping, article_hash)
     Hash[article_hash.slice(*mapping.keys).map { |k, v| [mapping[k], v] }]
-  end
-
-  def sanitize_entry(entry)
-    @html_entities_coder ||= HTMLEntities.new
-    entry.each do |k, v|
-      next unless v.is_a?(String)
-      entry[k] = v.present? ? @html_entities_coder.decode(Sanitize.clean(v)).squish : nil
-    end
-    entry
   end
 
   def lookup_country(country_str)
