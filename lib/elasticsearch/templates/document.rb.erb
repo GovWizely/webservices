@@ -9,7 +9,8 @@ module Webservices
 
       include Elasticsearch::Persistence::Model
 
-      settings(index: { analysis: { analyzer: { keyword_lowercase: Analyzers.definitions[:keyword_lowercase]}}})
+      settings(index: { analysis: { analyzer: { keyword_lowercase: Analyzers.definitions[:keyword_lowercase],
+                                                snowball_asciifolding_nostop: Analyzers.definitions[:snowball_asciifolding_nostop]}}})
       index_name [ES::INDEX_PREFIX, "api_models", '<%= data_source.api %>', 'v<%= data_source.version_number %>'].join(':')
 
       <% data_source.metadata.entries.each_pair do |field, metadata| %>
