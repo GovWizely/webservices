@@ -29,7 +29,6 @@ module TradeLead
     end
 
     def import
-      set_taxonomy_parser
       document = Nokogiri::XML(loaded_resource)
       parse_rss
       leads = process_leads(document)

@@ -32,7 +32,6 @@ module TradeLead
     }
 
     def import
-      set_taxonomy_parser
       doc = JSON.parse(open(@resource).read, symbolize_names: true)
 
       entries = []

@@ -33,7 +33,6 @@ module TradeLead
     }.freeze
 
     def import
-      set_taxonomy_parser
       TradeLead::Canada.index(leads)
     end
 

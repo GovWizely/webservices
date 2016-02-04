@@ -4,7 +4,6 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
-  before { importer.set_taxonomy_parser }
 
   it_behaves_like 'an importer which indexes the correct documents'
 

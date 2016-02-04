@@ -4,7 +4,6 @@ describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/can
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/canada/expected_canada_leads.yaml") }
-  before { importer.set_taxonomy_parser }
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'

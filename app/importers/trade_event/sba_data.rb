@@ -16,7 +16,6 @@ module TradeEvent
     end
 
     def import
-      set_taxonomy_parser
       iterate_over_source_urls do |_body, docs|
         Sba.index(remove_invalid(docs))
       end

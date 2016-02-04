@@ -37,7 +37,6 @@ module TradeEvent
     }.freeze
 
     def import
-      set_taxonomy_parser
       Ita.index(trade_events('//EVENTINFO'))
     end
 

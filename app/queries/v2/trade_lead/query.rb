@@ -10,7 +10,7 @@ module V2::TradeLead
 
     def initialize(options = {})
       super
-      @industries = split_to_array(options, :industries)
+      @industries = split_to_array(options[:industries]) if options[:industries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
 
       @q = options[:q]

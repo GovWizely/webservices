@@ -49,7 +49,6 @@ module TradeEvent
     end
 
     def import
-      set_taxonomy_parser
       Ustda.index(trade_events('//node'))
     end
 

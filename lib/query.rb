@@ -199,13 +199,13 @@ class Query
   end
 
   def set_geo_instance_variables(options)
-    @countries = options[:countries].upcase.split(',').map(&:strip) if options[:countries].present?
-    @trade_regions = split_to_array(options, :trade_regions)
-    @world_regions = split_to_array(options, :world_regions)
+    @countries = split_to_array(options[:countries].upcase) if options[:countries].present?
+    @trade_regions = split_to_array(options[:trade_regions]) if options[:trade_regions].present?
+    @world_regions = split_to_array(options[:world_regions]) if options[:world_regions].present?
   end
 
-  def split_to_array(options, key)
-    options[key].split(',').map(&:strip) if options[key].present?
+  def split_to_array(value)
+    value.split(',').map(&:strip)
   end
 
   def generate_geo_filters(json, country_field)

@@ -4,7 +4,7 @@ module TradeLead
   module FbopenImporter
     class FullData
       include Importable
-      include FbopenImporter
+      include FbopenHelpers
       attr_accessor :naics_mapper
 
       XPATHS = {
@@ -36,7 +36,6 @@ module TradeLead
       end
 
       def import
-        set_taxonomy_parser
         batched_import { |batch| TradeLead::Fbopen.index(batch) }
       end
 

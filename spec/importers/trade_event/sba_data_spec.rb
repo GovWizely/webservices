@@ -11,7 +11,6 @@ describe TradeEvent::SbaData do
                         { reject_if_ends_before: Date.parse('2013-01-11') },
                         'r')
   end
-  before { importer.set_taxonomy_parser }
 
   it_behaves_like 'an importer which can purge old documents'
 

@@ -4,7 +4,7 @@ module TradeLead
   module FbopenImporter
     class PatchData
       include Importable
-      include FbopenImporter
+      include FbopenHelpers
       attr_accessor :naics_mapper
 
       COLUMN_HASH = {
@@ -60,7 +60,6 @@ module TradeLead
       end
 
       def import
-        set_taxonomy_parser
         TradeLead::Fbopen.index(leads)
       end
 

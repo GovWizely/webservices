@@ -19,7 +19,6 @@ module TradeLead
     }
 
     def import
-      set_taxonomy_parser
       document = Nokogiri::XML(open(@resource))
       leads = document.xpath('rss/channel/item').map { |item| process_entry item }.compact
       TradeLead::Mca.index leads

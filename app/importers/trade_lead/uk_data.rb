@@ -11,7 +11,6 @@ module TradeLead
     end
 
     def import
-      set_taxonomy_parser
       xml_body = loaded_resource
 
       # The source XML file states that its content in encoded in utf-16, but

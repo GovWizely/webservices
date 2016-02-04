@@ -1,6 +1,6 @@
 # For shared methods used by the two FBO importers
 module TradeLead
-  module FbopenImporter
+  module FbopenHelpers
     def process_geo_fields(entry)
       entry[:country] = IsoCountryCodes.find(entry[:country]).alpha2 rescue nil
       entry.merge! add_geo_fields([entry[:country]])

@@ -25,7 +25,7 @@ module V2::TradeEvent
       @sort = '_score,start_date'
       @start_date = options[:start_date] if options[:start_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
-      @industries = split_to_array(options, :industries)
+      @industries = split_to_array(options[:industries]) if options[:industries].present?
       # Just to be sure, at this point, that no
       # filtering/sorting/scoring is being done on @industry
       @industry = nil
