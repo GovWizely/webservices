@@ -29,6 +29,7 @@ gem 'haml'
 gem 'roo'
 gem 'roo-xls'
 gem 'jsonpath'
+gem 'charlock_holmes'
 
 gem 'sass'
 gem 'jquery-rails'

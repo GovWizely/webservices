@@ -24,6 +24,12 @@ We use bundler to manage gems. You can install bundler and other required gems l
 
     gem install bundler
     bundle install
+    
+The `charlock_holmes` gem requires the UCI libraries to be installed. If you are using Homebrew, it's probably as simple as this:
+     
+     brew install icu4c
+
+More information about the gem can be found [here](https://github.com/brianmario/charlock_holmes)             
 
 ### ElasticSearch
 

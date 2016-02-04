@@ -4,7 +4,9 @@ module DataSources
 
     def initialize(resource)
       tempfile = resource_is_url?(resource) ? open(resource) : resource
-      @data = extract_data(tempfile, resource)
+      content = extract_data(tempfile, resource)
+      detection = CharlockHolmes::EncodingDetector.detect(content)
+      @data = CharlockHolmes::Converter.convert content, detection[:encoding], 'UTF-8'
     end
 
     private
