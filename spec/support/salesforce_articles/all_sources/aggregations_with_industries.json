@@ -1,0 +1,38 @@
+{
+  "world_regions": [
+    {
+      "key": "Latin America",
+      "doc_count": 1
+    },
+    {
+      "key": "South America",
+      "doc_count": 1
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 1
+    },
+    {
+      "key": "Southern Common Market",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "BR",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "TOP_MARKETS",
+      "doc_count": 1
+    }
+  ]
+}

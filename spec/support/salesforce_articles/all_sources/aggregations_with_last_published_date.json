@@ -1,0 +1,17 @@
+{
+  "world_regions": [
+
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+
+  ],
+  "sources": [
+    {
+      "key": "STATE_REPORT",
+      "doc_count": 1
+    }
+  ]
+}

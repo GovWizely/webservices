@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: a31ffe5a4653aec4c086c772911b6c8a789ee6aa
+  revision: 5e36f26fc4bbcacfcc956f308b69be06baa558dc
   specs:
     taxonomy_parser (0.1.0)
       codeclimate-test-reporter
@@ -91,7 +91,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     charlock_holmes (0.7.3)
-    codeclimate-test-reporter (0.4.7)
+    codeclimate-test-reporter (0.4.8)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coercible (1.0.0)
@@ -140,6 +140,8 @@ GEM
     eventmachine (1.0.7)
     faraday (0.9.1)
       multipart-post (>= 1.2, < 3)
+    faraday_middleware (0.10.0)
+      faraday (>= 0.7.4, < 0.10)
     foreman (0.78.0)
       thor (~> 0.19.1)
     git (1.2.9.1)
@@ -165,7 +167,7 @@ GEM
     jquery-rails (3.1.2)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (1.8.2)
+    json (1.8.3)
     jsonpath (0.5.8)
       multi_json
     launchy (2.4.3)
@@ -253,6 +255,11 @@ GEM
       redis (~> 3.0, >= 3.0.4)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
+    restforce (2.1.2)
+      faraday (~> 0.9.0)
+      faraday_middleware (>= 0.8.8)
+      hashie (>= 1.2.0, < 4.0)
+      json (>= 1.7.5, < 1.9.0)
     roo (2.3.0)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
@@ -297,7 +304,7 @@ GEM
       json
       redis (>= 3.0.6)
       redis-namespace (>= 1.3.1)
-    simplecov (0.10.0)
+    simplecov (0.11.2)
       docile (~> 1.1.0)
       json (~> 1.8)
       simplecov-html (~> 0.10.0)
@@ -384,6 +391,7 @@ DEPENDENCIES
   rails (= 4.0.9)
   rake
   rdiscount
+  restforce
   roo
   roo-xls
   rspec-rails (~> 3.0.0)

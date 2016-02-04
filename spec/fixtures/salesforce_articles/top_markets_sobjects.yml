@@ -1,0 +1,77 @@
+---
+- Id: ka6t0000000CadcAAC
+  Atom__c: '<p><span style="font-size: 12px;"><span style="font-family: arial,helvetica,sans-serif;">Brazil
+    is a large, high-growth market that offers U.S. exporters tremendous opportunities.
+    This large, advanced developing country has experienced rapid GDP growth rates
+    and has rebounded most quickly from the global economic crisis. Given Brazil’s
+    attractiveness as a growth market, foreign competition in Brazil is intense. <br><br>All
+    major competitors are now fully committed to this market. The stakes are raised
+    by the fact that this is also a difficult market for U.S. companies to navigate.
+    In addition to the cultural and bureaucratic differences, U.S. companies attempting
+    to do business in Brazil too often encounter market access barriers. To address
+    these challenges, the United States needs to focus attention on reducing these
+    barriers to trade through continued commercial dialogues with Brazil. This will
+    be vital for U.S. exporters to expand their reach in the Brazilian textile markets.<br><br>The
+    Brazilian textile industry is constantly growing owing to the acquisition of modern
+    equipment and technical development applied to production, and also the promotion
+    of its professionals through training programs and increasing productivity. This
+    development program has already received more than $8 billion. The program’s objective
+    is to strengthen Brazil&#39;s textile industry in the globalized and competitive
+    market. <br><br>Brazil is intensely investing in domestic production, with the
+    goal of the textile sector to expand its operations. To achieve such aims, new
+    investments in technology will be essential. At the same time, Brazil would like
+    to increase its textile trade relationship with the United States but due to the
+    trade barriers to foreign imports, exporting to Brazil can be difficult. Nonetheless,
+    U.S. textiles are still going to Brazil in increased quantities year over year.<br><br><b>Overview
+    of the Technical Textile Market</b><br>Brazil is among the top ten textile industry
+    markets worldwide. Brazil’s textile and apparel sector is the second largest employer
+    in the country. The technical textile industry in a key export driven country
+    such as Brazil continues to rapidly develop with investment from both domestic
+    and foreign multinational companies.<br><br>The technical textile sector has over
+    200 companies currently operating in Brazil, employing roughly 40,000 people. <br><br>Technical
+    textiles and nonwovens are two sectors which have found an increasingly greater
+    number of applications in recent years in Brazil. The local market is developing
+    at a fast pace, and many local textile manufacturers are now concentrating on
+    this type of production. U.S. exporters have been taking advantage of this growth
+    by increasing exports to Brazil 65 percent from 2008 to 2014. Additionally, exports
+    of nonwovens increased 17 percent annually over this six year period.<br><br>The
+    technical textile market expected to grow the fastest include disposable nonwovens
+    with end use applications such as air and liquid filtration at 9.4 percent, absorbent
+    hygiene at 8.4 percent, and wipes 7 percent. Within the durables market the only
+    technical textile near the growth of the disposables is in the automotive market.</span></span></p>'
+  Business_Unit__c: Industry & Analysis
+  Chapter__c: Country Case Study
+  FirstPublishedDate: '2016-01-10T03:31:06.000+0000'
+  LastPublishedDate: '2016-01-10T03:31:06.000+0000'
+  Public_URL__c: <a href="http://apps.export.gov/article?id=Overview-of-Technical-Textiles-in-Brazil"
+    target="_blank">http://apps.export.gov/article?id=Overview-of-Technical-Textiles-in-Brazil</a>
+  References__c: "”2010 ITMF Annual Conference: Brazil and Its Textile Industry.”
+    \ Textile world. Sept/Oct 2010.\r\n\r\nThurston, Charles. “Nonwovens demand outpaces
+    Latin American economies.” Nonwovens Industry Magazine. Jan 2014."
+  Section__c: Overview
+  Summary: Brazil is a growing market for technical textiles with emphasis on the
+    nonwovens sector. ITA expects the Brazilian nonwovens market to lead the region
+    and grow by 8-9 percent this year and next. Substantial and intensifying trade
+    barriers, however, could hamper U.S. producers' ability to realize true market
+    potential in Brazil.
+  Title: Overview of Technical Textiles in Brazil
+  UrlName: Overview-of-Technical-Textiles-in-Brazil
+  DataCategorySelections:
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot0000000GzpSAAS"
+    Id: 02ot0000000GzpSAAS
+    DataCategoryName: Brazil
+    DataCategoryGroupName: Geographies
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot0000000GzpTAAS"
+    Id: 02ot0000000GzpTAAS
+    DataCategoryName: Textiles_and_Apparel
+    DataCategoryGroupName: Industries
+  - attributes:
+      type: Top_Markets__DataCategorySelection
+      url: "/services/data/v34.0/sobjects/Top_Markets__DataCategorySelection/02ot0000000GzpUAAS"
+    Id: 02ot0000000GzpUAAS
+    DataCategoryName: Export_Potential
+    DataCategoryGroupName: Trade_Topics
