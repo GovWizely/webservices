@@ -14,11 +14,11 @@ describe DataSource do
       it { is_expected.not_to allow_value(bad_value).for(:api) }
     end
 
-    %w(market_researches parature_faq ita_office_locations country_commercial_guides business_service_providers ita_zip_codes ita_taxonomy eccn country_fact_sheets screening_lists tariff_rates trade_leads trade_events envirotech sharepoint_trade_articles trade_articles api_models).each do |existing_api|
+    %w(market_researches parature_faq ita_office_locations country_commercial_guides ita_zip_codes ita_taxonomy eccn country_fact_sheets screening_lists tariff_rates trade_leads trade_events envirotech sharepoint_trade_articles trade_articles api_models).each do |existing_api|
       it { is_expected.not_to allow_value(existing_api).for(:api) }
     end
 
-    %w(de_minimis_currencies area_51_residents).each do |ok_value|
+    %w(de_minimis_currencies area_51_residents business_service_providers).each do |ok_value|
       it { is_expected.to allow_value(ok_value).for(:api) }
     end
   end
@@ -206,13 +206,15 @@ describe DataSource do
 
     context 'data has changed' do
       let(:data_extractor) { instance_double(DataSources::DataExtractor, data: new_data) }
+      let(:timestamp) { Time.now.utc }
 
       before do
+        expect(data_source).to receive(:updated_timestamp).and_return timestamp
         expect(DataSources::DataExtractor).to receive(:new).with(url).and_return data_extractor
       end
 
-      it 'gets updated with new data and digest' do
-        expect(data_source).to receive(:update).with(data: new_data, message_digest: 'bbea15f33e4e76fefec2aadc9209dd71c5f37846')
+      it 'gets updated with new data, new digest, and new data_imported_at timestamp' do
+        expect(data_source).to receive(:update).with(data: new_data, message_digest: 'bbea15f33e4e76fefec2aadc9209dd71c5f37846', data_changed_at: timestamp, data_imported_at: timestamp)
         data_source.freshen
       end
 

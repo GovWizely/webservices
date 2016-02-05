@@ -2,12 +2,16 @@ require 'spec_helper'
 
 describe Api::V2::ApiModelsController, type: :request do
   include_context 'V2 headers'
+
   before(:all) do
     csv = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv"
     data_source = DataSource.create(_id: 'de_minimis_currencies:v1', name: 'test', description: 'test API',
                                     api: 'de_minimis_currencies', data: csv, dictionary: '',
                                     version_number: 1, published: true)
+    dictionary = DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.yaml")).deep_symbolized_yaml
+    data_source.update(dictionary: dictionary)
     data_source.ingest
+    DataSource.refresh_index!
   end
 
   describe 'GET /v1/de_minimis_currencies/search.json' do
@@ -32,8 +36,8 @@ describe Api::V2::ApiModelsController, type: :request do
         data_source = DataSource.find 'de_minimis_currencies:v1'
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:sources_used]).to eq([{ source:              data_source.name,
-                                                      source_last_updated: data_source.updated_at.as_json,
-                                                      last_imported:       data_source.updated_at.as_json }])
+                                                      source_last_updated: data_source.data_changed_at.as_json,
+                                                      last_imported:       data_source.data_imported_at.as_json }])
       end
 
       it_behaves_like "an empty result when a query doesn't match any documents"

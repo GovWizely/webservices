@@ -23,7 +23,7 @@ module Webservices
       attribute :_updated_at, DateTime
 
       def attributes
-        hash = {}
+        hash = { id: nil }
         <% data_source.metadata.entries.each_key do |field| %>
           hash['<%= field %>'] = nil
         <% end %>

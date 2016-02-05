@@ -1,0 +1,50 @@
+---
+country:
+  source: Country
+  description: Description of Country
+  indexed: true
+  plural: false
+  type: enum
+  use_for_id: true
+iso2_code:
+  source: ISO-2 code
+  description: Description of ISO-2 code
+  indexed: true
+  plural: false
+  type: enum
+de_minimis_value:
+  source: de minimis value
+  description: Description of de minimis value
+  indexed: true
+  plural: false
+  type: integer
+de_minimis_currency:
+  source: de minimis currency
+  description: Description of de minimis currency
+  indexed: true
+  plural: false
+  type: enum
+vat_amount:
+  source: VAT amount
+  description: Description of VAT amount
+  indexed: true
+  plural: false
+  type: float
+vat_currency:
+  source: VAT currency
+  description: Description of VAT currency
+  indexed: true
+  plural: false
+  type: enum
+date:
+  source: date
+  description: Description of date
+  indexed: true
+  plural: false
+  type: date
+notes:
+  source: Notes
+  description: Description of Notes
+  indexed: true
+  plural: false
+  type: string
