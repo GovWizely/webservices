@@ -14,6 +14,27 @@ shared_context 'full results from response' do
   end
 end
 
+shared_context 'non id results from response' do
+  let(:full_results) do
+    JSON.parse(response.body)['results'].map do |r|
+      r.except('id', 'score') if r['source'] == source_full_name(source)
+    end.compact
+  end
+  let(:got) do
+    full_results.map do |f|
+      @all_possible_full_results[source].index(f)
+    end
+  end
+end
+
+shared_context 'result ids from response' do
+  let(:ids) do
+    JSON.parse(response.body)['results'].map do |r|
+      r['id'] if r['source'] == source_full_name(source)
+    end.compact
+  end
+end
+
 shared_context 'full results from response without source' do
   let(:full_results) do
     JSON.parse(response.body)['results'].map do |r|
@@ -32,6 +53,21 @@ shared_examples 'it contains all expected results of source' do
   include_context 'full results from response'
   it 'contains them all' do
     expect(got).to match_array(expected)
+  end
+end
+
+shared_examples 'it contains all expected results of source with auto generated id' do
+  include_context 'non id results from response'
+  include_context 'result ids from response'
+  it 'contains them all' do
+    expect(got).to match_array(expected)
+  end
+
+  it 'contains ids' do
+    expect(ids).to be_present
+    ids.each do |id|
+      expect(id).to be_present
+    end
   end
 end
 

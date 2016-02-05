@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'Consolidated Screening List API V1', type: :request do
   include_context 'all CSL fixture data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/consolidated_screening_list/search' do
     let(:params) { { size: 100 } }

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'FTA Honduras Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Honduras data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/tariff_rates/search?sources=HN' do
     let(:params) { { sources: 'hn' } }

@@ -1,5 +1,6 @@
 [
   {
+    "id": "17f99a9aa3eaf442c17c712a377911a469a21cd6",
     "source_id": "439026",
     "tariff_line": "01011000",
     "subheading_description": "Pure-bred breeding animals",
@@ -43,6 +44,7 @@
     "source": "AU"
   },
   {
+    "id": "6bbc2e3ee81b9e7e447bcf8d2a656a531f8bfe3b",
     "source_id": "439054",
     "tariff_line": "01011000",
     "subheading_description": "Live purebred breeding horses and asses",
@@ -92,6 +94,7 @@
     "source": "AU"
   },
   {
+    "id": "721f1e0764e863b0ed740ace117a500daf4ef80f",
     "source_id": "439078",
     "tariff_line": "01019000",
     "subheading_description": "Other",

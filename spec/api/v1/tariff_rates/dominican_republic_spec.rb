@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'FTA DominicanRepublic Tariff Rates API V1', type: :request do
   include_context 'TariffRate::DominicanRepublic data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/tariff_rates/search?sources=DO' do
     let(:params) { { sources: 'do' } }

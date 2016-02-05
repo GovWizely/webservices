@@ -24,7 +24,12 @@ describe 'Ita Zip Code API V2', type: :request do
         expect(json_response[:total]).to eq(5)
 
         results = json_response[:results]
-        expect(results).to match_array expected_results
+
+        ids = results.map { |r| r[:id] }
+        ids.each { |id| expect(id).to be_present }
+
+        non_id_results = results.map { |r| r.except(:id) }
+        expect(non_id_results).to match_array expected_results
       end
     end
 
@@ -39,8 +44,8 @@ describe 'Ita Zip Code API V2', type: :request do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(2)
 
-        results = json_response[:results]
-        expect(results).to match_array expected_results.values_at(0, 1)
+        non_id_results = json_response[:results].map { |r| r.except(:id) }
+        expect(non_id_results).to match_array expected_results.values_at(0, 1)
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -73,8 +78,8 @@ describe 'Ita Zip Code API V2', type: :request do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(1)
 
-        results = json_response[:results]
-        expect(results).to include expected_results[0]
+        non_id_results = json_response[:results].map { |r| r.except(:id) }
+        expect(non_id_results).to include expected_results[0]
       end
     end
 
@@ -88,9 +93,9 @@ describe 'Ita Zip Code API V2', type: :request do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(2)
 
-        results = json_response[:results]
-        expect(results).to include expected_results[0]
-        expect(results).to include expected_results[1]
+        non_id_results = json_response[:results].map { |r| r.except(:id) }
+        expect(non_id_results).to include expected_results[0]
+        expect(non_id_results).to include expected_results[1]
       end
     end
   end

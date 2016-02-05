@@ -64,7 +64,7 @@ end
 shared_examples 'it contains all TradeLead::Canada results' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [0, 1, 2, 3, 4] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada aggregations' do
@@ -78,13 +78,13 @@ end
 shared_examples 'it contains all TradeLead::Canada results that match "equipment"' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [2] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results that match "Montée"' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [4] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results that match countries "kp"' do
@@ -96,13 +96,13 @@ end
 shared_examples 'it contains all TradeLead::Canada results that match industries "Health Care Medical"' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [1] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results where publish_date is 2014-03-20' do
   let(:source) { TradeLead::Canada }
   let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
+  it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_context 'TradeLead::Fbopen data' do

@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'Sectoral Sanctions Identifications List API V1', type: :request do
   include_context 'ScreeningList::Ssi data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/consolidated_screening_list/ssi/search' do
     let(:params) { {} }

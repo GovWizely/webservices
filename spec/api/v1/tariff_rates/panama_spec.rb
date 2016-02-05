@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'FTA Panama Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Panama data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/tariff_rates/search?sources=PA' do
     let(:params) { { sources: 'pa' } }
