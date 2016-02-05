@@ -31,9 +31,9 @@ describe Api::V2::ApiModelsController, type: :request do
       it 'includes metadata' do
         data_source = DataSource.find 'de_minimis_currencies:v1'
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:sources_used]).to eq(source:              data_source.name,
-                                                   source_last_updated: data_source.updated_at.as_json,
-                                                   last_imported:       data_source.updated_at.as_json)
+        expect(json_response[:sources_used]).to eq([{ source:              data_source.name,
+                                                      source_last_updated: data_source.updated_at.as_json,
+                                                      last_imported:       data_source.updated_at.as_json }])
       end
 
       it_behaves_like "an empty result when a query doesn't match any documents"

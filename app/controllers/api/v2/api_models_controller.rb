@@ -27,7 +27,7 @@ class Api::V2::ApiModelsController < Api::V2Controller
   end
 
   def sources_used
-    { source: @data_source.name, source_last_updated: @data_source.updated_at, last_imported: @data_source.updated_at }
+    [{ source: @data_source.name, source_last_updated: @data_source.updated_at, last_imported: @data_source.updated_at }]
   end
 
   def search_performed_at
