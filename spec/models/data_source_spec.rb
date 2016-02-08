@@ -95,9 +95,11 @@ describe DataSource do
   end
 
   describe 'search' do
-    let(:data_source) { DataSource.create(_id: 'recall_and_relevancies:v4', published: true, version_number: 4, name: 'test', description: 'test API', api: 'recall_and_relevancies', data: "Country,ISO-2 code\r\nAndorra,AD\r\nArmenia,AM\r\nCanada,CA\r\n") }
+    let(:data_source) { DataSource.create(_id: 'recall_and_relevancies:v4', published: true, version_number: 4, name: 'test', description: 'test API', api: 'recall_and_relevancies', data: "Country,ISO-2 code,free_text\r\nAndorra,AD,foo\r\nArmenia,AM,foo\r\nCanada,CA,accént\r\n") }
+    let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/recall_and_relevancies.yaml")).deep_symbolized_yaml }
+
     before do
-      data_source.update(dictionary: "---\r\n:country_name:\r\n  :source: Country\r\n  :description: Description of Country\r\n  :indexed: true\r\n  :plural: false\r\n  :type: enum\r\n:iso2_code:\r\n  :source: ISO-2 code\r\n  :description: Description of ISO-2 code\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n")
+      data_source.update(dictionary: dictionary)
       data_source.ingest
     end
 
@@ -116,6 +118,14 @@ describe DataSource do
           klass.search(query.generate_search_body_hash)
         end
         expect(results.size).to eq(2)
+      end
+
+      it 'matches on fulltext regardless of accented characters' do
+        results = data_source.with_api_model do |klass|
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'åccent'))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.size).to eq(1)
       end
     end
   end

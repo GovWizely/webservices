@@ -4,7 +4,7 @@ module ModelBuilder
                       integer: { type: Integer, mapping: { type: 'long' } },
                       float:   { type: Float },
                       date:    { type: DateTime },
-                      string:  { type: String, mapping: { type: 'string', analyzer: 'english' } } }.with_indifferent_access
+                      string:  { type: String, mapping: { type: 'string', analyzer: 'snowball_asciifolding_nostop' } } }.with_indifferent_access
 
   def self.load_model_class(data_source)
     template = ERB.new(Rails.root.join(TEMPLATE_PATH).read, nil, '<>').result(binding)
