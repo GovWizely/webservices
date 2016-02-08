@@ -48,14 +48,6 @@ describe DataSources::Transformer do
     end
   end
 
-  context 'stripping HTML' do
-    let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: %w(strip_tags))) }
-
-    it 'returns the value without HTML' do
-      expect(transformer.transform('<h1>shipments <i>not exceeding 1000 dollars</i></h1>')).to eq('shipments not exceeding 1000 dollars')
-    end
-  end
-
   context 'reformatting non-standard date strings' do
     let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: [{ reformat_date: '%m/%d/%Y' }])) }
 

@@ -89,6 +89,7 @@ GEM
       xpath (~> 2.0)
     celluloid (0.16.0)
       timers (~> 4.0.0)
+    charlock_holmes (0.7.3)
     codeclimate-test-reporter (0.4.7)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
@@ -355,6 +356,7 @@ DEPENDENCIES
   binding_of_caller
   capistrano (~> 2.15)
   capybara
+  charlock_holmes
   codeclimate-test-reporter
   devise
   elasticsearch

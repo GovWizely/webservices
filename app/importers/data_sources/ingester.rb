@@ -1,12 +1,16 @@
 module DataSources
   class Ingester
+    include HTMLEntityUtils
+    include Utils
     BULK_GROUP_SIZE = 1000
 
     def initialize(klass, metadata, data)
       @klass = klass
       @metadata = metadata
       @data = data
-      @unique_fields = @metadata.unique_fields.keys
+      fields = @metadata.unique_fields.present? ? @metadata.unique_fields : @metadata.entries
+      @keys_for_id = fields.keys
+      @timestamp = Time.now.utc
     end
 
     private
@@ -20,12 +24,12 @@ module DataSources
     def bulkify(records)
       records.reduce([]) do |bulk_array, record|
         bulk_array << { index: unique_record_id(record) }
-        bulk_array << @metadata.transform(record)
+        bulk_array << sanitize_entry(@metadata.transform(record)).merge(_updated_at: @timestamp)
       end
     end
 
     def unique_record_id(record)
-      @unique_fields.present? ? { _id: Utils.generate_id(record, @unique_fields) } : {}
+      { _id: generate_id(record, @keys_for_id) }
     end
   end
 end
