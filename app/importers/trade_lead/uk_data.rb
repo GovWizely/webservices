@@ -80,6 +80,7 @@ module TradeLead
       lead[:publish_date] = lead[:publish_date] ? parse_date(lead[:publish_date]) : nil
       lead[:source] = model_class.source[:code]
       lead[:country] = 'GB'
+      lead.merge! add_geo_fields([lead[:country]])
       process_industries(lead)
       lead
     end

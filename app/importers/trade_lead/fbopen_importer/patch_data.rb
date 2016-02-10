@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class PatchData
       include Importable
+      include FbopenHelpers
       attr_accessor :naics_mapper
 
       COLUMN_HASH = {
@@ -90,6 +91,8 @@ module TradeLead
         lead.delete(:resp_date)
         lead.delete(:arch_date)
 
+        process_geo_fields(lead)
+
         lead = process_additional_fields(lead)
         EMPTY_RECORD.dup.merge(lead)
       end
@@ -108,10 +111,6 @@ module TradeLead
         valid_country   = entry['POPCOUNTRY'].try(:upcase) =~ /\A[A-Z]{2}\z/
         skipped_country = entry['POPCOUNTRY'] == 'US' if valid_country
         valid_type && valid_country && !skipped_country
-      end
-
-      def extract_end_date(entry)
-        [entry[:arch_date], entry[:resp_date]].reject(&:nil?).max
       end
     end
   end

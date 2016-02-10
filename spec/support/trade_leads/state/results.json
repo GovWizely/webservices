@@ -22,7 +22,17 @@
     "submitting_officer": "Asike, Chuka",
     "submitting_officer_contact": "AsikeC@state.gov",
     "id": "DATATABLE.647",
-    "source": "STATE"
+    "source": "STATE",
+    "trade_regions": [
+        "Global System of Trade Preferences among Developing Countries",
+        "Andean Community"
+    ],
+    "world_regions": [
+        "South America",
+        "Western Hemisphere",
+        "Pacific Rim",
+        "Latin America"
+    ]
   },
   {
     "lead_source": "World Bank",
@@ -47,7 +57,17 @@
     "url": "http://bit.ly/1LfhjG4",
     "status": "Pipeline",
     "id": "DATATABLE.538",
-    "source": "STATE"
+    "source": "STATE",
+    "trade_regions": [
+        "Global System of Trade Preferences among Developing Countries",
+        "Asia Pacific Economic Cooperation",
+        "Association of Southeast Asian Nations"
+    ],
+    "world_regions": [
+        "Asia Pacific",
+        "Southeast Asia",
+        "Asia"
+    ]
   },
   {
     "lead_source": "Post Identified Project",
@@ -72,7 +92,15 @@
     "url": "http://bit.ly/1Lfhrpe",
     "status": "Pipeline",
     "id": "DATATABLE.174",
-    "source": "STATE"
+    "source": "STATE",
+    "trade_regions": [
+        "Organization of the Petroleum Exporting Countries",
+        "Gulf Cooperation Council"
+    ],
+    "world_regions": [
+        "Persian Gulf Region",
+        "Middle East"
+    ]
   },
   {
     "lead_source": "World Bank",
@@ -97,6 +125,14 @@
     "url": "http://bit.ly/1MtB7XS",
     "status": "Pipeline",
     "id": "DATATABLE.66",
-    "source": "STATE"
+    "source": "STATE",
+    "trade_regions": [
+        "Common Market for Eastern and Southern Africa",
+        "African Growth and Opportunity Act"
+    ],
+    "world_regions": [
+        "Sub-Saharan Africa",
+        "Africa"
+    ]
   }
 ]

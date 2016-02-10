@@ -1,26 +1,32 @@
 ---
 - :agency: Defence Materiel Organisation
-  :publish_date_amended:
+  :publish_date_amended: 
   :industry: Fire fighting equipment
-  :ita_industries: []
   :id: CN1121942
   :contract_value: '11731.17'
   :description: 'Motor Windscreen Wiper, Electric. C/W Crank & Plate Assembly, 9.64inch
     Nom O/A Long, 3.88inch Nom O/A Depth. Single Line Purchase Order. Part No: E-005-280.'
-  :parent_id:
+  :parent_id: 
   :procurement_method: Limited tender
   :status: published
   :project_number: DNLMN1
   :publish_date: '2013-01-04'
   :start_date: '2011-12-18'
   :end_date: '2013-01-28'
+  :ita_industries: []
   :country: AU
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Oceania
+  - Pacific Rim
+  - Asia Pacific
   :url: http://bit.ly/1M995hi
   :source: AUSTRALIA
 - :agency: Defence Materiel Organisation
   :publish_date_amended: '2013-01-04'
   :industry: Footwear
-  :ita_industries: []
   :id: CN389204-A1
   :contract_value: '25022000.00'
   :description: COMBAT BOOTS, VERSION 5, KHAKI
@@ -31,25 +37,40 @@
   :publish_date: '2011-05-19'
   :start_date: '2011-01-31'
   :end_date: '2013-06-28'
+  :ita_industries: []
   :country: AU
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Oceania
+  - Pacific Rim
+  - Asia Pacific
   :url: http://bit.ly/1KQmtJZ
   :source: AUSTRALIA
 - :agency: Defence Materiel Organisation
-  :publish_date_amended:
+  :publish_date_amended: 
   :industry: Fire fighting equipment
-  :ita_industries: []
   :id: CN1122002
   :contract_value: '29546.00'
   :description: Fire Hose Nozzle, Aluminium Alloy, Select-O-Matic Nozzle, Automatic
     Type W/Ball Valve Shutoff,225.0 to 757.0 L/Min C/W BIC Male Adapter. Single Line
     Purchase Order.
-  :parent_id:
+  :parent_id: 
   :procurement_method: Limited tender
   :status: published
   :project_number: DNLMZG
   :publish_date: '2013-01-04'
   :start_date: '2013-01-02'
   :end_date: '2013-02-26'
+  :ita_industries: []
   :country: AU
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - Trans Pacific Partnership
+  :world_regions:
+  - Oceania
+  - Pacific Rim
+  - Asia Pacific
   :url: http://bit.ly/1KQmtK2
   :source: AUSTRALIA

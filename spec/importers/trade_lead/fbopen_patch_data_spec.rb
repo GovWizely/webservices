@@ -75,6 +75,8 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
+                        trade_regions:                    ['Southern Common Market', 'Global System of Trade Preferences among Developing Countries'],
+                        world_regions:                    ['South America', 'Western Hemisphere', 'Latin America'],
                        )
     end
 

@@ -62,6 +62,9 @@ module TradeEvent
       event[:cost], event[:cost_currency] = cost(entry) if entry[:cost]
 
       event[:venues] = venues(entry)
+
+      process_geo_fields(event)
+
       event[:event_type] = nil
       event[:source] = model_class.source[:code]
       event[:id] = Utils.generate_id(event, %i(event_name start_date
@@ -108,8 +111,13 @@ module TradeEvent
         venue = extract_fields(entry, venue_xpaths)
         venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
         venue[:country] = get_missing_country(venue[:venue]) if venue[:country].blank? && !venue[:venue].blank?
+
         venue.values.all?(&:blank?) ? nil : venue
       end.compact
+    end
+
+    def process_geo_fields(event)
+      event.merge! add_geo_fields(event[:venues].map { |v| v[:country] })
     end
   end
 end

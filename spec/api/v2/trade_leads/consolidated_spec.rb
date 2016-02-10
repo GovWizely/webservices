@@ -211,5 +211,19 @@ describe 'Consolidated Trade Leads API V2', type: :request do
         let(:expected_json) { 'trade_leads/state/aggregations_with_end_date_2014-03-06.json' }
       end
     end
+
+    context 'when trade_regions is specified' do
+      subject { response }
+      let(:params) { { sources: 'Ustda', trade_regions: 'African Growth and Opportunity Act' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Ustda results where trade_regions is "African Growth and Opportunity Act"'
+    end
+
+    context 'when world_regions is specified' do
+      subject { response }
+      let(:params) { { sources: 'Ustda', world_regions: 'Africa, Central America' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"'
+    end
   end
 end

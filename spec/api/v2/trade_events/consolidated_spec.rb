@@ -230,5 +230,23 @@ describe 'Consolidated Trade Events API V2', type: :request do
         let(:expected_json) { 'trade_events/v2/sba/aggregations_with_end_date.json' }
       end
     end
+
+    context 'when trade_regions is specified' do
+      let(:params) { { sources: 'ITA', trade_regions: 'Southern Common Market, Asia Pacific Economic Cooperation' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match trade_regions "Southern Common Market" and "Asia Pacific Economic Cooperation"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeEvent::Ita] }
+      end
+    end
+
+    context 'when world_regions is specified' do
+      let(:params) { { sources: 'ITA', world_regions: 'Levant, South America' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match world_regions "Levant" and "South America"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeEvent::Ita] }
+      end
+    end
   end
 end

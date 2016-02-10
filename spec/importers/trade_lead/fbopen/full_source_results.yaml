@@ -5,7 +5,6 @@
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
   :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
-  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0425
@@ -26,16 +25,23 @@
   :country: AF
   :specific_address: 
   :notice_type: COMBINE
+  :trade_regions:
+  - Economic Cooperation Organization
+  - South Asian Association for Regional Cooperation
+  :world_regions:
+  - Central Asia
+  - Asia
+  - South Asia
   :end_date: 2015-03-21
   :source: FBO
   :id: SPE7M815Q0425
+  :ita_industries: []
 - :publish_date: 2015-02-08
   :procurement_organization: Defense Logistics Agency
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Land and Maritime - BSM
   :classification_code: '61'
   :industry: '331318: Other Aluminum Rolling, Drawing, and Extruding'
-  :ita_industries: []
   :procurement_office_address: '331318'
   :title: 61--CABLE,POWER,ELECTRI
   :contract_number: SPE7M815Q0431
@@ -44,18 +50,25 @@
   :url: http://1.usa.gov/1OVuFHt
   :competitive_procurement_strategy: Total Small Business
   :country: AF
-  :specific_address:
+  :specific_address: 
   :notice_type: COMBINE
-  :end_date:
+  :trade_regions:
+  - Economic Cooperation Organization
+  - South Asian Association for Regional Cooperation
+  :world_regions:
+  - Central Asia
+  - Asia
+  - South Asia
+  :end_date: 
   :source: FBO
   :id: SPE7M815Q0431
+  :ita_industries: []
 - :publish_date: 
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994: Broom, Brush, and Mop Manufacturing'
-  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -86,16 +99,23 @@
   :country: AF
   :specific_address: RCC Phoenix , APO AE
   :notice_type: COMBINE
+  :trade_regions:
+  - Economic Cooperation Organization
+  - South Asian Association for Regional Cooperation
+  :world_regions:
+  - Central Asia
+  - Asia
+  - South Asia
   :end_date: 2015-04-05
   :source: FBO
   :id: W56KJD-15-T-0032
+  :ita_industries: []
 - :publish_date: 2015-02-08
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994: Broom, Brush, and Mop Manufacturing'
-  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-0032
@@ -126,16 +146,23 @@
   :country: AF
   :specific_address: RCC Phoenix , APO AE
   :notice_type: MOD
+  :trade_regions:
+  - Economic Cooperation Organization
+  - South Asian Association for Regional Cooperation
+  :world_regions:
+  - Central Asia
+  - Asia
+  - South Asia
   :end_date: 2015-02-09
   :source: FBO
   :id: W56KJD-15-T-0032
+  :ita_industries: []
 - :publish_date: 
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
   :procurement_organization_address: RCC Phoenix
   :classification_code: '38'
   :industry: '339994: Broom, Brush, and Mop Manufacturing'
-  :ita_industries: []
   :procurement_office_address: RCC Phoenix, , APO, AE 09356
   :title: 38--Rotary Brooms
   :contract_number: W56KJD-15-T-003
@@ -166,6 +193,14 @@
   :country: AF
   :specific_address: RCC Phoenix , APO AE
   :notice_type: COMBINE
+  :trade_regions:
+  - Economic Cooperation Organization
+  - South Asian Association for Regional Cooperation
+  :world_regions:
+  - Central Asia
+  - Asia
+  - South Asia
   :end_date: 2015-03-31
   :source: FBO
   :id: W56KJD-15-T-003
+  :ita_industries: []

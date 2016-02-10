@@ -1,13 +1,37 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "CANADA",
+      "key": "North America",
+      "doc_count": 5
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 5
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 5
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 5
+    },
+    {
+      "key": "Trans Pacific Partnership",
       "doc_count": 5
     }
   ],
   "countries": [
     {
       "key": "CA",
+      "doc_count": 5
+    }
+  ],
+  "sources": [
+    {
+      "key": "CANADA",
       "doc_count": 5
     }
   ]

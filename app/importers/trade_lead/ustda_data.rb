@@ -63,6 +63,7 @@ module TradeLead
       lead[:end_date] = parse_american_date(lead[:end_date]) if lead[:end_date]
       lead[:source] = model_class.source[:code]
       lead[:country] = get_missing_country(lead[:title])
+      lead.merge! add_geo_fields([lead[:country]])
       lead
     end
   end

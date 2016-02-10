@@ -16,7 +16,16 @@
     "end_date": "2013-06-28",
     "country": "AU",
     "url": "http://bit.ly/1KQmtJZ",
-    "source": "AUSTRALIA"
+    "source": "AUSTRALIA",
+    "trade_regions": [
+        "Asia Pacific Economic Cooperation",
+        "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+        "Oceania",
+        "Pacific Rim",
+        "Asia Pacific"
+    ]
   },
   {
     "agency": "Defence Materiel Organisation",
@@ -35,7 +44,16 @@
     "end_date": "2013-01-28",
     "country": "AU",
     "url": "http://bit.ly/1M995hi",
-    "source": "AUSTRALIA"
+    "source": "AUSTRALIA",
+    "trade_regions": [
+        "Asia Pacific Economic Cooperation",
+        "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+        "Oceania",
+        "Pacific Rim",
+        "Asia Pacific"
+    ]
   },
   {
     "agency": "Defence Materiel Organisation",
@@ -54,6 +72,15 @@
     "end_date": "2013-02-26",
     "country": "AU",
     "url": "http://bit.ly/1KQmtK2",
-    "source": "AUSTRALIA"
+    "source": "AUSTRALIA",
+    "trade_regions": [
+        "Asia Pacific Economic Cooperation",
+        "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+        "Oceania",
+        "Pacific Rim",
+        "Asia Pacific"
+    ]
   }
 ]

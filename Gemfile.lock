@@ -13,12 +13,13 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: b92d8c9dcf7b913e55a5344e1fbd7884866a3593
+  revision: a31ffe5a4653aec4c086c772911b6c8a789ee6aa
   specs:
     taxonomy_parser (0.1.0)
-      iso_country_codes
-      nokogiri (~> 1.6.7.1)
-      rubyzip
+      codeclimate-test-reporter
+      iso_country_codes (= 0.7.4)
+      nokogiri (= 1.6.7.1)
+      rubyzip (= 1.1.7)
 
 GEM
   remote: https://rubygems.org/
@@ -155,7 +156,7 @@ GEM
       multi_xml (>= 0.5.2)
     i18n (0.7.0)
     ice_nine (0.11.1)
-    iso_country_codes (0.7.3)
+    iso_country_codes (0.7.4)
     jbuilder (2.2.13)
       activesupport (>= 3.0.0, < 5)
       multi_json (~> 1.2)

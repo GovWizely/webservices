@@ -35,6 +35,8 @@ module TradeEvent
                                                 country: { type: 'string', analyzer: 'keyword' } } },
 
             source:             { type: 'string', analyzer: 'keyword' },
+            trade_regions:      { type: 'string', analyzer: 'keyword' },
+            world_regions:      { type: 'string', analyzer: 'keyword' },
           },
         },
       }.merge(klass.metadata_mappings).freeze

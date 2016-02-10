@@ -3,11 +3,10 @@
   :lead_source: Inter-American Development Bank
   :project_number: CO-L1146
   :publish_date: '2013-09-27'
-  :end_date:
+  :end_date: 
   :country: CO
   :status: Pipeline
   :industry: Health Care and Social Assistance
-  :ita_industries: []
   :specific_location: Colombia
   :project_size: 13500000
   :procurement_organization: INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería,
@@ -21,44 +20,66 @@
   :tags: Health; Construction
   :url: http://bit.ly/1LfhtNJ
   :contact: DACEY, KRISTIN - Inter-American Development Bank
-  :comments:
+  :comments: 
   :submitting_officer: Asike, Chuka
   :submitting_officer_contact: AsikeC@state.gov
   :id: DATATABLE.647
-  :source: "STATE"
-- :lead_source: World Bank
-  :country: PH
-  :specific_location: Philippines
-  :title: Learning; Equity and Accountability Program Support Project
-  :project_number: P118904
-  :industry: Educational Services
+  :trade_regions:
+  - Global System of Trade Preferences among Developing Countries
+  - Andean Community
+  :world_regions:
+  - South America
+  - Western Hemisphere
+  - Pacific Rim
+  - Latin America
+  :source: STATE
   :ita_industries: []
+- :title: Learning; Equity and Accountability Program Support Project
+  :lead_source: World Bank
+  :project_number: P118904
+  :publish_date: '2013-07-09'
+  :end_date: '2014-03-06'
+  :country: PH
+  :status: Pipeline
+  :industry: Educational Services
+  :specific_location: Philippines
   :project_size: 300000000
+  :procurement_organization: DEPARTMENT OF EDUCATION
+  :funding_source: Development Banks
+  :borrowing_entity: REPUBLIC OF THE PHILIPPINES
   :description: The project development objective is to improve the quality of grade
     1 to 3 reading and math skills of children in Target Regions and Target Schools,
     with a special focus on those belonging to Target Disadvantaged Groups.
   :tags: Primary Education, Secondary Education
-  :publish_date: '2013-07-09'
-  :end_date: '2014-03-06'
-  :funding_source: Development Banks
-  :borrowing_entity: REPUBLIC OF THE PHILIPPINES
-  :procurement_organization: DEPARTMENT OF EDUCATION
+  :url: http://bit.ly/1LfhjG4
   :contact: Lynnette Dela Cruz Perez, lperez@worldbank.org
-  :comments:
+  :comments: 
   :submitting_officer: Chuka Asike
   :submitting_officer_contact: asikec@state.gov
-  :url: http://bit.ly/1LfhjG4
-  :status: Pipeline
   :id: DATATABLE.538
-  :source: "STATE"
-- :lead_source: Post Identified Project
-  :country: QA
-  :specific_location: Doha Medical City, Qatar
-  :title: Hamad Bin Khalifa Medical City - Construction of Simulation Centre
-  :project_number: PWA/GTC/087/12-13
-  :industry: Health Care and Social Assistance
+  :trade_regions:
+  - Global System of Trade Preferences among Developing Countries
+  - Asia Pacific Economic Cooperation
+  - Association of Southeast Asian Nations
+  :world_regions:
+  - Asia Pacific
+  - Southeast Asia
+  - Asia
+  :source: STATE
   :ita_industries: []
+- :title: Hamad Bin Khalifa Medical City - Construction of Simulation Centre
+  :lead_source: Post Identified Project
+  :project_number: PWA/GTC/087/12-13
+  :publish_date: '2013-03-27'
+  :end_date: '2013-06-11'
+  :country: QA
+  :status: Pipeline
+  :industry: Health Care and Social Assistance
+  :specific_location: Doha Medical City, Qatar
   :project_size: 1797625
+  :procurement_organization: Public Works Authority (PWA) Ashghal
+  :funding_source: Government
+  :borrowing_entity: 
   :description: 'The project is comprised but not limited to the following: The Simulation
     Center is a 13,000 m2 facility on the campus of Hamad Medical Corporation (HMC)
     in Doha, Qatar. The project includes a combination of educational and simulation
@@ -72,47 +93,53 @@
     Four Hundred Eighty (480) days plus Four Hundred (400) days Maintenance Period.'
   :tags: Education, Health Sector - Simulation Center Building, Medical Simulation
     Center
-  :publish_date: '2013-03-27'
-  :end_date: '2013-06-11'
-  :funding_source: Government
-  :borrowing_entity:
-  :procurement_organization: Public Works Authority (PWA) Ashghal
-  :contact: Public Works Authority (PWA) ?Ashgal? Building Affairs, Contracts
-    Department
+  :url: http://bit.ly/1Lfhrpe
+  :contact: Public Works Authority (PWA) ?Ashgal? Building Affairs, Contracts Department
   :comments: 'The chosen company shall provide a Performance Bond in the amount of
     ten (10%) percent of the Contract Price endorsed by an approved local bank in
     Qatar. More details of the General Conditions of Tenders available on: http://www.ashghal.gov.qa/English/Bids/Bids/Pages/default.aspx'
   :submitting_officer: Hala Rharrit
   :submitting_officer_contact: RharritH@state.gov
-  :url: http://bit.ly/1Lfhrpe
-  :status: Pipeline
   :id: DATATABLE.174
-  :source: "STATE"
-- :lead_source: World Bank
-  :country: KE
-  :specific_location: Kenya
-  :title: Kenya - Enhancing Water Security & Climate Resilience
-  :project_number: P117635
-  :industry: Utilities
+  :trade_regions:
+  - Organization of the Petroleum Exporting Countries
+  - Gulf Cooperation Council
+  :world_regions:
+  - Persian Gulf Region
+  - Middle East
+  :source: STATE
   :ita_industries: []
+- :title: Kenya - Enhancing Water Security & Climate Resilience
+  :lead_source: World Bank
+  :project_number: P117635
+  :publish_date: '2012-05-29'
+  :end_date: '2013-07-11'
+  :country: KE
+  :status: Pipeline
+  :industry: Utilities
+  :specific_location: Kenya
   :project_size: 350000000
+  :procurement_organization: MINISTRY OF WATER AND IRRIGATION
+  :funding_source: Development Bank
+  :borrowing_entity: GOVERNMENT OF KENYA
   :description: The project objective is to support the institutionalization of processes
     and water related investments to strengthen climate-resilient water resources
     development and management in Kenya. The PDO will support the higher level objectives
     of inclusive and sustained growth through the achievement of water security and
     resilience to climate variability.
   :tags: Water, Sanitation and flood protection
-  :publish_date: '2012-05-29'
-  :end_date: '2013-07-11'
-  :funding_source: Development Bank
-  :borrowing_entity: GOVERNMENT OF KENYA
-  :procurement_organization: MINISTRY OF WATER AND IRRIGATION
-  :contact: Government of Kenya; R.K. Gaita; Director, Irrigation, Drainage,
-    and Water Storage, Ministry of Water and Irrigation; ewscr-project@water.go.ke
-  :comments:
-  :submitting_officer:
-  :submitting_officer_contact:
   :url: http://bit.ly/1MtB7XS
-  :status: Pipeline
+  :contact: Government of Kenya; R.K. Gaita; Director, Irrigation, Drainage, and Water
+    Storage, Ministry of Water and Irrigation; ewscr-project@water.go.ke
+  :comments: 
+  :submitting_officer: 
+  :submitting_officer_contact: 
   :id: DATATABLE.66
-  :source: "STATE"
+  :trade_regions:
+  - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  :world_regions:
+  - Sub-Saharan Africa
+  - Africa
+  :source: STATE
+  :ita_industries: []

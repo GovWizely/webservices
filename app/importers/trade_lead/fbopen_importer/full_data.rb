@@ -4,6 +4,7 @@ module TradeLead
   module FbopenImporter
     class FullData
       include Importable
+      include FbopenHelpers
       attr_accessor :naics_mapper
 
       XPATHS = {
@@ -71,11 +72,14 @@ module TradeLead
         entry.symbolize_keys!
         return nil if !(entry[:country].try(:upcase) =~ /\A[A-Z]{2}\z/) || entry[:country] == 'US'
 
+        process_geo_fields(entry)
+
         entry = process_xml_dates(entry)
         return nil unless entry[:end_date].nil? || entry[:end_date] >= Date.current
 
         entry = process_additional_fields(entry)
-        entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
+
+        entry[:id] = entry[:contract_number]
         entry
       end
 
@@ -83,7 +87,7 @@ module TradeLead
         entry[:description] &&= Nokogiri::HTML.fragment(entry[:description]).inner_text.squish
         entry[:contact] &&= Nokogiri::HTML.fragment(entry[:contact]).inner_text.squish
         entry[:source] = TradeLead::Fbopen.source[:code]
-        entry[:id]      = entry[:contract_number]
+        entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
         entry = process_industries(entry)
         entry
       end
@@ -103,10 +107,6 @@ module TradeLead
       # Parse string and return Date object or nil if date is invalid
       def date_from_string(date)
         Date.strptime(date, '%m%d%Y') if date =~ /[0-9]{8}/
-      end
-
-      def extract_end_date(entry)
-        [entry[:arch_date], entry[:resp_date]].reject(&:nil?).max
       end
     end
   end

@@ -18,7 +18,16 @@
     "url": "http://1.usa.gov/1Z1NZrw",
     "country": "BR",
     "specific_address": "Central Receiving Point DOL Supply IPBO Warehouse, Buidg 3574, 12 Feinber Devens MA",
-    "source": "FBO"
+    "source": "FBO",
+    "trade_regions": [
+        "Southern Common Market",
+        "Global System of Trade Preferences among Developing Countries"
+    ],
+    "world_regions": [
+        "South America",
+        "Western Hemisphere",
+        "Latin America"
+    ]
   },
   {
     "notice_type": "PRESOL",
@@ -39,7 +48,16 @@
     "url": "http://1.usa.gov/1Z1NYnn",
     "country": "BR",
     "specific_address": "TBD TBD TBD NH",
-    "source": "FBO"
+    "source": "FBO",
+    "trade_regions": [
+        "Southern Common Market",
+        "Global System of Trade Preferences among Developing Countries"
+    ],
+    "world_regions": [
+        "South America",
+        "Western Hemisphere",
+        "Latin America"
+    ]
   },
   {
     "notice_type": "PRESOL",
@@ -60,6 +78,15 @@
     "url": "http://1.usa.gov/1Z1NZru",
     "country": "BR",
     "specific_address": "Fairchild AFB, WA",
-    "source": "FBO"
+    "source": "FBO",
+    "trade_regions": [
+        "Southern Common Market",
+        "Global System of Trade Preferences among Developing Countries"
+    ],
+    "world_regions": [
+        "South America",
+        "Western Hemisphere",
+        "Latin America"
+    ]
   }
 ]

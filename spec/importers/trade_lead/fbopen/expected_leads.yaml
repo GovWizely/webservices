@@ -5,7 +5,6 @@
   :procurement_organization_address: R-4 SW Idaho/Nevada Acquisition Center
   :classification_code: '81'
   :industry: '322211: Corrugated and Solid Fiber Box Manufacturing'
-  :ita_industries: []
   :procurement_office_address: 1249 S. Vinnell Way, SUITE 200 Boise ID 83709
   :title: SEEDLING BOXES
   :contact: Diana J. Early, Purchasing Agent, Phone 208373-4134, Fax 208-373-4168,
@@ -41,15 +40,22 @@
   :contract_number: AG-0261-S-13-0079
   :publish_date: '2013-06-16'
   :end_date: '2013-10-31'
+  :trade_regions:
+  - Southern Common Market
+  - Global System of Trade Preferences among Developing Countries
+  :world_regions:
+  - South America
+  - Western Hemisphere
+  - Latin America
   :source: FBO
   :id: AG-0261-S-13-0079
+  :ita_industries: []
 - :notice_type: MOD
   :procurement_organization: Defense Logistics Agency
   :procurement_office: DLA Acquisition Locations
   :procurement_organization_address: DLA Aviation - BSM
   :classification_code: '29'
   :industry: '336412: Aircraft Engine and Engine Parts Manufacturing'
-  :ita_industries: []
   :procurement_office_address: 8000 Jefferson Davis Highway Richmond VA 23297-5000
   :title: Procurement of NSN 2915-01-566-6706, SPRAYBAR, MAIN, AIRCRAFT
   :contact: Christopher L. Robinson, Contracting Officer, Phone 8042793647, Fax 8042793813,
@@ -83,5 +89,13 @@
   :contract_number: SPE4A5-13-R-0992
   :publish_date: '2013-06-16'
   :end_date: '2013-07-15'
+  :trade_regions:
+  - Southern Common Market
+  - Global System of Trade Preferences among Developing Countries
+  :world_regions:
+  - South America
+  - Western Hemisphere
+  - Latin America
   :source: FBO
   :id: SPE4A5-13-R-0992
+  :ita_industries: []

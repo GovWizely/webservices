@@ -31,10 +31,6 @@ module TradeLead
       Submitting_Officer_Contact: :submitting_officer_contact,
     }
 
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
-
     def import
       doc = JSON.parse(open(@resource).read, symbolize_names: true)
 
@@ -54,6 +50,7 @@ module TradeLead
 
       entry[:id] = entry_hash[:id]
       entry[:country] = lookup_country(entry[:country].squish)
+      entry.merge! add_geo_fields([entry[:country]])
       entry[:source] = TradeLead::State.source[:code]
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
 

@@ -80,6 +80,18 @@ shared_examples 'it contains all TradeEvent::Ita results that match "Sao"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeEvent::Ita results that match trade_regions "Southern Common Market" and "Asia Pacific Economic Cooperation"' do
+  let(:source) { TradeEvent::Ita }
+  let(:expected) { [1, 2, 3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ita results that match world_regions "Levant" and "South America"' do
+  let(:source) { TradeEvent::Ita }
+  let(:expected) { [0, 3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_examples 'it contains all TradeEvent::Ita results that match start_date [2020-10-10 TO 2020-12-31]' do
   let(:source) { TradeEvent::Ita }
   let(:expected) { [3] }

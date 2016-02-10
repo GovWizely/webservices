@@ -1,13 +1,33 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "STATE",
+      "key": "Middle East",
+      "doc_count": 1
+    },
+    {
+      "key": "Persian Gulf Region",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Gulf Cooperation Council",
+      "doc_count": 1
+    },
+    {
+      "key": "Organization of the Petroleum Exporting Countries",
       "doc_count": 1
     }
   ],
   "countries": [
     {
       "key": "QA",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "STATE",
       "doc_count": 1
     }
   ]

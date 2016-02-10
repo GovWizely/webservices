@@ -17,12 +17,8 @@ module TradeLead
     MULTI_VALUED_XPATHS = {
       categories: './category',
     }
-    def initialize(resource = ENDPOINT)
-      @resource = resource
-    end
 
     def import
-      Rails.logger.info "Importing #{@resource}"
       document = Nokogiri::XML(open(@resource))
       leads = document.xpath('rss/channel/item').map { |item| process_entry item }.compact
       TradeLead::Mca.index leads
@@ -33,8 +29,7 @@ module TradeLead
     def process_entry(item)
       item_hash = extract_fields(item, SINGLE_VALUED_XPATHS)
       item_hash.reverse_merge! extract_multi_valued_fields(item, MULTI_VALUED_XPATHS)
-      country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
-      item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
+      process_geo_fields(item_hash)
 
       begin
         item_hash[:publish_date] = Date.parse(item_hash[:publish_date]).iso8601
@@ -45,6 +40,12 @@ module TradeLead
       item_hash[:source] = TradeLead::Mca.source[:code]
       item_hash = process_urls(item_hash)
       item_hash
+    end
+
+    def process_geo_fields(item_hash)
+      country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
+      item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
+      item_hash.merge! add_geo_fields([item_hash[:country]])
     end
 
     def process_urls(item_hash)

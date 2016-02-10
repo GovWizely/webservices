@@ -1,11 +1,29 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "STATE",
+      "key": "Africa",
       "doc_count": 1
     },
     {
-      "key": "UK",
+      "key": "Europe",
+      "doc_count": 1
+    },
+    {
+      "key": "Sub-Saharan Africa",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "African Growth and Opportunity Act",
+      "doc_count": 1
+    },
+    {
+      "key": "Common Market for Eastern and Southern Africa",
+      "doc_count": 1
+    },
+    {
+      "key": "European Union - 28",
       "doc_count": 1
     }
   ],
@@ -16,6 +34,16 @@
     },
     {
       "key": "KE",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "STATE",
+      "doc_count": 1
+    },
+    {
+      "key": "UK",
       "doc_count": 1
     }
   ]

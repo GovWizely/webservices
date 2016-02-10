@@ -1,11 +1,17 @@
 {
+  "world_regions": [
+
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+
+  ],
   "sources": [
     {
       "key": "USTDA",
       "doc_count": 1
     }
-  ],
-  "countries": [
-
   ]
 }

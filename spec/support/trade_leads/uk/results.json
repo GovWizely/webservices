@@ -16,7 +16,13 @@
     "industry": ["Research and Development"],
     "ita_industries": [],
     "specific_location": null,
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "b92d9569-142a-4b9d-b71b-fed51dd2edd5",
@@ -35,7 +41,13 @@
     "industry": ["Other Services", "Defence and security"],
     "ita_industries": [],
     "specific_location": "Any region",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "8a0c93ea-874a-4c71-99c5-007b40cb8d1d",
@@ -54,7 +66,13 @@
     "industry": ["Construction and Real Estate", "Environment and Sanitation"],
     "ita_industries": [],
     "specific_location": "Any region",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "5def2dd2-8aa8-475d-8096-015a9faebce2",
@@ -73,7 +91,13 @@
     "industry": ["Construction and Real Estate"],
     "ita_industries": [],
     "specific_location": null,
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "12a70e6d-c8d3-4720-aea8-feafca9f21da",
@@ -92,7 +116,13 @@
     "industry": ["Research and Development"],
     "ita_industries": [],
     "specific_location": "London",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "a7e10dc7-b260-4bbe-b1ce-ff57db8cc005",
@@ -111,7 +141,13 @@
     "industry": ["Construction and Real Estate"],
     "ita_industries": [],
     "specific_location": "East of England,South East",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "cea13b7c-bf6d-4170-b717-ff1a8ebbb581",
@@ -130,7 +166,13 @@
     "industry": ["Computer and Related Services", "Technology and Equipment"],
     "ita_industries": [],
     "specific_location": "London",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "4947c4d3-ee37-4a68-bab9-00e4218a4ce1",
@@ -149,7 +191,13 @@
     "industry": ["Other Services"],
     "ita_industries": [],
     "specific_location": "East of England",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   },
   {
     "id": "b1c09393-74a6-4676-98a2-ff38d2a662b3",
@@ -168,6 +216,12 @@
     "industry": ["Other Services"],
     "ita_industries": [],
     "specific_location": "East of England",
-    "source": "UK"
+    "source": "UK",
+    "trade_regions": [
+        "European Union - 28"
+    ],
+    "world_regions": [
+        "Europe"
+    ]
   }
 ]

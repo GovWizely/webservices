@@ -1,6 +1,7 @@
 module Importable
   include XMLUtils
   include HTMLEntityUtils
+  include TaxonomyMethods
   extend ActiveSupport::Concern
   # The module provides functionality useful for importing source data, and
   # can be included into any class that will do so.
@@ -99,11 +100,6 @@ module Importable
     entry[:industry] = entry[:industry] + ': ' + naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
     entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
     entry
-  end
-
-  def get_missing_country(mappable_field)
-    country_array = normalize_industry('Missing Country: ' + mappable_field)
-    country_array.nil? ? nil : lookup_country(country_array.first)
   end
 
   delegate :can_purge_old?, to: :model_class

@@ -63,6 +63,7 @@ module TradeEvent
         extract_node industry
       end.compact.uniq
       event_hash[:venues] = extract_venues(event_info)
+      event_hash.merge! add_geo_fields(event_hash[:venues].map { |v| v[:country] })
       event_hash
     end
 

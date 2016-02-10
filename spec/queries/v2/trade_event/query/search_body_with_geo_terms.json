@@ -5,11 +5,17 @@
         "bool": {
           "must": [
             {
-              "range": {
-                "start_date": {
-                  "from": "2015-08-27",
-                  "to": "2015-08-28"
-                }
+              "terms": {
+                "trade_regions": [
+                  "European Union - 28"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "world_regions": [
+                  "Asia"
+                ]
               }
             }
           ]

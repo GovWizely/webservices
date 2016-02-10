@@ -53,6 +53,7 @@ module Webservices
     config.enable_bitly_lookup = true
     config.enable_industry_mapping_lookup = true
 
-    config.frozen_geo_terms_path = "#{Rails.root}/data/webprotege.zip"
+    config.frozen_protege_source = "#{Rails.root}/data/webprotege.zip"
+    config.frozen_taxonomy_concepts = "#{Rails.root}/data/taxonomy/concepts.yaml"
   end
 end

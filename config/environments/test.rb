@@ -50,4 +50,6 @@ Webservices::Application.configure do
   config.developerportal_url = 'http://localhost:4000/developerportal'
 
   config.bitly_api_token = 'NOTAREALBITLYAPITOKENIHOPE'
+
+  config.frozen_taxonomy_concepts = "#{Rails.root}/spec/fixtures/taxonomy/concepts.yaml"
 end

@@ -1,13 +1,37 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "AUSTRALIA",
+      "key": "Asia Pacific",
+      "doc_count": 3
+    },
+    {
+      "key": "Oceania",
+      "doc_count": 3
+    },
+    {
+      "key": "Pacific Rim",
+      "doc_count": 3
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 3
+    },
+    {
+      "key": "Trans Pacific Partnership",
       "doc_count": 3
     }
   ],
   "countries": [
     {
       "key": "AU",
+      "doc_count": 3
+    }
+  ],
+  "sources": [
+    {
+      "key": "AUSTRALIA",
       "doc_count": 3
     }
   ]

@@ -1,13 +1,26 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "ITA",
+      "key": "Levant",
+      "doc_count": 1
+    },
+    {
+      "key": "Middle East",
       "doc_count": 1
     }
+  ],
+  "trade_regions": [
+
   ],
   "countries": [
     {
       "key": "IL",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "ITA",
       "doc_count": 1
     }
   ]

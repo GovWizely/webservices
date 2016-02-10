@@ -1,21 +1,25 @@
 module V2::TradeLead
   class Query < ::Query
     attr_reader :countries, :sources
-    aggregate_terms_by countries: { field: 'country' },
-                       sources:   { field: 'source' }
+    aggregate_terms_by countries:     { field: 'country' },
+                       sources:       { field: 'source' },
+                       trade_regions: { field: 'trade_regions' },
+                       world_regions: { field: 'world_regions' }
 
     MULTI_FIELDS = %i(title description industry.tokenized ita_industries.tokenized tags procurement_organization)
 
     def initialize(options = {})
       super
-      @countries = options[:countries].upcase.split(',') if options[:countries].present?
+      @industries = split_to_array(options[:industries]) if options[:industries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
-      @industries = options[:industries].split(',').map(&:strip) if options[:industries].present?
+
       @q = options[:q]
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'
       @publish_date = options[:publish_date] if options[:publish_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
+
+      set_geo_instance_variables(options)
     end
 
     private
@@ -40,11 +44,11 @@ module V2::TradeLead
         json.bool do
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
-            json.child! { json.terms { json.country @countries } } if @countries
             generate_date_range(json, 'publish_date', @publish_date) if @publish_date
             generate_date_range(json, 'publish_date_amended', @publish_date_amended) if @publish_date_amended
             generate_date_range(json, 'end_date', @end_date) if @end_date
             generate_industries_filter(json)
+            generate_geo_filters(json, 'country')
           end
         end
       end if any_field_exist?
@@ -55,7 +59,7 @@ module V2::TradeLead
     end
 
     def any_field_exist?
-      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended
+      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended || @trade_regions || @world_regions
     end
 
     def generate_industries_filter(json)

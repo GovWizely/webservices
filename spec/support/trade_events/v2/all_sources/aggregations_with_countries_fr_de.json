@@ -1,7 +1,13 @@
 {
-  "sources": [
+  "world_regions": [
     {
-      "key": "SBA",
+      "key": "Europe",
+      "doc_count": 2
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "European Union - 28",
       "doc_count": 2
     }
   ],
@@ -13,6 +19,12 @@
     {
       "key": "FR",
       "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "SBA",
+      "doc_count": 2
     }
   ]
 }

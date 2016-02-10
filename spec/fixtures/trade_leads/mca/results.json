@@ -14,7 +14,16 @@
     "title":"Acquisition of Inputs (Seeds, Fertilizers & Pesticides) & Small Farm Equipment",
     "description":"Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6882157\"\u003EMillennium Challenge Account\u003C/a\u003E",
     "funding_source":"Millennium Challenge Account (MCA)",
-    "source":"MCA"
+    "source":"MCA",
+    "trade_regions": [
+      "African Growth and Opportunity Act",
+      "West African Economic and Monetary Union"
+    ],
+    "world_regions": [
+      "West Africa",
+      "Africa",
+      "Sub-Saharan Africa"
+    ]
   },
   {
     "country":"SN",
@@ -29,7 +38,16 @@
     "title":"Consultancy Services for Preparation \u0026 Implementation of a Survey Origin/Destination (O/D) \u0026 Counting on the Campaign N6, N4 of the RN21 \u0026 RN2",
     "description":"Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6882157\"\u003EMillennium Challenge Account\u003C/a\u003E",
     "funding_source":"Millennium Challenge Account (MCA)",
-    "source":"MCA"
+    "source":"MCA",
+    "trade_regions": [
+      "African Growth and Opportunity Act",
+      "West African Economic and Monetary Union"
+    ],
+    "world_regions": [
+      "West Africa",
+      "Africa",
+      "Sub-Saharan Africa"
+    ]
   },
   {
     "country":"ZM",
@@ -43,6 +61,15 @@
     "title":"Bombay Drainage Project",
     "description":"Buyer: \u003Ca href=\"http://www.dgmarket.com/tenders/adminShowBuyer.do?buyerId=6614069\"\u003EMCA-Zambia\u003C/a\u003E",
     "funding_source":"Millennium Challenge Account (MCA)",
-    "source":"MCA"
+    "source":"MCA",
+    "trade_regions": [
+      "African Growth and Opportunity Act",
+      "Common Market for Eastern and Southern Africa",
+      "South African Development Community"
+    ],
+    "world_regions": [
+      "Sub-Saharan Africa",
+      "Africa"
+    ]
   }
 ]

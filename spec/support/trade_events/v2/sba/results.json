@@ -29,7 +29,15 @@
         "city": "Wisconsin",
         "state": "WI",
         "country": "US"
-        }]
+        }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "bb0a5e15db1eefd43754f721975d88abe1ac683c",
@@ -61,7 +69,15 @@
       "city": "Seattle",
       "state": "WA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "82488156b6a2f7240495bc43060c0b4c262f96f8",
@@ -93,7 +109,15 @@
       "city": "Wisconsin",
       "state": "maXiMus",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "81588edfe12cbd3ebb1ef05901fb48b98118bf4a",
@@ -125,7 +149,15 @@
       "city": "MaxiMUS",
       "state": "WA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "1e9a67392d02ac1935fca0872e754b4f79f52181",
@@ -157,7 +189,15 @@
       "city": "Wisconsin",
       "state": "WI",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "6357c0ccb00cd10898b6098bb769f555b3218b62",
@@ -189,7 +229,15 @@
       "city": "Seattle",
       "state": "WA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "1d564251f14da8862379f2db812148988d5d5b2b",
@@ -221,7 +269,15 @@
       "city": "Wisconsin",
       "state": "WI",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "0baa420252da3a0047156c6dcca75fd395791c4f",
@@ -253,7 +309,15 @@
       "city": "Seattle",
       "state": "WA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "ceb79b23c1c10c9a727683c0250dba9e2531e572",
@@ -285,7 +349,15 @@
       "city": "Wisconsin",
       "state": "WI",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "dd12543922512740e00d9a602b719519f186b562",
@@ -317,7 +389,13 @@
       "city": "Los Angeles",
       "state": "CA",
       "country": "DE"
-      }]
+      }],
+    "trade_regions": [
+      "European Union - 28"
+    ],
+    "world_regions": [
+      "Europe"
+    ]
   },
   {
     "id": "ac4762e9b2ccb537b4be1ce206c004286dc0e50f",
@@ -349,7 +427,15 @@
       "city": "Pittsburgh",
       "state": "PA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "71ada50f1413e011cb8e788475fcc6f142891925",
@@ -381,7 +467,15 @@
       "city": "Elmira",
       "state": "NY",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "39ce32491650ade4fa1774a748b9b828c26bef80",
@@ -413,7 +507,15 @@
       "city": "Los Angeles",
       "state": "CA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "27fed639cc4814cfcbd49c91a1a90d30f2c3884b",
@@ -445,7 +547,13 @@
       "city": "Orem",
       "state": "UT",
       "country": "FR"
-      }]
+      }],
+    "trade_regions": [
+      "European Union - 28"
+    ],
+    "world_regions": [
+      "Europe"
+    ]
   },
   {
     "id": "1ad75d3410313305cda3cfd1983c53acf38c7bf6",
@@ -477,7 +585,15 @@
       "city": "Los Angeles",
       "state": "CA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "0e05225b186c05b7fa124e6eb548b82e449dfb26",
@@ -509,7 +625,15 @@
       "city": "Tupelo",
       "state": "MS",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   },
   {
     "id": "3d17cc02d14c8055953885cb2d02ae9de61ab590",
@@ -541,6 +665,14 @@
       "city": "Pittsburgh",
       "state": "PA",
       "country": "US"
-      }]
+      }],
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation"
+    ],
+    "world_regions": [
+      "Western Hemisphere",
+      "Pacific Rim",
+      "North America"
+    ]
   }
 ]

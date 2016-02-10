@@ -8,8 +8,10 @@ module V2::TradeEvent
     #       years later.
     #
     attr_reader :sources
-    aggregate_terms_by countries: { field: 'venues.country' },
-                       sources:   { field: 'source' }
+    aggregate_terms_by countries:     { field: 'venues.country' },
+                       sources:       { field: 'source' },
+                       trade_regions: { field: 'trade_regions' },
+                       world_regions: { field: 'world_regions' }
 
     MULTI_FIELDS = %i(
       registration_title description event_name industries.keyword city
@@ -19,14 +21,16 @@ module V2::TradeEvent
 
     def initialize(options = {})
       super
-      @industries = options[:industries].split(',').map(&:strip) rescue nil
       @sources = options[:sources].upcase.split(',') rescue []
       @sort = '_score,start_date'
       @start_date = options[:start_date] if options[:start_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
+      @industries = split_to_array(options[:industries]) if options[:industries].present?
       # Just to be sure, at this point, that no
       # filtering/sorting/scoring is being done on @industry
       @industry = nil
+
+      set_geo_instance_variables(options)
     end
 
     private
@@ -45,10 +49,10 @@ module V2::TradeEvent
         json.bool do
           json.must do
             json.child! { json.terms { json.source @sources } } if @sources.any?
-            json.child! { json.terms { json.set! 'venues.country', @countries } } if @countries
             generate_date_range(json, 'start_date', @start_date) if @start_date
             generate_date_range(json, 'end_date', @end_date) if @end_date
             generate_industries_filter(json)
+            generate_geo_filters(json, 'venues.country')
           end
         end
       end if any_field_exist?
@@ -59,7 +63,7 @@ module V2::TradeEvent
     end
 
     def any_field_exist?
-      @sources.any? || @countries || @industries || @start_date || @end_date
+      @sources.any? || @countries || @industries || @start_date || @end_date || @trade_regions || @world_regions
     end
 
     def generate_industries_filter(json)
