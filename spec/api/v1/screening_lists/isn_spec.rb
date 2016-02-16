@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'BISN Nonproliferation Sanctions API V1', type: :request do
   include_context 'ScreeningList::Isn data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/consolidated_screening_list/isn/search' do
     let(:params) { {} }

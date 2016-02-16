@@ -41,6 +41,7 @@
 
     ],
     "entity_number": "306",
+    "id": "306",
     "ids": [
 
     ],
@@ -81,6 +82,7 @@
 
     ],
     "entity_number": "521",
+    "id": "521",
     "ids": [
       {
         "country": "BE",
@@ -150,6 +152,7 @@
       "circa 1954"
     ],
     "entity_number": "6982",
+    "id": "6982",
     "ids": [
       {
         "country": "SO",
@@ -189,6 +192,7 @@
     "entity_number": "11043",
     "gross_registered_tonnage": "16621",
     "gross_tonnage": "24065",
+    "id": "11043",
     "ids": [
       {
         "country": "IR",

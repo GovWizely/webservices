@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'FTA Colombia Tariff Rates API V1', type: :request do
   include_context 'TariffRate::Colombia data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/tariff_rates/search?sources=CO' do
     let(:params) { { sources: 'co' } }

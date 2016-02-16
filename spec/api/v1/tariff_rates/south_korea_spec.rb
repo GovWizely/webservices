@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'FTA South Korea Tariff Rates API V1', type: :request do
   include_context 'TariffRate::SouthKorea data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/tariff_rates/search?sources=KR' do
     let(:params) { { sources: 'kr' } }

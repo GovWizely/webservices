@@ -439,3 +439,12 @@ shared_examples 'it contains all ScreeningList::Ssi results that match type "Ent
   let(:expected) { (0..3).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
+
+shared_context 'exclude id from all possible full results' do
+  before(:all) do
+    @all_possible_full_results ||= {}
+    @all_possible_full_results.each do |_source, results|
+      results.each { |r| r.except!('id') }
+    end
+  end
+end

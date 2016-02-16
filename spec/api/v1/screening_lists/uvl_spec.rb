@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'BIS Unverified Parties API V1', type: :request do
   include_context 'ScreeningList::Uvl data'
+  include_context 'exclude id from all possible full results'
 
   describe 'GET /v1/consolidated_screening_list/uvl/search' do
     let(:params) { { size: 100 } }

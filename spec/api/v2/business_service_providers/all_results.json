@@ -1,5 +1,6 @@
 [
     {
+        "id": "92eb24c5b694eca407ee45154f3bc08df9d5c4e8",
         "company_name": "ENVIRON International",
         "ita_contact_email": "Stephanie.Mulot@trade.gov",
         "contact_name": "Aidan Turnbull",
@@ -13,6 +14,7 @@
         "company_address": "Box House - Box - Wiltshire, SN13 8AA"
     },
     {
+        "id": "8d13eb3f4c9bbffa99a671040a2d13a1a9921ffc",
         "company_name": "Alfa Electronics",
         "ita_contact_email": "cherine.maher@trade.gov",
         "contact_name": "Eng. Adel Adib",
@@ -26,6 +28,7 @@
         "company_address": "5 Misr Development Buildings, Second Stage, airport road, Heliopolis, Cairo - Egypt"
     },
     {
+        "id": "ce22493c833453cb889f3979a6be0be5512bf26c",
         "company_name": "STB COMPUTER, S.A. DE C.V.",
         "ita_contact_email": "sandra.hernandez@trade.gov",
         "contact_name": "Lic. Benjamin Sancho",
