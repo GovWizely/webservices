@@ -1,14 +1,29 @@
 trade.gov Webservices
 ==============
 
-## I Can Haz Docker?
+The Webservices project lets you take pretty much any structured data set and turn it into a search API without writing a line of code.
+
+# Features
+
+* understands CSV, TSV, JSON, XLS, or XML file formats
+* smart guessing of data types and schemas based on heuristics
+* versioned APIs by default
+* ingest by file upload or URL
+* easy polling/refresh of URL-based data sources
+* simple YAML-based configuration for each data source
+* customize the ETL process via built-in transformations
+
+# Installation
+
+You can choose either a standard installation or you can use Docker.
+
+## Docker
 
 If you have [Docker](http://docker.io/) and [Docker Compose](https://docs.docker.com/compose/), all you have to do is
 
     $ docker-compose up
 
-And it should automatically bring up the ElasticSearch container and the rails app,
-correctly linking them.
+And it should automatically bring up the ElasticSearch container and the Rails app, correctly linking them.
 
 Otherwise, follow the standard setup instructions.
 
@@ -51,7 +66,7 @@ Create the indexes:
 
     bundle exec rake db:create
     
-Generate an admin user:
+Generate the default admin user with username `admin@example.co` and password `initial_pwd`:
 
     bundle exec rake db:devseed    
 
@@ -63,6 +78,8 @@ This Procfile assumes you already have Elasticsearch and Redis running.
     
 Import some data:    
     bundle exec rake ita:import[ScreeningList,MarketResearchData]
+
+Admin users can log in and monitor the progress of the Sidekiq import jobs via `/sidekiq`.
 
 #### Authentication
 
@@ -86,15 +103,19 @@ Or using http headers:
 
 ### Dynamic APIs
 
-Admin users can create and administer search APIs from uploaded CSV, TSV, JSON, XLS, or XML files. The initial admin user created with
-the `db:devseed` task has the `admin` flag set to true already. To toggle an existing user, you can do this from the 
-Rails console:
+Admin users can create and administer search APIs from uploaded files or from URLs. The file formats supported 
+include CSV, TSV, JSON, XLS, and XML. The initial admin user created with the `db:devseed` task has the `admin` flag 
+set to true already. To toggle an existing user, you can do this from the Rails console:
     
-    email = "admin@rrsoft.co"
+    email = "admin@example.co"
     u = User.search(filter: { bool: { must: { term: { email: email } } } }).first
     u.update_attribute(:admin, true)
 
 To create an API, click the `+` next to the Dynamic APIs subnav heading.
+
+To refresh a URL-based api, you can periodically call the rake task to check for updates. Pass the `api` field from the DataSource as a parameter:
+
+    bundle exec rake endpointme:import[business_service_providers]
 
 ### Specs
 
@@ -104,11 +125,11 @@ Elasticsearch must be running. It's easiest to just `foreman start -f Procfile.d
 
 ### Code Coverage
 
-We track test coverage of the codebase over time, to help identify areas where we could write better tests and to see when poorly tested code got introduced.
+We track test coverage of the codebase over time to help identify areas where we could write better tests and to see when poorly tested code got introduced.
 
 After running your tests, view the report by opening `coverage/index.html`.
 
-Click around on the files that have < 100% coverage to see what lines weren't exercised.
+Click around on the files that have less than 100% coverage to see what lines weren't exercised.
 
 ### Mailcatcher
 

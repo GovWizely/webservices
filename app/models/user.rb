@@ -137,11 +137,6 @@ class User
     SecureRandom.urlsafe_base64(24)[0..23]
   end
 
-  def staff?
-    domain = email.split('@').last
-    Rails.configuration.staff_email_domains.include?(domain)
-  end
-
   private
 
   def passwords_must_match_and_be_strong

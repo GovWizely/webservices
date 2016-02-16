@@ -13,7 +13,7 @@ Webservices::Application.routes.draw do
     get '/regenerate_api_key', to: 'registrations#regenerate_api_key'
   end
 
-  authenticate :user, ->(u) { u.staff? } do
+  authenticate :user, ->(u) { u.admin? } do
     mount Sidekiq::Web => '/sidekiq'
   end
 

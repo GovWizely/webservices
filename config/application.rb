@@ -47,8 +47,6 @@ module Webservices
 
     config.filter_parameters += [:current_password, :password, :password_confirmation]
 
-    config.staff_email_domains = %w(govwizely.com rrsoft.co)
-
     # enable url shortener to shorten entries' urls.
     config.enable_bitly_lookup = true
     config.enable_industry_mapping_lookup = true
