@@ -234,7 +234,7 @@ shared_context 'TradeLead::Mca data' do
     end
 
     @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeLead::Mca] = JSON.parse(open("#{Rails.root}/spec/fixtures/trade_leads/mca/results.json").read)
+    @all_possible_full_results[TradeLead::Mca] = JSON.parse(open("#{Rails.root}/spec/support/trade_leads/mca/results.json").read)
   end
 end
 

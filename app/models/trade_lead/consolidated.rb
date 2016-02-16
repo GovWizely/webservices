@@ -1,5 +1,6 @@
 module TradeLead
   class Consolidated
+    include Findable
     include Searchable
     self.model_classes = [TradeLead::Australia,
                           TradeLead::Canada,

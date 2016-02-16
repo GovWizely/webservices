@@ -1,4 +1,6 @@
 class ApiController < ActionController::Base
+  SHOW_PARAM_KEYS = %i(api_key callback format id).freeze
+
   class_attribute :search_params
   self.search_params = %i(api_key callback format offset size)
 
@@ -42,6 +44,12 @@ class ApiController < ActionController::Base
         render
       end
     end
+  end
+
+  def show
+    id = params.permit(SHOW_PARAM_KEYS)[:id]
+    @search = search_class.find_by_id id
+    not_found if @search[:total].zero?
   end
 
   def not_found

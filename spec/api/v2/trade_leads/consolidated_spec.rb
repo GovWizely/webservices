@@ -226,4 +226,30 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"'
     end
   end
+
+  describe 'GET /trade_leads/:id' do
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::Australia
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::Fbopen
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::Mca
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::State
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::Uk
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeLead::Ustda
+
+    context 'when trying to retrieve TradeLead::Canada data using a valid id' do
+      let(:expected_result) do
+        r = TradeLead::Consolidated.search_for(api_version: '2',
+                                               sources: 'canada')[:hits][1]
+        @all_possible_full_results[TradeLead::Canada].first.merge(id: r[:_id]).symbolize_keys
+      end
+
+      let(:id) { expected_result[:id] }
+      subject { response }
+
+      before { get "/v2/trade_leads/#{id}", nil, @v2_headers }
+
+      include_examples 'a successful get by id response', source: TradeLead::Canada
+    end
+
+    it_behaves_like 'a get by id endpoint with not found response', resource_name: 'trade_leads'
+  end
 end

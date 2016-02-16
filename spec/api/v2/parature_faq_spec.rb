@@ -147,4 +147,19 @@ describe 'Parature Faq API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /ita_faqs/:id' do
+    context 'when trying to retrieve Parature FAQ data using a valid id' do
+      let(:expected_result) { expected_results.first }
+      let(:id) { expected_result[:id] }
+
+      before { get "/v2/ita_faqs/#{id}", nil, @v2_headers }
+
+      subject { response }
+
+      include_examples 'a successful get by id response', source: ParatureFaq
+    end
+
+    it_behaves_like 'a get by id endpoint with not found response', resource_name: 'ita_faqs'
+  end
 end
