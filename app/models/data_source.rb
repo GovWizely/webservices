@@ -23,13 +23,11 @@ class DataSource
   attribute :data_changed_at, DateTime
   attribute :data_imported_at, DateTime
 
-  before_save :build_dictionary
+  before_save :build_dictionary, :initialize_timestamps
   after_update :refresh_metadata
   after_destroy :delete_api_index
 
   def initialize(attributes = {})
-    timestamp = updated_timestamp
-    attributes.merge!(data_changed_at: timestamp, data_imported_at: timestamp)
     attributes.merge!(_id: DataSource.id_from_params(attributes['api'], attributes['version_number'])) if id.nil? && attributes['api'].present? && attributes['version_number'].present?
     super(attributes)
   end
@@ -132,6 +130,10 @@ class DataSource
   def build_dictionary
     @dictionary = "DataSources::#{data_format}Parser".constantize.new(data).generate_dictionary.to_yaml
     refresh_metadata
+  end
+
+  def initialize_timestamps
+    @data_imported_at = @data_changed_at = updated_timestamp
   end
 
   def refresh_metadata

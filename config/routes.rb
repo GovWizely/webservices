@@ -118,7 +118,10 @@ Webservices::Application.routes.draw do
 
   scope module: 'api/v2', defaults: { format: :json } do
     get '/business_service_providers/search(.json)', to: 'api_models#search', version_number: 1, api: :business_service_providers
+    get '/business_service_providers/*id', to: 'api_models#show', version_number: 1, api: :business_service_providers
+
     get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
+    get '/v*version_number/*api/*id', to: 'api_models#show', constraints: ApiModelRouteConstraint.new
   end
 
   match '404', via: :all, to: 'api#not_found'
