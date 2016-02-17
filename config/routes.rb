@@ -57,13 +57,12 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_routable do
-    mapping = { 'market_researches'          => 'market_research_library',
-                'parature_faq'               => 'ita_faqs',
-                'ita_office_locations'       => 'ita_office_locations',
-                'country_commercial_guides'  => 'country_commercial_guides',
-                'business_service_providers' => 'business_service_providers',
-                'ita_zip_codes'              => 'ita_zipcode_to_post',
-                'ita_taxonomy'               => 'ita_taxonomies',
+    mapping = { 'market_researches'         => 'market_research_library',
+                'parature_faq'              => 'ita_faqs',
+                'ita_office_locations'      => 'ita_office_locations',
+                'country_commercial_guides' => 'country_commercial_guides',
+                'ita_zip_codes'             => 'ita_zipcode_to_post',
+                'ita_taxonomy'              => 'ita_taxonomies',
      }
 
     unless Rails.env.production?
@@ -118,6 +117,7 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
+    get '/business_service_providers/search(.json)', to: 'api_models#search', version_number: 1, api: :business_service_providers
     get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
   end
 
