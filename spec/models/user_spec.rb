@@ -135,15 +135,4 @@ describe User do
       expect(subject.email).to eq('calum@example.com')
     end
   end
-
-  describe '#staff?' do
-    context 'when user has a GW email address' do
-      subject { build_user(email: 'example@govwizely.com').staff? }
-      it { is_expected.to be_truthy }
-    end
-    context 'when user has a Gmail email address' do
-      subject { build_user(email: 'example@gmail.com').staff? }
-      it { is_expected.to be_falsy }
-    end
-  end
 end
