@@ -53,7 +53,10 @@ Webservices::Application.routes.draw do
 
   concern :api_v2_routable do
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
+    get '/ita_faqs/:id' => 'parature_faq#show', constraints: { id: /.+/ }, format: false
     get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
+    get '/trade_events/:id' => 'trade_events/consolidated#show', constraints: { id: /.+/ }, format: false
+    get '/trade_leads/:id' => 'trade_leads/consolidated#show', constraints: { id: /.+/ }, format: false
   end
 
   concern :api_routable do
@@ -112,8 +115,8 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    concerns :api_v2_routable
     concerns :api_routable
+    concerns :api_v2_routable
   end
 
   scope module: 'api/v2', defaults: { format: :json } do

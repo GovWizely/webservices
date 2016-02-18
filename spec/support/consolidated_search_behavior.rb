@@ -110,3 +110,45 @@ shared_examples 'it contains all expected aggregations' do
   let(:expected) { JSON.parse(open("#{File.dirname(__FILE__)}/#{expected_json}").read) }
   it { expect(got).to eql(expected) }
 end
+
+shared_context 'a get by id endpoint with successful response' do |example|
+  let(:expected_result) { @all_possible_full_results[example[:source]].first.symbolize_keys }
+  let(:id) { expected_result[:id] }
+  let(:resource_name) { example[:source].name.split('::').first.tableize }
+
+  before { get "/v2/#{resource_name}/#{id}", nil, @v2_headers }
+  subject { response }
+
+  include_examples 'a successful get by id response', source: example[:source]
+end
+
+shared_examples 'a successful get by id response' do |example|
+  it 'has status code 200' do
+    expect(subject.status).to eq(200)
+  end
+
+  it 'has JSON content type' do
+    expect(subject.content_type).to eq(:json)
+  end
+
+  it "returns #{example[:source]} JSON in the body" do
+    expect(JSON.parse(response.body).symbolize_keys).to eq(expected_result)
+  end
+end
+
+shared_context 'a get by id endpoint with not found response' do |example|
+  before { get "/v2/#{example[:resource_name]}/invalid-id", nil, @v2_headers }
+  subject { response }
+
+  it 'has status code 404' do
+    expect(subject.status).to eq(404)
+  end
+
+  it 'has JSON content type' do
+    expect(subject.content_type).to eq(:json)
+  end
+
+  it 'returns error JSON in the body' do
+    expect(JSON.parse(response.body)).to eq('error' => 'Not Found')
+  end
+end

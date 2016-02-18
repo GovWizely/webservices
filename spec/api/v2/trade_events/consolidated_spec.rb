@@ -249,4 +249,12 @@ describe 'Consolidated Trade Events API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /trade_events/:id' do
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeEvent::Dl
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeEvent::Ita
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeEvent::Sba
+    it_behaves_like 'a get by id endpoint with successful response', source: TradeEvent::Ustda
+    it_behaves_like 'a get by id endpoint with not found response', resource_name: 'trade_events'
+  end
 end
