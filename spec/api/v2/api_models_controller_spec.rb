@@ -11,7 +11,29 @@ describe Api::V2::ApiModelsController, type: :request do
     dictionary = DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.yaml")).deep_symbolized_yaml
     data_source.update(dictionary: dictionary)
     data_source.ingest
+    data_source.update(data_changed_at: Time.now.utc - 12.hours, data_imported_at: Time.now.utc - 2.hours)
     DataSource.refresh_index!
+  end
+
+  describe 'GET /v1/de_minimis_currencies/{id}' do
+    context 'record exists' do
+      let(:one_match) { JSON.parse Rails.root.join("#{Rails.root}/spec/fixtures/data_sources/de_minimis_date_entry.json").read }
+      let(:id) { Digest::SHA1.hexdigest('Azerbaijan') }
+      before { get "/v1/de_minimis_currencies/#{id}", {}, @v2_headers }
+      subject { response }
+
+      it 'returns the result matching the id' do
+        json_response = JSON.parse(response.body)
+        expect(json_response).to match(one_match)
+      end
+    end
+
+    context 'record does not exist' do
+      before { get '/v1/de_minimis_currencies/nope', {}, @v2_headers }
+      subject { response }
+
+      specify { expect(subject.status).to eq(404) }
+    end
   end
 
   describe 'GET /v1/de_minimis_currencies/search.json' do
@@ -38,6 +60,8 @@ describe Api::V2::ApiModelsController, type: :request do
         expect(json_response[:sources_used]).to eq([{ source:              data_source.name,
                                                       source_last_updated: data_source.data_changed_at.as_json,
                                                       last_imported:       data_source.data_imported_at.as_json }])
+        expect(data_source.data_changed_at).to be_within(2).of(DateTime.now.utc - 12.hours)
+        expect(data_source.data_imported_at).to be_within(2).of(DateTime.now.utc - 2.hours)
       end
 
       it_behaves_like "an empty result when a query doesn't match any documents"

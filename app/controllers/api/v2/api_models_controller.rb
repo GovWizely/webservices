@@ -1,7 +1,7 @@
 class Api::V2::ApiModelsController < Api::V2Controller
   respond_to :json
   before_action :setup_data_source
-  before_action :setup_search_params
+  before_action :setup_search_params, only: :search
 
   def search
     query = ApiModelQuery.new(@data_source.metadata, params.permit(search_params))
@@ -9,6 +9,12 @@ class Api::V2::ApiModelsController < Api::V2Controller
       results = api_model_klass.search(query.generate_search_body_hash)
       respond_with response_hash(query, results)
     end
+  end
+
+  def show
+    @data_source.with_api_model { |api_model_klass| respond_with api_model_klass.find(params[:id]) }
+  rescue Elasticsearch::Persistence::Repository::DocumentNotFound
+    not_found
   end
 
   private
