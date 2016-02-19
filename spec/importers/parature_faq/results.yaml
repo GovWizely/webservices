@@ -42,6 +42,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '2'
   :question: What is the TPCC ?
   :answer: 'The Trade Promotion Coordinating Committee (TPCC) is an inter-agency task
@@ -67,6 +68,7 @@
   - TPCC
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '3'
   :question: Can U.S. companies self-certify for the CE Marking?
   :answer: 'Most products covered by New Approach Directives can be self-certified
@@ -101,6 +103,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '4'
   :question: Despite my CE marking why does my importer ask for an A.TR-1 Certificate?
     What is the A.TR-1-Certificate?
@@ -119,6 +122,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '5'
   :question: Do Turkish manufacturers need to confirm conformity of the EU New Approach
     (CE) Directives?
@@ -135,6 +139,7 @@
   :industry: []
   :country:
   - TR
+  :ita_industries: []
 - :id: '6'
   :question: Does Turkey now require the CE Marking?
   :answer: '1. My importer informed me that products being exported to Turkey require
@@ -232,6 +237,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '7'
   :question: How do European standards relate to the CE Marking?
   :answer: 'Prior to the harmonization of standards under the New Approach, each European
@@ -266,6 +272,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '8'
   :question: I have been selling to the European Union without CE marking, why am
     I required to have CE marking for Turkey?
@@ -281,6 +288,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '9'
   :question: I supplied a corporate certificate of conformity with my shipping documents,
     why are my goods still detained at Turkish Customs?
@@ -297,6 +305,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '10'
   :question: Is ISO 9000 required in order to get the CE Marking?
   :answer: ISO 9000 registration (or EN 29000 certification) is used widely in Europe
@@ -316,6 +325,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '11'
   :question: My importer informed me that I need a Certificate of Conformity issued
     by a Notified Body/Laboratory, is this true?
@@ -335,6 +345,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '12'
   :question: My importer informed me that products being exported to Turkey require
     CE marking - is that true?
@@ -361,6 +372,7 @@
   :industry: []
   :country:
   - TR
+  :ita_industries: []
 - :id: '13'
   :question: My importer informs me that my CE marked product would need to be inspected
     by the Turkish Standards Institute-is this true?
@@ -376,6 +388,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '14'
   :question: Once a U.S. company has certified its product with the CE Marking, is
     its work done?
@@ -399,6 +412,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '15'
   :question: Under what conditions are U.S. companies unable to self-certify for the
     CE Marking?
@@ -421,6 +435,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '16'
   :question: What have the Europeans done to enforce the CE Marking requirements and
     what are the penalties for non-compliance?
@@ -446,6 +461,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '17'
   :question: What is the advantage of using European Standards?
   :answer: Products that meet the applicable technical standards developed by the
@@ -460,6 +476,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '18'
   :question: What is the CE Marking, and what is its purpose?
   :answer: The European Commission describes the CE marking (an acronym for the French
@@ -476,6 +493,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '19'
   :question: What is the EU's New Approach to product certification?
   :answer: 'The European Union (EU) developed "New Approach" Directives to streamline
@@ -508,6 +526,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '20'
   :question: What is the significant impact of the radio and telecommunications terminal
     (R&TTE) Directive?
@@ -539,6 +558,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '21'
   :question: Where can I find information on the CE Marking on the Internet?
   :answer: 'For additional information on the European Union Directives and European
@@ -548,6 +568,7 @@
   :topic: []
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '22'
   :question: Which product groups are covered by the New Approach Directives?
   :answer: 'The New Approach Directives are listed on the website: www.newapproach.org.
@@ -598,6 +619,7 @@
   - CE Marking
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '23'
   :question: Are there resources in Turkey for dealing with standards problems?
   :answer: The United States Embassy's Commercial Section has been assisting U.S.
@@ -614,6 +636,7 @@
   :industry: []
   :country:
   - TR
+  :ita_industries: []
 - :id: '24'
   :question: Why does the Turkish Customs Authority not accept a Notified Body issued
     Certificate(s) of Conformity?
@@ -634,6 +657,7 @@
   :industry: []
   :country:
   - TR
+  :ita_industries: []
 - :id: '25'
   :question: What fish and agricultural opportunities are available to an exporter?
   :answer: 'The National Marine Fisheries Service (NMFS) is part of the U.S. Department
@@ -659,6 +683,7 @@
   :industry:
   - Agribusiness
   :country: []
+  :ita_industries: []
 - :id: '26'
   :question: How do I get export assistance?
   :answer: 'The Global Knowledge Center and USA Trade Center services: Tel: 1-800-USA-TRAD(E)
@@ -679,6 +704,7 @@
   - Export Assistance
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '27'
   :question: What is the Global Knowledge Center (GKC)? How do I get export assistance?
   :answer: 'The Global Knowledge Center (GKC) is the first stop for companies seeking
@@ -705,6 +731,7 @@
   - Export Assistance
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '28'
   :question: How do I import products into the United States?
   :answer: Please contact U.S. Customs and Border Protection.
@@ -713,6 +740,7 @@
   - Importing
   :industry: []
   :country: []
+  :ita_industries: []
 - :id: '73'
   :question: Does a North American Free Trade Agreement (NAFTA) Certificate of Origin
     help declare that products qualify for preferential duty treatment under the CAFTA-DR?
@@ -731,3 +759,4 @@
   - SV
   - GT
   - HN
+  :ita_industries: []

@@ -1,4 +1,4 @@
 json.id entry[:_id]
 json.call(entry[:_source],
-          :question, :answer, :update_date, :topic, :industry, :country
+          :question, :answer, :update_date, :topic, :industry, :country, :ita_industries
          )

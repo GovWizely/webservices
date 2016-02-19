@@ -70,13 +70,19 @@ class ParatureFaqData
     return nil if faq[:topic].include?('GKC Content Training')
 
     faq.delete :folders
+    process_addtional_fields(faq)
+
+    faq
+  end
+
+  def process_addtional_fields(faq)
+    faq[:ita_industries] = get_mapper_terms_from_array(faq[:topic])
     faq[:country] = faq[:country].map { |country| lookup_country(country) }.compact
 
     faq[:answer] &&= Nokogiri::HTML.fragment(faq[:answer]).inner_text.squish
     faq[:answer] &&= strip_nonascii(faq[:answer])
     faq[:question] &&= strip_nonascii(faq[:question])
     faq[:update_date] &&= Date.parse(faq[:update_date]).to_s
-    faq
   end
 
   def process_folder_fields(faq)
