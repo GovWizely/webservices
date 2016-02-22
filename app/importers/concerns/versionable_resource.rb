@@ -25,19 +25,26 @@ module VersionableResource
   end
 
   def initialize(resource = nil)
-    @resource = resource || self.class.const_get(:ENDPOINT)
-  end
+    @resource = resource || (defined?(self.class::ENDPOINT) && self.class.const_get(:ENDPOINT))
 
-  def loaded_resource
-    if @resource.is_a? Array
-      @loaded_resource ||= @resource.map { |r| open(r).read }.join
-    else
-      @loaded_resource ||= open(@resource).read
+    # We want to call super if it exists, but it seems that if we haven't
+    # defined initialize in the ancestor tree ourselves, ruby will call
+    # Object's initialize, which fails as it expects no arguments, whereas
+    # we typically pass 1 argument to importers' initialize. So, we try calling
+    # super, and silently ignore ArgumentErrors.
+    begin
+      super
+    rescue ArgumentError
     end
   end
 
+  def loaded_resource
+    return super if defined?(super)
+    @loaded_resource ||= Array(@resource).map { |r| open(r).read }.join
+  end
+
   def available_version
-    @resource_version ||= Digest::SHA1.hexdigest(loaded_resource)
+    @available_version ||= Digest::SHA1.hexdigest(loaded_resource.to_s)
   end
 
   private
