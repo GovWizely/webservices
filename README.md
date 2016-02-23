@@ -48,11 +48,15 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 1.2.0) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 2.2.0) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
+
+You need to install the delete-by-query plugin and restart elasticsearch if it was already running:
+
+    $ plugin install delete-by-query
 
 Webservices can use foreman to start Rails and Sidekiq in development environments. 
 

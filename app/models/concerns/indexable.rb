@@ -118,13 +118,13 @@ module Indexable
 
     def purge_old(before_time)
       fail 'This model is unable to purge old documents' unless can_purge_old?
-      body = Utils.older_than(:_timestamp, (before_time.to_f * 1000.0).to_i)
+      body = Utils.older_than(:_updated_at, before_time)
       ES.client.delete_by_query(index: index_name, type: index_type, body: body)
+      ES.client.indices.refresh(index: index_name)
     end
 
     def can_purge_old?
-      timestamp_field = mappings[name.typeize][:_timestamp]
-      timestamp_field && timestamp_field[:enabled] && timestamp_field[:store]
+      mappings[name.typeize][:properties][:_updated_at].present?
     end
 
     def importer_class
@@ -134,15 +134,12 @@ module Indexable
     private
 
     def prepare_record_for_indexing(record)
-      prepared = {
+      {
         index: index_name,
         type:  index_type,
         id:    record[:id],
-        body:  record.except(:id, :ttl, :timestamp),
+        body:  prepare_record(record),
       }
-      prepared.merge!(ttl: record[:ttl]) if record[:ttl]
-      prepared.merge!(timestamp: record[:timestamp]) if record[:timestamp]
-      prepared
     end
 
     def prepare_record_for_updating(record)
@@ -150,8 +147,12 @@ module Indexable
         index: index_name,
         type:  index_type,
         id:    record[:id],
-        body:  { doc: record.except(:id) },
+        body:  { doc: prepare_record(record) },
       }
+    end
+
+    def prepare_record(record)
+      record.except(:id).reverse_merge(_updated_at: Time.now.utc.iso8601(8))
     end
   end
 end

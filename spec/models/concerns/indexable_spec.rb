@@ -6,9 +6,8 @@ shared_context 'a working Mock model class' do
       include Indexable
       self.mappings = {
         name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
+          properties: {
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }
@@ -22,41 +21,39 @@ describe Indexable do
   after { Object.send(:remove_const, :Mock) }
 
   describe '.prepare_record_for_indexing' do
-    context 'given a record with ttl and timestamp settings' do
+    context 'given a record with _updated_at settings' do
       include_context 'a working Mock model class'
-      let(:now) { Time.now.to_i * 1000 }
+      let(:now) { Time.now.utc.iso8601(8) }
+
       let(:record) do
-        { ttl:       '1d',
-          timestamp: now,
-          foo:       'bar',
-          yin:       'yang',
-          id:        1337 }
+        { foo:         'bar',
+          yin:         'yang',
+          _updated_at: now,
+          id:          1337 }
       end
       subject { Mock.send(:prepare_record_for_indexing, record) }
 
       it do
-        is_expected.to eq(body:      { foo: 'bar', yin: 'yang' },
-                          id:        1337,
-                          index:     'test:webservices:mocks',
-                          timestamp: now,
-                          ttl:       '1d',
-                          type:      :mock)
+        is_expected.to match(body:  { foo: 'bar', yin: 'yang', _updated_at: now },
+                             id:    1337,
+                             index: 'test:webservices:mocks',
+                             type:  :mock)
       end
     end
   end
 
   describe '.can_purge_old?' do
-    context 'with a model that has a _timestamp mapping' do
+    context 'with a model that has a _updated_at mapping' do
       include_context 'a working Mock model class'
       subject { Mock.can_purge_old? }
       it { is_expected.to be_truthy }
     end
 
-    context 'with a model that does not have a _timestamp mapping' do
+    context 'with a model that does not have a _updated_at mapping' do
       before do
         class Mock
           include Indexable
-          self.mappings = { name.typeize => {} }
+          self.mappings = { name.typeize => { properties: {} } }
         end
       end
       subject { Mock.can_purge_old? }
@@ -72,7 +69,7 @@ describe Indexable do
     end
 
     let(:docs_to_index) do
-      [{ title: 'foo', timestamp: 2.days.ago.to_i * 1000 },
+      [{ title: 'foo', _updated_at: 2.days.ago },
        { title: 'bar' }]
     end
     let(:docs_expected) do
@@ -91,7 +88,7 @@ describe Indexable do
       before { Mock.purge_old(3.days.ago) }
       it 'does not purge any documents' do
         expect(total).to eq 2
-        expect(docs_retrieved).to match_array(docs_expected)
+        expect(docs_retrieved).to match_array([a_hash_including(docs_expected.first), a_hash_including(docs_expected.last)])
       end
     end
 
@@ -99,12 +96,12 @@ describe Indexable do
       before { Mock.purge_old(1.day.ago) }
       it 'purges only the oldest doc' do
         expect(total).to eq 1
-        expect(docs_retrieved).to eq([docs_expected[1]])
+        expect(docs_retrieved).to match_array([a_hash_including(docs_expected.last)])
       end
     end
 
     context 'with date arg later than newest doc' do
-      before { Mock.purge_old(Time.now) }
+      before { Mock.purge_old(1.second.from_now) }
       it 'purges all documents' do
         expect(total).to eq 0
         expect(docs_retrieved).to eq([])

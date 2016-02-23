@@ -7,11 +7,8 @@ class SharepointTradeArticle
   self.mappings = {
 
     sharepoint_trade_article: {
-      _timestamp: {
-        enabled: true,
-        store:   true,
-      },
       properties: {
+        _updated_at:              { type: 'date', format: 'strictDateOptionalTime' },
         title:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         short_title:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         summary:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
