@@ -111,13 +111,6 @@ describe UrlMapper do
     context 'When url is found locally and needs update' do
       it 'returns the correct short link, updates the entry and calls Bitly' do
         allow(UrlMapper).to receive(:call_bitly_api) { 'http://bit.ly/randomid' }
-        expect(UrlMapper).to receive(:update) do |entries|
-          expected = [{ id:       Digest::SHA1.hexdigest('http://www.google.com'),
-                        link:     'http://bit.ly/randomid',
-                        long_url: 'http://www.google.com',
-                        title:    'New Title' }]
-          expect(entries).to match_array(expected)
-        end
         expect(UrlMapper.process_url('http://www.google.com', 'New Title')).to eq('http://bit.ly/randomid')
       end
     end

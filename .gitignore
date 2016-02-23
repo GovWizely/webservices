@@ -18,4 +18,3 @@
 /capistrano
 dump.rdb
 /elasticsearch.yml
-config/initializers/envirotech.rb
