@@ -6,7 +6,7 @@ module Findable
       query = ::IdQuery.new id
       search_options = {
         index: index_names,
-        body:  query.generate_search_body
+        body:  query.generate_search_body,
       }
 
       results = ES.client.search search_options

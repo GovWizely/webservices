@@ -18,9 +18,9 @@ class IdQuery < Query
     end
   end
 
-  def generate_filter(json)
+  def generate_filter(_json)
   end
 
-  def generate_aggregations(json)
+  def generate_aggregations(_json)
   end
 end

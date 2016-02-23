@@ -3,33 +3,19 @@ module SalesforceArticle
     attr_accessor :client
 
     FIELD_MAPPING = {
-      'Id'                         => :id,
-      'Agreement_Description__c'   => :agreement_description,
-      'Agreement_Status__c'        => :agreement_status,
-      'Agreement_Text__c'          => :agreement_text,
-      'Agreement_Type__c'          => :agreement_type,
-      'Approval_Date__c'           => :approval_date,
-      'Approval_Status__c'         => :approval_status,
-      'Approver__c'                => :approver,
-      'Article_Expiration_Date__c' => :article_expiration_date,
-      'Atom__c'                    => :atom,
-      'Business_Unit__c'           => :business_unit,
-      'Chapter__c'                 => :chapter,
-      'Content__c'                 => :content,
-      'Exporter_Guide__c'          => :exporter_guide,
-      'FirstPublishedDate'         => :first_published_date,
-      'LastPublishedDate'          => :last_published_date,
-      'Lead_DMO__c'                => :lead_dmo,
-      'Notes__c'                   => :notes,
-      'Public_URL__c'              => :public_url,
-      'References__c'              => :reference,
-      'Section__c'                 => :section,
-      'Subject__c'                 => :subject,
-      'Summary'                    => :summary,
-      'Support_DMO__c'             => :support_dmo,
-      'TARA_Document_Title__c'     => :tara_document_title,
-      'Title'                      => :title,
-      'UrlName'                    => :url_name,
+      'Id'                 => :id,
+      'Atom__c'            => :atom,
+      'Business_Unit__c'   => :business_unit,
+      'Chapter__c'         => :chapter,
+      'FirstPublishedDate' => :first_published_date,
+      'LastPublishedDate'  => :last_published_date,
+      'Lead_DMO__c'        => :lead_dmo,
+      'Public_URL__c'      => :public_url,
+      'References__c'      => :references,
+      'Section__c'         => :section,
+      'Summary'            => :summary,
+      'Title'              => :title,
+      'UrlName'            => :url_name,
     }
 
     DATA_CATEGORY_GROUP_NAMES = %w(Geographies Industries Trade_Topics).freeze
@@ -61,7 +47,7 @@ module SalesforceArticle
         process_date_fields(entry)
         extract_taxonomy_fields(entry, article)
 
-        entry[:source] = self.model_class.source[:code]
+        entry[:source] = model_class.source[:code]
         entry
       end
     end

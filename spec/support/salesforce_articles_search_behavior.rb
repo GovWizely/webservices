@@ -1,5 +1,4 @@
 shared_context 'all Salesforce Article data' do
-  include_context 'SalesforceArticle::CaseSolution data'
   include_context 'SalesforceArticle::CountryCommercial data'
   include_context 'SalesforceArticle::Generic data'
   include_context 'SalesforceArticle::MarketInsight data'
@@ -20,32 +19,6 @@ end
 def restforce_collection(file_path)
   sobjects_hash = YAML.load_file file_path
   [Restforce::Mash.build(sobjects_hash.first, nil)]
-end
-
-shared_context 'SalesforceArticle::CaseSolution data' do
-  before(:all) do
-    fixtures_path = "#{Rails.root}/spec/fixtures/salesforce_articles/case_solution_sobjects.yml"
-    client = StubbedRestforce.new(restforce_collection(fixtures_path))
-
-    SalesforceArticle::CaseSolution.recreate_index
-    SalesforceArticle::CaseSolutionData.new(client).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[SalesforceArticle::CaseSolution] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/case_solution/results.json").read)
-  end
-end
-
-shared_examples 'it contains all SalesforceArticle::CaseSolution results' do
-  let(:source) { SalesforceArticle::CaseSolution }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all SalesforceArticle::CaseSolution results that match "transportation"' do
-  let(:source) { SalesforceArticle::CaseSolution }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
 end
 
 shared_context 'SalesforceArticle::CountryCommercial data' do
@@ -153,6 +126,12 @@ shared_examples 'it contains all SalesforceArticle::StateReport results' do
 end
 
 shared_examples 'it contains all SalesforceArticle::StateReport results that match end_date "2015-12-14 TO 2015-12-14"' do
+  let(:source) { SalesforceArticle::StateReport }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SalesforceArticle::StateReport results that match "montana"' do
   let(:source) { SalesforceArticle::StateReport }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'

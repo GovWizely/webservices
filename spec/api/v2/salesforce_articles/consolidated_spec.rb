@@ -11,7 +11,6 @@ describe 'Consolidated Market Intelligence API', type: :request do
 
     context 'when search parameters are empty' do
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all SalesforceArticle::CaseSolution results'
       it_behaves_like 'it contains all SalesforceArticle::CountryCommercial results'
       it_behaves_like 'it contains all SalesforceArticle::Generic results'
       it_behaves_like 'it contains all SalesforceArticle::MarketInsight results'
@@ -19,7 +18,7 @@ describe 'Consolidated Market Intelligence API', type: :request do
       it_behaves_like 'it contains all SalesforceArticle::TopMarkets results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
-          [SalesforceArticle::CaseSolution, SalesforceArticle::CountryCommercial, SalesforceArticle::Generic,
+          [SalesforceArticle::CountryCommercial, SalesforceArticle::Generic,
            SalesforceArticle::MarketInsight, SalesforceArticle::StateReport, SalesforceArticle::TopMarkets]
         end
       end
@@ -29,15 +28,15 @@ describe 'Consolidated Market Intelligence API', type: :request do
     end
 
     context 'when q is specified' do
-      context 'and is "transportation"' do
-        let(:params) { { q: 'transportation' } }
+      context 'and is "montana"' do
+        let(:params) { { q: 'montana' } }
         it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all SalesforceArticle::CaseSolution results that match "transportation"'
+        it_behaves_like 'it contains all SalesforceArticle::StateReport results that match "montana"'
         it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [SalesforceArticle::CaseSolution] }
+          let(:sources) { [SalesforceArticle::StateReport] }
         end
         it_behaves_like 'it contains all expected aggregations' do
-          let(:expected_json) { 'salesforce_articles/all_sources/aggregations_with_query_transportation.json' }
+          let(:expected_json) { 'salesforce_articles/all_sources/aggregations_with_query_montana.json' }
         end
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
@@ -85,14 +84,6 @@ describe 'Consolidated Market Intelligence API', type: :request do
     end
 
     context 'when sources is specified' do
-      context 'and is set to "case_solution"' do
-        let(:params) { { sources: 'case_solution' } }
-        it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all SalesforceArticle::CaseSolution results'
-        it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [SalesforceArticle::CaseSolution] }
-        end
-      end
       context 'and is set to "country_commercial"' do
         let(:params) { { sources: 'country_commercial' } }
         it_behaves_like 'a successful search request'

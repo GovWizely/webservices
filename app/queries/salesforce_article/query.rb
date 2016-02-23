@@ -20,10 +20,7 @@ module SalesforceArticle
       set_geo_instance_variables(options)
     end
 
-    MULTI_FIELDS = %i(agreement_description agreement_status agreement_type
-                      approval_status approver atom business_unit chapter content lead_dmo
-                      notes references section subject summary support_dmo tara_document_title
-                      title)
+    MULTI_FIELDS = %i(atom business_unit chapter references section summary title)
 
     private
 

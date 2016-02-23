@@ -6,24 +6,13 @@
           "must": [
             {
               "multi_match": {
-                "fields": [
-                  "agreement_description",
-                  "agreement_status",
-                  "agreement_type",
-                  "approval_status", 
-                  "approver", 
+                "fields": [ 
                   "atom", 
                   "business_unit", 
                   "chapter", 
-                  "content", 
-                  "lead_dmo",
-                  "notes", 
                   "references", 
                   "section", 
-                  "subject", 
                   "summary",
-                  "support_dmo", 
-                  "tara_document_title",
                   "title"
                 ],
                 "operator": "and",

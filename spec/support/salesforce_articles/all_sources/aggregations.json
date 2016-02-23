@@ -59,10 +59,6 @@
   ],
   "sources": [
     {
-      "key": "CASE_SOLUTION",
-      "doc_count": 1
-    },
-    {
       "key": "COUNTRY_COMMERCIAL",
       "doc_count": 1
     },
