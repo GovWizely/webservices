@@ -69,7 +69,6 @@ Webservices::Application.routes.draw do
 
     unless Rails.env.production?
       mapping['eccn'] = 'eccns'
-      mapping['country_fact_sheets'] = 'country_fact_sheets'
     end
 
     mapping.each do |controller, path|
