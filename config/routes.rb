@@ -63,7 +63,6 @@ Webservices::Application.routes.draw do
     mapping = { 'market_researches'         => 'market_research_library',
                 'parature_faq'              => 'ita_faqs',
                 'ita_office_locations'      => 'ita_office_locations',
-                'country_commercial_guides' => 'country_commercial_guides',
                 'ita_zip_codes'             => 'ita_zipcode_to_post',
                 'ita_taxonomy'              => 'ita_taxonomies',
      }
