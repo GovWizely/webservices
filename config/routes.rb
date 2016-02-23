@@ -67,10 +67,6 @@ Webservices::Application.routes.draw do
                 'ita_taxonomy'              => 'ita_taxonomies',
      }
 
-    unless Rails.env.production?
-      mapping['eccn'] = 'eccns'
-    end
-
     mapping.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false
     end
