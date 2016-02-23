@@ -7,12 +7,9 @@ describe Searchable do
       self.fetch_all_sort_by = 'foo'
       self.mappings = {
         name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
-          },
           properties: {
-            foo: { type: 'string' },
+            foo:         { type: 'string' },
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }

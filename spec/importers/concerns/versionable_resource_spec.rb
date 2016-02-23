@@ -6,9 +6,8 @@ describe VersionableResource do
       include Indexable
       self.mappings = {
         name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
+          properties: {
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }

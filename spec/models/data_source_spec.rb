@@ -222,7 +222,6 @@ describe DataSource do
         sleep(1.1)
         data_source.dictionary = "---\r\n:f1:\r\n  :source: f1\r\n  :description: Description of f1\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:f2:\r\n  :source: f2\r\n  :description: Description of f2\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n"
         data_source.freshen
-        DataSource.refresh_index!
         data_source.with_api_model do |klass|
           expect(klass.count).to eq(2)
           query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f1: 'one,three'))

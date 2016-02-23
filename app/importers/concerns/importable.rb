@@ -20,7 +20,7 @@ module Importable
   module Prepend
     def import
       Rails.logger.info "#{self.class.name}: import starting."
-      start_time = Time.now if can_purge_old?
+      start_time = Time.now.utc.iso8601(8) if can_purge_old?
       super
       model_class.purge_old(start_time) if can_purge_old?
       model_class.touch_metadata

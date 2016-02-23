@@ -58,6 +58,7 @@ class DataSource
       with_api_model do |klass|
         _ingest(klass)
         ES.client.delete_by_query(index: klass.index_name, type: klass.document_type, body: older_than(:_updated_at, updated_at))
+        klass.refresh_index!
       end
     else
       touch(:data_imported_at)
@@ -142,6 +143,7 @@ class DataSource
 
   def _ingest(klass)
     "DataSources::#{data_format}Ingester".constantize.new(klass, metadata, data).ingest
+    klass.refresh_index!
   end
 
   def updated_timestamp

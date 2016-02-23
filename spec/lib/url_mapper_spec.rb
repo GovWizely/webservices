@@ -1,12 +1,15 @@
 require 'spec_helper'
 
 describe UrlMapper do
+  let(:now) { Time.now.utc }
+
   before do
     UrlMapper.recreate_index
-    UrlMapper.index([{ id:       Digest::SHA1.hexdigest('http://www.google.com'),
-                       link:     'http://bit.ly/randomid',
-                       long_url: 'http://www.google.com',
-                       title:    'Title' }])
+    UrlMapper.index([{ id:          Digest::SHA1.hexdigest('http://www.google.com'),
+                       link:        'http://bit.ly/randomid',
+                       long_url:    'http://www.google.com',
+                       title:       'Title',
+                       _updated_at: now }])
   end
 
   describe '#get_bitly_url' do
@@ -56,7 +59,7 @@ describe UrlMapper do
                                                       _type:   'url_mapper',
                                                       _id:     '738ddf35b3a85a7a6ba7b232bd3d5f1e4d284ad1',
                                                       _score:  1.0,
-                                                      _source: { link: 'http://bit.ly/randomid', long_url: 'http://www.google.com', title: 'Title' } }] }
+                                                      _source: { link: 'http://bit.ly/randomid', long_url: 'http://www.google.com', title: 'Title', _updated_at: now.strftime('%FT%TZ') } }] }
       expect(UrlMapper.search_for_url('http://www.google.com')).to eq(expected)
     end
   end
@@ -83,11 +86,11 @@ describe UrlMapper do
 
   describe '#purge_old' do
     it 'purges documents that are older than two months' do
-      UrlMapper.index([{ id:        Digest::SHA1.hexdigest('http://www.someurl.com'),
-                         link:      'http://bit.ly/someid',
-                         long_url:  'http://www.someurl.com',
-                         title:     'Old Entry',
-                         timestamp: (Date.current - 65) }])
+      UrlMapper.index([{ id:          Digest::SHA1.hexdigest('http://www.someurl.com'),
+                         link:        'http://bit.ly/someid',
+                         long_url:    'http://www.someurl.com',
+                         title:       'Old Entry',
+                         _updated_at: (Date.current - 65) }])
       expect(UrlMapper.search_for_url('http://www.someurl.com')[:hits].count).to eq(1)
       UrlMapper.purge_old
       expect(UrlMapper.search_for_url('http://www.someurl.com')[:hits].count).to eq(0)

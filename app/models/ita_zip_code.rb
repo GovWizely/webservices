@@ -8,12 +8,9 @@ class ItaZipCode
 
   self.mappings = {
     name.typeize => {
-      _timestamp: {
-        enabled: true,
-        store:   true,
-      },
       dynamic:    'false',
       properties: {
+        _updated_at:       { type: 'date', format: 'strictDateOptionalTime' },
         zip_code:          { type: 'string' },
         zip_city:          { type: 'string', analyzer: 'location_name_analyzer' },
         post:              {
