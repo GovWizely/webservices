@@ -163,14 +163,6 @@ describe 'Consolidated Trade Events API V2', type: :request do
           let(:expected_json) { 'trade_events/v2/sba/aggregations.json' }
         end
       end
-      xcontext 'and is set to "EXIM"' do
-        let(:params) { { sources: 'EXIM', size: 100 } }
-        it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all TradeEvent::Exim results'
-        it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [TradeEvent::Exim] }
-        end
-      end
       context 'and is set to "USTDA"' do
         let(:params) { { sources: 'USTDA', size: 100 } }
         it_behaves_like 'a successful search request'
