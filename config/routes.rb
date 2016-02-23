@@ -30,11 +30,11 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_routable do
-    mapping = { 'market_researches'         => 'market_research_library',
-                'parature_faq'              => 'ita_faqs',
-                'ita_office_locations'      => 'ita_office_locations',
-                'ita_zip_codes'             => 'ita_zipcode_to_post',
-                'ita_taxonomy'              => 'ita_taxonomies',
+    mapping = { 'market_researches'    => 'market_research_library',
+                'parature_faq'         => 'ita_faqs',
+                'ita_office_locations' => 'ita_office_locations',
+                'ita_zip_codes'        => 'ita_zipcode_to_post',
+                'ita_taxonomy'         => 'ita_taxonomies',
      }
 
     mapping.each do |controller, path|

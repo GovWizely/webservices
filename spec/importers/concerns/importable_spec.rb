@@ -6,9 +6,8 @@ describe Importable do
       include Indexable
       self.mappings = {
         name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
+          properties: {
+            _updated_at: { type: 'date', format: 'dateOptionalTime' },
           },
         },
       }.merge(metadata_mappings).freeze
@@ -16,6 +15,7 @@ describe Importable do
 
     class MockData
       include Importable
+
       def initialize(docs = nil)
         @docs = docs
       end
@@ -123,27 +123,33 @@ describe Importable do
   end
 
   describe "#import's purge-old logic" do
+    let(:now) { Time.now }
     let(:batch_1) do
-      [{ id: 1, content: 'foo' },
-       { id: 2, content: 'bar' }]
+      [{ id: 1, content: 'foo', _updated_at: now },
+       { id: 2, content: 'bar', _updated_at: now }]
     end
     let(:batch_2) do
-      [{ id: 1, content: 'foo [updated]' },
-       { id: 3, content: 'baz' }]
+      [{ id: 1, content: 'foo [updated]', _updated_at: now },
+       { id: 3, content: 'baz', _updated_at: now }]
     end
     let(:batch_3) do
-      [{ id: 3, content: 'baz [updated]' }]
+      [{ id: 3, content: 'baz [updated]', _updated_at: now }]
     end
 
     it 'purges correct documents' do
       MockData.new(batch_1).import
-      expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'foo'),
+                                          a_hash_including(content: 'bar')])
 
       MockData.new(batch_2).import
-      expect(stored_docs).to match_array(batch_2.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'foo [updated]'),
+                                          a_hash_including(content: 'bar'),
+                                          a_hash_including(content: 'baz')])
 
       MockData.new(batch_3).import
-      expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'foo [updated]'),
+                                          a_hash_including(content: 'bar'),
+                                          a_hash_including(content: 'baz [updated]')])
     end
 
     def stored_docs
