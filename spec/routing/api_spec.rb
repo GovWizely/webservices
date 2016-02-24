@@ -17,16 +17,6 @@ describe 'routes for Trade Events' do
     end
   end
 
-  context 'when the version 1 is specified in url' do
-    let(:request_path) { 'v1/trade_events/search' }
-
-    it_behaves_like 'routable request'
-    it 'routes to the API v1 trade_events controller version' do
-      expect(get: request_path)
-        .to route_to(controller: 'api/v1/trade_events/consolidated', action: 'search', format: :json)
-    end
-  end
-
   context 'when the version 2 is specified in url' do
     let(:request_path) { 'v2/trade_events/search' }
 

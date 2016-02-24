@@ -14,18 +14,6 @@ shared_context 'all Trade Events v2 fixture data' do
   include_context 'TradeEvent::Ustda data v2'
 end
 
-shared_context 'TradeEvent::Ita data' do
-  before(:all) do
-    TradeEvent::Ita.recreate_index
-    TradeEvent::ItaData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_events/v1/ita/results.json").read)
-  end
-end
-
 shared_context 'TradeEvent::Ita data v2' do
   before(:all) do
     TradeEvent::Ita.recreate_index
@@ -98,24 +86,6 @@ shared_examples 'it contains all TradeEvent::Ita results that match start_date [
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_context 'TradeEvent::Sba data' do
-  before(:all) do
-    TradeEvent::Sba.recreate_index
-    TradeEvent::SbaData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
-      { reject_if_ends_before: Date.parse('2013-01-11') }, 'r'
-    ).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_events/v1/sba/results.json").read)
-  end
-
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
-end
-
 shared_context 'TradeEvent::Sba data v2' do
   before(:all) do
     TradeEvent::Sba.recreate_index
@@ -170,24 +140,6 @@ shared_examples 'it contains all TradeEvent::Sba results that match end_date [20
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_context 'TradeEvent::Exim data' do
-  before(:all) do
-    TradeEvent::Exim.recreate_index
-    TradeEvent::EximData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/exim/trade_events.xml",
-      reject_if_ends_before: Date.parse('2013-01-11'),
-    ).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeEvent::Exim] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_events/v1/exim/results.json").read)
-  end
-
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
-end
-
 shared_context 'TradeEvent::Exim data v2' do
   before(:all) do
     TradeEvent::Exim.recreate_index
@@ -224,24 +176,6 @@ shared_examples 'it contains all TradeEvent::Exim results that match "Baltimore"
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_context 'TradeEvent::Ustda data' do
-  before(:all) do
-    TradeEvent::Ustda.recreate_index
-    VCR.use_cassette('importers/trade_events/ustda.yml', record: :once) do
-      TradeEvent::UstdaData.new("#{Rails.root}/spec/fixtures/trade_events/ustda/events.xml",
-                                reject_if_ends_before: Date.parse('2014-01-01')).import
-    end
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeEvent::Ustda] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_events/v1/ustda/results.json").read)
-  end
-
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
-end
-
 shared_context 'TradeEvent::Ustda data v2' do
   before(:all) do
     TradeEvent::Ustda.recreate_index
@@ -276,23 +210,6 @@ shared_examples 'it contains all TradeEvent::Ustda results that match industry "
   let(:source) { TradeEvent::Ustda }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
-end
-
-shared_context 'TradeEvent::Dl data' do
-  before(:all) do
-    TradeEvent::Dl.recreate_index
-    TradeEvent::DlData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/dl/trade_events.xml",
-    ).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[TradeEvent::Dl] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/trade_events/v1/dl/results.json").read)
-  end
-
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2013-01-11'))
-  end
 end
 
 shared_context 'TradeEvent::Dl data v2' do

@@ -2,8 +2,8 @@ desc 'Creates a dev admin user to access the api'
 namespace :db do
   task devseed: :environment do
     user = User.create(email:                 'admin@example.co',
-                       password:              'initial_pwd',
-                       password_confirmation: 'initial_pwd',
+                       password:              '1nitial_pwd',
+                       password_confirmation: '1nitial_pwd',
                        company:               'Example, Inc.',
                        full_name:             'Full Name',
                        api_key:               'devkey',
