@@ -1,12 +1,13 @@
 bundler_args: --without development staging production
 language: ruby
-sudo: false
-services:
-  - elasticsearch
 
 addons:
- code_climate:
-   repo_token: b2be59fc94d6de5b889a16c640227b42d40d8aa21df90fad79dd70f2687d630c
+  code_climate:
+    repo_token: b2be59fc94d6de5b889a16c640227b42d40d8aa21df90fad79dd70f2687d630c
+
+before_install:
+  - wget https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-2.2.0.deb && sudo dpkg -i --force-confnew elasticsearch-2.2.0.deb && true
+  - sudo service elasticsearch start
 
 notifications:
   slack: govwizely:R9Nhshn0NO7eRh4ThXaMKqWw
