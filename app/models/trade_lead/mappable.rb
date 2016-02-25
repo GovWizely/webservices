@@ -7,7 +7,7 @@ module TradeLead
       klass.mappings = {
         klass.name.typeize => {
           properties: {
-            _updated_at:              { type: 'date', format: 'dateOptionalTime' },
+            _updated_at:              { type: 'date', format: 'strictDateOptionalTime' },
             country:                  { type: 'string', analyzer: 'keyword' },
             description:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             contract_number:          { type: 'string', index: 'not_analyzed' },

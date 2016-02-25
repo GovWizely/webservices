@@ -60,7 +60,6 @@ Webservices::Application.routes.draw do
     scope '/market_intelligence' do
       get 'search', to: 'salesforce_articles/consolidated#search'
     end
-
   end
 
   scope 'v2', module: 'api/v2', defaults: { format: :json } do

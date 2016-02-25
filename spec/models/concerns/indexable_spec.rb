@@ -7,7 +7,7 @@ shared_context 'a working Mock model class' do
       self.mappings = {
         name.typeize => {
           properties: {
-            _updated_at: { type: 'date', format: 'dateOptionalTime' },
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }
@@ -23,18 +23,18 @@ describe Indexable do
   describe '.prepare_record_for_indexing' do
     context 'given a record with _updated_at settings' do
       include_context 'a working Mock model class'
-      let(:now) { Time.now }
-      before { allow(Time).to receive(:now).and_return(now) }
+      let(:now) { Time.now.utc.iso8601(8) }
 
       let(:record) do
-        { foo: 'bar',
-          yin: 'yang',
-          id:  1337 }
+        { foo:         'bar',
+          yin:         'yang',
+          _updated_at: now,
+          id:          1337 }
       end
       subject { Mock.send(:prepare_record_for_indexing, record) }
 
       it do
-        is_expected.to match(body:  { foo: 'bar', yin: 'yang', _updated_at: now.utc },
+        is_expected.to match(body:  { foo: 'bar', yin: 'yang', _updated_at: now },
                              id:    1337,
                              index: 'test:webservices:mocks',
                              type:  :mock)

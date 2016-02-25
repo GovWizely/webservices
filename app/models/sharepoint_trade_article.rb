@@ -8,7 +8,7 @@ class SharepointTradeArticle
 
     sharepoint_trade_article: {
       properties: {
-        _updated_at:              { type: 'date', format: 'dateOptionalTime' },
+        _updated_at:              { type: 'date', format: 'strictDateOptionalTime' },
         title:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         short_title:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
         summary:                  { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

@@ -8,7 +8,7 @@ module TradeEvent
       klass.mappings = {
         klass.name.typeize => {
           properties: {
-            _updated_at:        { type: 'date', format: 'dateOptionalTime' },
+            _updated_at:        { type: 'date', format: 'strictDateOptionalTime' },
             cost:               { type: 'float' },
             country:            { type: 'string', analyzer: 'keyword' },
             state:              { type: 'string', analyzer: 'keyword' },

@@ -17,7 +17,7 @@ class ItaTaxonomy
     name.typeize => {
       dynamic:    'false',
       properties: {
-        _updated_at:    { type: 'date', format: 'dateOptionalTime' },
+        _updated_at:    { type: 'date', format: 'strictDateOptionalTime' },
         name:           { type: 'string', analyzer: 'standard' },
         taxonomies:     { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
         path:           { type: 'string', index: 'not_analyzed'  },

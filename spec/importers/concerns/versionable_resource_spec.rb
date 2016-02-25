@@ -7,7 +7,7 @@ describe VersionableResource do
       self.mappings = {
         name.typeize => {
           properties: {
-            _updated_at: { type: 'date', format: 'dateOptionalTime' },
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }

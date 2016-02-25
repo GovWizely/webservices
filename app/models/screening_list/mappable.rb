@@ -8,7 +8,7 @@ module ScreeningList
       klass.mappings = {
         klass.name.typeize => {
           properties: {
-            _updated_at:                { type: 'date', format: 'dateOptionalTime' },
+            _updated_at:                { type: 'date', format: 'strictDateOptionalTime' },
             # name variants
             name:                       { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',

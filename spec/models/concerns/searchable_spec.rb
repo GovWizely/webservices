@@ -9,7 +9,7 @@ describe Searchable do
         name.typeize => {
           properties: {
             foo:         { type: 'string' },
-            _updated_at: { type: 'date', format: 'dateOptionalTime' },
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }

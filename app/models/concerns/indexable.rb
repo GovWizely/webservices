@@ -138,7 +138,7 @@ module Indexable
         index: index_name,
         type:  index_type,
         id:    record[:id],
-        body: prepare_record(record),
+        body:  prepare_record(record),
       }
     end
 
@@ -152,7 +152,7 @@ module Indexable
     end
 
     def prepare_record(record)
-      record.except(:id).reverse_merge(_updated_at: Time.now.utc)
+      record.except(:id).reverse_merge(_updated_at: Time.now.utc.iso8601(8))
     end
   end
 end
