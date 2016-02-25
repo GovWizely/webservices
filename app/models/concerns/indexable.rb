@@ -120,6 +120,7 @@ module Indexable
       fail 'This model is unable to purge old documents' unless can_purge_old?
       body = Utils.older_than(:_updated_at, before_time)
       ES.client.delete_by_query(index: index_name, type: index_type, body: body)
+      ES.client.indices.refresh(index: index_name)
     end
 
     def can_purge_old?

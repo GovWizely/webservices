@@ -54,6 +54,10 @@ We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 2.2.0) for fullte
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
 
+You need to install the delete-by-query plugin and restart elasticsearch if it was already running:
+
+    $ plugin install delete-by-query
+
 Webservices can use foreman to start Rails and Sidekiq in development environments. 
 
 ### Redis

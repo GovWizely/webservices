@@ -115,5 +115,6 @@ class UrlMapper
     fail 'This model is unable to purge old documents' unless can_purge_old?
     body = Utils.older_than(:_updated_at, 'now-2M')
     ES.client.delete_by_query(index: index_name, body: body)
+    ES.client.indices.refresh(index: index_name)
   end
 end
