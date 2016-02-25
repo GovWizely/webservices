@@ -53,5 +53,14 @@ module Webservices
 
     config.frozen_protege_source = "#{Rails.root}/data/webprotege.zip"
     config.frozen_taxonomy_concepts = "#{Rails.root}/data/taxonomy/concepts.yaml"
+
+    config.restforce = {
+      api_version:   'replace_with_real_value',
+      client_id:     'replace_with_real_value',
+      client_secret: 'replace_with_real_value',
+      host:          'replace_with_real_value',
+      username:      'replace_with_real_value',
+      password:      'replace_with_real_value',
+    }
   end
 end

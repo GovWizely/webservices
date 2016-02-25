@@ -1,0 +1,17 @@
+{
+  "world_regions": [
+
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+
+  ],
+  "sources": [
+    {
+      "key": "GENERIC",
+      "doc_count": 1
+    }
+  ]
+}

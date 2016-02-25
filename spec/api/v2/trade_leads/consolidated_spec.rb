@@ -238,7 +238,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     context 'when trying to retrieve TradeLead::Canada data using a valid id' do
       let(:expected_result) do
         r = TradeLead::Consolidated.search_for(api_version: '2',
-                                               sources: 'canada')[:hits][1]
+                                               sources:     'canada')[:hits][1]
         @all_possible_full_results[TradeLead::Canada].first.merge(id: r[:_id]).symbolize_keys
       end
 

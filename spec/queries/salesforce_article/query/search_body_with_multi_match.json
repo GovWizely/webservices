@@ -1,0 +1,41 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "bool": {
+          "must": [
+            {
+              "multi_match": {
+                "fields": [ 
+                  "atom", 
+                  "business_unit", 
+                  "chapter", 
+                  "references", 
+                  "section", 
+                  "summary",
+                  "title"
+                ],
+                "operator": "and",
+                "query": "elephants"
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "countries", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
+    },
+    "trade_regions" : {
+      "terms" : { "field" : "trade_regions", "size" : 0 }
+    },
+    "world_regions" : {
+      "terms" : { "field" : "world_regions", "size" : 0 }
+    }
+  }
+}

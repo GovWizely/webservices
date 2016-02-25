@@ -1,0 +1,34 @@
+{
+  "world_regions": [
+    {
+      "key": "Middle East",
+      "doc_count": 1
+    },
+    {
+      "key": "Persian Gulf Region",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "Global System of Trade Preferences among Developing Countries",
+      "doc_count": 1
+    },
+    {
+      "key": "Organization of the Petroleum Exporting Countries",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "IQ",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "COUNTRY_COMMERCIAL",
+      "doc_count": 1
+    }
+  ]
+}

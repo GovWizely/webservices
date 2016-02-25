@@ -37,6 +37,8 @@ gem 'jquery-rails'
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
 
+gem 'restforce'
+
 group :staging, :staging2, :production do
   gem 'newrelic_rpm'
 end

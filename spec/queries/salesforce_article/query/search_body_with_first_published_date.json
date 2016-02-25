@@ -1,0 +1,34 @@
+{
+  "query": {
+    "filtered": {
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "range": {
+                "first_published_date": {
+                  "from": "2016-01-01",
+                  "to": "2016-08-28"
+                }
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "aggs" : {
+    "countries" : {
+      "terms" : { "field" : "countries", "size" : 0 }
+    },
+    "sources" : {
+      "terms" : { "field" : "source", "size" : 0 }
+    },
+    "trade_regions" : {
+      "terms" : { "field" : "trade_regions", "size" : 0 }
+    },
+    "world_regions" : {
+      "terms" : { "field" : "world_regions", "size" : 0 }
+    }
+  }
+}
