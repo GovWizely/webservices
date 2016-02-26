@@ -3,7 +3,7 @@ language: ruby
 sudo: false
 
 env:
-  - ES_VERSION=2.2.0
+  - ES_VERSION=1.7.5
 
 addons:
   code_climate:
@@ -11,7 +11,7 @@ addons:
 
 before_install:
   - "mkdir /tmp/elasticsearch"
-  - "wget -O - https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz | tar xz --directory=/tmp/elasticsearch --strip-components=1"
+  - "wget -O - https://download.elastic.co/elasticsearch/elasticsearch/elasticsearch-${ES_VERSION}.tar.gz | tar xz --directory=/tmp/elasticsearch --strip-components=1"
   - "/tmp/elasticsearch/bin/plugin install delete-by-query"
   - 'echo ''index.number_of_shards: 1'' | tee --append /tmp/elasticsearch/config/elasticsearch.yml'
   - "/tmp/elasticsearch/bin/elasticsearch &"
