@@ -13,13 +13,13 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: 5e36f26fc4bbcacfcc956f308b69be06baa558dc
+  revision: 72742ad2d33df4a81e82eed40d35c9856412e11d
   specs:
     taxonomy_parser (0.1.0)
       codeclimate-test-reporter
       iso_country_codes (= 0.7.4)
       nokogiri (= 1.6.7.1)
-      rubyzip (= 1.1.7)
+      rubyzip (= 1.2.0)
 
 GEM
   remote: https://rubygems.org/
@@ -291,7 +291,7 @@ GEM
       ruby-progressbar (~> 1.4)
     ruby-ole (1.2.12)
     ruby-progressbar (1.7.5)
-    rubyzip (1.1.7)
+    rubyzip (1.2.0)
     safe_yaml (1.0.4)
     sanitize (2.0.6)
       nokogiri (>= 1.4.4)
