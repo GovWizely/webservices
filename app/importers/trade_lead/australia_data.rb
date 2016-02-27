@@ -22,7 +22,6 @@ module TradeLead
       status:             :status,
       agency_ref_id:      :project_number,
       publish_date:       :publish_date,
-      agency:             :agency,
       startdate:          :start_date,
       enddate:            :end_date,
     }
