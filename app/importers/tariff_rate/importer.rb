@@ -83,8 +83,7 @@ module TariffRate
 
       entry.merge!(extract_rate_by_year_fields(row_hash))
       entry.merge!(extract_country_fields(entry))
-
-      entry[:tariff_rate_quota_note] = Sanitize.clean(entry[:tariff_rate_quota_note])
+      entry[:tariff_rate_quota_note] &&= Sanitize.clean(entry[:tariff_rate_quota_note])
       entry[:source] = model_class.source[:code]
       entry
     end
