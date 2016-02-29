@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: 72742ad2d33df4a81e82eed40d35c9856412e11d
+  revision: 492d498d8e7363efaf1551a98dd11e985c69292e
   specs:
     taxonomy_parser (0.1.0)
       codeclimate-test-reporter
@@ -91,7 +91,7 @@ GEM
     celluloid (0.16.0)
       timers (~> 4.0.0)
     charlock_holmes (0.7.3)
-    codeclimate-test-reporter (0.4.8)
+    codeclimate-test-reporter (0.5.0)
       simplecov (>= 0.7.1, < 1.0.0)
     coderay (1.1.0)
     coercible (1.0.0)
