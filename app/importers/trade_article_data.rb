@@ -34,7 +34,7 @@ class TradeArticleData
 
   def process_article_info(article_hash)
     article = remap_keys COLUMN_HASH, article_hash
-    article[:content] = Sanitize.clean(article[:content]) if article[:content]
+    article[:content] = Sanitize.clean(article[:content]).squish if article[:content]
     article[:title] = CGI.unescapeHTML(article[:title]) if article[:title]
     article[:pub_date] = Date.parse(article[:pub_date]) if article[:pub_date]
     article[:update_date] = Date.parse(article[:update_date]) if article[:update_date]

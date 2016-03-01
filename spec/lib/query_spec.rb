@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe Query do
+describe Query, type: :model do
   shared_context 'with MockChildQuery child class' do
     before do
       class MockChildQuery < Query

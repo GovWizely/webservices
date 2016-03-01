@@ -3,19 +3,18 @@ source 'https://rubygems.org'
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.9'
 
-gem 'airbrake'
 gem 'aws-sdk-core'
-gem 'devise'
+gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
 gem 'elasticsearch'
 gem 'elasticsearch-persistence'
 gem 'iso_country_codes'
 gem 'jbuilder'
 gem 'monetize'
-gem 'nokogiri', '~> 1.6.0'
+gem 'nokogiri'
 gem 'parslet'
 gem 'rack-contrib'
 gem 'rake'
-gem 'sanitize', '~> 2.0.6'
+gem 'sanitize'
 gem 'htmlentities'
 gem 'us_states', git: 'git://github.com/GSA-OCSIT/us_states.git'
 gem 'git'
@@ -40,20 +39,20 @@ gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
 gem 'restforce'
 
 group :staging, :staging2, :production do
+  gem 'airbrake'
   gem 'newrelic_rpm'
 end
 
 group :development, :test do
-  gem 'rspec-rails', '~> 3.0.0'
-  gem 'shoulda-matchers', require: false
+  gem 'rspec-rails'
   gem 'thin'
   gem 'pry-rails'
-  gem 'pry-byebug', '~> 1.3.3'
+  gem 'pry-byebug'
   gem 'pry-remote'
 end
 
 group :development do
-  gem 'capistrano',  '~> 2.15'
+  gem 'capistrano'
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
@@ -67,6 +66,7 @@ group :test do
   gem 'simplecov', require: false
   gem 'capybara'
   gem 'launchy'
+  gem 'shoulda-matchers'
 end
 
 # To use ActiveModel has_secure_password

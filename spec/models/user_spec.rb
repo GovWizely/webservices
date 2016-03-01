@@ -105,7 +105,7 @@ describe User do
     end
   end
 
-  describe '#update_attributes' do
+  describe '#update_attribute' do
     let(:subject) { create_user }
     it 'behaves as expected' do
       subject.update_attribute(:full_name, 'John Snow')
