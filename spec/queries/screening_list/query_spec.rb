@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::Query do
+shared_examples 'a ScreeningList query' do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/query" }
 
   describe '#new' do
@@ -151,5 +151,11 @@ describe ScreeningList::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+  end
+end
+
+%w(Dpl Dtc El Fse Isn Plc Sdn Ssi Uvl).each do |i|
+  describe "ScreeningList::#{i}Query".constantize do
+    it_behaves_like 'a ScreeningList query'
   end
 end

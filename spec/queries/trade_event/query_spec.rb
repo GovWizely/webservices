@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeEvent::Query do
+shared_examples 'a TradeEvent query' do
   let(:fixtures_dir) { "#{File.dirname(__FILE__)}/query" }
 
   describe '#new' do
@@ -74,5 +74,11 @@ describe TradeEvent::Query do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+  end
+end
+
+%w(Dl Exim Ita Sba).each do |i|
+  describe "TradeEvent::#{i}Query".constantize do
+    it_behaves_like 'a TradeEvent query'
   end
 end
