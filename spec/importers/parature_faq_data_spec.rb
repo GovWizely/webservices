@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ParatureFaqData do
+describe ParatureFaqData, vcr: { cassette_name: 'importers/parature_faq.yml', record: :once } do
   before { ParatureFaq.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/parature_faqs/" }
   let(:resource) { "#{fixtures_dir}/articles/article%d.xml" }

@@ -3,9 +3,20 @@
     "bool": {
       "must": [
         {
-          "terms": {
-              "industry": ["importing"]
-          }
+         "bool": {
+          "should":[
+            {
+              "terms": {
+                "industry": ["importing"]
+              }
+            },
+            {
+              "terms":{
+                  "ita_industries": ["importing"]
+              }
+            }
+          ]
+        }
         }
       ]
     }

@@ -5,8 +5,10 @@ describe 'Parature Faq API V2', type: :request do
 
   before(:all) do
     ParatureFaq.recreate_index
-    ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml",
-                        "#{Rails.root}/spec/fixtures/parature_faqs/folders.xml").import
+    VCR.use_cassette('importers/parature_faq.yml', record: :once) do
+      ParatureFaqData.new("#{Rails.root}/spec/fixtures/parature_faqs/articles/article%d.xml",
+                          "#{Rails.root}/spec/fixtures/parature_faqs/folders.xml").import
+    end
   end
 
   let(:search_path) { '/v2/ita_faqs/search' }
