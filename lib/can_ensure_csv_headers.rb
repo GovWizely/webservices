@@ -10,8 +10,8 @@ module CanEnsureCsvHeaders
   private
 
   def ensure_expected_headers(row)
-    received_keys = row.to_hash.keys.sort
-    if received_keys.sort != self.class.expected_csv_headers.sort
+    received_keys = row.to_hash.keys.compact.sort
+    if received_keys != self.class.expected_csv_headers.sort
       missing = missing_keys(received_keys).join(',')
       unrecognized = unrecognized_keys(received_keys).join(',')
       message = "CSV key names in source for #{self.class} are not as expected."

@@ -31,7 +31,7 @@ Otherwise, follow the standard setup instructions.
 
 ### Ruby
 
-You'll need [Ruby 2.1](http://www.ruby-lang.org/en/downloads/).
+You'll need [Ruby 2.2](http://www.ruby-lang.org/en/downloads/).
 
 ### Gems
 
