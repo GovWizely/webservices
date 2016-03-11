@@ -55,20 +55,20 @@ module SalesforceArticle
     def extract_taxonomy_fields(entry, article)
       taxonomy_terms = extract_taxonomies article['DataCategorySelections']
 
-      entry[:industries] = extract_terms_by_concept_group('Industries', taxonomy_terms)
-      entry[:topics] = extract_terms_by_concept_group('Topics', taxonomy_terms)
+      entry[:industries] = get_concept_labels_by_concept_group('Industries', taxonomy_terms)
+      entry[:topics] = get_concept_labels_by_concept_group('Topics', taxonomy_terms)
 
       process_geo_fields(entry, taxonomy_terms)
     end
 
     def process_geo_fields(entry, taxonomy_terms)
-      entry[:countries] = extract_terms_by_concept_group('Countries', taxonomy_terms)
+      entry[:countries] = get_concept_labels_by_concept_group('Countries', taxonomy_terms)
       entry[:countries] = entry[:countries].map { |country| lookup_country(country) }.compact
 
       entry.merge! add_geo_fields(entry[:countries])
 
-      entry[:trade_regions].concat(extract_terms_by_concept_group('Trade Regions', taxonomy_terms)).uniq!
-      entry[:world_regions].concat(extract_terms_by_concept_group('World Regions', taxonomy_terms)).uniq!
+      entry[:trade_regions].concat(get_concept_labels_by_concept_group('Trade Regions', taxonomy_terms)).uniq!
+      entry[:world_regions].concat(get_concept_labels_by_concept_group('World Regions', taxonomy_terms)).uniq!
     end
 
     def process_date_fields(entry)
@@ -77,8 +77,8 @@ module SalesforceArticle
       entry[:article_expiration_date] = parse_date(entry[:article_expiration_date]) if entry[:article_expiration_date]
     end
 
-    def extract_terms_by_concept_group(concept_group, terms)
-      terms.select { |term| term[:concept_groups].include?(concept_group) }.map { |term| term[:label] }
+    def get_concept_labels_by_concept_group(concept_group, terms)
+      @taxonomy_parser.get_concepts_by_concept_group(concept_group, terms).map { |term| term[:label] }
     end
 
     def extract_taxonomies(data_categories)

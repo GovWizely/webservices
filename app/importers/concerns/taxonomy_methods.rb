@@ -14,7 +14,7 @@ module TaxonomyMethods
 
   def get_geo_terms(country, type)
     taxonomy_parser.get_all_geo_terms_for_country(country).select do |term|
-      term[:concept_groups].include?(type)
+      term[:object_properties][:member_of].map { |t| t[:label] }.include?(type)
     end.map { |term| term[:label] }
   end
 

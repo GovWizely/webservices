@@ -23,6 +23,18 @@
       "doc_count": 15
     },
     {
+      "key": "CAFTA-DR",
+      "doc_count": 15
+    },
+    {
+      "key": "NAFTA",
+      "doc_count": 15
+    },
+    {
+      "key": "Trans Pacific Partnership",
+      "doc_count": 15
+    },
+    {
       "key": "European Union - 28",
       "doc_count": 2
     }

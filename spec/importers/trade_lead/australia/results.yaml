@@ -16,12 +16,12 @@
   :ita_industries: []
   :country: AU
   :trade_regions:
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
+  - Asia Pacific
   - Oceania
   - Pacific Rim
-  - Asia Pacific
   :url: http://bit.ly/1M995hi
   :source: AUSTRALIA
 - :agency: Defence Materiel Organisation
@@ -40,12 +40,12 @@
   :ita_industries: []
   :country: AU
   :trade_regions:
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
+  - Asia Pacific
   - Oceania
   - Pacific Rim
-  - Asia Pacific
   :url: http://bit.ly/1KQmtJZ
   :source: AUSTRALIA
 - :agency: Defence Materiel Organisation
@@ -66,11 +66,11 @@
   :ita_industries: []
   :country: AU
   :trade_regions:
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
+  - Asia Pacific
   - Oceania
   - Pacific Rim
-  - Asia Pacific
   :url: http://bit.ly/1KQmtK2
   :source: AUSTRALIA

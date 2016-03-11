@@ -24,14 +24,14 @@
     "id": "DATATABLE.647",
     "source": "STATE",
     "trade_regions": [
-        "Global System of Trade Preferences among Developing Countries",
-        "Andean Community"
+        "Andean Community",
+        "Global System of Trade Preferences among Developing Countries"
     ],
     "world_regions": [
+        "Latin America",
         "South America",
         "Western Hemisphere",
-        "Pacific Rim",
-        "Latin America"
+        "Pacific Rim"
     ]
   },
   {
@@ -60,8 +60,8 @@
     "source": "STATE",
     "trade_regions": [
         "Global System of Trade Preferences among Developing Countries",
-        "Asia Pacific Economic Cooperation",
-        "Association of Southeast Asian Nations"
+        "Association of Southeast Asian Nations",
+        "Asia Pacific Economic Cooperation"
     ],
     "world_regions": [
         "Asia Pacific",
@@ -127,8 +127,8 @@
     "id": "DATATABLE.66",
     "source": "STATE",
     "trade_regions": [
-        "Common Market for Eastern and Southern Africa",
-        "African Growth and Opportunity Act"
+        "African Growth and Opportunity Act",
+        "Common Market for Eastern and Southern Africa"
     ],
     "world_regions": [
         "Sub-Saharan Africa",

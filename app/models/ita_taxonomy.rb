@@ -15,14 +15,17 @@ class ItaTaxonomy
 
   self.mappings = {
     name.typeize => {
-      dynamic:    'false',
+      dynamic:    'true',
       properties: {
         _updated_at:    { type: 'date', format: 'strictDateOptionalTime' },
-        name:           { type: 'string', analyzer: 'standard' },
-        taxonomies:     { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
-        path:           { type: 'string', index: 'not_analyzed'  },
-        broader_terms:  { type: 'string', analyzer: 'standard' },
-        narrower_terms: { type: 'string', analyzer: 'standard' },
+        label:                 {
+          type:   'string',
+          fields: {
+            tokenized: { type: 'string', analyzer: 'standard' },
+            keyword:   { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
+          },
+        },
+        subject:               { type: 'string', index: 'not_analyzed' }
       },
     },
   }.merge(metadata_mappings).freeze

@@ -9,8 +9,8 @@
     "source": "USTDA",
     "country": "RW",
     "trade_regions": [
-      "African Growth and Opportunity Act",
-      "Common Market for Eastern and Southern Africa"
+      "Common Market for Eastern and Southern Africa",
+      "African Growth and Opportunity Act"
     ],
     "world_regions": [
       "Sub-Saharan Africa",
@@ -26,11 +26,13 @@
     "url": "http://1.usa.gov/1NV3exp",
     "source": "USTDA",
     "country": "CR",
-    "trade_regions": [ ],
+    "trade_regions": [ 
+      "CAFTA-DR"
+    ],
     "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
       "Central America",
+      "Pacific Rim",
+      "Western Hemisphere",
       "Latin America"
     ]
   }

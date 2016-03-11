@@ -4,9 +4,7 @@
       "must": [
         {
           "terms": {
-            "taxonomies": [
-              "industries"
-            ]
+              "label.keyword": ["brazil", "united states"]
           }
         }
       ]

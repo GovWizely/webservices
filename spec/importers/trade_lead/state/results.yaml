@@ -25,13 +25,13 @@
   :submitting_officer_contact: AsikeC@state.gov
   :id: DATATABLE.647
   :trade_regions:
-  - Global System of Trade Preferences among Developing Countries
   - Andean Community
+  - Global System of Trade Preferences among Developing Countries
   :world_regions:
+  - Latin America
   - South America
   - Western Hemisphere
   - Pacific Rim
-  - Latin America
   :source: STATE
   :ita_industries: []
 - :title: Learning; Equity and Accountability Program Support Project
@@ -59,8 +59,8 @@
   :id: DATATABLE.538
   :trade_regions:
   - Global System of Trade Preferences among Developing Countries
-  - Asia Pacific Economic Cooperation
   - Association of Southeast Asian Nations
+  - Asia Pacific Economic Cooperation
   :world_regions:
   - Asia Pacific
   - Southeast Asia
@@ -136,8 +136,8 @@
   :submitting_officer_contact: 
   :id: DATATABLE.66
   :trade_regions:
-  - Common Market for Eastern and Southern Africa
   - African Growth and Opportunity Act
+  - Common Market for Eastern and Southern Africa
   :world_regions:
   - Sub-Saharan Africa
   - Africa
