@@ -13,6 +13,18 @@
 %p
   %b Version:
   = @data_source.version_number
+%p
+  %b Data Last Imported:
+  = @data_source.data_imported_at
+  (
+  = time_ago_in_words(@data_source.data_imported_at)
+  ago )
+%p
+  %b Data Last Changed:
+  = @data_source.data_changed_at
+  (
+  = time_ago_in_words(@data_source.data_changed_at)
+  ago )
 - if @data_source.metadata.plural_filter_fields.present?
   %p
     %b Plural Filtered Fields:
