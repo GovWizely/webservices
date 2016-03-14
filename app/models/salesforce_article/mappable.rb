@@ -7,11 +7,8 @@ module SalesforceArticle
 
       klass.mappings = {
         klass.name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
-          },
           properties: {
+            _updated_at:          { type: 'date', format: 'strictDateOptionalTime' },
             atom:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             business_unit:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             chapter:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

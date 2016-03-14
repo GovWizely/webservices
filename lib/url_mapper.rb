@@ -7,12 +7,9 @@ class UrlMapper
 
   self.mappings = {
     url_mapper: {
-      _timestamp: {
-        enabled: true,
-        store:   true,
-      },
       dynamic:    'false',
       properties: {
+        _updated_at: { type: 'date' },
         link:        { type: 'string', index: 'not_analyzed' },
         long_url:    { type: 'string', index: 'not_analyzed' },
         title:       { type: 'string', analyzer: 'standard' },
@@ -99,7 +96,7 @@ class UrlMapper
       body:  generate_search_body(url_string),
     }
 
-    hits = ES.client.search(search_options)['hits'].deep_symbolize_keys
+    ES.client.search(search_options)['hits'].deep_symbolize_keys
   end
 
   def self.generate_search_body(url_string)
@@ -116,20 +113,8 @@ class UrlMapper
 
   def self.purge_old
     fail 'This model is unable to purge old documents' unless can_purge_old?
-    body = {
-      query: {
-        filtered: {
-          filter: {
-            range: {
-              _timestamp: {
-                lt: 'now-2M',
-              },
-            },
-          },
-        },
-      },
-    }
-
+    body = Utils.older_than(:_updated_at, 'now-2M')
     ES.client.delete_by_query(index: index_name, body: body)
+    ES.client.indices.refresh(index: index_name)
   end
 end

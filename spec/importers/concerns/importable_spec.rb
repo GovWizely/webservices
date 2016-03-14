@@ -6,9 +6,8 @@ describe Importable do
       include Indexable
       self.mappings = {
         name.typeize => {
-          _timestamp: {
-            enabled: true,
-            store:   true,
+          properties: {
+            _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
       }.merge(metadata_mappings).freeze
@@ -16,12 +15,14 @@ describe Importable do
 
     class MockData
       include Importable
+
       def initialize(docs = nil)
         @docs = docs
       end
 
       def import
         model_class.index(@docs)
+        ES.client.indices.refresh(index: model_class.index_name)
       end
     end
 
@@ -137,13 +138,15 @@ describe Importable do
 
     it 'purges correct documents' do
       MockData.new(batch_1).import
-      expect(stored_docs).to match_array(batch_1.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'foo'),
+                                          a_hash_including(content: 'bar')])
 
       MockData.new(batch_2).import
-      expect(stored_docs).to match_array(batch_2.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'foo [updated]'),
+                                          a_hash_including(content: 'baz')])
 
       MockData.new(batch_3).import
-      expect(stored_docs).to match_array(batch_3.map { |d| d.except(:id) })
+      expect(stored_docs).to match_array([a_hash_including(content: 'baz [updated]')])
     end
 
     def stored_docs

@@ -40,7 +40,6 @@ describe 'Consolidated Screening List API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [ScreeningList::Sdn] }
       end
-
     end
 
     context 'when address is specified' do
