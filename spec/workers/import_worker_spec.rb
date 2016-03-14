@@ -17,4 +17,8 @@ describe ImportWorker do
     expect_any_instance_of(MockData).to receive(:import)
     described_class.new.perform('MockData')
   end
+
+  it 'only enqueues a given job once' do
+    expect(described_class.get_sidekiq_options['unique']).to eq(:until_executed)
+  end
 end

@@ -22,6 +22,7 @@ gem 'rdiscount'
 gem 'rubyzip'
 gem 'smarter_csv'
 gem 'sidekiq'
+gem 'sidekiq-unique-jobs'
 gem 'sinatra', require: nil
 gem 'mechanize'
 gem 'haml'
