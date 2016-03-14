@@ -88,9 +88,10 @@ class DataSource
     [api, ['v', version_number || '1'].join].join(':')
   end
 
-  def self.find_published(api, version_number)
+  def self.find_published(api, version_number, exclude_data = true)
     versioned_id = id_from_params(api, version_number)
-    query_hash = { _source: { exclude: ['data'] }, filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
+    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
+    query_hash.merge!(_source: { exclude: ['data'] }) if exclude_data
     search(query_hash).first
   end
 
@@ -100,7 +101,7 @@ class DataSource
 
   def self.freshen(api)
     current_version = new(api: api).versions.last
-    data_source = find_published(api, current_version)
+    data_source = find_published(api, current_version, false)
     data_source.freshen
   end
 

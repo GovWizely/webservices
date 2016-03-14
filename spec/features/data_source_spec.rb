@@ -35,6 +35,7 @@ RSpec.feature 'Data Source management' do
       click_button('Update')
       expect(page).to have_text('Data source was successfully updated and data uploaded.')
       expect(page).to have_text('Some other human readable name')
+      expect(page).to have_text('less than a minute ago')
 
       click_link('Back')
       expect(page).to have_text('Some other human readable name (v1)')

@@ -171,7 +171,7 @@ describe DataSource do
 
     before do
       DataSource.create(_id: 'freshen_api:v1', published: true, version_number: 1, name: 'test', description: 'test API', api: 'freshen_api', data: "foo,bar\n1,2", url: 'http://some.url.gov/data.csv')
-      expect(DataSource).to receive(:find_published).with('freshen_api', 2).and_return data_source
+      expect(DataSource).to receive(:find_published).with('freshen_api', 2, false).and_return data_source
       DataSource.refresh_index!
     end
 
