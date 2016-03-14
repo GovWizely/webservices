@@ -3,6 +3,8 @@ Bahamas:
 - !ruby/regexp /\ABahamas, The\Z/i
 Cabo Verde:
 - !ruby/regexp /\ACabo Verde\. Previously Cape Verde\.\Z/i
+China:
+- !ruby/regexp /\AChina, People's Republic of\Z/i
 Congo (Democratic Republic of the):
 - !ruby/regexp /\ACongo, Democratic Rep(?:\.|ublic) of the\Z/i
 - !ruby/regexp /\ADemocratic Republic of (?:the )?Congo\Z/i
@@ -11,14 +13,25 @@ Congo:
 - !ruby/regexp /\ARepublic of the Congo\Z/i
 Côte d'Ivoire:
 - !ruby/regexp /\ACote d[' ]Ivoire\Z/i
+Falkland Islands (Malvinas):
+- !ruby/regexp /\AFalkland Islands/i
+Faroe Islands:
+- !ruby/regexp /\AFaroe Islands \(Denmark\)\Z/i
 Gambia:
-- !ruby/regexp /\AThe Gambia\Z/i
+- !ruby/regexp /\A(The )?Gambia(, the)?\Z/i
+Gibraltar:
+- !ruby/regexp /\AGibraltar \(UK\)\Z/i
 Georgia:
 - !ruby/regexp /\AGeorgian\Z/i
+Greenland:
+- !ruby/regexp /\AGreenland \(Denmark\)\Z/i
+Holy See:
+- !ruby/regexp /\AHoly See \(Vatican City\)\Z/i
 Iran:
 - !ruby/regexp /\AIran/i
 Isle of Man:
 - !ruby/regexp /\AMan, Isle of\Z/i
+- !ruby/regexp /\AIsle of Man \(UK\)\Z/i
 Korea (Republic of):
 - !ruby/regexp /\A(South Korea|Korea \(South\)|Korea, South)\Z/i
 Korea (Democratic People's Republic of):
@@ -29,8 +42,8 @@ Lao People's Democratic Republic:
 - !ruby/regexp /\ALaos\Z/i
 Mali:
 - !ruby/regexp '/\ARegion: Northern Mali\Z/i'
-Micronesia, Federated States of:
-- !ruby/regexp /\AMicrnesia\Z/i
+Micronesia (Federated States of):
+- !ruby/regexp /\AMicronesia/i
 Myanmar:
 - !ruby/regexp /\ABurma \(Myanmar\)\Z/i
 - !ruby/regexp /\ABurma\Z/i
@@ -44,6 +57,9 @@ Sao Tome and Principe:
 - !ruby/regexp /\ASão Tomé & Príncipe\Z/i
 Serbia:
 - !ruby/regexp /\AKosovo\Z/i
+- !ruby/regexp /\ASerbia and Montenegro\Z/i
+Timor-Leste:
+- !ruby/regexp /\ATimor Leste\Z/i
 United Arab Emirates:
 - !ruby/regexp /\AU\.A\.E\.\Z/i
 - !ruby/regexp /\AUnited Arab Emirates \(UAE\)\Z/i
@@ -57,5 +73,7 @@ United States:
 # again a second time.
 Viet Nam:
 - !ruby/regexp /\AVietnam\Z/i
+Virgin Islands (British):
+- !ruby/regexp /\AVirgin Islands, British\Z/i
 "<undetermined>":
 - !ruby/regexp /\Aundetermined\Z/i

@@ -53,7 +53,7 @@ module Importable
 
     if mapping
       name = mapping.first
-      # avoid error logs on names we don't have a coutry to map it to
+      # avoid error logs on names we don't have a country to map it to
       name == '<undetermined>' ? nil : name
     else
       country_str
