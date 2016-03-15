@@ -44,7 +44,6 @@ class DataSource
     with_api_model do |klass|
       klass.create_index!
       _ingest(klass)
-      klass.refresh_index!
     end
   end
 
