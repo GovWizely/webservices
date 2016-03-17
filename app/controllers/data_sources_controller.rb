@@ -19,7 +19,7 @@ class DataSourcesController < ApplicationController
     data_source_params = params.require(:data_source).permit(COMMON_PARAMS)
     resource = data_source_params[:url].present? ? data_source_params[:url] : data_source_params.delete(:path)
     data_extractor = DataSources::DataExtractor.new(resource)
-    @data_source = DataSource.new(data_source_params.merge(published: false, data: data_extractor.data))
+    @data_source = DataSource.new(data_source_params.merge(published: true, data: data_extractor.data))
     if @data_source.save(op_type: :create, refresh: true)
       redirect_to edit_data_source_path(@data_source, just_created: true), notice: 'Data source was successfully created. Review the schema and make any changes.'
     else

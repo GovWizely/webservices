@@ -131,7 +131,7 @@ RSpec.feature 'Data Source management' do
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
       click_button('Create')
       click_button('Update')
-      expect(page).to have_text('Published: false')
+      expect(page).to have_text('Published: true')
 
       click_link('Edit')
       check('Published')
