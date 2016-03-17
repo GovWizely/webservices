@@ -37,7 +37,7 @@ class DataSources::JSONParser
         end
       end
     end
-    path
+    path || '$[*]'
   end
 
   def join_path(path, field_name)

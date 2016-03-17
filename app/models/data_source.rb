@@ -115,7 +115,7 @@ class DataSource
     case data
       when /\A<\?xml /
         'XML'
-      when /\A{/
+      when /\A[{\[]/
         'JSON'
       when /\t/
         'TSV'
