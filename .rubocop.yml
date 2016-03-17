@@ -4,7 +4,9 @@ Style/AlignHash:
 Metrics/LineLength:
   Max: 800
   AllowURI: true
-Style/TrailingComma:
+Style/TrailingCommaInLiteral:
+  EnforcedStyleForMultiline: comma
+Style/TrailingCommaInArguments:
   EnforcedStyleForMultiline: comma
 Style/Documentation:
   Enabled: false
