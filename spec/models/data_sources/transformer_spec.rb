@@ -65,6 +65,37 @@ describe DataSources::Transformer do
     end
   end
 
+  context 'mapping from external API' do
+    let(:transformer) do
+      transformation_array = [{ external_mapping: { url: 'https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE',
+                                                    result_path: '$[0].alpha2Code' } }]
+      DataSources::Transformer.new(metadata.merge(transformations: transformation_array))
+    end
+
+    context 'mapping exists' do
+      it 'returns the appropriate substring' do
+        VCR.use_cassette('importers/data_sources/external_mapping_transformation/ivory_coast.yml') do
+          expect(transformer.transform('ivory coast')).to eq('CI')
+        end
+      end
+    end
+
+    context 'mapping does not exist' do
+      it 'returns nil' do
+        VCR.use_cassette('importers/data_sources/external_mapping_transformation/nope.yml') do
+          expect(transformer.transform('nope')).to be_nil
+        end
+      end
+    end
+
+    context 'something goes terribly wrong' do
+      it 'returns nil' do
+        expect(transformer.transform('no cassette so an exception is thrown')).to be_nil
+      end
+    end
+
+  end
+
   context 'an unsupported transformation is specified' do
     let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: %w(nope))) }
 

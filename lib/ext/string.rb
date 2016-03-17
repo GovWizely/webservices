@@ -6,8 +6,4 @@ class String
   def typeize
     indexize.singularize.to_sym
   end
-
-  def reformat_date(format)
-    Date.strptime(self, format).to_s
-  end
 end
