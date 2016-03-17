@@ -20,14 +20,5 @@ describe ItaTaxonomyQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
-
-    context 'when options include query_expansion' do
-      let(:query) { ItaTaxonomyQuery.new(query_expansion: 'united states brazil') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_query_expansion.json").read }
-
-      it 'generates search body with queries' do
-        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
-      end
-    end
   end
 end

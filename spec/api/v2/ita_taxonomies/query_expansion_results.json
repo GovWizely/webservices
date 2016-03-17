@@ -1,0 +1,38 @@
+{
+  "query_expansion": {
+    "trade_regions": [
+      {
+        "Asia Pacific Economic Cooperation": "healthcare Asia Pacific Economic Cooperation"
+      },
+      {
+        "NAFTA": "healthcare NAFTA"
+      },
+      {
+        "Trans Pacific Partnership": "healthcare Trans Pacific Partnership"
+      },
+      {
+        "CAFTA-DR": "healthcare CAFTA-DR"
+      }
+    ],
+    "world_regions": [
+      {
+        "Western Hemisphere": "healthcare Western Hemisphere"
+      },
+      {
+        "Pacific Rim": "healthcare Pacific Rim"
+      },
+      {
+        "North America": "healthcare North America"
+      },
+      {
+        "Asia Pacific": "healthcare Asia Pacific"
+      },
+      {
+        "East Asia": "healthcare East Asia"
+      },
+      {
+        "Asia": "healthcare Asia"
+      }
+    ]
+  }
+}

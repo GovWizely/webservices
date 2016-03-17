@@ -22,19 +22,35 @@ class ItaTaxonomyData
   private
 
   def build_json_entries
-    entries = []
-    @parser.concepts.each do |concept_hash|
-      entry = concept_hash
-      entry[:id] = Utils.generate_id(entry, %i(subject))
+    processed_entries = []
+    taxonomy_terms = @parser.concepts + @parser.concept_groups + @parser.concept_schemes
 
-      entry[:query_expansion_terms] = is_country_term?(entry) ? add_geo_fields([entry[:label]]) : {}
-
-      entries.push entry
+    taxonomy_terms.each do |entry|
+      process_entry(entry)
+      processed_entries.push entry
     end
-    entries
+    processed_entries
   end
 
-  def is_country_term?(entry)
-    entry[:object_properties].key?(:member_of) && entry[:object_properties][:member_of].map { |t| t[:label] }.include?('Countries')
+  def process_entry(entry)
+    process_ids(entry)
+  end
+
+  def process_ids(entry)
+    trim_id(entry[:subject])
+    entry[:sub_class_of].each do |hash| 
+      trim_id(hash[:id])
+    end
+    entry[:object_properties].each do |_key, array|
+      array.each do |hash|
+        trim_id(hash[:id])
+      end
+    end
+    entry[:id] = entry[:subject]
+    entry.delete(:subject)
+  end
+
+  def trim_id(id)
+    id.slice!('http://webprotege.stanford.edu/')
   end
 end

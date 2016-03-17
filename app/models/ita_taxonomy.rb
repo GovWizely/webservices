@@ -24,8 +24,7 @@ class ItaTaxonomy
             tokenized: { type: 'string', analyzer: 'standard' },
             keyword:   { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
           },
-        },
-        subject:               { type: 'string', index: 'not_analyzed' }
+        }
       },
     },
   }.merge(metadata_mappings).freeze

@@ -1,157 +1,27 @@
 ---
-- :id: 4510742103a4a174d586fcea9b6c250cafb0e6a0
-  :label: Regional Organizations
-  :subject: http://webprotege.stanford.edu/RBb72pZnfGSZApKbgfMfARC
-  :sub_class_of:
-  - :id: http://webprotege.stanford.edu/RBUhToH9SFoFVriuHfHzcvT
-    :label: International Cooperation
-  :annotations:
-    :source: UNCTAD/WTO
-    :definition: An organization, the members of which are nations in the same geographical
-      region of the world; or a group of countries undergoing economic integration
-      according to international treaties.
-    :pref_label: Regional Organizations
-  :datatype_properties: {}
-  :object_properties:
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/RGHFvv0EAkgVEEklFu0O23
-    - :id: http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC
-      :label: Economic Cooperation Organization
-    - :id: http://webprotege.stanford.edu/R7YQAlNP4iXuBJLBhgPAcIO
-    - :id: http://webprotege.stanford.edu/RBVtSvNA1oiRIdyxG4yQW2U
-    - :id: http://webprotege.stanford.edu/RDzPvl6rgNC4szHLAsCM13
-    - :id: http://webprotege.stanford.edu/R9nJqgMeNaqj7yvDxwmS9u
-    - :id: http://webprotege.stanford.edu/R8WJPOGeQPthekFDAgqfmfX
-    :has_related:
-    - :id: http://webprotege.stanford.edu/R8oh8rResJWy4cRTQUcXrD0
-    - :id: http://webprotege.stanford.edu/RDGWO1whNroemSGzs1Q8kFj
-    - :id: http://webprotege.stanford.edu/R9sXmBia7HVpVIzX0B5IERQ
-    - :id: http://webprotege.stanford.edu/RC6O6Jo0GbVJz0TIihSBUgg
-    - :id: http://webprotege.stanford.edu/R70kvzy3dISjqdDrBuHHKTZ
-    - :id: http://webprotege.stanford.edu/R9qZhnMIZ6hKNPtnEtcfbom
-    - :id: http://webprotege.stanford.edu/R8mOUThypdlmCFXV56BVvD5
-    :has_broader:
-    - :id: http://webprotege.stanford.edu/RBUhToH9SFoFVriuHfHzcvT
-      :label: International Cooperation
-  :query_expansion_terms: {}
-- :id: cff66639f794cd8a06c30587b4c87133ba5fa70a
-  :label: United States
-  :subject: http://webprotege.stanford.edu/RC4HD9CwKjvgX8dSybAp3Sk
+- :id: R8CoATsjiZSLAZF4Aaz6kK6
+  :label: Aerospace and Defense
   :sub_class_of: []
   :annotations:
-    :source: ISO 3166
-    :alt_label: US
-    :pref_label: United States
+    :source: ITA
+    :alt_label: Defense Industry
+    :pref_label: Aerospace and Defense
   :datatype_properties: {}
   :object_properties:
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/RBVYpMdVIHwiXfBnsNWkHa3
-    - :id: http://webprotege.stanford.edu/RCm2HiWDMSn7H0ToVgOAS1r
-    - :id: http://webprotege.stanford.edu/R8o0I9D8VkL15AsMOG6il2F
-    - :id: http://webprotege.stanford.edu/RCximi2A1Up7f9Qvbx72KVU
-    - :id: http://webprotege.stanford.edu/RDdcFnhcv9lGQIHZJCmqBdR
-    - :id: http://webprotege.stanford.edu/RCfFjlFOtGQubVFJHs69tVV
-    - :id: http://webprotege.stanford.edu/R44D6VIx7PvKMqSBEykq4i
-    - :id: http://webprotege.stanford.edu/R9dxsNu6X4oBU7KvJBsMxRD
-    - :id: http://webprotege.stanford.edu/RDfOfLI1c2vRjt6T54qkdHN
-    - :id: http://webprotege.stanford.edu/R9bC3SLXKifhjRyVzMiqtwB
-    - :id: http://webprotege.stanford.edu/R8ICjBw981pwx9uC98ESVv1
-    - :id: http://webprotege.stanford.edu/RDgjSF69TWKJM01r8HjeLEC
-    - :id: http://webprotege.stanford.edu/RhBywiBwlnrwjX9mmegngf
-    - :id: http://webprotege.stanford.edu/RCEGT0PiXdNuVfrw3f1ERBi
-    - :id: http://webprotege.stanford.edu/RBfw0JZMcu38HcZLa0cYU8H
-    - :id: http://webprotege.stanford.edu/RBw4hWqHHmpxWJAs3KDuNqV
-    - :id: http://webprotege.stanford.edu/RRjGyMcXyBe3Hiicy69yOl
-    - :id: http://webprotege.stanford.edu/R7XRDfRj4Aa6KQZgiOjQJkg
-    - :id: http://webprotege.stanford.edu/R9V8iurJelp6Z6LDVtAmrge
-    - :id: http://webprotege.stanford.edu/RrS3lqUJNn7CRXhk0qP5y9
-    - :id: http://webprotege.stanford.edu/R9xfNfpSGiiQ9Fag1dpOAWO
-    - :id: http://webprotege.stanford.edu/RpDevSMYpEtSFQsZXQsI8m
-    - :id: http://webprotege.stanford.edu/R78I1ZJgdi7hyvzxblDuEhk
-    - :id: http://webprotege.stanford.edu/RYRDi2AwoTdluEQNuRmKc2
-    - :id: http://webprotege.stanford.edu/RP53vQyraTEBm84gQRymPa
-    - :id: http://webprotege.stanford.edu/RL9sgdzwNKpiO2vXjCe8WZ
-    - :id: http://webprotege.stanford.edu/RCpPSpr6dhC9W7NQIsSGBOW
-    - :id: http://webprotege.stanford.edu/RBZHK4q5uXwxJ8kEKrRjzso
-    - :id: http://webprotege.stanford.edu/R9cZYaFaBqxm8ElG2vBMTUC
-    - :id: http://webprotege.stanford.edu/RDkx4OGtbfd3fTB5kgkBpER
-    - :id: http://webprotege.stanford.edu/RCExwWxbuNHAqPyTWW0Ad2w
-    - :id: http://webprotege.stanford.edu/RCTcBFMi4MLVchI7AbZrmFu
-    - :id: http://webprotege.stanford.edu/R9bC779Bt9j92BCbJIJi9an
-    - :id: http://webprotege.stanford.edu/RLBzlQFAH3nKqqxEcHkJzx
-    - :id: http://webprotege.stanford.edu/ROsEfuTTMhDB7CVTyhpPwQ
-    - :id: http://webprotege.stanford.edu/R97eevLboqj2tihEkHDaAGO
-    - :id: http://webprotege.stanford.edu/R9XMizyiKrMIzpu2oVret2p
-    - :id: http://webprotege.stanford.edu/R9L1X4EunYf9up7wBkxb6sr
-    - :id: http://webprotege.stanford.edu/R8EQ1rTm3YaOBhcjtH1NGt6
-    - :id: http://webprotege.stanford.edu/R8LSZ0rDVQGqLQ0PGjIiUuK
-    - :id: http://webprotege.stanford.edu/RPKxU5kM2mNTwTPVgNByBK
-    - :id: http://webprotege.stanford.edu/R9BPZQ0dnTd2PE6SMbFBzyl
-    - :id: http://webprotege.stanford.edu/R7xYoDWxTRUtnLERz8qFkTy
-    - :id: http://webprotege.stanford.edu/R7I2NFnaSYAGX7XHzFs9JEW
-    - :id: http://webprotege.stanford.edu/R2kW06Azf1ppgK6VWKEY8A
-    - :id: http://webprotege.stanford.edu/R8tlqE5XLvrXkgdTg4rYxbM
-    - :id: http://webprotege.stanford.edu/RqgVrIsERq0qOXkbsiDZwH
-    - :id: http://webprotege.stanford.edu/RB6VGCjRxhYofnyWJXxUUV
-    - :id: http://webprotege.stanford.edu/RDy3cEDcPTGFHBVzNuvnYA7
-    - :id: http://webprotege.stanford.edu/RBuWeR3G0rUKoGBr2yDaO6a
-    - :id: http://webprotege.stanford.edu/RCO3B0mg2acDEnlySAasR72
-    - :id: http://webprotege.stanford.edu/RLjWIq0LCuSWrZsOnpdStn
-    - :id: http://webprotege.stanford.edu/R9zdMKg41CDoti1DI3VL551
-    - :id: http://webprotege.stanford.edu/R7N6OGRePaWPoIlyokdwPtj
-    - :id: http://webprotege.stanford.edu/RCVth8IJxKyunkoRlzGy164
-    :has_dependent_territory:
-    - :id: http://webprotege.stanford.edu/RhBywiBwlnrwjX9mmegngf
-    - :id: http://webprotege.stanford.edu/RLBzlQFAH3nKqqxEcHkJzx
-    - :id: http://webprotege.stanford.edu/R7N6OGRePaWPoIlyokdwPtj
-    - :id: http://webprotege.stanford.edu/R44D6VIx7PvKMqSBEykq4i
-    - :id: http://webprotege.stanford.edu/R8o0I9D8VkL15AsMOG6il2F
-    :has_related:
-    - :id: http://webprotege.stanford.edu/R7p7N70b7k0ouyvdI1kuBvA
-    - :id: http://webprotege.stanford.edu/RCgiJNHyAyc3v3EWbXkLwiC
-    - :id: http://webprotege.stanford.edu/R774vMJw26KCcNMyYG2w2cp
-    - :id: http://webprotege.stanford.edu/RIJ9QDqLBnZb8kAiGKqIyz
-    - :id: http://webprotege.stanford.edu/R9jSaucvJw69zgjpG1RSWT8
-    - :id: http://webprotege.stanford.edu/RDfC7Fbo4XNzwzwIPwNrugu
-    - :id: http://webprotege.stanford.edu/R9fqK8TUP7Fm02Q6JLgji6I
-    - :id: http://webprotege.stanford.edu/R7gaNUzwDUUfgh6TB6PI8fR
-    - :id: http://webprotege.stanford.edu/RDDl6uP7sFEtxKuRM5LsQ2E
-    - :id: http://webprotege.stanford.edu/R8PPRoO2npbOfrttbpexuJh
-    - :id: http://webprotege.stanford.edu/RD2NstNISZuXoqY8pDT1AFN
-    - :id: http://webprotege.stanford.edu/RCv9Alwp4gohJ7ZYn4BejeG
-    - :id: http://webprotege.stanford.edu/RMWO1fpkJ5LvTSEZyAAl3K
-    - :id: http://webprotege.stanford.edu/RNZGitu3RBKIpasiwQxlpK
-    - :id: http://webprotege.stanford.edu/RDNfMAr4j0BXC1dfLSMEWt4
-    - :id: http://webprotege.stanford.edu/R8QeCXxFOyplkfg4SI30D6w
-    :has_associated_state:
-    - :id: http://webprotege.stanford.edu/R9rVGUHUgufNHYqigEuH1Y1
-    - :id: http://webprotege.stanford.edu/R7aF0P8k19Yjgqx01edA2b5
-    - :id: http://webprotege.stanford.edu/RUtBoSE3VZchBze1rQYCYF
-    :has_broader:
-    - :id: http://webprotege.stanford.edu/RD1qG8h2SlYrcW9LSFriQ2d
-    - :id: http://webprotege.stanford.edu/R4Tyoniw0wZl3t7In4gVGW
-    - :id: http://webprotege.stanford.edu/R7YQAlNP4iXuBJLBhgPAcIO
-    - :id: http://webprotege.stanford.edu/RKn0x8BGb8udkb77NaE1ch
-    :is_top_concept_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
     :member_of:
-    - :id: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
-      :label: Countries
-  :query_expansion_terms:
-    :trade_regions:
-    - Asia Pacific Economic Cooperation
-    - NAFTA
-    - Trans Pacific Partnership
-    - CAFTA-DR
-    :world_regions:
-    - Western Hemisphere
-    - Pacific Rim
-    - North America
-- :id: 5ba96fcb608285760038ef04ca718be5ae38b344
+    - :id: R79uIjoQaQ9KzvJfyB1H7Ru
+      :label: Industries
+    :has_narrower:
+    - :id: R9lHhOo010EPhoajnKC2Lvg
+    - :id: RDBsKPGzqliWT5godmR5PDV
+      :label: Aviation
+    - :id: R3anJjpDBXy092dEyJ0nXU
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RDBsKPGzqliWT5godmR5PDV
   :label: Aviation
-  :subject: http://webprotege.stanford.edu/RDBsKPGzqliWT5godmR5PDV
   :sub_class_of:
-  - :id: http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6
+  - :id: R8CoATsjiZSLAZF4Aaz6kK6
     :label: Aerospace and Defense
   :annotations:
     :alt_label: Aviation Industry
@@ -163,24 +33,22 @@
   :datatype_properties: {}
   :object_properties:
     :is_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
     :has_narrower:
-    - :id: http://webprotege.stanford.edu/R635cvqm6BBP8Jzu7yW6oh
-    - :id: http://webprotege.stanford.edu/R83KkvcNAEbR5GIN8ALouQW
-    - :id: http://webprotege.stanford.edu/R8AFRGW0gBQe3oP4WiY3o9s
-    - :id: http://webprotege.stanford.edu/RBs1GcA7YB0XYJPwBZgk5xR
-    - :id: http://webprotege.stanford.edu/R9sYmPzKkdKVRi2X3oObIyM
-    - :id: http://webprotege.stanford.edu/RvXfDHB5h5CSXPVpkb2gUJ
+    - :id: R635cvqm6BBP8Jzu7yW6oh
+    - :id: R83KkvcNAEbR5GIN8ALouQW
+    - :id: R8AFRGW0gBQe3oP4WiY3o9s
+    - :id: RBs1GcA7YB0XYJPwBZgk5xR
+    - :id: R9sYmPzKkdKVRi2X3oObIyM
+    - :id: RvXfDHB5h5CSXPVpkb2gUJ
     :member_of:
-    - :id: http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0
+    - :id: RwdbpCsGlOI2iwaG4UqDl0
       :label: Sector
     :has_broader:
-    - :id: http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6
+    - :id: R8CoATsjiZSLAZF4Aaz6kK6
       :label: Aerospace and Defense
-  :query_expansion_terms: {}
-- :id: 3e49aed0cd39540d07abac69476bbeddf5da9ebd
+- :id: RDzjXT0GYF9ecQbq6oyxewD
   :label: Afghanistan
-  :subject: http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD
   :sub_class_of: []
   :annotations:
     :pref_label: Afghanistan
@@ -196,29 +64,140 @@
     - AF
   :object_properties:
     :has_broader:
-    - :id: http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC
+    - :id: RDrX1xLUDh7oA05RQ3JXshC
       :label: Economic Cooperation Organization
-    - :id: http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA
+    - :id: R9pQ9NO7LyXj7vL7WbTAVVA
       :label: Central Asia
-    - :id: http://webprotege.stanford.edu/RGHFvv0EAkgVEEklFu0O23
-    - :id: http://webprotege.stanford.edu/RDkKRunNIRFsKUYmLHwIMyM
+    - :id: RGHFvv0EAkgVEEklFu0O23
+    - :id: RDkKRunNIRFsKUYmLHwIMyM
     :member_of:
-    - :id: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
+    - :id: R8W91u35GBegWcXXFflYE4
       :label: Countries
     :is_top_concept_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
-  :query_expansion_terms:
-    :trade_regions:
-    - Economic Cooperation Organization
-    :world_regions:
-    - Central Asia
-    - Asia
-    - South Asia
-- :id: 164737e9077abf08cc86e9d15a473c971e8e20d8
-  :label: Economic Cooperation Organization
-  :subject: http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: R91fGuW6GPOnb7XSylIPwR5
+  :label: Asia
+  :sub_class_of: []
+  :annotations:
+    :pref_label: Asia
+    :source: ITA
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: R4Tyoniw0wZl3t7In4gVGW
+    - :id: R8jA4PYXwc54qC4JAPsIPAS
+    - :id: RXTomSBCCC8TOjYuMKCB8p
+    :member_of:
+    - :id: R8cndKa2D8NuNg7djwJcXxB
+      :label: World Regions
+    :has_narrower:
+    - :id: RCS37S95UoFr6hEWf8oRfQs
+    - :id: RDAklO0LFVtjIoIUYj4Dg4M
+    - :id: R9pQ9NO7LyXj7vL7WbTAVVA
+      :label: Central Asia
+    - :id: RDkKRunNIRFsKUYmLHwIMyM
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: R9pQ9NO7LyXj7vL7WbTAVVA
+  :label: Central Asia
   :sub_class_of:
-  - :id: http://webprotege.stanford.edu/RBb72pZnfGSZApKbgfMfARC
+  - :id: R91fGuW6GPOnb7XSylIPwR5
+    :label: Asia
+  :annotations:
+    :pref_label: Central Asia
+    :source: ITA
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: RDrX1xLUDh7oA05RQ3JXshC
+      :label: Economic Cooperation Organization
+    - :id: RBVtSvNA1oiRIdyxG4yQW2U
+    :has_narrower:
+    - :id: RBw8ndgL3iXtxxTP560v6yZ
+    - :id: RDzjXT0GYF9ecQbq6oyxewD
+      :label: Afghanistan
+    - :id: RCYYmdELCU9mt8R3RdlNys5
+    - :id: RCfB9gXWAQMhJ9dvN4Fk23V
+    - :id: RDWMuIZgkJ15oLm2YFfp3cD
+    - :id: RCJNAo9QHRdLFOVe3bV0HyH
+    :member_of:
+    - :id: R8cndKa2D8NuNg7djwJcXxB
+      :label: World Regions
+    :has_broader:
+    - :id: R91fGuW6GPOnb7XSylIPwR5
+      :label: Asia
+    :is_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RBUhToH9SFoFVriuHfHzcvT
+  :label: International Cooperation
+  :sub_class_of: []
+  :annotations:
+    :pref_label: International Cooperation
+    :alt_label: International Relations
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RBb72pZnfGSZApKbgfMfARC
+      :label: Regional Organizations
+    - :id: Rk5pCWf2G0cRCXVFbX6Mpe
+    - :id: RDqvYT0w0McaR3ztDo7GTiN
+    - :id: R9qZhnMIZ6hKNPtnEtcfbom
+    - :id: R9sXmBia7HVpVIzX0B5IERQ
+    - :id: R2w8WnA9A8a2TiSmJRb9EA
+    - :id: RuW8uQVPaBKxWpRKcxpAQp
+    - :id: RB8F5rHCO4KieuMqXcGADpP
+    - :id: R70kvzy3dISjqdDrBuHHKTZ
+    - :id: RC6O6Jo0GbVJz0TIihSBUgg
+    - :id: Rf92Yc4Y7bzuhqK3hHHQG3
+    - :id: RCLdxEaPNHghdQxWQXbmu74
+    - :id: RtpjDyoaB0na0aWRn6EKd7
+    - :id: R7dGSypy8jhFXWffiHjotDI
+    - :id: RDu5TsRmw1pLWvBxPEJKECR
+    - :id: RCkkcX2iPKAlS58m9zcWv8Q
+    - :id: R8GeJ9HV5NWitlhQtNu5TLG
+    - :id: RDHA9zT6LXQYJveXoKXYU68
+    :member_of:
+    - :id: RBBed4Voz7iS3nUECA3yzNM
+      :label: Topics
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RBb72pZnfGSZApKbgfMfARC
+  :label: Regional Organizations
+  :sub_class_of:
+  - :id: RBUhToH9SFoFVriuHfHzcvT
+    :label: International Cooperation
+  :annotations:
+    :source: UNCTAD/WTO
+    :definition: An organization, the members of which are nations in the same geographical
+      region of the world; or a group of countries undergoing economic integration
+      according to international treaties.
+    :pref_label: Regional Organizations
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RGHFvv0EAkgVEEklFu0O23
+    - :id: RDrX1xLUDh7oA05RQ3JXshC
+      :label: Economic Cooperation Organization
+    - :id: R7YQAlNP4iXuBJLBhgPAcIO
+    - :id: RBVtSvNA1oiRIdyxG4yQW2U
+    - :id: RDzPvl6rgNC4szHLAsCM13
+    - :id: R9nJqgMeNaqj7yvDxwmS9u
+    - :id: R8WJPOGeQPthekFDAgqfmfX
+    :has_related:
+    - :id: R8oh8rResJWy4cRTQUcXrD0
+    - :id: RDGWO1whNroemSGzs1Q8kFj
+    - :id: R9sXmBia7HVpVIzX0B5IERQ
+    - :id: RC6O6Jo0GbVJz0TIihSBUgg
+    - :id: R70kvzy3dISjqdDrBuHHKTZ
+    - :id: R9qZhnMIZ6hKNPtnEtcfbom
+    - :id: R8mOUThypdlmCFXV56BVvD5
+    :has_broader:
+    - :id: RBUhToH9SFoFVriuHfHzcvT
+      :label: International Cooperation
+- :id: RDrX1xLUDh7oA05RQ3JXshC
+  :label: Economic Cooperation Organization
+  :sub_class_of:
+  - :id: RBb72pZnfGSZApKbgfMfARC
     :label: Regional Organizations
   :annotations:
     :pref_label: Economic Cooperation Organization
@@ -227,139 +206,189 @@
   :datatype_properties: {}
   :object_properties:
     :has_related:
-    - :id: http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA
+    - :id: R9pQ9NO7LyXj7vL7WbTAVVA
       :label: Central Asia
     :has_narrower:
-    - :id: http://webprotege.stanford.edu/RCfB9gXWAQMhJ9dvN4Fk23V
-    - :id: http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD
+    - :id: RCfB9gXWAQMhJ9dvN4Fk23V
+    - :id: RDzjXT0GYF9ecQbq6oyxewD
       :label: Afghanistan
-    - :id: http://webprotege.stanford.edu/RDf5WqjTEy5LQfo27FVNARN
-    - :id: http://webprotege.stanford.edu/R8Ej741whxQgjGSm96YKKbA
-    - :id: http://webprotege.stanford.edu/RCYYmdELCU9mt8R3RdlNys5
-    - :id: http://webprotege.stanford.edu/RBn7U4nuqEQqKyIqAUzYkZx
-    - :id: http://webprotege.stanford.edu/RfxpAK7Sx2uspzUqK7lzip
-    - :id: http://webprotege.stanford.edu/RCJNAo9QHRdLFOVe3bV0HyH
-    - :id: http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ
-    - :id: http://webprotege.stanford.edu/RDWMuIZgkJ15oLm2YFfp3cD
+    - :id: RDf5WqjTEy5LQfo27FVNARN
+    - :id: R8Ej741whxQgjGSm96YKKbA
+    - :id: RCYYmdELCU9mt8R3RdlNys5
+    - :id: RBn7U4nuqEQqKyIqAUzYkZx
+    - :id: RfxpAK7Sx2uspzUqK7lzip
+    - :id: RCJNAo9QHRdLFOVe3bV0HyH
+    - :id: RBw8ndgL3iXtxxTP560v6yZ
+    - :id: RDWMuIZgkJ15oLm2YFfp3cD
     :member_of:
-    - :id: http://webprotege.stanford.edu/R7ySyiNxcfeZ6bfNjhocNun
+    - :id: R7ySyiNxcfeZ6bfNjhocNun
       :label: Trade Regions
     :is_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
     :has_broader:
-    - :id: http://webprotege.stanford.edu/RBb72pZnfGSZApKbgfMfARC
+    - :id: RBb72pZnfGSZApKbgfMfARC
       :label: Regional Organizations
-  :query_expansion_terms: {}
-- :id: 9b0a770331cfa7820000c07e928de90cebb4739e
-  :label: Central Asia
-  :subject: http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA
+- :id: RC4HD9CwKjvgX8dSybAp3Sk
+  :label: United States
+  :sub_class_of: []
+  :annotations:
+    :source: ISO 3166
+    :alt_label: US
+    :pref_label: United States
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RBVYpMdVIHwiXfBnsNWkHa3
+    - :id: RCm2HiWDMSn7H0ToVgOAS1r
+    - :id: R8o0I9D8VkL15AsMOG6il2F
+    - :id: RCximi2A1Up7f9Qvbx72KVU
+    - :id: RDdcFnhcv9lGQIHZJCmqBdR
+    - :id: RCfFjlFOtGQubVFJHs69tVV
+    - :id: R44D6VIx7PvKMqSBEykq4i
+    - :id: R9dxsNu6X4oBU7KvJBsMxRD
+    - :id: RDfOfLI1c2vRjt6T54qkdHN
+    - :id: R9bC3SLXKifhjRyVzMiqtwB
+    - :id: R8ICjBw981pwx9uC98ESVv1
+    - :id: RDgjSF69TWKJM01r8HjeLEC
+    - :id: RhBywiBwlnrwjX9mmegngf
+    - :id: RCEGT0PiXdNuVfrw3f1ERBi
+    - :id: RBfw0JZMcu38HcZLa0cYU8H
+    - :id: RBw4hWqHHmpxWJAs3KDuNqV
+    - :id: RRjGyMcXyBe3Hiicy69yOl
+    - :id: R7XRDfRj4Aa6KQZgiOjQJkg
+    - :id: R9V8iurJelp6Z6LDVtAmrge
+    - :id: RrS3lqUJNn7CRXhk0qP5y9
+    - :id: R9xfNfpSGiiQ9Fag1dpOAWO
+    - :id: RpDevSMYpEtSFQsZXQsI8m
+    - :id: R78I1ZJgdi7hyvzxblDuEhk
+    - :id: RYRDi2AwoTdluEQNuRmKc2
+    - :id: RP53vQyraTEBm84gQRymPa
+    - :id: RL9sgdzwNKpiO2vXjCe8WZ
+    - :id: RCpPSpr6dhC9W7NQIsSGBOW
+    - :id: RBZHK4q5uXwxJ8kEKrRjzso
+    - :id: R9cZYaFaBqxm8ElG2vBMTUC
+    - :id: RDkx4OGtbfd3fTB5kgkBpER
+    - :id: RCExwWxbuNHAqPyTWW0Ad2w
+    - :id: RCTcBFMi4MLVchI7AbZrmFu
+    - :id: R9bC779Bt9j92BCbJIJi9an
+    - :id: RLBzlQFAH3nKqqxEcHkJzx
+    - :id: ROsEfuTTMhDB7CVTyhpPwQ
+    - :id: R97eevLboqj2tihEkHDaAGO
+    - :id: R9XMizyiKrMIzpu2oVret2p
+    - :id: R9L1X4EunYf9up7wBkxb6sr
+    - :id: R8EQ1rTm3YaOBhcjtH1NGt6
+    - :id: R8LSZ0rDVQGqLQ0PGjIiUuK
+    - :id: RPKxU5kM2mNTwTPVgNByBK
+    - :id: R9BPZQ0dnTd2PE6SMbFBzyl
+    - :id: R7xYoDWxTRUtnLERz8qFkTy
+    - :id: R7I2NFnaSYAGX7XHzFs9JEW
+    - :id: R2kW06Azf1ppgK6VWKEY8A
+    - :id: R8tlqE5XLvrXkgdTg4rYxbM
+    - :id: RqgVrIsERq0qOXkbsiDZwH
+    - :id: RB6VGCjRxhYofnyWJXxUUV
+    - :id: RDy3cEDcPTGFHBVzNuvnYA7
+    - :id: RBuWeR3G0rUKoGBr2yDaO6a
+    - :id: RCO3B0mg2acDEnlySAasR72
+    - :id: RLjWIq0LCuSWrZsOnpdStn
+    - :id: R9zdMKg41CDoti1DI3VL551
+    - :id: R7N6OGRePaWPoIlyokdwPtj
+    - :id: RCVth8IJxKyunkoRlzGy164
+    :has_dependent_territory:
+    - :id: RhBywiBwlnrwjX9mmegngf
+    - :id: RLBzlQFAH3nKqqxEcHkJzx
+    - :id: R7N6OGRePaWPoIlyokdwPtj
+    - :id: R44D6VIx7PvKMqSBEykq4i
+    - :id: R8o0I9D8VkL15AsMOG6il2F
+    :has_related:
+    - :id: R7p7N70b7k0ouyvdI1kuBvA
+    - :id: RCgiJNHyAyc3v3EWbXkLwiC
+    - :id: R774vMJw26KCcNMyYG2w2cp
+    - :id: RIJ9QDqLBnZb8kAiGKqIyz
+    - :id: R9jSaucvJw69zgjpG1RSWT8
+    - :id: RDfC7Fbo4XNzwzwIPwNrugu
+    - :id: R9fqK8TUP7Fm02Q6JLgji6I
+    - :id: R7gaNUzwDUUfgh6TB6PI8fR
+    - :id: RDDl6uP7sFEtxKuRM5LsQ2E
+    - :id: R8PPRoO2npbOfrttbpexuJh
+    - :id: RD2NstNISZuXoqY8pDT1AFN
+    - :id: RCv9Alwp4gohJ7ZYn4BejeG
+    - :id: RMWO1fpkJ5LvTSEZyAAl3K
+    - :id: RNZGitu3RBKIpasiwQxlpK
+    - :id: RDNfMAr4j0BXC1dfLSMEWt4
+    - :id: R8QeCXxFOyplkfg4SI30D6w
+    :has_associated_state:
+    - :id: R9rVGUHUgufNHYqigEuH1Y1
+    - :id: R7aF0P8k19Yjgqx01edA2b5
+    - :id: RUtBoSE3VZchBze1rQYCYF
+    :has_broader:
+    - :id: RD1qG8h2SlYrcW9LSFriQ2d
+    - :id: R4Tyoniw0wZl3t7In4gVGW
+    - :id: R7YQAlNP4iXuBJLBhgPAcIO
+    - :id: RKn0x8BGb8udkb77NaE1ch
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+    :member_of:
+    - :id: R8W91u35GBegWcXXFflYE4
+      :label: Countries
+- :id: R8W91u35GBegWcXXFflYE4
+  :label: Countries
+  :sub_class_of: []
+  :annotations:
+    :comment: The International Standards Organization (ISO) maintains a list of country
+      codes since 1974. Other standards bodies have adopted the ISO 3166 code list.
+    :source: ISO 3166
+    :pref_label: Countries
+  :datatype_properties: {}
+  :object_properties: {}
+- :id: R79uIjoQaQ9KzvJfyB1H7Ru
+  :label: Industries
+  :sub_class_of: []
+  :annotations:
+    :source: ITA
+    :pref_label: Industries
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RwdbpCsGlOI2iwaG4UqDl0
+  :label: Sector
   :sub_class_of:
-  - :id: http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5
-    :label: Asia
+  - :id: R79uIjoQaQ9KzvJfyB1H7Ru
+    :label: Industries
   :annotations:
-    :pref_label: Central Asia
+    :pref_label: Sector
+    :alt_label: Industry Sector
     :source: ITA
   :datatype_properties: {}
-  :object_properties:
-    :has_related:
-    - :id: http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC
-      :label: Economic Cooperation Organization
-    - :id: http://webprotege.stanford.edu/RBVtSvNA1oiRIdyxG4yQW2U
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/RBw8ndgL3iXtxxTP560v6yZ
-    - :id: http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD
-      :label: Afghanistan
-    - :id: http://webprotege.stanford.edu/RCYYmdELCU9mt8R3RdlNys5
-    - :id: http://webprotege.stanford.edu/RCfB9gXWAQMhJ9dvN4Fk23V
-    - :id: http://webprotege.stanford.edu/RDWMuIZgkJ15oLm2YFfp3cD
-    - :id: http://webprotege.stanford.edu/RCJNAo9QHRdLFOVe3bV0HyH
-    :member_of:
-    - :id: http://webprotege.stanford.edu/R8cndKa2D8NuNg7djwJcXxB
-      :label: World Regions
-    :has_broader:
-    - :id: http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5
-      :label: Asia
-    :is_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
-  :query_expansion_terms: {}
-- :id: 087b1304e0074fadf917b57a2e385dd857340a81
-  :label: International Cooperation
-  :subject: http://webprotege.stanford.edu/RBUhToH9SFoFVriuHfHzcvT
+  :object_properties: {}
+- :id: RBBed4Voz7iS3nUECA3yzNM
+  :label: Topics
   :sub_class_of: []
   :annotations:
-    :pref_label: International Cooperation
-    :alt_label: International Relations
+    :source: UNCTAD/WTO
+    :pref_label: Topics
   :datatype_properties: {}
   :object_properties:
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/RBb72pZnfGSZApKbgfMfARC
-      :label: Regional Organizations
-    - :id: http://webprotege.stanford.edu/Rk5pCWf2G0cRCXVFbX6Mpe
-    - :id: http://webprotege.stanford.edu/RDqvYT0w0McaR3ztDo7GTiN
-    - :id: http://webprotege.stanford.edu/R9qZhnMIZ6hKNPtnEtcfbom
-    - :id: http://webprotege.stanford.edu/R9sXmBia7HVpVIzX0B5IERQ
-    - :id: http://webprotege.stanford.edu/R2w8WnA9A8a2TiSmJRb9EA
-    - :id: http://webprotege.stanford.edu/RuW8uQVPaBKxWpRKcxpAQp
-    - :id: http://webprotege.stanford.edu/RB8F5rHCO4KieuMqXcGADpP
-    - :id: http://webprotege.stanford.edu/R70kvzy3dISjqdDrBuHHKTZ
-    - :id: http://webprotege.stanford.edu/RC6O6Jo0GbVJz0TIihSBUgg
-    - :id: http://webprotege.stanford.edu/Rf92Yc4Y7bzuhqK3hHHQG3
-    - :id: http://webprotege.stanford.edu/RCLdxEaPNHghdQxWQXbmu74
-    - :id: http://webprotege.stanford.edu/RtpjDyoaB0na0aWRn6EKd7
-    - :id: http://webprotege.stanford.edu/R7dGSypy8jhFXWffiHjotDI
-    - :id: http://webprotege.stanford.edu/RDu5TsRmw1pLWvBxPEJKECR
-    - :id: http://webprotege.stanford.edu/RCkkcX2iPKAlS58m9zcWv8Q
-    - :id: http://webprotege.stanford.edu/R8GeJ9HV5NWitlhQtNu5TLG
-    - :id: http://webprotege.stanford.edu/RDHA9zT6LXQYJveXoKXYU68
-    :member_of:
-    - :id: http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM
-      :label: Topics
-    :is_top_concept_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
-  :query_expansion_terms: {}
-- :id: 08454288aa3d1ba10184d55e2d97bd1de9577885
-  :label: Aerospace and Defense
-  :subject: http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6
+    :micro_thesaurus_of:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: R7ySyiNxcfeZ6bfNjhocNun
+  :label: Trade Regions
+  :sub_class_of: []
+  :annotations:
+    :alt_label: Economic Groupings
+    :pref_label: Trade Regions
+    :comment: Trade regions as defined by the International Trade Administration
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: R8cndKa2D8NuNg7djwJcXxB
+  :label: World Regions
   :sub_class_of: []
   :annotations:
     :source: ITA
-    :alt_label: Defense Industry
-    :pref_label: Aerospace and Defense
+    :pref_label: World Regions
   :datatype_properties: {}
   :object_properties:
-    :member_of:
-    - :id: http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru
-      :label: Industries
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/R9lHhOo010EPhoajnKC2Lvg
-    - :id: http://webprotege.stanford.edu/RDBsKPGzqliWT5godmR5PDV
-      :label: Aviation
-    - :id: http://webprotege.stanford.edu/R3anJjpDBXy092dEyJ0nXU
-    :is_top_concept_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
-  :query_expansion_terms: {}
-- :id: 338eff6bde0d08c032125f75e14ac5c9fac62a5e
-  :label: Asia
-  :subject: http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5
-  :sub_class_of: []
-  :annotations:
-    :pref_label: Asia
-    :source: ITA
-  :datatype_properties: {}
-  :object_properties:
-    :has_related:
-    - :id: http://webprotege.stanford.edu/R4Tyoniw0wZl3t7In4gVGW
-    - :id: http://webprotege.stanford.edu/R8jA4PYXwc54qC4JAPsIPAS
-    - :id: http://webprotege.stanford.edu/RXTomSBCCC8TOjYuMKCB8p
-    :member_of:
-    - :id: http://webprotege.stanford.edu/R8cndKa2D8NuNg7djwJcXxB
-      :label: World Regions
-    :has_narrower:
-    - :id: http://webprotege.stanford.edu/RCS37S95UoFr6hEWf8oRfQs
-    - :id: http://webprotege.stanford.edu/RDAklO0LFVtjIoIUYj4Dg4M
-    - :id: http://webprotege.stanford.edu/R9pQ9NO7LyXj7vL7WbTAVVA
-      :label: Central Asia
-    - :id: http://webprotege.stanford.edu/RDkKRunNIRFsKUYmLHwIMyM
-    :is_top_concept_in_scheme:
-    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
-  :query_expansion_terms: {}
+    :micro_thesaurus_of:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
