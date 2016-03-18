@@ -5,15 +5,6 @@ class ItaTaxonomyData
   include Importable
   include VersionableResource
 
-  COLUMN_HASH = {
-    subject:        :id,
-    label:          :name,
-    path:           :path,
-    concept_groups: :taxonomies,
-    broader_terms:  :broader_terms,
-    narrower_terms: :narrower_terms,
-  }.freeze
-
   def initialize(resource = nil)
     resource = Rails.configuration.protege_url if resource.nil?
     @parser = TaxonomyParser.new(resource)
@@ -33,10 +24,17 @@ class ItaTaxonomyData
   def build_json_entries
     entries = []
     @parser.concepts.each do |concept_hash|
-      entry = remap_keys(COLUMN_HASH, concept_hash)
-      entry[:id] = Utils.generate_id(entry, %i(id))
+      entry = concept_hash
+      entry[:id] = Utils.generate_id(entry, %i(subject))
+
+      entry[:query_expansion_terms] = is_country_term?(entry) ? add_geo_fields([entry[:label]]) : {}
+
       entries.push entry
     end
     entries
+  end
+
+  def is_country_term?(entry)
+    entry[:object_properties].key?(:member_of) && entry[:object_properties][:member_of].map { |t| t[:label] }.include?('Countries')
   end
 end

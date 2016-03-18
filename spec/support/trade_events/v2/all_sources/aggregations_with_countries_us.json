@@ -17,6 +17,18 @@
     {
       "key": "Asia Pacific Economic Cooperation",
       "doc_count": 18
+    },
+    {
+      "key": "CAFTA-DR",
+      "doc_count": 18
+    },
+    {
+      "key": "NAFTA",
+      "doc_count": 18
+    },
+    {
+      "key": "Trans Pacific Partnership",
+      "doc_count": 18
     }
   ],
   "countries": [

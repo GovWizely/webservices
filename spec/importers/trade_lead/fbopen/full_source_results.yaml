@@ -27,15 +27,14 @@
   :notice_type: COMBINE
   :trade_regions:
   - Economic Cooperation Organization
-  - South Asian Association for Regional Cooperation
   :world_regions:
   - Central Asia
   - Asia
   - South Asia
   :end_date: 2015-03-21
   :source: FBO
-  :id: SPE7M815Q0425
   :ita_industries: []
+  :id: SPE7M815Q0425
 - :publish_date: 2015-02-08
   :procurement_organization: Defense Logistics Agency
   :procurement_office: DLA Acquisition Locations
@@ -54,15 +53,14 @@
   :notice_type: COMBINE
   :trade_regions:
   - Economic Cooperation Organization
-  - South Asian Association for Regional Cooperation
   :world_regions:
   - Central Asia
   - Asia
   - South Asia
   :end_date: 
   :source: FBO
-  :id: SPE7M815Q0431
   :ita_industries: []
+  :id: SPE7M815Q0431
 - :publish_date: 
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
@@ -101,15 +99,14 @@
   :notice_type: COMBINE
   :trade_regions:
   - Economic Cooperation Organization
-  - South Asian Association for Regional Cooperation
   :world_regions:
   - Central Asia
   - Asia
   - South Asia
   :end_date: 2015-04-05
   :source: FBO
-  :id: W56KJD-15-T-0032
   :ita_industries: []
+  :id: W56KJD-15-T-0032
 - :publish_date: 2015-02-08
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
@@ -148,15 +145,14 @@
   :notice_type: MOD
   :trade_regions:
   - Economic Cooperation Organization
-  - South Asian Association for Regional Cooperation
   :world_regions:
   - Central Asia
   - Asia
   - South Asia
   :end_date: 2015-02-09
   :source: FBO
-  :id: W56KJD-15-T-0032
   :ita_industries: []
+  :id: W56KJD-15-T-0032
 - :publish_date: 
   :procurement_organization: Department of the Army
   :procurement_office: CENTCOM - Joint Theater Support Contracting Command
@@ -195,12 +191,11 @@
   :notice_type: COMBINE
   :trade_regions:
   - Economic Cooperation Organization
-  - South Asian Association for Regional Cooperation
   :world_regions:
   - Central Asia
   - Asia
   - South Asia
   :end_date: 2015-03-31
   :source: FBO
-  :id: W56KJD-15-T-003
   :ita_industries: []
+  :id: W56KJD-15-T-003

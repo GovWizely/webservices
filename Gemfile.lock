@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/taxonomy_parser.git
-  revision: 492d498d8e7363efaf1551a98dd11e985c69292e
+  revision: a5b90b339989c6576dd40a5048a82aa61929aa1d
   specs:
     taxonomy_parser (0.1.0)
       codeclimate-test-reporter

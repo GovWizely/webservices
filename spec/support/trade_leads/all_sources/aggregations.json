@@ -87,6 +87,10 @@
       "doc_count": 5
     },
     {
+      "key": "NAFTA",
+      "doc_count": 5
+    },
+    {
       "key": "Common Market for Eastern and Southern Africa",
       "doc_count": 3
     },
@@ -104,6 +108,10 @@
     },
     {
       "key": "Association of Southeast Asian Nations",
+      "doc_count": 1
+    },
+    {
+      "key": "CAFTA-DR",
       "doc_count": 1
     },
     {

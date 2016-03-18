@@ -42,13 +42,14 @@
     ],
     "source": "CANADA",
     "trade_regions": [
+      "NAFTA",
       "Asia Pacific Economic Cooperation",
       "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
+      "Pacific Rim",
       "North America",
-      "Pacific Rim"
+      "Western Hemisphere"
     ]
   },
   {
@@ -78,13 +79,14 @@
     ],
     "source": "CANADA",
     "trade_regions": [
+      "NAFTA",
       "Asia Pacific Economic Cooperation",
       "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
+      "Pacific Rim",
       "North America",
-      "Pacific Rim"
+      "Western Hemisphere"
     ]
   },
   {
@@ -111,13 +113,14 @@
     "urls": null,
     "source": "CANADA",
     "trade_regions": [
+      "NAFTA",
       "Asia Pacific Economic Cooperation",
       "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
+      "Pacific Rim",
       "North America",
-      "Pacific Rim"
+      "Western Hemisphere"
     ]
   },
   {
@@ -149,13 +152,14 @@
     ],
     "source": "CANADA",
     "trade_regions": [
+      "NAFTA",
       "Asia Pacific Economic Cooperation",
       "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
+      "Pacific Rim",
       "North America",
-      "Pacific Rim"
+      "Western Hemisphere"
     ]
   },
   {
@@ -187,13 +191,14 @@
     ],
     "source": "CANADA",
     "trade_regions": [
+      "NAFTA",
       "Asia Pacific Economic Cooperation",
       "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
+      "Pacific Rim",
       "North America",
-      "Pacific Rim"
+      "Western Hemisphere"
     ]
   }
 ]

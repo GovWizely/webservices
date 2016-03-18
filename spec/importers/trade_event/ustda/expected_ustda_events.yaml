@@ -33,9 +33,9 @@
   :person_title: 
   :phone: 
   :email: 
+  :venues: []
   :trade_regions: []
   :world_regions: []
-  :venues: []
   :event_type: 
   :source: USTDA
   :id: fc72356f32c847c77bdb3efd9d512765fd4a0093
@@ -72,13 +72,13 @@
   :person_title: 
   :phone: 
   :email: 
-  :trade_regions: []
-  :world_regions: []
   :venues:
   - :venue: Washington, DC and San Francisco, CA
     :city: 
     :state: 
     :country: 
+  :trade_regions: []
+  :world_regions: []
   :event_type: 
   :source: USTDA
   :id: 94c3d1baec60e3622d956ca03daaa0eb3feb7303
@@ -110,13 +110,13 @@
   :person_title: 
   :phone: 
   :email: 
-  :trade_regions: []
-  :world_regions: []
   :venues:
   - :venue: Miami, FL; Houston, TX; and Los Angeles, CA
     :city: 
     :state: 
     :country: 
+  :trade_regions: []
+  :world_regions: []
   :event_type: 
   :source: USTDA
   :id: 85002753aed29875028b5e98ae12225ecd6d3283
@@ -151,13 +151,13 @@
   :person_title: 
   :phone: 
   :email: 
-  :trade_regions: []
-  :world_regions: []
   :venues:
   - :venue: Los Angeles, CA
     :city: 
     :state: 
     :country: 
+  :trade_regions: []
+  :world_regions: []
   :event_type: 
   :source: USTDA
   :id: e192f278bac8df094d6efaea1d39ed06bb603177
@@ -188,17 +188,20 @@
   :person_title: 
   :phone: 
   :email: ed@email.com
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :venue: San Francisco, CA
     :city: San Francisco
     :state: California
     :country: US
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :event_type: 
   :source: USTDA
   :id: 5dd39f6a508d2f27cd0e62c55efeab786a5ddd55
@@ -229,13 +232,13 @@
   :person_title: 
   :phone: 
   :email: 
-  :trade_regions: []
-  :world_regions: []
   :venues:
   - :venue: Miami, FL; Houston, TX; and Los Angeles, CA
     :city: 
     :state: 
     :country: 
+  :trade_regions: []
+  :world_regions: []
   :event_type: 
   :source: USTDA
   :id: d4c2f2c7fc1b622030e6358c64155384f4768d26

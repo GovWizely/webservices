@@ -19,16 +19,16 @@
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
-  :trade_regions:
-  - European Union - 28
-  :world_regions:
-  - Europe
   :venues:
   - :address: 661 West Imperial Highway
     :city: Los Angeles
     :country: DE
     :state: CA
     :venue: Flight Path Museum
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :id: dd12543922512740e00d9a602b719519f186b562
 - :cost: '295.00'
   :description: 'Take-Aways: •You will be aware of the new export security requirements
@@ -51,18 +51,21 @@
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 600 Forbes Avenue Power Center Ballroom
     :city: Pittsburgh
     :country: US
     :state: PA
     :venue: Duquesne University Power Center
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: ac4762e9b2ccb537b4be1ce206c004286dc0e50f
 - :cost: 
   :description: Save the date! How Can I Export? Come find out. Multiple Presenters,
@@ -82,16 +85,16 @@
     :last_name: Vira Bahr
     :phone: 801-863-8230
     :post: Small Business Administration
-  :trade_regions:
-  - European Union - 28
-  :world_regions:
-  - Europe
   :venues:
   - :address: 815 West 1250 South Room 110
     :city: Orem
     :country: FR
     :state: UT
     :venue: Orem/Provo SBDC Utah Valley University
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :id: 27fed639cc4814cfcbd49c91a1a90d30f2c3884b
 - :cost: '20.00'
   :description: Corning Community College’s Small Business Development Center is offering
@@ -120,18 +123,21 @@
     :last_name: Mary
     :phone: 607-937-6861
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 318 Madison Avenue
     :city: Elmira
     :country: US
     :state: NY
     :venue: CCC's Academic & Workforce Development Center
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: 71ada50f1413e011cb8e788475fcc6f142891925
 - :cost: '35.00'
   :description: 'Cost: $35, Pre-registration Required, International Sales Contacts
@@ -153,18 +159,21 @@
     :last_name: Jean Coronel
     :phone: 
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 301 West 1st Street
     :city: Los Angeles
     :country: US
     :state: CA
     :venue: Los Angeles Law Library
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: 39ce32491650ade4fa1774a748b9b828c26bef80
 - :cost: 
   :description: 'The luncheon session will feature the SBA Small Business Awards,
@@ -187,18 +196,21 @@
     :last_name: Patrick Patrick
     :phone: 213-580-7548
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 404 S. Figueroa Street
     :city: Los Angeles
     :country: US
     :state: CA
     :venue: The Westin Bonaventure Hotel
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: 1ad75d3410313305cda3cfd1983c53acf38c7bf6
 - :cost: '195.00'
   :description: 'Take-Aways: •You will know the best type of L/C to use to manage
@@ -220,18 +232,21 @@
     :last_name: Duquesne University SBDC
     :phone: 412-396-6233
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 600 Forbes Avenue Power Center Ballroom
     :city: Pittsburgh
     :country: US
     :state: PA
     :venue: Duquesne University Power Center
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: 3d17cc02d14c8055953885cb2d02ae9de61ab590
 - :cost: 
   :description: 'Are you interested in getting new customers for your business, but
@@ -257,16 +272,19 @@
     :last_name: Precious Thompson
     :phone: 
     :post: Small Business Administration
-  :trade_regions:
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Western Hemisphere
-  - Pacific Rim
-  - North America
   :venues:
   - :address: 398 East Main Street
     :city: Tupelo
     :country: US
     :state: MS
     :venue: Renasant Center for IDEAs
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - NAFTA
+  - Trans Pacific Partnership
+  - CAFTA-DR
+  :world_regions:
+  - Western Hemisphere
+  - Pacific Rim
+  - North America
   :id: 0e05225b186c05b7fa124e6eb548b82e449dfb26
