@@ -231,7 +231,7 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_text('"country":"ALGERIA"')
     end
 
-    scenario 'admin user uploads JSON file' do
+    scenario 'admin user uploads JSON Object file' do
       visit '/'
 
       fill_in 'Email', with: 'test@gov.gov'
@@ -239,17 +239,38 @@ RSpec.feature 'Data Source management' do
       click_button 'Log in'
 
       click_link('+')
-      fill_in 'Name', with: 'Testing JSON'
+      fill_in 'Name', with: 'Testing JSON Object'
       fill_in 'Description', with: 'Testing JSON: Not published yet'
-      fill_in 'Api', with: 'json_records'
+      fill_in 'Api', with: 'json_object_records'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json.json")
       click_button('Create')
 
       check('Published')
       click_button('Update')
 
-      visit("/v1/json_records/search.json?api_key=#{@user.api_key}")
+      visit("/v1/json_object_records/search.json?api_key=#{@user.api_key}")
       expect(page).to have_text('"site":"United Kingdom"')
+    end
+
+    scenario 'admin user uploads JSON Array file' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button 'Log in'
+
+      click_link('+')
+      fill_in 'Name', with: 'Testing JSON Array'
+      fill_in 'Description', with: 'Testing JSON: Not published yet'
+      fill_in 'Api', with: 'json_array_records'
+      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json_array.json")
+      click_button('Create')
+
+      check('Published')
+      click_button('Update')
+
+      visit("/v1/json_array_records/search.json?api_key=#{@user.api_key}")
+      expect(page).to have_text('"name":"South Korea"')
     end
   end
 end
