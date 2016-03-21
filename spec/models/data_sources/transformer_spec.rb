@@ -67,15 +67,25 @@ describe DataSources::Transformer do
 
   context 'mapping from external API' do
     let(:transformer) do
-      transformation_array = [{ external_mapping: { url: 'https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE',
-                                                    result_path: '$[0].alpha2Code' } }]
+      transformation_array = [{ external_mapping: { urls: [
+        { url: 'https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE', result_path: '$[0].alpha2Code' },
+        { url: 'http://im.govwizely.com/api/terms.json?mapped_term=Missing%20Country:%20ORIGINAL_VALUE&source=TradeEvent::Ustda', result_path: '$[0].name' }
+      ] } }]
       DataSources::Transformer.new(metadata.merge(transformations: transformation_array))
     end
 
-    context 'mapping exists' do
+    context 'mapping exists in first URL' do
       it 'returns the appropriate substring' do
         VCR.use_cassette('importers/data_sources/external_mapping_transformation/ivory_coast.yml') do
           expect(transformer.transform('ivory coast')).to eq('CI')
+        end
+      end
+    end
+
+    context 'mapping exists in backfill URL' do
+      it 'returns the appropriate substring' do
+        VCR.use_cassette('importers/data_sources/external_mapping_transformation/seattle.yml') do
+          expect(transformer.transform('Seattle, WA')).to eq('United States')
         end
       end
     end
