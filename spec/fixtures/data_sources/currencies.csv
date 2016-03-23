@@ -1,3 +1,3 @@
-Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,vatcurrency,date,Notes
-Andorra,AD,12,EUR,15.5,EUR,2015-10-01,
-Armenia,AM,150000,AMD,,,2015-10-02,some notes
+tariff_line,Country,ISO-2 code,de minimis value,de minimis currency,VAT amount,vatcurrency,date,Notes
+01011000,Andorra,AD,12,EUR,15.5,EUR,2015-10-01,
+010210,Armenia,AM,150000,AMD,,,2015-10-02,some notes

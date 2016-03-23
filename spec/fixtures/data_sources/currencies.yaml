@@ -1,4 +1,10 @@
 ---
+:tariff_line:
+  :source: tariff_line
+  :description: Description of tariff_line
+  :indexed: true
+  :plural: false
+  :type: enum
 :country_name:
   :source: Country
   :description: Description of Country

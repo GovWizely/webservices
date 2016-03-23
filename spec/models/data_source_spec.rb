@@ -69,6 +69,7 @@ describe DataSource do
         end
         expect(results.first.iso_code).to eq('AM')
         expect(Webservices::ApiModels.constants).to include(:TestCurrency)
+        expect(results.first.tariff_line).to eq('010210')
       end
     end
 
