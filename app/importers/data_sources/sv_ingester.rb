@@ -6,7 +6,7 @@ module DataSources
     end
 
     def ingest
-      ingest_sv_options = { converters:        [->(f) { f ? f.squish : nil }, :date, :numeric],
+      ingest_sv_options = { converters:        [->(f) { f ? f.squish : nil }],
                             header_converters: [->(f) { convert_header(f) }],
                             headers:           true,
                             col_sep:           @col_sep,
