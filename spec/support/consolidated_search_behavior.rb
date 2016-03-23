@@ -112,7 +112,7 @@ shared_examples 'it contains all expected aggregations' do
 end
 
 shared_context 'a get by id endpoint with successful response' do |example|
-  let(:expected_result) { @all_possible_full_results[example[:source]].first.symbolize_keys }
+  let(:expected_result) { @all_possible_full_results[example[:source]].first.deep_symbolize_keys }
   let(:id) { expected_result[:id] }
   let(:resource_name) { example[:source].name.split('::').first.tableize }
 
@@ -132,7 +132,7 @@ shared_examples 'a successful get by id response' do |example|
   end
 
   it "returns #{example[:source]} JSON in the body" do
-    expect(JSON.parse(response.body).symbolize_keys).to eq(expected_result)
+    expect(JSON.parse(response.body).deep_symbolize_keys).to eq(expected_result)
   end
 end
 

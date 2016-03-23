@@ -34,7 +34,6 @@ Webservices::Application.routes.draw do
                 'parature_faq'         => 'ita_faqs',
                 'ita_office_locations' => 'ita_office_locations',
                 'ita_zip_codes'        => 'ita_zipcode_to_post',
-                'ita_taxonomy'         => 'ita_taxonomies',
      }
 
     mapping.each do |controller, path|
@@ -59,6 +58,12 @@ Webservices::Application.routes.draw do
 
     scope '/market_intelligence' do
       get 'search', to: 'salesforce_articles/consolidated#search'
+    end
+
+    scope '/ita_taxonomies' do
+      get 'search', to: 'ita_taxonomy#search'
+      get 'query_expansion', to: 'ita_taxonomy#query_expansion'
+      get ':id', to: 'ita_taxonomy#show', constraints: { id: /.+/ }, format: false
     end
   end
 
