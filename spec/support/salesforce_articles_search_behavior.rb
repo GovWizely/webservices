@@ -1,6 +1,5 @@
 shared_context 'all Salesforce Article data' do
   include_context 'SalesforceArticle::CountryCommercial data'
-  include_context 'SalesforceArticle::Generic data'
   include_context 'SalesforceArticle::MarketInsight data'
   include_context 'SalesforceArticle::StateReport data'
   include_context 'SalesforceArticle::TopMarkets data'
@@ -53,32 +52,6 @@ shared_examples 'it contains all SalesforceArticle::CountryCommercial results th
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_context 'SalesforceArticle::Generic data' do
-  before(:all) do
-    fixtures_path = "#{Rails.root}/spec/fixtures/salesforce_articles/generic_sobjects.yml"
-    client = StubbedRestforce.new(restforce_collection(fixtures_path))
-
-    SalesforceArticle::Generic.recreate_index
-    SalesforceArticle::GenericData.new(client).import
-
-    @all_possible_full_results ||= {}
-    @all_possible_full_results[SalesforceArticle::Generic] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/generic/results.json").read)
-  end
-end
-
-shared_examples 'it contains all SalesforceArticle::Generic results' do
-  let(:source) { SalesforceArticle::Generic }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all SalesforceArticle::Generic results that match first_published_date "2015-11-02 TO 2015-11-04"' do
-  let(:source) { SalesforceArticle::Generic }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
 shared_context 'SalesforceArticle::MarketInsight data' do
   before(:all) do
     fixtures_path = "#{Rails.root}/spec/fixtures/salesforce_articles/market_insight_sobjects.yml"
@@ -125,7 +98,13 @@ shared_examples 'it contains all SalesforceArticle::StateReport results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all SalesforceArticle::StateReport results that match end_date "2015-12-14 TO 2015-12-14"' do
+shared_examples 'it contains all SalesforceArticle::StateReport results that match first_published_date "2015-12-14 TO 2015-12-14"' do
+  let(:source) { SalesforceArticle::StateReport }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all SalesforceArticle::StateReport results that match last_published_date "2015-12-14 TO 2015-12-14"' do
   let(:source) { SalesforceArticle::StateReport }
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
