@@ -7,12 +7,10 @@ module SalesforceArticle
       @query_string ||= <<-SOQL
         SELECT Id,
                Atom__c,
-               Chapter__c,
                FirstPublishedDate,
                LastPublishedDate,
                Public_URL__c,
                References__c,
-               Section__c,
                Summary,
                Title,
                UrlName,

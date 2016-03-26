@@ -10,8 +10,6 @@ module SalesforceArticle
           properties: {
             _updated_at:          { type: 'date', format: 'strictDateOptionalTime' },
             atom:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            business_unit:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            chapter:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
             first_published_date: { type: 'date', format: 'YYYY-MM-dd' },
             last_published_date:  { type: 'date', format: 'YYYY-MM-dd' },
@@ -19,7 +17,6 @@ module SalesforceArticle
             public_url:           { type: 'string', index: 'not_analyzed' },
 
             references:           { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            section:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             summary:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 

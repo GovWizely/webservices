@@ -12,14 +12,13 @@ describe 'Consolidated Market Intelligence API', type: :request do
     context 'when search parameters are empty' do
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all SalesforceArticle::CountryCommercial results'
-      it_behaves_like 'it contains all SalesforceArticle::Generic results'
       it_behaves_like 'it contains all SalesforceArticle::MarketInsight results'
       it_behaves_like 'it contains all SalesforceArticle::StateReport results'
       it_behaves_like 'it contains all SalesforceArticle::TopMarkets results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
-          [SalesforceArticle::CountryCommercial, SalesforceArticle::Generic,
-           SalesforceArticle::MarketInsight, SalesforceArticle::StateReport, SalesforceArticle::TopMarkets]
+          [SalesforceArticle::CountryCommercial, SalesforceArticle::MarketInsight, 
+            SalesforceArticle::StateReport, SalesforceArticle::TopMarkets]
         end
       end
       it_behaves_like 'it contains all expected aggregations' do
@@ -92,14 +91,6 @@ describe 'Consolidated Market Intelligence API', type: :request do
           let(:sources) { [SalesforceArticle::CountryCommercial] }
         end
       end
-      context 'and is set to "generic"' do
-        let(:params) { { sources: 'generic' } }
-        it_behaves_like 'a successful search request'
-        it_behaves_like 'it contains all SalesforceArticle::Generic results'
-        it_behaves_like 'it contains only results with sources' do
-          let(:sources) { [SalesforceArticle::Generic] }
-        end
-      end
       context 'and is set to "market_insight"' do
         let(:params) { { sources: 'market_insight' } }
         it_behaves_like 'a successful search request'
@@ -127,11 +118,11 @@ describe 'Consolidated Market Intelligence API', type: :request do
     end
 
     context 'when first_published_date is specified' do
-      let(:params) { { sources: 'generic', first_published_date: '2015-11-02 TO 2015-11-04' } }
+      let(:params) { { sources: 'state_report', first_published_date: '2015-12-14 TO 2015-12-14' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all SalesforceArticle::Generic results that match first_published_date "2015-11-02 TO 2015-11-04"'
+      it_behaves_like 'it contains all SalesforceArticle::StateReport results that match first_published_date "2015-12-14 TO 2015-12-14"'
       it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [SalesforceArticle::Generic] }
+        let(:sources) { [SalesforceArticle::StateReport] }
       end
       it_behaves_like 'it contains all expected aggregations' do
         let(:expected_json) { 'salesforce_articles/all_sources/aggregations_with_first_published_date.json' }
@@ -141,7 +132,7 @@ describe 'Consolidated Market Intelligence API', type: :request do
     context 'when last_published_date is specified' do
       let(:params) { { sources: 'state_report', last_published_date: '2015-12-14 TO 2015-12-14' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all SalesforceArticle::StateReport results that match end_date "2015-12-14 TO 2015-12-14"'
+      it_behaves_like 'it contains all SalesforceArticle::StateReport results that match last_published_date "2015-12-14 TO 2015-12-14"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [SalesforceArticle::StateReport] }
       end
