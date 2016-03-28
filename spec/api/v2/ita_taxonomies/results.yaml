@@ -1,6 +1,57 @@
 ---
+- :id: RCFeONxXFzHO4GMg16HylOc
+  :label: China
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
+    :source: ISO 3166
+    :pref_label: China
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: R7YQAlNP4iXuBJLBhgPAcIO
+      :label: Asia Pacific Economic Cooperation
+    :has_broader:
+    - :id: RXTomSBCCC8TOjYuMKCB8p
+    - :id: RDAklO0LFVtjIoIUYj4Dg4M
+      :label: East Asia
+    :challenges_sovereignty_of:
+    - :id: R8UBTJoenDbXjYBjcyr1LXc
+    :has_dependent_territory:
+    - :id: RDlckOaeEMnijVCOZyb9ljp
+    - :id: ReBrW4erCA9bTkbUVAjWbG
+    :member_of:
+    - :id: R8W91u35GBegWcXXFflYE4
+      :label: Countries
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RKn0x8BGb8udkb77NaE1ch
+  :label: North America
+  :type:
+  - World Regions
+  :sub_class_of: []
+  :annotations:
+    :pref_label: North America
+  :datatype_properties: {}
+  :object_properties:
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+    :member_of:
+    - :id: R8cndKa2D8NuNg7djwJcXxB
+      :label: World Regions
+    :has_related:
+    - :id: RD1qG8h2SlYrcW9LSFriQ2d
+    - :id: R4Tyoniw0wZl3t7In4gVGW
+    :has_narrower:
+    - :id: R8CwJ8K2v1OQmxDmOcHfgSj
+    - :id: RBTBNP5i0kFGFdhQ82AFali
+    - :id: RC4HD9CwKjvgX8dSybAp3Sk
+      :label: United States
 - :id: R8CoATsjiZSLAZF4Aaz6kK6
   :label: Aerospace and Defense
+  :type:
+  - Industries
   :sub_class_of: []
   :annotations:
     :source: ITA
@@ -20,6 +71,8 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: RDBsKPGzqliWT5godmR5PDV
   :label: Aviation
+  :type:
+  - Sector
   :sub_class_of:
   - :id: R8CoATsjiZSLAZF4Aaz6kK6
     :label: Aerospace and Defense
@@ -49,6 +102,8 @@
       :label: Aerospace and Defense
 - :id: RDzjXT0GYF9ecQbq6oyxewD
   :label: Afghanistan
+  :type:
+  - Countries
   :sub_class_of: []
   :annotations:
     :pref_label: Afghanistan
@@ -77,6 +132,8 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: R91fGuW6GPOnb7XSylIPwR5
   :label: Asia
+  :type:
+  - World Regions
   :sub_class_of: []
   :annotations:
     :pref_label: Asia
@@ -93,13 +150,46 @@
     :has_narrower:
     - :id: RCS37S95UoFr6hEWf8oRfQs
     - :id: RDAklO0LFVtjIoIUYj4Dg4M
+      :label: East Asia
     - :id: R9pQ9NO7LyXj7vL7WbTAVVA
       :label: Central Asia
     - :id: RDkKRunNIRFsKUYmLHwIMyM
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+- :id: RDAklO0LFVtjIoIUYj4Dg4M
+  :label: East Asia
+  :type:
+  - World Regions
+  :sub_class_of:
+  - :id: R91fGuW6GPOnb7XSylIPwR5
+    :label: Asia
+  :annotations:
+    :source: ITA
+    :pref_label: East Asia
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RDlckOaeEMnijVCOZyb9ljp
+    - :id: R9ZT5LLJf5byfiLViWe4t6f
+    - :id: R8UBTJoenDbXjYBjcyr1LXc
+    - :id: R8oFX2wzpWfwf8vvoBkN9wJ
+    - :id: RCmoTnq3LUdBURmzkowDPn3
+    - :id: ReBrW4erCA9bTkbUVAjWbG
+    - :id: RDfDY0ur68lqxEDkatxoedV
+    - :id: RCFeONxXFzHO4GMg16HylOc
+      :label: China
+    :member_of:
+    - :id: R8cndKa2D8NuNg7djwJcXxB
+      :label: World Regions
+    :has_broader:
+    - :id: R91fGuW6GPOnb7XSylIPwR5
+      :label: Asia
+    :is_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: R9pQ9NO7LyXj7vL7WbTAVVA
   :label: Central Asia
+  :type:
+  - World Regions
   :sub_class_of:
   - :id: R91fGuW6GPOnb7XSylIPwR5
     :label: Asia
@@ -130,6 +220,8 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: RBUhToH9SFoFVriuHfHzcvT
   :label: International Cooperation
+  :type:
+  - Topics
   :sub_class_of: []
   :annotations:
     :pref_label: International Cooperation
@@ -163,6 +255,7 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: RBb72pZnfGSZApKbgfMfARC
   :label: Regional Organizations
+  :type: []
   :sub_class_of:
   - :id: RBUhToH9SFoFVriuHfHzcvT
     :label: International Cooperation
@@ -179,6 +272,7 @@
     - :id: RDrX1xLUDh7oA05RQ3JXshC
       :label: Economic Cooperation Organization
     - :id: R7YQAlNP4iXuBJLBhgPAcIO
+      :label: Asia Pacific Economic Cooperation
     - :id: RBVtSvNA1oiRIdyxG4yQW2U
     - :id: RDzPvl6rgNC4szHLAsCM13
     - :id: R9nJqgMeNaqj7yvDxwmS9u
@@ -194,8 +288,57 @@
     :has_broader:
     - :id: RBUhToH9SFoFVriuHfHzcvT
       :label: International Cooperation
+- :id: R7YQAlNP4iXuBJLBhgPAcIO
+  :label: Asia Pacific Economic Cooperation
+  :type:
+  - Trade Regions
+  :sub_class_of:
+  - :id: RBb72pZnfGSZApKbgfMfARC
+    :label: Regional Organizations
+  :annotations:
+    :alt_label: APEC
+    :source: ITA
+    :pref_label: Asia Pacific Economic Cooperation
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: RXTomSBCCC8TOjYuMKCB8p
+    :has_narrower:
+    - :id: RC89POWcmFspXvpRIOHvjB9
+    - :id: R8fTGfwFBERSngpANw3HP8a
+    - :id: R8wg4JegCG36uQR9LuomLFg
+    - :id: RC4HD9CwKjvgX8dSybAp3Sk
+      :label: United States
+    - :id: R6OsGHPcOskVYbghdvcPiw
+    - :id: RCFeONxXFzHO4GMg16HylOc
+      :label: China
+    - :id: ReBrW4erCA9bTkbUVAjWbG
+    - :id: R8sDBgF7EMZhgZUjx5EUhwi
+    - :id: RCQ11kK8mK2T6LWNJc1S0Dg
+    - :id: RBjxUaSQ4rQJHg0p6rppxuI
+    - :id: R8UBTJoenDbXjYBjcyr1LXc
+    - :id: RBTBNP5i0kFGFdhQ82AFali
+    - :id: RCMieQgqQN1unvmV8pUQ5Op
+    - :id: RDmEnPaeDKHRTMgjbarbJVz
+    - :id: R91qpLTTbKuO9oI9geGqQhv
+    - :id: RDWGCNborzo2DRbNKplJ7gb
+    - :id: R8CwJ8K2v1OQmxDmOcHfgSj
+    - :id: RDfDY0ur68lqxEDkatxoedV
+    - :id: RCnNAAeMPteY7EWU1GUOdvN
+    - :id: R8oFX2wzpWfwf8vvoBkN9wJ
+    - :id: RCi9wQpuzOAexRndBnKzfj0
+    :member_of:
+    - :id: R7ySyiNxcfeZ6bfNjhocNun
+      :label: Trade Regions
+    :is_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+    :has_broader:
+    - :id: RBb72pZnfGSZApKbgfMfARC
+      :label: Regional Organizations
 - :id: RDrX1xLUDh7oA05RQ3JXshC
   :label: Economic Cooperation Organization
+  :type:
+  - Trade Regions
   :sub_class_of:
   - :id: RBb72pZnfGSZApKbgfMfARC
     :label: Regional Organizations
@@ -230,6 +373,8 @@
       :label: Regional Organizations
 - :id: RC4HD9CwKjvgX8dSybAp3Sk
   :label: United States
+  :type:
+  - Countries
   :sub_class_of: []
   :annotations:
     :source: ISO 3166
@@ -324,7 +469,9 @@
     - :id: RD1qG8h2SlYrcW9LSFriQ2d
     - :id: R4Tyoniw0wZl3t7In4gVGW
     - :id: R7YQAlNP4iXuBJLBhgPAcIO
+      :label: Asia Pacific Economic Cooperation
     - :id: RKn0x8BGb8udkb77NaE1ch
+      :label: North America
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
     :member_of:
@@ -332,6 +479,7 @@
       :label: Countries
 - :id: R8W91u35GBegWcXXFflYE4
   :label: Countries
+  :type: []
   :sub_class_of: []
   :annotations:
     :comment: The International Standards Organization (ISO) maintains a list of country
@@ -342,6 +490,7 @@
   :object_properties: {}
 - :id: R79uIjoQaQ9KzvJfyB1H7Ru
   :label: Industries
+  :type: []
   :sub_class_of: []
   :annotations:
     :source: ITA
@@ -352,6 +501,7 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: RwdbpCsGlOI2iwaG4UqDl0
   :label: Sector
+  :type: []
   :sub_class_of:
   - :id: R79uIjoQaQ9KzvJfyB1H7Ru
     :label: Industries
@@ -363,6 +513,7 @@
   :object_properties: {}
 - :id: RBBed4Voz7iS3nUECA3yzNM
   :label: Topics
+  :type: []
   :sub_class_of: []
   :annotations:
     :source: UNCTAD/WTO
@@ -373,6 +524,7 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: R7ySyiNxcfeZ6bfNjhocNun
   :label: Trade Regions
+  :type: []
   :sub_class_of: []
   :annotations:
     :alt_label: Economic Groupings
@@ -384,6 +536,7 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: R8cndKa2D8NuNg7djwJcXxB
   :label: World Regions
+  :type: []
   :sub_class_of: []
   :annotations:
     :source: ITA

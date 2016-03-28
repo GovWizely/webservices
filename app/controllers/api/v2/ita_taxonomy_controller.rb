@@ -1,13 +1,9 @@
 class Api::V2::ItaTaxonomyController < Api::V2Controller
   include Searchable
-  include TaxonomyMethods
-  search_by :q
+  search_by :q, :types, :labels
 
   def query_expansion
-    @query_expansion = params.permit(search_params).require(:q)
-
-    @taxonomy_parser = TaxonomyParser.new(Rails.configuration.frozen_protege_source)
-    @taxonomy_parser.concepts = YAML.load_file(Rails.configuration.frozen_taxonomy_concepts)
+    @query_expansion = params.permit(search_params).require(:q).downcase
 
     @results = { query_expansion: build_json }
   end
@@ -20,14 +16,15 @@ class Api::V2::ItaTaxonomyController < Api::V2Controller
   private
 
   def build_json
-    relevant_labels = parse_query_expansion
-    query_response = add_geo_fields(relevant_labels)
+    search_results = ItaTaxonomy.search_related_terms(q: @query_expansion, types: 'Countries')
+
+    @related_terms = {}
+    parse_query_expansion(search_results)
 
     @query_expansion = strip_punctuation(@query_expansion)
 
-    query_response.each { |_key, array| build_queries(array) }
-
-    query_response
+    @related_terms.each { |_key, array| build_queries(array) }
+    @related_terms
   end
 
   def build_queries(array)
@@ -40,19 +37,12 @@ class Api::V2::ItaTaxonomyController < Api::V2Controller
     string.downcase.gsub(/[^a-z0-9\s]/i, '')
   end
 
-  def parse_query_expansion
-    labels = get_country_labels
-    parsed_values = []
-    labels.each do |label|
-      if @query_expansion.include?(label.downcase)
-        parsed_values.push(label)
-        @query_expansion.slice!(label.downcase)
+  def parse_query_expansion(search_results)
+    search_results.each do |term|
+      if @query_expansion.include?(term[:label].downcase)
+        @related_terms.merge!(term[:related_terms]) { |_key, old_val, new_val| old_val | new_val }
+        @query_expansion.slice!(term[:label].downcase)
       end
     end
-    parsed_values
-  end
-
-  def get_country_labels
-    @taxonomy_parser.get_concepts_by_concept_group('Countries').map { |term| term[:label] }
   end
 end

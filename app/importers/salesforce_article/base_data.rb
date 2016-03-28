@@ -23,8 +23,8 @@ module SalesforceArticle
     def initialize(client = nil)
       @client = client || Restforce.new(Rails.configuration.restforce)
 
-      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.frozen_protege_source)
-      @taxonomy_parser.concepts = YAML.load_file(Rails.configuration.frozen_taxonomy_concepts)
+      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.full_protege_source)
+      @taxonomy_parser.concepts = YAML.load_file(Rails.configuration.full_taxonomy_concepts)
     end
 
     def loaded_resource

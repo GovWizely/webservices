@@ -1,0 +1,499 @@
+---
+- :annotations:
+    :alt_label: Export Programs
+    :pref_label: U.S. Trade Programs
+    :definition: Statutory programs fostering development U.S. trade in global markets.
+  :sub_class_of: []
+  :label: U.S. Trade Programs
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/R0eVwyMsb9gB5wgpiXMMdq
+- :annotations:
+    :source: ITA
+    :pref_label: Industries
+  :sub_class_of: []
+  :label: Industries
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/RuR88TU55jqds0r58R9jJK
+      :label: Business and Professional Services
+    - :id: http://webprotege.stanford.edu/R9HvvsELVcu8mEDwMsvKaSg
+      :label: Safety and Security
+    - :id: http://webprotege.stanford.edu/RPKCOizTu2M4Qr7uMv8DsE
+      :label: Agribusiness
+    - :id: http://webprotege.stanford.edu/R8avQ7EVuRt7SLthCF7e4Lq
+      :label: Chemicals
+    - :id: http://webprotege.stanford.edu/R8FMWDa8xtTFM7PYVPAHNRo
+      :label: Equipment and Machinery
+    - :id: http://webprotege.stanford.edu/RCdX9tmNWXCfJuuQYeAAAJs
+      :label: Automotive
+    - :id: http://webprotege.stanford.edu/R9u5vLXS4JNQFPMdjGHghE3
+      :label: Distribution and Logistics
+    - :id: http://webprotege.stanford.edu/R7fKcF3Y1oc2rV1XkQf5jo8
+      :label: Public Sector
+    - :id: http://webprotege.stanford.edu/RB09qLH5aNGPju1PBmmetXL
+      :label: Travel and Tourism
+    - :id: http://webprotege.stanford.edu/R70ud2xUGmsLz7LIxxSQ5B0
+      :label: Non-Profits and Associations
+    - :id: http://webprotege.stanford.edu/RXNklYQyXhTgvl1opDfECS
+      :label: Information and Communication Technology
+    - :id: http://webprotege.stanford.edu/R8FTTB2AJ9DoSpvx9H2Pc5k
+      :label: Marine Technology
+    - :id: http://webprotege.stanford.edu/RCn8ngxUpyUpCDQ4QEv3ecn
+      :label: Healthcare
+    - :id: http://webprotege.stanford.edu/R8CoATsjiZSLAZF4Aaz6kK6
+      :label: Aerospace and Defense
+    - :id: http://webprotege.stanford.edu/RRtZ3Nz5qiadJCD7ymQoKI
+      :label: Wholesale Trade
+    - :id: http://webprotege.stanford.edu/Rr5qeVAB4hyFgHYSrNYxSs
+      :label: Environmental Technology
+    - :id: http://webprotege.stanford.edu/R7jKFUb3Wkm5WHoXcVe7PI7
+      :label: Textiles and Apparel
+    - :id: http://webprotege.stanford.edu/R8EUGBr6eW4UdRXRY2HpE49
+      :label: Energy
+    - :id: http://webprotege.stanford.edu/RWew4WD4YTj3Kkv5aTpN5e
+      :label: Consumer Goods
+    - :id: http://webprotege.stanford.edu/RcLCin3PUe26tSDvI7dXDh
+      :label: Industrial Materials
+    - :id: http://webprotege.stanford.edu/RPxUK7R9Y5t6XxoUOapJut
+      :label: Education
+    - :id: http://webprotege.stanford.edu/R9zaGPZ9yjWv1UeRtk8gzKh
+      :label: Design and Construction
+    - :id: http://webprotege.stanford.edu/RYjn03izDTAkhWQLNxqJaJ
+      :label: Franchising
+    - :id: http://webprotege.stanford.edu/R931063KTJDmZzB8UFcU4RE
+      :label: Financial Services
+    - :id: http://webprotege.stanford.edu/R8lDshhZ30qQxTEDQTALxvb
+      :label: Retail Trade
+    - :id: http://webprotege.stanford.edu/RDe7w1uWBJKRO0S1z5j0yMa
+      :label: Media and Entertainment
+    :sub_group:
+    - :id: http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0
+      :label: Sector
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru
+- :annotations:
+    :pref_label: Sector
+    :source: ITA
+    :alt_label: Industry Sector
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru
+    :label: Industries
+  :label: Sector
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/RGMjlRzxaHYjERmJXhDbkB
+      :label: Agricultural Equipment and Machinery
+    - :id: http://webprotege.stanford.edu/Rp7VtL6yMhqrhgAKaEcwkD
+      :label: Agricultural Biotechnology
+    - :id: http://webprotege.stanford.edu/RDryUcabrBP5oiSUb74NNI9
+      :label: Agricultural Commodities
+    - :id: http://webprotege.stanford.edu/RMA6bNRzlRkTJdrLuQHL0F
+      :label: Lawn and Garden Equipment
+    - :id: http://webprotege.stanford.edu/RDjHPaw1pYQMkFmYJscsHQu
+      :label: Forestry Equipment and Machinery
+    - :id: http://webprotege.stanford.edu/RC88khJQKahdqzgfyBuqa1H
+      :label: Agricultural Chemicals
+    :iso_thes:super_groupsuper_group:
+    - :id: http://webprotege.stanford.edu/R79uIjoQaQ9KzvJfyB1H7Ru
+      :label: Industries
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0
+- :annotations:
+    :source: ITA
+    :pref_label: Product Class
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0
+    :label: Sector
+  :label: Product Class
+  :datatype_properties: {}
+  :object_properties:
+    :iso_thes:super_groupsuper_group:
+    - :id: http://webprotege.stanford.edu/RwdbpCsGlOI2iwaG4UqDl0
+      :label: Sector
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX
+- :annotations:
+    :source: ITA
+    :pref_label: Product Category
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX
+    :label: Product Class
+  :label: Product Category
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+    :iso_thes:super_groupsuper_group:
+    - :id: http://webprotege.stanford.edu/RCSUVZOLMw17ZnTq4SY2JcX
+      :label: Product Class
+  :subject: http://webprotege.stanford.edu/R9f445fmumJA9obnz33Wwjw
+- :annotations:
+    :alt_label: Economic Groupings
+    :pref_label: Trade Regions
+    :comment: Trade regions as defined by the International Trade Administration
+  :sub_class_of: []
+  :label: Trade Regions
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/RDkqAkKpM7hCxY84UQAuLaj
+      :label: Common Market for Eastern and Southern Africa
+    - :id: http://webprotege.stanford.edu/RDzPvl6rgNC4szHLAsCM13
+      :label: South African Development Community
+    - :id: http://webprotege.stanford.edu/RB53lPnm186ivFLEXmbWylT
+      :label: Andean Community
+    - :id: http://webprotege.stanford.edu/RFHDdg8ngDrQ1rheh59xdL
+      :label: European Union - 28
+    - :id: http://webprotege.stanford.edu/R9H8fTryqnqoG9WBuzDGlGt
+      :label: Global System of Trade Preferences among Developing Countries
+    - :id: http://webprotege.stanford.edu/R9F1RDLoIBheBwbnkNUK5sh
+      :label: Gulf Cooperation Council
+    - :id: http://webprotege.stanford.edu/RDrX1xLUDh7oA05RQ3JXshC
+      :label: Economic Cooperation Organization
+    - :id: http://webprotege.stanford.edu/R7YQAlNP4iXuBJLBhgPAcIO
+      :label: Asia Pacific Economic Cooperation
+    - :id: http://webprotege.stanford.edu/Rm2y1xVfel9ehNUZvZKiE1
+      :label: Southern Common Market
+    - :id: http://webprotege.stanford.edu/RDUgllCOnvIkkxDg7dNcusj
+      :label: Economic and Monetary Community of Central Africa
+    - :id: http://webprotege.stanford.edu/RBYST5TkMsG3aOT9QMbCYFF
+      :label: African Growth and Opportunity Act
+    - :id: http://webprotege.stanford.edu/RMWO1fpkJ5LvTSEZyAAl3K
+      :label: Trans Pacific Partnership
+    - :id: http://webprotege.stanford.edu/RColoqFfo8G4Klm60b7QkwU
+      :label: Organization of the Petroleum Exporting Countries
+    - :id: http://webprotege.stanford.edu/RCpdyDrySS7LfsAk9JvjWfd
+      :label: Eurasian Economic Union
+    - :id: http://webprotege.stanford.edu/RIJ9QDqLBnZb8kAiGKqIyz
+      :label: NAFTA
+    - :id: http://webprotege.stanford.edu/R9nJqgMeNaqj7yvDxwmS9u
+      :label: Association of Southeast Asian Nations
+    - :id: http://webprotege.stanford.edu/R8WJPOGeQPthekFDAgqfmfX
+      :label: Caribbean Community and Common Market
+    - :id: http://webprotege.stanford.edu/R7cx7rFu68oTHnxTGMDgoRe
+      :label: European Free Trade Association
+    - :id: http://webprotege.stanford.edu/RBVtSvNA1oiRIdyxG4yQW2U
+      :label: Commonwealth of Independent States
+    - :id: http://webprotege.stanford.edu/RGHFvv0EAkgVEEklFu0O23
+      :label: South Asian Association for Regional Cooperation
+    - :id: http://webprotege.stanford.edu/RNZGitu3RBKIpasiwQxlpK
+      :label: CAFTA-DR
+    - :id: http://webprotege.stanford.edu/RFLXc4pqxjgrJXHW7QlWRS
+      :label: West African Economic and Monetary Union
+    - :id: http://webprotege.stanford.edu/R2hRDhgUBIzDSqa22tDdHt
+      :label: South African Customs Union
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/R7ySyiNxcfeZ6bfNjhocNun
+- :annotations:
+    :comment: The International Standards Organization (ISO) maintains a list of country
+      codes since 1974. Other standards bodies have adopted the ISO 3166 code list.
+    :source: ISO 3166
+    :pref_label: Countries
+  :sub_class_of: []
+  :label: Countries
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/R762SLDFJ5WfJI48KUhLQq7
+      :label: Argentina
+    - :id: http://webprotege.stanford.edu/R7maTidaiMMeu6GMYE85z8m
+      :label: Andorra
+    - :id: http://webprotege.stanford.edu/RB1lLvsuTCcxxkyOA7ZqHv2
+      :label: Bahamas
+    - :id: http://webprotege.stanford.edu/RBAQIDzP6yuHpyVOi7mTOad
+      :label: Bahrain
+    - :id: http://webprotege.stanford.edu/RDXjKihUhEKJOVRkiX3V0xz
+      :label: Aruba
+    - :id: http://webprotege.stanford.edu/RUXeWvtXzfnZOcThs5oRWn
+      :label: Algeria
+    - :id: http://webprotege.stanford.edu/R8q2Ky1xZLQT27BUPjjaSxj
+      :label: Barbados
+    - :id: http://webprotege.stanford.edu/RDzjXT0GYF9ecQbq6oyxewD
+      :label: Afghanistan
+    - :id: http://webprotege.stanford.edu/RDQgpGpIwkyrDvpcP502ud2
+      :label: Armenia
+    - :id: http://webprotege.stanford.edu/R76AYlil1RKwCEwpWhrfuc
+      :label: Bangladesh
+    - :id: http://webprotege.stanford.edu/RC8osZdeMm2ZJwrziPN80xG
+      :label: Albania
+    - :id: http://webprotege.stanford.edu/RBn7U4nuqEQqKyIqAUzYkZx
+      :label: Azerbaijan
+    - :id: http://webprotege.stanford.edu/R9C7cCcgAygyf72km3kQtgH
+      :label: Antigua and Barbuda
+    - :id: http://webprotege.stanford.edu/RDmEnPaeDKHRTMgjbarbJVz
+      :label: Australia
+    - :id: http://webprotege.stanford.edu/R84nw4WNc0fumIPTJgoezSE
+      :label: Austria
+    - :id: http://webprotege.stanford.edu/RCHQeOnfT0xfDPZJqmPxA8B
+      :label: Anguilla
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
+- :annotations:
+    :definition: List of countries that have free trade and trade promotion agreements
+      with the United States
+    :pref_label: Free Trade Agreement Countries
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
+    :label: Countries
+  :label: Free Trade Agreement Countries
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/R8sDBgF7EMZhgZUjx5EUhwi
+      :label: Peru
+    - :id: http://webprotege.stanford.edu/R9nHCrUvk1zAfw2LwLGfNPs
+      :label: Morocco
+    - :id: http://webprotege.stanford.edu/RBAQIDzP6yuHpyVOi7mTOad
+      :label: Bahrain
+    - :id: http://webprotege.stanford.edu/R8YK1KsZR58hwks0ItoTewJ
+      :label: Nicaragua
+    - :id: http://webprotege.stanford.edu/RdnQTB8Nj3DMWYP21jyvb2
+      :label: Panama
+    - :id: http://webprotege.stanford.edu/RC2kPbFaay664IRdHYfk5rK
+      :label: Honduras
+    - :id: http://webprotege.stanford.edu/RDWGCNborzo2DRbNKplJ7gb
+      :label: Vietnam
+    - :id: http://webprotege.stanford.edu/RCi9wQpuzOAexRndBnKzfj0
+      :label: New Zealand
+    - :id: http://webprotege.stanford.edu/RBszX0U6TGg6P1vYxcho8GX
+      :label: Guatemala
+    - :id: http://webprotege.stanford.edu/RDfDY0ur68lqxEDkatxoedV
+      :label: Japan
+    - :id: http://webprotege.stanford.edu/RBTBNP5i0kFGFdhQ82AFali
+      :label: Canada
+    - :id: http://webprotege.stanford.edu/R8oFX2wzpWfwf8vvoBkN9wJ
+      :label: South Korea
+    - :id: http://webprotege.stanford.edu/R9m3IjtfdhzMj2CRE5IqXLw
+      :label: Dominican Republic
+    - :id: http://webprotege.stanford.edu/R4xJx4A80SVrtzqB9CTOnE
+      :label: Oman
+    - :id: http://webprotege.stanford.edu/RDmEnPaeDKHRTMgjbarbJVz
+      :label: Australia
+    - :id: http://webprotege.stanford.edu/RCQ11kK8mK2T6LWNJc1S0Dg
+      :label: Singapore
+    - :id: http://webprotege.stanford.edu/RBjxUaSQ4rQJHg0p6rppxuI
+      :label: Chile
+    - :id: http://webprotege.stanford.edu/RC88gcQj9C5qKRAgVRLOUBn
+      :label: El Salvador
+    - :id: http://webprotege.stanford.edu/R83RBxX91o3z1pt0cXjXvgN
+      :label: Colombia
+    - :id: http://webprotege.stanford.edu/R6OsGHPcOskVYbghdvcPiw
+      :label: Brunei
+    - :id: http://webprotege.stanford.edu/RbYFSx2IpeERenf8qTisQr
+      :label: Israel
+    - :id: http://webprotege.stanford.edu/RCnNAAeMPteY7EWU1GUOdvN
+      :label: Malaysia
+    - :id: http://webprotege.stanford.edu/RcoC6hxvjY1WRMKV6cW3US
+      :label: Costa Rica
+    - :id: http://webprotege.stanford.edu/R8CwJ8K2v1OQmxDmOcHfgSj
+      :label: Mexico
+    - :id: http://webprotege.stanford.edu/RLNkCTY2cc77k9Y1jOW6Xv
+      :label: Jordan
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+    :iso_thes:super_groupsuper_group:
+    - :id: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
+      :label: Countries
+  :subject: http://webprotege.stanford.edu/RCzwUJdLiYabKMRXxVGNvf8
+- :annotations: {}
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4
+    :label: Countries
+  :label: Countries by status
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+- :annotations: {}
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Independent State
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/R5hDWPH1JBww3cDmzCxNf8
+- :annotations:
+    :comment: 'Self-governing to some limited degree; considered an integral part
+      of an independent country. Example: Christmas Island is a territory of Australia;
+      administered by the Australian Department of Transport and Regional Services.
+      Christmas Island does not have the right to move to full independence by unilateral
+      action.'
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Fully Dependent Territory
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/R7M8mdkemRyxz15TmEssvNP
+- :annotations:
+    :comment: 'No government body exists. The territory is not or cannot be claimed
+      by an independent country. Example: Antarctica is unclaimed resp. unclaimable
+      territory. An Antarctic Treaty was negotiated that neither denies nor gives
+      recognition to existing territorial claims.'
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Unclaimed Territory
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/R7t6wK3B5vUlkmdz0ZD691V
+- :annotations:
+    :comment: 'A disputed state is regarded as an independent state by its own population
+      (or at least the majority of them) and has been recognized as independent by
+      some international body (e.g. the U.N.) at some point in the past. However,
+      a disputed territorys status of independence is questioned by some other independent
+      country/countries. Example: The Republic of China (Taiwan) and the Peoples Republic
+      of China hold differing views on the sovereignty of Taiwan.'
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Independent Disputed State
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/R9Zo7Mx746ac8rmZe3QmOZI
+- :annotations: {}
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Occupied Territory
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/RCJEJ9nZtqaOIee9O6jW1IF
+- :annotations:
+    :comment: 'Self-governing in free association with some independent country. An
+      assoiated state is neither occupied nor annexed, nor is its territory considered
+      an integral part of the country it is associated with. Example: Cook Islands
+      is fully responsible for internal affairs; New Zealand retains responsibility
+      for external affairs and defense, in consultation with the Cook Islands. Cook
+      Islands has the right at any time to move to full independence by unilateral
+      action.'
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Associated State
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/RDme3grvZASRNzfHoPWpF9p
+- :annotations: {}
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Virtually Annexed Territory
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/RoKwQm8PrcRiReHjYHL8uy
+- :annotations: {}
+  :sub_class_of:
+  - :id: http://webprotege.stanford.edu/RDhJROAIGsxgfbTwDSShcXp
+    :label: Countries by status
+  :label: Virtual Territory
+  :datatype_properties: {}
+  :object_properties: {}
+  :subject: http://webprotege.stanford.edu/RuhbQn5Q9uu7iImaGInX1E
+- :annotations:
+    :pref_label: World Regions
+    :source: ITA
+  :sub_class_of: []
+  :label: World Regions
+  :datatype_properties: {}
+  :object_properties:
+    :has_member:
+    - :id: http://webprotege.stanford.edu/R91fGuW6GPOnb7XSylIPwR5
+      :label: Asia
+    - :id: http://webprotege.stanford.edu/RC7yMOkNtsKp6PxYXaWc3He
+      :label: South America
+    - :id: http://webprotege.stanford.edu/R4Tyoniw0wZl3t7In4gVGW
+      :label: Pacific Rim
+    - :id: http://webprotege.stanford.edu/RXTomSBCCC8TOjYuMKCB8p
+      :label: Asia Pacific
+    - :id: http://webprotege.stanford.edu/RBNzCOB6MPHkIcAr36FNe4Q
+      :label: Latin America
+    - :id: http://webprotege.stanford.edu/RKn0x8BGb8udkb77NaE1ch
+      :label: North America
+    - :id: http://webprotege.stanford.edu/RD1qG8h2SlYrcW9LSFriQ2d
+      :label: Western Hemisphere
+    - :id: http://webprotege.stanford.edu/R8jA4PYXwc54qC4JAPsIPAS
+      :label: Middle East
+    - :id: http://webprotege.stanford.edu/R9jQGVCde409dLI33OeiaA2
+      :label: Oceania
+    - :id: http://webprotege.stanford.edu/RYpfofeF7tAALNfD2cMbaP
+      :label: Africa
+    - :id: http://webprotege.stanford.edu/RCfzc4dWuOqaPqi54K84IZi
+      :label: Caribbean
+    - :id: http://webprotege.stanford.edu/RSdD0vStFEjovpmpaEuydN
+      :label: Central America
+    - :id: http://webprotege.stanford.edu/RCdAtPyF8RRyB9AuFgtFJo
+      :label: Europe
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :subject: http://webprotege.stanford.edu/R8cndKa2D8NuNg7djwJcXxB
+- :annotations:
+    :source: UNCTAD/WTO
+    :pref_label: Topics
+  :sub_class_of: []
+  :label: Topics
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+    :has_member:
+    - :id: http://webprotege.stanford.edu/RnMRx1ORiHCryGG8eYoLRy
+      :label: Market Access
+    - :id: http://webprotege.stanford.edu/R9jLPKfWTh1Ahmu7TUPDD3r
+      :label: Transport and Logistics
+    - :id: http://webprotege.stanford.edu/RBUhToH9SFoFVriuHfHzcvT
+      :label: International Cooperation
+    - :id: http://webprotege.stanford.edu/R8BLV1oE8xTUYdFwUggwygj
+      :label: Information Management
+    - :id: http://webprotege.stanford.edu/RBp1CB2HtM1iuDo7k5pD7xp
+      :label: Government
+    - :id: http://webprotege.stanford.edu/RDlBzieEBJR6LAcbiT7mdYC
+      :label: Trade Policy and Agreements
+    - :id: http://webprotege.stanford.edu/R1Pqetus0zStszG5ac99uy
+      :label: Trade Development and Promotion
+    - :id: http://webprotege.stanford.edu/R7XExh43yOqMbR9jM1CvjcJ
+      :label: Finance
+    - :id: http://webprotege.stanford.edu/R91Dng1U47EaYAk2N8v1S3K
+      :label: Business Management
+    - :id: http://webprotege.stanford.edu/RMvKLrg0FaSFb9QNIKHW9k
+      :label: Law
+    - :id: http://webprotege.stanford.edu/RDggmJFvZyv9D2iYTnFSktH
+      :label: Economic Development and Investment
+    - :id: http://webprotege.stanford.edu/R7TsAWhsC9p8afNpKKHhwZp
+      :label: Environment
+  :subject: http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM
+- :annotations:
+    :definition: Initiatives are programs or processes sponsored by government administration
+      or management, but not statutorily mandated.
+    :pref_label: U.S. Trade Initiatives
+    :alt_label: Export Initiatives
+  :sub_class_of: []
+  :label: U.S. Trade Initiatives
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+    - :id: http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+    :has_member:
+    - :id: http://webprotege.stanford.edu/RDyqovrIwUW78KzmCIaMIKE
+      :label: Global Cities Initiative
+  :subject: http://webprotege.stanford.edu/RBqqOvJ9rXMcmc5SDhGjWTp

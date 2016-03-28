@@ -57,14 +57,9 @@
   - http://bit.ly/1Kyo80o
   :ita_industries: []
   :country: CA
-  :trade_regions:
-  - NAFTA
-  - Asia Pacific Economic Cooperation
-  - Trans Pacific Partnership
-  :world_regions:
-  - Pacific Rim
-  - North America
-  - Western Hemisphere
+  :country_name: Canada
+  :trade_regions: []
+  :world_regions: []
   :source: CANADA
 - :language: English
   :title: LINER,COVERALLS,CHEMICAL PROTECTIVE (W8486-140835/A)
@@ -142,14 +137,9 @@
   - http://bit.ly/1L4afO7
   :ita_industries: []
   :country: CA
-  :trade_regions:
-  - NAFTA
-  - Asia Pacific Economic Cooperation
-  - Trans Pacific Partnership
-  :world_regions:
-  - Pacific Rim
-  - North America
-  - Western Hemisphere
+  :country_name: Canada
+  :trade_regions: []
+  :world_regions: []
   :source: CANADA
 - :language: English
   :title: CSC-MTL Meat - Poultry (21301-148239/A)
@@ -222,14 +212,9 @@
   - http://bit.ly/1L4ag4G
   :ita_industries: []
   :country: CA
-  :trade_regions:
-  - NAFTA
-  - Asia Pacific Economic Cooperation
-  - Trans Pacific Partnership
-  :world_regions:
-  - Pacific Rim
-  - North America
-  - Western Hemisphere
+  :country_name: Canada
+  :trade_regions: []
+  :world_regions: []
   :source: CANADA
 - :language: English
   :title: Notice of interest consultant services agreement (open) (21301-14-2002178)
@@ -265,14 +250,9 @@
   - http://bit.ly/1L4agl7
   :ita_industries: []
   :country: CA
-  :trade_regions:
-  - NAFTA
-  - Asia Pacific Economic Cooperation
-  - Trans Pacific Partnership
-  :world_regions:
-  - Pacific Rim
-  - North America
-  - Western Hemisphere
+  :country_name: Canada
+  :trade_regions: []
+  :world_regions: []
   :source: CANADA
 - :language: English
   :title: SERVICES, LANGUAGE TRAINING PROGRA (51019-132011/A)
@@ -299,7 +279,8 @@
     to Govt
   :procurement_organization: Public Works & Government Services Canada
   :implementing_entity: Veterans Affairs Canada
-  :description: 'Trade Agreement: equipment required for the classroom tutoring; VAC must ensure that each user is followi'
+  :description: 'Trade Agreement: equipment required for the classroom tutoring; VAC
+    must ensure that each user is followi'
   :contact: 'Souleiman, Mohamed, (819) 956-8348 ( ), (819) 956-2675, PSBID, PWGSC
     / DIASP,TPSGC 11 Laurier St. / 11, rue Laurier 10C1/Place du Portage, Phase III
     Gatineau Québec K1A 0S5 Telephone No.: (819) 956-8348 ( ) Facsimile No.: (819)
@@ -309,12 +290,7 @@
   :urls: 
   :ita_industries: []
   :country: CA
-  :trade_regions:
-  - NAFTA
-  - Asia Pacific Economic Cooperation
-  - Trans Pacific Partnership
-  :world_regions:
-  - Pacific Rim
-  - North America
-  - Western Hemisphere
+  :country_name: Canada
+  :trade_regions: []
+  :world_regions: []
   :source: CANADA

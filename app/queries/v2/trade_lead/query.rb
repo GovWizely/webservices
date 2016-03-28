@@ -1,5 +1,7 @@
 module V2::TradeLead
   class Query < ::Query
+    include QueryParser
+
     attr_reader :countries, :sources
     aggregate_terms_by countries:     { field: 'country' },
                        sources:       { field: 'source' },
@@ -20,6 +22,7 @@ module V2::TradeLead
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
 
       set_geo_instance_variables(options)
+      parse_query unless @q.nil?
     end
 
     private
@@ -34,9 +37,9 @@ module V2::TradeLead
                 json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) }
               end
             end
-          end if @q
+          end unless @q.blank?
         end
-      end if @q || any_field_exist?
+      end if !@q.blank? || any_field_exist?
     end
 
     def generate_filtered(json)
@@ -49,6 +52,7 @@ module V2::TradeLead
             generate_date_range(json, 'end_date', @end_date) if @end_date
             generate_industries_filter(json)
             generate_geo_filters(json, 'country')
+            json.child! { json.terms { json.country_name @country_names } } if @country_names
           end
         end
       end if any_field_exist?
@@ -59,7 +63,7 @@ module V2::TradeLead
     end
 
     def any_field_exist?
-      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended || @trade_regions || @world_regions
+      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended || @trade_regions || @world_regions || @country_names
     end
 
     def generate_industries_filter(json)

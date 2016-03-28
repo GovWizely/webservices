@@ -17,6 +17,15 @@
       "Robotics"
     ],
     "url": null,
+    "venues": [
+      {
+        "city": "Tel Aviv",
+        "country": "IL",
+        "state": null,
+        "venue": "International Convention Center, Haifa, Israel",
+        "country_name": "Israel"
+      }
+    ],
     "contacts": [
       {
         "email": "Yael.Torres@trade.gov",
@@ -28,18 +37,13 @@
       }
     ],
     "source": "ITA",
-    "venues": [{
-      "venue": "International Convention Center, Haifa, Israel",
-      "city": "Tel Aviv",
-      "state": null,
-      "country": "IL"
-    }],
     "trade_regions": [
-    
+      "Trade Region 1",
+      "Trade Region 2"
     ],
     "world_regions": [
-      "Levant",
-      "Middle East"
+      "World Region 1",
+      "World Region 2"
     ]
   },
   {
@@ -56,6 +60,15 @@
 
     ],
     "url": null,
+    "venues": [
+      {
+        "city": "Pewaukee",
+        "country": "US",
+        "state": "WI",
+        "venue": "WCTC - Richard T Anderson Building",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "Koreen.Grube@trade.gov",
@@ -67,22 +80,13 @@
       }
     ],
     "source": "ITA",
-    "venues": [{
-      "venue": "WCTC - Richard T Anderson Building",
-      "city": "Pewaukee",
-      "state": "WI",
-      "country": "US"
-      }],
     "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trade Region 1",
+      "Trade Region 2"
     ],
     "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
-      "North America"
+      "World Region 1",
+      "World Region 2"
     ]
   },
   {
@@ -104,6 +108,15 @@
       "Port/Shipbuilding Eq."
     ],
     "url": "www.workboatshow.com",
+    "venues": [
+      {
+        "city": "New Orleans, Louisiana",
+        "country": "US",
+        "state": "LA",
+        "venue": "Morial Convention Center, New Orleans, Louisiana",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "Benedicta.Nkwoh@trade.gov",
@@ -139,22 +152,13 @@
       }
     ],
     "source": "ITA",
-    "venues": [{
-      "venue": "Morial Convention Center, New Orleans, Louisiana",
-      "city": "New Orleans, Louisiana",
-      "state": "LA",
-      "country": "US"
-      }],
     "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trade Region 1",
+      "Trade Region 2"
     ],
     "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
-      "North America"
+      "World Region 1",
+      "World Region 2"
     ]
   },
   {
@@ -172,6 +176,15 @@
       "Medical Eq."
     ],
     "url": "http://www.hospitalar.com/ingles/index.html",
+    "venues": [
+      {
+        "city": "São Paulo",
+        "country": "BR",
+        "state": null,
+        "venue": "Expo Center Norte",
+        "country_name": "Brazil"
+      }
+    ],
     "contacts": [
       {
         "email": "Jefferson.Oliveira@trade.gov",
@@ -207,20 +220,13 @@
       }
     ],
     "source": "ITA",
-    "venues": [{
-      "venue": "Expo Center Norte",
-      "city": "São Paulo",
-      "state": null,
-      "country": "BR"
-      }],
     "trade_regions": [
-      "Southern Common Market",
-      "Global System of Trade Preferences among Developing Countries"
+      "Trade Region 1",
+      "Trade Region 2"
     ],
     "world_regions": [
-      "South America",
-      "Western Hemisphere",
-      "Latin America"
+      "World Region 1",
+      "World Region 2"
     ]
   }
 ]

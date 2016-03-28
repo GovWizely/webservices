@@ -7,7 +7,12 @@ module TradeLead
                         rescue
                           nil
                         end
-      entry.merge! add_geo_fields([entry[:country]])
+      entry[:country_name] = begin
+                               IsoCountryCodes.find(entry[:country]).name
+                             rescue
+                               nil
+                             end
+      entry.merge! add_related_fields([entry[:country_name]])
     end
 
     def extract_end_date(entry)

@@ -1,0 +1,84 @@
+---
+- :label: China
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions:
+    - Asia Pacific Economic Cooperation
+    :world_regions:
+    - East Asia
+    - Asia
+- :label: North America
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: Aerospace and Defense
+  :type:
+  - Industries
+  :related_terms: {}
+- :label: Aviation
+  :type:
+  - Sector
+  :related_terms: {}
+- :label: Afghanistan
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions:
+    - Economic Cooperation Organization
+    :world_regions:
+    - Central Asia
+    - Asia
+- :label: Asia
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: East Asia
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: Central Asia
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: International Cooperation
+  :type:
+  - Topics
+  :related_terms: {}
+- :label: Regional Organizations
+  :type: []
+  :related_terms: {}
+- :label: Asia Pacific Economic Cooperation
+  :type:
+  - Trade Regions
+  :related_terms: {}
+- :label: Economic Cooperation Organization
+  :type:
+  - Trade Regions
+  :related_terms: {}
+- :label: United States
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions:
+    - Asia Pacific Economic Cooperation
+    :world_regions:
+    - North America
+- :label: Countries
+  :type: []
+  :related_terms: {}
+- :label: Industries
+  :type: []
+  :related_terms: {}
+- :label: Sector
+  :type: []
+  :related_terms: {}
+- :label: Topics
+  :type: []
+  :related_terms: {}
+- :label: Trade Regions
+  :type: []
+  :related_terms: {}
+- :label: World Regions
+  :type: []
+  :related_terms: {}

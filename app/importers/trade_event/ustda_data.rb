@@ -109,15 +109,20 @@ module TradeEvent
           venue_xpaths[key] = value % venue_number
         end
         venue = extract_fields(entry, venue_xpaths)
-        venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
         venue[:country] = get_missing_country(venue[:venue]) if venue[:country].blank? && !venue[:venue].blank?
+        venue[:country_name] = begin
+                                 venue[:country].dup
+                               rescue
+                                 nil
+                               end
+        venue[:country] = lookup_country(venue[:country]) unless venue[:country].blank?
 
         venue.values.all?(&:blank?) ? nil : venue
       end.compact
     end
 
     def process_geo_fields(event)
-      event.merge! add_geo_fields(event[:venues].map { |v| v[:country] })
+      event.merge! add_related_fields(event[:venues].map { |v| v[:country_name] })
     end
   end
 end

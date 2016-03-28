@@ -46,7 +46,8 @@ module TradeLead
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
       entry[:country] = 'AU'
-      entry.merge! add_geo_fields([entry[:country]])
+      entry[:country_name] = 'Australia'
+      entry.merge! add_related_fields([entry[:country_name]])
       entry = process_urls(entry)
       entry[:source] = TradeLead::Australia.source[:code]
       entry

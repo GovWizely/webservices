@@ -1,16 +1,23 @@
 {
   "world_regions": [
     {
-      "key": "Levant",
+      "key": "World Region 1",
       "doc_count": 1
     },
     {
-      "key": "Middle East",
+      "key": "World Region 2",
       "doc_count": 1
     }
   ],
   "trade_regions": [
-
+    {
+      "key": "Trade Region 1",
+      "doc_count": 1
+    },
+    {
+      "key": "Trade Region 2",
+      "doc_count": 1
+    }
   ],
   "countries": [
     {

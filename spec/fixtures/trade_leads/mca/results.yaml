@@ -12,13 +12,9 @@
   - CPV/03130000
   - deadline/2015/Apr/30
   :country: SN
-  :trade_regions:
-  - African Growth and Opportunity Act
-  - West African Economic and Monetary Union
-  :world_regions:
-  - West Africa
-  - Africa
-  - Sub-Saharan Africa
+  :country_name: Senegal
+  :trade_regions: []
+  :world_regions: []
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: abb09c7f27d1c6b51ebabbf07336d7f433b85b41
@@ -34,13 +30,9 @@
   - CPV/79310000
   - deadline/2015/May/05
   :country: SN
-  :trade_regions:
-  - African Growth and Opportunity Act
-  - West African Economic and Monetary Union
-  :world_regions:
-  - West Africa
-  - Africa
-  - Sub-Saharan Africa
+  :country_name: Senegal
+  :trade_regions: []
+  :world_regions: []
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: 842e2c43f741ea37085e36d620371f1944d07ef4
@@ -53,13 +45,9 @@
   - CPV/45232450
   - deadline/2015/Apr/28
   :country: ZM
-  :trade_regions:
-  - South African Development Community
-  - African Growth and Opportunity Act
-  - Common Market for Eastern and Southern Africa
-  :world_regions:
-  - Sub-Saharan Africa
-  - Africa
+  :country_name: Zambia
+  :trade_regions: []
+  :world_regions: []
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: 46b9a74ea366cab0ad21598292acb3e865ef22f0

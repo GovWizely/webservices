@@ -6,7 +6,9 @@ describe 'Consolidated Trade Events API V2', type: :request do
 
   describe 'GET /trade_events/search' do
     let(:params) { { size: 100 } }
-    before { get '/v2/trade_events/search', params, @v2_headers }
+    before do
+      get '/v2/trade_events/search', params, @v2_headers
+    end
     subject { response }
 
     context 'when search parameters are empty' do
@@ -224,18 +226,18 @@ describe 'Consolidated Trade Events API V2', type: :request do
     end
 
     context 'when trade_regions is specified' do
-      let(:params) { { sources: 'ITA', trade_regions: 'Southern Common Market, Asia Pacific Economic Cooperation' } }
+      let(:params) { { trade_regions: 'Trade Region 1, Trade Region 2' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results that match trade_regions "Southern Common Market" and "Asia Pacific Economic Cooperation"'
+      it_behaves_like 'it contains all TradeEvent::Ita results with trade regions'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita] }
       end
     end
 
     context 'when world_regions is specified' do
-      let(:params) { { sources: 'ITA', world_regions: 'Levant, South America' } }
+      let(:params) { { world_regions: 'World Region 1, World Region 2' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results that match world_regions "Levant" and "South America"'
+      it_behaves_like 'it contains all TradeEvent::Ita results with world regions'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita] }
       end

@@ -7,23 +7,23 @@ class ItaTaxonomyData
 
   def initialize(resource = nil)
     resource = Rails.configuration.protege_url if resource.nil?
-    @parser = TaxonomyParser.new(resource)
+    @taxonomy_parser = TaxonomyParser.new(resource)
   end
 
   def import
-    @parser.parse
+    @taxonomy_parser.parse
     ItaTaxonomy.index build_json_entries
   end
 
   def loaded_resource
-    @parser.raw_source
+    @taxonomy_parser.raw_source
   end
 
   private
 
   def build_json_entries
     processed_entries = []
-    taxonomy_terms = @parser.concepts + @parser.concept_groups + @parser.concept_schemes
+    taxonomy_terms = @taxonomy_parser.concepts + @taxonomy_parser.concept_groups + @taxonomy_parser.concept_schemes
 
     taxonomy_terms.each do |entry|
       process_entry(entry)
@@ -34,6 +34,8 @@ class ItaTaxonomyData
 
   def process_entry(entry)
     process_ids(entry)
+    entry[:type] = get_concept_groups(entry)
+    entry[:related_terms] = entry[:type].include?('Countries') ? add_geo_fields([entry[:label]]) : {}
   end
 
   def process_ids(entry)
@@ -52,5 +54,13 @@ class ItaTaxonomyData
 
   def trim_id(id)
     id.slice!('http://webprotege.stanford.edu/')
+  end
+
+  def get_concept_groups(entry)
+    if entry[:object_properties].key?(:member_of)
+      entry[:object_properties][:member_of].map { |t| t[:label] }
+    else
+      []
+    end
   end
 end

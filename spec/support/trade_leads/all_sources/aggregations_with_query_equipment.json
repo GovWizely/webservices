@@ -1,85 +1,21 @@
 {
   "world_regions": [
     {
-      "key": "Europe",
-      "doc_count": 3
-    },
-    {
-      "key": "Pacific Rim",
-      "doc_count": 3
-    },
-    {
-      "key": "Africa",
-      "doc_count": 2
-    },
-    {
-      "key": "Asia Pacific",
-      "doc_count": 2
-    },
-    {
-      "key": "Oceania",
-      "doc_count": 2
-    },
-    {
-      "key": "Sub-Saharan Africa",
-      "doc_count": 2
-    },
-    {
-      "key": "Western Hemisphere",
-      "doc_count": 2
-    },
-    {
-      "key": "Latin America",
+      "key": "World Region 1",
       "doc_count": 1
     },
     {
-      "key": "North America",
-      "doc_count": 1
-    },
-    {
-      "key": "South America",
-      "doc_count": 1
-    },
-    {
-      "key": "West Africa",
+      "key": "World Region 2",
       "doc_count": 1
     }
   ],
   "trade_regions": [
     {
-      "key": "Asia Pacific Economic Cooperation",
-      "doc_count": 3
-    },
-    {
-      "key": "European Union - 28",
-      "doc_count": 3
-    },
-    {
-      "key": "Trans Pacific Partnership",
-      "doc_count": 3
-    },
-    {
-      "key": "African Growth and Opportunity Act",
-      "doc_count": 2
-    },
-    {
-      "key": "Common Market for Eastern and Southern Africa",
+      "key": "Trade Region 1",
       "doc_count": 1
     },
     {
-      "key": "Global System of Trade Preferences among Developing Countries",
-      "doc_count": 1
-    },
-    {
-      "key": "NAFTA",
-      "doc_count": 1
-    },
-    {
-      "key": "Southern Common Market",
-      "doc_count": 1
-    },
-    {
-      "key": "West African Economic and Monetary Union",
+      "key": "Trade Region 2",
       "doc_count": 1
     }
   ],

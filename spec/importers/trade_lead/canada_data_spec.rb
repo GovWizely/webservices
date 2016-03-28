@@ -59,8 +59,9 @@ describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/can
                         contact:                              'Reynolds( ), (888) 000-0000',
                         urls:                                 nil,
                         country:                              'CA',
-                        trade_regions:                        ['NAFTA', 'Asia Pacific Economic Cooperation', 'Trans Pacific Partnership'],
-                        world_regions:                        ['Pacific Rim', 'North America', 'Western Hemisphere'],
+                        country_name:                         'Canada',
+                        trade_regions:                        [],
+                        world_regions:                        [],
                         source:                               'CANADA',
                        )
     end

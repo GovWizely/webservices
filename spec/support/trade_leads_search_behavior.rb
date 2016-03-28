@@ -9,6 +9,16 @@ shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::Ustda data'
 end
 
+def import_with_dummy_related_terms(importer)
+  RSpec::Mocks.with_temporary_scope do
+    dummy_terms = [
+      { label: 'first match', related_terms: { trade_regions: ['Trade Region 1'], world_regions: ['World Region 1'] } },
+      { label: 'second match', related_terms: { trade_regions: ['Trade Region 2'], world_regions: ['World Region 2'] } },]
+    allow(ItaTaxonomy).to receive(:search_related_terms).and_return(dummy_terms)
+    importer.import
+  end
+end
+
 shared_context 'TradeLead::Australia data' do
   before(:all) do
     TradeLead::Australia.recreate_index
@@ -31,7 +41,7 @@ end
 
 shared_examples 'it contains all TradeLead::Australia results that match "equipment"' do
   let(:source) { TradeLead::Australia }
-  let(:expected) { [1, 2] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -43,7 +53,7 @@ end
 
 shared_examples 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04' do
   let(:source) { TradeLead::Australia }
-  let(:expected) { [0] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -77,13 +87,13 @@ end
 
 shared_examples 'it contains all TradeLead::Canada results that match "equipment"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [2] }
+  let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results that match "Montée"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [4] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
@@ -95,13 +105,13 @@ end
 
 shared_examples 'it contains all TradeLead::Canada results that match industries "Health Care Medical"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [1] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results where publish_date is 2014-03-20' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
@@ -249,9 +259,10 @@ shared_context 'TradeLead::Ustda data' do
     allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
     TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
-      TradeLead::UstdaData.new(
+      importer = TradeLead::UstdaData.new(
         "#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
-        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",).import
+        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",)
+      import_with_dummy_related_terms(importer)
     end
 
     @all_possible_full_results ||= {}
@@ -267,17 +278,17 @@ end
 
 shared_examples 'it contains all TradeLead::Ustda results that match "equipment"' do
   let(:source) { TradeLead::Ustda }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeLead::Ustda results where trade_regions is "African Growth and Opportunity Act"' do
+shared_examples 'it contains all TradeLead::Ustda results with trade_regions' do
   let(:source) { TradeLead::Ustda }
-  let(:expected) { [0] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"' do
+shared_examples 'it contains all TradeLead::Ustda results with world_regions' do
   let(:source) { TradeLead::Ustda }
   let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'

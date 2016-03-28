@@ -214,16 +214,16 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
     context 'when trade_regions is specified' do
       subject { response }
-      let(:params) { { sources: 'Ustda', trade_regions: 'African Growth and Opportunity Act' } }
+      let(:params) { { trade_regions: 'Trade Region 1' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Ustda results where trade_regions is "African Growth and Opportunity Act"'
+      it_behaves_like 'it contains all TradeLead::Ustda results with trade_regions'
     end
 
     context 'when world_regions is specified' do
       subject { response }
-      let(:params) { { sources: 'Ustda', world_regions: 'Africa, Central America' } }
+      let(:params) { { world_regions: 'World Region 2' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"'
+      it_behaves_like 'it contains all TradeLead::Ustda results with world_regions'
     end
   end
 
@@ -238,7 +238,8 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     context 'when trying to retrieve TradeLead::Canada data using a valid id' do
       let(:expected_result) do
         r = TradeLead::Consolidated.search_for(api_version: '2',
-                                               sources:     'canada',)[:hits][1]
+                                               sources:     'canada',
+                                              )[:hits].first
         @all_possible_full_results[TradeLead::Canada].first.merge(id: r[:_id]).symbolize_keys
       end
 

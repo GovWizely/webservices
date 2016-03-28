@@ -24,14 +24,9 @@
   :submitting_officer: Asike, Chuka
   :submitting_officer_contact: AsikeC@state.gov
   :id: DATATABLE.647
-  :trade_regions:
-  - Andean Community
-  - Global System of Trade Preferences among Developing Countries
-  :world_regions:
-  - Latin America
-  - South America
-  - Western Hemisphere
-  - Pacific Rim
+  :country_name: Colombia
+  :trade_regions: []
+  :world_regions: []
   :source: STATE
   :ita_industries: []
 - :title: Learning; Equity and Accountability Program Support Project
@@ -57,14 +52,9 @@
   :submitting_officer: Chuka Asike
   :submitting_officer_contact: asikec@state.gov
   :id: DATATABLE.538
-  :trade_regions:
-  - Global System of Trade Preferences among Developing Countries
-  - Association of Southeast Asian Nations
-  - Asia Pacific Economic Cooperation
-  :world_regions:
-  - Asia Pacific
-  - Southeast Asia
-  - Asia
+  :country_name: Philippines
+  :trade_regions: []
+  :world_regions: []
   :source: STATE
   :ita_industries: []
 - :title: Hamad Bin Khalifa Medical City - Construction of Simulation Centre
@@ -101,12 +91,9 @@
   :submitting_officer: Hala Rharrit
   :submitting_officer_contact: RharritH@state.gov
   :id: DATATABLE.174
-  :trade_regions:
-  - Organization of the Petroleum Exporting Countries
-  - Gulf Cooperation Council
-  :world_regions:
-  - Persian Gulf Region
-  - Middle East
+  :country_name: Qatar
+  :trade_regions: []
+  :world_regions: []
   :source: STATE
   :ita_industries: []
 - :title: Kenya - Enhancing Water Security & Climate Resilience
@@ -135,11 +122,8 @@
   :submitting_officer: 
   :submitting_officer_contact: 
   :id: DATATABLE.66
-  :trade_regions:
-  - African Growth and Opportunity Act
-  - Common Market for Eastern and Southern Africa
-  :world_regions:
-  - Sub-Saharan Africa
-  - Africa
+  :country_name: Kenya
+  :trade_regions: []
+  :world_regions: []
   :source: STATE
   :ita_industries: []
