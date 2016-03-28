@@ -34,7 +34,7 @@ module TradeLead
       begin
         item_hash[:publish_date] = Date.parse(item_hash[:publish_date]).iso8601
       rescue ArgumentError
-        item_hash[:publish_date] =  nil
+        item_hash[:publish_date] = nil
       end
       item_hash[:funding_source] = FUNDING_SOURCE
       item_hash[:source] = TradeLead::Mca.source[:code]

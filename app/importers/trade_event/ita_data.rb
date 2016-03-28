@@ -74,17 +74,31 @@ module TradeEvent
     end
 
     def process_optional_fields(event_hash)
-      event_hash[:cost] = event_hash[:cost].to_f rescue nil if event_hash[:cost].present?
+      event_hash[:cost] = begin
+                            event_hash[:cost].to_f
+                          rescue
+                            nil
+                          end if event_hash[:cost].present?
       event_hash[:url] = nil if event_hash[:url].present? && event_hash[:url] == 'YES'
     end
 
     def process_required_fields(event_hash)
-      event_hash[:start_date] = process_date(event_hash[:start_date]) rescue nil
-      event_hash[:end_date] = process_date(event_hash[:end_date]) rescue nil
+      event_hash[:start_date] = begin
+                                  process_date(event_hash[:start_date])
+                                rescue
+                                  nil
+                                end
+      event_hash[:end_date] = begin
+                                process_date(event_hash[:end_date])
+                              rescue
+                                nil
+                              end
     end
 
     def process_date(date_string)
-      Date.strptime(date_string, '%m/%d/%Y') rescue nil
+      Date.strptime(date_string, '%m/%d/%Y')
+    rescue
+      nil
     end
 
     def event_invalid?(event_hash)

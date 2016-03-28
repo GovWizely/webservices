@@ -57,6 +57,7 @@ group :development do
   gem 'better_errors'
   gem 'binding_of_caller'
   gem 'foreman'
+  gem 'rubocop', require: false
 end
 
 group :test do

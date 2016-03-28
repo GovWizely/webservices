@@ -73,8 +73,6 @@ RSpec.configure do |config|
   config.include Devise::TestHelpers, type: :controller
 
   config.filter_run_excluding skip: true
-
-  config.formatter = :documentation
 end
 
 Shoulda::Matchers.configure do |config|

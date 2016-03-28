@@ -11,7 +11,7 @@ class RecreateIndicesWithModifiedMappings
     def model_classes_which_need_recreating
       sorted_model_classes.select do |model_class|
         !same?(model_class.mappings.deep_stringify,
-               db_mapping(model_class.index_name).deep_stringify)
+               db_mapping(model_class.index_name).deep_stringify,)
       end
     end
 

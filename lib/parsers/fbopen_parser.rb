@@ -89,7 +89,7 @@ class FbopenParser < Parslet::Parser
     buffer = ''
     while !fh.eof? && line = fh.readline
       buffer += line
-      next if !fh.eof? and not line =~ /^<\/[A-Z]/
+      next if !fh.eof? && !(line =~ /^<\/[A-Z]/)
       buffer.lstrip!
 
       begin

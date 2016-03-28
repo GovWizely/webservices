@@ -29,7 +29,7 @@ describe Indexable do
         { foo:         'bar',
           yin:         'yang',
           _updated_at: now,
-          id:          1337 }
+          id:          1337, }
       end
       subject { Mock.send(:prepare_record_for_indexing, record) }
 
@@ -37,7 +37,7 @@ describe Indexable do
         is_expected.to match(body:  { foo: 'bar', yin: 'yang', _updated_at: now },
                              id:    1337,
                              index: 'test:webservices:mocks',
-                             type:  :mock)
+                             type:  :mock,)
       end
     end
   end
@@ -70,11 +70,11 @@ describe Indexable do
 
     let(:docs_to_index) do
       [{ title: 'foo', _updated_at: 2.days.ago },
-       { title: 'bar' }]
+       { title: 'bar' },]
     end
     let(:docs_expected) do
       [{ 'title' => 'foo' },
-       { 'title' => 'bar' }]
+       { 'title' => 'bar' },]
     end
 
     let(:search) { ES.client.search(index: Mock.index_name, type: Mock.index_type) }

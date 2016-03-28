@@ -2,7 +2,11 @@
 module TradeLead
   module FbopenHelpers
     def process_geo_fields(entry)
-      entry[:country] = IsoCountryCodes.find(entry[:country]).alpha2 rescue nil
+      entry[:country] = begin
+                          IsoCountryCodes.find(entry[:country]).alpha2
+                        rescue
+                          nil
+                        end
       entry.merge! add_geo_fields([entry[:country]])
     end
 

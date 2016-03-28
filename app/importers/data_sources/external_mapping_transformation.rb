@@ -1,6 +1,5 @@
 module DataSources
   class ExternalMappingTransformation
-
     def initialize(options)
       @options = options
     end
@@ -15,7 +14,9 @@ module DataSources
     end
 
     def transform_value(value, hash)
-      url_template, result_path, multi_value = hash[:url], hash[:result_path], hash[:multi_value]
+      url_template = hash[:url]
+      result_path = hash[:result_path]
+      multi_value = hash[:multi_value]
       url = url_template.sub('ORIGINAL_VALUE', URI.encode(value))
       result = JsonPath.on(json_response_from(url), result_path)
       result = result.first unless multi_value

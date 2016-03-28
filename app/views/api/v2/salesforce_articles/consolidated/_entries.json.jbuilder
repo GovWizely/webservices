@@ -1,18 +1,18 @@
-source_fields =  [
-    :source,
-    :title,
-    :summary,
-    :first_published_date,
-    :last_published_date,
-    :atom,
-    :public_url,
-    :references,
-    :url_name,
-    :industries,
-    :topics,
-    :countries,
-    :trade_regions,
-    :world_regions,
+source_fields = [
+  :source,
+  :title,
+  :summary,
+  :first_published_date,
+  :last_published_date,
+  :atom,
+  :public_url,
+  :references,
+  :url_name,
+  :industries,
+  :topics,
+  :countries,
+  :trade_regions,
+  :world_regions,
 ]
 
 json.array! entries do |hit|

@@ -20,7 +20,7 @@ class NaicsMapper
       if result
         return result[:title_2007]
       else
-        fail 'NAICS code not found: ' + code
+        raise 'NAICS code not found: ' + code
       end
     end
   end

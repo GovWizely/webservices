@@ -33,8 +33,8 @@ class ItaOfficeLocationData
     @resource.each do |resource|
       doc = Nokogiri::XML(open(resource))
       ita_office_locations = doc.xpath('//POSTINFO')
-                             .map { |location_info| process_location_info(location_info) }
-                             .sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
+                                .map { |location_info| process_location_info(location_info) }
+                                .sort { |a, b| [a[:country].to_s, a[:state].to_s, a[:id].to_s] <=> [b[:country].to_s, b[:state].to_s, b[:id].to_s] }
       ItaOfficeLocation.index ita_office_locations.compact
     end
   end
@@ -59,11 +59,11 @@ class ItaOfficeLocationData
   end
 
   def assign_city(event_hash)
-    if event_hash[:country] == 'US'
-      event_hash[:city] = parse_city_from_address(event_hash)
-    else
-      event_hash[:city] = INVALID_CITIES.include?(event_hash[:post]) ? nil : event_hash[:post]
-    end
+    event_hash[:city] = if event_hash[:country] == 'US'
+                          parse_city_from_address(event_hash)
+                        else
+                          INVALID_CITIES.include?(event_hash[:post]) ? nil : event_hash[:post]
+                        end
   end
 
   def normalize_post(post_str)

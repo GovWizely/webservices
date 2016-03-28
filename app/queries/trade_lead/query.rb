@@ -4,8 +4,16 @@ module TradeLead
 
     def initialize(options = {})
       super
-      @countries = options[:countries].upcase.split(',') rescue nil
-      @sources   = options[:sources].upcase.split(',') rescue []
+      @countries = begin
+                     options[:countries].upcase.split(',')
+                   rescue
+                     nil
+                   end
+      @sources   = begin
+                     options[:sources].upcase.split(',')
+                   rescue
+                     []
+                   end
       @industry  = options[:industries]
       @q    = options[:q]
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'

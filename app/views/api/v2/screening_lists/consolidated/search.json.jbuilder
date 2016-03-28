@@ -4,7 +4,7 @@ json.results do
     entry = hit.deep_symbolize_keys
     json.id hit[:_id]
     json.partial! "api/v2/screening_lists/#{entry[:_source][:source][:code].downcase}/entry", entry: entry
-    if @_request['fuzzy_name'].present? && @_request['fuzzy_name'].downcase == 'true'
+    if @_request['fuzzy_name'].present? && @_request['fuzzy_name'].casecmp('true').zero?
       json.score entry[:_score]
     end
   end

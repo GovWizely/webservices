@@ -53,7 +53,11 @@ module TradeLead
       return unless lead[:language] =~ /english/i
 
       %i(publish_date end_date publish_date_amended).each do |field|
-        lead[field] = Date.parse(lead[field]).iso8601 rescue nil if lead[field]
+        lead[field] = begin
+                        Date.parse(lead[field]).iso8601
+                      rescue
+                        nil
+                      end if lead[field]
       end
 
       lead = process_additional_fields(lead)

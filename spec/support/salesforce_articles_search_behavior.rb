@@ -30,7 +30,7 @@ shared_context 'SalesforceArticle::CountryCommercial data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[SalesforceArticle::CountryCommercial] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/country_commercial/results.json").read)
+      "#{File.dirname(__FILE__)}/salesforce_articles/country_commercial/results.json",).read,)
   end
 end
 
@@ -62,7 +62,7 @@ shared_context 'SalesforceArticle::MarketInsight data' do
     SalesforceArticle::MarketInsightData.new(client).import
     @all_possible_full_results ||= {}
     @all_possible_full_results[SalesforceArticle::MarketInsight] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/market_insight/results.json").read)
+      "#{File.dirname(__FILE__)}/salesforce_articles/market_insight/results.json",).read,)
   end
 end
 
@@ -88,7 +88,7 @@ shared_context 'SalesforceArticle::StateReport data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[SalesforceArticle::StateReport] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/state_report/results.json").read)
+      "#{File.dirname(__FILE__)}/salesforce_articles/state_report/results.json",).read,)
   end
 end
 
@@ -126,7 +126,7 @@ shared_context 'SalesforceArticle::TopMarkets data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[SalesforceArticle::TopMarkets] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/salesforce_articles/top_markets/results.json").read)
+      "#{File.dirname(__FILE__)}/salesforce_articles/top_markets/results.json",).read,)
   end
 end
 

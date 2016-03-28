@@ -6,6 +6,6 @@ module TradeEvent
                           TradeEvent::Sba,
                           # TradeEvent::Exim,
                           TradeEvent::Ustda,
-                          TradeEvent::Dl]
+                          TradeEvent::Dl,]
   end
 end

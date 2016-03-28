@@ -31,7 +31,7 @@ class ParatureFaqQuery < Query
         json.must do
           json.child! { json.terms { json.country @countries } } if @countries
           generate_industries_filter(json) if @industries
-          json.child! { json.terms  { json.topic @topics }  } if @topics
+          json.child! { json.terms  { json.topic @topics } } if @topics
           generate_date_range(json, 'update_date', @update_date) if @update_date
         end
       end
@@ -42,8 +42,8 @@ class ParatureFaqQuery < Query
     json.child! do
       json.bool do
         json.set! 'should' do
-          json.child! { json.terms  { json.industry @industries }  }
-          json.child! { json.terms  { json.ita_industries @industries }  }
+          json.child! { json.terms  { json.industry @industries } }
+          json.child! { json.terms  { json.ita_industries @industries } }
         end
       end
     end if @industries

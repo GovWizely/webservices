@@ -48,7 +48,7 @@ class SharepointTradeArticleData
       region:      Rails.configuration.sharepoint_trade_article[:aws][:region],
       credentials: Aws::Credentials.new(
         Rails.configuration.sharepoint_trade_article[:aws][:access_key_id],
-        Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key]))
+        Rails.configuration.sharepoint_trade_article[:aws][:secret_access_key],),)
   end
 
   def import
@@ -56,7 +56,7 @@ class SharepointTradeArticleData
     keys = get_object_keys(resp)
 
     articles = keys.map do |key|
-      object = @s3.get_object(bucket: 'ngn-bluebox', key: "#{key}").body
+      object = @s3.get_object(bucket: 'ngn-bluebox', key: key.to_s).body
       xml = Nokogiri::XML(object)
       article_hash = extract_article_fields(xml)
       process_article_info(article_hash)

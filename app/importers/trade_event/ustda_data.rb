@@ -68,7 +68,7 @@ module TradeEvent
       event[:event_type] = nil
       event[:source] = model_class.source[:code]
       event[:id] = Utils.generate_id(event, %i(event_name start_date
-                                               event_time end_date end_time time_zone))
+                                               event_time end_date end_time time_zone),)
       event[:industries] = [event[:industries]]
 
       event

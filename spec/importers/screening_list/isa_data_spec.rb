@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ScreeningList::IsaData, vcr: { cassette_name: 'importers/screening_list/isa.yml' }  do
+describe ScreeningList::IsaData, vcr: { cassette_name: 'importers/screening_list/isa.yml' } do
   before { ScreeningList::Isa.recreate_index }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml" }
   let(:resource) { fixtures_file }

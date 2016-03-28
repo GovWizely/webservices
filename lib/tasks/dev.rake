@@ -8,7 +8,7 @@ namespace :db do
                        full_name:             'Full Name',
                        api_key:               'devkey',
                        admin:                 true,
-                       confirmed_at:          Time.now.utc)
+                       confirmed_at:          Time.now.utc,)
     puts user.errors.messages unless user.valid?
   end
 end

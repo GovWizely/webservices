@@ -5,8 +5,8 @@ class Query
     attr_accessor :errors
   end
 
-  DEFAULT_SIZE = 10.freeze
-  MAX_SIZE = 100.freeze
+  DEFAULT_SIZE = 10
+  MAX_SIZE = 100
   attr_accessor :offset, :size, :sort, :q, :search_type
 
   validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
@@ -23,7 +23,9 @@ class Query
   end
 
   def self.query_fields
-    class_variable_get('@@fields') rescue nil
+    class_variable_get('@@fields')
+  rescue
+    nil
   end
 
   def query_fields
@@ -51,7 +53,7 @@ class Query
     unless valid?
       e = InvalidParamsException.new
       e.errors = errors.to_a
-      fail e
+      raise e
     end
   end
 
@@ -173,7 +175,7 @@ class Query
 
   def valid_date_range?(range)
     match = /^(\d{4}(?:\-\d{2}\-\d{2})?) TO (\d{4}(?:\-\d{2}\-\d{2})?)$/.match(range)
-    fail Exceptions::InvalidDateRangeFormat if match.nil?
+    raise Exceptions::InvalidDateRangeFormat if match.nil?
     [match[1], match[2]].each { |date| /^\d{4}$/.match(date) || Date.parse(date) }
     true
   rescue

@@ -13,7 +13,7 @@ class TradeArticle
         update_date: { type: 'date', format: 'YYYY-MM-dd' },
       },
     },
-  }.merge(metadata_mappings).freeze
+  }.merge(metadata_mappings,).freeze
 
   self.source = {
     full_name: 'ITA',

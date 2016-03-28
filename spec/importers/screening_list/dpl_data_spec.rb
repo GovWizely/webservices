@@ -18,7 +18,7 @@ describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list
                         [{ name: '', street_address: '', city: '', state: '',
                           country: '', postal_code: '', effective_date: '',
                           expiration_date: '', standard_order: '',
-                          last_update: '', action: '', fr_citation: '' }],
+                          last_update: '', action: '', fr_citation: '', },],
                        )
       expect(r).to eq(nil)
     end
@@ -27,7 +27,7 @@ describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list
         name: 'Santos Dumont', street_address: '', city: 'Guaruja', state: 'SP',
         country: 'Brazil', postal_code: '1234', effective_date: '1999-12-31',
         expiration_date: '', standard_order: '',
-        last_update: '', action: '', fr_citation: ''
+        last_update: '', action: '', fr_citation: '',
       }
       expected = {
         name:                    'Santos Dumont',
@@ -45,8 +45,8 @@ describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list
         source_list_url:         nil,
         source_information_url:  nil,
         addresses:               [{
-          address: '', city: 'Guaruja', state: 'SP', country: 'Brazil', postal_code: '1234'
-        }],
+          address: '', city: 'Guaruja', state: 'SP', country: 'Brazil', postal_code: '1234',
+        },],
       }
 
       r = importer.send(:process_grouped_rows, '000abc', [sample])

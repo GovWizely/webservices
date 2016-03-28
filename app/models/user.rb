@@ -127,8 +127,8 @@ class User
   attribute :admin, Boolean, default: false
 
   validates_presence_of :email
-  validates_presence_of :password, if: proc { !self.persisted? }
-  validates_presence_of :password_confirmation, if: proc { !self.persisted? }
+  validates_presence_of :password, if: proc { !persisted? }
+  validates_presence_of :password_confirmation, if: proc { !persisted? }
 
   validate :passwords_must_match_and_be_strong
   validate :email_must_be_unique

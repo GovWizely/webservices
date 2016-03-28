@@ -28,7 +28,7 @@ class ApiController < ActionController::Base
 
   def search
     s = params.permit(search_params).except(:format)
-    s.merge!(api_version: api_version)
+    s[:api_version] = api_version
 
     respond_to do |format|
       format.csv { render_sv('csv') }
@@ -79,7 +79,7 @@ class ApiController < ActionController::Base
     send_data(
       search_class.send("as_#{format}", search),
       type:        "Mime::#{format.upcase}".constantize,
-      disposition: "attachment; filename=#{sv_filename}.#{format}")
+      disposition: "attachment; filename=#{sv_filename}.#{format}",)
   end
 
   def sv_filename

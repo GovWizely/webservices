@@ -38,7 +38,7 @@ class ItaTaxonomyData
 
   def process_ids(entry)
     trim_id(entry[:subject])
-    entry[:sub_class_of].each do |hash| 
+    entry[:sub_class_of].each do |hash|
       trim_id(hash[:id])
     end
     entry[:object_properties].each do |_key, array|

@@ -17,7 +17,7 @@ module SalesforceArticle
     DATA_CATEGORY_GROUP_NAMES = %w(Geographies Industries Trade_Topics).freeze
 
     def query_string
-      fail 'Must be overridden by subclass'
+      raise 'Must be overridden by subclass'
     end
 
     def initialize(client = nil)
@@ -81,7 +81,7 @@ module SalesforceArticle
       filtered_data_categories = filter_data_categories data_categories
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
-        label = dc.DataCategoryName.gsub(/_/, ' ')
+        label = dc.DataCategoryName.tr('_', ' ')
         concept = @taxonomy_parser.get_concept_by_label(label)
         taxonomies << concept if concept
       end

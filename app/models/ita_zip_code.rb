@@ -17,7 +17,7 @@ class ItaZipCode
           type:     'string',
           analyzer: 'location_name_analyzer',
           fields:   {
-            sort: { type: 'string', analyzer: 'location_name_sort' } } },
+            sort: { type: 'string', analyzer: 'location_name_sort' }, }, },
         office_name:       { type: 'string', analyzer: 'location_name_analyzer' },
         country:           { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
         state:             { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
@@ -29,7 +29,7 @@ class ItaZipCode
         address:           { type: 'string' },
       },
     },
-  }.merge(metadata_mappings).freeze
+  }.merge(metadata_mappings,).freeze
 
   self.source = {
     full_name: 'ITA',

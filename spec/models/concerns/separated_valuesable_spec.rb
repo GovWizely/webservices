@@ -14,7 +14,7 @@ describe SeparatedValuesable do
 
       let(:search_results) do
         [{ _source: { foo: 'One', bar: 'Satu', baz: 'eins' } },
-         { _source: { foo: 'Two', bar: 'Dua',  baz: 'zwie' } }]
+         { _source: { foo: 'Two', bar: 'Dua',  baz: 'zwie' } },]
       end
 
       subject { NoNestedExample.as_csv(search_results) }
@@ -34,7 +34,7 @@ describe SeparatedValuesable do
 
       let(:search_results) do
         [{ _source: { foo: 'One', bar: ['Satu', 1], baz: 'eins' } },
-         { _source: { foo: 'Two', bar: ['Dua', 2],  baz: 'zwie' } }]
+         { _source: { foo: 'Two', bar: ['Dua', 2],  baz: 'zwie' } },]
       end
 
       subject { ArrayFieldExample.as_csv(search_results) }
@@ -55,10 +55,10 @@ describe SeparatedValuesable do
       let(:search_results) do
         [{ _source: { foo: 'One',
                       bar: { do: 'a', re: 'b', mi: 'c' },
-                      baz: 'eins' } },
+                      baz: 'eins', }, },
          { _source: { foo: 'Two',
                       bar: { do: 'U', re: 'V', mi: 'W' },
-                      baz: 'zwie' } }]
+                      baz: 'zwie', }, },]
       end
 
       subject { NestedExample.as_csv(search_results) }
@@ -79,13 +79,13 @@ describe SeparatedValuesable do
       let(:search_results) do
         [{ _source: { foo: 'One',
                       bar: [{ do: 'a', re: 'b', mi: 'c' }, { do: 'd', re: 'e', mi: 'f' }],
-                      baz: 'eins' } },
+                      baz: 'eins', }, },
          { _source: { foo: 'Two',
                       bar: [{ do: 'U', re: 'V', mi: 'W' }, { do: 'X', re: 'Y', mi: 'Z' }],
-                      baz: 'zwie' } },
+                      baz: 'zwie', }, },
          { _source: { foo: 'Three',
                       bar: [],
-                      baz: 'drei' } }]
+                      baz: 'drei', }, },]
       end
 
       subject { ArrayOfNestedExample.as_csv(search_results) }
@@ -116,15 +116,15 @@ describe SeparatedValuesable do
                       addresses: [{ address: '1:2:3 High St.',
                                     city:    'Springfield',
                                     state:   'Dorne',
-                                    country: 'NZ' },
+                                    country: 'NZ', },
                                   { address: '22 Low Rd',
                                     city:    'Semi;colon, Ville',
                                     state:   'Dorne',
-                                    country: 'AU' },
+                                    country: 'AU', },
                                   { address: '',
                                     city:    '',
                                     state:   '',
-                                    country: 'GB' }] } }]
+                                    country: 'GB', },], }, },]
       end
 
       subject { BonanzaExample.as_csv(search_results) }
@@ -146,7 +146,7 @@ describe SeparatedValuesable do
 
       let(:search_results) do
         [{ _source: { foo: 'One', bar: 'Satu', baz: 'eins' } },
-         { _source: { foo: 'Two', bar: 'Dua',  baz: 'zwie' } }]
+         { _source: { foo: 'Two', bar: 'Dua',  baz: 'zwie' } },]
       end
 
       subject { NoNestedTabsExample.as_tsv(search_results) }

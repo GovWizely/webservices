@@ -30,7 +30,7 @@ module SalesforceArticle
             world_regions:        { type: 'string', index: 'not_analyzed' },
           },
         },
-      }.merge(klass.metadata_mappings).freeze
+      }.merge(klass.metadata_mappings,).freeze
 
       klass.class_eval do
         class << self

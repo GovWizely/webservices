@@ -7,7 +7,7 @@ module VersionableResource
   extend ActiveSupport::Concern
 
   included do
-    fail 'Includee must be Importable' unless ancestors.include?(Importable)
+    raise 'Includee must be Importable' unless ancestors.include?(Importable)
     send(:prepend, Prepend)
   end
 

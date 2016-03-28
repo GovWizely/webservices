@@ -5,10 +5,10 @@ module DataSources
       @default = metadata[:default]
       metadata[:transformations].each do |transformation_entry|
         case transformation_entry
-          when String
-            @transformations << StringTransformation.new(transformation_entry)
-          when Hash
-            process_hash(transformation_entry)
+        when String
+          @transformations << StringTransformation.new(transformation_entry)
+        when Hash
+          process_hash(transformation_entry)
         end
       end if metadata[:transformations].present?
     end

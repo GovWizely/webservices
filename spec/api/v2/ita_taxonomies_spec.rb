@@ -64,7 +64,7 @@ describe 'Ita Taxonomy API V2', type: :request do
       let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_taxonomies/query_expansion_results.json").read }
       let(:params) { { q: 'healthcare united states china' } }
 
-      before { get "/v2/ita_taxonomies/query_expansion", params, @v2_headers }
+      before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }
 
       it 'returns the correct terms' do
@@ -77,7 +77,7 @@ describe 'Ita Taxonomy API V2', type: :request do
       let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_taxonomies/query_expansion_empty_results.json").read }
       let(:params) { { q: 'elephants' } }
 
-      before { get "/v2/ita_taxonomies/query_expansion", params, @v2_headers }
+      before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }
 
       it 'returns an empty response' do
@@ -90,7 +90,7 @@ describe 'Ita Taxonomy API V2', type: :request do
       let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_taxonomies/query_expansion_results.json").read }
       let(:params) { { q: 'healthcare, united states, china.' } }
 
-      before { get "/v2/ita_taxonomies/query_expansion", params, @v2_headers }
+      before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }
 
       it 'returns the correct terms' do
@@ -101,12 +101,12 @@ describe 'Ita Taxonomy API V2', type: :request do
 
     context 'when q is not specified as a parameter' do
       let(:params) { {} }
-      before { get "/v2/ita_taxonomies/query_expansion", params, @v2_headers }
+      before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }
 
-     it 'responds with an error message and 400 status' do
+      it 'responds with an error message and 400 status' do
         expect(response.status).to eq(400)
-        expect(JSON.parse(response.body)).to eq({"error"=> "param is missing or the value is empty: q"})
+        expect(JSON.parse(response.body)).to eq('error'=> 'param is missing or the value is empty: q')
       end
     end
   end

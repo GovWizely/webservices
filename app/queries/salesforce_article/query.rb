@@ -9,13 +9,33 @@ module SalesforceArticle
 
     def initialize(options = {})
       super
-      @q    = options[:q]
-      @sources = split_to_array(options[:sources].upcase) rescue []
-      @industries = split_to_array(options[:industries]) rescue nil
-      @topics = split_to_array(options[:topics]) rescue nil
+      @q = options[:q]
+      @sources = begin
+                   split_to_array(options[:sources].upcase)
+                 rescue
+                   []
+                 end
+      @industries = begin
+                      split_to_array(options[:industries])
+                    rescue
+                      nil
+                    end
+      @topics = begin
+                  split_to_array(options[:topics])
+                rescue
+                  nil
+                end
 
-      @first_published_date = options[:first_published_date] rescue nil
-      @last_published_date = options[:last_published_date] rescue nil
+      @first_published_date = begin
+                                options[:first_published_date]
+                              rescue
+                                nil
+                              end
+      @last_published_date = begin
+                               options[:last_published_date]
+                             rescue
+                               nil
+                             end
 
       set_geo_instance_variables(options)
     end
@@ -32,7 +52,7 @@ module SalesforceArticle
           json.query do
             json.bool do
               json.must do
-                json.child! { generate_multi_match(json, MULTI_FIELDS, @q) }  if @q
+                json.child! { generate_multi_match(json, MULTI_FIELDS, @q) } if @q
               end
             end
           end if @q

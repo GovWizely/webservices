@@ -8,6 +8,6 @@ module TradeLead
                           TradeLead::State,
                           TradeLead::Uk,
                           TradeLead::Mca,
-                          TradeLead::Ustda]
+                          TradeLead::Ustda,]
   end
 end

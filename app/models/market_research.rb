@@ -28,11 +28,11 @@ class MarketResearch
           type: 'string', analyzer: 'snowball_asciifolding_nostop',
           fields: {
             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
-          }
+          },
         },
       },
     },
-  }.merge(metadata_mappings).freeze
+  }.merge(metadata_mappings,).freeze
 
   self.source = {
     full_name: 'ITA',

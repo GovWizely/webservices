@@ -10,7 +10,7 @@ class DataSourcesController < ApplicationController
 
   def iterate_version
     @data_source = DataSource.new(name: @data_source.name, api: @data_source.api, description: @data_source.description,
-                                  version_number: @data_source.version_number + 1)
+                                  version_number: @data_source.version_number + 1,)
 
     render :new
   end
@@ -35,7 +35,7 @@ class DataSourcesController < ApplicationController
     attributes = params.require(:data_source).permit(COMMON_PARAMS + %i(dictionary published))
     if attributes[:path].present?
       data_extractor = DataSources::DataExtractor.new(attributes.delete(:path))
-      attributes.merge!(data: data_extractor.data)
+      attributes[:data] = data_extractor.data
     end
     attributes[:dictionary] = symbolized_yaml(attributes[:dictionary])
     @data_source.update(attributes) && @data_source.ingest

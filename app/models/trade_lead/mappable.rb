@@ -30,7 +30,7 @@ module TradeLead
               fields: {
                 keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
                 raw:     { type: 'string', index: 'not_analyzed' },
-              }
+              },
             },
             publish_date:             { type: 'date', format: 'YYYY-MM-dd' },
             publish_date_amended:     { type: 'date', format: 'YYYY-MM-dd' },
@@ -46,7 +46,7 @@ module TradeLead
             world_regions:            { type: 'string', analyzer: 'keyword' },
           },
         },
-      }.merge(klass.metadata_mappings).freeze
+      }.merge(klass.metadata_mappings,).freeze
 
       klass.class_eval do
         class << self

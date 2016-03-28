@@ -8,7 +8,7 @@ module TradeEvent
         [
           :registration_title, :description, :event_name, :'venues.city',
           :'venues.state', :'venues.country', :first_name,
-          :last_name, :person_title
+          :last_name, :person_title,
         ],
       )
     end

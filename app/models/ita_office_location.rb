@@ -10,20 +10,20 @@ class ItaOfficeLocation
         analyzer: {
           case_insensitive_keyword_analyzer: {
             tokenizer: 'keyword',
-            filter:    %w(standard lowercase) },
+            filter:    %w(standard lowercase), },
           location_name_analyzer:            {
             tokenizer: 'standard',
-            filter:    %w(standard asciifolding lowercase synonym stopword) },
+            filter:    %w(standard asciifolding lowercase synonym stopword), },
           location_name_sort:                {
             tokenizer: 'keyword',
-            filter:    %w(lowercase asciifolding) },
+            filter:    %w(lowercase asciifolding), },
         },
         filter:   {
           synonym:  { type:     'synonym',
-                      synonyms: SYNONYMS },
+                      synonyms: SYNONYMS, },
           stopword: { type:        'stop',
                       ignore_case: true,
-                      stopwords:   STOPWORDS.join(',') },
+                      stopwords:   STOPWORDS.join(','), },
         },
       },
     },
@@ -37,14 +37,14 @@ class ItaOfficeLocation
           type:     'string',
           analyzer: 'location_name_analyzer',
           fields:   {
-            sort: { type: 'string', analyzer: 'location_name_sort' } } },
+            sort: { type: 'string', analyzer: 'location_name_sort' }, }, },
         office_name: { type: 'string', analyzer: 'location_name_analyzer' },
         country:     { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
         state:       { type: 'string', analyzer: 'case_insensitive_keyword_analyzer' },
         city:        { type: 'string', analyzer: 'location_name_analyzer' },
       },
     },
-  }.merge(metadata_mappings).freeze
+  }.merge(metadata_mappings,).freeze
 
   self.source = {
     full_name: 'ITA',

@@ -29,14 +29,14 @@ module TradeEvent
                                                 address: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
                                                 city:    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
                                                 state:   { type: 'string', analyzer: 'keyword' },
-                                                country: { type: 'string', analyzer: 'keyword' } } },
+                                                country: { type: 'string', analyzer: 'keyword' }, }, },
 
             source:             { type: 'string', analyzer: 'keyword' },
             trade_regions:      { type: 'string', analyzer: 'keyword' },
             world_regions:      { type: 'string', analyzer: 'keyword' },
           },
         },
-      }.merge(klass.metadata_mappings).freeze
+      }.merge(klass.metadata_mappings,).freeze
 
       klass.class_eval do
         class << self

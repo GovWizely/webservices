@@ -34,7 +34,7 @@ describe 'Consolidated Tariff Rates API v2', type: :request do
            TariffRate::CostaRica, TariffRate::DominicanRepublic, TariffRate::ElSalvador,
            TariffRate::Guatemala, TariffRate::Honduras, TariffRate::Morocco, TariffRate::Nicaragua,
            TariffRate::Oman, TariffRate::Panama, TariffRate::Peru, TariffRate::Singapore,
-           TariffRate::SouthKorea]
+           TariffRate::SouthKorea,]
         end
       end
     end

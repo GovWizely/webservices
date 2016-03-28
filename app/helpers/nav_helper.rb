@@ -4,12 +4,12 @@ module NavHelper
       'Trade Events'                => 'trade-events.html',
       'Trade Leads'                 => 'trade-leads.html',
       'Tariff Rates'                => 'tariff-rates.html',
-      'De Minimis'                  => 'de-minimis.html' }
+      'De Minimis'                  => 'de-minimis.html', }
   end
 
   def api_resources
     { 'List of all APIs' => 'api-list.html',
-      'Search Widgets'   => 'search-widgets.html' }
+      'Search Widgets'   => 'search-widgets.html', }
   end
 
   def additional_resources
@@ -21,6 +21,6 @@ module NavHelper
       'API FAQs'                => 'api-faqs.html',
       'Change Log'              => 'change-log.html',
       'API from Trade Agencies' => 'trade-agency-apis.html',
-      'Terms of Service'        => 'tos.html' }
+      'Terms of Service'        => 'tos.html', }
   end
 end
