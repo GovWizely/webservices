@@ -42,7 +42,7 @@ module TradeLead
       agent.get("#{base}/Search/Results",         IncludeClosed:  'False',
                                                   IncludeAwarded: 'False',
                                                   LocationType:   'AllLocations',
-                                                  sort:           'PublicationDescending')
+                                                  sort:           'PublicationDescending',)
       agent.get("#{base}/Search/GetXmlFile")
     end
     # :nocov:
@@ -68,7 +68,7 @@ module TradeLead
       lead = extract_fields(lead_info, XPATHS)
 
       if %w(closed awarded).include?(lead[:status].downcase)
-        fail "Should not be any docs with status #{lead[:status]}"
+        raise "Should not be any docs with status #{lead[:status]}"
       end
 
       lead = process_additional_fields(lead)

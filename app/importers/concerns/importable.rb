@@ -74,11 +74,15 @@ module Importable
   end
 
   def parse_date(date_str)
-    Date.parse(date_str).to_s rescue nil
+    Date.parse(date_str).to_s
+  rescue
+    nil
   end
 
   def parse_american_date(date_str)
-    Date.strptime(date_str, '%m/%d/%Y').iso8601 rescue nil
+    Date.strptime(date_str, '%m/%d/%Y').iso8601
+  rescue
+    nil
   end
 
   def model_class
@@ -96,7 +100,7 @@ module Importable
   end
 
   def process_industries(entry)
-    fail 'must implement naics_mapper' unless self.class.method_defined?(:naics_mapper)
+    raise 'must implement naics_mapper' unless self.class.method_defined?(:naics_mapper)
     entry[:industry] = entry[:industry] + ': ' + naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
     entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
     entry

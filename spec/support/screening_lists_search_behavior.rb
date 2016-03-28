@@ -17,12 +17,12 @@ shared_context 'ScreeningList::Part561 data' do
     ScreeningList::Part561.recreate_index
     VCR.use_cassette('importers/screening_list/part561.yml', record: :once) do
       ScreeningList::Part561Data.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Part561] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/part561/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/part561/expected_results.json",).read,)
   end
 end
 
@@ -55,12 +55,12 @@ shared_context 'ScreeningList::Isa data' do
     ScreeningList::Isa.recreate_index
     VCR.use_cassette('importers/screening_list/isa.yml', record: :once) do
       ScreeningList::IsaData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isa] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/isa/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/isa/expected_results.json",).read,)
   end
 end
 
@@ -93,12 +93,12 @@ shared_context 'ScreeningList::Sdn data' do
     ScreeningList::Sdn.recreate_index
     VCR.use_cassette('importers/screening_list/sdn.yml', record: :once) do
       ScreeningList::SdnData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/sdn/sdn.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Sdn] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/sdn/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/sdn/expected_results.json",).read,)
   end
 end
 
@@ -203,12 +203,12 @@ shared_context 'ScreeningList::Fse data' do
     ScreeningList::Fse.recreate_index
     VCR.use_cassette('importers/screening_list/fse.yml', record: :once) do
       ScreeningList::FseData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Fse] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/fse/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/fse/expected_results.json",).read,)
   end
 end
 
@@ -241,12 +241,12 @@ shared_context 'ScreeningList::El data' do
     ScreeningList::El.recreate_index
     VCR.use_cassette('importers/screening_list/el.yml', record: :once) do
       ScreeningList::ElData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/el/el.csv",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::El] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/el/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/el/expected_results.json",).read,)
   end
 end
 
@@ -267,12 +267,12 @@ shared_context 'ScreeningList::Dpl data' do
     ScreeningList::Dpl.recreate_index
     VCR.use_cassette('importers/screening_list/dpl.yml', record: :once) do
       ScreeningList::DplData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt").import
+        "#{Rails.root}/spec/fixtures/screening_lists/dpl/dpl.txt",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dpl] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/dpl/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/dpl/expected_results.json",).read,)
   end
 end
 
@@ -305,12 +305,12 @@ shared_context 'ScreeningList::Uvl data' do
     ScreeningList::Uvl.recreate_index
     VCR.use_cassette('importers/screening_list/uvl.yml', record: :once) do
       ScreeningList::UvlData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/uvl/uvl.csv",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Uvl] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/uvl/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/uvl/expected_results.json",).read,)
   end
 end
 
@@ -335,12 +335,12 @@ shared_context 'ScreeningList::Isn data' do
     ScreeningList::Isn.recreate_index
     VCR.use_cassette('importers/screening_list/isn.yml', record: :once) do
       ScreeningList::IsnData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/isn/isn.csv",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Isn] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/isn/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/isn/expected_results.json",).read,)
   end
 end
 
@@ -355,12 +355,12 @@ shared_context 'ScreeningList::Dtc data' do
     ScreeningList::Dtc.recreate_index
     VCR.use_cassette('importers/screening_list/dtc.yml', record: :once) do
       ScreeningList::DtcData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv").import
+        "#{Rails.root}/spec/fixtures/screening_lists/dtc/itar_debarred_parties.csv",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Dtc] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/dtc/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/dtc/expected_results.json",).read,)
   end
 end
 
@@ -375,12 +375,12 @@ shared_context 'ScreeningList::Plc data' do
     ScreeningList::Plc.recreate_index
     VCR.use_cassette('importers/screening_list/plc.yml', record: :once) do
       ScreeningList::PlcData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Plc] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/plc/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/plc/expected_results.json",).read,)
   end
 end
 
@@ -413,12 +413,12 @@ shared_context 'ScreeningList::Ssi data' do
     ScreeningList::Ssi.recreate_index
     VCR.use_cassette('importers/screening_list/ssi.yml', record: :once) do
       ScreeningList::SsiData.new(
-        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml").import
+        "#{Rails.root}/spec/fixtures/screening_lists/treasury_consolidated/consolidated.xml",).import
     end
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[ScreeningList::Ssi] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/screening_lists/ssi/expected_results.json").read)
+      "#{File.dirname(__FILE__)}/screening_lists/ssi/expected_results.json",).read,)
   end
 end
 

@@ -16,6 +16,6 @@ module TariffRate
                           TariffRate::Panama,
                           TariffRate::Peru,
                           TariffRate::Singapore,
-                          TariffRate::SouthKorea]
+                          TariffRate::SouthKorea,]
   end
 end

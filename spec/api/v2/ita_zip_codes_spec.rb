@@ -6,7 +6,7 @@ describe 'Ita Zip Code API V2', type: :request do
   before(:all) do
     ItaZipCode.recreate_index
     ItaZipCodeData.new("#{Rails.root}/spec/fixtures/ita_zip_codes/posts.xml",
-                       "#{Rails.root}/spec/fixtures/ita_zip_codes/zip_codes.xml").import
+                       "#{Rails.root}/spec/fixtures/ita_zip_codes/zip_codes.xml",).import
   end
 
   let(:search_path) { '/v2/ita_zipcode_to_post/search' }

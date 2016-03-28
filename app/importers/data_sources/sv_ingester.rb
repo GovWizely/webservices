@@ -10,7 +10,7 @@ module DataSources
                             header_converters: [->(f) { convert_header(f) }],
                             headers:           true,
                             col_sep:           @col_sep,
-                            skip_blanks:       true }
+                            skip_blanks:       true, }
       records = CSV.parse(@data, ingest_sv_options).map { |r| r }
       insert(records)
     end
@@ -18,7 +18,9 @@ module DataSources
     private
 
     def convert_header(source)
-      @metadata.entries.detect { |_, meta| meta[:source] == source }.first rescue '*DELETED FIELD*'
+      @metadata.entries.detect { |_, meta| meta[:source] == source }.first
+    rescue
+      '*DELETED FIELD*'
     end
   end
 end

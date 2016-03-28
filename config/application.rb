@@ -37,12 +37,12 @@ module Webservices
 
     def model_classes
       filenames = Dir[Rails.root.join('app/models/**/*.rb').to_s]
-      filenames.select { |filename|
+      filenames.select do |filename|
         filename !~ /\/concerns\//
-      }.map { |filename|
+      end.map do |filename|
         klass = filename.gsub(/(^.+models\/|\.rb$)/, '').camelize.constantize
         klass.ancestors.include?(Indexable) ? klass : nil
-      }.compact
+      end.compact
     end
 
     config.filter_parameters += [:current_password, :password, :password_confirmation]

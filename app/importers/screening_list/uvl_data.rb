@@ -24,7 +24,7 @@ module ScreeningList
       rows = CSV.parse(loaded_resource, encoding: 'UTF-8').map do |row|
         { country: row[0],
           name:    row[1],
-          address: row[2] }
+          address: row[2], }
       end
 
       ensure_expected_headers(rows.first)
@@ -52,14 +52,14 @@ module ScreeningList
           city:        nil,
           state:       nil,
           postal_code: nil,
-          country:     lookup_country(row[:country]) }
+          country:     lookup_country(row[:country]), }
       end.uniq
 
       doc[:alt_names] =
         rows.map { |row| row[:name].split(', a.k.a. ') }
-        .flatten
-        .uniq
-        .delete_if { |alt_name| alt_name == doc[:name] }
+            .flatten
+            .uniq
+            .delete_if { |alt_name| alt_name == doc[:name] }
 
       make_names(doc)
 

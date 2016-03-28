@@ -103,7 +103,7 @@ module TradeEvent
       doc.merge! add_geo_fields(doc[:venues].map { |v| v[:country] })
 
       doc[:id] = Utils.generate_id(doc, %i(city cost country event_name event_type start_date
-                                           start_time end_date end_time time_zone))
+                                           start_time end_date end_time time_zone),)
       doc[:cost] &&= doc[:cost].gsub(/\s+/, '')
 
       sanitize_entry(doc)
@@ -116,7 +116,7 @@ module TradeEvent
       fields[:start_date], fields[:start_time] = extract_date_and_time(datetimes[0])
       fields[:end_date], fields[:end_time] = datetimes[1] ?
         extract_date_and_time(datetimes[1]) :
-        [fields[:start_date], nil]  # assume it ends on the same day it starts
+        [fields[:start_date], nil] # assume it ends on the same day it starts
 
       fields.delete(:event_date)
       fields
@@ -135,7 +135,11 @@ module TradeEvent
     def extract_venues(item)
       venue = extract_fields(item, VENUE_XPATHS)
       venue[:country] &&= lookup_country(venue[:country])
-      venue[:state] &&= lookup_state(venue[:state]) rescue venue[:state]
+      begin
+        venue[:state] &&= lookup_state(venue[:state])
+      rescue
+        venue[:state]
+      end
       [sanitize_entry(venue)]
     end
 

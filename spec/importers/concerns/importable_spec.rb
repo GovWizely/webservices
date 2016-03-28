@@ -10,7 +10,7 @@ describe Importable do
             _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
-      }.merge(metadata_mappings).freeze
+      }.merge(metadata_mappings,).freeze
     end
 
     class MockData
@@ -54,7 +54,7 @@ describe Importable do
                          'São Tomé & Príncipe',
                          'south Korea',
                          'St. Lucia',
-                         'vietnam']
+                         'vietnam',]
         country_names.each do |country_name|
           expect(MockData.new.lookup_country(country_name)).not_to be_nil
         end
@@ -126,11 +126,11 @@ describe Importable do
   describe "#import's purge-old logic" do
     let(:batch_1) do
       [{ id: 1, content: 'foo' },
-       { id: 2, content: 'bar' }]
+       { id: 2, content: 'bar' },]
     end
     let(:batch_2) do
       [{ id: 1, content: 'foo [updated]' },
-       { id: 3, content: 'baz' }]
+       { id: 3, content: 'baz' },]
     end
     let(:batch_3) do
       [{ id: 3, content: 'baz [updated]' }]
@@ -139,11 +139,11 @@ describe Importable do
     it 'purges correct documents' do
       MockData.new(batch_1).import
       expect(stored_docs).to match_array([a_hash_including(content: 'foo'),
-                                          a_hash_including(content: 'bar')])
+                                          a_hash_including(content: 'bar'),],)
 
       MockData.new(batch_2).import
       expect(stored_docs).to match_array([a_hash_including(content: 'foo [updated]'),
-                                          a_hash_including(content: 'baz')])
+                                          a_hash_including(content: 'baz'),],)
 
       MockData.new(batch_3).import
       expect(stored_docs).to match_array([a_hash_including(content: 'baz [updated]')])
@@ -162,7 +162,7 @@ describe Importable do
         MockData.new([{ id: 3, content: 'ping pong' }]).import
       end.to change {
         Mock.stored_metadata[:last_imported]
-      }.from('')
+      }.from('',)
 
       last_imported_time = DateTime.parse(Mock.stored_metadata[:last_imported])
       expect(last_imported_time.to_time).to be_within(60.seconds).of(Time.now)
@@ -182,9 +182,9 @@ describe Importable do
       before(:each) do
         expect(IndustryMappingClient)
           .to receive(:map_industry)
-          .with(industry, Mock.to_s)
+          .with(industry, Mock.to_s,)
           .once
-          .and_return(%w(Agribusiness Chemicals))
+          .and_return(%w(Agribusiness Chemicals),)
       end
 
       it 'return mapped terms' do

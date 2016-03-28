@@ -5,7 +5,7 @@ module DataSources
     def initialize(method, args = nil)
       @method = method
       @args = args
-      fail ArgumentError unless SUPPORTED_INSTANCE_METHODS.include?(@method.to_sym)
+      raise ArgumentError unless SUPPORTED_INSTANCE_METHODS.include?(@method.to_sym)
     end
 
     def transform(value)

@@ -58,7 +58,7 @@ module ScreeningList
       %i(debarred_party_given_names
          debarred_party_surnamecorporate_name).map do |key|
         row[key].to_s
-      end.join(' ')
+      end.join(' ',)
     end
 
     def extract_alt_names(row)

@@ -16,7 +16,7 @@ namespace :ita do
   desc 'Import data for a given importer without firing off a Sidekiq job'
   task :import_synchronously, [:importer_class_name] => :environment do |_t, args|
     importer_class = args.importer_class_name.constantize
-    fail 'Give me an Importable class please.' unless importer_class.include?(Importable)
+    raise 'Give me an Importable class please.' unless importer_class.include?(Importable)
     importer_class.new.import
   end
 

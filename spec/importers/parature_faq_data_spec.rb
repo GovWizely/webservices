@@ -15,7 +15,7 @@ describe ParatureFaqData, vcr: { cassette_name: 'importers/parature_faq.yml', re
     context 'when an unexpected error is encountered' do
       before do
         allow(importer).to receive(:extract_hash_from_resource) do
-          fail OpenURI::HTTPError.new('503 Service Unavailable', nil)
+          raise OpenURI::HTTPError.new('503 Service Unavailable', nil)
         end
       end
 
@@ -28,7 +28,7 @@ describe ParatureFaqData, vcr: { cassette_name: 'importers/parature_faq.yml', re
     context 'when an expected error is encountered' do
       before do
         allow(importer).to receive(:extract_hash_from_resource) do
-          fail OpenURI::HTTPError.new('404 Not Found', nil)
+          raise OpenURI::HTTPError.new('404 Not Found', nil)
         end
       end
 

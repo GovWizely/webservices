@@ -24,9 +24,11 @@ describe Searchable do
 
     class MockModelQuery
       def initialize(_options); end
+
       def self.sources
         [MockModel]
       end
+
       def search_type
         nil
       end

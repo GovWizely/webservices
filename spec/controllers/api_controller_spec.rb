@@ -20,7 +20,7 @@ describe ApiController, type: :controller do
         get '/new_query' => 'inherits_from_api#new_query'
       end
     end
-    after  { Rails.application.reload_routes! }
+    after { Rails.application.reload_routes! }
 
     describe '#not_found' do
       it 'responds with a 404 status' do

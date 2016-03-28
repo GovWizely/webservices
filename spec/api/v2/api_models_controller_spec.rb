@@ -7,7 +7,7 @@ describe Api::V2::ApiModelsController, type: :request do
     csv = File.read "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv"
     data_source = DataSource.create(_id: 'de_minimis_currencies:v1', name: 'test', description: 'test API',
                                     api: 'de_minimis_currencies', data: csv, dictionary: '',
-                                    version_number: 1, published: true)
+                                    version_number: 1, published: true,)
     dictionary = DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.yaml")).deep_symbolized_yaml
     data_source.update(dictionary: dictionary)
     data_source.ingest
@@ -59,7 +59,7 @@ describe Api::V2::ApiModelsController, type: :request do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:sources_used]).to eq([{ source:              data_source.name,
                                                       source_last_updated: data_source.data_changed_at.as_json,
-                                                      last_imported:       data_source.data_imported_at.as_json }])
+                                                      last_imported:       data_source.data_imported_at.as_json, },],)
         expect(data_source.data_changed_at).to be_within(2).of(DateTime.now.utc - 12.hours)
         expect(data_source.data_imported_at).to be_within(2).of(DateTime.now.utc - 2.hours)
       end
@@ -71,7 +71,7 @@ describe Api::V2::ApiModelsController, type: :request do
       before do
         data_source = DataSource.new(_id: 'not_published:v1', name: 'test', description: 'test API',
                                         api: 'not_published', data: 'foo,bar', dictionary: {}.to_yaml,
-                                        version_number: 1, published: false)
+                                        version_number: 1, published: false,)
         data_source.save(refresh: true)
         get '/v1/not_published/search', {}, @v2_headers
       end

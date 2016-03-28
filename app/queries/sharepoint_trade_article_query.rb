@@ -1,7 +1,7 @@
 class SharepointTradeArticleQuery < Query
   MULTI_VALUE_TERMS = [
     :export_phases, :industries, :trade_regions, :trade_programs, :trade_initiatives,
-    :countries, :topics, :sub_topics, :geo_regions, :geo_subregions
+    :countries, :topics, :sub_topics, :geo_regions, :geo_subregions,
   ]
 
   def initialize(options)

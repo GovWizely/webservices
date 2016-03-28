@@ -5,6 +5,6 @@ class ReservedApiValidator < ActiveModel::EachValidator
 
   def api_exists_in_codebase?(value)
     Rails.application.routes.routes.collect { |route| route.defaults[:controller] }.compact
-      .select { |path| path.starts_with?('api/v') }.map { |path| path.split('/')[2] }.uniq.include?(value)
+         .select { |path| path.starts_with?('api/v') }.map { |path| path.split('/')[2] }.uniq.include?(value,)
   end
 end

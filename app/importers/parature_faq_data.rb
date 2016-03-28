@@ -110,11 +110,11 @@ class ParatureFaqData
     folders = folder_hash['Entities']['ArticleFolder']
     folder_info = {}
     folders.each do |folder|
-      if folder['Parent_Folder']
-        type = extract_type(folder['Parent_Folder']['ArticleFolder']['Name'])
-      else
-        type = 'n/a'
-      end
+      type = if folder['Parent_Folder']
+               extract_type(folder['Parent_Folder']['ArticleFolder']['Name'])
+             else
+               'n/a'
+             end
       folder_info[folder['id']] = { id: folder['id'], name: folder['Name'], type: type }
     end
     folder_info

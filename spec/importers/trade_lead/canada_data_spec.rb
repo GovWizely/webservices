@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/canada.yml', record: :once }do
+describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/canada.yml', record: :once } do
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/canada/expected_canada_leads.yaml") }

@@ -33,12 +33,12 @@ class UrlMapper
     bitly_api_request = BITLY_BASE_URL + "&longUrl=#{encoded_url}&title=#{title}"
     search_result = search_for_url(url_string)[:hits]
 
-    if (search_result.count == 1)
+    if search_result.count == 1
       return update_url(url_string, title, search_result, bitly_api_request)
-    elsif (search_result.count == 0)
+    elsif search_result.count == 0
       return index_url(url_string, title, bitly_api_request)
     else
-      fail 'More than 1 search result, entries should be unique by long_url!'
+      raise 'More than 1 search result, entries should be unique by long_url!'
     end
   end
 
@@ -74,7 +74,7 @@ class UrlMapper
     return url_string if response['status_txt'] == 'ALREADY_A_BITLY_LINK' || response['status_txt'] == 'INVALID_URI'
     # Not sure if there's a sensible way to test this...
     # :nocov:
-    while (response['status_txt'] == 'RATE_LIMIT_EXCEEDED')
+    while response['status_txt'] == 'RATE_LIMIT_EXCEEDED'
       Rails.logger.info 'Rate limit exceeded, pausing for 60 seconds.'
       sleep 60
       response = JSON.parse(open(request_string).read)
@@ -112,7 +112,7 @@ class UrlMapper
   end
 
   def self.purge_old
-    fail 'This model is unable to purge old documents' unless can_purge_old?
+    raise 'This model is unable to purge old documents' unless can_purge_old?
     body = Utils.older_than(:_updated_at, 'now-2M')
     ES.client.delete_by_query(index: index_name, body: body)
     ES.client.indices.refresh(index: index_name)

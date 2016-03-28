@@ -46,7 +46,11 @@ module Searchable
         end
 
       if api_version
-        with_version = "V#{api_version}::#{query_class}".constantize rescue nil
+        with_version = begin
+                         "V#{api_version}::#{query_class}".constantize
+                       rescue
+                         nil
+                       end
         query_class = with_version if with_version
       end
 
@@ -71,7 +75,7 @@ module Searchable
                   sources_used:        index_meta(sources),
                   search_performed_at: search_performed_at,
                   hits:                response['hits'].deep_symbolize_keys[:hits],
-                  total:               response['hits']['total'] }
+                  total:               response['hits']['total'], }
 
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         batch = response['hits'].deep_symbolize_keys
@@ -123,7 +127,11 @@ module Searchable
     def build_search_options(query)
       search_options = {
         index: index_names(query.try(:sources)),
-        type:  (model_classes.map { |mc| mc.to_s.typeize } rescue nil),
+        type:  (begin
+                  model_classes.map { |mc| mc.to_s.typeize }
+                rescue
+                  nil
+                end),
         body:  query.generate_search_body,
         from:  query.offset,
         size:  query.size,

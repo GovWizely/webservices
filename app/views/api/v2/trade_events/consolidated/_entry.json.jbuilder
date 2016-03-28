@@ -58,7 +58,7 @@ source_field_lists = {
     :cost_currency, :registration_link, :registration_title,
     :description, :industries, :url, :venues, :first_name, :last_name,
     :post, :person_title, :phone, :email, :source, :event_type,
-    :trade_regions, :world_regions
+    :trade_regions, :world_regions,
   ],
 }
 

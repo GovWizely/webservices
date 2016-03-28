@@ -28,7 +28,7 @@ describe CanEnsureCsvHeaders do
       it 'raises an error' do
         expect { MockData.new.import }.to raise_error(
           'CSV key names in source for MockData are not as ' \
-          'expected. Missing keys: foobius. Unrecognized keys: foo.')
+          'expected. Missing keys: foobius. Unrecognized keys: foo.',)
       end
     end
   end

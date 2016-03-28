@@ -67,7 +67,7 @@ describe TradeLead::Query do
         described_class.new(countries:  'ca,au',
                             q:          'women',
                             industries: 'dental',
-                            sources:    'FBO')
+                            sources:    'FBO',)
       end
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_all_query_filter.json").read }
       it 'generates search body with countries filter' do

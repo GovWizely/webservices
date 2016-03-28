@@ -5,7 +5,7 @@ def build_user(args = {})
                full_name:             'Rod',
                company:               "Rod's Corp",
                confirmed_at:          Time.now.utc,
-               admin:                 false }
+               admin:                 false, }
 
   User.new(defaults.merge(args))
 end

@@ -25,7 +25,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
           [TradeLead::Australia, TradeLead::Fbopen, TradeLead::State,
-           TradeLead::Uk, TradeLead::Canada, TradeLead::Mca, TradeLead::Ustda]
+           TradeLead::Uk, TradeLead::Canada, TradeLead::Mca, TradeLead::Ustda,]
         end
       end
       it_behaves_like 'it contains all expected aggregations' do
@@ -111,7 +111,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
       end
 
       context 'and searching for field with non ascii characters using ascii characters' do
-        let(:params) { {  q: 'Montée', sources: 'CANADA' } }
+        let(:params) { { q: 'Montée', sources: 'CANADA' } }
         it_behaves_like 'it contains all TradeLead::Canada results that match "Montée"'
         it_behaves_like 'it contains all expected aggregations' do
           let(:expected_json) { 'trade_leads/canada/aggregations_with_query_montee.json' }
@@ -238,7 +238,7 @@ describe 'Consolidated Trade Leads API V2', type: :request do
     context 'when trying to retrieve TradeLead::Canada data using a valid id' do
       let(:expected_result) do
         r = TradeLead::Consolidated.search_for(api_version: '2',
-                                               sources:     'canada')[:hits][1]
+                                               sources:     'canada',)[:hits][1]
         @all_possible_full_results[TradeLead::Canada].first.merge(id: r[:_id]).symbolize_keys
       end
 

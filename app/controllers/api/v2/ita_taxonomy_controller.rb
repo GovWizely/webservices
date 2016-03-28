@@ -13,7 +13,7 @@ class Api::V2::ItaTaxonomyController < Api::V2Controller
   end
 
   rescue_from(ActionController::ParameterMissing) do |e|
-    render json:   { error: e.message  },
+    render json:   { error: e.message },
            status: :bad_request
   end
 
@@ -26,7 +26,7 @@ class Api::V2::ItaTaxonomyController < Api::V2Controller
     @query_expansion = strip_punctuation(@query_expansion)
 
     query_response.each { |_key, array| build_queries(array) }
-    
+
     query_response
   end
 

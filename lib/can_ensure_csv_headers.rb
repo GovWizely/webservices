@@ -18,7 +18,7 @@ module CanEnsureCsvHeaders
       message += " Missing keys: #{missing}." if missing.present?
       message += " Unrecognized keys: #{unrecognized}." if unrecognized.present?
       Rails.logger.error(message)
-      fail message
+      raise message
     end
   end
 

@@ -27,7 +27,7 @@ describe ScreeningList::Consolidated, type: :model do
         it do
           is_expected.to eq ['test:webservices:screening_list:dtcs',
                              'test:webservices:screening_list:fses',
-                             'test:webservices:screening_list:sdns']
+                             'test:webservices:screening_list:sdns',]
         end
       end
 

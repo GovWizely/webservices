@@ -36,7 +36,7 @@ module TradeLead
 
       entries = []
       doc[:features].each do |article_hash|
-        next if article_hash[:properties][:Status].downcase == 'fulfilled'
+        next if article_hash[:properties][:Status].casecmp('fulfilled').zero?
         entries << process_entry_info(article_hash)
       end
 
@@ -61,7 +61,11 @@ module TradeLead
 
     def process_additional_fields(entry)
       %i(publish_date end_date).each do |field|
-        entry[field] &&= Date.parse(entry[field]).iso8601 rescue nil
+        begin
+          entry[field] &&= Date.parse(entry[field]).iso8601
+        rescue
+          nil
+        end
       end
 
       %i(comments description title tags contact).each do |field|

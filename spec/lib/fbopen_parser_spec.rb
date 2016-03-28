@@ -3,7 +3,7 @@ require 'spec_helper'
 describe FbopenParser do
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/fbopen" }
   let(:results_dir) { "#{File.dirname(__FILE__)}/fbopen" }
-  let(:subject)      { FbopenParser.new }
+  let(:subject) { FbopenParser.new }
 
   describe '#convert' do
     let(:srcsgt)          { open("#{fixtures_dir}/srcsgt_source").read }
@@ -19,13 +19,13 @@ describe FbopenParser do
       expect(subject.convert(presol)).to include *expected_presol
     end
 
-    let(:duplicatekey)          { open("#{fixtures_dir}/duplicatekey_source").read }
+    let(:duplicatekey) { open("#{fixtures_dir}/duplicatekey_source").read }
     it 'warns on duplicate keys' do
       expect(Rails.logger).to receive(:warn).with(/Duplicate key 'OFFICE' on record: {:ntype=>\"PRESOL\"/)
       subject.convert(duplicatekey)
     end
 
-    let(:all_records)           { open("#{fixtures_dir}/complete_source").read }
+    let(:all_records) { open("#{fixtures_dir}/complete_source").read }
     let(:expected_output) { JSON.parse(open("#{results_dir}/complete_output.json").read) }
     it 'handles all sample formats' do
       expect(subject.convert(all_records)).to eq(expected_output)

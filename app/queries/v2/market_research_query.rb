@@ -4,7 +4,7 @@ class V2::MarketResearchQuery < CountryIndustryQuery
     @sort = @q ? nil : 'title.keyword'
 
     @industries = options[:industries]
-                  .split(/(?<!\\),/)
+                  .split(/(?<!\\),/,)
                   .map { |industry| industry.delete('\\').strip } if options[:industries].present?
 
     @expiration_date = options[:expiration_date] if options[:expiration_date].present?

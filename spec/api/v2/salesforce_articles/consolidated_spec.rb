@@ -17,8 +17,8 @@ describe 'Consolidated Market Intelligence API', type: :request do
       it_behaves_like 'it contains all SalesforceArticle::TopMarkets results'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
-          [SalesforceArticle::CountryCommercial, SalesforceArticle::MarketInsight, 
-            SalesforceArticle::StateReport, SalesforceArticle::TopMarkets]
+          [SalesforceArticle::CountryCommercial, SalesforceArticle::MarketInsight,
+           SalesforceArticle::StateReport, SalesforceArticle::TopMarkets,]
         end
       end
       it_behaves_like 'it contains all expected aggregations' do

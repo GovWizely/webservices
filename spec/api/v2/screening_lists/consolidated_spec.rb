@@ -27,7 +27,7 @@ describe 'Consolidated Screening List API V2', type: :request do
         let(:sources) do
           [ScreeningList::Sdn, ScreeningList::Fse, ScreeningList::El,
            ScreeningList::Dpl, ScreeningList::Uvl, ScreeningList::Isa, ScreeningList::Isn,
-           ScreeningList::Dtc, ScreeningList::Part561, ScreeningList::Plc, ScreeningList::Ssi]
+           ScreeningList::Dtc, ScreeningList::Part561, ScreeningList::Plc, ScreeningList::Ssi,]
         end
       end
     end

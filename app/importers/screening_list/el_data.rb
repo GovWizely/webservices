@@ -88,7 +88,7 @@ module ScreeningList
     }
 
     def process_address(row)
-      address           = remap_keys(ADDRESS_HASH, row.to_hash)
+      address = remap_keys(ADDRESS_HASH, row.to_hash)
       address[:country] &&= lookup_country(address[:country])
       address
     end

@@ -4,7 +4,11 @@ module TradeEvent
 
     def initialize(options = {})
       super
-      @sources = options[:sources].upcase.split(',') rescue []
+      @sources = begin
+                   options[:sources].upcase.split(',')
+                 rescue
+                   []
+                 end
       @sort = '_score,start_date'
       @start_date = options[:start_date] if options[:start_date].present?
       @end_date = options[:end_date] if options[:end_date].present?

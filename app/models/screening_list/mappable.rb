@@ -13,33 +13,33 @@ module ScreeningList
             name:                       { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             name_idx:                   { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             alt_names:                  { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             alt_idx:                    { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             # reversed
             name_rev:                   { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             alt_rev:                    { type:     'string',
                                           analyzer: 'standard_asciifolding_nostop',
                                           fields:   {
-                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
             # whitespace removed
             name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
@@ -58,7 +58,7 @@ module ScreeningList
 
             type:                       { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
             source:                     { properties: { full_name: { type: 'string', index: 'no' },
-                                                        code:      { type: 'string', analyzer: 'keyword' } } },
+                                                        code:      { type: 'string', analyzer: 'keyword' }, }, },
             federal_register_notice:    { type: 'string', analyzer: 'keyword' },
 
             ### Note to self: (I went back and forth so many times that I need a note to break me out of this loop)
@@ -71,7 +71,7 @@ module ScreeningList
             ###
             ids:                        { properties: { country:         { type: 'string', analyzer: 'keyword' },
                                                         issue_date:      { type: 'date',   format: 'YYYY-MM-dd' },
-                                                        expiration_date: { type: 'date',   format: 'YYYY-MM-dd' } } },
+                                                        expiration_date: { type: 'date',   format: 'YYYY-MM-dd' }, }, },
 
             nationalities:              { type: 'string', analyzer: 'keyword' },
             citizenships:               { type: 'string', analyzer: 'keyword' },
@@ -82,7 +82,7 @@ module ScreeningList
             entity_number:              { type: 'integer' },
           },
         },
-      }.merge(klass.metadata_mappings).freeze
+      }.merge(klass.metadata_mappings,).freeze
 
       klass.class_eval do
         class << self

@@ -3,7 +3,11 @@ class CountryIndustryQuery < Query
 
   def initialize(options = {})
     super
-    @countries = options[:countries].upcase.split(',').map(&:strip) rescue nil
+    @countries = begin
+                   options[:countries].upcase.split(',').map(&:strip)
+                 rescue
+                   nil
+                 end
     @industry = options[:industry]
     @q = options[:q]
   end

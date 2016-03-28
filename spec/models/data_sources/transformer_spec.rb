@@ -70,8 +70,8 @@ describe DataSources::Transformer do
       let(:transformer) do
         transformation_array = [{ external_mapping: { urls: [
           { url: 'https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE', result_path: '$[0].alpha2Code' },
-          { url: 'http://im.govwizely.com/api/terms.json?mapped_term=Missing%20Country:%20ORIGINAL_VALUE&source=TradeEvent::Ustda', result_path: '$[0].name' }
-        ] } }]
+          { url: 'http://im.govwizely.com/api/terms.json?mapped_term=Missing%20Country:%20ORIGINAL_VALUE&source=TradeEvent::Ustda', result_path: '$[0].name' },
+        ], }, },]
         DataSources::Transformer.new(metadata.merge(transformations: transformation_array))
       end
 
@@ -109,20 +109,19 @@ describe DataSources::Transformer do
     context 'multi-value mapping' do
       let(:transformer) do
         transformation_array = [{ external_mapping: { urls: [
-          { url: 'http://im.govwizely.com/api/terms.json?mapped_term=ORIGINAL_VALUE&source=TradeLead::State',
+          { url:         'http://im.govwizely.com/api/terms.json?mapped_term=ORIGINAL_VALUE&source=TradeLead::State',
             result_path: '$..name',
-            multi_value: true }
-        ] } }]
+            multi_value: true, },
+        ], }, },]
         DataSources::Transformer.new(metadata.merge(transformations: transformation_array))
       end
 
       it 'returns the appropriate array' do
         VCR.use_cassette('importers/data_sources/external_mapping_transformation/construction.yml') do
-          expect(transformer.transform('construction')).to eq( ['Design and Construction', 'Construction Services'])
+          expect(transformer.transform('construction')).to eq(['Design and Construction', 'Construction Services'])
         end
       end
     end
-
   end
 
   context 'an unsupported transformation is specified' do

@@ -19,7 +19,7 @@ describe 'Consolidated Trade Events API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) do
           [TradeEvent::Ita, TradeEvent::Sba, TradeEvent::Exim,
-           TradeEvent::Ustda, TradeEvent::Dl]
+           TradeEvent::Ustda, TradeEvent::Dl,]
         end
       end
       it_behaves_like 'it contains all expected aggregations' do

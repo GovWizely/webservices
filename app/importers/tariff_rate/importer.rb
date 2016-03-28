@@ -22,7 +22,7 @@ module TariffRate
                    :y2015, :alt_2015, :y2016, :alt_2016, :y2017, :alt_2017, :y2018, :alt_2018, :y2019, :alt_2019,
                    :y2020, :alt_2020, :y2021, :alt_2021, :y2022, :alt_2022, :y2023, :alt_2023, :y2024, :alt_2024,
                    :y2025, :alt_2025, :y2026, :alt_2026, :y2027, :alt_2027, :y2028, :alt_2028, :y2029, :alt_2029,
-                   :y2030, :alt_2030, :y2031, :alt_2031]
+                   :y2030, :alt_2030, :y2031, :alt_2031,]
 
     COLUMN_HASH = {
       id:                        :source_id,
@@ -54,17 +54,17 @@ module TariffRate
         region:      Rails.configuration.tariff_rate[:aws][:region],
         credentials: Aws::Credentials.new(
           Rails.configuration.tariff_rate[:aws][:access_key_id],
-          Rails.configuration.tariff_rate[:aws][:secret_access_key]))
+          Rails.configuration.tariff_rate[:aws][:secret_access_key],),)
     end
 
     def import
-      object = @s3.get_object(bucket: 'tariffs', key: "#{@resource}").body
+      object = @s3.get_object(bucket: 'tariffs', key: @resource.to_s).body
 
       options = {
         quote_char:                "'",
         chunk_size:                500,
         user_provided_headers:     CSV_HEADERS,
-        convert_values_to_numeric: false }
+        convert_values_to_numeric: false, }
 
       SmarterCSV.process(object, options) do |chunk|
         entries = chunk.map { |row| process_row row }.compact
@@ -91,7 +91,7 @@ module TariffRate
     def extract_duplicate_fields(row)
       { rule_text: row[:rule_text1].nil? ? row[:rule_text2] : row[:rule_text1],
         link_text: row[:link_text1].nil? ? row[:link_text2] : row[:link_text1],
-        link_url:  row[:link_url1].nil? ? row[:link_url2] : row[:link_url1] }
+        link_url:  row[:link_url1].nil? ? row[:link_url2] : row[:link_url1], }
     end
 
     def extract_rate_by_year_fields(row)
@@ -102,7 +102,7 @@ module TariffRate
         alt_rate_by_year[key.to_s] = value.to_s if key.to_s.start_with?('alt_20') && !value.nil?
       end
       { annual_rates:     rate_by_year,
-        alt_annual_rates: alt_rate_by_year }
+        alt_annual_rates: alt_rate_by_year, }
     end
 
     def extract_country_fields(entry)

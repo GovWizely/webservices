@@ -58,7 +58,7 @@ describe RecreateIndicesWithModifiedMappings do
         # Field mappings found in the DB but not in the model are assumed to
         # be "dynamic mappings" added by ES in the absence of any given by us.
         db_mappings = ES.client.indices.get_field_mapping(index: index, field: field)
-        expect(db_mappings[index]['mappings'].keys.count).to be > 0  # i.e. the mapping we added is present
+        expect(db_mappings[index]['mappings'].keys.count).to be > 0 # i.e. the mapping we added is present
 
         expect(subject).to be_empty
       end

@@ -28,7 +28,7 @@ class DataSource
   after_destroy :delete_api_index
 
   def initialize(attributes = {})
-    attributes.merge!(_id: DataSource.id_from_params(attributes['api'], attributes['version_number'])) if id.nil? && attributes['api'].present? && attributes['version_number'].present?
+    attributes[:_id] = DataSource.id_from_params(attributes['api'], attributes['version_number']) if id.nil? && attributes['api'].present? && attributes['version_number'].present?
     super(attributes)
   end
 
@@ -75,7 +75,7 @@ class DataSource
   def versions
     @versions ||= DataSource.search(query:   { filtered: { filter: { term: { api: api } } } },
                                     _source: { include: ['version_number'] },
-                                    sort:    :version_number).collect(&:version_number)
+                                    sort:    :version_number,).collect(&:version_number)
   end
 
   def search_params
@@ -90,12 +90,14 @@ class DataSource
   def self.find_published(api, version_number, exclude_data = true)
     versioned_id = id_from_params(api, version_number)
     query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
-    query_hash.merge!(_source: { exclude: ['data'] }) if exclude_data
+    query_hash[:_source] = { exclude: ['data'] } if exclude_data
     search(query_hash).first
   end
 
   def self.directory
-    all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }]) rescue []
+    all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }])
+  rescue
+    []
   end
 
   def self.freshen(api)
@@ -113,14 +115,14 @@ class DataSource
 
   def data_format
     case data
-      when /\A<\?xml /
-        'XML'
-      when /\A[{\[]/
-        'JSON'
-      when /\t/
-        'TSV'
-      else
-        'CSV'
+    when /\A<\?xml /
+      'XML'
+    when /\A[{\[]/
+      'JSON'
+    when /\t/
+      'TSV'
+    else
+      'CSV'
     end
   end
 

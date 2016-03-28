@@ -62,7 +62,7 @@ module Indexable
     def create_index
       ES.client.indices.create(
         index: index_name,
-        body:  { settings: settings, mappings: mappings })
+        body:  { settings: settings, mappings: mappings },)
       touch_metadata
     end
 
@@ -79,18 +79,22 @@ module Indexable
         index: index_name,
         type:  'metadata',
         id:    0,
-        body:  body)
+        body:  body,)
     end
 
     # If any field is not present, we initialize it with those values.
     EMPTY_METADATA = { version: '', last_updated: '', last_imported: '' }
 
     def stored_metadata
-      stored = ES.client.get(
-        index: index_name,
-        type:  'metadata',
-        id:    0,
-      )['_source'].symbolize_keys rescue {}
+      stored = begin
+                 ES.client.get(
+                   index: index_name,
+                   type:  'metadata',
+                   id:    0,
+                 )['_source'].symbolize_keys
+               rescue
+                 {}
+               end
 
       EMPTY_METADATA.merge(stored)
     end
@@ -117,7 +121,7 @@ module Indexable
     end
 
     def purge_old(before_time)
-      fail 'This model is unable to purge old documents' unless can_purge_old?
+      raise 'This model is unable to purge old documents' unless can_purge_old?
       body = Utils.older_than(:_updated_at, before_time)
       ES.client.delete_by_query(index: index_name, type: index_type, body: body)
       ES.client.indices.refresh(index: index_name)

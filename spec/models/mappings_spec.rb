@@ -23,7 +23,7 @@ describe 'Model field mappings' do
         Webservices::Application.model_classes.each do |model_class|
           index = model_class.index_name
           db_mapping = ES.client.indices.get_mapping(
-            index: index)[index]['mappings'].deep_stringify
+            index: index,)[index]['mappings'].deep_stringify
 
           expect(model_class.mappings.deep_stringify).to eq(db_mapping),
                                                          "#{model_class}.mappings was modified by Elasticsearch after it "  \

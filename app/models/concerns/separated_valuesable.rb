@@ -76,9 +76,7 @@ module SeparatedValuesable
             semicolon_join(value.map { |v| comma_join(v, keys_to_concat) })
           elsif value
             comma_join(value, keys_to_concat)
-          else
-            nil
-          end
+                    end
         end
       end
     end

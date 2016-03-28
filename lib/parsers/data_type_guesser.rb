@@ -37,6 +37,6 @@ module DataTypeGuesser
       description: "Description of #{field_name}",
       indexed:     true,
       plural:      false,
-      type:        guessed_column_type }
+      type:        guessed_column_type, }
   end
 end

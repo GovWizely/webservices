@@ -100,7 +100,7 @@ module TradeLead
       def process_additional_fields(lead)
         lead[:description] &&= Nokogiri::HTML.fragment(lead[:description]).inner_text.squish
         lead[:source] = TradeLead::Fbopen.source[:code]
-        lead[:id]      = lead[:contract_number]
+        lead[:id] = lead[:contract_number]
         lead[:url] = UrlMapper.get_bitly_url(lead[:url], model_class) if lead[:url].present?
         lead = process_industries(lead)
         lead

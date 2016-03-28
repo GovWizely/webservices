@@ -19,7 +19,7 @@ describe Api::V2Controller, type: :controller do
     end
 
     def bad_date_range
-      fail Exceptions::InvalidDateRangeFormat
+      raise Exceptions::InvalidDateRangeFormat
     end
   end
 
