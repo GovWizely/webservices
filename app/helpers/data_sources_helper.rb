@@ -1,6 +1,7 @@
 module DataSourcesHelper
   def sample_api_call(data_source, with_params = true)
-    url = "/v#{data_source.version_number}/#{data_source.api}/search.json?#{sample_params_from_data_source(data_source.metadata, with_params)}"
+    example_data_source = data_source.is_consolidated? ? data_source.sources_map.values.first : data_source
+    url = "/v#{data_source.version_number}/#{data_source.api}/search.json?#{sample_params_from_data_source(example_data_source.metadata, with_params)}"
     link_to url, url
   end
 

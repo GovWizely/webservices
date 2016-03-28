@@ -1,4 +1,4 @@
-%h1 Editing data source
+%h1= "Editing #{'consolidated' if @data_source.is_consolidated?} data source"
 
 = form_for @data_source, html: {class: :data_source} do |f|
   - if @data_source.errors.any?
@@ -13,45 +13,57 @@
     = f.text_area :dictionary
   .actions
     = f.submit 'Update'
-    %p
-      This is a YAML representation of the mapping from the CSV file to what Elasticsearch will index.
-      It also informs how the search API endpoint for
-      %b= @data_source.api
-      will behave.
-    %p
-      There are five possibilities for the type field. The parser makes a guess at what the types should be,
-      but you can override this.
-      %dl
-        %dt string
-        %dd Freeform text, indexed and searched using the snowball analyzer
-        %dt enum
-        %dd Controlled vocabulary, used for case-insensitive exact-match filters
-        %dt date
-        %dd ISO 8601 date (with optional time), used for date range filters
-        %dt float
-        %dd Floating point number
-        %dt integer
-        %dd Long integer
-    %p
-      The
-      %b :source:
-      field refers to the heading in the CSV document. Do not modify this. If you want to change the name of the field
-      that gets used for the API call, change the top level entry for that YAML item. Remember to underscore
-      the top level name (e.g. de_minimis_currency), and keep it a singular noun.
-    %p
-      If you don't want a field returned in the API results, delete the whole YAML entry.
-    %p
-      If you want fields returned in a different order then they are listed in the CSV file, just rearrange the blocks.
-    %p
-      If you want a field returned in the API results but not be searchable or filterable, set the
-      %b :indexed:
-      value to false.
-    %p
-      If you want a field to be filterable on multiple values (comma-separated), set the
-      %b :plurals:
-      value to true. Do not pluralize the name of the field.
-    %p
-      The
-      %b :description:
-      field is optional, and is just for your own records. You can delete the whole line if you don't want to see it.
+    - if @data_source.is_consolidated?
+      %p
+        This is a YAML representation of the underlying data sources that will make up the consolidated feed.
+        The
+        %b :source:
+        field will be used in the search URL to filter which sources are searched. It should be short. It is case sensitive.
+        The
+        %b :data_source_id:
+        field is the ID of the data source, which is just its api field and its version joined by a colon.
+        %p Here is a sample dictionary you can use as a template:
+        %pre= "---\n- source: AB\n  api: ab_entries\n  version_number: 1\n- source: CD\n  api: cd_entries\n  version_number: 1\n"
+    - else
+      %p
+        This is a YAML representation of the mapping from the CSV file to what Elasticsearch will index.
+        It also informs how the search API endpoint for
+        %b= @data_source.api
+        will behave.
+      %p
+        There are five possibilities for the type field. The parser makes a guess at what the types should be,
+        but you can override this.
+        %dl
+          %dt string
+          %dd Freeform text, indexed and searched using the snowball analyzer
+          %dt enum
+          %dd Controlled vocabulary, used for case-insensitive exact-match filters
+          %dt date
+          %dd ISO 8601 date (with optional time), used for date range filters
+          %dt float
+          %dd Floating point number
+          %dt integer
+          %dd Long integer
+      %p
+        The
+        %b :source:
+        field refers to the heading in the CSV document. Do not modify this. If you want to change the name of the field
+        that gets used for the API call, change the top level entry for that YAML item. Remember to underscore
+        the top level name (e.g. de_minimis_currency), and keep it a singular noun.
+      %p
+        If you don't want a field returned in the API results, delete the whole YAML entry.
+      %p
+        If you want fields returned in a different order then they are listed in the CSV file, just rearrange the blocks.
+      %p
+        If you want a field returned in the API results but not be searchable or filterable, set the
+        %b :indexed:
+        value to false.
+      %p
+        If you want a field to be filterable on multiple values (comma-separated), set the
+        %b :plurals:
+        value to true. Do not pluralize the name of the field.
+      %p
+        The
+        %b :description:
+        field is optional, and is just for your own records. You can delete the whole line if you don't want to see it.
 

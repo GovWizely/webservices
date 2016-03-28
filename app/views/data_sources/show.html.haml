@@ -13,18 +13,42 @@
 %p
   %b Version:
   = @data_source.version_number
-%p
-  %b Data Last Imported:
-  = @data_source.data_imported_at
-  (
-  = time_ago_in_words(@data_source.data_imported_at)
-  ago )
-%p
-  %b Data Last Changed:
-  = @data_source.data_changed_at
-  (
-  = time_ago_in_words(@data_source.data_changed_at)
-  ago )
+- if @data_source.is_consolidated?
+  %p
+    %b Consolidated Data Sources:
+    %table
+      %tr
+        %th Source
+        %th API
+        %th V
+        %th Last Updated
+        %th Last Imported
+        %th Sample API Call
+        %th API Page
+      - @data_source.sources_map.each do |source, data_source|
+        %tr
+          %td= source
+          %td= data_source.api
+          %td= data_source.version_number
+          %td= time_ago_in_words(data_source.data_changed_at)
+          %td= time_ago_in_words(data_source.data_imported_at)
+          %td= sample_api_call(data_source, false)
+          %td= link_to('admin', data_source_path(data_source) )
+    %p Use the param `sources` to search across multiple sources (plural) separated by commas.
+    %hr
+- else
+  %p
+    %b Data Last Imported:
+    = @data_source.data_imported_at
+    (
+    = time_ago_in_words(@data_source.data_imported_at)
+    ago )
+  %p
+    %b Data Last Changed:
+    = @data_source.data_changed_at
+    (
+    = time_ago_in_words(@data_source.data_changed_at)
+    ago )
 - if @data_source.metadata.plural_filter_fields.present?
   %p
     %b Plural Filtered Fields:
