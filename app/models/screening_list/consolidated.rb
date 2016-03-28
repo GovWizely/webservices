@@ -44,5 +44,12 @@ module ScreeningList
       :places_of_birth,
       :source_information_url,
     ]
+
+    def self.search_for(options)
+      result = super(options)
+      score_adjuster = ScoreAdjuster.new(options['name'], result[:hits])
+      result[:hits] = score_adjuster.rescored_hits
+      result
+    end
   end
 end
