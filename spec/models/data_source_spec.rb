@@ -5,7 +5,6 @@ describe DataSource do
     it do
       is_expected.to validate_presence_of(:name)
       is_expected.to validate_presence_of(:api)
-      is_expected.to validate_presence_of(:data)
       is_expected.to validate_presence_of(:version_number)
       is_expected.to validate_numericality_of(:version_number)
     end

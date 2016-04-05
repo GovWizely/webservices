@@ -26,7 +26,7 @@ RSpec.feature 'Data Source management' do
       fill_in 'Api', with: 'success_cases'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
       click_button('Create')
-      expect(page).to have_text('Data source was successfully created. Review the schema and make any changes')
+      expect(page).to have_text('Data source was successfully created. Review the dictionary and make any changes')
       expect(page).to have_text('Editing data source')
       expect(page).to have_field('Name', with: 'Some human readable name')
       expect(page).to have_field('Api', readonly: true)
@@ -117,7 +117,7 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_link('Iterate API Version')
     end
 
-    scenario 'admin user marks an API as published' do
+    scenario 'admin user marks an API as unpublished' do
       visit '/'
 
       fill_in 'Email', with: 'test@gov.gov'
@@ -134,9 +134,9 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_text('Published: true')
 
       click_link('Edit')
-      check('Published')
+      uncheck('Published')
       click_button('Update')
-      expect(page).to have_text('Published: true')
+      expect(page).to have_text('Published: false')
     end
 
     scenario 'admin user updates the data in the data source file (non-breaking change)' do
@@ -148,13 +148,12 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Some new API'
-      fill_in 'Description', with: 'Not published yet'
+      fill_in 'Description', with: 'Soon to be updated'
       fill_in 'Api', with: 'csv_edits'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
       click_button('Create')
 
       expect(page).not_to have_field('Path')
-      check('Published')
       click_button('Update')
 
       visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
@@ -177,12 +176,11 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Testing tabs'
-      fill_in 'Description', with: 'Testing tabs: Not published yet'
+      fill_in 'Description', with: 'Testing tabs'
       fill_in 'Api', with: 'tabs'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/tabs.tsv")
       click_button('Create')
 
-      check('Published')
       click_button('Update')
 
       visit("/v1/tabs/search.json?api_key=#{@user.api_key}")
@@ -198,12 +196,11 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Testing XML'
-      fill_in 'Description', with: 'Testing XML: Not published yet'
+      fill_in 'Description', with: 'Testing XML'
       fill_in 'Api', with: 'xml_records'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/posts.xml")
       click_button('Create')
 
-      check('Published')
       click_button('Update')
 
       visit("/v1/xml_records/search.json?api_key=#{@user.api_key}")
@@ -219,12 +216,11 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Testing XLS'
-      fill_in 'Description', with: 'Testing XLS: Not published yet'
+      fill_in 'Description', with: 'Testing XLS'
       fill_in 'Api', with: 'xls_records'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/excel.xls")
       click_button('Create')
 
-      check('Published')
       click_button('Update')
 
       visit("/v1/xls_records/search.json?api_key=#{@user.api_key}")
@@ -240,12 +236,11 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Testing JSON Object'
-      fill_in 'Description', with: 'Testing JSON: Not published yet'
+      fill_in 'Description', with: 'Testing JSON'
       fill_in 'Api', with: 'json_object_records'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json.json")
       click_button('Create')
 
-      check('Published')
       click_button('Update')
 
       visit("/v1/json_object_records/search.json?api_key=#{@user.api_key}")
@@ -261,12 +256,11 @@ RSpec.feature 'Data Source management' do
 
       click_link('+')
       fill_in 'Name', with: 'Testing JSON Array'
-      fill_in 'Description', with: 'Testing JSON: Not published yet'
+      fill_in 'Description', with: 'Testing JSON'
       fill_in 'Api', with: 'json_array_records'
       attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json_array.json")
       click_button('Create')
 
-      check('Published')
       click_button('Update')
 
       visit("/v1/json_array_records/search.json?api_key=#{@user.api_key}")

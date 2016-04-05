@@ -19,3 +19,4 @@ class ES
     config
   end
 end
+Elasticsearch::Model.client = ES.client

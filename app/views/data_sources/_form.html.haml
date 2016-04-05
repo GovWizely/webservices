@@ -1,3 +1,4 @@
+= form.hidden_field :consolidated if @data_source.is_consolidated?
 .field
   = form.label :name
   = form.text_field :name
@@ -21,7 +22,7 @@
     = form.label :published
     = form.check_box :published
     %p Whether or not this version of the endpoint has been published to developers yet.
-- unless params["just_created"] == "true"
+- unless params["just_created"] == "true" || @data_source.is_consolidated?
   .field
     = form.label :url
     = form.text_field :url

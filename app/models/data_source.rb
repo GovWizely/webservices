@@ -1,7 +1,9 @@
 require 'elasticsearch/persistence/model'
 require 'api_models'
+require 'registry'
 class DataSource
-  include Utils
+  include DataSources::Findable
+  include DataSources::Indexable
   include Elasticsearch::Persistence::Model
 
   VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel application/json).freeze
@@ -14,10 +16,10 @@ class DataSource
   attribute :description, String, mapping: { type: 'string', analyzer: 'english' }
   attribute :dictionary, String, mapping: { type: 'string', index: 'no' }
   attribute :data, String, mapping: { type: 'string', index: 'no' }
-  validates :data, presence: true
   attribute :version_number, Integer
   validates :version_number, numericality: true, presence: true
   attribute :published, Boolean
+  attribute :consolidated, Boolean
   attribute :url, String, mapping: { type: 'string', index: 'no' }
   attribute :message_digest, String, mapping: { type: 'string', index: 'no' }
   attribute :data_changed_at, DateTime
@@ -39,120 +41,58 @@ class DataSource
     yield klass
   end
 
-  def ingest
-    delete_api_index
-    with_api_model do |klass|
-      klass.create_index!
-      _ingest(klass)
+  def with_api_models(sources_param)
+    klasses = consolidated_data_sources(sources_param).collect do |source|
+      klass = ModelBuilder.load_model_class(source)
+      klass_symbol = source.api.classify.to_sym
+      Webservices::ApiModels.redefine_model_constant(klass_symbol, klass)
+      Elasticsearch::Model::Registry.upsert klass
+      klass
     end
-  end
-
-  def freshen
-    data_extractor = DataSources::DataExtractor.new(url)
-    data = data_extractor.data
-    new_message_digest = Digest::SHA1.hexdigest data
-    timestamp = updated_timestamp
-    if message_digest != new_message_digest
-      update(data: data, message_digest: new_message_digest, data_changed_at: timestamp, data_imported_at: timestamp)
-      ingest_and_prune
-    else
-      touch(:data_imported_at)
-    end
+    yield klasses
   end
 
   def metadata
-    @metadata ||= DataSources::Metadata.new(dictionary)
+    metadata_dictionary = is_consolidated? ? sources_map.values.first.dictionary : dictionary
+    @metadata ||= DataSources::Metadata.new(metadata_dictionary)
   end
 
-  def oldest_version?
-    version_number == versions.first
+  def sources_map
+    @sources_map ||= YAML.load(dictionary).collect do |e|
+      published_data_source = DataSource.find_published(e['api'], e['version_number'])
+      [e['source'], published_data_source] if published_data_source.present?
+    end.compact.to_h
   end
 
-  def newest_version?
-    version_number == versions.last
+  def consolidated_data_sources(whitelist)
+    sources_array = whitelist.present? ? whitelist.split(',').collect(&:strip) : sources_map.keys
+    sources_map.slice(*sources_array).values
   end
 
-  def versions
-    @versions ||= DataSource.search(query:   { filtered: { filter: { term: { api: api } } } },
-                                    _source: { include: ['version_number'] },
-                                    sort:    :version_number,).collect(&:version_number)
+  def is_consolidated?
+    consolidated.present? && consolidated == true
   end
 
   def search_params
     fulltext_field_keys = metadata.fulltext_fields.present? ? %i(q) : []
-    metadata.non_fulltext_fields.keys + fulltext_field_keys
-  end
-
-  def self.id_from_params(api, version_number)
-    [api, ['v', version_number || '1'].join].join(':')
-  end
-
-  def self.find_published(api, version_number, exclude_data = true)
-    versioned_id = id_from_params(api, version_number)
-    query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
-    query_hash[:_source] = { exclude: ['data'] } if exclude_data
-    search(query_hash).first
-  end
-
-  def self.directory
-    all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }])
-  rescue
-    []
-  end
-
-  def self.freshen(api)
-    current_version = new(api: api).versions.last
-    data_source = find_published(api, current_version, false)
-    data_source.freshen
+    sources = is_consolidated? ? %i(sources) : []
+    metadata.non_fulltext_fields.keys + fulltext_field_keys + sources
   end
 
   private
 
-  def delete_api_index
-    ES.client.indices.delete(index: [ES::INDEX_PREFIX, 'api_models', api, "v#{version_number}"].join(':'), ignore: 404)
-    DataSource.refresh_index!
-  end
-
-  def data_format
-    case data
-    when /\A<\?xml /
-      'XML'
-    when /\A[{\[]/
-      'JSON'
-    when /\t/
-      'TSV'
-    else
-      'CSV'
-    end
-  end
-
   def build_dictionary
-    @dictionary = "DataSources::#{data_format}Parser".constantize.new(data).generate_dictionary.to_yaml
+    @dictionary = generate_yaml_dictionary unless is_consolidated?
     refresh_metadata
   end
 
-  def initialize_timestamps
-    @data_imported_at = @data_changed_at = updated_timestamp
+  def generate_yaml_dictionary
+    "DataSources::#{data_format}Parser".constantize.new(data).generate_dictionary.to_yaml
   end
 
   def refresh_metadata
     @metadata = nil
+    @sources_map = nil
   end
 
-  def ingest_and_prune
-    with_api_model do |klass|
-      _ingest(klass)
-      ES.client.delete_by_query(index: klass.index_name, type: klass.document_type, body: older_than(:_updated_at, updated_at))
-      klass.refresh_index!
-    end
-  end
-
-  def _ingest(klass)
-    "DataSources::#{data_format}Ingester".constantize.new(klass, metadata, data).ingest
-    klass.refresh_index!
-  end
-
-  def updated_timestamp
-    Time.now.utc
-  end
 end

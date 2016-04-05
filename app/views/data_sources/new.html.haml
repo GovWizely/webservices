@@ -1,4 +1,4 @@
-%h1= "New#{' version of' if action_name == 'iterate_version'} data source"
+%h1= "New #{'consolidated' if @data_source.is_consolidated?}#{' version of' if action_name == 'iterate_version'} data source"
 
 = form_for @data_source, html: {class: :data_source} do |f|
   - if @data_source.errors.any?

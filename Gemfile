@@ -7,6 +7,7 @@ gem 'aws-sdk-core'
 gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
 gem 'elasticsearch'
 gem 'elasticsearch-persistence'
+gem 'elasticsearch-model'
 gem 'iso_country_codes'
 gem 'jbuilder'
 gem 'monetize'
