@@ -38,12 +38,11 @@
     ],
     "source": "ITA",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "Levant",
+      "Middle East"
     ]
   },
   {
@@ -81,12 +80,15 @@
     ],
     "source": "ITA",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -153,12 +155,15 @@
     ],
     "source": "ITA",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -221,12 +226,13 @@
     ],
     "source": "ITA",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+      "Global System of Trade Preferences among Developing Countries",
+      "Southern Common Market"
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "South America",
+      "Latin America",
+      "Western Hemisphere"
     ]
   }
 ]

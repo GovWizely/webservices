@@ -1,6 +1,6 @@
 module V2::TradeEvent
   class Query < ::CountryIndustryQuery
-    include QueryParser
+    include ParsedQueryMethods
     #
     # NOTE: This is mostly duplicated code.
     #       Given the fact we'll remove V1 soon after V2 becomes default it might
@@ -36,7 +36,7 @@ module V2::TradeEvent
       @industry = nil
 
       set_geo_instance_variables(options)
-      parse_query unless @q.nil?
+      update_instance_variables(QueryParser.parse(@q)) unless @q.nil?
     end
 
     private
@@ -45,7 +45,7 @@ module V2::TradeEvent
       json.query do
         json.filtered do
           generate_filtered(json)
-          generate_multi_query(json, self.class::MULTI_FIELDS)
+          generate_parsed_query(json, 'venues.country_name')
         end
       end
     end
@@ -59,7 +59,6 @@ module V2::TradeEvent
             generate_date_range(json, 'end_date', @end_date) if @end_date
             generate_industries_filter(json)
             generate_geo_filters(json, 'venues.country')
-            json.child! { json.terms { json.set! 'venues.country_name', @country_names } } if @country_names
           end
         end
       end if any_field_exist?
@@ -70,7 +69,7 @@ module V2::TradeEvent
     end
 
     def any_field_exist?
-      @sources.any? || @countries || @industries || @start_date || @end_date || @trade_regions || @world_regions || @country_names
+      @sources.any? || @countries || @industries || @start_date || @end_date || @trade_regions || @world_regions
     end
 
     def generate_industries_filter(json)

@@ -58,8 +58,14 @@
   :ita_industries: []
   :country: CA
   :country_name: Canada
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - NAFTA
+  - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   :source: CANADA
 - :language: English
   :title: LINER,COVERALLS,CHEMICAL PROTECTIVE (W8486-140835/A)
@@ -138,8 +144,14 @@
   :ita_industries: []
   :country: CA
   :country_name: Canada
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - NAFTA
+  - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   :source: CANADA
 - :language: English
   :title: CSC-MTL Meat - Poultry (21301-148239/A)
@@ -213,8 +225,14 @@
   :ita_industries: []
   :country: CA
   :country_name: Canada
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - NAFTA
+  - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   :source: CANADA
 - :language: English
   :title: Notice of interest consultant services agreement (open) (21301-14-2002178)
@@ -251,8 +269,14 @@
   :ita_industries: []
   :country: CA
   :country_name: Canada
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - NAFTA
+  - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   :source: CANADA
 - :language: English
   :title: SERVICES, LANGUAGE TRAINING PROGRA (51019-132011/A)
@@ -291,6 +315,12 @@
   :ita_industries: []
   :country: CA
   :country_name: Canada
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - NAFTA
+  - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
+  :world_regions:
+  - North America
+  - Pacific Rim
+  - Western Hemisphere
   :source: CANADA

@@ -5,13 +5,13 @@ class ItaTaxonomyData
   include Importable
   include VersionableResource
 
-  def initialize(resource = nil)
+  def initialize(resource = nil, pre_loaded_terms = nil)
     resource = Rails.configuration.protege_url if resource.nil?
-    @taxonomy_parser = TaxonomyParser.new(resource)
+    @taxonomy_parser = TaxonomyParser.new(resource, pre_loaded_terms)
   end
 
   def import
-    @taxonomy_parser.parse
+    @taxonomy_parser.parse if @taxonomy_parser.terms.empty?
     ItaTaxonomy.index build_json_entries
   end
 
@@ -23,7 +23,7 @@ class ItaTaxonomyData
 
   def build_json_entries
     processed_entries = []
-    taxonomy_terms = @taxonomy_parser.concepts + @taxonomy_parser.concept_groups + @taxonomy_parser.concept_schemes
+    taxonomy_terms = @taxonomy_parser.terms
 
     taxonomy_terms.each do |entry|
       process_entry(entry)

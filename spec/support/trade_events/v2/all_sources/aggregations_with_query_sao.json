@@ -1,21 +1,25 @@
 {
   "world_regions": [
     {
-      "key": "World Region 1",
+      "key": "Latin America",
       "doc_count": 1
     },
     {
-      "key": "World Region 2",
+      "key": "South America",
+      "doc_count": 1
+    },
+    {
+      "key": "Western Hemisphere",
       "doc_count": 1
     }
   ],
   "trade_regions": [
     {
-      "key": "Trade Region 1",
+      "key": "Global System of Trade Preferences among Developing Countries",
       "doc_count": 1
     },
     {
-      "key": "Trade Region 2",
+      "key": "Southern Common Market",
       "doc_count": 1
     }
   ],

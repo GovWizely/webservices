@@ -4,12 +4,9 @@ describe 'Ita Taxonomy API V2', type: :request do
   include_context 'V2 headers'
 
   before(:all) do
-    Rails.application.config.enable_related_term_lookups = true
     ItaTaxonomy.recreate_index
     ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
   end
-
-  after(:all) { Rails.application.config.enable_related_term_lookups = false }
 
   let(:search_path) { '/v2/ita_taxonomies/search' }
   let(:expected_results) { YAML.load_file("#{File.dirname(__FILE__)}/ita_taxonomies/results.yaml") }
@@ -42,6 +39,24 @@ describe 'Ita Taxonomy API V2', type: :request do
 
         results = json_response[:results]
         expect(results).to include(expected_results[3])
+      end
+      it_behaves_like "an empty result when a query doesn't match any documents"
+    end
+
+    context 'when labels is specified' do
+      let(:params) { { labels: 'China, North America' } }
+      before { get search_path, params, @v2_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns ita taxonomies entries' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:total]).to eq(2)
+
+        results = json_response[:results]
+        expect(results).to include(expected_results[0])
+        expect(results).to include(expected_results[1])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end

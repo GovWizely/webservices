@@ -1,6 +1,6 @@
 module V2::TradeLead
   class Query < ::Query
-    include QueryParser
+    include ParsedQueryMethods
 
     attr_reader :countries, :sources
     aggregate_terms_by countries:     { field: 'country' },
@@ -15,14 +15,14 @@ module V2::TradeLead
       @industries = split_to_array(options[:industries]) if options[:industries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
 
-      @q = options[:q]
+      @q = options[:q].downcase if options[:q].present?
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'
       @publish_date = options[:publish_date] if options[:publish_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
 
       set_geo_instance_variables(options)
-      parse_query unless @q.nil?
+      update_instance_variables(QueryParser.parse(@q)) unless @q.nil?
     end
 
     private
@@ -31,13 +31,7 @@ module V2::TradeLead
       json.query do
         json.filtered do
           generate_filtered(json)
-          json.query do
-            json.bool do
-              json.must do
-                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) }
-              end
-            end
-          end unless @q.blank?
+          generate_parsed_query(json, 'country_name')
         end
       end if !@q.blank? || any_field_exist?
     end
@@ -52,7 +46,6 @@ module V2::TradeLead
             generate_date_range(json, 'end_date', @end_date) if @end_date
             generate_industries_filter(json)
             generate_geo_filters(json, 'country')
-            json.child! { json.terms { json.country_name @country_names } } if @country_names
           end
         end
       end if any_field_exist?
@@ -63,7 +56,7 @@ module V2::TradeLead
     end
 
     def any_field_exist?
-      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended || @trade_regions || @world_regions || @country_names
+      @countries || @sources.any? || @industries || @publish_date || @end_date || @publish_date_amended || @trade_regions || @world_regions
     end
 
     def generate_industries_filter(json)

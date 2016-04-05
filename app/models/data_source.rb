@@ -94,5 +94,4 @@ class DataSource
     @metadata = nil
     @sources_map = nil
   end
-
 end

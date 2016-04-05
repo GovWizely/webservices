@@ -9,7 +9,7 @@ class CountryIndustryQuery < Query
                    nil
                  end
     @industry = options[:industry]
-    @q = options[:q]
+    @q = options[:q].downcase if options[:q].present?
   end
 
   private

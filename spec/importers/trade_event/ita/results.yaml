@@ -30,7 +30,9 @@
     :venue: International Convention Center, Haifa, Israel
     :country_name: Israel
   :trade_regions: []
-  :world_regions: []
+  :world_regions:
+  - Levant
+  - Middle East
   :source: ITA
 - :cost: 195.0
   :description: How well do you know the Foreign Trade Regulations (FTR) and the Automated
@@ -57,8 +59,15 @@
     :state: WI
     :venue: WCTC - Richard T Anderson Building
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :source: ITA
 - :cost: 200.99
   :description: The International WorkBoat Show is the largest commercial marine tradeshow
@@ -110,8 +119,15 @@
     :state: LA
     :venue: Morial Convention Center, New Orleans, Louisiana
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :source: ITA
 - :cost: 0.0
   :description: HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and
@@ -174,6 +190,11 @@
     :state: 
     :venue: Expo Center Norte
     :country_name: Brazil
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Global System of Trade Preferences among Developing Countries
+  - Southern Common Market
+  :world_regions:
+  - South America
+  - Latin America
+  - Western Hemisphere
   :source: ITA

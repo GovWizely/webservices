@@ -1,22 +1,9 @@
 {
   "query": {
     "filtered": {
-      "filter": {
-        "bool": {
-          "must": [
-            {
-              "terms": {
-                "country_name": [
-                  "China"
-                ]
-              }
-            }
-          ]
-        }
-      },
       "query": {
         "bool": {
-          "must": [
+          "should": [
             {
               "multi_match": {
                 "fields": [
@@ -28,7 +15,32 @@
                   "procurement_organization"
                 ],
                 "operator": "and",
-                "query": "trade with"
+                "query": "trade with china"
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "multi_match": {
+                      "fields": [
+                        "title",
+                        "description",
+                        "industry.tokenized",
+                        "ita_industries.tokenized",
+                        "tags",
+                        "procurement_organization"
+                      ],
+                      "operator": "and",
+                      "query": "trade with"
+                    }
+                  },
+                  {
+                    "match": {
+                      "country_name": "China"
+                    }
+                  }
+                ]
               }
             }
           ]

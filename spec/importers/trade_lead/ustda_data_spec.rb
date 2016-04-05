@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeLead::UstdaData, vcr: { cassette_name: 'importers/trade_leads/ustda.yml', record: :once } do
+  include_context 'ItaTaxonomy data'
+  
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/ustda" }
   let(:resource) { "#{fixtures_dir}/leads.xml" }
   let(:rss) { "#{fixtures_dir}/rss.xml" }

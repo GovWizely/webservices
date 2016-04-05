@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/canada.yml', record: :once } do
+  include_context 'ItaTaxonomy data'
+
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/canada/canada_leads.csv" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/canada/expected_canada_leads.yaml") }
@@ -60,8 +62,8 @@ describe TradeLead::CanadaData, vcr: { cassette_name: 'importers/trade_leads/can
                         urls:                                 nil,
                         country:                              'CA',
                         country_name:                         'Canada',
-                        trade_regions:                        [],
-                        world_regions:                        [],
+                        trade_regions:                        ['NAFTA', 'Trans Pacific Partnership', 'Asia Pacific Economic Cooperation'],
+                        world_regions:                        ['North America', 'Pacific Rim', 'Western Hemisphere'],
                         source:                               'CANADA',
                        )
     end

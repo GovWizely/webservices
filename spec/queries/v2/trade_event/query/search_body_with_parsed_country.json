@@ -1,22 +1,9 @@
 {
   "query": {
     "filtered": {
-      "filter": {
-        "bool": {
-          "must": [
-            {
-              "terms": {
-                "venues.country_name": [
-                  "China"
-                ]
-              }
-            }
-          ]
-        }
-      },
       "query": {
         "bool": {
-          "must": [
+          "should": [
             {
               "multi_match": {
                 "fields": [
@@ -33,7 +20,18 @@
                   "contacts.person_title"
                 ],
                 "operator": "and",
-                "query": "trade with"
+                "query": "china"
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "venues.country_name": "China"
+                    }
+                  }
+                ]
               }
             }
           ]

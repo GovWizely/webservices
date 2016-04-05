@@ -23,10 +23,10 @@
     "specific_location": null,
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -54,10 +54,10 @@
     "specific_location": "Any region",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -84,10 +84,10 @@
     "specific_location": null,
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -115,10 +115,10 @@
     "specific_location": "Any region",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -145,10 +145,10 @@
     "specific_location": "London",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -175,10 +175,10 @@
     "specific_location": "East of England,South East",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -205,10 +205,10 @@
     "specific_location": "East of England",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -236,10 +236,10 @@
     "specific_location": "London",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   },
   {
@@ -266,10 +266,10 @@
     "specific_location": "East of England",
     "source": "UK",
     "trade_regions": [
-
+      "European Union - 28"
     ],
     "world_regions": [
-
+      "Europe"
     ]
   }
 ]

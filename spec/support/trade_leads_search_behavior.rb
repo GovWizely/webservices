@@ -9,16 +9,6 @@ shared_context 'all Trade Leads fixture data' do
   include_context 'TradeLead::Ustda data'
 end
 
-def import_with_dummy_related_terms(importer)
-  RSpec::Mocks.with_temporary_scope do
-    dummy_terms = [
-      { label: 'first match', related_terms: { trade_regions: ['Trade Region 1'], world_regions: ['World Region 1'] } },
-      { label: 'second match', related_terms: { trade_regions: ['Trade Region 2'], world_regions: ['World Region 2'] } },]
-    allow(ItaTaxonomy).to receive(:search_related_terms).and_return(dummy_terms)
-    importer.import
-  end
-end
-
 shared_context 'TradeLead::Australia data' do
   before(:all) do
     TradeLead::Australia.recreate_index
@@ -209,6 +199,12 @@ shared_examples 'it contains all TradeLead::State results where end_date is 2014
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeLead::State results that match world_regions "Africa"' do
+  let(:source) { TradeLead::State }
+  let(:expected) { [3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TradeLead::Uk data' do
   before(:all) do
     TradeLead::Uk.recreate_index
@@ -254,15 +250,26 @@ shared_examples 'it contains all TradeLead::Mca results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeLead::Mca results that match trade_regions "West African Economic and Monetary Union"' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Mca results that match world_regions "Africa"' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TradeLead::Ustda data' do
   before do
     allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
     TradeLead::Ustda.recreate_index
     VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
-      importer = TradeLead::UstdaData.new(
+      TradeLead::UstdaData.new(
         "#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
-        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",)
-      import_with_dummy_related_terms(importer)
+        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",).import
     end
 
     @all_possible_full_results ||= {}
@@ -288,8 +295,8 @@ shared_examples 'it contains all TradeLead::Ustda results with trade_regions' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeLead::Ustda results with world_regions' do
+shared_examples 'it contains all TradeLead::Ustda results that match world_regions "Africa"' do
   let(:source) { TradeLead::Ustda }
-  let(:expected) { [0, 1] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end

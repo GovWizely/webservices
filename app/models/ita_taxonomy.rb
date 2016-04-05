@@ -2,9 +2,7 @@ class ItaTaxonomy
   include Indexable
 
   def self.search_related_terms(params)
-    return [] unless Rails.application.config.enable_related_term_lookups == true
-
-    results = search_for(params.merge(size: '100'))
+    results = search_for(params.reverse_merge(size: '100'))
     results[:hits].map do |result|
       { label:         result[:_source][:label],
         type:          result[:_source][:type],

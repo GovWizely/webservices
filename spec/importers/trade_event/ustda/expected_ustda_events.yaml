@@ -197,8 +197,15 @@
     :state: California
     :country: US
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :event_type: 
   :source: USTDA
   :id: 5dd39f6a508d2f27cd0e62c55efeab786a5ddd55

@@ -29,5 +29,14 @@ describe ItaTaxonomyQuery do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end
+
+    context 'when options include labels' do
+      let(:query) { ItaTaxonomyQuery.new(labels: 'China,North America') }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_labels.json").read }
+
+      it 'generates search body with queries' do
+        expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+      end
+    end
   end
 end

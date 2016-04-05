@@ -24,10 +24,13 @@
     "specific_address": "Fairchild AFB, WA",
     "source": "FBO",
     "trade_regions": [
-
+      "Global System of Trade Preferences among Developing Countries",
+      "Southern Common Market"
     ],
     "world_regions": [
-
+      "South America",
+      "Latin America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -55,10 +58,13 @@
     "specific_address": "TBD TBD TBD NH",
     "source": "FBO",
     "trade_regions": [
-
+      "Global System of Trade Preferences among Developing Countries",
+      "Southern Common Market"
     ],
     "world_regions": [
-
+      "South America",
+      "Latin America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -86,10 +92,13 @@
     "specific_address": "Central Receiving Point DOL Supply IPBO Warehouse, Buidg 3574, 12 Feinber Devens MA",
     "source": "FBO",
     "trade_regions": [
-
+      "Global System of Trade Preferences among Developing Countries",
+      "Southern Common Market"
     ],
     "world_regions": [
-
+      "South America",
+      "Latin America",
+      "Western Hemisphere"
     ]
   }
 ]

@@ -69,7 +69,7 @@ module TradeEvent
 
     def extract_venues(event_info)
       venue = extract_fields(event_info, VENUE_XPATHS)
-      venue[:country_name] = venue[:country].dup
+      venue[:country_name] = venue[:country].nil? ? nil : venue[:country].dup
       venue[:country] = venue[:country].present? ? lookup_country(venue[:country]) : nil
       [venue]
     end

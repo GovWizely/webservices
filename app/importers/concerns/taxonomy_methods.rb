@@ -5,8 +5,9 @@ module TaxonomyMethods
   end
 
   def add_related_fields(terms)
+    terms = terms.compact
     related_fields = { trade_regions: [], world_regions: [] }
-    search_results = ItaTaxonomy.search_related_terms(labels: terms.join(','))
+    search_results = terms.empty? ? [] : ItaTaxonomy.search_related_terms(labels: terms.join(','))
 
     search_results.each do |result|
       related_fields.merge!(result[:related_terms]) { |_key, old_val, new_val| old_val | new_val }
@@ -14,17 +15,9 @@ module TaxonomyMethods
     related_fields
   end
 
-  #  These will soon be moved to the Taxonomy importer (the only place they should be used):
-  def taxonomy_parser
-    unless @taxonomy_parser
-      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.frozen_protege_source)
-      @taxonomy_parser.concepts = YAML.load_file(Rails.configuration.frozen_taxonomy_concepts)
-    end
-    @taxonomy_parser
-  end
-
+  #  These will soon be moved to the Taxonomy importer (the only place they should be used!):
   def get_geo_terms(country, type)
-    taxonomy_parser.get_all_geo_terms_for_country(country).select do |term|
+    @taxonomy_parser.get_all_geo_terms_for_country(country).select do |term|
       term[:object_properties][:member_of].map { |t| t[:label] }.include?(type)
     end.map { |term| term[:label] }
   end

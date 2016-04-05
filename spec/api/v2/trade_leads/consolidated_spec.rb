@@ -2,6 +2,7 @@ require 'spec_helper'
 
 describe 'Consolidated Trade Leads API V2', type: :request do
   include_context 'V2 headers'
+  include_context 'ItaTaxonomy data'
   include_context 'all Trade Leads fixture data'
 
   describe 'GET /trade_leads/search' do
@@ -214,16 +215,46 @@ describe 'Consolidated Trade Leads API V2', type: :request do
 
     context 'when trade_regions is specified' do
       subject { response }
-      let(:params) { { trade_regions: 'Trade Region 1' } }
+      let(:params) { { trade_regions: 'West African Economic and Monetary Union' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Ustda results with trade_regions'
+      it_behaves_like 'it contains all TradeLead::Mca results that match trade_regions "West African Economic and Monetary Union"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Mca] }
+      end
     end
 
     context 'when world_regions is specified' do
       subject { response }
-      let(:params) { { world_regions: 'World Region 2' } }
+      let(:params) { { world_regions: 'Africa' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeLead::Ustda results with world_regions'
+      it_behaves_like 'it contains all TradeLead::Ustda results that match world_regions "Africa"'
+      it_behaves_like 'it contains all TradeLead::State results that match world_regions "Africa"'
+      it_behaves_like 'it contains all TradeLead::Mca results that match world_regions "Africa"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Ustda, TradeLead::State, TradeLead::Mca] }
+      end
+    end
+
+    context 'when q is specified and contains only a world region' do
+      subject { response }
+      let(:params) { { q: 'Africa' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Ustda results that match world_regions "Africa"'
+      it_behaves_like 'it contains all TradeLead::State results that match world_regions "Africa"'
+      it_behaves_like 'it contains all TradeLead::Mca results that match world_regions "Africa"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Ustda, TradeLead::State, TradeLead::Mca] }
+      end
+    end
+
+    context 'when q is specified and contains a country name' do
+      subject { response }
+      let(:params) { { q: 'australia equipment' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all TradeLead::Australia results that match "equipment"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [TradeLead::Australia] }
+      end
     end
   end
 

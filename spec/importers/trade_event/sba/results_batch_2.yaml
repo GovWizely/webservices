@@ -26,8 +26,10 @@
     :state: CA
     :venue: Flight Path Museum
     :country_name: Germany
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :id: dd12543922512740e00d9a602b719519f186b562
 - :cost: '295.00'
   :description: 'Take-Aways: •You will be aware of the new export security requirements
@@ -57,8 +59,15 @@
     :state: PA
     :venue: Duquesne University Power Center
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: ac4762e9b2ccb537b4be1ce206c004286dc0e50f
 - :cost: 
   :description: Save the date! How Can I Export? Come find out. Multiple Presenters,
@@ -85,8 +94,10 @@
     :state: UT
     :venue: Orem/Provo SBDC Utah Valley University
     :country_name: France
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - European Union - 28
+  :world_regions:
+  - Europe
   :id: 27fed639cc4814cfcbd49c91a1a90d30f2c3884b
 - :cost: '20.00'
   :description: Corning Community College’s Small Business Development Center is offering
@@ -122,8 +133,15 @@
     :state: NY
     :venue: CCC's Academic & Workforce Development Center
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: 71ada50f1413e011cb8e788475fcc6f142891925
 - :cost: '35.00'
   :description: 'Cost: $35, Pre-registration Required, International Sales Contacts
@@ -152,8 +170,15 @@
     :state: CA
     :venue: Los Angeles Law Library
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: 39ce32491650ade4fa1774a748b9b828c26bef80
 - :cost: 
   :description: 'The luncheon session will feature the SBA Small Business Awards,
@@ -183,8 +208,15 @@
     :state: CA
     :venue: The Westin Bonaventure Hotel
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: 1ad75d3410313305cda3cfd1983c53acf38c7bf6
 - :cost: '195.00'
   :description: 'Take-Aways: •You will know the best type of L/C to use to manage
@@ -213,8 +245,15 @@
     :state: PA
     :venue: Duquesne University Power Center
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: 3d17cc02d14c8055953885cb2d02ae9de61ab590
 - :cost: 
   :description: 'Are you interested in getting new customers for your business, but
@@ -247,6 +286,13 @@
     :state: MS
     :venue: Renasant Center for IDEAs
     :country_name: United States
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Asia Pacific Economic Cooperation
+  - CAFTA-DR
+  - NAFTA
+  - Trans Pacific Partnership
+  :world_regions:
+  - Pacific Rim
+  - North America
+  - Western Hemisphere
   :id: 0e05225b186c05b7fa124e6eb548b82e449dfb26

@@ -30,7 +30,7 @@ module TradeEvent
                                                 city:         { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
                                                 state:        { type: 'string', analyzer: 'keyword' },
                                                 country:      { type: 'string', analyzer: 'keyword' },
-                                                country_name: { type: 'string', analyzer: 'keyword' }, }, },
+                                                country_name: { type: 'string', analyzer: 'snowball_asciifolding_nostop' }, }, },
 
             source:             { type: 'string', analyzer: 'keyword' },
             trade_regions:      { type: 'string', analyzer: 'keyword' },

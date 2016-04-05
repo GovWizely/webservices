@@ -2,14 +2,11 @@ require 'spec_helper'
 
 describe ItaTaxonomy, type: :model do
   before(:all) do
-    Rails.application.config.enable_related_term_lookups = true
     ItaTaxonomy.recreate_index
     ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
   end
 
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
-
-  after(:all) { Rails.application.config.enable_related_term_lookups = false }
 
   describe '.search_related_terms' do
     context 'when the query is empty' do
@@ -24,6 +21,24 @@ describe ItaTaxonomy, type: :model do
         results = ItaTaxonomy.search_related_terms(q: 'tech in china', types: 'countries')
         expect(results.count).to eq(1)
         expect(results).to include(expected_results[0])
+      end
+    end
+
+    context 'when the query term matches multiple possible results' do
+      context 'and the query term is Asia' do
+        it 'returns the correct result first' do
+          results = ItaTaxonomy.search_related_terms(q: 'Asia', types: 'world regions')
+          expect(results.count).to eq(3)
+          expect(results[0]).to eq(expected_results[5])
+        end
+      end
+
+      context 'and the query term is East Asia' do
+        it 'returns the correct result first' do
+          results = ItaTaxonomy.search_related_terms(q: 'East Asia', types: 'world regions')
+          expect(results.count).to eq(3)
+          expect(results[0]).to eq(expected_results[6])
+        end
       end
     end
   end

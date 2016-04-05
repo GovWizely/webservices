@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/trade_leads/fbopen/complete_source.yml', record: :once } do
+  include_context 'ItaTaxonomy data'
+
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
@@ -76,8 +78,8 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
-                        trade_regions:                    [],
-                        world_regions:                    [],
+                        trade_regions:                    ['Global System of Trade Preferences among Developing Countries', 'Southern Common Market'],
+                        world_regions:                    ['South America', 'Latin America', 'Western Hemisphere'],
                        )
     end
 

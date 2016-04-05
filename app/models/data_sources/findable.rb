@@ -19,9 +19,9 @@ module DataSources
       end
 
       def api_versions(api)
-        search(query: { filtered: { filter: { term: { api: api } } } },
+        search(query:   { filtered: { filter: { term: { api: api } } } },
                _source: { include: ['version_number'] },
-               sort: :version_number,).collect(&:version_number)
+               sort:    :version_number,).collect(&:version_number)
       end
 
       def current_version(api)

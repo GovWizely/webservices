@@ -89,8 +89,8 @@ describe V2::TradeEvent::Query do
       end
     end
 
-    context 'when q includes a country term that must be parsed' do
-      let(:query) { described_class.new(q: 'trade with china') }
+    context 'when q includes only a country term that must be parsed' do
+      let(:query) { described_class.new(q: 'china') }
       let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_parsed_country.json").read }
       let(:taxonomy_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
 

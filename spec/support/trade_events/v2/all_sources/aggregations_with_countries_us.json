@@ -1,22 +1,34 @@
 {
   "world_regions": [
     {
-      "key": "World Region 1",
-      "doc_count": 2
+      "key": "North America",
+      "doc_count": 18
     },
     {
-      "key": "World Region 2",
-      "doc_count": 2
+      "key": "Pacific Rim",
+      "doc_count": 18
+    },
+    {
+      "key": "Western Hemisphere",
+      "doc_count": 18
     }
   ],
   "trade_regions": [
     {
-      "key": "Trade Region 1",
-      "doc_count": 2
+      "key": "Asia Pacific Economic Cooperation",
+      "doc_count": 18
     },
     {
-      "key": "Trade Region 2",
-      "doc_count": 2
+      "key": "CAFTA-DR",
+      "doc_count": 18
+    },
+    {
+      "key": "NAFTA",
+      "doc_count": 18
+    },
+    {
+      "key": "Trans Pacific Partnership",
+      "doc_count": 18
     }
   ],
   "countries": [

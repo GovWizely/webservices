@@ -10,12 +10,13 @@
     "country": "CR",
     "country_name": "Costa Rica",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+      "CAFTA-DR"
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "Western Hemisphere",
+      "Central America",
+      "Pacific Rim",
+      "Latin America"
     ]
   },
   {
@@ -29,12 +30,12 @@
     "country": "RW",
     "country_name": "Rwanda",
     "trade_regions": [
-      "Trade Region 1",
-      "Trade Region 2"
+      "African Growth and Opportunity Act",
+      "Common Market for Eastern and Southern Africa"
     ],
     "world_regions": [
-      "World Region 1",
-      "World Region 2"
+      "Sub-Saharan Africa",
+      "Africa"
     ]
   }
 ]

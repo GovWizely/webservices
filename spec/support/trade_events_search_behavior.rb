@@ -14,21 +14,10 @@ shared_context 'all Trade Events v2 fixture data' do
   include_context 'TradeEvent::Ustda data v2'
 end
 
-def import_with_dummy_related_terms(importer)
-  RSpec::Mocks.with_temporary_scope do
-    dummy_terms = [
-      { label: 'first match', related_terms: { trade_regions: ['Trade Region 1'], world_regions: ['World Region 1'] } },
-      { label: 'second match', related_terms: { trade_regions: ['Trade Region 2'], world_regions: ['World Region 2'] } },]
-    allow(ItaTaxonomy).to receive(:search_related_terms).and_return(dummy_terms)
-    importer.import
-  end
-end
-
 shared_context 'TradeEvent::Ita data v2' do
   before(:all) do
     TradeEvent::Ita.recreate_index
-    importer = TradeEvent::ItaData.new("#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml")
-    import_with_dummy_related_terms(importer)
+    TradeEvent::ItaData.new("#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
@@ -78,15 +67,21 @@ shared_examples 'it contains all TradeEvent::Ita results that match "Sao"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ita results with trade regions' do
+shared_examples 'it contains all TradeEvent::Ita results that match "germany"' do
   let(:source) { TradeEvent::Ita }
-  let(:expected) { [0, 1, 2, 3] }
+  let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ita results with world regions' do
+shared_examples 'it contains all TradeEvent::Ita results that match trade regions "Southern Common Market"' do
   let(:source) { TradeEvent::Ita }
-  let(:expected) { [0, 1, 2, 3] }
+  let(:expected) { [3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ita results that match world regions "Levant"' do
+  let(:source) { TradeEvent::Ita }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -134,6 +129,12 @@ end
 shared_examples 'it contains all TradeEvent::Sba results that match countries "fr,de"' do
   let(:source) { TradeEvent::Sba }
   let(:expected) { [9, 11] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Sba results that match country_name "Germany"' do
+  let(:source) { TradeEvent::Sba }
+  let(:expected) { [9] }
   it_behaves_like 'it contains all expected results of source'
 end
 

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeEvent::ItaData do
+  include_context 'ItaTaxonomy data'
+
   let(:resource) { "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml" }
   let(:importer) { described_class.new(resource) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/ita/results.yaml") }

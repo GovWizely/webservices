@@ -2,13 +2,13 @@ require 'spec_helper'
 
 describe 'Consolidated Trade Events API V2', type: :request do
   include_context 'V2 headers'
+  include_context 'ItaTaxonomy data'
   include_context 'all Trade Events v2 fixture data'
 
   describe 'GET /trade_events/search' do
     let(:params) { { size: 100 } }
-    before do
-      get '/v2/trade_events/search', params, @v2_headers
-    end
+
+    before { get '/v2/trade_events/search', params, @v2_headers }
     subject { response }
 
     context 'when search parameters are empty' do
@@ -87,6 +87,28 @@ describe 'Consolidated Trade Events API V2', type: :request do
           let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_query_international.json' }
         end
       end
+
+      context 'and contains only a parsable country' do
+        let(:params) { { q: 'germany' } }
+
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ita results that match "germany"'
+        it_behaves_like 'it contains all TradeEvent::Sba results that match country_name "Germany"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [TradeEvent::Ita, TradeEvent::Sba] }
+        end
+      end
+
+      context 'and contains a parsable world region' do
+        let(:params) { { q: 'Levant' } }
+
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ita results that match world regions "Levant"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [TradeEvent::Ita] }
+        end
+      end
+
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
 
@@ -226,18 +248,18 @@ describe 'Consolidated Trade Events API V2', type: :request do
     end
 
     context 'when trade_regions is specified' do
-      let(:params) { { trade_regions: 'Trade Region 1, Trade Region 2' } }
+      let(:params) { { trade_regions: 'Southern Common Market' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results with trade regions'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match trade regions "Southern Common Market"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita] }
       end
     end
 
     context 'when world_regions is specified' do
-      let(:params) { { world_regions: 'World Region 1, World Region 2' } }
+      let(:params) { { world_regions: 'Levant' } }
       it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results with world regions'
+      it_behaves_like 'it contains all TradeEvent::Ita results that match world regions "Levant"'
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [TradeEvent::Ita] }
       end

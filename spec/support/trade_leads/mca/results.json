@@ -18,10 +18,13 @@
     "funding_source": "Millennium Challenge Account (MCA)",
     "source": "MCA",
     "trade_regions": [
-
+      "African Growth and Opportunity Act",
+      "West African Economic and Monetary Union"
     ],
     "world_regions": [
-
+      "West Africa",
+      "Africa",
+      "Sub-Saharan Africa"
     ]
   },
   {
@@ -41,10 +44,13 @@
     "funding_source": "Millennium Challenge Account (MCA)",
     "source": "MCA",
     "trade_regions": [
-
+      "African Growth and Opportunity Act",
+      "West African Economic and Monetary Union"
     ],
     "world_regions": [
-
+      "West Africa",
+      "Africa",
+      "Sub-Saharan Africa"
     ]
   },
   {
@@ -63,10 +69,13 @@
     "funding_source": "Millennium Challenge Account (MCA)",
     "source": "MCA",
     "trade_regions": [
-
+      "Common Market for Eastern and Southern Africa",
+      "African Growth and Opportunity Act",
+      "South African Development Community"
     ],
     "world_regions": [
-
+      "Sub-Saharan Africa",
+      "Africa"
     ]
   }
 ]

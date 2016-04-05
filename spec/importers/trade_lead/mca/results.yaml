@@ -13,8 +13,13 @@
   - deadline/2015/Apr/30
   :country: SN
   :country_name: Senegal
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - African Growth and Opportunity Act
+  - West African Economic and Monetary Union
+  :world_regions:
+  - West Africa
+  - Africa
+  - Sub-Saharan Africa
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: abb09c7f27d1c6b51ebabbf07336d7f433b85b41
@@ -31,8 +36,13 @@
   - deadline/2015/May/05
   :country: SN
   :country_name: Senegal
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - African Growth and Opportunity Act
+  - West African Economic and Monetary Union
+  :world_regions:
+  - West Africa
+  - Africa
+  - Sub-Saharan Africa
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: 842e2c43f741ea37085e36d620371f1944d07ef4
@@ -46,8 +56,13 @@
   - deadline/2015/Apr/28
   :country: ZM
   :country_name: Zambia
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  - South African Development Community
+  :world_regions:
+  - Sub-Saharan Africa
+  - Africa
   :funding_source: Millennium Challenge Account (MCA)
   :source: MCA
   :id: 46b9a74ea366cab0ad21598292acb3e865ef22f0

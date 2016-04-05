@@ -1,20 +1,18 @@
 module QueryParser
-  def parse_query
-    taxonomy_search_results = ItaTaxonomy.search_related_terms(q: @q, types: 'Countries,World Regions')
+  def self.parse(q)
+    taxonomy_search_results = ItaTaxonomy.search_related_terms(q: q, types: 'Countries,World Regions')
+    parsed_q = q.dup.downcase
 
-    taxonomy_search_results.each do |result|
-      next unless @q.include?(result[:label].downcase)
-      @q.slice! result[:label].downcase
-      @q = @q.strip
-      update_instance_variables(result)
-    end
-  end
+    return_hash = {}
 
-  def update_instance_variables(result)
-    if result[:type].include?('Countries')
-      @country_names = @country_names.nil? ? [result[:label]] : @country_names.push(result[:label])
-    elsif result[:type].include?('World Regions')
-      @world_regions = @world_regions.nil? ? [result[:label]] : @world_regions.push(result[:label])
-    end
+    return_hash[:terms] = taxonomy_search_results.map do |result|
+      next unless parsed_q.include?(result[:label].downcase)
+      parsed_q.slice! result[:label].downcase
+      parsed_q = parsed_q.strip
+      { label: result[:label], type: result[:type] }
+    end.compact
+
+    return_hash[:parsed_q] = parsed_q
+    return_hash
   end
 end

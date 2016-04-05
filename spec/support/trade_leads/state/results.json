@@ -27,10 +27,14 @@
     "status": "Pipeline",
     "source": "STATE",
     "trade_regions": [
-
+      "Global System of Trade Preferences among Developing Countries",
+      "Andean Community"
     ],
     "world_regions": [
-
+      "Western Hemisphere",
+      "South America",
+      "Pacific Rim",
+      "Latin America"
     ]
   },
   {
@@ -61,10 +65,14 @@
     "status": "Pipeline",
     "source": "STATE",
     "trade_regions": [
-
+      "Global System of Trade Preferences among Developing Countries",
+      "Asia Pacific Economic Cooperation",
+      "Association of Southeast Asian Nations"
     ],
     "world_regions": [
-
+      "Asia Pacific",
+      "Southeast Asia",
+      "Asia"
     ]
   },
   {
@@ -95,10 +103,12 @@
     "status": "Pipeline",
     "source": "STATE",
     "trade_regions": [
-
+      "Gulf Cooperation Council",
+      "Organization of the Petroleum Exporting Countries"
     ],
     "world_regions": [
-
+      "Persian Gulf Region",
+      "Middle East"
     ]
   },
   {
@@ -129,10 +139,12 @@
     "status": "Pipeline",
     "source": "STATE",
     "trade_regions": [
-
+      "African Growth and Opportunity Act",
+      "Common Market for Eastern and Southern Africa"
     ],
     "world_regions": [
-
+      "Sub-Saharan Africa",
+      "Africa"
     ]
   }
 ]

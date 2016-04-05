@@ -36,5 +36,4 @@ Webservices::Application.configure do
 
   config.enable_bitly_lookup = false
   config.enable_industry_mapping_lookups = false
-  config.enable_related_term_lookups = true
 end

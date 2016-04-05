@@ -23,8 +23,8 @@ module SalesforceArticle
     def initialize(client = nil)
       @client = client || Restforce.new(Rails.configuration.restforce)
 
-      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.full_protege_source)
-      @taxonomy_parser.concepts = YAML.load_file(Rails.configuration.full_taxonomy_concepts)
+      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.full_protege_source,
+                                            YAML.load_file(Rails.configuration.full_taxonomy_concepts),)
     end
 
     def loaded_resource
@@ -50,7 +50,6 @@ module SalesforceArticle
 
     def extract_taxonomy_fields(entry, article)
       taxonomy_terms = extract_taxonomies article['DataCategorySelections']
-
       entry[:industries] = get_concept_labels_by_concept_group('Industries', taxonomy_terms)
       entry[:topics] = get_concept_labels_by_concept_group('Topics', taxonomy_terms)
 
@@ -82,7 +81,7 @@ module SalesforceArticle
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
         label = dc.DataCategoryName.tr('_', ' ')
-        concept = @taxonomy_parser.get_concept_by_label(label)
+        concept = @taxonomy_parser.get_term_by_label(label)
         taxonomies << concept if concept
       end
     end

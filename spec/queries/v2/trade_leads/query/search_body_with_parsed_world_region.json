@@ -1,22 +1,9 @@
 {
   "query": {
     "filtered": {
-      "filter": {
-        "bool": {
-          "must": [
-            {
-              "terms": {
-                "world_regions": [
-                  "North America"
-                ]
-              }
-            }
-          ]
-        }
-      },
       "query": {
         "bool": {
-          "must": [
+          "should": [
             {
               "multi_match": {
                 "fields": [
@@ -28,7 +15,20 @@
                   "procurement_organization"
                 ],
                 "operator": "and",
-                "query": "healthcare"
+                "query": "north america"
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "terms": {
+                      "world_regions": [
+                        "North America"
+                      ]
+                    }
+                  }
+                ]
               }
             }
           ]

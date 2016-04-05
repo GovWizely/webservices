@@ -26,8 +26,13 @@
   :specific_address: 
   :notice_type: COMBINE
   :country_name: Afghanistan
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - South Asian Association for Regional Cooperation
+  - Economic Cooperation Organization
+  :world_regions:
+  - South Asia
+  - Asia
+  - Central Asia
   :end_date: 2015-03-21
   :source: FBO
   :ita_industries: []
@@ -49,8 +54,13 @@
   :specific_address: 
   :notice_type: COMBINE
   :country_name: Afghanistan
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - South Asian Association for Regional Cooperation
+  - Economic Cooperation Organization
+  :world_regions:
+  - South Asia
+  - Asia
+  - Central Asia
   :end_date: 
   :source: FBO
   :ita_industries: []
@@ -92,8 +102,13 @@
   :specific_address: RCC Phoenix , APO AE
   :notice_type: COMBINE
   :country_name: Afghanistan
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - South Asian Association for Regional Cooperation
+  - Economic Cooperation Organization
+  :world_regions:
+  - South Asia
+  - Asia
+  - Central Asia
   :end_date: 2015-04-05
   :source: FBO
   :ita_industries: []
@@ -135,8 +150,13 @@
   :specific_address: RCC Phoenix , APO AE
   :notice_type: MOD
   :country_name: Afghanistan
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - South Asian Association for Regional Cooperation
+  - Economic Cooperation Organization
+  :world_regions:
+  - South Asia
+  - Asia
+  - Central Asia
   :end_date: 2015-02-09
   :source: FBO
   :ita_industries: []
@@ -178,8 +198,13 @@
   :specific_address: RCC Phoenix , APO AE
   :notice_type: COMBINE
   :country_name: Afghanistan
-  :trade_regions: []
-  :world_regions: []
+  :trade_regions:
+  - South Asian Association for Regional Cooperation
+  - Economic Cooperation Organization
+  :world_regions:
+  - South Asia
+  - Asia
+  - Central Asia
   :end_date: 2015-03-31
   :source: FBO
   :ita_industries: []

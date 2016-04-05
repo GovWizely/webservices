@@ -147,10 +147,15 @@
     "source": "USTDA",
     "event_type": null,
     "trade_regions": [
-
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {

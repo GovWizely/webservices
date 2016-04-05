@@ -65,8 +65,8 @@ describe V2::TradeLead::Query do
     end
   end
 
-  context 'when q includes a world region term that must be parsed' do
-    let(:query) { described_class.new(q: 'healthcare north america') }
+  context 'when q includes only a world region term that must be parsed' do
+    let(:query) { described_class.new(q: 'north america') }
     let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_parsed_world_region.json").read }
     let(:taxonomy_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
 

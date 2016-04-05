@@ -134,7 +134,7 @@ module TradeEvent
 
     def extract_venues(item)
       venue = extract_fields(item, VENUE_XPATHS)
-      venue[:country_name] = venue[:country].dup if venue[:country]
+      venue[:country_name] = venue[:country].nil? ? nil : venue[:country].dup
       venue[:country] &&= lookup_country(venue[:country])
       begin
         venue[:state] &&= lookup_state(venue[:state])
