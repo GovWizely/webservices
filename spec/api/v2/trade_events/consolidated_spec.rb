@@ -7,8 +7,8 @@ describe 'Consolidated Trade Events API V2', type: :request do
 
   describe 'GET /trade_events/search' do
     let(:params) { { size: 100 } }
-
     before { get '/v2/trade_events/search', params, @v2_headers }
+
     subject { response }
 
     context 'when search parameters are empty' do

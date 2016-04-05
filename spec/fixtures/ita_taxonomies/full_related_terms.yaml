@@ -1,5 +1,240 @@
 ---
 - :annotations:
+    :pref_label: Small Business Administration
+    :source: ITA
+    :alt_label: SBA
+  :sub_class_of:
+  - :id: R8Tc0NYjCwijousg627tdhg
+    :label: Government Agencies
+  :label: Small Business Administration
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: RnaLaobNwbZkVDcVYb4iEF
+      :label: Small and Medium Enterprises
+    - :id: R9PmDH6TT9OBZUfuzuXBeYL
+      :label: Trade Promotion Coordinating Committee
+    :has_broader:
+    - :id: R8Tc0NYjCwijousg627tdhg
+      :label: Government Agencies
+  :type: []
+  :related_terms: {}
+- :annotations:
+    :pref_label: Exporters
+    :source: UNCTAD/WTO
+  :sub_class_of:
+  - :id: RhXbh5RHFD9CDTQnQuTlIk
+    :label: Enterprises
+  :label: Exporters
+  :datatype_properties: {}
+  :object_properties:
+    :has_broader:
+    - :id: RhXbh5RHFD9CDTQnQuTlIk
+      :label: Enterprises
+    :has_related:
+    - :id: RSpnmZqtFRDJKxLQnDaJyu
+      :label: Export Management
+  :type: []
+  :related_terms: {}
+- :annotations:
+    :pref_label: Export Management
+    :source: ITA
+  :sub_class_of:
+  - :id: R9u5vLXS4JNQFPMdjGHghE3
+    :label: Distribution and Logistics
+  :label: Export Management
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: R86ym34UtaGUXbRtOhsfSRc
+      :label: Commission Agents
+    - :id: RCUCd7hzXsu9d5cGcxcQY33
+      :label: Custom Brokerage
+    :has_broader:
+    - :id: R9u5vLXS4JNQFPMdjGHghE3
+      :label: Distribution and Logistics
+    :member_of:
+    - :id: RwdbpCsGlOI2iwaG4UqDl0
+      :label: Sector
+  :type:
+  - Sector
+  :related_terms: {}
+- :annotations:
+    :pref_label: Safe Harbor
+    :scope_note: A streamlined process for US companies to comply with the EU Directive
+      95/46/EC on the protection of personal data.
+    :source: ITA
+  :sub_class_of:
+  - :id: RnMRx1ORiHCryGG8eYoLRy
+    :label: Market Access
+  :label: Safe Harbor
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: R8UD9ofnVwgC6V5VeBimktW
+      :label: Foreign Trade Regulations
+    :has_broader:
+    - :id: RnMRx1ORiHCryGG8eYoLRy
+      :label: Market Access
+  :type: []
+  :related_terms: {}
+- :annotations:
+    :definition: Establishments engaged in processes where human capital is the major
+      input. These establishments make available the knowledge and skills of their
+      employees, often on an assignment basis, where an individual or team is responsible
+      for the delivery of services to the client. The individual sectors are defined
+      on the basis of the particular expertise and training of the services provider.
+    :alt_label: Professional and Technical Services
+    :pref_label: Business and Professional Services
+    :source: ITA
+  :sub_class_of: []
+  :label: Business and Professional Services
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: R9ws61dxuECusazkctMhyzW
+      :label: Scientific and Technical Services
+    - :id: R7U13nAB57UJEzHNVRD60yJ
+      :label: Real Estate Services
+    - :id: R80OOc8tobqIttLwlHhD71R
+      :label: Engineering Services
+    - :id: R91SiRbADPRde00Rmk7Zvli
+      :label: Due Diligence Investigation Services
+    - :id: RZAYCEhJ1RvOk65kuqHWF7
+      :label: Marketing Services
+    - :id: R8NJ22nPzi9fFe3vyHXnjg2
+      :label: Employment Services
+    - :id: RDJNpL71TCXYbpHiTMA6b4a
+      :label: Operations and Maintenance Services
+    - :id: RBchsmrZkXc5yXzsr7Ux0o4
+      :label: Management Consulting Services
+    - :id: RDxjMHHODi5EBkTPllj43G6
+      :label: Translation and Interpretation Services
+    - :id: RCKBIuFGAWBtjaGKvk08rMd
+      :label: Advertising Services
+    - :id: RCcSdfVhNr0MKcmbYameoBe
+      :label: Accounting Services
+    - :id: RrBnNor1VQlk04JcB0OPCi
+      :label: Legal Services
+    - :id: RB83APQXhBo544GQHBiz28U
+      :label: Event Management
+    - :id: RDTJaX1CbjDm4N9HZVkYLjh
+      :label: Architecture Services
+    - :id: RC5F2ctMX01qptNpbbeOFu2
+      :label: Trade Promotion Services
+    - :id: RDuNpz8qWevInk9fUjQNy9U
+      :label: Corporate Training Services
+    - :id: RDiHsvSmvlQWsNpp3f4GYvl
+      :label: Serviced Office Leasing
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+    :member_of:
+    - :id: R79uIjoQaQ9KzvJfyB1H7Ru
+      :label: Industries
+  :type:
+  - Industries
+  :related_terms: {}
+- :annotations:
+    :source: UNCTAD/WTO
+    :pref_label: Exports
+  :sub_class_of:
+  - :id: R1Pqetus0zStszG5ac99uy
+    :label: Trade Development and Promotion
+  :label: Exports
+  :datatype_properties: {}
+  :object_properties:
+    :has_related:
+    - :id: RCOq5IViHvC51U45MtO2yXl
+      :label: Export Marketing
+    :has_broader:
+    - :id: R1Pqetus0zStszG5ac99uy
+      :label: Trade Development and Promotion
+  :type: []
+  :related_terms: {}
+- :annotations:
+    :definition: Industries that produce and market raw, unprocessed forms of wheat,
+      cotton, flax, corn, dry beans, oats, barley, rye, tobacco, rice, peanuts, soybeans,
+      sugar beets, sugar cane, tomatoes, grain sorghum, sunflowers, raisins, oranges,
+      sweet corn, dry peas, freezing and canning peas, forage, apples, grapes, potatoes,
+      timber and forests, nursery crops, citrus, and other fruits and vegetables,
+      nuts, tame hay, native grass, aquacultural species (including, but not limited
+      to, any species of finfish, mollusk, crustacean, or other aquatic invertebrate,
+      amphibian, reptile, or aquatic plant propagated or reared in a controlled or
+      selected environment), or any other agricultural commodity.
+    :note: 7 U.S. Code § 1518
+    :source: ITA
+    :pref_label: Agricultural Commodities
+  :sub_class_of:
+  - :id: RPKCOizTu2M4Qr7uMv8DsE
+    :label: Agribusiness
+  :label: Agricultural Commodities
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RJAgtSzm3bjX3jMXaVKSnT
+      :label: Value-Added Agriculture
+    - :id: RCP23AosteMszhEuQRCYj5b
+      :label: Bulk Commodities
+    :member_of:
+    - :id: RwdbpCsGlOI2iwaG4UqDl0
+      :label: Sector
+    :has_broader:
+    - :id: RPKCOizTu2M4Qr7uMv8DsE
+      :label: Agribusiness
+  :type:
+  - Sector
+  :related_terms: {}
+- :annotations:
+    :source: UNCTAD/WTO
+    :pref_label: Trade Development and Promotion
+  :sub_class_of: []
+  :label: Trade Development and Promotion
+  :datatype_properties: {}
+  :object_properties:
+    :has_narrower:
+    - :id: RCOq5IViHvC51U45MtO2yXl
+      :label: Export Marketing
+    - :id: R7nH4KDDqvldP57jYikj9iG
+      :label: Export Diversification
+    - :id: RCcjd1AYRzwhV7rtUTeHdcD
+      :label: Trade Opportunities
+    - :id: R8PMc5Bhm9Grmf501XVqVYV
+      :label: Import Management
+    - :id: RCg4zEQl7B1iGEc4kPu8xU
+      :label: Export Potential
+    - :id: R9u4lCrmMjjIiwRna7zLMmT
+      :label: Trade Events
+    - :id: RB8X8CTShUORzYZBoyex5xp
+      :label: Exports
+    - :id: RBT7EUBtck5zoG3GNGvBTYy
+      :label: Trade Promotion
+    - :id: R8dLOHjIRtjSMb1fsSOyGwO
+      :label: Trade Support Services
+    - :id: RCfPZMpCFnrZU67OAVMT2Pg
+      :label: Imports
+    - :id: R9jOad1v1wJZYjgMdBGLgFq
+      :label: Trade Support Institutions
+    - :id: R810FPHzW4ZTqS6Q9ZPLHUY
+      :label: Countertrade
+    - :id: R76PtipzD3tIAgFp3xNssLb
+      :label: Government Procurement
+    - :id: RBN8bCQnOmlXuENUw9zBKNq
+      :label: Competitiveness
+    - :id: RMeFpOwTVsMXKSyKtOXpTP
+      :label: Trade Development
+    - :id: RdDB4iq50ceEV1tKiQaSSO
+      :label: Outsourcing
+    :member_of:
+    - :id: RBBed4Voz7iS3nUECA3yzNM
+      :label: Topics
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+      :label: Thesaurus of International Trade and Investment Terms
+  :type:
+  - Topics
+  :related_terms: {}
+- :annotations:
     :alt_label: APEC
     :source: ITA
     :pref_label: Asia Pacific Economic Cooperation

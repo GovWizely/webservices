@@ -15,32 +15,16 @@ module SalesforceArticle
                  rescue
                    []
                  end
-      @industries = begin
-                      split_to_array(options[:industries])
-                    rescue
-                      nil
-                    end
-      @topics = begin
-                  split_to_array(options[:topics])
-                rescue
-                  nil
-                end
+      @industries = split_to_array(options[:industries]) if options[:industries].present?
+      @topics = split_to_array(options[:topics]) if options[:topics].present?
 
-      @first_published_date = begin
-                                options[:first_published_date]
-                              rescue
-                                nil
-                              end
-      @last_published_date = begin
-                               options[:last_published_date]
-                             rescue
-                               nil
-                             end
+      @first_published_date = options[:first_published_date] if options[:first_published_date].present?
+      @last_published_date = options[:last_published_date] if options[:last_published_date].present?
 
       set_geo_instance_variables(options)
     end
 
-    MULTI_FIELDS = %i(atom business_unit chapter references section summary title)
+    MULTI_FIELDS = %i(references summary title)
 
     private
 
@@ -52,7 +36,7 @@ module SalesforceArticle
           json.query do
             json.bool do
               json.must do
-                json.child! { generate_multi_match(json, MULTI_FIELDS, @q) } if @q
+                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) } if @q
               end
             end
           end if @q

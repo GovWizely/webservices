@@ -7,9 +7,10 @@
             {
               "multi_match": {
                 "fields": [ 
+                  "question",
+                  "answer",
                   "references", 
-                  "summary",
-                  "title"
+                  "summary"
                 ],
                 "operator": "and",
                 "query": "elephants"

@@ -9,6 +9,6 @@ describe Webservices::Application do
 
     it { is_expected.not_to include(ScreeningList::Consolidated) }
     it { is_expected.not_to include(TradeEvent::Mappable) }
-    it { is_expected.not_to include(ParatureFaqData) }
+    it { is_expected.not_to include(SalesforceArticle::FaqData) }
   end
 end
