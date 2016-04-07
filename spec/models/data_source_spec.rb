@@ -94,29 +94,6 @@ describe DataSource do
         expect(results.first.f1).to eq('val3 should override val1')
       end
     end
-
-    context 'santizing entries' do
-      let(:data_source) { DataSource.create(_id: 'test_sanitizing:v1', published: true, version_number: 1, name: 'test', description: 'test sanitizing', api: 'test_sanitizing', data: File.read("#{Rails.root}/spec/fixtures/data_sources/sanitizing.csv"), dictionary: '') }
-      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/sanitizing.yaml")).deep_symbolized_yaml }
-
-      before do
-        data_source.ingest
-        data_source.with_api_model do |klass|
-          expect(klass.count).to eq(1)
-          data_source.update(dictionary: dictionary)
-        end
-        data_source.ingest
-      end
-
-      it 'creates sanitized text entries' do
-        results = data_source.with_api_model do |klass|
-          expect(klass.count).to eq(1)
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'entities'))
-          klass.search(query.generate_search_body_hash)
-        end
-        expect(results.first.f1).to eq('this has entities that are converted & html tags that are removed')
-      end
-    end
   end
 
   describe 'search' do

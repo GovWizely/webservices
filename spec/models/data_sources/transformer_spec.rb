@@ -48,6 +48,14 @@ describe DataSources::Transformer do
     end
   end
 
+  context 'sanitizing text' do
+    let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: [{ sanitize: 'xhtml1' }])) }
+
+    it 'returns the appropriate new string' do
+      expect(transformer.transform('<b>bold</b> &amp;     face ')).to eq('bold & face')
+    end
+  end
+
   context 'reformatting non-standard date strings' do
     let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: [{ reformat_date: '%m/%d/%Y' }])) }
 

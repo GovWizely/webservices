@@ -52,7 +52,7 @@ module DataSources
     end
 
     def transformers
-      entries.map { |field, meta| [field, DataSources::Transformer.new(meta)] }.to_h
+      @transformers ||= entries.map { |field, meta| [field, DataSources::Transformer.new(meta)] }.to_h
     end
 
     def deep_stringified_yaml
