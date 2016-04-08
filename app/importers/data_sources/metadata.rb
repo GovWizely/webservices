@@ -47,8 +47,13 @@ module DataSources
     end
 
     def transform(row)
-      hash = row.to_hash.slice(*entries.keys)
-      hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(hash[field_sym])] }.to_h
+      raw_hash = row.to_hash.slice(*entries.keys)
+      hash = raw_hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(raw_hash[field_sym])] }.to_h
+      hash.merge(constant_values)
+    end
+
+    def constant_values
+      entries.find_all { |_, meta| meta.has_key?(:constant) }.map { |field, meta| [field, meta[:constant]] }.to_h
     end
 
     def transformers

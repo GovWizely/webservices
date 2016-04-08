@@ -3,15 +3,14 @@ module Elasticsearch
     # Keeps a global registry of classes that include `Elasticsearch::Model`
     #
     class Registry
-      # Upserts a model in the registry
+      # Clears all models from the registry
       #
-      def self.upsert(klass)
-        __instance.upsert(klass)
+      def self.clear
+        __instance.clear
       end
 
-      def upsert(klass)
-        @models.delete klass
-        @models << klass
+      def clear
+        @models = []
       end
     end
   end
