@@ -10,6 +10,22 @@ module DataSources
       yaml_dictionary.reject { |key, _| key.to_s.start_with?('_') }
     end
 
+    def singular_entries
+      entries.reject { |key, _| grouped_fields.include?(key) }
+    end
+
+    def grouped_fields
+      nested_entries.collect { |e| e[:fields] }.flatten.map(&:to_sym)
+    end
+
+    def groups
+      nested_entries.collect { |e| e[:name] }
+    end
+
+    def nested_entries
+      yaml_dictionary[:_nested_entries] || []
+    end
+
     def filter_fields
       fields_matching_hash type: 'enum'
     end
@@ -48,12 +64,13 @@ module DataSources
 
     def transform(row)
       raw_hash = row.to_hash.slice(*entries.keys)
-      hash = raw_hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(raw_hash[field_sym])] }.to_h
-      hash.merge(constant_values)
+      xformed_hash = raw_hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(raw_hash[field_sym])] }.to_h
+      hash = xformed_hash.merge(constant_values)
+      group_nested_entries(hash)
     end
 
     def constant_values
-      entries.find_all { |_, meta| meta.has_key?(:constant) }.map { |field, meta| [field, meta[:constant]] }.to_h
+      entries.find_all { |_, meta| meta.key?(:constant) }.map { |field, meta| [field, meta[:constant]] }.to_h
     end
 
     def transformers
@@ -71,7 +88,16 @@ module DataSources
     private
 
     def fields_matching_hash(hash)
-      entries.find_all { |_, meta| meta.include_hash?(hash) }.map { |field, meta| [field, meta[:description]] }.to_h
+      singular_entries.find_all { |_, meta| meta.include_hash?(hash) }.map { |field, meta| [field, meta[:description]] }.to_h
     end
+
+    def group_nested_entries(hash)
+      nested_entries.each do |nested_entry|
+        nested_hash = hash.extract!(*nested_entry[:fields].map(&:to_sym))
+        hash[nested_entry[:name]] = nested_hash
+      end
+      hash
+    end
+
   end
 end

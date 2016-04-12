@@ -101,7 +101,7 @@ describe DataSource do
 
       before do
         data_source.ingest
-        data_source.with_api_model do |klass|
+        data_source.with_api_model do |_klass|
           data_source.update(dictionary: dictionary)
         end
         data_source.ingest
@@ -113,7 +113,31 @@ describe DataSource do
           query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(source: 'some constant value'))
           klass.search(query.generate_search_body_hash)
         end
-        expect(results.collect(&:source)).to eq(['some constant value','some constant value'])
+        expect(results.collect(&:source)).to eq(['some constant value', 'some constant value'])
+      end
+    end
+
+    context 'grouping fields under parent fields' do
+      let(:data_source) { DataSource.create(_id: 'test_groups:v1', published: true, version_number: 1, name: 'test', description: 'test groups', api: 'test_groups', data: File.read("#{Rails.root}/spec/fixtures/data_sources/groups.csv"), dictionary: '') }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/groups.yaml")).deep_symbolized_yaml }
+
+      before do
+        data_source.ingest
+        data_source.with_api_model do |_klass|
+          data_source.update(dictionary: dictionary)
+        end
+        data_source.ingest
+      end
+
+      it 'creates entries with grouped column value fields' do
+        results = data_source.with_api_model do |klass|
+          expect(klass.count).to eq(2)
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(title: 'bar'))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.first.title).to eq('bar')
+        expect(results.first.annual_rates).to eq('field1' => 'feeling', 'field2' => 'sick', 'field3' => '4.5')
+        expect(results.first.annual_rates_alt).to eq('field1_alt' => 'started', 'field2_alt' => 'preschool', 'field3_alt' => '666')
       end
     end
   end
