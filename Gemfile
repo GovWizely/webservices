@@ -40,7 +40,7 @@ gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
 
 gem 'restforce'
 
-group :staging, :staging2, :production do
+group :production do
   gem 'airbrake'
   gem 'newrelic_rpm'
 end
