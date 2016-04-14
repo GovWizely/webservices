@@ -27,6 +27,13 @@ describe ScreeningList::ScoreAdjuster, type: :model do
       it { is_expected.to eq expected_array }
     end
 
+    context 'matched name contains just one token' do
+      let(:name) { 'mit' }
+      let(:hits) { [{ _score: 100, highlight: { alt_idx: ["<em>MIT</em>"] } }] }
+      let(:expected_array) { [{ :_score => 100, :highlight => { alt_idx: ["<em>MIT</em>"]}, :_adjusted_score => 99 }] }
+      it { is_expected.to eq expected_array }
+    end
+
     context 'search query contains multiple tokens' do
       let(:name) { 'jose gonzalez' }
       let(:hits) do

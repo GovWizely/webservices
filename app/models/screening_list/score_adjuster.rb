@@ -25,7 +25,9 @@ module ScreeningList
 
     def penalty(candidate)
       groups = candidate.split.group_by { |token| token.starts_with?('<') ? :matched : :unmatched }
-      matched_penalty(groups[:matched]) + unmatched_penalty(groups[:unmatched])
+      matched_penalty_points = matched_penalty(groups[:matched])
+      unmatched_penalty_points = groups[:unmatched].present? ? unmatched_penalty(groups[:unmatched]) : 0
+      matched_penalty_points + unmatched_penalty_points
     end
 
     def matched_penalty(tokens)
