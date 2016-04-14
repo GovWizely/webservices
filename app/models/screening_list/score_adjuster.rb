@@ -32,15 +32,15 @@ module ScreeningList
 
     def matched_penalty(tokens)
       tokens.inject(0) do |sum, token|
-        penalty = MATCHED_PENALTIES[token.length-1] || LONG_MATCH_PENALTY
+        stripped_token = Sanitize.fragment token
+        penalty = MATCHED_PENALTIES[stripped_token.length-1] || LONG_MATCH_PENALTY
         sum + penalty
       end
     end
 
     def unmatched_penalty(tokens)
       tokens.inject(0) do |sum, token|
-        stripped_token = Sanitize.fragment token
-        penalty = UNMATCHED_PENALTIES[stripped_token.length-1] || SHORT_MISS_PENALTY
+        penalty = UNMATCHED_PENALTIES[token.length-1] || SHORT_MISS_PENALTY
         sum + penalty
       end
     end

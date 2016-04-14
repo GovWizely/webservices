@@ -11,19 +11,18 @@ describe ScreeningList::ScoreAdjuster, type: :model do
                                                "<em>AL</em> RASHEED TRUST"] } },
          { _score: 100, highlight: { alt_idx: ["BEIT <em>AL</em> <em>MAL</em> HOLDINGS",
                                                "PALESTINIAN ARAB BEIT <em>EL</em> <em>MAL</em>"],
-                                     name_idx: ["BEIT <em>EL</em> <em>MAL</em> ALPHALASTINI ALARABI ALMUSHIMA ALAAMA ALMAHADUDA"] } },
-        ]
+                                     name_idx: ["BEIT <em>EL</em> <em>MAL</em> ALPHALASTINI ALARABI ALMUSHIMA ALAAMA ALMAHADUDA"] } },]
       end
       let(:expected_array) do
         [{ :_score => 100,
+           :highlight => { :alt_idx => ["<em>AL</em> RASHID TRUST",
+                                        "<em>AL</em> RASHEED TRUST"] },
+           :_adjusted_score => 60 },
+         { :_score => 100,
            :highlight => { alt_idx: ["BEIT <em>AL</em> <em>MAL</em> HOLDINGS",
                                      "PALESTINIAN ARAB BEIT <em>EL</em> <em>MAL</em>"],
                            name_idx: ["BEIT <em>EL</em> <em>MAL</em> ALPHALASTINI ALARABI ALMUSHIMA ALAAMA ALMAHADUDA"] },
-           :_adjusted_score => 76 },
-         { :_score => 100,
-           :highlight => { :alt_idx => ["<em>AL</em> RASHID TRUST",
-                                        "<em>AL</em> RASHEED TRUST"] },
-           :_adjusted_score => 74 }]
+           :_adjusted_score => 53 }]
       end
       it { is_expected.to eq expected_array }
     end
@@ -31,7 +30,7 @@ describe ScreeningList::ScoreAdjuster, type: :model do
     context 'matched name contains just one token' do
       let(:name) { 'mit' }
       let(:hits) { [{ _score: 100, highlight: { alt_idx: ["<em>MIT</em>"] } }] }
-      let(:expected_array) { [{ :_score => 100, :highlight => { alt_idx: ["<em>MIT</em>"]}, :_adjusted_score => 99 }] }
+      let(:expected_array) { [{ :_score => 100, :highlight => { alt_idx: ["<em>MIT</em>"]}, :_adjusted_score => 90 }] }
       it { is_expected.to eq expected_array }
     end
 
