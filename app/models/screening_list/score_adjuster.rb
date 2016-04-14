@@ -6,7 +6,7 @@ module ScreeningList
     SHORT_MISS_PENALTY = 15
 
     def initialize(name, hits)
-      @no_adjustment_required = name.blank? || name.split.many? || hits.first[:highlight].empty?
+      @no_adjustment_required = name.blank? || name.split.many? || hits.empty? || hits.first[:highlight].empty?
       @hits = hits
     end
 

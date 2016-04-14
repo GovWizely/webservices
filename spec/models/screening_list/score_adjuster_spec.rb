@@ -3,6 +3,7 @@ require 'spec_helper'
 describe ScreeningList::ScoreAdjuster, type: :model do
   describe 'adjusted_score' do
     subject { described_class.new(name, hits).rescored_hits }
+
     context 'search query contains just one token' do
       let(:name) { 'al' }
       let(:hits) do
@@ -43,6 +44,12 @@ describe ScreeningList::ScoreAdjuster, type: :model do
          { _score: 90, highlight: { :name_idx => ["<em>GONZALEZ</em> CARDENAS <em>Jorge</em> Guillermo"] } },
         ]
       end
+      it { is_expected.to eq hits }
+    end
+
+    context 'no matches' do
+      let(:name) { 'xyzxyz' }
+      let(:hits) { [] }
       it { is_expected.to eq hits }
     end
   end
