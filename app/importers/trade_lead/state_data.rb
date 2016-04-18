@@ -40,7 +40,7 @@ module TradeLead
         entries << process_entry_info(article_hash)
       end
 
-      TradeLead::State.index(entries)
+      TradeLead::State.index(entries.compact)
     end
 
     private
@@ -48,16 +48,27 @@ module TradeLead
     def process_entry_info(entry_hash)
       entry = remap_keys(COLUMN_HASH, entry_hash[:properties])
 
+      return nil unless valid_entry?(entry)
+
       entry[:id] = entry_hash[:id]
-      entry[:country_name] = entry[:country].nil? ? nil : entry[:country].dup
-      entry[:country] = lookup_country(entry[:country].squish)
-      entry.merge! add_related_fields([entry[:country_name]])
+      process_geo_fields(entry)
+      
       entry[:source] = TradeLead::State.source[:code]
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
 
       entry = process_additional_fields(entry)
 
       entry
+    end
+
+    def valid_entry?(entry)
+      entry[:end_date].nil? || Date.strptime(entry[:end_date]) >= Date.current
+    end
+
+    def process_geo_fields(entry)
+      entry[:country_name] = entry[:country].nil? ? nil : entry[:country].dup
+      entry[:country] = lookup_country(entry[:country].squish)
+      entry.merge! add_related_fields([entry[:country_name]])
     end
 
     def process_additional_fields(entry)

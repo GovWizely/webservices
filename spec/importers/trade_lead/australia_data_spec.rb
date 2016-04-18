@@ -8,6 +8,7 @@ describe TradeLead::AustraliaData, vcr: { cassette_name: 'importers/trade_leads/
   let(:resource) { fixtures_file }
   let(:importer) { described_class.new(fixtures_file) }
   let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/australia/results.yaml") }
+  before { allow(Date).to receive(:current).and_return(Date.parse('2013-01-28')) }
 
   it_behaves_like 'an importer which can purge old documents'
   it_behaves_like 'an importer which indexes the correct documents'

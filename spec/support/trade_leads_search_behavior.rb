@@ -12,9 +12,13 @@ end
 shared_context 'TradeLead::Australia data' do
   before(:all) do
     TradeLead::Australia.recreate_index
-    VCR.use_cassette('importers/trade_leads/australia.yml', record: :once) do
-      TradeLead::AustraliaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv",).import
+
+    RSpec::Mocks.with_temporary_scope do
+      allow(Date).to receive(:current).and_return(Date.parse('2013-01-28'))
+      VCR.use_cassette('importers/trade_leads/australia.yml', record: :once) do
+        TradeLead::AustraliaData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv",).import
+      end
     end
 
     @all_possible_full_results ||= {}
@@ -146,9 +150,13 @@ end
 shared_context 'TradeLead::State data' do
   before(:all) do
     TradeLead::State.recreate_index
-    VCR.use_cassette('importers/trade_leads/state.yml', record: :once) do
-      TradeLead::StateData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json",).import
+
+    RSpec::Mocks.with_temporary_scope do
+      allow(Date).to receive(:current).and_return(Date.parse('2013-06-11'))
+      VCR.use_cassette('importers/trade_leads/state.yml', record: :once) do
+        TradeLead::StateData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/state/state_trade_leads.json",).import
+      end
     end
 
     @all_possible_full_results ||= {}
@@ -232,7 +240,7 @@ shared_examples 'it contains all TradeLead::Uk results that match "equipment"' d
 end
 
 shared_context 'TradeLead::Mca data' do
-  before do
+  before(:all) do
     TradeLead::Mca.recreate_index
     VCR.use_cassette('importers/trade_leads/mca.yml', record: :once) do
       TradeLead::McaData.new(
@@ -263,13 +271,16 @@ shared_examples 'it contains all TradeLead::Mca results that match world_regions
 end
 
 shared_context 'TradeLead::Ustda data' do
-  before do
-    allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
+  before(:all) do
     TradeLead::Ustda.recreate_index
-    VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
-      TradeLead::UstdaData.new(
-        "#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
-        "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",).import
+
+    RSpec::Mocks.with_temporary_scope do
+      allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
+      VCR.use_cassette('importers/trade_leads/ustda.yml', record: :once) do
+        TradeLead::UstdaData.new(
+          "#{Rails.root}/spec/fixtures/trade_leads/ustda/leads.xml",
+          "#{Rails.root}/spec/fixtures/trade_leads/ustda/rss.xml",).import
+      end
     end
 
     @all_possible_full_results ||= {}

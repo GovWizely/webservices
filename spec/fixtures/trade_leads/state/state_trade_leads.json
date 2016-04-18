@@ -227,6 +227,51 @@
                 "popup_HTML": "<div class=\"popupLead\"></div>"
             },
             "type": "Feature"
+        },
+        {
+            "geometry": {
+                "coordinates": [
+                    121.77401699999996,
+                    12.879721
+                ],
+                "type": "Point"
+            },
+            "geometry_name": "the_geom",
+            "id": "DATATABLE.1337",
+            "properties": {
+                "Archived": "0",
+                "Borrowing_Entity": "REPUBLIC OF THE PHILIPPINES",
+                "Business_URL": "http://manila.usembassy.gov/business.html",
+                "Cleared": "1",
+                "Contact_Timestamp": "2014-02-11T20:04:28.135Z",
+                "Country": "Philippines",
+                "DOS_Region": null,
+                "Implementing_Entity": "DEPARTMENT OF EDUCATION",
+                "Keyword": "Primary Education, Secondary Education",
+                "Lat": "12.879721",
+                "Link_To_Project": "http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=22842",
+                "Lon": "121.77401699999996",
+                "Post_Comments": null,
+                "Project_Announced": "2013-07-09Z",
+                "Project_Description": "The project development objective is to improve the quality of grade 1 to 3 reading and math skills  of children in Target Regions and Target Schools, with a special focus on those belonging to Target  Disadvantaged Groups.",
+                "Project_Funding_Source": "Development Banks",
+                "Project_Number": "P118904",
+                "Project_POCs": "Lynnette Dela Cruz Perez, lperez@worldbank.org",
+                "Project_Size": 300000000,
+                "Project_Title": "Learning; Equity and Accountability Program Support Project",
+                "Sector": "Educational Services",
+                "Source": "World Bank",
+                "Specific_Location": "Philippines",
+                "Status": "Pipeline",
+                "Submitting_Officer": "Chuka Asike",
+                "Submitting_Officer_Contact": "asikec@state.gov",
+                "Tender_Date": "2013-06-10Z",
+                "Timestamp": "2014-02-11T20:04:28.135Z",
+                "US_Firm_Contact": null,
+                "US_Firm_Wins": null,
+                "popup_HTML": "<div class=\"popupLead\"><div class=\"popupLeadTitle\">Learning; Equity and Accountability Program Support Project</div><div class=\"popupLeadDetails\"><b>Country: </b>Philippines<br><b>Sector: </b>Educational Services<br><b>Date Added: </b>2014-02-11<br><b>Primary Funding Source: </b>Development Banks<br><b>Project Size (USD): </b>300000000<br><b>Status: </b>Pipeline<br><br><b>Description: </b><br>The project development objective is to improve the quality of grade 1 to 3 reading and math skills  of children in Target Regions and Target Schools, with a special focus on those belonging to Target  Disadvantaged Groups.<br><br><a href=\"http://web.worldbank.org/external/projects/main?pagePK=64283627&piPK=73230&theSitePK=40941&menuPK=22842\" target=\"_blank\"  onclick=\"javascript:ga('send', 'event', 'External_Link', 'Learning; Equity and Accountability Program Support Project_Lead_Details', {'nonInteraction': 1});\">Project Website</a>&nbsp;&nbsp;&nbsp;<a href=\"http://manila.usembassy.gov/business.html\" target=\"_blank\"  onclick=\"javascript:ga('send', 'event', 'Business_Tab_Link', 'Learning; Equity and Accountability Program Support Project_Lead_Details', {'nonInteraction': 1});\">Embassy Website</a>&nbsp;&nbsp;&nbsp;<a href=\"mailto:asikec@state.gov\"  onclick=\"javascript:ga('send', 'event', 'Contact', 'Learning; Equity and Accountability Program Support Project_Lead_Details', {'nonInteraction': 1});\">Contact</a></font></div></div>"
+            },
+            "type": "Feature"
         }
     ],
     "type": "FeatureCollection"
