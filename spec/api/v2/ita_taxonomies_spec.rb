@@ -20,7 +20,7 @@ describe 'Ita Taxonomy API V2', type: :request do
 
       it 'returns ita taxonomies terms' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(15)
+        expect(json_response[:total]).to eq(19)
         results = json_response[:results]
         expect(results).to match_array expected_results
       end
@@ -38,6 +38,24 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
+        expect(results).to include(expected_results[3])
+      end
+      it_behaves_like "an empty result when a query doesn't match any documents"
+    end
+
+    context 'when labels is specified' do
+      let(:params) { { labels: 'China, North America' } }
+      before { get search_path, params, @v2_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns ita taxonomies entries' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:total]).to eq(2)
+
+        results = json_response[:results]
+        expect(results).to include(expected_results[0])
         expect(results).to include(expected_results[1])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
@@ -62,7 +80,7 @@ describe 'Ita Taxonomy API V2', type: :request do
   describe 'GET /ita_taxonomies/query_expansion' do
     context 'when trying to retrieve query expansion terms for a query' do
       let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_taxonomies/query_expansion_results.json").read }
-      let(:params) { { q: 'healthcare united states china' } }
+      let(:params) { { q: 'healthcare China United States' } }
 
       before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }
@@ -88,7 +106,7 @@ describe 'Ita Taxonomy API V2', type: :request do
 
     context 'when trying to retrieve query_expansion terms for a query with punctuation' do
       let(:expected_results) { JSON.parse open("#{File.dirname(__FILE__)}/ita_taxonomies/query_expansion_results.json").read }
-      let(:params) { { q: 'healthcare, united states, china.' } }
+      let(:params) { { q: 'healthcare united states, china.' } }
 
       before { get '/v2/ita_taxonomies/query_expansion', params, @v2_headers }
       subject { response }

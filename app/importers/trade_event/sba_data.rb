@@ -100,7 +100,7 @@ module TradeEvent
       doc[:source] = model_class.source[:code]
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
-      doc.merge! add_geo_fields(doc[:venues].map { |v| v[:country] })
+      doc.merge! add_related_fields(doc[:venues].map { |v| v[:country_name] })
 
       doc[:id] = Utils.generate_id(doc, %i(city cost country event_name event_type start_date
                                            start_time end_date end_time time_zone),)
@@ -134,6 +134,7 @@ module TradeEvent
 
     def extract_venues(item)
       venue = extract_fields(item, VENUE_XPATHS)
+      venue[:country_name] = venue[:country].nil? ? nil : venue[:country].dup
       venue[:country] &&= lookup_country(venue[:country])
       begin
         venue[:state] &&= lookup_state(venue[:state])

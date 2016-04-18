@@ -12,6 +12,7 @@
   - CPV/03130000
   - deadline/2015/Apr/30
   :country: SN
+  :country_name: Senegal
   :trade_regions:
   - African Growth and Opportunity Act
   - West African Economic and Monetary Union
@@ -34,6 +35,7 @@
   - CPV/79310000
   - deadline/2015/May/05
   :country: SN
+  :country_name: Senegal
   :trade_regions:
   - African Growth and Opportunity Act
   - West African Economic and Monetary Union
@@ -53,10 +55,11 @@
   - CPV/45232450
   - deadline/2015/Apr/28
   :country: ZM
+  :country_name: Zambia
   :trade_regions:
-  - South African Development Community
-  - African Growth and Opportunity Act
   - Common Market for Eastern and Southern Africa
+  - African Growth and Opportunity Act
+  - South African Development Community
   :world_regions:
   - Sub-Saharan Africa
   - Africa

@@ -40,13 +40,14 @@
   :contract_number: AG-0261-S-13-0079
   :publish_date: '2013-06-16'
   :end_date: '2013-10-31'
+  :country_name: Brazil
   :trade_regions:
-  - Southern Common Market
   - Global System of Trade Preferences among Developing Countries
+  - Southern Common Market
   :world_regions:
   - South America
-  - Western Hemisphere
   - Latin America
+  - Western Hemisphere
   :source: FBO
   :id: AG-0261-S-13-0079
   :ita_industries: []
@@ -89,13 +90,14 @@
   :contract_number: SPE4A5-13-R-0992
   :publish_date: '2013-06-16'
   :end_date: '2013-07-15'
+  :country_name: Brazil
   :trade_regions:
-  - Southern Common Market
   - Global System of Trade Preferences among Developing Countries
+  - Southern Common Market
   :world_regions:
   - South America
-  - Western Hemisphere
   - Latin America
+  - Western Hemisphere
   :source: FBO
   :id: SPE4A5-13-R-0992
   :ita_industries: []

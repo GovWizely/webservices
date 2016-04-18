@@ -49,8 +49,9 @@ module TradeLead
       entry = remap_keys(COLUMN_HASH, entry_hash[:properties])
 
       entry[:id] = entry_hash[:id]
+      entry[:country_name] = entry[:country].nil? ? nil : entry[:country].dup
       entry[:country] = lookup_country(entry[:country].squish)
-      entry.merge! add_geo_fields([entry[:country]])
+      entry.merge! add_related_fields([entry[:country_name]])
       entry[:source] = TradeLead::State.source[:code]
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
 

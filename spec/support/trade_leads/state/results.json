@@ -1,47 +1,54 @@
 [
   {
-    "title": "Clinica Universitaria Medicina Integral (CUMI)",
+    "id": "DATATABLE.647",
     "lead_source": "Inter-American Development Bank",
-    "project_number": "CO-L1146",
-    "publish_date": "2013-09-27",
-    "end_date": null,
     "country": "CO",
-    "status": "Pipeline",
-    "industry": "Health Care and Social Assistance",
-    "ita_industries": [],
+    "country_name": "Colombia",
     "specific_location": "Colombia",
+    "title": "Clinica Universitaria Medicina Integral (CUMI)",
+    "project_number": "CO-L1146",
+    "industry": "Health Care and Social Assistance",
+    "ita_industries": [
+
+    ],
     "project_size": 13500000,
-    "procurement_organization": "INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería, Córdoba, Brazil",
-    "funding_source": "Development Banks",
-    "borrowing_entity": "INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería, Córdoba, Brazil",
     "description": "Expansion of an ambulatory center opened in November 2012 with the new construction of a level III and IV healthcare hospital in the city of Monteria, Córdoba (Clinica Universitaria Medicina Integral -\"CUMI\")",
     "tags": "Health; Construction",
-    "url": "http://bit.ly/1LfhtNJ",
+    "publish_date": "2013-09-27",
+    "end_date": null,
+    "funding_source": "Development Banks",
+    "borrowing_entity": "INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería, Córdoba, Brazil",
+    "procurement_organization": "INTEGRAL CLINICAL MEDICAL UNIVERSITY (CUMI) - Montería, Córdoba, Brazil",
     "contact": "DACEY, KRISTIN - Inter-American Development Bank",
     "comments": null,
     "submitting_officer": "Asike, Chuka",
     "submitting_officer_contact": "AsikeC@state.gov",
-    "id": "DATATABLE.647",
+    "url": "http://bit.ly/1LfhtNJ",
+    "status": "Pipeline",
     "source": "STATE",
     "trade_regions": [
-        "Andean Community",
-        "Global System of Trade Preferences among Developing Countries"
+      "Global System of Trade Preferences among Developing Countries",
+      "Andean Community"
     ],
     "world_regions": [
-        "Latin America",
-        "South America",
-        "Western Hemisphere",
-        "Pacific Rim"
+      "Western Hemisphere",
+      "South America",
+      "Pacific Rim",
+      "Latin America"
     ]
   },
   {
+    "id": "DATATABLE.538",
     "lead_source": "World Bank",
     "country": "PH",
+    "country_name": "Philippines",
     "specific_location": "Philippines",
     "title": "Learning; Equity and Accountability Program Support Project",
     "project_number": "P118904",
     "industry": "Educational Services",
-    "ita_industries": [],
+    "ita_industries": [
+
+    ],
     "project_size": 300000000,
     "description": "The project development objective is to improve the quality of grade 1 to 3 reading and math skills of children in Target Regions and Target Schools, with a special focus on those belonging to Target Disadvantaged Groups.",
     "tags": "Primary Education, Secondary Education",
@@ -56,27 +63,30 @@
     "submitting_officer_contact": "asikec@state.gov",
     "url": "http://bit.ly/1LfhjG4",
     "status": "Pipeline",
-    "id": "DATATABLE.538",
     "source": "STATE",
     "trade_regions": [
-        "Global System of Trade Preferences among Developing Countries",
-        "Association of Southeast Asian Nations",
-        "Asia Pacific Economic Cooperation"
+      "Global System of Trade Preferences among Developing Countries",
+      "Asia Pacific Economic Cooperation",
+      "Association of Southeast Asian Nations"
     ],
     "world_regions": [
-        "Asia Pacific",
-        "Southeast Asia",
-        "Asia"
+      "Asia Pacific",
+      "Southeast Asia",
+      "Asia"
     ]
   },
   {
+    "id": "DATATABLE.174",
     "lead_source": "Post Identified Project",
     "country": "QA",
+    "country_name": "Qatar",
     "specific_location": "Doha Medical City, Qatar",
     "title": "Hamad Bin Khalifa Medical City - Construction of Simulation Centre",
     "project_number": "PWA/GTC/087/12-13",
     "industry": "Health Care and Social Assistance",
-    "ita_industries": [],
+    "ita_industries": [
+
+    ],
     "project_size": 1797625,
     "description": "The project is comprised but not limited to the following: The Simulation Center is a 13,000 m2 facility on the campus of Hamad Medical Corporation (HMC) in Doha, Qatar. The project includes a combination of educational and simulation facilities and its purpose is to train and provide continuing medical education to Medical Students, Nurses and Doctors (from within Hamad Bin Khalifa Medical City as well as from surrounding hospitals). The building was designed initially to be an Education Center and was partially constructed as such. Based on its new function as a Simulation Center, the building footprint shall be enlarged and a 4th floor added as an independent steel structure. Some demolition is also required. The Contractor shall complete and deliver the whole of the Works within Four Hundred Eighty (480) days plus Four Hundred (400) days Maintenance Period.",
     "tags": "Education, Health Sector - Simulation Center Building, Medical Simulation Center",
@@ -91,25 +101,28 @@
     "submitting_officer_contact": "RharritH@state.gov",
     "url": "http://bit.ly/1Lfhrpe",
     "status": "Pipeline",
-    "id": "DATATABLE.174",
     "source": "STATE",
     "trade_regions": [
-        "Organization of the Petroleum Exporting Countries",
-        "Gulf Cooperation Council"
+      "Gulf Cooperation Council",
+      "Organization of the Petroleum Exporting Countries"
     ],
     "world_regions": [
-        "Persian Gulf Region",
-        "Middle East"
+      "Persian Gulf Region",
+      "Middle East"
     ]
   },
   {
+    "id": "DATATABLE.66",
     "lead_source": "World Bank",
     "country": "KE",
+    "country_name": "Kenya",
     "specific_location": "Kenya",
-    "title": "Kenya - Enhancing Water Security \u0026 Climate Resilience",
+    "title": "Kenya - Enhancing Water Security & Climate Resilience",
     "project_number": "P117635",
     "industry": "Utilities",
-    "ita_industries": [],
+    "ita_industries": [
+
+    ],
     "project_size": 350000000,
     "description": "The project objective is to support the institutionalization of processes and water related investments to strengthen climate-resilient water resources development and management in Kenya. The PDO will support the higher level objectives of inclusive and sustained growth through the achievement of water security and resilience to climate variability.",
     "tags": "Water, Sanitation and flood protection",
@@ -124,15 +137,14 @@
     "submitting_officer_contact": null,
     "url": "http://bit.ly/1MtB7XS",
     "status": "Pipeline",
-    "id": "DATATABLE.66",
     "source": "STATE",
     "trade_regions": [
-        "African Growth and Opportunity Act",
-        "Common Market for Eastern and Southern Africa"
+      "African Growth and Opportunity Act",
+      "Common Market for Eastern and Southern Africa"
     ],
     "world_regions": [
-        "Sub-Saharan Africa",
-        "Africa"
+      "Sub-Saharan Africa",
+      "Africa"
     ]
   }
 ]

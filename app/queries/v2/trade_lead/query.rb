@@ -1,5 +1,7 @@
 module V2::TradeLead
   class Query < ::Query
+    include ParsedQueryMethods
+
     attr_reader :countries, :sources
     aggregate_terms_by countries:     { field: 'country' },
                        sources:       { field: 'source' },
@@ -13,13 +15,14 @@ module V2::TradeLead
       @industries = split_to_array(options[:industries]) if options[:industries].present?
       @sources = options[:sources].present? ? options[:sources].upcase.split(',') : []
 
-      @q = options[:q]
+      @q = options[:q].downcase if options[:q].present?
       @sort = @q ? '_score' : 'publish_date:desc,country:asc'
       @publish_date = options[:publish_date] if options[:publish_date].present?
       @end_date = options[:end_date] if options[:end_date].present?
       @publish_date_amended = options[:publish_date_amended] if options[:publish_date_amended].present?
 
       set_geo_instance_variables(options)
+      update_instance_variables(QueryParser.parse(@q)) unless @q.nil?
     end
 
     private
@@ -28,15 +31,9 @@ module V2::TradeLead
       json.query do
         json.filtered do
           generate_filtered(json)
-          json.query do
-            json.bool do
-              json.must do
-                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) }
-              end
-            end
-          end if @q
+          generate_parsed_query(json, 'country_name')
         end
-      end if @q || any_field_exist?
+      end if !@q.blank? || any_field_exist?
     end
 
     def generate_filtered(json)

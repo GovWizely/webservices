@@ -14,6 +14,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Wisconsin SBDC Centers",
+        "city": "Wisconsin",
+        "country": "US",
+        "state": "WI",
+        "venue": "SBDC Locations",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -23,23 +33,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-        "venue": "SBDC Locations",
-        "address": "Wisconsin SBDC Centers",
-        "city": "Wisconsin",
-        "state": "WI",
-        "country": "US"
-        }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -57,6 +60,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
+        "city": "Seattle",
+        "country": "US",
+        "state": "WA",
+        "venue": "SBA Education and Training Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "workshops@sba.gov",
@@ -66,23 +79,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
-      "city": "Seattle",
-      "state": "WA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -100,6 +106,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Wisconsin SBDC Centers",
+        "city": "Wisconsin",
+        "country": "US",
+        "state": "maXiMus",
+        "venue": "SBDC Locations",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -109,23 +125,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBDC Locations",
-      "address": "Wisconsin SBDC Centers",
-      "city": "Wisconsin",
-      "state": "maXiMus",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -143,6 +152,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
+        "city": "MaxiMUS",
+        "country": "US",
+        "state": "WA",
+        "venue": "SBA Education and Training Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "workshops@sba.gov",
@@ -152,23 +171,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
-      "city": "MaxiMUS",
-      "state": "WA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -186,6 +198,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Wisconsin SBDC Centers",
+        "city": "Wisconsin",
+        "country": "US",
+        "state": "WI",
+        "venue": "SBDC Locations",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -195,23 +217,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBDC Locations",
-      "address": "Wisconsin SBDC Centers",
-      "city": "Wisconsin",
-      "state": "WI",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -229,6 +244,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
+        "city": "Seattle",
+        "country": "US",
+        "state": "WA",
+        "venue": "SBA Education and Training Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "workshops@sba.gov",
@@ -238,23 +263,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
-      "city": "Seattle",
-      "state": "WA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -272,6 +290,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Wisconsin SBDC Centers",
+        "city": "Wisconsin",
+        "country": "US",
+        "state": "WI",
+        "venue": "SBDC Locations",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -281,23 +309,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBDC Locations",
-      "address": "Wisconsin SBDC Centers",
-      "city": "Wisconsin",
-      "state": "WI",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -315,6 +336,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
+        "city": "Seattle",
+        "country": "US",
+        "state": "WA",
+        "venue": "SBA Education and Training Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "workshops@sba.gov",
@@ -324,23 +355,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBA Education and Training Center",
-      "address": "Fourth and Battery Building 2401 4th Avenue, Suite 450",
-      "city": "Seattle",
-      "state": "WA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -358,6 +382,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "Wisconsin SBDC Centers",
+        "city": "Wisconsin",
+        "country": "US",
+        "state": "WI",
+        "venue": "SBDC Locations",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -367,23 +401,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "SBDC Locations",
-      "address": "Wisconsin SBDC Centers",
-      "city": "Wisconsin",
-      "state": "WI",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -401,6 +428,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "661 West Imperial Highway",
+        "city": "Los Angeles",
+        "country": "DE",
+        "state": "CA",
+        "venue": "Flight Path Museum",
+        "country_name": "Germany"
+      }
+    ],
     "contacts": [
       {
         "email": null,
@@ -410,13 +447,6 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "Flight Path Museum",
-      "address": "661 West Imperial Highway",
-      "city": "Los Angeles",
-      "state": "CA",
-      "country": "DE"
-      }],
     "trade_regions": [
       "European Union - 28"
     ],
@@ -439,6 +469,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "600 Forbes Avenue Power Center Ballroom",
+        "city": "Pittsburgh",
+        "country": "US",
+        "state": "PA",
+        "venue": "Duquesne University Power Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "duqsbdc@duq.edu",
@@ -448,109 +488,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "Duquesne University Power Center",
-      "address": "600 Forbes Avenue Power Center Ballroom",
-      "city": "Pittsburgh",
-      "state": "PA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
-    ]
-  },
-  {
-    "id": "71ada50f1413e011cb8e788475fcc6f142891925",
-    "event_name": "Understanding Incoterms",
-    "event_type": "Resource Partner",
-    "start_date": "2014-06-18",
-    "start_time": "09:00",
-    "end_date": "2014-06-18",
-    "end_time": "11:30",
-    "time_zone": "Eastern Standard Time",
-    "cost": "20.00",
-    "registration_link": null,
-    "description": "Corning Community College’s Small Business Development Center is offering the workshop “Understanding Incoterms” on Wednesday, June 18th from 9:00 – 11:30 a.m. at CCC's Academic & Workforce Development Center, 318 Madison Avenue, Room 004, Elmira, NY. This workshop is important for those currently involved with or thinking about exporting at some point in the future. Robert Stein of Mohawk Global Trade Advisors will help participants learn to decode the secret language of Incoterms 2010. The information covered will facilitate exporters in choosing the right code for international sales and purchasing contracts, selecting appropriate insurance requirements and applying the rules to domestic transactions. Registration is $20 and is required by June 16th. For more information or to register contact the SBDC at 607-937-6861 or sbdc@corning-cc.edu.",
-    "industries": [
-
-    ],
-    "contacts": [
-      {
-        "email": "sbdc@corning-cc.edu",
-        "last_name": "Mary",
-        "phone": "607-937-6861",
-        "post": "Small Business Administration"
-      }
-    ],
-    "source": "SBA",
-    "venues": [{
-      "venue": "CCC's Academic & Workforce Development Center",
-      "address": "318 Madison Avenue",
-      "city": "Elmira",
-      "state": "NY",
-      "country": "US"
-      }],
-    "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
-    ],
-    "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
-      "North America"
-    ]
-  },
-  {
-    "id": "39ce32491650ade4fa1774a748b9b828c26bef80",
-    "event_name": "International Sales Contacts Commercial Invoices and Other Doucments",
-    "event_type": "SBA Participating",
-    "start_date": "2014-06-18",
-    "start_time": "12:15",
-    "end_date": "2014-06-18",
-    "end_time": "14:15",
-    "time_zone": "Pacific Standard Time",
-    "cost": "35.00",
-    "registration_link": null,
-    "description": "Cost: $35, Pre-registration Required, International Sales Contacts Commercial Invoices and Other Documents: Avoiding legal pitfalls; Strategies on structuring your transactions; Documents and information you need and more, presented by MCLE",
-    "industries": [
-
-    ],
-    "contacts": [
-      {
-        "email": "JCornel@portla.org",
-        "last_name": "Jean Coronel",
-        "phone": null,
-        "post": "Small Business Administration"
-      }
-    ],
-    "source": "SBA",
-    "venues": [{
-      "venue": "Los Angeles Law Library",
-      "address": "301 West 1st Street",
-      "city": "Los Angeles",
-      "state": "CA",
-      "country": "US"
-      }],
-    "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
-    ],
-    "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -568,6 +515,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "815 West 1250 South Room 110",
+        "city": "Orem",
+        "country": "FR",
+        "state": "UT",
+        "venue": "Orem/Provo SBDC Utah Valley University",
+        "country_name": "France"
+      }
+    ],
     "contacts": [
       {
         "email": "sbdc@uvu.edu",
@@ -577,18 +534,103 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "Orem/Provo SBDC Utah Valley University",
-      "address": "815 West 1250 South Room 110",
-      "city": "Orem",
-      "state": "UT",
-      "country": "FR"
-      }],
     "trade_regions": [
       "European Union - 28"
     ],
     "world_regions": [
       "Europe"
+    ]
+  },
+  {
+    "id": "71ada50f1413e011cb8e788475fcc6f142891925",
+    "event_name": "Understanding Incoterms",
+    "event_type": "Resource Partner",
+    "start_date": "2014-06-18",
+    "start_time": "09:00",
+    "end_date": "2014-06-18",
+    "end_time": "11:30",
+    "time_zone": "Eastern Standard Time",
+    "cost": "20.00",
+    "registration_link": null,
+    "description": "Corning Community College’s Small Business Development Center is offering the workshop “Understanding Incoterms” on Wednesday, June 18th from 9:00 – 11:30 a.m. at CCC's Academic & Workforce Development Center, 318 Madison Avenue, Room 004, Elmira, NY. This workshop is important for those currently involved with or thinking about exporting at some point in the future. Robert Stein of Mohawk Global Trade Advisors will help participants learn to decode the secret language of Incoterms 2010. The information covered will facilitate exporters in choosing the right code for international sales and purchasing contracts, selecting appropriate insurance requirements and applying the rules to domestic transactions. Registration is $20 and is required by June 16th. For more information or to register contact the SBDC at 607-937-6861 or sbdc@corning-cc.edu.",
+    "industries": [
+
+    ],
+    "venues": [
+      {
+        "address": "318 Madison Avenue",
+        "city": "Elmira",
+        "country": "US",
+        "state": "NY",
+        "venue": "CCC's Academic & Workforce Development Center",
+        "country_name": "United States"
+      }
+    ],
+    "contacts": [
+      {
+        "email": "sbdc@corning-cc.edu",
+        "last_name": "Mary",
+        "phone": "607-937-6861",
+        "post": "Small Business Administration"
+      }
+    ],
+    "source": "SBA",
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
+    ]
+  },
+  {
+    "id": "39ce32491650ade4fa1774a748b9b828c26bef80",
+    "event_name": "International Sales Contacts Commercial Invoices and Other Doucments",
+    "event_type": "SBA Participating",
+    "start_date": "2014-06-18",
+    "start_time": "12:15",
+    "end_date": "2014-06-18",
+    "end_time": "14:15",
+    "time_zone": "Pacific Standard Time",
+    "cost": "35.00",
+    "registration_link": null,
+    "description": "Cost: $35, Pre-registration Required, International Sales Contacts Commercial Invoices and Other Documents: Avoiding legal pitfalls; Strategies on structuring your transactions; Documents and information you need and more, presented by MCLE",
+    "industries": [
+
+    ],
+    "venues": [
+      {
+        "address": "301 West 1st Street",
+        "city": "Los Angeles",
+        "country": "US",
+        "state": "CA",
+        "venue": "Los Angeles Law Library",
+        "country_name": "United States"
+      }
+    ],
+    "contacts": [
+      {
+        "email": "JCornel@portla.org",
+        "last_name": "Jean Coronel",
+        "phone": null,
+        "post": "Small Business Administration"
+      }
+    ],
+    "source": "SBA",
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -606,6 +648,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "404 S. Figueroa Street",
+        "city": "Los Angeles",
+        "country": "US",
+        "state": "CA",
+        "venue": "The Westin Bonaventure Hotel",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "mattebery@lachamber.com",
@@ -615,66 +667,16 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "The Westin Bonaventure Hotel",
-      "address": "404 S. Figueroa Street",
-      "city": "Los Angeles",
-      "state": "CA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
-    ]
-  },
-  {
-    "id": "0e05225b186c05b7fa124e6eb548b82e449dfb26",
-    "event_name": "Introduction To Exporting (Tupelo)",
-    "event_type": "Resource Partner",
-    "start_date": "2014-06-19",
-    "start_time": "13:00",
-    "end_date": "2014-06-19",
-    "end_time": "14:30",
-    "time_zone": "Central Standard Time",
-    "cost": null,
-    "registration_link": null,
-    "description": "Are you interested in getting new customers for your business, but don’t know where to begin? This seminar outlines the basic steps to exporting your product or service. Topics include: regulations such as licenses and permits; basic marketing concepts to help analyze the revenue potential; lending terminology; outline for a business plan and other resources to assist in getting new customers for your business by exporting. To register for this event, please click on LEARN MORE; or visit our website at www.mssbdc.org; or call in MS 1-800-725-7232. Pre-registration is recommended.",
-    "industries": [
-
-    ],
-    "contacts": [
-      {
-        "email": null,
-        "last_name": "Precious Thompson",
-        "phone": null,
-        "post": "Small Business Administration"
-      }
-    ],
-    "source": "SBA",
-    "venues": [{
-      "venue": "Renasant Center for IDEAs",
-      "address": "398 East Main Street",
-      "city": "Tupelo",
-      "state": "MS",
-      "country": "US"
-      }],
-    "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
-    ],
-    "world_regions": [
-      "Western Hemisphere",
-      "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -692,6 +694,16 @@
     "industries": [
 
     ],
+    "venues": [
+      {
+        "address": "600 Forbes Avenue Power Center Ballroom",
+        "city": "Pittsburgh",
+        "country": "US",
+        "state": "PA",
+        "venue": "Duquesne University Power Center",
+        "country_name": "United States"
+      }
+    ],
     "contacts": [
       {
         "email": "duqsbdc@duq.edu",
@@ -701,23 +713,62 @@
       }
     ],
     "source": "SBA",
-    "venues": [{
-      "venue": "Duquesne University Power Center",
-      "address": "600 Forbes Avenue Power Center Ballroom",
-      "city": "Pittsburgh",
-      "state": "PA",
-      "country": "US"
-      }],
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
+    ]
+  },
+  {
+    "id": "0e05225b186c05b7fa124e6eb548b82e449dfb26",
+    "event_name": "Introduction To Exporting (Tupelo)",
+    "event_type": "Resource Partner",
+    "start_date": "2014-06-19",
+    "start_time": "13:00",
+    "end_date": "2014-06-19",
+    "end_time": "14:30",
+    "time_zone": "Central Standard Time",
+    "cost": null,
+    "registration_link": null,
+    "description": "Are you interested in getting new customers for your business, but don’t know where to begin? This seminar outlines the basic steps to exporting your product or service. Topics include: regulations such as licenses and permits; basic marketing concepts to help analyze the revenue potential; lending terminology; outline for a business plan and other resources to assist in getting new customers for your business by exporting. To register for this event, please click on LEARN MORE; or visit our website at www.mssbdc.org; or call in MS 1-800-725-7232. Pre-registration is recommended.",
+    "industries": [
+
+    ],
+    "venues": [
+      {
+        "address": "398 East Main Street",
+        "city": "Tupelo",
+        "country": "US",
+        "state": "MS",
+        "venue": "Renasant Center for IDEAs",
+        "country_name": "United States"
+      }
+    ],
+    "contacts": [
+      {
+        "email": null,
+        "last_name": "Precious Thompson",
+        "phone": null,
+        "post": "Small Business Administration"
+      }
+    ],
+    "source": "SBA",
+    "trade_regions": [
+      "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
+      "NAFTA",
+      "Trans Pacific Partnership"
+    ],
+    "world_regions": [
+      "Pacific Rim",
+      "North America",
+      "Western Hemisphere"
     ]
   }
 ]

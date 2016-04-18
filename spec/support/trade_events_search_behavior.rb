@@ -17,8 +17,7 @@ end
 shared_context 'TradeEvent::Ita data v2' do
   before(:all) do
     TradeEvent::Ita.recreate_index
-    TradeEvent::ItaData.new(
-      "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml",).import
+    TradeEvent::ItaData.new("#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml").import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Ita] = JSON.parse(open(
@@ -68,15 +67,21 @@ shared_examples 'it contains all TradeEvent::Ita results that match "Sao"' do
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ita results that match trade_regions "Southern Common Market" and "Asia Pacific Economic Cooperation"' do
+shared_examples 'it contains all TradeEvent::Ita results that match "germany"' do
   let(:source) { TradeEvent::Ita }
-  let(:expected) { [1, 2, 3] }
+  let(:expected) { [3] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeEvent::Ita results that match world_regions "Levant" and "South America"' do
+shared_examples 'it contains all TradeEvent::Ita results that match trade regions "Southern Common Market"' do
   let(:source) { TradeEvent::Ita }
-  let(:expected) { [0, 3] }
+  let(:expected) { [3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Ita results that match world regions "Levant"' do
+  let(:source) { TradeEvent::Ita }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -91,8 +96,7 @@ shared_context 'TradeEvent::Sba data v2' do
     TradeEvent::Sba.recreate_index
     TradeEvent::SbaData.new(
       "#{Rails.root}/spec/fixtures/trade_events/sba/new_events_listing.xml?offset=0",
-      { reject_if_ends_before: Date.parse('2013-01-11') }, 'r',
-    ).import
+      { reject_if_ends_before: Date.parse('2013-01-11') }, 'r',).import
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[TradeEvent::Sba] = JSON.parse(open(
@@ -118,19 +122,25 @@ end
 
 shared_examples 'it contains all TradeEvent::Sba results that match "international"' do
   let(:source) { TradeEvent::Sba }
-  let(:expected) { [11, 12, 16] }
+  let(:expected) { [12, 13, 15] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match countries "fr,de"' do
   let(:source) { TradeEvent::Sba }
-  let(:expected) { [9, 13] }
+  let(:expected) { [9, 11] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeEvent::Sba results that match country_name "Germany"' do
+  let(:source) { TradeEvent::Sba }
+  let(:expected) { [9] }
   it_behaves_like 'it contains all expected results of source'
 end
 
 shared_examples 'it contains all TradeEvent::Sba results that match countries "US"' do
   let(:source) { TradeEvent::Sba }
-  let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 11, 12, 14, 15, 16] }
+  let(:expected) { [0, 1, 2, 3, 4, 5, 6, 7, 8, 10, 12, 13, 14, 15, 16] }
   it_behaves_like 'it contains all expected results of source'
 end
 

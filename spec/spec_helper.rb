@@ -34,6 +34,7 @@ RSpec.configure do |config|
     User.create_index!
     DataSource.create_index!
     UrlMapper.recreate_index
+    ItaTaxonomy.recreate_index unless ItaTaxonomy.index_exists?
   end
 
   config.after(:suite) do

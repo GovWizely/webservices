@@ -15,12 +15,13 @@
   :end_date: '2013-01-28'
   :ita_industries: []
   :country: AU
+  :country_name: Australia
   :trade_regions:
   - Trans Pacific Partnership
   - Asia Pacific Economic Cooperation
   :world_regions:
-  - Asia Pacific
   - Oceania
+  - Asia Pacific
   - Pacific Rim
   :url: http://bit.ly/1M995hi
   :source: AUSTRALIA
@@ -39,12 +40,13 @@
   :end_date: '2013-06-28'
   :ita_industries: []
   :country: AU
+  :country_name: Australia
   :trade_regions:
   - Trans Pacific Partnership
   - Asia Pacific Economic Cooperation
   :world_regions:
-  - Asia Pacific
   - Oceania
+  - Asia Pacific
   - Pacific Rim
   :url: http://bit.ly/1KQmtJZ
   :source: AUSTRALIA
@@ -65,12 +67,13 @@
   :end_date: '2013-02-26'
   :ita_industries: []
   :country: AU
+  :country_name: Australia
   :trade_regions:
   - Trans Pacific Partnership
   - Asia Pacific Economic Cooperation
   :world_regions:
-  - Asia Pacific
   - Oceania
+  - Asia Pacific
   - Pacific Rim
   :url: http://bit.ly/1KQmtK2
   :source: AUSTRALIA

@@ -26,43 +26,12 @@
     "email": null,
     "source": "USTDA",
     "event_type": null,
-    "trade_regions": [],
-    "world_regions": []
-  },
-  {
-    "id": "94c3d1baec60e3622d956ca03daaa0eb3feb7303",
-    "event_name": "Jordan: Smart Grid Technologies Reverse Trade Mission",
-    "start_date": null,
-    "end_date": "2015-06-08",
-    "start_time": null,
-    "end_time": null,
-    "cost": null,
-    "cost_currency": null,
-    "registration_link": null,
-    "registration_title": "Jordan: Smart Grid Technologies Reverse Trade Mission",
-    "description": "The Smart Grid Technologies Reverse Trade Mission (RTM) will connect Jordanian utility and government representatives with U.S.&nbsp;grid modernization technologies.&nbsp; The RTM will focus on distribution technologies, which include communications platforms, advanced metering infrastructure, utility management software and other components of real-time data infrastructure from leading U.S. smart grid technology companies.&nbsp; In addition to U.S. company consultations, the RTM will include a day of procurement training under USTDA’s Global Procurement Initiative (GPI) Program, which will advise delegates on smart grid procurement best practices. The RTM will feature a Business Briefing in San Francisco on June 8, 2015, where U.S. companies can learn about upcoming smart grid opportunities with Jordanian electricity distribution companies and meet with Jordanian senior-level government and utility representatives. The Business Council for International Understanding (BCIU) is organizing this visit on behalf of USTDA.&nbsp; For more information, please contact Ms. Nina Kundra by email at n-kundra@bciu.org or by phone at (212) 997-3584.",
-    "industries": [
-      "Telecommunications"
+    "trade_regions": [
+
     ],
-    "url": null,
-    "venues": [
-      {
-        "venue": "Washington, DC and San Francisco, CA",
-        "city": null,
-        "state": null,
-        "country": null
-      }
-    ],
-    "first_name": null,
-    "last_name": null,
-    "post": null,
-    "person_title": null,
-    "phone": null,
-    "email": null,
-    "source": "USTDA",
-    "event_type": null,
-    "trade_regions": [],
-    "world_regions": []
+    "world_regions": [
+
+    ]
   },
   {
     "id": "85002753aed29875028b5e98ae12225ecd6d3283",
@@ -85,7 +54,8 @@
         "venue": "Miami, FL; Houston, TX; and Los Angeles, CA",
         "city": null,
         "state": null,
-        "country": null
+        "country": null,
+        "country_name": null
       }
     ],
     "first_name": null,
@@ -96,8 +66,12 @@
     "email": null,
     "source": "USTDA",
     "event_type": null,
-    "trade_regions": [],
-    "world_regions": []
+    "trade_regions": [
+
+    ],
+    "world_regions": [
+
+    ]
   },
   {
     "id": "e192f278bac8df094d6efaea1d39ed06bb603177",
@@ -120,7 +94,8 @@
         "venue": "Los Angeles, CA",
         "city": null,
         "state": null,
-        "country": null
+        "country": null,
+        "country_name": null
       }
     ],
     "first_name": null,
@@ -131,8 +106,12 @@
     "email": null,
     "source": "USTDA",
     "event_type": null,
-    "trade_regions": [],
-    "world_regions": []
+    "trade_regions": [
+
+    ],
+    "world_regions": [
+
+    ]
   },
   {
     "id": "5dd39f6a508d2f27cd0e62c55efeab786a5ddd55",
@@ -155,7 +134,8 @@
         "venue": "San Francisco, CA",
         "city": "San Francisco",
         "state": "California",
-        "country": "US"
+        "country": "US",
+        "country_name": "United States"
       }
     ],
     "first_name": null,
@@ -168,14 +148,14 @@
     "event_type": null,
     "trade_regions": [
       "Asia Pacific Economic Cooperation",
+      "CAFTA-DR",
       "NAFTA",
-      "Trans Pacific Partnership",
-      "CAFTA-DR"
+      "Trans Pacific Partnership"
     ],
     "world_regions": [
-      "Western Hemisphere",
       "Pacific Rim",
-      "North America"
+      "North America",
+      "Western Hemisphere"
     ]
   },
   {
@@ -199,7 +179,8 @@
         "venue": "Miami, FL; Houston, TX; and Los Angeles, CA",
         "city": null,
         "state": null,
-        "country": null
+        "country": null,
+        "country_name": null
       }
     ],
     "first_name": null,
@@ -210,7 +191,51 @@
     "email": null,
     "source": "USTDA",
     "event_type": null,
-    "trade_regions": [],
-    "world_regions": []
+    "trade_regions": [
+
+    ],
+    "world_regions": [
+
+    ]
+  },
+  {
+    "id": "94c3d1baec60e3622d956ca03daaa0eb3feb7303",
+    "event_name": "Jordan: Smart Grid Technologies Reverse Trade Mission",
+    "start_date": null,
+    "end_date": "2015-06-08",
+    "start_time": null,
+    "end_time": null,
+    "cost": null,
+    "cost_currency": null,
+    "registration_link": null,
+    "registration_title": "Jordan: Smart Grid Technologies Reverse Trade Mission",
+    "description": "The Smart Grid Technologies Reverse Trade Mission (RTM) will connect Jordanian utility and government representatives with U.S.&nbsp;grid modernization technologies.&nbsp; The RTM will focus on distribution technologies, which include communications platforms, advanced metering infrastructure, utility management software and other components of real-time data infrastructure from leading U.S. smart grid technology companies.&nbsp; In addition to U.S. company consultations, the RTM will include a day of procurement training under USTDA’s Global Procurement Initiative (GPI) Program, which will advise delegates on smart grid procurement best practices. The RTM will feature a Business Briefing in San Francisco on June 8, 2015, where U.S. companies can learn about upcoming smart grid opportunities with Jordanian electricity distribution companies and meet with Jordanian senior-level government and utility representatives. The Business Council for International Understanding (BCIU) is organizing this visit on behalf of USTDA.&nbsp; For more information, please contact Ms. Nina Kundra by email at n-kundra@bciu.org or by phone at (212) 997-3584.",
+    "industries": [
+      "Telecommunications"
+    ],
+    "url": null,
+    "venues": [
+      {
+        "venue": "Washington, DC and San Francisco, CA",
+        "city": null,
+        "state": null,
+        "country": null,
+        "country_name": null
+      }
+    ],
+    "first_name": null,
+    "last_name": null,
+    "post": null,
+    "person_title": null,
+    "phone": null,
+    "email": null,
+    "source": "USTDA",
+    "event_type": null,
+    "trade_regions": [
+
+    ],
+    "world_regions": [
+
+    ]
   }
 ]

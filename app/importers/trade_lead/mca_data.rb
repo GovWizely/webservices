@@ -45,7 +45,8 @@ module TradeLead
     def process_geo_fields(item_hash)
       country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
       item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
-      item_hash.merge! add_geo_fields([item_hash[:country]])
+      item_hash[:country_name] = country.match(/- ([a-zA-Z]+)/)[1]
+      item_hash.merge! add_related_fields([item_hash[:country_name]])
     end
 
     def process_urls(item_hash)

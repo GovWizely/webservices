@@ -24,14 +24,15 @@
   :submitting_officer: Asike, Chuka
   :submitting_officer_contact: AsikeC@state.gov
   :id: DATATABLE.647
+  :country_name: Colombia
   :trade_regions:
-  - Andean Community
   - Global System of Trade Preferences among Developing Countries
+  - Andean Community
   :world_regions:
-  - Latin America
-  - South America
   - Western Hemisphere
+  - South America
   - Pacific Rim
+  - Latin America
   :source: STATE
   :ita_industries: []
 - :title: Learning; Equity and Accountability Program Support Project
@@ -57,10 +58,11 @@
   :submitting_officer: Chuka Asike
   :submitting_officer_contact: asikec@state.gov
   :id: DATATABLE.538
+  :country_name: Philippines
   :trade_regions:
   - Global System of Trade Preferences among Developing Countries
-  - Association of Southeast Asian Nations
   - Asia Pacific Economic Cooperation
+  - Association of Southeast Asian Nations
   :world_regions:
   - Asia Pacific
   - Southeast Asia
@@ -101,9 +103,10 @@
   :submitting_officer: Hala Rharrit
   :submitting_officer_contact: RharritH@state.gov
   :id: DATATABLE.174
+  :country_name: Qatar
   :trade_regions:
-  - Organization of the Petroleum Exporting Countries
   - Gulf Cooperation Council
+  - Organization of the Petroleum Exporting Countries
   :world_regions:
   - Persian Gulf Region
   - Middle East
@@ -135,6 +138,7 @@
   :submitting_officer: 
   :submitting_officer_contact: 
   :id: DATATABLE.66
+  :country_name: Kenya
   :trade_regions:
   - African Growth and Opportunity Act
   - Common Market for Eastern and Southern Africa

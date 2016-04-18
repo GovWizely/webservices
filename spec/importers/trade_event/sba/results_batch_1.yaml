@@ -25,15 +25,16 @@
     :country: US
     :state: WI
     :venue: SBDC Locations
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: a3925bf8dc3c6c46f7bf65791f68173e88867a89
 - :cost: '0.00'
   :description: 'SBA-backed loans are made by participating lenders and are used to
@@ -62,15 +63,16 @@
     :country: US
     :state: WA
     :venue: SBA Education and Training Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: bb0a5e15db1eefd43754f721975d88abe1ac683c
 - :cost: '0.00'
   :description: The Small Business Development Centers conduct classroom training
@@ -98,15 +100,16 @@
     :country: US
     :state: maXiMus
     :venue: SBDC Locations
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 82488156b6a2f7240495bc43060c0b4c262f96f8
 - :cost: '0.00'
   :description: 'SBA-backed loans are made by participating lenders and are used to
@@ -135,15 +138,16 @@
     :country: US
     :state: WA
     :venue: SBA Education and Training Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 81588edfe12cbd3ebb1ef05901fb48b98118bf4a
 - :cost: '0.00'
   :description: The Small Business Development Centers conduct classroom training
@@ -171,15 +175,16 @@
     :country: US
     :state: WI
     :venue: SBDC Locations
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 1e9a67392d02ac1935fca0872e754b4f79f52181
 - :cost: '0.00'
   :description: 'SBA-backed loans are made by participating lenders and are used to
@@ -208,15 +213,16 @@
     :country: US
     :state: WA
     :venue: SBA Education and Training Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 6357c0ccb00cd10898b6098bb769f555b3218b62
 - :cost: '0.00'
   :description: The Small Business Development Centers conduct classroom training
@@ -244,15 +250,16 @@
     :country: US
     :state: WI
     :venue: SBDC Locations
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 1d564251f14da8862379f2db812148988d5d5b2b
 - :cost: '0.00'
   :description: 'SBA-backed loans are made by participating lenders and are used to
@@ -281,15 +288,16 @@
     :country: US
     :state: WA
     :venue: SBA Education and Training Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 0baa420252da3a0047156c6dcca75fd395791c4f
 - :cost: '0.00'
   :description: The Small Business Development Centers conduct classroom training
@@ -317,13 +325,14 @@
     :country: US
     :state: WI
     :venue: SBDC Locations
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: ceb79b23c1c10c9a727683c0250dba9e2531e572

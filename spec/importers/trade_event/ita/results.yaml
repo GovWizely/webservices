@@ -28,6 +28,7 @@
     :country: IL
     :state: 
     :venue: International Convention Center, Haifa, Israel
+    :country_name: Israel
   :trade_regions: []
   :world_regions:
   - Levant
@@ -57,15 +58,16 @@
     :country: US
     :state: WI
     :venue: WCTC - Richard T Anderson Building
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :source: ITA
 - :cost: 200.99
   :description: The International WorkBoat Show is the largest commercial marine tradeshow
@@ -116,15 +118,16 @@
     :country: US
     :state: LA
     :venue: Morial Convention Center, New Orleans, Louisiana
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :source: ITA
 - :cost: 0.0
   :description: HOSPITALAR taking place in São Paulo, Brazil is in its 21st year and
@@ -186,11 +189,12 @@
     :country: BR
     :state: 
     :venue: Expo Center Norte
+    :country_name: Brazil
   :trade_regions:
-  - Southern Common Market
   - Global System of Trade Preferences among Developing Countries
+  - Southern Common Market
   :world_regions:
   - South America
-  - Western Hemisphere
   - Latin America
+  - Western Hemisphere
   :source: ITA

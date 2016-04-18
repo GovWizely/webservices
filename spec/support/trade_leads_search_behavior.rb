@@ -31,7 +31,7 @@ end
 
 shared_examples 'it contains all TradeLead::Australia results that match "equipment"' do
   let(:source) { TradeLead::Australia }
-  let(:expected) { [1, 2] }
+  let(:expected) { [0, 1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -43,7 +43,7 @@ end
 
 shared_examples 'it contains all TradeLead::Australia results where publish_date_amended is 2013-01-04' do
   let(:source) { TradeLead::Australia }
-  let(:expected) { [0] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
@@ -77,13 +77,13 @@ end
 
 shared_examples 'it contains all TradeLead::Canada results that match "equipment"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [2] }
+  let(:expected) { [4] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results that match "Montée"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [4] }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
@@ -95,13 +95,13 @@ end
 
 shared_examples 'it contains all TradeLead::Canada results that match industries "Health Care Medical"' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [1] }
+  let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
 shared_examples 'it contains all TradeLead::Canada results where publish_date is 2014-03-20' do
   let(:source) { TradeLead::Canada }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source with auto generated id'
 end
 
@@ -199,6 +199,12 @@ shared_examples 'it contains all TradeLead::State results where end_date is 2014
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeLead::State results that match world_regions "Africa"' do
+  let(:source) { TradeLead::State }
+  let(:expected) { [3] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TradeLead::Uk data' do
   before(:all) do
     TradeLead::Uk.recreate_index
@@ -244,6 +250,18 @@ shared_examples 'it contains all TradeLead::Mca results' do
   it_behaves_like 'it contains all expected results of source'
 end
 
+shared_examples 'it contains all TradeLead::Mca results that match trade_regions "West African Economic and Monetary Union"' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Mca results that match world_regions "Africa"' do
+  let(:source) { TradeLead::Mca }
+  let(:expected) { [0, 1, 2] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
 shared_context 'TradeLead::Ustda data' do
   before do
     allow(Date).to receive(:current).and_return(Date.parse('2015-12-18'))
@@ -267,18 +285,18 @@ end
 
 shared_examples 'it contains all TradeLead::Ustda results that match "equipment"' do
   let(:source) { TradeLead::Ustda }
-  let(:expected) { [0] }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end
 
-shared_examples 'it contains all TradeLead::Ustda results where trade_regions is "African Growth and Opportunity Act"' do
-  let(:source) { TradeLead::Ustda }
-  let(:expected) { [0] }
-  it_behaves_like 'it contains all expected results of source'
-end
-
-shared_examples 'it contains all TradeLead::Ustda results where world_regions is "Africa, Central America"' do
+shared_examples 'it contains all TradeLead::Ustda results with trade_regions' do
   let(:source) { TradeLead::Ustda }
   let(:expected) { [0, 1] }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all TradeLead::Ustda results that match world_regions "Africa"' do
+  let(:source) { TradeLead::Ustda }
+  let(:expected) { [1] }
   it_behaves_like 'it contains all expected results of source'
 end

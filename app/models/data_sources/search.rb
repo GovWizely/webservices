@@ -28,19 +28,19 @@ module DataSources
     end
 
     def response_hash(results, total)
-      { total: total,
-        offset: @query.offset,
-        sources_used: sources_used,
+      { total:               total,
+        offset:              @query.offset,
+        sources_used:        sources_used,
         search_performed_at: @search_performed_at,
-        results: results, }
+        results:             results, }
     end
 
     def sources_used
       data_sources_used = @data_source.is_consolidated? ? @data_source.consolidated_data_sources(@sources) : [@data_source]
       data_sources_used.collect do |data_source|
-        { source: data_source.name,
+        { source:              data_source.name,
           source_last_updated: data_source.data_changed_at,
-          last_imported: data_source.data_imported_at, }
+          last_imported:       data_source.data_imported_at, }
       end
     end
   end

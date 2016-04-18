@@ -58,14 +58,14 @@ module DataSources
 
     def data_format
       case data
-        when /\A<\?xml /
-          'XML'
-        when /\A[{\[]/
-          'JSON'
-        when /\t/
-          'TSV'
-        else
-          'CSV'
+      when /\A<\?xml /
+        'XML'
+      when /\A[{\[]/
+        'JSON'
+      when /\t/
+        'TSV'
+      else
+        'CSV'
       end
     end
 

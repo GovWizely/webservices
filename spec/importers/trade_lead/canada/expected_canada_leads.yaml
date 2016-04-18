@@ -57,13 +57,14 @@
   - http://bit.ly/1Kyo80o
   :ita_industries: []
   :country: CA
+  :country_name: Canada
   :trade_regions:
   - NAFTA
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
-  - Pacific Rim
   - North America
+  - Pacific Rim
   - Western Hemisphere
   :source: CANADA
 - :language: English
@@ -142,13 +143,14 @@
   - http://bit.ly/1L4afO7
   :ita_industries: []
   :country: CA
+  :country_name: Canada
   :trade_regions:
   - NAFTA
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
-  - Pacific Rim
   - North America
+  - Pacific Rim
   - Western Hemisphere
   :source: CANADA
 - :language: English
@@ -222,13 +224,14 @@
   - http://bit.ly/1L4ag4G
   :ita_industries: []
   :country: CA
+  :country_name: Canada
   :trade_regions:
   - NAFTA
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
-  - Pacific Rim
   - North America
+  - Pacific Rim
   - Western Hemisphere
   :source: CANADA
 - :language: English
@@ -265,13 +268,14 @@
   - http://bit.ly/1L4agl7
   :ita_industries: []
   :country: CA
+  :country_name: Canada
   :trade_regions:
   - NAFTA
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
-  - Pacific Rim
   - North America
+  - Pacific Rim
   - Western Hemisphere
   :source: CANADA
 - :language: English
@@ -299,7 +303,8 @@
     to Govt
   :procurement_organization: Public Works & Government Services Canada
   :implementing_entity: Veterans Affairs Canada
-  :description: 'Trade Agreement: equipment required for the classroom tutoring; VAC must ensure that each user is followi'
+  :description: 'Trade Agreement: equipment required for the classroom tutoring; VAC
+    must ensure that each user is followi'
   :contact: 'Souleiman, Mohamed, (819) 956-8348 ( ), (819) 956-2675, PSBID, PWGSC
     / DIASP,TPSGC 11 Laurier St. / 11, rue Laurier 10C1/Place du Portage, Phase III
     Gatineau Québec K1A 0S5 Telephone No.: (819) 956-8348 ( ) Facsimile No.: (819)
@@ -309,12 +314,13 @@
   :urls: 
   :ita_industries: []
   :country: CA
+  :country_name: Canada
   :trade_regions:
   - NAFTA
-  - Asia Pacific Economic Cooperation
   - Trans Pacific Partnership
+  - Asia Pacific Economic Cooperation
   :world_regions:
-  - Pacific Rim
   - North America
+  - Pacific Rim
   - Western Hemisphere
   :source: CANADA

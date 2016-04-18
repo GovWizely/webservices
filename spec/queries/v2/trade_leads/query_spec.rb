@@ -53,4 +53,26 @@ describe V2::TradeLead::Query do
       expect(JSON.parse(query.generate_search_body)).to eq(search_body)
     end
   end
+
+  context 'when q includes a country term that must be parsed' do
+    let(:query) { described_class.new(q: 'trade with china') }
+    let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_parsed_country.json").read }
+    let(:taxonomy_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
+
+    it 'generates search body with parsed query' do
+      allow(ItaTaxonomy).to receive(:search_related_terms).and_return([taxonomy_results.first])
+      expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+    end
+  end
+
+  context 'when q includes only a world region term that must be parsed' do
+    let(:query) { described_class.new(q: 'north america') }
+    let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_parsed_world_region.json").read }
+    let(:taxonomy_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
+
+    it 'generates search body with parsed query' do
+      allow(ItaTaxonomy).to receive(:search_related_terms).and_return([taxonomy_results[1]])
+      expect(JSON.parse(query.generate_search_body)).to eq(search_body)
+    end
+  end
 end

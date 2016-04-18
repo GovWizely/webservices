@@ -25,6 +25,7 @@
     :country: DE
     :state: CA
     :venue: Flight Path Museum
+    :country_name: Germany
   :trade_regions:
   - European Union - 28
   :world_regions:
@@ -57,15 +58,16 @@
     :country: US
     :state: PA
     :venue: Duquesne University Power Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: ac4762e9b2ccb537b4be1ce206c004286dc0e50f
 - :cost: 
   :description: Save the date! How Can I Export? Come find out. Multiple Presenters,
@@ -91,6 +93,7 @@
     :country: FR
     :state: UT
     :venue: Orem/Provo SBDC Utah Valley University
+    :country_name: France
   :trade_regions:
   - European Union - 28
   :world_regions:
@@ -129,15 +132,16 @@
     :country: US
     :state: NY
     :venue: CCC's Academic & Workforce Development Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 71ada50f1413e011cb8e788475fcc6f142891925
 - :cost: '35.00'
   :description: 'Cost: $35, Pre-registration Required, International Sales Contacts
@@ -165,15 +169,16 @@
     :country: US
     :state: CA
     :venue: Los Angeles Law Library
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 39ce32491650ade4fa1774a748b9b828c26bef80
 - :cost: 
   :description: 'The luncheon session will feature the SBA Small Business Awards,
@@ -202,15 +207,16 @@
     :country: US
     :state: CA
     :venue: The Westin Bonaventure Hotel
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 1ad75d3410313305cda3cfd1983c53acf38c7bf6
 - :cost: '195.00'
   :description: 'Take-Aways: •You will know the best type of L/C to use to manage
@@ -238,15 +244,16 @@
     :country: US
     :state: PA
     :venue: Duquesne University Power Center
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 3d17cc02d14c8055953885cb2d02ae9de61ab590
 - :cost: 
   :description: 'Are you interested in getting new customers for your business, but
@@ -278,13 +285,14 @@
     :country: US
     :state: MS
     :venue: Renasant Center for IDEAs
+    :country_name: United States
   :trade_regions:
   - Asia Pacific Economic Cooperation
+  - CAFTA-DR
   - NAFTA
   - Trans Pacific Partnership
-  - CAFTA-DR
   :world_regions:
-  - Western Hemisphere
   - Pacific Rim
   - North America
+  - Western Hemisphere
   :id: 0e05225b186c05b7fa124e6eb548b82e449dfb26

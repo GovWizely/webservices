@@ -62,8 +62,13 @@ module TradeLead
       lead[:publish_date] = parse_american_date(lead[:publish_date]) if lead[:publish_date]
       lead[:end_date] = parse_american_date(lead[:end_date]) if lead[:end_date]
       lead[:source] = model_class.source[:code]
-      lead[:country] = get_missing_country(lead[:title])
-      lead.merge! add_geo_fields([lead[:country]])
+      lead[:country_name] = get_missing_country(lead[:title])
+      lead[:country] = begin
+                         lookup_country(lead[:country_name])
+                       rescue
+                         nil
+                       end
+      lead.merge! add_related_fields([lead[:country_name]])
       lead
     end
   end

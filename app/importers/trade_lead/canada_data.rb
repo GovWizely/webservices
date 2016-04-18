@@ -70,7 +70,8 @@ module TradeLead
       lead[:industry] = split_industries(lead[:industry]) if lead[:industry]
       lead[:ita_industries] = lead[:industry] ? get_mapper_terms_from_array(lead[:industry]) : []
       lead[:country] = 'CA'
-      lead.merge! add_geo_fields([lead[:country]])
+      lead[:country_name] = 'Canada'
+      lead.merge! add_related_fields([lead[:country_name]])
       lead
     end
 

@@ -9,7 +9,7 @@ class CountryIndustryQuery < Query
                    nil
                  end
     @industry = options[:industry]
-    @q = options[:q]
+    @q = options[:q].downcase if options[:q].present?
   end
 
   private
@@ -19,9 +19,9 @@ class CountryIndustryQuery < Query
       json.bool do
         json.must do |must_json|
           must_json.child! { must_json.match { must_json.set! 'industries.tokenized', @industry } } if @industry
-          must_json.child! { generate_multi_match(must_json, multi_fields, @q) } if @q
+          must_json.child! { generate_multi_match(must_json, multi_fields, @q) } unless @q.blank?
         end
       end
-    end if @industry || @q
+    end if @industry || !@q.blank?
   end
 end

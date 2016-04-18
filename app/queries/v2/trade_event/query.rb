@@ -1,5 +1,6 @@
 module V2::TradeEvent
   class Query < ::CountryIndustryQuery
+    include ParsedQueryMethods
     #
     # NOTE: This is mostly duplicated code.
     #       Given the fact we'll remove V1 soon after V2 becomes default it might
@@ -35,6 +36,7 @@ module V2::TradeEvent
       @industry = nil
 
       set_geo_instance_variables(options)
+      update_instance_variables(QueryParser.parse(@q)) unless @q.nil?
     end
 
     private
@@ -43,7 +45,7 @@ module V2::TradeEvent
       json.query do
         json.filtered do
           generate_filtered(json)
-          generate_multi_query(json, self.class::MULTI_FIELDS)
+          generate_parsed_query(json, 'venues.country_name')
         end
       end
     end

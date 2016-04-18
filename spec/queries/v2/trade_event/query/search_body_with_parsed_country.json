@@ -1,0 +1,68 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "bool": {
+          "should": [
+            {
+              "multi_match": {
+                "fields": [
+                  "registration_title",
+                  "description",
+                  "event_name",
+                  "industries.keyword",
+                  "city",
+                  "venues.city",
+                  "venues.state",
+                  "venues.country",
+                  "contacts.first_name",
+                  "contacts.last_name",
+                  "contacts.person_title"
+                ],
+                "operator": "and",
+                "query": "china"
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "match": {
+                      "venues.country_name": "China"
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "aggs": {
+    "countries": {
+      "terms": {
+        "field": "venues.country",
+        "size": 0
+      }
+    },
+    "sources": {
+      "terms": {
+        "field": "source",
+        "size": 0
+      }
+    },
+    "trade_regions": {
+      "terms": {
+        "field": "trade_regions",
+        "size": 0
+      }
+    },
+    "world_regions": {
+      "terms": {
+        "field": "world_regions",
+        "size": 0
+      }
+    }
+  }
+}

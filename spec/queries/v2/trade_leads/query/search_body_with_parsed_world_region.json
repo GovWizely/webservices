@@ -1,0 +1,65 @@
+{
+  "query": {
+    "filtered": {
+      "query": {
+        "bool": {
+          "should": [
+            {
+              "multi_match": {
+                "fields": [
+                  "title",
+                  "description",
+                  "industry.tokenized",
+                  "ita_industries.tokenized",
+                  "tags",
+                  "procurement_organization"
+                ],
+                "operator": "and",
+                "query": "north america"
+              }
+            },
+            {
+              "bool": {
+                "must": [
+                  {
+                    "terms": {
+                      "world_regions": [
+                        "North America"
+                      ]
+                    }
+                  }
+                ]
+              }
+            }
+          ]
+        }
+      }
+    }
+  },
+  "aggs": {
+    "countries": {
+      "terms": {
+        "field": "country",
+        "size": 0
+      }
+    },
+    "sources": {
+      "terms": {
+        "field": "source",
+        "size": 0
+      }
+    },
+    "trade_regions": {
+      "terms": {
+        "field": "trade_regions",
+        "size": 0
+      }
+    },
+    "world_regions": {
+      "terms": {
+        "field": "world_regions",
+        "size": 0
+      }
+    }
+  }
+}

@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/trade_leads/fbopen/complete_source.yml', record: :once } do
+  include_context 'ItaTaxonomy data'
+
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/complete_source" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/expected_leads.yaml") }
@@ -71,12 +73,13 @@ describe TradeLead::FbopenImporter::PatchData, vcr: { cassette_name: 'importers/
                         publish_date:                     '2013-06-16',
                         specific_address:                 'At 15 different Primary Sampling Units (PSUs) yearly. The PSU location',
                         country:                          'BR',
+                        country_name:                     'Brazil',
                         title:                            'National Health and Nutrition Examination Survey (NHANES) Survey',
                         url:                              nil,
                         end_date:                         '2014-05-30',
                         source:                           'FBO',
-                        trade_regions:                    ['Southern Common Market', 'Global System of Trade Preferences among Developing Countries'],
-                        world_regions:                    ['South America', 'Western Hemisphere', 'Latin America'],
+                        trade_regions:                    ['Global System of Trade Preferences among Developing Countries', 'Southern Common Market'],
+                        world_regions:                    ['South America', 'Latin America', 'Western Hemisphere'],
                        )
     end
 

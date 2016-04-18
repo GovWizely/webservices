@@ -51,8 +51,8 @@ module Webservices
     config.enable_bitly_lookup = true
     config.enable_industry_mapping_lookup = true
 
-    config.frozen_protege_source = "#{Rails.root}/data/webprotege.zip"
-    config.frozen_taxonomy_concepts = "#{Rails.root}/data/taxonomy/concepts.yaml"
+    config.full_protege_source = "#{Rails.root}/spec/fixtures/ita_taxonomies/webprotege.zip"
+    config.full_taxonomy_concepts = "#{Rails.root}/data/taxonomy/concepts.yaml"
 
     config.restforce = {
       api_version:   'replace_with_real_value',

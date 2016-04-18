@@ -9,6 +9,7 @@ module TradeLead
           properties: {
             _updated_at:              { type: 'date', format: 'strictDateOptionalTime' },
             country:                  { type: 'string', analyzer: 'keyword' },
+            country_name:             { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             description:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             contract_number:          { type: 'string', index: 'not_analyzed' },
             reference_number:         { type: 'string', index: 'not_analyzed' },

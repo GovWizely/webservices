@@ -1,6 +1,8 @@
 require 'spec_helper'
 
 describe TradeLead::UkData, vcr: { cassette_name: 'importers/trade_leads/uk.yml', record: :once } do
+  include_context 'ItaTaxonomy data'
+  
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/trade_leads/uk" }
   let(:importer) { described_class.new(fixtures_file) }
 
@@ -17,7 +19,7 @@ describe TradeLead::UkData, vcr: { cassette_name: 'importers/trade_leads/uk.yml'
     let(:expected) { YAML.load_file("#{File.dirname(__FILE__)}/uk/results.yaml") }
 
     it 'indexes the correct documents' do
-      expect { importer.import }.to raise_error
+      expect { importer.import }.to raise_error('Should not be any docs with status Closed')
     end
   end
 
