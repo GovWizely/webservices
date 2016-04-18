@@ -1,6 +1,6 @@
 source_fields = [
-  :source,
-  :title,
+  :question,
+  :answer,
   :summary,
   :first_published_date,
   :last_published_date,

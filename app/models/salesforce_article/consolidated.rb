@@ -4,8 +4,6 @@ module SalesforceArticle
     self.model_classes = [
       SalesforceArticle::CountryCommercial,
       SalesforceArticle::MarketInsight,
-      SalesforceArticle::StateReport,
-      SalesforceArticle::TopMarkets,
     ]
   end
 end

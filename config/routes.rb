@@ -23,17 +23,17 @@ Webservices::Application.routes.draw do
 
   concern :api_v2_routable do
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
-    get '/ita_faqs/:id' => 'parature_faq#show', constraints: { id: /.+/ }, format: false
+    get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
     get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
     get '/trade_events/:id' => 'trade_events/consolidated#show', constraints: { id: /.+/ }, format: false
     get '/trade_leads/:id' => 'trade_leads/consolidated#show', constraints: { id: /.+/ }, format: false
   end
 
   concern :api_routable do
-    mapping = { 'market_researches'    => 'market_research_library',
-                'parature_faq'         => 'ita_faqs',
-                'ita_office_locations' => 'ita_office_locations',
-                'ita_zip_codes'        => 'ita_zipcode_to_post',
+    mapping = { 'market_researches'       => 'market_research_library',
+                'salesforce_articles/faq' => 'ita_faqs',
+                'ita_office_locations'    => 'ita_office_locations',
+                'ita_zip_codes'           => 'ita_zipcode_to_post',
      }
 
     mapping.each do |controller, path|

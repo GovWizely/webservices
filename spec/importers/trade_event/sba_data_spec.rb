@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe TradeEvent::SbaData do
   include_context 'ItaTaxonomy data'
-  
+
   before(:all) do
     TradeEvent::Sba.recreate_index
   end

@@ -4,7 +4,6 @@ module QueryParser
     parsed_q = q.dup.downcase
 
     return_hash = {}
-
     return_hash[:terms] = taxonomy_search_results.map do |result|
       next unless parsed_q.include?(result[:label].downcase)
       parsed_q.slice! result[:label].downcase

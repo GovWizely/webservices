@@ -1,0 +1,26 @@
+{
+  "world_regions": [
+    {
+      "key": "Europe",
+      "doc_count": 1
+    }
+  ],
+  "trade_regions": [
+    {
+      "key": "European Free Trade Association",
+      "doc_count": 1
+    }
+  ],
+  "countries": [
+    {
+      "key": "CH",
+      "doc_count": 1
+    }
+  ],
+  "sources": [
+    {
+      "key": "SFFAQ",
+      "doc_count": 2
+    }
+  ]
+}

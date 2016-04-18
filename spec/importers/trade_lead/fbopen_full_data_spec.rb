@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe TradeLead::FbopenImporter::FullData, vcr: { cassette_name: 'importers/trade_leads/fbopen/full_source_input.yml', record: :once } do
   include_context 'ItaTaxonomy data'
-  
+
   let(:resource)     { "#{Rails.root}/spec/fixtures/trade_leads/fbopen/full_source_input.xml" }
   let(:importer)     { described_class.new(resource) }
   let(:expected)     { YAML.load_file("#{File.dirname(__FILE__)}/fbopen/full_source_results.yaml") }

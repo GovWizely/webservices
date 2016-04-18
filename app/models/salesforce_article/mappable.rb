@@ -9,7 +9,6 @@ module SalesforceArticle
         klass.name.typeize => {
           properties: {
             _updated_at:          { type: 'date', format: 'strictDateOptionalTime' },
-            atom:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
             first_published_date: { type: 'date', format: 'YYYY-MM-dd' },
             last_published_date:  { type: 'date', format: 'YYYY-MM-dd' },
@@ -28,6 +27,9 @@ module SalesforceArticle
             topics:               { type: 'string', index: 'not_analyzed' },
             trade_regions:        { type: 'string', index: 'not_analyzed' },
             world_regions:        { type: 'string', index: 'not_analyzed' },
+
+            answer:               { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            question:             { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
           },
         },
       }.merge(klass.metadata_mappings,).freeze

@@ -4,15 +4,15 @@ module SalesforceArticle
 
     FIELD_MAPPING = {
       'Id'                 => :id,
-      'Atom__c'            => :atom,
       'FirstPublishedDate' => :first_published_date,
       'LastPublishedDate'  => :last_published_date,
-      'Public_URL__c'      => :public_url,
       'References__c'      => :references,
       'Summary'            => :summary,
       'Title'              => :title,
       'UrlName'            => :url_name,
     }
+
+    PUBLIC_URL_PREFIX = 'https://success.export.gov/article2?id='
 
     DATA_CATEGORY_GROUP_NAMES = %w(Geographies Industries Trade_Topics).freeze
 
@@ -22,9 +22,6 @@ module SalesforceArticle
 
     def initialize(client = nil)
       @client = client || Restforce.new(Rails.configuration.restforce)
-
-      @taxonomy_parser = TaxonomyParser.new(Rails.configuration.full_protege_source,
-                                            YAML.load_file(Rails.configuration.full_taxonomy_concepts),)
     end
 
     def loaded_resource
@@ -37,15 +34,20 @@ module SalesforceArticle
 
     def indexable_entries
       loaded_resource.map do |article|
-        entry = remap_keys(FIELD_MAPPING, article)
+        entry = remap_keys(self.class::FIELD_MAPPING, article)
         entry = sanitize_entry(entry)
 
+        process_url(entry)
         process_date_fields(entry)
         extract_taxonomy_fields(entry, article)
 
         entry[:source] = model_class.source[:code]
         entry
       end
+    end
+
+    def process_url(entry)
+      entry[:public_url] = entry[:url_name].present? ? (PUBLIC_URL_PREFIX + entry[:url_name]) : nil
     end
 
     def extract_taxonomy_fields(entry, article)
@@ -58,9 +60,9 @@ module SalesforceArticle
 
     def process_geo_fields(entry, taxonomy_terms)
       entry[:countries] = get_concept_labels_by_concept_group('Countries', taxonomy_terms)
-      entry[:countries] = entry[:countries].map { |country| lookup_country(country) }.compact
+      entry.merge! add_related_fields(entry[:countries])
 
-      entry.merge! add_geo_fields(entry[:countries])
+      entry[:countries] = entry[:countries].map { |country| lookup_country(country) }.compact
 
       entry[:trade_regions].concat(get_concept_labels_by_concept_group('Trade Regions', taxonomy_terms)).uniq!
       entry[:world_regions].concat(get_concept_labels_by_concept_group('World Regions', taxonomy_terms)).uniq!
@@ -73,7 +75,7 @@ module SalesforceArticle
     end
 
     def get_concept_labels_by_concept_group(concept_group, terms)
-      @taxonomy_parser.get_concepts_by_concept_group(concept_group, terms).map { |term| term[:label] }
+      terms.select { |term| term[:type].include?(concept_group) }.map { |term| term[:label] }
     end
 
     def extract_taxonomies(data_categories)
@@ -81,7 +83,10 @@ module SalesforceArticle
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
         label = dc.DataCategoryName.tr('_', ' ')
-        concept = @taxonomy_parser.get_term_by_label(label)
+
+        results = ItaTaxonomy.search_related_terms(labels: label, size: 1)
+        concept = results.empty? ? nil : results[0]
+
         taxonomies << concept if concept
       end
     end

@@ -2,7 +2,7 @@ require 'spec_helper'
 
 describe TradeLead::AustraliaData, vcr: { cassette_name: 'importers/trade_leads/australia.yml', record: :once } do
   include_context 'ItaTaxonomy data'
-  
+
   let(:fixtures_dir) { '' }
   let(:fixtures_file) { "#{Rails.root}/spec/fixtures/trade_leads/australia/trade_leads.csv" }
   let(:resource) { fixtures_file }

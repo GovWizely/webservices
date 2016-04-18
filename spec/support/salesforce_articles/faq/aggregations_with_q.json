@@ -1,0 +1,17 @@
+{
+  "world_regions": [
+
+  ],
+  "trade_regions": [
+
+  ],
+  "countries": [
+
+  ],
+  "sources": [
+    {
+      "key": "SFFAQ",
+      "doc_count": 1
+    }
+  ]
+}
