@@ -87,3 +87,9 @@ shared_examples 'it contains all SalesforceArticle::MarketInsight results that m
   let(:expected) { [0] }
   it_behaves_like 'it contains all expected results of source'
 end
+
+shared_examples 'it contains all SalesforceArticle::MarketInsight results that match industries "Higher Education"' do
+  let(:source) { SalesforceArticle::MarketInsight }
+  let(:expected) { [0] }
+  it_behaves_like 'it contains all expected results of source'
+end

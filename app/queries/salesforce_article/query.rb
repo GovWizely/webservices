@@ -24,7 +24,7 @@ module SalesforceArticle
       set_geo_instance_variables(options)
     end
 
-    MULTI_FIELDS = %i(references summary title)
+    MULTI_FIELDS = %i(atom references summary title)
 
     private
 

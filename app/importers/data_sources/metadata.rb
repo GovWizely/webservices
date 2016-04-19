@@ -98,6 +98,5 @@ module DataSources
       end
       hash
     end
-
   end
 end

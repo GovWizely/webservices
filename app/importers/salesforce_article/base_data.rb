@@ -4,6 +4,7 @@ module SalesforceArticle
 
     FIELD_MAPPING = {
       'Id'                 => :id,
+      'Atom__c'            => :atom,
       'FirstPublishedDate' => :first_published_date,
       'LastPublishedDate'  => :last_published_date,
       'References__c'      => :references,
@@ -11,8 +12,6 @@ module SalesforceArticle
       'Title'              => :title,
       'UrlName'            => :url_name,
     }
-
-    PUBLIC_URL_PREFIX = 'https://success.export.gov/article2?id='
 
     DATA_CATEGORY_GROUP_NAMES = %w(Geographies Industries Trade_Topics).freeze
 
@@ -47,7 +46,7 @@ module SalesforceArticle
     end
 
     def process_url(entry)
-      entry[:public_url] = entry[:url_name].present? ? (PUBLIC_URL_PREFIX + entry[:url_name]) : nil
+      entry[:url] = entry[:url_name].present? ? (Rails.configuration.salesforce_url + entry[:url_name]) : nil
     end
 
     def extract_taxonomy_fields(entry, article)
@@ -83,12 +82,18 @@ module SalesforceArticle
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
         label = dc.DataCategoryName.tr('_', ' ')
-
-        results = ItaTaxonomy.search_related_terms(labels: label, size: 1)
-        concept = results.empty? ? nil : results[0]
+        type = dc.DataCategoryGroupName.tr('_', ' ')
+        type = 'Topics' if type == 'Trade Topics'
+        # For now, only parse the types for Geographies.  Industries and Topics types on the Taxonomy index are not accurate
+        concept = (type == 'Geographies') ? lookup_term(label, type) : { label: label, type: [type] }
 
         taxonomies << concept if concept
       end
+    end
+
+    def lookup_term(label, _type)
+      results = ItaTaxonomy.search_related_terms(labels: label, size: 1)
+      results.empty? ? nil : results[0]
     end
 
     def filter_data_categories(data_categories)

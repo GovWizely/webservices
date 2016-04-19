@@ -59,5 +59,7 @@ module Webservices
       username:      'replace_with_real_value',
       password:      'replace_with_real_value',
     }
+
+    config.salesforce_url = 'not_a_real_URL/'
   end
 end

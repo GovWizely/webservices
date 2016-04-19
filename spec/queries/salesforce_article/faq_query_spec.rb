@@ -28,7 +28,7 @@ describe SalesforceArticle::FaqQuery do
 
     context 'when options include q' do
       let(:query) { described_class.new(q: 'elephants') }
-      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_faq_multi_match.json").read }
+      let(:search_body) { JSON.parse open("#{fixtures_dir}/search_body_with_multi_match.json").read }
 
       it 'generates search body with queries' do
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)

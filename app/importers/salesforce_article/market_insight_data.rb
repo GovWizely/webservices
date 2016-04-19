@@ -6,6 +6,7 @@ module SalesforceArticle
     def query_string
       @query_string ||= <<-SOQL
         SELECT Id,
+               Atom__c,
                FirstPublishedDate,
                LastPublishedDate,
                Public_URL__c,

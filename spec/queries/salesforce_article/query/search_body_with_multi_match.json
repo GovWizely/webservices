@@ -7,6 +7,7 @@
             {
               "multi_match": {
                 "fields": [ 
+                  "atom",
                   "references", 
                   "summary",
                   "title"

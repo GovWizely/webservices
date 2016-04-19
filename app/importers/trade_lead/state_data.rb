@@ -52,7 +52,7 @@ module TradeLead
 
       entry[:id] = entry_hash[:id]
       process_geo_fields(entry)
-      
+
       entry[:source] = TradeLead::State.source[:code]
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
 

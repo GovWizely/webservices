@@ -93,6 +93,22 @@ describe 'Salesforce Faq API V2', type: :request do
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
+    context 'when topics is specified' do
+      let(:params) { { topics: 'Exports, Exporters' } }
+      before { get search_path, params, @v2_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns Salesforce faqs' do
+        json_response = JSON.parse(response.body)
+        expect(json_response['total']).to eq(1)
+
+        results = json_response['results']
+        expect(results[0]).to eq(expected_results[0])
+      end
+    end
+
     context 'when trade regions is specified' do
       let(:params) { { trade_regions: 'European Free Trade Association' } }
       before { get search_path, params, @v2_headers }

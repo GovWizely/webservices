@@ -67,6 +67,16 @@ describe 'Consolidated Market Intelligence API', type: :request do
       it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
+    context 'when industries is specified' do
+      let(:params) { { industries: 'Higher Education' } }
+      it_behaves_like 'a successful search request'
+      it_behaves_like 'it contains all SalesforceArticle::MarketInsight results that match industries "Higher Education"'
+      it_behaves_like 'it contains only results with sources' do
+        let(:sources) { [SalesforceArticle::MarketInsight] }
+      end
+      it_behaves_like "an empty result when an industries search doesn't match any documents"
+    end
+
     context 'when sources is specified' do
       context 'and is set to "country_commercial"' do
         let(:params) { { sources: 'country_commercial' } }

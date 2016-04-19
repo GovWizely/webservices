@@ -13,7 +13,7 @@ module SalesforceArticle
             first_published_date: { type: 'date', format: 'YYYY-MM-dd' },
             last_published_date:  { type: 'date', format: 'YYYY-MM-dd' },
 
-            public_url:           { type: 'string', index: 'not_analyzed' },
+            url:                  { type: 'string', index: 'not_analyzed' },
 
             references:           { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             summary:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
@@ -28,8 +28,7 @@ module SalesforceArticle
             trade_regions:        { type: 'string', index: 'not_analyzed' },
             world_regions:        { type: 'string', index: 'not_analyzed' },
 
-            answer:               { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            question:             { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            atom:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
           },
         },
       }.merge(klass.metadata_mappings,).freeze

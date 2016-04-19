@@ -4,9 +4,9 @@
   :last_published_date: '2016-03-31'
   :references: 
   :summary: 
-  :question: To begin exporting, what should I consider ?
+  :title: To begin exporting, what should I consider ?
   :url_name: To-begin-exporting-what
-  :answer: 'There are many ways to become involved in exporting, from filling orders
+  :atom: 'There are many ways to become involved in exporting, from filling orders
     for domestic buyers (such as export trading companies that then export the product)
     to exporting products yourself. However you choose to export, the development
     of a detailed and thorough strategy is an important part of the planning process.
@@ -21,9 +21,13 @@
     Development Center (SBDC) or Export Assistance Center can help a company analyze
     its export potential. Please contact your local SBA by going to the following
     website: www.sba.gov'
-  :public_url: https://success.export.gov/article2?id=To-begin-exporting-what
-  :industries: []
-  :topics: []
+  :url: not_a_real_URL/To-begin-exporting-what
+  :industries:
+  - Export Management
+  :topics:
+  - Small Business Administration
+  - Exporters
+  - Exports
   :countries: []
   :trade_regions: []
   :world_regions: []
@@ -33,10 +37,10 @@
   :last_published_date: '2016-03-30'
   :references: 
   :summary: 
-  :question: How does an organization self-certify that it adheres to the U.S.-Swiss
+  :title: How does an organization self-certify that it adheres to the U.S.-Swiss
     Safe Harbor Principles?
   :url_name: How-does-an-organization-Switzerland
-  :answer: 'Safe Harbor benefits are assured from the date on which an organization
+  :atom: 'Safe Harbor benefits are assured from the date on which an organization
     self-certifies to the Department of Commerce (or its designee) its adherence to
     the Principles in accordance with the guidance set forth below. To self-certify
     for the Safe Harbor, organizations can provide to the Department of Commerce (or
@@ -94,10 +98,11 @@
     or other relevant government body. Misrepresentations to the Department of Commerce
     (or its designee) may be actionable under the False Statements Act (18 U.S.C.
     1001).'
-  :public_url: https://success.export.gov/article2?id=How-does-an-organization-Switzerland
+  :url: not_a_real_URL/How-does-an-organization-Switzerland
   :industries:
   - Business and Professional Services
-  :topics: []
+  :topics:
+  - Safe Harbor
   :countries:
   - CH
   :trade_regions:
