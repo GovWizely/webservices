@@ -1,0 +1,54 @@
+---
+_nested_entries:
+- name: annual_rates
+  fields:
+  - field1
+  - field2
+  - field3
+- name: annual_rates_alt
+  fields:
+  - field1_alt
+  - field2_alt
+  - field3_alt
+title:
+  source: title
+  description: Description of title
+  indexed: true
+  plural: false
+  type: enum
+field1:
+  source: field1
+  description: Description of field1
+  indexed: true
+  plural: false
+  type: enum
+field2:
+  source: field2
+  description: Description of field2
+  indexed: true
+  plural: false
+  type: enum
+field3:
+  source: field3
+  description: Description of field3
+  indexed: true
+  plural: false
+  type: float
+field1_alt:
+  source: field1_alt
+  description: Description of field1_alt
+  indexed: true
+  plural: false
+  type: enum
+field2_alt:
+  source: field2_alt
+  description: Description of field2_alt
+  indexed: true
+  plural: false
+  type: enum
+field3_alt:
+  source: field3_alt
+  description: Description of field3_alt
+  indexed: true
+  plural: false
+  type: float

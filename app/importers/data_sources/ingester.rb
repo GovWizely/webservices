@@ -1,6 +1,5 @@
 module DataSources
   class Ingester
-    include HTMLEntityUtils
     include Utils
     BULK_GROUP_SIZE = 1000
 
@@ -24,7 +23,7 @@ module DataSources
     def bulkify(records)
       records.reduce([]) do |bulk_array, record|
         bulk_array << { index: unique_record_id(record) }
-        bulk_array << sanitize_entry(@metadata.transform(record)).merge(_updated_at: @timestamp)
+        bulk_array << @metadata.transform(record).merge(_updated_at: @timestamp)
       end
     end
 

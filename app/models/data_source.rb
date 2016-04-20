@@ -42,11 +42,12 @@ class DataSource
   end
 
   def with_api_models(sources_param)
+    Elasticsearch::Model::Registry.clear
     klasses = consolidated_data_sources(sources_param).collect do |source|
       klass = ModelBuilder.load_model_class(source)
       klass_symbol = source.api.classify.to_sym
       Webservices::ApiModels.redefine_model_constant(klass_symbol, klass)
-      Elasticsearch::Model::Registry.upsert klass
+      Elasticsearch::Model::Registry.add klass
       klass
     end
     yield klasses

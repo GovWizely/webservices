@@ -95,26 +95,49 @@ describe DataSource do
       end
     end
 
-    context 'santizing entries' do
-      let(:data_source) { DataSource.create(_id: 'test_sanitizing:v1', published: true, version_number: 1, name: 'test', description: 'test sanitizing', api: 'test_sanitizing', data: File.read("#{Rails.root}/spec/fixtures/data_sources/sanitizing.csv"), dictionary: '') }
-      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/sanitizing.yaml")).deep_symbolized_yaml }
+    context 'specifying constant column value' do
+      let(:data_source) { DataSource.create(_id: 'test_constants:v1', published: true, version_number: 1, name: 'test', description: 'test constants', api: 'test_constants', data: File.read("#{Rails.root}/spec/fixtures/data_sources/constants.csv"), dictionary: '') }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/constants.yaml")).deep_symbolized_yaml }
 
       before do
         data_source.ingest
-        data_source.with_api_model do |klass|
-          expect(klass.count).to eq(1)
+        data_source.with_api_model do |_klass|
           data_source.update(dictionary: dictionary)
         end
         data_source.ingest
       end
 
-      it 'creates sanitized text entries' do
+      it 'creates entries with constant column value field' do
         results = data_source.with_api_model do |klass|
-          expect(klass.count).to eq(1)
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'entities'))
+          expect(klass.count).to eq(2)
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(source: 'some constant value'))
           klass.search(query.generate_search_body_hash)
         end
-        expect(results.first.f1).to eq('this has entities that are converted & html tags that are removed')
+        expect(results.collect(&:source)).to eq(['some constant value', 'some constant value'])
+      end
+    end
+
+    context 'grouping fields under parent fields' do
+      let(:data_source) { DataSource.create(_id: 'test_groups:v1', published: true, version_number: 1, name: 'test', description: 'test groups', api: 'test_groups', data: File.read("#{Rails.root}/spec/fixtures/data_sources/groups.csv"), dictionary: '') }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/groups.yaml")).deep_symbolized_yaml }
+
+      before do
+        data_source.ingest
+        data_source.with_api_model do |_klass|
+          data_source.update(dictionary: dictionary)
+        end
+        data_source.ingest
+      end
+
+      it 'creates entries with grouped column value fields' do
+        results = data_source.with_api_model do |klass|
+          expect(klass.count).to eq(2)
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(title: 'bar'))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.first.title).to eq('bar')
+        expect(results.first.annual_rates).to eq('field1' => 'feeling', 'field2' => 'sick', 'field3' => '4.5')
+        expect(results.first.annual_rates_alt).to eq('field1_alt' => 'started', 'field2_alt' => 'preschool', 'field3_alt' => '666')
       end
     end
   end
