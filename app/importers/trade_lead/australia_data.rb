@@ -41,7 +41,7 @@ module TradeLead
     def process_row(row)
       entry = sanitize_entry(remap_keys COLUMN_HASH, row)
 
-      return unless entry[:id]
+      return nil unless valid_entry?(entry)
 
       entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
       entry[:publish_date_amended] = parse_date entry[:publish_date_amended] if entry[:publish_date_amended]
@@ -57,6 +57,10 @@ module TradeLead
       entry[:url] = "https://www.tenders.gov.au/?event=public.advancedsearch.keyword&keyword=#{entry[:id]}"
       entry[:url] = UrlMapper.get_bitly_url(entry[:url], model_class) if entry[:url].present?
       entry
+    end
+
+    def valid_entry?(entry)
+      entry[:id] && (entry[:end_date].nil? || Date.strptime(entry[:end_date]) >= Date.current)
     end
   end
 end
