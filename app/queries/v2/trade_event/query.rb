@@ -15,9 +15,10 @@ module V2::TradeEvent
                        world_regions: { field: 'world_regions' }
 
     MULTI_FIELDS = %i(
-      registration_title description event_name industries.keyword city
-      venues.city venues.state venues.country
+      registration_title description event_name industries.tokenized
+      ita_industries.tokenized city venues.city venues.state venues.country
       contacts.first_name contacts.last_name contacts.person_title
+      first_name last_name person_title
     )
 
     def initialize(options = {})
@@ -76,11 +77,8 @@ module V2::TradeEvent
       json.child! do
         json.bool do
           json.set! 'should' do
-            Array(@industries).each do |ind|
-              json.child! do
-                json.query { json.match { json.set! 'industries.keyword', ind } }
-              end
-            end
+            json.child! { json.terms { json.set! 'industries.keyword', @industries } }
+            json.child! { json.terms { json.set! 'ita_industries.keyword', @industries } }
           end
         end
       end if @industries
