@@ -44,10 +44,6 @@ Webservices::Application.routes.draw do
       get '/search', to: 'screening_lists/consolidated#search'
     end
 
-    scope '/tariff_rates' do
-      get '/search', to: 'tariff_rates/consolidated#search'
-    end
-
     scope '/trade_leads' do
       get '/search', to: 'trade_leads/consolidated#search'
     end
@@ -82,8 +78,11 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    get '/business_service_providers/search(.json)', to: 'api_models#search', version_number: 1, api: :business_service_providers
-    get '/business_service_providers/*id', to: 'api_models#show', version_number: 1, api: :business_service_providers
+    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates)
+    apis_migrated_to_endpointme.each do |legacy_endpoint|
+      get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
+      get "/#{legacy_endpoint}/*id", to: 'api_models#show', version_number: 1, api: legacy_endpoint.to_sym
+    end
 
     get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
     get '/v*version_number/*api/*id', to: 'api_models#show', constraints: ApiModelRouteConstraint.new
