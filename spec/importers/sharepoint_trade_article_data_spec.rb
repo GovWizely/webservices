@@ -1,5 +1,14 @@
 require 'spec_helper'
 
+def stubbed_s3_client(importer)
+  Aws::S3::Client.new(
+    stub_responses: true,
+    region:         Rails.configuration.send(importer)[:aws][:region],
+    credentials:    Aws::Credentials.new(
+      Rails.configuration.send(importer)[:aws][:region],
+      Rails.configuration.send(importer)[:aws][:region],),)
+end
+
 describe SharepointTradeArticleData do
   fixtures_dir = "#{File.dirname(__FILE__)}/sharepoint_trade_article"
   fixtures_files = (116..119).map { |id| open("#{Rails.root}/spec/fixtures/sharepoint_trade_articles/articles/#{id}.xml").read }
