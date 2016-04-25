@@ -178,6 +178,24 @@ describe DataSource do
     end
   end
 
+  describe 'consolidated_data_sources(whitelist)' do
+    let(:data_source) { DataSource.new }
+    before { allow(data_source).to receive(:sources_map).and_return({ a: 1, b: 2, c: 3 }.with_indifferent_access) }
+
+    context 'no specified sources actually exist' do
+      it 'returns all children sources for this consolidated data source' do
+        expect(data_source.consolidated_data_sources('nope,none')).to eq([1, 2, 3])
+      end
+    end
+
+    context 'at least one specified source actually exists' do
+      it 'returns matching children sources for this consolidated data source' do
+        expect(data_source.consolidated_data_sources('nope,none,c')).to eq([3])
+      end
+    end
+
+  end
+
   describe '.find_published(api, version_number)' do
     before do
       query_hash = { _source: { exclude: ['data'] }, filter: { and: [{ term: { _id: 'my_api:v2' } }, { term: { published: true } }] } }

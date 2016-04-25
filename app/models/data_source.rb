@@ -67,7 +67,8 @@ class DataSource
 
   def consolidated_data_sources(whitelist)
     sources_array = whitelist.present? ? whitelist.split(',').collect(&:strip) : sources_map.keys
-    sources_map.slice(*sources_array).values
+    whitelisted_data_sources = sources_map.slice(*sources_array)
+    whitelisted_data_sources.any? ? whitelisted_data_sources.values : sources_map.values
   end
 
   def is_consolidated?
