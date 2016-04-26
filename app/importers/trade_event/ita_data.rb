@@ -6,6 +6,7 @@ module TradeEvent
     include VersionableResource
 
     ENDPOINT = "http://emenuapps.ita.doc.gov/ePublic/GetEventXML?StartDT=#{Date.tomorrow.strftime('%m/%d/%Y')}&EndDT=01/01/2020"
+    CONTAINS_MAPPER_LOOKUPS = true
 
     SINGLE_VALUED_XPATHS = {
       cost:               './COST',
@@ -59,12 +60,19 @@ module TradeEvent
       event_hash[:contacts] = event_info.xpath('./CONTACT').map do |contact|
         extract_fields contact, CONTACT_XPATHS
       end
-      event_hash[:industries] = event_info.xpath('./INDUSTRY').map do |industry|
-        extract_node industry
-      end.compact.uniq
+      
+      extract_industries(event_hash, event_info)
+
       event_hash[:venues] = extract_venues(event_info)
       event_hash.merge! add_related_fields(event_hash[:venues].map { |v| v[:country_name] })
       event_hash
+    end
+
+    def extract_industries(event_hash, event_info)
+      event_hash[:industries] = event_info.xpath('./INDUSTRY').map do |industry|
+        extract_node industry
+      end.compact.uniq
+      event_hash[:ita_industries] = event_hash[:industries].empty? ? [] : get_mapper_terms_from_array(event_hash[:industries])
     end
 
     def extract_venues(event_info)

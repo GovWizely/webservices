@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeEvent::ItaData do
+describe TradeEvent::ItaData, vcr: { cassette_name: 'importers/trade_events/ita.yml', record: :once } do
   include_context 'ItaTaxonomy data'
 
   let(:resource) { "#{Rails.root}/spec/fixtures/trade_events/ita/trade_events.xml" }

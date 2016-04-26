@@ -24,6 +24,13 @@ module TradeEvent
                                     keyword:   { type: 'string', analyzer: 'keyword' },
                                   },
                                 },
+            ita_industries:           {
+              type:   'string',
+              fields: {
+                tokenized: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+                keyword:   { type: 'string', analyzer: 'keyword' },
+              },
+            },
 
             venues:             { properties: { venue:        { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
                                                 address:      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

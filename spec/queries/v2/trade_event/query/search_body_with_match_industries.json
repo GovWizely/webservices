@@ -8,17 +8,13 @@
               "bool" : {
                 "should" : [
                   {
-                    "query" : {
-                      "match" : {
-                        "industries.keyword" : "fishing"
-                      }
+                    "terms" : {
+                      "industries.keyword" : ["fishing", "hunting"]
                     }
                   },
                   {
-                    "query" : {
-                      "match" : {
-                        "industries.keyword" : "hunting"
-                      }
+                    "terms" : {
+                      "ita_industries.keyword" : ["fishing", "hunting"]
                     }
                   }
                 ]

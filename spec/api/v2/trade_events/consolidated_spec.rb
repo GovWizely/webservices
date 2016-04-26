@@ -150,18 +150,31 @@ describe 'Consolidated Trade Events API V2', type: :request do
       it_behaves_like "an empty result when a countries search doesn't match any documents"
     end
 
-    context 'when industry is specified' do
-      let(:params) { { industries: 'Dental Eq.,Renewable Energy' } }
-      it_behaves_like 'a successful search request'
-      it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
-      it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"'
-      it_behaves_like 'it contains only results with sources' do
-        let(:sources) { [TradeEvent::Ita, TradeEvent::Ustda] }
+    context 'when industries is specified' do
+      context 'and contains two industries' do
+        let(:params) { { industries: 'Dental Eq.,Renewable Energy' } }
+
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
+        it_behaves_like 'it contains all TradeEvent::Ustda results that match industry "Renewable Energy"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [TradeEvent::Ita, TradeEvent::Ustda] }
+        end
+        it_behaves_like 'it contains all expected aggregations' do
+          let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_industries.json' }
+        end
+        it_behaves_like "an empty result when an industries search doesn't match any documents"
       end
-      it_behaves_like 'it contains all expected aggregations' do
-        let(:expected_json) { 'trade_events/v2/all_sources/aggregations_with_industries.json' }
+
+      context 'and contains one industry and one ita_industry' do
+        let(:params) { { industries: 'Dental Eq.,Plastic Materials and Resins' } }
+
+        it_behaves_like 'a successful search request'
+        it_behaves_like 'it contains all TradeEvent::Ita results that match industry "DENTALS"'
+        it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [TradeEvent::Ita] }
+        end
       end
-      it_behaves_like "an empty result when an industries search doesn't match any documents"
     end
 
     context 'when sources is specified' do

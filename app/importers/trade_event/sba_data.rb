@@ -8,6 +8,7 @@ module TradeEvent
 
     ENDPOINT = 'https://www.sba.gov/event-list/views/new_events_listing?display_id=services_1&filters[event_topic][value]=6&limit=100&offset=0'
     HEADER = { 'Accept' => 'application/xml' }
+    CONTAINS_MAPPER_LOOKUPS = true
 
     def initialize(resource = ENDPOINT, options = {}, header = HEADER)
       @resource = resource
@@ -96,7 +97,7 @@ module TradeEvent
 
       doc.merge!(extract_date_and_time_fields(item))
 
-      doc[:industries] = [doc[:industries]].compact
+      extract_industries(doc)
       doc[:source] = model_class.source[:code]
       doc[:contacts] = extract_contacts(item)
       doc[:venues] = extract_venues(item)
@@ -107,6 +108,11 @@ module TradeEvent
       doc[:cost] &&= doc[:cost].gsub(/\s+/, '')
 
       sanitize_entry(doc)
+    end
+
+    def extract_industries(doc)
+      doc[:industries] = [doc[:industries]].compact
+      doc[:ita_industries] = doc[:industries].empty? ? [] : get_mapper_terms_from_array(doc[:industries])
     end
 
     def extract_date_and_time_fields(item)

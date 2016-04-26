@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe TradeEvent::SbaData do
+describe TradeEvent::SbaData, vcr: { cassette_name: 'importers/trade_events/sba.yml', record: :once } do
   include_context 'ItaTaxonomy data'
 
   before(:all) do

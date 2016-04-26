@@ -10,14 +10,18 @@
                   "registration_title",
                   "description",
                   "event_name",
-                  "industries.keyword",
+                  "industries.tokenized",
+                  "ita_industries.tokenized",
                   "city",
                   "venues.city",
                   "venues.state",
                   "venues.country",
                   "contacts.first_name",
                   "contacts.last_name",
-                  "contacts.person_title"
+                  "contacts.person_title",
+                  "first_name",
+                  "last_name",
+                  "person_title"
                 ],
                 "operator": "and",
                 "query": "workboat"

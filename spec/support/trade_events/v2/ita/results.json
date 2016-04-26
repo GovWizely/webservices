@@ -16,6 +16,10 @@
       "Plastics Materials/Resins",
       "Robotics"
     ],
+    "ita_industries": [
+      "Plastic Materials and Resins",
+      "Robotics"
+    ],
     "url": null,
     "venues": [
       {
@@ -56,6 +60,9 @@
     "registration_title": "Register for this event",
     "description": "How well do you know the Foreign Trade Regulations (FTR) and the Automated Export System (AES)?",
     "industries": [
+
+    ],
+    "ita_industries": [
 
     ],
     "url": null,
@@ -108,6 +115,9 @@
       "Operations/Maintenance Services",
       "Pleasure Boats/Accessories",
       "Port/Shipbuilding Eq."
+    ],
+    "ita_industries": [
+
     ],
     "url": "www.workboatshow.com",
     "venues": [
@@ -179,6 +189,9 @@
     "industries": [
       "Laboratory Scientific Instruments",
       "Medical Eq."
+    ],
+    "ita_industries": [
+
     ],
     "url": "http://www.hospitalar.com/ingles/index.html",
     "venues": [
