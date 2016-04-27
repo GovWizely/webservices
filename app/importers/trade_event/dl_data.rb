@@ -21,7 +21,7 @@ module TradeEvent
     end
 
     def import
-      Dl.index(trade_events('//item'))
+      Dl.index(trade_events('//item', 'ISO-8859-1'))
     end
 
     private

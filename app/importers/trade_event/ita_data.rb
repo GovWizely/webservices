@@ -38,7 +38,7 @@ module TradeEvent
     }.freeze
 
     def import
-      Ita.index(trade_events('//EVENTINFO'))
+      Ita.index(trade_events('//EVENTINFO', 'windows-1252'))
     end
 
     private
