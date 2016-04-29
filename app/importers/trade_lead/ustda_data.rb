@@ -39,7 +39,7 @@ module TradeLead
       feed = RSS::Parser.parse(open(@rss_feed), false)
       @rss_hashes = []
       feed.items.each do |item|
-        @rss_hashes.push(title: HTMLEntities.new.decode(item.title), url: item.link)
+        @rss_hashes.push(title: HTMLEntities.new.decode(item.title).squish, url: item.link)
       end
     end
 
