@@ -4,6 +4,7 @@ module TradeLead
   class McaData
     include Importable
     include VersionableResource
+    include McaImporter::McaCountryData
     ENDPOINT = 'http://www.dgmarket.com/tenders/RssFeedAction.do?locationISO=&keywords=Millennium+Challenge+Account&sub=&noticeType=gpn%2cpp%2cspn%2crfc&language'
     FUNDING_SOURCE = 'Millennium Challenge Account (MCA)'
 
@@ -44,8 +45,8 @@ module TradeLead
 
     def process_geo_fields(item_hash)
       country = item_hash[:categories].delete_at(item_hash[:categories].find_index { |e| /country\// =~ e })
-      item_hash[:country] = lookup_country(country.match(/country\/(\w\w)/)[1].upcase)
-      item_hash[:country_name] = country.match(/- ([a-zA-Z]+)/)[1]
+      item_hash[:country] = lookup_country(extract_iso2_code(country))
+      item_hash[:country_name] = extract_country_name(country)
       item_hash.merge! add_related_fields([item_hash[:country_name]])
     end
 
