@@ -49,7 +49,7 @@ module TradeEvent
     end
 
     def import
-      Ustda.index(trade_events('//node'))
+      Ustda.index(trade_events('//node', 'UTF-8'))
     end
 
     private

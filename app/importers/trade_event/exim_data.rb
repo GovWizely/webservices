@@ -33,7 +33,7 @@ module TradeEvent
     end
 
     def import
-      Exim.index(trade_events('//item'))
+      Exim.index(trade_events('//item', 'UTF-8'))
     end
 
     private
