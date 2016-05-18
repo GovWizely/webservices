@@ -76,8 +76,7 @@ class Query
   def generate_search_body_hash
     Jbuilder.new do |json|
       generate_from_size_sort(json)
-      generate_query(json)
-      generate_filter(json)
+      generate_query_and_filter(json)
       generate_aggregations(json)
     end.attributes!
   end
@@ -110,6 +109,7 @@ class Query
   end
 
   def query_from_fields(json, fields)
+    field_values = fields[:query].map { |f| send(f) }
     json.query do
       json.bool do
         json.must do
@@ -119,8 +119,9 @@ class Query
           end
           json.child! { generate_multi_match(json, fields[:q], q) } if q
         end
+        yield if block_given?
       end
-    end if [q, fields[:query].map { |f| send(f) }].flatten.any?
+    end if [q, field_values].flatten.any? || block_given?
   end
 
   def filter_from_fields(json, fields)
@@ -150,6 +151,12 @@ class Query
 
   def filter_from_fields_child(json, field, search)
     json.query { generate_match(json, field, search) }
+  end
+
+  def generate_query_and_filter(json)
+    query_from_fields(json, query_fields) do
+      generate_filter(json)
+    end
   end
 
   def generate_query(json)

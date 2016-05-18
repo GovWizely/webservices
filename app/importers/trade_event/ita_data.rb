@@ -60,7 +60,7 @@ module TradeEvent
       event_hash[:contacts] = event_info.xpath('./CONTACT').map do |contact|
         extract_fields contact, CONTACT_XPATHS
       end
-      
+
       extract_industries(event_hash, event_info)
 
       event_hash[:venues] = extract_venues(event_info)
