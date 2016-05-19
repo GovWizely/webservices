@@ -63,10 +63,22 @@ module DataSources
     end
 
     def transform(row)
-      raw_hash = row.to_hash.slice(*entries.keys)
+      row_hash = row.to_hash
+      raw_hash = row_hash.merge(copied_fields_hash(row_hash)).slice(*entries.keys)
       xformed_hash = raw_hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(raw_hash[field_sym])] }.to_h
       hash = xformed_hash.merge(constant_values)
       group_nested_entries(hash)
+    end
+
+    def copied_fields_hash(row_hash)
+      copied_fields_mapping.reduce({}) do |result, (copy_from, copy_to)|
+        result[copy_to] = row_hash[copy_from]
+        result
+      end
+    end
+
+    def copied_fields_mapping
+      entries.find_all { |_, meta| meta.key?(:copy_from) }.map { |copy_to_field, meta| [meta[:copy_from].to_sym, copy_to_field] }.to_h
     end
 
     def constant_values
