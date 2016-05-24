@@ -28,11 +28,20 @@ module DataSources
     end
 
     def response_hash(results, total)
-      { total:               total,
-        offset:              @query.offset,
-        sources_used:        sources_used,
-        search_performed_at: @search_performed_at,
-        results:             results, }
+      hash = { total:               total,
+               offset:              @query.offset,
+               sources_used:        sources_used,
+               search_performed_at: @search_performed_at,
+               results:             results,
+      }
+      aggregations_from_results = aggregations_from(results)
+      hash[:aggregations] = aggregations_from_results if aggregations_from_results.present?
+      hash
+    end
+
+    def aggregations_from(results)
+      aggs = results.response.aggregations || []
+      aggs.map { |agg_name, v| [agg_name, v.buckets.map(&:to_h)] }.to_h
     end
 
     def sources_used

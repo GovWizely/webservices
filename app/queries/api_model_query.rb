@@ -5,6 +5,7 @@ class ApiModelQuery < Query
     @singular_filter_fields = metadata.singular_filter_fields.keys
     pluralized_key_strings = metadata.pluralized_filter_fields.keys
     options.keys.each { |k| options[k.singularize] = options.delete(k) if pluralized_key_strings.include?(k.to_sym) }
+    self.class.aggregate_terms_by(metadata.aggregation_terms)
     self.class.setup_query(q: metadata.fulltext_fields.keys, filter: metadata.filter_fields.keys + @date_fields)
     super(options)
   end

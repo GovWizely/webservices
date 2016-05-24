@@ -24,7 +24,7 @@ module TradeEvent
                                     keyword:   { type: 'string', analyzer: 'keyword' },
                                   },
                                 },
-            ita_industries:           {
+            ita_industries:     {
               type:   'string',
               fields: {
                 tokenized: { type: 'string', analyzer: 'snowball_asciifolding_nostop' },

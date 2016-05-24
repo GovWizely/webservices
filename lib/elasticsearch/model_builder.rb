@@ -1,6 +1,15 @@
 module ModelBuilder
   TEMPLATE_PATH = 'lib/elasticsearch/templates/document.rb.erb'.freeze
-  TYPE_TO_MAPPING = { enum:    { type: String, mapping: { type: 'string', analyzer: 'keyword_lowercase' } },
+  TYPE_TO_MAPPING = { enum:    { type:    String,
+                                 mapping: {
+                                   type:     'string',
+                                   analyzer: 'keyword_lowercase',
+                                   fields:   {
+                                     raw: {
+                                       index: 'not_analyzed',
+                                       type:  'string',
+                                     },
+                                   }, }, },
                       integer: { type: Integer, mapping: { type: 'long' } },
                       float:   { type: Float },
                       date:    { type: DateTime },

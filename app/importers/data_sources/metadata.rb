@@ -10,6 +10,13 @@ module DataSources
       yaml_dictionary.reject { |key, _| key.to_s.start_with?('_') }
     end
 
+    def aggregation_terms
+      return {} unless yaml_dictionary[:_aggregations].present?
+      aggregations_clone_with_raw_field = yaml_dictionary[:_aggregations].deep_dup
+      aggregations_clone_with_raw_field.values.each { |hash| hash[:field] << '.raw' }
+      aggregations_clone_with_raw_field
+    end
+
     def singular_entries
       entries.reject { |key, _| grouped_fields.include?(key) }
     end

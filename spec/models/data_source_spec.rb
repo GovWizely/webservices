@@ -165,37 +165,64 @@ describe DataSource do
   end
 
   describe 'search' do
-    let(:data_source) { DataSource.create(_id: 'recall_and_relevancies:v4', published: true, version_number: 4, name: 'test', description: 'test API', api: 'recall_and_relevancies', data: "Country,ISO-2 code,free_text\r\nAndorra,AD,foo\r\nArmenia,AM,foo\r\nCanada,CA,accént\r\n") }
-    let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/recall_and_relevancies.yaml")).deep_symbolized_yaml }
+    describe 'recall & relevancy' do
+      let(:data_source) { DataSource.create(_id: 'recall_and_relevancies:v4', published: true, version_number: 4, name: 'test', description: 'test API', api: 'recall_and_relevancies', data: "Country,ISO-2 code,free_text\r\nAndorra,AD,foo\r\nArmenia,AM,foo\r\nCanada,CA,accént\r\n") }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/recall_and_relevancies.yaml")).deep_symbolized_yaml }
 
-    before do
-      data_source.update(dictionary: dictionary)
-      data_source.ingest
+      before do
+        data_source.update(dictionary: dictionary)
+        data_source.ingest
+      end
+
+      describe 'recall' do
+        it 'matches enum filter terms regardless of case' do
+          results = data_source.with_api_model do |klass|
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country_name: 'ANDORRA', iso2_codes: 'aD'))
+            klass.search(query.generate_search_body_hash)
+          end
+          expect(results.size).to eq(1)
+        end
+
+        it 'matches multiple filter terms separated by commas' do
+          results = data_source.with_api_model do |klass|
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(iso2_codes: 'AD, ca'))
+            klass.search(query.generate_search_body_hash)
+          end
+          expect(results.size).to eq(2)
+        end
+
+        it 'matches on fulltext regardless of accented characters' do
+          results = data_source.with_api_model do |klass|
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'åccent'))
+            klass.search(query.generate_search_body_hash)
+          end
+          expect(results.size).to eq(1)
+        end
+      end
     end
 
-    describe 'recall' do
-      it 'matches enum filter terms regardless of case' do
-        results = data_source.with_api_model do |klass|
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(country_name: 'ANDORRA', iso2_codes: 'aD'))
-          klass.search(query.generate_search_body_hash)
-        end
-        expect(results.size).to eq(1)
+    describe 'aggregations' do
+      let(:data_source) { DataSource.create(_id: 'aggs:v1', published: true, version_number: 1, name: 'test_aggs', description: 'test aggs', api: 'test_aggs', data: File.read("#{Rails.root}/spec/fixtures/data_sources/aggs.json")) }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/aggs.yaml")).deep_symbolized_yaml }
+
+      before do
+        data_source.update(dictionary: dictionary)
+        data_source.ingest
       end
 
-      it 'matches multiple filter terms separated by commas' do
+      it 'returns expected aggregations' do
         results = data_source.with_api_model do |klass|
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(iso2_codes: 'AD, ca'))
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'val'))
           klass.search(query.generate_search_body_hash)
         end
-        expect(results.size).to eq(2)
-      end
-
-      it 'matches on fulltext regardless of accented characters' do
-        results = data_source.with_api_model do |klass|
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'åccent'))
-          klass.search(query.generate_search_body_hash)
-        end
-        expect(results.size).to eq(1)
+        expect(results.size).to eq(6)
+        aggs = results.response.aggregations
+        expect(aggs['country_codes'].buckets).to eq([{ 'key' => 'US', 'doc_count' => 3 },
+                                                     { 'key' => 'CA', 'doc_count' => 2 },
+                                                     { 'key' => 'BR', 'doc_count' => 1 },],)
+        expect(aggs['world_regions'].buckets).to eq([{ 'key' => 'Blat Too', 'doc_count' => 4 },
+                                                     { 'key' => 'Bar', 'doc_count' => 3 },
+                                                     { 'key' => 'Foo', 'doc_count' => 3 },],)
       end
     end
   end
@@ -215,7 +242,6 @@ describe DataSource do
         expect(data_source.consolidated_data_sources('nope,none,c')).to eq([3])
       end
     end
-
   end
 
   describe '.find_published(api, version_number)' do
