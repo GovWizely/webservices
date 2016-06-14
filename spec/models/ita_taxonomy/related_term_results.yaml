@@ -18,7 +18,7 @@
   :related_terms: {}
 - :label: Aviation
   :type:
-  - Sector
+  - Industries
   :related_terms: {}
 - :label: Afghanistan
   :type:
@@ -46,7 +46,8 @@
   - Topics
   :related_terms: {}
 - :label: Regional Organizations
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :label: Asia Pacific Economic Cooperation
   :type:

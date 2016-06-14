@@ -22,19 +22,17 @@ class ItaTaxonomyData
   private
 
   def build_json_entries
-    processed_entries = []
-    taxonomy_terms = @taxonomy_parser.terms
-
-    taxonomy_terms.each do |entry|
+    processed_entries = @taxonomy_parser.terms.map do |term|
+      entry = term.deep_dup
       process_entry(entry)
-      processed_entries.push entry
+      entry
     end
     processed_entries
   end
 
   def process_entry(entry)
+    entry[:type] = @taxonomy_parser.get_high_level_type(entry[:label])
     process_ids(entry)
-    entry[:type] = get_concept_groups(entry)
     entry[:related_terms] = entry[:type].include?('Countries') ? add_geo_fields([entry[:label]]) : {}
   end
 
@@ -54,13 +52,5 @@ class ItaTaxonomyData
 
   def trim_id(id)
     id.slice!('http://webprotege.stanford.edu/')
-  end
-
-  def get_concept_groups(entry)
-    if entry[:object_properties].key?(:member_of)
-      entry[:object_properties][:member_of].map { |t| t[:label] }
-    else
-      []
-    end
   end
 end

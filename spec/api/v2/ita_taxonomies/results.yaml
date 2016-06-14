@@ -72,7 +72,7 @@
 - :id: RDBsKPGzqliWT5godmR5PDV
   :label: Aviation
   :type:
-  - Sector
+  - Industries
   :sub_class_of:
   - :id: R8CoATsjiZSLAZF4Aaz6kK6
     :label: Aerospace and Defense
@@ -255,7 +255,8 @@
     - :id: RC7BwiZbq5uJvqujC7p9NAy
 - :id: RBb72pZnfGSZApKbgfMfARC
   :label: Regional Organizations
-  :type: []
+  :type:
+  - Topics
   :sub_class_of:
   - :id: RBUhToH9SFoFVriuHfHzcvT
     :label: International Cooperation
