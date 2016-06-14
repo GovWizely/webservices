@@ -1,0 +1,25 @@
+---
+:_collection_path: "$[*]"
+:f1:
+  :source: f1
+  :description: Description of f1
+  :indexed: true
+  :plural: false
+  :type: string
+:f2:
+  :source: f2
+  :description: Description of f2
+  :indexed: true
+  :plural: false
+  :type: integer
+:f3:
+  :copy_from: f1
+  :description: Description of f3
+  :indexed: true
+  :plural: false
+  :type: enum
+  :transformations:
+  - upcase
+  - gsub:
+    - " "
+    - ""
