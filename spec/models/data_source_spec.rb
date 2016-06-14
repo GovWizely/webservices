@@ -118,24 +118,23 @@ describe DataSource do
     end
 
     context 'specifying copied fields' do
-      let(:data_source) { DataSource.create(_id: 'test_copied_fields:v1', published: true, version_number: 1, name: 'test', description: 'test copied fields', api: 'test_copied_fields', data: File.read("#{Rails.root}/spec/fixtures/data_sources/copied_fields.csv"), dictionary: '') }
-      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/copied_fields.yaml")).deep_symbolized_yaml }
+      %w(csv json xml).each do |format|
+        let(:data_source) { DataSource.create(_id: "test_copied_fields_#{format}:v1", published: true, version_number: 1, name: 'test', description: 'test copied fields', api: "test_copied_fields_#{format}", data: File.read("#{Rails.root}/spec/fixtures/data_sources/copied_fields.#{format}"), dictionary: '') }
+        let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/copied_fields_#{format}.yaml")).deep_symbolized_yaml }
 
-      before do
-        data_source.ingest
-        data_source.with_api_model do |_klass|
+        before do
           data_source.update(dictionary: dictionary)
+          data_source.ingest
         end
-        data_source.ingest
-      end
 
-      it 'creates entries with field copied from source field and transformed' do
-        results = data_source.with_api_model do |klass|
-          expect(klass.count).to eq(2)
-          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f3: 'VAL1FROMCOMMAS'))
-          klass.search(query.generate_search_body_hash)
+        it 'creates entries with field copied from source field and transformed' do
+          results = data_source.with_api_model do |klass|
+            expect(klass.count).to eq(2)
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f3: 'VAL1FROMCOMMAS'))
+            klass.search(query.generate_search_body_hash)
+          end
+          expect(results.first.f3).to eq('VAL1FROMCOMMAS')
         end
-        expect(results.first.f3).to eq('VAL1FROMCOMMAS')
       end
     end
 

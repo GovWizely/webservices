@@ -65,6 +65,10 @@ module DataSources
       entries.map { |field, meta| [field, meta[:source]] }.to_h
     end
 
+    def uncopied_paths_map
+      paths_map.except(*copied_fields_mapping.values)
+    end
+
     def non_fulltext_fields
       pluralized_filter_fields.merge(singular_filter_fields).merge(date_fields)
     end
