@@ -107,7 +107,7 @@
       :label: Aerospace and Defense
   :id: RDBsKPGzqliWT5godmR5PDV
   :type:
-  - Sector
+  - Industries
   :related_terms: {}
 - :annotations:
     :pref_label: Afghanistan
@@ -306,7 +306,8 @@
     - :id: RBUhToH9SFoFVriuHfHzcvT
       :label: International Cooperation
   :id: RBb72pZnfGSZApKbgfMfARC
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :annotations:
     :alt_label: APEC
