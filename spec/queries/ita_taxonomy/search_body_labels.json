@@ -4,7 +4,7 @@
       "must": [
         {
           "terms": {
-            "label.keyword": ["china", "north america"]
+            "label.keyword": ["China", "North America"]
           }
         }
       ]

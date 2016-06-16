@@ -8,9 +8,11 @@ China:
 Congo (Democratic Republic of the):
 - !ruby/regexp /\ACongo, Democratic Rep(?:\.|ublic) of the\Z/i
 - !ruby/regexp /\ADemocratic Republic of (?:the )?Congo\Z/i
+- !ruby/regexp /\ACongo-Kinshasa\Z/i
 Congo:
 - !ruby/regexp /\ACongo, Republic of the\Z/i
 - !ruby/regexp /\ARepublic of the Congo\Z/i
+- !ruby/regexp /\ACongo-Brazzaville\Z/i
 Côte d'Ivoire:
 - !ruby/regexp /\ACote d[' ]Ivoire\Z/i
 Falkland Islands (Malvinas):
@@ -42,6 +44,8 @@ Lao People's Democratic Republic:
 - !ruby/regexp /\ALaos\Z/i
 Mali:
 - !ruby/regexp '/\ARegion: Northern Mali\Z/i'
+Macao:
+- !ruby/regexp '/\AMacau\Z/i'
 Micronesia (Federated States of):
 - !ruby/regexp /\AMicronesia/i
 Myanmar:

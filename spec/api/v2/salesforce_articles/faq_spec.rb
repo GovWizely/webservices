@@ -56,7 +56,7 @@ describe 'Salesforce Faq API V2', type: :request do
     end
 
     context 'when countries is specified' do
-      let(:params) { { countries: 'ch' } }
+      let(:params) { { countries: 'cg' } }
       before { get search_path, params, @v2_headers }
       subject { response }
 
@@ -110,7 +110,7 @@ describe 'Salesforce Faq API V2', type: :request do
     end
 
     context 'when trade regions is specified' do
-      let(:params) { { trade_regions: 'European Free Trade Association' } }
+      let(:params) { { trade_regions: 'African Growth and Opportunity Act' } }
       before { get search_path, params, @v2_headers }
       subject { response }
 
@@ -126,7 +126,7 @@ describe 'Salesforce Faq API V2', type: :request do
     end
 
     context 'when world regions is specified' do
-      let(:params) { { world_regions: 'Europe' } }
+      let(:params) { { world_regions: 'Africa' } }
       before { get search_path, params, @v2_headers }
       subject { response }
 
