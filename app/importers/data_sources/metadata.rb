@@ -66,7 +66,7 @@ module DataSources
     end
 
     def uncopied_paths_map
-      paths_map.except(*copied_fields_mapping.values)
+      paths_map.except(*copied_fields_mapping.keys)
     end
 
     def non_fulltext_fields
@@ -82,14 +82,14 @@ module DataSources
     end
 
     def copied_fields_hash(row_hash)
-      copied_fields_mapping.reduce({}) do |result, (copy_from, copy_to)|
+      copied_fields_mapping.reduce({}) do |result, (copy_to, copy_from)|
         result[copy_to] = row_hash[copy_from]
         result
       end
     end
 
     def copied_fields_mapping
-      entries.find_all { |_, meta| meta.key?(:copy_from) }.map { |copy_to_field, meta| [meta[:copy_from].to_sym, copy_to_field] }.to_h
+      entries.find_all { |_, meta| meta.key?(:copy_from) }.map { |copy_to_field, meta| [copy_to_field, meta[:copy_from].to_sym] }.to_h
     end
 
     def constant_values
