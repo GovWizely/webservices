@@ -130,10 +130,11 @@ describe DataSource do
         it 'creates entries with field copied from source field and transformed' do
           results = data_source.with_api_model do |klass|
             expect(klass.count).to eq(2)
-            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f3: 'VAL1FROMCOMMAS'))
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f3: 'VAL1FROMCOMMAS', f4: 'val1 to commas'))
             klass.search(query.generate_search_body_hash)
           end
           expect(results.first.f3).to eq('VAL1FROMCOMMAS')
+          expect(results.first.f4).to eq('val1 to commas')
         end
       end
     end

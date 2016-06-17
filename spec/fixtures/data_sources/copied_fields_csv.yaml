@@ -22,3 +22,13 @@
   - gsub:
     - " "
     - ""
+:f4:
+  :copy_from: f1
+  :description: Description of f4
+  :indexed: true
+  :plural: false
+  :type: enum
+  :transformations:
+  - gsub:
+    - "from"
+    - "to"
