@@ -26,6 +26,12 @@
       :label: Countries
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms:
+    :trade_regions:
+    - Asia Pacific Economic Cooperation
+    :world_regions:
+    - East Asia
+    - Asia
 - :id: RKn0x8BGb8udkb77NaE1ch
   :label: North America
   :type:
@@ -48,6 +54,7 @@
     - :id: RBTBNP5i0kFGFdhQ82AFali
     - :id: RC4HD9CwKjvgX8dSybAp3Sk
       :label: United States
+  :related_terms: {}
 - :id: R8CoATsjiZSLAZF4Aaz6kK6
   :label: Aerospace and Defense
   :type:
@@ -69,6 +76,7 @@
     - :id: R3anJjpDBXy092dEyJ0nXU
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: RDBsKPGzqliWT5godmR5PDV
   :label: Aviation
   :type:
@@ -100,6 +108,7 @@
     :has_broader:
     - :id: R8CoATsjiZSLAZF4Aaz6kK6
       :label: Aerospace and Defense
+  :related_terms: {}
 - :id: RDzjXT0GYF9ecQbq6oyxewD
   :label: Afghanistan
   :type:
@@ -130,6 +139,12 @@
       :label: Countries
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms:
+    :trade_regions:
+    - Economic Cooperation Organization
+    :world_regions:
+    - Central Asia
+    - Asia
 - :id: R91fGuW6GPOnb7XSylIPwR5
   :label: Asia
   :type:
@@ -156,6 +171,7 @@
     - :id: RDkKRunNIRFsKUYmLHwIMyM
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: RDAklO0LFVtjIoIUYj4Dg4M
   :label: East Asia
   :type:
@@ -186,6 +202,7 @@
       :label: Asia
     :is_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: R9pQ9NO7LyXj7vL7WbTAVVA
   :label: Central Asia
   :type:
@@ -218,6 +235,7 @@
       :label: Asia
     :is_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: RBUhToH9SFoFVriuHfHzcvT
   :label: International Cooperation
   :type:
@@ -253,6 +271,7 @@
       :label: Topics
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: RBb72pZnfGSZApKbgfMfARC
   :label: Regional Organizations
   :type:
@@ -289,6 +308,7 @@
     :has_broader:
     - :id: RBUhToH9SFoFVriuHfHzcvT
       :label: International Cooperation
+  :related_terms: {}
 - :id: R7YQAlNP4iXuBJLBhgPAcIO
   :label: Asia Pacific Economic Cooperation
   :type:
@@ -336,6 +356,7 @@
     :has_broader:
     - :id: RBb72pZnfGSZApKbgfMfARC
       :label: Regional Organizations
+  :related_terms: {}
 - :id: RDrX1xLUDh7oA05RQ3JXshC
   :label: Economic Cooperation Organization
   :type:
@@ -372,6 +393,7 @@
     :has_broader:
     - :id: RBb72pZnfGSZApKbgfMfARC
       :label: Regional Organizations
+  :related_terms: {}
 - :id: RC4HD9CwKjvgX8dSybAp3Sk
   :label: United States
   :type:
@@ -478,6 +500,11 @@
     :member_of:
     - :id: R8W91u35GBegWcXXFflYE4
       :label: Countries
+  :related_terms:
+    :trade_regions:
+    - Asia Pacific Economic Cooperation
+    :world_regions:
+    - North America
 - :id: R8W91u35GBegWcXXFflYE4
   :label: Countries
   :type: []
@@ -489,6 +516,7 @@
     :pref_label: Countries
   :datatype_properties: {}
   :object_properties: {}
+  :related_terms: {}
 - :id: R79uIjoQaQ9KzvJfyB1H7Ru
   :label: Industries
   :type: []
@@ -500,6 +528,7 @@
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: RwdbpCsGlOI2iwaG4UqDl0
   :label: Sector
   :type: []
@@ -512,6 +541,7 @@
     :source: ITA
   :datatype_properties: {}
   :object_properties: {}
+  :related_terms: {}
 - :id: RBBed4Voz7iS3nUECA3yzNM
   :label: Topics
   :type: []
@@ -523,6 +553,7 @@
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: R7ySyiNxcfeZ6bfNjhocNun
   :label: Trade Regions
   :type: []
@@ -535,6 +566,7 @@
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
 - :id: R8cndKa2D8NuNg7djwJcXxB
   :label: World Regions
   :type: []
@@ -546,3 +578,4 @@
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
