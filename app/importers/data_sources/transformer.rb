@@ -15,7 +15,13 @@ module DataSources
 
     def transform(value)
       return @default if value.blank?
-      @transformations.inject(value) { |memo, transformation| transformation.transform(memo) }
+      @transformations.inject(value) do |memo, transformation|
+        if memo.is_a?(Array)
+          memo.map { |memo_entry| transformation.transform(memo_entry) }.flatten.compact.uniq.sort
+        else
+          transformation.transform(memo)
+        end
+      end
     end
 
     private
