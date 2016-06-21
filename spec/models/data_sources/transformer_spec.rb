@@ -37,6 +37,17 @@ describe DataSources::Transformer do
     end
   end
 
+  context 'splitting into array' do
+    let(:transformer) do
+      transformation_array = [{ split: ', ' }]
+      DataSources::Transformer.new(metadata.merge(transformations: transformation_array))
+    end
+
+    it 'returns the appropriate substring' do
+      expect(transformer.transform('val1 with commas, another')).to eq(['val1 with commas', 'another'])
+    end
+  end
+
   context 'replacing text' do
     let(:transformer) do
       transformation_array = [{ gsub: ['*', ''] }, { sub: %w(siam thailand) }]
