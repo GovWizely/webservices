@@ -1,4 +1,47 @@
+# This file contains a partial list of the taxonomy terms used for lookups during spec runs.  
+#  If a term needs to be added to this file, it should be found under data/taxonomy/full_terms.yaml.  
+#  If full_terms.yaml needs to be updated, this can be done by adding the following line to the end 
+#  of the build_json_entries method of the taxonomy importer, and then running the importer:  
+#   File.open("#{Rails.root}/data/taxonomy/full_terms.yaml", 'w'){|f| f.write(processed_entries.to_yaml)}
+
 ---
+- :annotations:
+    :pref_label: Market Research
+    :alt_label: Competitive Intelligence
+    :source: ITA
+  :sub_class_of:
+  - :id: R91Dng1U47EaYAk2N8v1S3K
+    :label: Business Management
+  :label: Market Research
+  :datatype_properties: {}
+  :object_properties:
+    :has_broader:
+    - :id: R91Dng1U47EaYAk2N8v1S3K
+      :label: Business Management
+  :type:
+  - Topics
+  :id: RQS48aj5lV0MbNyCFCQ1FZ
+  :related_terms: {}
+- :annotations:
+    :source: ITA
+    :alt_label: Post Secondary Education
+    :pref_label: Higher Education
+  :sub_class_of:
+  - :id: RPxUK7R9Y5t6XxoUOapJut
+    :label: Education
+  :label: Higher Education
+  :datatype_properties: {}
+  :object_properties:
+    :has_broader:
+    - :id: RPxUK7R9Y5t6XxoUOapJut
+      :label: Education
+    :member_of:
+    - :id: RwdbpCsGlOI2iwaG4UqDl0
+      :label: Sector
+  :type:
+  - Industries
+  :id: RCktSwlzwG1iO7FLq2wgCZV
+  :related_terms: {}
 - :annotations:
     :pref_label: Small Business Administration
     :source: ITA
@@ -17,7 +60,8 @@
     :has_broader:
     - :id: R8Tc0NYjCwijousg627tdhg
       :label: Government Agencies
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :annotations:
     :pref_label: Exporters
@@ -34,7 +78,8 @@
     :has_related:
     - :id: RSpnmZqtFRDJKxLQnDaJyu
       :label: Export Management
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :annotations:
     :pref_label: Export Management
@@ -57,7 +102,7 @@
     - :id: RwdbpCsGlOI2iwaG4UqDl0
       :label: Sector
   :type:
-  - Sector
+  - Industries
   :related_terms: {}
 - :annotations:
     :pref_label: Safe Harbor
@@ -76,7 +121,8 @@
     :has_broader:
     - :id: RnMRx1ORiHCryGG8eYoLRy
       :label: Market Access
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :annotations:
     :definition: Establishments engaged in processes where human capital is the major
@@ -150,7 +196,8 @@
     :has_broader:
     - :id: R1Pqetus0zStszG5ac99uy
       :label: Trade Development and Promotion
-  :type: []
+  :type:
+  - Topics
   :related_terms: {}
 - :annotations:
     :definition: Industries that produce and market raw, unprocessed forms of wheat,
@@ -183,7 +230,7 @@
     - :id: RPKCOizTu2M4Qr7uMv8DsE
       :label: Agribusiness
   :type:
-  - Sector
+  - Industries
   :related_terms: {}
 - :annotations:
     :source: UNCTAD/WTO

@@ -3,7 +3,7 @@ class ItaTaxonomyQuery < Query
     super
     @q = options[:q].downcase if options[:q].present?
     @types = split_to_array(options[:types].downcase) if options[:types].present?
-    @labels = split_to_array(options[:labels].downcase) if options[:labels].present?
+    @labels = split_to_array(options[:labels]) if options[:labels].present?
   end
 
   private

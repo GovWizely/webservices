@@ -108,7 +108,8 @@
       type: FAQ__DataCategorySelection
       url: "/services/data/v34.0/sobjects/FAQ__DataCategorySelection/02ot0000000HMNWAA4"
     Id: 02ot0000000HMNWAA4
-    DataCategoryName: Switzerland
+    #Change this one to check the alternate spellings lookup:
+    DataCategoryName: Congo_Brazzaville
     DataCategoryGroupName: Geographies
   - attributes:
       type: FAQ__DataCategorySelection

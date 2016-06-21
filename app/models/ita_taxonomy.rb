@@ -13,10 +13,21 @@ class ItaTaxonomy
   self.settings = {
     index: {
       analysis: {
-        analyzer:
-                  { lowercase_keyword_analyzer: {
-                    tokenizer: 'keyword',
-                    filter:    %w(asciifolding lowercase), },
+        char_filter: {
+                strip_commas: {
+                    type: 'mapping',
+                    mappings: [
+                      ",=>"
+                    ]
+                }
+            },
+        analyzer: { 
+                    lowercase_keyword_analyzer: {
+                      tokenizer: 'keyword',
+                      filter:    %w(asciifolding lowercase), },
+                    keyword_strip_commas: {
+                      tokenizer: 'keyword',
+                      char_filter: ["strip_commas"] }
             },
       },
     },
@@ -31,7 +42,7 @@ class ItaTaxonomy
           type:   'string',
           fields: {
             tokenized: { type: 'string', analyzer: 'standard' },
-            keyword:   { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
+            keyword:   { type: 'string', analyzer: 'keyword_strip_commas' },
           },
         },
         type:        { type: 'string', analyzer: 'lowercase_keyword_analyzer' },

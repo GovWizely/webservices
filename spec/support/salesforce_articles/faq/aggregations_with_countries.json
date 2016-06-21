@@ -1,19 +1,27 @@
 {
   "world_regions": [
     {
-      "key": "Europe",
+      "key": "Africa",
+      "doc_count": 1
+    },
+    {
+      "key": "Sub-Saharan Africa",
       "doc_count": 1
     }
   ],
   "trade_regions": [
     {
-      "key": "European Free Trade Association",
+      "key": "African Growth and Opportunity Act",
+      "doc_count": 1
+    },
+    {
+      "key": "Economic and Monetary Community of Central Africa",
       "doc_count": 1
     }
   ],
   "countries": [
     {
-      "key": "CH",
+      "key": "CG",
       "doc_count": 1
     }
   ],

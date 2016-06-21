@@ -21,6 +21,7 @@ module SalesforceArticle
 
     def initialize(client = nil)
       @client = client || Restforce.new(Rails.configuration.restforce)
+      @alternate_spellings = YAML.load_file("#{Rails.root}/data/taxonomy/alternate_spellings.yaml")
     end
 
     def loaded_resource
@@ -82,16 +83,16 @@ module SalesforceArticle
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
         label = dc.DataCategoryName.tr('_', ' ')
+        label = @alternate_spellings[label] if @alternate_spellings.has_key?(label)
         type = dc.DataCategoryGroupName.tr('_', ' ')
         type = 'Topics' if type == 'Trade Topics'
-        # For now, only parse the types for Geographies.  Industries and Topics types on the Taxonomy index are not accurate
-        concept = (type == 'Geographies') ? lookup_term(label, type) : { label: label, type: [type] }
-
+        # For now, only lookup Geography terms to avoid Industry and Topic inconsistencies between Protege and SF
+        concept = (type == 'Geographies') ? lookup_term(label) : { label: label, type: [type] }
         taxonomies << concept if concept
       end
     end
 
-    def lookup_term(label, _type)
+    def lookup_term(label)
       results = ItaTaxonomy.search_related_terms(labels: label, size: 1)
       results.empty? ? nil : results[0]
     end
