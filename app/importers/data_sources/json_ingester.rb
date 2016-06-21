@@ -10,7 +10,7 @@ module DataSources
     private
 
     def process_record_info(record)
-      extract_fields(record, @metadata.uncopied_paths_map)
+      extract_fields(record, @metadata.mapped_paths_map)
     end
 
     def extract_fields(parent_record, path_hash)

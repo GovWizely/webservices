@@ -65,8 +65,8 @@ module DataSources
       entries.map { |field, meta| [field, meta[:source]] }.to_h
     end
 
-    def uncopied_paths_map
-      paths_map.except(*copied_fields_mapping.keys)
+    def mapped_paths_map
+      paths_map.except(*(copied_fields_mapping.keys + constant_values.keys))
     end
 
     def non_fulltext_fields
