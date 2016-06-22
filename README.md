@@ -70,7 +70,7 @@ Create the indexes:
 
     bundle exec rake db:create
     
-Generate the default admin user with username `admin@example.co` and password `initial_pwd`:
+Generate the default admin user with username `admin@example.co` and password `1nitial_pwd`:
 
     bundle exec rake db:devseed    
 
