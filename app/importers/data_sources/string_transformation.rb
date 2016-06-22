@@ -1,6 +1,6 @@
 module DataSources
   class StringTransformation
-    SUPPORTED_INSTANCE_METHODS = %i(downcase first from gsub last strip_tags sub titleize upcase split)
+    SUPPORTED_INSTANCE_METHODS = %i(downcase first from gsub last strip_tags sub titleize upcase split squish)
 
     def initialize(method, args = nil)
       @method = method

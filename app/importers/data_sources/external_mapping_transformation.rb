@@ -29,7 +29,7 @@ module DataSources
     private
 
     def json_response_from(url)
-      Rails.cache.fetch(url, expires_in: 90.seconds) do
+      Rails.cache.fetch(url, expires_in: 1.hour) do
         Net::HTTP.get(URI.parse(url))
       end
     end
