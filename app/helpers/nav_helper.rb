@@ -9,7 +9,8 @@ module NavHelper
 
   def api_resources
     { 'List of all APIs' => 'api-list.html',
-      'Search Widgets'   => 'search-widgets.html', }
+      'Search Widgets'   => 'search-widgets.html', 
+      'ITA Taxonomy'     => 'taxonomy' }
   end
 
   def additional_resources
