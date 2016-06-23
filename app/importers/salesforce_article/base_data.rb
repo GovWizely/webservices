@@ -83,7 +83,7 @@ module SalesforceArticle
 
       filtered_data_categories.each_with_object([]) do |dc, taxonomies|
         label = dc.DataCategoryName.tr('_', ' ')
-        label = @alternate_spellings[label] if @alternate_spellings.has_key?(label)
+        label = @alternate_spellings[label] if @alternate_spellings.key?(label)
         type = dc.DataCategoryGroupName.tr('_', ' ')
         type = 'Topics' if type == 'Trade Topics'
         # For now, only lookup Geography terms to avoid Industry and Topic inconsistencies between Protege and SF

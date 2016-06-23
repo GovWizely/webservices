@@ -14,21 +14,21 @@ class ItaTaxonomy
     index: {
       analysis: {
         char_filter: {
-                strip_commas: {
-                    type: 'mapping',
-                    mappings: [
-                      ",=>"
-                    ]
-                }
-            },
-        analyzer: { 
-                    lowercase_keyword_analyzer: {
-                      tokenizer: 'keyword',
-                      filter:    %w(asciifolding lowercase), },
-                    keyword_strip_commas: {
-                      tokenizer: 'keyword',
-                      char_filter: ["strip_commas"] }
-            },
+          strip_commas: {
+            type:     'mapping',
+            mappings: [
+              ',=>',
+            ],
+          },
+        },
+        analyzer:    {
+          lowercase_keyword_analyzer: {
+            tokenizer: 'keyword',
+            filter:    %w(asciifolding lowercase), },
+          keyword_strip_commas:       {
+            tokenizer:   'keyword',
+            char_filter: ['strip_commas'], },
+        },
       },
     },
   }.freeze
