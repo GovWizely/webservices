@@ -67,7 +67,7 @@ describe Searchable do
     describe '#stored_metadata' do
       subject { MockModel.stored_metadata }
       it 'has correct fields' do
-        expect(subject.keys).to include(:version, :last_updated, :last_imported)
+        expect(subject.keys).to include(:version, :last_updated, :last_imported, :import_rate)
       end
     end
 
@@ -75,7 +75,7 @@ describe Searchable do
       subject { MockModel.stored_metadata }
       it 'updates only the import_time field' do
         MockModel.touch_metadata('3000-03-03T03:03:03Z')
-        expect(subject).to eq(version: 9989, last_updated: '2001-01-01T01:01:01Z', last_imported: '3000-03-03T03:03:03Z')
+        expect(subject).to eq(version: 9989, last_updated: '2001-01-01T01:01:01Z', last_imported: '3000-03-03T03:03:03Z', import_rate: '')
       end
     end
 
@@ -83,7 +83,7 @@ describe Searchable do
       subject { MockModel.stored_metadata }
       it 'updates all fields' do
         MockModel.update_metadata(4321, '4000-04-04T04:04:04Z')
-        expect(subject).to eq(version: 4321, last_updated: '4000-04-04T04:04:04Z', last_imported: '4000-04-04T04:04:04Z')
+        expect(subject).to eq(version: 4321, last_updated: '4000-04-04T04:04:04Z', last_imported: '4000-04-04T04:04:04Z', import_rate: '')
       end
     end
   end
@@ -107,7 +107,7 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used, :search_performed_at)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model', import_rate: '' }])
       expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
@@ -120,7 +120,7 @@ describe Searchable do
 
     it 'response includes metadata' do
       expect(subject.keys).to include(:sources_used, :search_performed_at)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model' }])
+      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model', import_rate: '' }])
       expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
@@ -132,7 +132,7 @@ describe Searchable do
     subject { MockModel.index_meta.first }
 
     it 'contains correct fields' do
-      expect(subject.keys).to include(:source, :source_last_updated, :last_imported)
+      expect(subject.keys).to include(:source, :source_last_updated, :last_imported, :import_rate)
     end
   end
 end

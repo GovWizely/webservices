@@ -1,6 +1,7 @@
 module TradeEvent
   module Mappable
     def self.included(klass)
+      klass.import_rate = 'Hourly'
       klass.analyze_by :snowball_asciifolding_nostop
 
       klass.settings.freeze

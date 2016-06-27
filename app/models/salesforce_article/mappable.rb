@@ -1,6 +1,7 @@
 module SalesforceArticle
   module Mappable
     def self.included(klass)
+      klass.import_rate = 'Daily'
       klass.analyze_by :snowball_asciifolding_nostop
 
       klass.settings.freeze

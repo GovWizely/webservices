@@ -8,7 +8,7 @@ module Indexable
 
   included do
     class << self
-      attr_accessor :mappings, :settings, :source
+      attr_accessor :mappings, :settings, :source, :import_rate
       def metadata_mappings
         {
           metadata: {
@@ -20,6 +20,9 @@ module Indexable
                 type: 'string',
               },
               version:       {
+                type: 'string',
+              },
+              import_rate:   {
                 type: 'string',
               },
             },
@@ -63,7 +66,7 @@ module Indexable
       ES.client.indices.create(
         index: index_name,
         body:  { settings: settings, mappings: mappings },)
-      touch_metadata
+      initialize_metadata
     end
 
     def update_metadata(version, time = DateTime.now.utc)
@@ -74,7 +77,12 @@ module Indexable
       _update_metadata(stored_metadata.merge(last_imported: import_time))
     end
 
+    def initialize_metadata
+      _update_metadata(EMPTY_METADATA)
+    end
+
     def _update_metadata(body)
+      body[:import_rate] = import_rate.nil? ? '' : import_rate
       ES.client.index(
         index: index_name,
         type:  'metadata',
@@ -83,7 +91,7 @@ module Indexable
     end
 
     # If any field is not present, we initialize it with those values.
-    EMPTY_METADATA = { version: '', last_updated: '', last_imported: '' }
+    EMPTY_METADATA = { version: '', last_updated: '', last_imported: '', import_rate: '' }
 
     def stored_metadata
       stored = begin

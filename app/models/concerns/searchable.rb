@@ -96,6 +96,7 @@ module Searchable
           source:              model.source[:full_name] || model.source[:code],
           source_last_updated: model.stored_metadata[:last_updated] || '',
           last_imported:       model.stored_metadata[:last_imported] || '',
+          import_rate:         model.stored_metadata[:import_rate] || '',
         }
       end
     end

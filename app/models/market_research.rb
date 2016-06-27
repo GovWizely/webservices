@@ -1,5 +1,6 @@
 class MarketResearch
   include Indexable
+  self.import_rate = 'Daily'
   analyze_by :snowball_asciifolding_nostop, :keyword_asciifolding_lowercase
 
   settings.freeze
