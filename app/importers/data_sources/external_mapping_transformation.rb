@@ -41,7 +41,7 @@ module DataSources
         scalar, units = @options[:ttl].split
         ttl = scalar.to_i.send(units)
       end
-      ttl
+      ttl.to_i
     end
   end
 end
