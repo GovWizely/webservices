@@ -2,6 +2,7 @@ module DataSources
   class ExternalMappingTransformation
     def initialize(options)
       @options = options
+      @ttl_in_seconds = compute_ttl
     end
 
     def transform(value)
@@ -29,9 +30,18 @@ module DataSources
     private
 
     def json_response_from(url)
-      Rails.cache.fetch(url, expires_in: 1.hour) do
+      Rails.cache.fetch(url, expires_in: @ttl_in_seconds) do
         Net::HTTP.get(URI.parse(url))
       end
+    end
+
+    def compute_ttl
+      ttl = 0
+      if @options[:ttl].present?
+        scalar, units = @options[:ttl].split
+        ttl = scalar.to_i.send(units)
+      end
+      ttl
     end
   end
 end
