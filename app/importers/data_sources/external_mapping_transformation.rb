@@ -18,7 +18,7 @@ module DataSources
       url_template = hash[:url]
       result_path = hash[:result_path]
       multi_value = hash[:multi_value]
-      url = url_template.sub('ORIGINAL_VALUE', URI.encode(value))
+      url = url_template.sub('ORIGINAL_VALUE', ParamEncoder.encode(value))
       result = JsonPath.on(json_response_from(url), result_path)
       result = result.first unless multi_value
       result
