@@ -200,6 +200,27 @@ describe DataSource do
       end
     end
 
+    describe 'semantic query pre-processing' do
+      let(:data_source) { DataSource.create(_id: 'sqs:v1', published: true, version_number: 1, name: 'test_sqs', description: 'test sqs', api: 'test_sqs', data: File.read("#{Rails.root}/spec/fixtures/data_sources/sqs.json")) }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/sqs.yaml")).deep_symbolized_yaml }
+
+      before do
+        data_source.update(dictionary: dictionary)
+        data_source.ingest
+      end
+
+      it 'prioritizes semantic terms over fulltext match' do
+        results = data_source.with_api_model do |klass|
+          VCR.use_cassette('importers/data_sources/semantic_query_service/brazil.yml', record: :once) do
+            query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(q: 'brazil'))
+            klass.search(query.generate_search_body_hash)
+          end
+        end
+        expect(results.first.field1).to eq('prioritize semantic extraction of country name')
+        expect(results.last.field1).to eq('Brazil')
+      end
+    end
+
     describe 'aggregations' do
       let(:data_source) { DataSource.create(_id: 'aggs:v1', published: true, version_number: 1, name: 'test_aggs', description: 'test aggs', api: 'test_aggs', data: File.read("#{Rails.root}/spec/fixtures/data_sources/aggs.json")) }
       let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/aggs.yaml")).deep_symbolized_yaml }

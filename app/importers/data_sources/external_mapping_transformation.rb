@@ -1,8 +1,8 @@
 module DataSources
-  class ExternalMappingTransformation
+  class ExternalMappingTransformation < CachedApiEndpoint
     def initialize(options)
       @options = options
-      @ttl_in_seconds = compute_ttl
+      super(options[:ttl])
     end
 
     def transform(value)
@@ -18,30 +18,12 @@ module DataSources
       url_template = hash[:url]
       result_path = hash[:result_path]
       multi_value = hash[:multi_value]
-      url = url_template.sub('ORIGINAL_VALUE', ParamEncoder.encode(value))
-      result = JsonPath.on(json_response_from(url), result_path)
+      result = JsonPath.on(cached_response_for(url_template, value), result_path)
       result = result.first unless multi_value
       result
     rescue Exception => e
-      Rails.logger.warn "Unable to get mapping for #{value} from #{url}: #{e.message}"
+      Rails.logger.warn "Unable to get mapping for #{value} from #{url_template}: #{e.message}"
       nil
-    end
-
-    private
-
-    def json_response_from(url)
-      Rails.cache.fetch(url, expires_in: @ttl_in_seconds) do
-        Net::HTTP.get(URI.parse(url))
-      end
-    end
-
-    def compute_ttl
-      ttl = 0
-      if @options[:ttl].present?
-        scalar, units = @options[:ttl].split
-        ttl = scalar.to_i.send(units)
-      end
-      ttl.to_i
     end
   end
 end

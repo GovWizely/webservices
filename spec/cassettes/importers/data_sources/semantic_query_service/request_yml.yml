@@ -1,0 +1,45 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=scuba%20in%20cuba%20and%20asia
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+      Host:
+      - gahaag0204.execute-api.us-east-1.amazonaws.com
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      Content-Type:
+      - application/json
+      Content-Length:
+      - '90'
+      Connection:
+      - keep-alive
+      Date:
+      - Thu, 07 Jul 2016 22:34:45 GMT
+      X-Amzn-Requestid:
+      - 00c0df67-4493-11e6-99ff-6595b7373beb
+      X-Cache:
+      - Miss from cloudfront
+      Via:
+      - 1.1 6eaa7f856e226a0db7cef6201d3b8393.cloudfront.net (CloudFront)
+      X-Amz-Cf-Id:
+      - uKxFUQfhKiPOnreJhX2GAUA_FcYWLHqASKb6b1KtHA2ybRLg-EsInQ==
+    body:
+      encoding: UTF-8
+      string: '{"query": "scuba in and", "filters": {"country_name": ["Cuba"], "world_region":
+        ["Asia"]}}'
+    http_version: 
+  recorded_at: Thu, 07 Jul 2016 22:34:45 GMT
+recorded_with: VCR 3.0.3
