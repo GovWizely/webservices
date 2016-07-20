@@ -49,6 +49,7 @@ class Query
     @size = [options[:size].to_i, MAX_SIZE].min
     @q = options[:q]
     initialize_search_fields(options)
+    initialize_semantic_query(options[:semantic_query_service_configuration])
 
     unless valid?
       e = InvalidParamsException.new
@@ -62,6 +63,13 @@ class Query
       query_fields[:query].each { |f| instance_variable_set("@#{f}", options[f]) }
       query_fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
       instance_variable_set('@sort', query_fields[:sort].try(:join, ',')) unless q
+    end
+  end
+
+  def initialize_semantic_query(semantic_query_service_configuration)
+    if semantic_query_service_configuration && @q.present?
+      semantic_query_service = SemanticQueryService.new(semantic_query_service_configuration)
+      @semantic_query = semantic_query_service.parse(@q)
     end
   end
 
@@ -89,6 +97,16 @@ class Query
     end if query
   end
 
+  def generate_semantic_query(json, fields)
+    json.bool do
+      json.boost 2.0
+      json.must do
+        generate_semantic_multi_match(fields, json)
+        generate_semantic_query_filters(json)
+      end
+    end
+  end
+
   def generate_multi_match_query(json, multi_fields, query)
     json.query do
       generate_multi_match(json, multi_fields, query)
@@ -112,16 +130,30 @@ class Query
     field_values = fields[:query].map { |f| send(f) }
     json.query do
       json.bool do
-        json.must do
-          fields[:query].each do |field|
-            search = send(field)
-            json.child! { generate_match(json, field, search) } if search
-          end
-          json.child! { generate_multi_match(json, fields[:q], q) } if q
-        end
+        json.minimum_should_match 1
+        generate_should_clauses(fields, json)
         yield if block_given?
       end
-    end if [q, field_values].flatten.any? || block_given?
+    end if [@q, field_values].flatten.any? || block_given?
+  end
+
+  def generate_should_clauses(fields, json)
+    json.set! :should do
+      generate_query_field_matches(fields, json)
+      multi_match_semantic_query(fields, json) if @q
+    end
+  end
+
+  def multi_match_semantic_query(fields, json)
+    json.child! { generate_multi_match(json, fields[:q], @q) }
+    json.child! { generate_semantic_query(json, fields[:q]) } if @semantic_query && @semantic_query.query != @q
+  end
+
+  def generate_query_field_matches(fields, json)
+    fields[:query].each do |field|
+      search = send(field)
+      json.child! { generate_match(json, field, search) } if search
+    end
   end
 
   def filter_from_fields(json, fields)
@@ -221,6 +253,16 @@ class Query
     json.child! { json.terms { json.set! country_field, @countries } } if @countries
     json.child! { json.terms { json.trade_regions @trade_regions } } if @trade_regions
     json.child! { json.terms { json.world_regions @world_regions } } if @world_regions
+  end
+
+  def generate_semantic_multi_match(fields, json)
+    json.child! { generate_multi_match(json, fields, @semantic_query.query) } if @semantic_query.query.present?
+  end
+
+  def generate_semantic_query_filters(json)
+    @semantic_query.filters.each do |field, values|
+      json.child! { generate_terms(json, field, values.map(&:downcase)) }
+    end
   end
 
   private

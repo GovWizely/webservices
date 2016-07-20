@@ -1,0 +1,17 @@
+[
+  {
+    "world_regions": [
+      "Asia",
+      "Another One"
+    ],
+    "country_name": "Canada",
+    "field1": "Brazil"
+  },
+  {
+    "world_regions": [
+      "Asia"
+    ],
+    "country_name": "Brazil",
+    "field1": "prioritize semantic extraction of country name"
+  }
+]

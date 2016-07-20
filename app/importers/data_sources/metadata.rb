@@ -108,6 +108,10 @@ module DataSources
       yaml_dictionary.deep_symbolize_keys.to_yaml
     end
 
+    def semantic_query_service_configuration
+      yaml_dictionary[:_semantic_query_service]
+    end
+
     private
 
     def fields_matching_hash(hash)
