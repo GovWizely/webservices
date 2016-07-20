@@ -18,7 +18,7 @@ describe Api::V2::ApiModelsController, type: :request do
   describe 'GET /v1/de_minimis_currencies/{id}' do
     context 'record exists' do
       let(:one_match) { JSON.parse Rails.root.join("#{Rails.root}/spec/fixtures/data_sources/de_minimis_date_entry.json").read }
-      let(:id) { Digest::SHA1.hexdigest('Azerbaijan') }
+      let(:id) { '213598a7e92217bee3a758f3c69aea09ed940c0e' }
       before { get "/v1/de_minimis_currencies/#{id}", {}, @v2_headers }
       subject { response }
 

@@ -48,6 +48,9 @@ RSpec.feature 'Consolidated Data Source management' do
       expect(page).not_to have_text('this is about a pony')
       expect(page).to have_text('ponies are nice')
       expect(page).not_to have_text('horses are bigger')
+
+      visit("/v1/consolidated_entries/6982cd2dd350cc4d0729de5db16502da176fa5d6?api_key=#{@user.api_key}")
+      expect(page).to have_text('6982cd2dd350cc4d0729de5db16502da176fa5d6')
     end
   end
 end
