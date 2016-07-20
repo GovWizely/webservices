@@ -50,7 +50,7 @@ describe IndexMonitor do
   end
 
   describe '#get_metadata' do
-    before do 
+    before do
       class Mock3
         include Indexable
         self.mappings = {}
@@ -67,7 +67,7 @@ describe IndexMonitor do
 
     it 'returns the correct metadata when import_rate is found' do
       index_name = Mock.index_name
-      expect(monitor.get_metadata(index_name)).to eq({version: "", last_updated: "", last_imported: "", import_rate: "Daily"})
+      expect(monitor.get_metadata(index_name)).to eq(version: '', last_updated: '', last_imported: '', import_rate: 'Daily')
     end
   end
 end

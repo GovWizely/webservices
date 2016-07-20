@@ -11,9 +11,11 @@ class Api::V2::ApiModelsController < Api::V2Controller
   end
 
   def show
-    @data_source.with_api_model { |api_model_klass| respond_with api_model_klass.find(params[:id]) }
-  rescue Elasticsearch::Persistence::Repository::DocumentNotFound
-    not_found
+    query = IdsQuery.new([params[:id]])
+    data_source_search = DataSources::Search.new(@data_source, query, nil)
+    search_response_hash = data_source_search.search
+    record = search_response_hash[:results].first
+    record ? respond_with(record) : not_found
   end
 
   private
