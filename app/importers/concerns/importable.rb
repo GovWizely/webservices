@@ -99,13 +99,6 @@ module Importable
     end.compact.first
   end
 
-  def process_industries(entry)
-    raise 'must implement naics_mapper' unless self.class.method_defined?(:naics_mapper)
-    entry[:industry] = entry[:industry] + ': ' + naics_mapper.lookup_naics_code(entry[:industry]) if entry[:industry]
-    entry[:ita_industries] = entry[:industry] ? [normalize_industry(entry[:industry])].compact.flatten.uniq : []
-    entry
-  end
-
   delegate :can_purge_old?, to: :model_class
 
   module ClassMethods
