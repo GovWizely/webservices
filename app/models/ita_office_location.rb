@@ -3,7 +3,7 @@ class ItaOfficeLocation
 
   SYNONYMS = ['ft, fort', 'st, saint']
   STOPWORDS = %w(US Export Assistance Center USEAC Commercial Service Mission)
-  self.import_rate = 'Daily'
+  self.import_rate = 'Weekly'
 
   self.settings = {
     index: {
