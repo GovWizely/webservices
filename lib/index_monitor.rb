@@ -55,6 +55,8 @@ class IndexMonitor
       expected_last_imported - 2.hours
     when 'Daily'
       expected_last_imported - 25.hours
+    when 'Weekly'
+      expected_last_imported - 169.hours
     end
   end
 
