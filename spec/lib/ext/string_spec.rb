@@ -23,9 +23,9 @@ describe String do
       it { is_expected.to eq 'bis_denied_people' }
     end
 
-    context 'of "AustralianTradeLead"' do
-      let(:operand) { 'AustralianTradeLead' }
-      it { is_expected.to eq 'australian_trade_leads' }
+    context 'of "AustralianFooBar"' do
+      let(:operand) { 'AustralianFooBar' }
+      it { is_expected.to eq 'australian_foo_bars' }
     end
   end
 
