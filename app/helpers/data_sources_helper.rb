@@ -5,11 +5,11 @@ module DataSourcesHelper
     link_to url, url
   end
 
-  def param_table(field_description_hash)
+  def param_table(field_hash)
     content_tag(:dl, class: 'dl-horizontal') do
-      field_description_hash.each do |field, description|
+      field_hash.each do |field, hash|
         concat content_tag(:dt, field)
-        concat content_tag(:dd, description)
+        concat content_tag(:dd, hash[:description])
       end
     end
   end

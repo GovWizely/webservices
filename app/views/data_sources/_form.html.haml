@@ -1,3 +1,8 @@
+- if @data_source.errors.any?
+  #error_explanation
+    %ul
+      - @data_source.errors.full_messages.each do |msg|
+        %li= msg
 = form.hidden_field :consolidated if @data_source.is_consolidated?
 .field
   = form.label :name

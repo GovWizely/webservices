@@ -68,12 +68,12 @@ describe Query, type: :model do
       include_context 'with MockChildQuery child class'
       let(:query) do
         VCR.use_cassette('importers/data_sources/semantic_query_service/request.yml') do
-          MockChildQuery.new(q: 'scuba in cuba and asia',
-                             countries: 'canada',
-                             industries: 'fishing',
+          MockChildQuery.new(q:                                    'scuba in cuba and asia',
+                             countries:                            'canada',
+                             industries:                           'fishing',
                              semantic_query_service_configuration: {
                                url: 'https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE',
-                               ttl: '1 hour' })
+                               ttl: '1 hour', },)
         end
       end
       let(:search_body) { JSON.parse open("#{File.dirname(__FILE__)}/query/search_body_with_all.json").read }

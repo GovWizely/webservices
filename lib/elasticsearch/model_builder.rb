@@ -11,8 +11,8 @@ module ModelBuilder
                                      },
                                    }, }, },
                       integer: { type: Integer, mapping: { type: 'long' } },
-                      float:   { type: Float },
-                      date:    { type: DateTime },
+                      float:   { type: Float, mapping: { type: 'float' } },
+                      date:    { type: DateTime, mapping: { type: 'date' } },
                       string:  { type: String, mapping: { type: 'string', analyzer: 'snowball_asciifolding_nostop' } }, }.with_indifferent_access
 
   def self.load_model_class(data_source)

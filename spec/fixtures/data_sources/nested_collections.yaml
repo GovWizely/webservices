@@ -1,0 +1,73 @@
+---
+:_collection_path: "$[*]"
+:_aggregations:
+  :country_codes:
+    :field: places.country_code
+:source:
+  :constant: AB
+  :indexed: false
+  :plural: false
+  :type: enum
+:name:
+  :source: label
+  :description: desc of label
+  :indexed: true
+  :plural: true
+  :type: enum
+:posted:
+  :source: post_date
+  :description: desc of date
+  :indexed: true
+  :plural: false
+  :type: date
+:places:
+  :_collection_path: venues
+  :country_code:
+    :source: country
+    :description: desc of country
+    :indexed: true
+    :plural: true
+    :type: enum
+  :country_name:
+    :copy_from: country_code
+    :description: desc of country name
+    :indexed: true
+    :plural: false
+    :type: string
+    :transformations:
+    - downcase
+  :venue:
+    :source: venue
+    :description: desc of venue
+    :indexed: true
+    :plural: false
+    :type: string
+:contacts:
+  :_collection_path: contacts
+  :myfloat:
+    :source: myfloat
+    :description: desc of myfloat
+    :indexed: true
+    :plural: false
+    :type: float
+  :bday:
+    :source: birthdate
+    :description: desc of birth date
+    :indexed: true
+    :plural: false
+    :type: date
+  :fname:
+    :source: first_name
+    :indexed: true
+    :plural: false
+    :type: string
+  :lname:
+    :source: last_name
+    :indexed: true
+    :plural: false
+    :type: enum
+  :mname:
+    :constant: karl
+    :indexed: true
+    :plural: false
+    :type: enum
