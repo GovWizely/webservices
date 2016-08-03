@@ -47,8 +47,11 @@ module ScreeningList
 
     def self.search_for(options)
       result = super(options)
-      score_adjuster = ScoreAdjuster.new(options['name'], result[:hits])
-      result[:hits] = score_adjuster.rescored_hits
+      puts options['fuzzy_name'].present?
+      if options['fuzzy_name'].present? && !options['name'].match(/\s/)
+        score_adjuster = ScoreAdjuster.new(options['name'], result[:hits])
+        result[:hits] = score_adjuster.rescored_hits
+      end
       result
     end
   end

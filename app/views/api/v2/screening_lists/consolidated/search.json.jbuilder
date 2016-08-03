@@ -6,8 +6,10 @@ json.results do
     json.partial! "api/v2/screening_lists/#{entry[:_source][:source][:code].downcase}/entry", entry: entry
     if @_request['fuzzy_name'].present? && @_request['fuzzy_name'].casecmp('true').zero?
       json.score entry[:_score]
-      json.adjusted_score entry[:_adjusted_score]
-      json.matched_fields entry[:highlight]
+      unless @_request['name'].match(/\s/)
+        json.adjusted_score entry[:_adjusted_score]
+        json.matched_fields entry[:highlight]
+      end
     end
   end
 end
