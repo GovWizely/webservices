@@ -31,13 +31,13 @@ module ScreeningList
         }
       else
         name_variants = %w( name_idx
-                                  alt_idx
-                                  name_no_ws
-                                  name_no_ws_rev
-                                  alt_no_ws
-                                  alt_no_ws_rev
-                                  name_no_ws_with_common
-                                  alt_no_ws_with_common )
+                            alt_idx
+                            name_no_ws
+                            name_no_ws_rev
+                            alt_no_ws
+                            alt_no_ws_rev
+                            name_no_ws_with_common
+                            alt_no_ws_with_common )
 
         score_hash = {
           individual_token_0: { fields: name_variants, fuzziness: 0, weight: 5 },

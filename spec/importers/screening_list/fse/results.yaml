@@ -45,10 +45,14 @@
     :type: Executive Order 13645 Determination -
   :name_idx: FERLAND
   :name_no_ws_with_common: FERLANDCOMPANYLIMITED
+  :name_no_ws_rev_with_common: LIMITEDCOMPANYFERLAND
+  :name_rev: FERLAND
   :name_no_ws: FERLAND
   :name_no_ws_rev: FERLAND
   :alt_idx: [FERLAND]
   :alt_no_ws_with_common: [FERLANDCOLTD]
+  :alt_no_ws_rev_with_common: [LTDCOFERLAND]
+  :alt_rev: [FERLAND]
   :alt_no_ws: [FERLAND]
   :alt_no_ws_rev: [FERLAND]
 - :entity_number: '16422'
@@ -95,9 +99,11 @@
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: SOKOLENKO Vitaly
+  :name_rev: Vitaly SOKOLENKO
   :name_no_ws: SOKOLENKOVitaly
   :name_no_ws_rev: VitalySOKOLENKO
   :alt_idx: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
+  :alt_rev: [Vitalii SOKOLENKO, Vitaliy SOKOLENKO]
   :alt_no_ws: [SOKOLENKOVitalii, SOKOLENKOVitaliy]
   :alt_no_ws_rev: [VitaliiSOKOLENKO, VitaliySOKOLENKO]
 - :entity_number: '16531'
@@ -137,8 +143,10 @@
     :number: R17550559
     :type: Passport
   :name_idx: HOSSEINPOUR Houshang
+  :name_rev: Houshang HOSSEINPOUR
   :name_no_ws: HOSSEINPOURHoushang
   :name_no_ws_rev: HoushangHOSSEINPOUR
   :alt_idx: [HOSSEINPOUR Houshang Shahali, HOSEINPUR Houshang]
+  :alt_rev: [Shahali Houshang HOSSEINPOUR, Houshang HOSEINPUR]
   :alt_no_ws: [HOSSEINPOURHoushangShahali, HOSEINPURHoushang]
   :alt_no_ws_rev: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEINPUR]

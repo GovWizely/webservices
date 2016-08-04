@@ -48,9 +48,11 @@
     :address: Federico Boyd Avenue & 51 Street
   :ids: []
   :name_idx: BANCO NACIONAL DE CUBA
+  :name_rev: CUBA DE NACIONAL BANCO
   :name_no_ws: BANCONACIONALDECUBA
   :name_no_ws_rev: CUBADENACIONALBANCO
   :alt_idx: [BNC, NATIONAL BANK OF CUBA]
+  :alt_rev: [BNC, CUBA OF BANK NATIONAL]
   :alt_no_ws: [BNC, NATIONALBANKOFCUBA]
   :alt_no_ws_rev: [BNC, CUBAOFBANKNATIONAL]
 - :entity_number: '6982'
@@ -112,6 +114,7 @@
     :number: A0181988
     :type: Passport
   :name_idx: JIMALE Ahmed Nur Ali
+  :name_rev: Ali Nur Ahmed JIMALE
   :name_no_ws: JIMALEAhmedNurAli
   :name_no_ws_rev: AliNurAhmedJIMALE
   :alt_idx:
@@ -123,6 +126,15 @@
   - JIMALE Shaykh Ahmed Nur
   - JIMALE Sheikh Ahmed
   - JUMALE Ahmed Ali
+  :alt_rev:
+  - Ali Ahmed JUMALI
+  - Ali Ahmad JIMALE
+  - Ali Nur Ahmad JIMALE
+  - Nur Ahmed JUMALE
+  - Ali Ahmed JIMALE
+  - Nur Ahmed Shaykh JIMALE
+  - Ahmed Sheikh JIMALE
+  - Ali Ahmed JUMALE
   :alt_no_ws:
   - JUMALIAhmedAli
   - JIMALEAhmadAli
@@ -174,9 +186,11 @@
     :number: IMO 9051648
     :type: Vessel Registration Identification
   :name_idx: PARSHAN
+  :name_rev: PARSHAN
   :name_no_ws: PARSHAN
   :name_no_ws_rev: PARSHAN
   :alt_idx: [IRAN BRIGHTNESS, BRIGHTNESS, MARIGOLD]
+  :alt_rev: [BRIGHTNESS IRAN, BRIGHTNESS, MARIGOLD]
   :alt_no_ws: [IRANBRIGHTNESS, BRIGHTNESS, MARIGOLD]
   :alt_no_ws_rev: [BRIGHTNESSIRAN, BRIGHTNESS, MARIGOLD]
 - :entity_number: '521'
@@ -216,5 +230,6 @@
     :number: ABC123
     :type: Passport
   :name_idx: CHAO Lazaro R
+  :name_rev: R Lazaro CHAO
   :name_no_ws: CHAOLazaroR
   :name_no_ws_rev: RLazaroCHAO

@@ -38,6 +38,7 @@ describe ScreeningList::DplData, vcr: { cassette_name: 'importers/screening_list
         end_date:                nil,
         standard_order:          '',
         remarks:                 '',
+        name_rev:                'Dumont Santos',
         federal_register_notice: '',
         id:                      '000abc',
         source:                  { full_name: 'Denied Persons List (DPL) - Bureau of Industry and Security', code: 'DPL' },

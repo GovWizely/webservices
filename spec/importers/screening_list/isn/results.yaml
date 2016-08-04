@@ -19,6 +19,7 @@
   :programs:
   - E.O. 13382
   :name_idx: 7th of Tir
+  :name_rev: Tir of 7th
   :name_no_ws: 7thofTir
   :name_no_ws_rev: Tirof7th
 - :name: Aerospace Industries Organization (AIO)
@@ -40,6 +41,8 @@
   - E.O. 13382
   :name_idx: Aerospace Industries AIO
   :name_no_ws_with_common: AerospaceIndustriesOrganizationAIO
+  :name_no_ws_rev_with_common: AIOOrganizationIndustriesAerospace
+  :name_rev: AIO Industries Aerospace
   :name_no_ws: AerospaceIndustriesAIO
   :name_no_ws_rev: AIOIndustriesAerospace
 - :name: Aerospace Industries Organization (AIO)
@@ -61,6 +64,8 @@
   - E.O. 12938
   :name_idx: Aerospace Industries AIO
   :name_no_ws_with_common: AerospaceIndustriesOrganizationAIO
+  :name_no_ws_rev_with_common: AIOOrganizationIndustriesAerospace
+  :name_rev: AIO Industries Aerospace
   :name_no_ws: AerospaceIndustriesAIO
   :name_no_ws_rev: AIOIndustriesAerospace
 - :name: Aerospace Industries Organization
@@ -82,6 +87,8 @@
   - Missle Sanctions Laws
   :name_idx: Aerospace Industries
   :name_no_ws_with_common: AerospaceIndustriesOrganization
+  :name_no_ws_rev_with_common: OrganizationIndustriesAerospace
+  :name_rev: Industries Aerospace
   :name_no_ws: AerospaceIndustries
   :name_no_ws_rev: IndustriesAerospace
 - :name: Aerospace Logistics Services
@@ -103,6 +110,7 @@
   - INKSNA
   - ISNA
   :name_idx: Aerospace Logistics Services
+  :name_rev: Services Logistics Aerospace
   :name_no_ws: AerospaceLogisticsServices
   :name_no_ws_rev: ServicesLogisticsAerospace
 - :name: Aerospace Logistics Services
@@ -124,6 +132,7 @@
   - INKSNA
   - ISNA
   :name_idx: Aerospace Logistics Services
+  :name_rev: Services Logistics Aerospace
   :name_no_ws: AerospaceLogisticsServices
   :name_no_ws_rev: ServicesLogisticsAerospace
 - :name: Ahmad Derakhshandeh
@@ -144,6 +153,7 @@
   :programs:
   - E.O. 13328 - Iran
   :name_idx: Ahmad Derakhshandeh
+  :name_rev: Derakhshandeh Ahmad
   :name_no_ws: AhmadDerakhshandeh
   :name_no_ws_rev: DerakhshandehAhmad
 - :name: Ahmad Vahid Dastjerdi
@@ -164,5 +174,6 @@
   :programs:
   - E.O. 13328 - Iran
   :name_idx: Ahmad Vahid Dastjerdi
+  :name_rev: Dastjerdi Vahid Ahmad
   :name_no_ws: AhmadVahidDastjerdi
   :name_no_ws_rev: DastjerdiVahidAhmad

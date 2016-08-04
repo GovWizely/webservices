@@ -2,7 +2,7 @@
 - :name: Fazal Rahim Farid
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
-  :standard_order:
+  :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
@@ -16,27 +16,29 @@
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
-    :postal_code:
-    :state:
+    :postal_code: 
+    :state: 
   - :address: A2 Ground Floor, City Computer Plaza, Shar-e-Naw
     :city: Kabul
     :country: AF
-    :postal_code:
-    :state:
+    :postal_code: 
+    :state: 
   :source: &1
     :full_name: Entity List (EL) - Bureau of Industry and Security
     :code: EL
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Fazal Rahim Farid
+  :name_rev: Farid Rahim Fazal
   :name_no_ws: FazalRahimFarid
   :name_no_ws_rev: FaridRahimFazal
   :alt_idx: [Fazel Rahim Farid, Farid, Engineer Idris]
+  :alt_rev: [Farid Rahim Fazel, Farid, Idris Engineer]
   :alt_no_ws: [FazelRahimFarid, Farid, EngineerIdris]
   :alt_no_ws_rev: [FaridRahimFazel, Farid, IdrisEngineer]
 - :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
-  :standard_order:
+  :standard_order: 
   :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
@@ -48,12 +50,14 @@
       10
     :city: Kabul
     :country: AF
-    :postal_code:
-    :state:
+    :postal_code: 
+    :state: 
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Fazel Khalil Construction
   :name_no_ws_with_common: FazelKhalilConstructionCompany
+  :name_no_ws_rev_with_common: CompanyConstructionKhalilFazel
+  :name_rev: Construction Khalil Fazel
   :name_no_ws: FazelKhalilConstruction
   :name_no_ws_rev: ConstructionKhalilFazel
 - :name: Zurmat Construction Company offices
@@ -107,6 +111,8 @@
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Zurmat Construction offices
   :name_no_ws_with_common: ZurmatConstructionCompanyoffices
+  :name_no_ws_rev_with_common: officesCompanyConstructionZurmat
+  :name_rev: offices Construction Zurmat
   :name_no_ws: ZurmatConstructionoffices
   :name_no_ws_rev: officesConstructionZurmat
 - :name: Murat Peker
@@ -128,6 +134,7 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Murat Peker
+  :name_rev: Peker Murat
   :name_no_ws: MuratPeker
   :name_no_ws_rev: PekerMurat
 - :name: Qazi Abdallah
@@ -150,9 +157,11 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
+  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
@@ -175,9 +184,11 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
+  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]
 - :name: Qazi Abdallah
@@ -200,8 +211,10 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Qazi Abdallah
+  :name_rev: Abdallah Qazi
   :name_no_ws: QaziAbdallah
   :name_no_ws_rev: AbdallahQazi
   :alt_idx: [Jawid Said Jan AbdalSalam]
+  :alt_rev: [AbdalSalam Jan Said Jawid]
   :alt_no_ws: [JawidSaidJanAbdalSalam]
   :alt_no_ws_rev: [AbdalSalamJanSaidJawid]

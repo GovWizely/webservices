@@ -11,31 +11,51 @@ module ScreeningList
           properties: {
             _updated_at:                { type: 'date', format: 'strictDateOptionalTime' },
             # base names
-            name:                    { type:     'string',
-                                       analyzer: 'standard_asciifolding_nostop',
-                                       fields:   {
-                                         keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
-            name_idx:                { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_names:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_idx:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name:                       { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' } } },
+            name_idx:                   { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
+            alt_names:                  { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
+            alt_idx:                    { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
+            # reversed
+            name_rev:                   { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
+            alt_rev:                    { type:     'string',
+                                          analyzer: 'standard_asciifolding_nostop',
+                                          fields:   {
+                                            keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
             # whitespace removed
-            name_no_ws:              { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            name_no_ws_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws:               { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws_with_common:   { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws:                  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
             # whitespace removed and reversed
-            name_no_ws_rev:          { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws_rev:           { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_rev:              { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            alt_no_ws_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
 
-            remarks:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:                   { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            remarks:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            title:                      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
 
-            type:                    { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
-            source:                  { properties: { full_name: { type: 'string', index: 'no' },
-                                                     code:      { type: 'string', analyzer: 'keyword' } } },
-            federal_register_notice: { type: 'string', analyzer: 'keyword' },
+            type:                       { type: 'string', analyzer: 'keyword_asciifolding_lowercase' },
+            source:                     { properties: { full_name: { type: 'string', index: 'no' },
+                                                        code:      { type: 'string', analyzer: 'keyword' } } },
+            federal_register_notice:    { type: 'string', analyzer: 'keyword' },
 
             ### Note to self: (I went back and forth so many times that I need a note to break me out of this loop)
             # uppercase is relevant here because

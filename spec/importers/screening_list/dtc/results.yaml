@@ -8,6 +8,7 @@
     :code: DTC
   :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'Juwhan Yun'
+  :name_rev: 'Yun Juwhan'
   :name_no_ws: 'JuwhanYun'
   :name_no_ws_rev: 'YunJuwhan'
   :source_list_url: http://1.usa.gov/1Qi3Igw
@@ -20,6 +21,8 @@
   :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: Dilligas Trading
   :name_no_ws_with_common: DilligasTradingCoInc
+  :name_no_ws_rev_with_common: IncCoTradingDilligas
+  :name_rev: Trading Dilligas
   :name_no_ws: DilligasTrading
   :name_no_ws_rev: TradingDilligas
   :source_list_url: http://1.usa.gov/1Qi3Igw
@@ -32,9 +35,11 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'Brian Joseph Fleming'
+  :name_rev: 'Fleming Joseph Brian'
   :name_no_ws: 'BrianJosephFleming'
   :name_no_ws_rev: 'FlemingJosephBrian'
   :alt_idx: ['Brian Joseph McSulla']
+  :alt_rev: ['McSulla Joseph Brian']
   :alt_no_ws: ['BrianJosephMcSulla']
   :alt_no_ws_rev: ['McSullaJosephBrian']
   :source_list_url: http://1.usa.gov/1Qi3Igw
@@ -47,9 +52,11 @@
   :source: *1
   :source_information_url: http://1.usa.gov/1Qi3I0b
   :name_idx: 'John Smith'
+  :name_rev: 'Smith John'
   :name_no_ws: 'JohnSmith'
   :name_no_ws_rev: 'SmithJohn'
   :alt_idx: ['Brian Smith']
+  :alt_rev: ['Smith Brian']
   :alt_no_ws: ['BrianSmith']
   :alt_no_ws_rev: ['SmithBrian']
   :source_list_url: http://1.usa.gov/1Qi3IgB
