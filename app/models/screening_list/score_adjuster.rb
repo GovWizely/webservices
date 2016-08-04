@@ -40,7 +40,7 @@ module ScreeningList
 
     def unmatched_penalty(tokens)
       tokens.inject(0) do |sum, token|
-        penalty = UNMATCHED_PENALTIES[token.length-1] || SHORT_MISS_PENALTY
+        penalty = UNMATCHED_PENALTIES[token.length-1] || LONG_MISS_PENALTY
         sum + penalty
       end
     end
