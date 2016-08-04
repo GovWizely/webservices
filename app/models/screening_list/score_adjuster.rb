@@ -3,7 +3,7 @@ module ScreeningList
     MATCHED_PENALTIES = [20, 15, 10, 7, 5]
     UNMATCHED_PENALTIES = [0, 1, 5, 7, 10]
     LONG_MATCH_PENALTY = 1
-    SHORT_MISS_PENALTY = 15
+    LONG_MISS_PENALTY = 15
 
     def initialize(name, hits)
       @no_adjustment_required = name.blank? || name.split.many? || hits.empty? || hits.first[:highlight].empty?
