@@ -13,24 +13,26 @@ module Webservices
                                                 snowball_asciifolding_nostop: Analyzers.definitions[:snowball_asciifolding_nostop]}}})
       index_name [ES::INDEX_PREFIX, "api_models", '<%= data_source.api %>', 'v<%= data_source.version_number %>'].join(':')
 
-      <% data_source.metadata.singular_entries.each_pair do |field, metadata| %>
-        <% if TYPE_TO_MAPPING[metadata[:type]][:mapping].present? %>
-          attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>, mapping: <%= TYPE_TO_MAPPING[metadata[:type]][:mapping] %>
-        <% else %>
-          attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>
-        <% end %>
+      <% data_source.metadata.top_level_singular_entries.each_pair do |field, metadata| %>
+        attribute :<%= field %>, <%= TYPE_TO_MAPPING[metadata[:type]][:type] %>, mapping: <%= TYPE_TO_MAPPING[metadata[:type]][:mapping] %>
       <% end %>
       <% data_source.metadata.groups.each do |field| %>
         attribute :<%= field %>, Hash, mapping: { type: 'object' }
+      <% end %>
+      <% data_source.metadata.nested_collections.each_pair do |field, dictionary_yaml| %>
+        attribute :<%= field %>, Array[Hash], mapping: { type: 'object', properties: <%= dictionary_yaml.reject { |key, _| key.to_s.start_with?('_') }.map{|f, p| [f,TYPE_TO_MAPPING[p[:type]][:mapping] ]  }.to_h %> }
       <% end %>
       attribute :_updated_at, DateTime
 
       def attributes
         hash = { id: nil }
-        <% data_source.metadata.singular_entries.each_key do |field| %>
+        <% data_source.metadata.top_level_singular_entries.each_key do |field| %>
           hash['<%= field %>'] = nil
         <% end %>
         <% data_source.metadata.groups.each do |field| %>
+          hash['<%= field %>'] = nil
+        <% end %>
+        <% data_source.metadata.nested_collections.keys.each do |field| %>
           hash['<%= field %>'] = nil
         <% end %>
         hash

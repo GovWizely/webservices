@@ -1,5 +1,6 @@
 module DataSources
   class Metadata
+    include DataSources::Metadata::Selector
     attr_reader :yaml_dictionary
 
     def initialize(dictionary)
@@ -7,7 +8,8 @@ module DataSources
     end
 
     def entries
-      yaml_dictionary.reject { |key, _| key.to_s.start_with?('_') }
+      nested_entries, top_level_entries = partition_dictionary
+      top_level_entries.merge(nested_entries)
     end
 
     def aggregation_terms
@@ -17,68 +19,20 @@ module DataSources
       aggregations_clone_with_raw_field
     end
 
-    def singular_entries
-      entries.reject { |key, _| grouped_fields.include?(key) }
-    end
-
-    def grouped_fields
-      nested_entries.collect { |e| e[:fields] }.flatten.map(&:to_sym)
-    end
-
-    def groups
-      nested_entries.collect { |e| e[:name] }
-    end
-
-    def nested_entries
-      yaml_dictionary[:_nested_entries] || []
-    end
-
-    def filter_fields
-      fields_matching_hash type: 'enum'
-    end
-
-    def plural_filter_fields
-      fields_matching_hash type: 'enum', indexed: true, plural: true
-    end
-
-    def pluralized_filter_fields
-      plural_filter_fields.map { |singular_key, value| [singular_key.to_s.pluralize.to_sym, value] }.to_h
-    end
-
-    def singular_filter_fields
-      fields_matching_hash type: 'enum', indexed: true, plural: false
-    end
-
-    def fulltext_fields
-      fields_matching_hash type: 'string', indexed: true
-    end
-
-    def date_fields
-      fields_matching_hash type: 'date', indexed: true
-    end
-
-    def unique_fields
-      fields_matching_hash use_for_id: true
-    end
-
-    def paths_map
-      entries.map { |field, meta| [field, meta[:source]] }.to_h
-    end
-
-    def mapped_paths_map
-      paths_map.except(*(copied_fields_mapping.keys + constant_values.keys))
-    end
-
-    def non_fulltext_fields
-      pluralized_filter_fields.merge(singular_filter_fields).merge(date_fields)
-    end
-
     def transform(row)
       row_hash = row.to_hash
       raw_hash = row_hash.merge(copied_fields_hash(row_hash)).slice(*entries.keys)
       xformed_hash = raw_hash.keys.map { |field_sym| [field_sym, transformers[field_sym].transform(raw_hash[field_sym])] }.to_h
-      hash = xformed_hash.merge(constant_values)
+      hash = xformed_hash.merge(constant_values).merge(transformed_collections(row))
       group_nested_entries(hash)
+    end
+
+    def transformed_collections(row)
+      nested_collections.map do |nested_field_name, dict_yaml|
+        nested_metadata = DataSources::Metadata.new(dict_yaml.to_yaml)
+        mapped_row = row[nested_field_name].map { |entry| nested_metadata.transform(entry) }
+        [nested_field_name, mapped_row]
+      end.to_h
     end
 
     def copied_fields_hash(row_hash)
@@ -86,14 +40,6 @@ module DataSources
         result[copy_to] = row_hash[copy_from]
         result
       end
-    end
-
-    def copied_fields_mapping
-      entries.find_all { |_, meta| meta.key?(:copy_from) }.map { |copy_to_field, meta| [copy_to_field, meta[:copy_from].to_sym] }.to_h
-    end
-
-    def constant_values
-      entries.find_all { |_, meta| meta.key?(:constant) }.map { |field, meta| [field, meta[:constant]] }.to_h
     end
 
     def transformers
@@ -108,14 +54,17 @@ module DataSources
       yaml_dictionary.deep_symbolize_keys.to_yaml
     end
 
-    def semantic_query_service_configuration
-      yaml_dictionary[:_semantic_query_service]
-    end
-
     private
 
-    def fields_matching_hash(hash)
-      singular_entries.find_all { |_, meta| meta.include_hash?(hash) }.map { |field, meta| [field, meta[:description]] }.to_h
+    def partition_dictionary
+      nested, top_level_entries = yaml_dictionary.reject { |key, _| key.to_s.start_with?('_') }
+                                                 .partition { |_, v| v.key?(:_collection_path) }
+                                                 .map(&:to_h)
+      nested_entries = nested.map do |namespace, metadata|
+        metadata.except(:_collection_path).each { |field, hash_entry| hash_entry[:search_path] = [namespace, field].join('.') }
+      end
+      nested_hash = nested_entries.reduce(:merge) || {}
+      [nested_hash, top_level_entries]
     end
 
     def group_nested_entries(hash)

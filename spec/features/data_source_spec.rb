@@ -41,6 +41,12 @@ RSpec.feature 'Data Source management' do
       expect(page).to have_text('Some other human readable name (v1)')
 
       click_link('Some other human readable name (v1)')
+      click_link('Edit')
+      fill_in 'Name', with: ''
+      click_button('Update')
+      expect(page).to have_text("Name can't be blank")
+
+      click_link('Some other human readable name (v1)')
       click_button('Delete')
       expect(page).to have_text('Dataset was successfully destroyed')
     end

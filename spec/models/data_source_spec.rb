@@ -161,6 +161,41 @@ describe DataSource do
         expect(results.first.annual_rates_alt).to eq('field1_alt' => 'started', 'field2_alt' => 'preschool', 'field3_alt' => '666')
       end
     end
+
+    context 'specifying nested collections' do
+      let(:data_source) { DataSource.create(_id: 'test_nested_collections:v1', published: true, version_number: 1, name: 'test', description: 'test nested_collections', api: 'test_nested_collections', data: File.read("#{Rails.root}/spec/fixtures/data_sources/nested_collections.json"), dictionary: '') }
+      let(:dictionary) { DataSources::Metadata.new(File.read("#{Rails.root}/spec/fixtures/data_sources/nested_collections.yaml")).deep_symbolized_yaml }
+
+      before do
+        data_source.update(dictionary: dictionary)
+        data_source.ingest
+      end
+
+      it 'creates entries with nested collections' do
+        results = data_source.with_api_model do |klass|
+          expect(klass.count).to eq(2)
+          params = { mname: 'Karl', lname: 'torres', q: 'norte', country_codes: 'us,il', bday: '2010-07-01 TO 2010-07-01' }
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(params))
+          klass.search(query.generate_search_body_hash)
+        end
+        expect(results.total).to eq(1)
+        expect(results.first.name).to eq('foo')
+        expect(results.first.contacts).to eq([{ 'myfloat' => 31.14, 'bday' => '2010-07-01', 'fname' => 'Yael', 'lname' => 'Torres', 'mname' => 'karl' }])
+        expect(results.first.places).to eq([{ 'country_code' => 'IL', 'country_name' => 'il', 'venue' => 'International Convention Center, Haifa, Israel' }, { 'country_code' => 'BR', 'country_name' => 'br', 'venue' => 'Expo Center Norte' }, { 'country_code' => 'US', 'country_name' => 'us', 'venue' => 'WCTC - Richard T Anderson Building' }])
+      end
+
+      it 'creates correct aggregations of nested fields' do
+        results = data_source.with_api_model do |klass|
+          query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new)
+          klass.search(query.generate_search_body_hash)
+        end
+        aggs = results.response.aggregations
+        expect(aggs['country_codes'].buckets).to eq([{ 'key' => 'US', 'doc_count' => 2 },
+                                                     { 'key' => 'BR', 'doc_count' => 1 },
+                                                     { 'key' => 'CG', 'doc_count' => 1 },
+                                                     { 'key' => 'IL', 'doc_count' => 1 },],)
+      end
+    end
   end
 
   describe 'search' do

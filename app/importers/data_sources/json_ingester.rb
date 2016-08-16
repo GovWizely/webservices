@@ -10,7 +10,13 @@ module DataSources
     private
 
     def process_record_info(record)
-      extract_fields(record, @metadata.mapped_paths_map)
+      hash = extract_fields(record, @metadata.mapped_paths_map)
+      @metadata.nested_collections.each_pair do |k, dict_yaml|
+        m = DataSources::Metadata.new(dict_yaml.to_yaml)
+        coll = record[dict_yaml[:_collection_path]]
+        hash[k] = coll.map { |e| extract_fields(e, m.mapped_paths_map) }
+      end
+      hash
     end
 
     def extract_fields(parent_record, path_hash)
