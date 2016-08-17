@@ -32,8 +32,9 @@ module ScreeningList
     def generate_query(json)
       multi_fields = %i(alt_names name remarks title)
       name_fields = %i(alt_names name)
-      if @name
-        if @fuzzy_name && !@name.match(/\s/)
+      if @name && @fuzzy_name
+        remove_stops
+        if !@name.match(/\s/)
           json.highlight do
             json.fields do
               json.alt_idx({})

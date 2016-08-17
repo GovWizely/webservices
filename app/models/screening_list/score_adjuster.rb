@@ -6,7 +6,8 @@ module ScreeningList
     LONG_MISS_PENALTY = 15
 
     def initialize(name, hits)
-      @no_adjustment_required = name.blank? || name.split.many? || hits.empty? || hits.first[:highlight].empty?
+      new_name = remove_stops(name)
+      @no_adjustment_required = new_name.blank? || new_name.split.many? || hits.empty? || hits.first[:highlight].empty?
       @hits = hits
     end
 
@@ -43,6 +44,16 @@ module ScreeningList
         penalty = UNMATCHED_PENALTIES[token.length-1] || LONG_MISS_PENALTY
         sum + penalty
       end
+    end
+
+    def remove_stops(name)
+      stopwords    = %w( and the los )
+      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+
+      nme = name.gsub(/[^\p{Alnum}\p{Space}]/, '')
+      nme = nme.split.delete_if { |n| stopwords.include?(n.downcase) }.join(' ')
+      nme = nme.split.delete_if { |n| common_words.include?(n.downcase) }.join(' ')
+      nme
     end
   end
 end
