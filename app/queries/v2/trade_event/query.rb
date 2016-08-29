@@ -10,9 +10,7 @@ module V2::TradeEvent
     #
     attr_reader :sources
     aggregate_terms_by countries:     { field: 'venues.country' },
-                       sources:       { field: 'source' },
-                       trade_regions: { field: 'trade_regions' },
-                       world_regions: { field: 'world_regions' }
+                       sources:       { field: 'source' }
 
     MULTI_FIELDS = %i(
       registration_title description event_name industries.tokenized

@@ -1,17 +1,4 @@
 {
-  "world_regions": [
-    {
-      "key": "Levant",
-      "doc_count": 1
-    },
-    {
-      "key": "Middle East",
-      "doc_count": 1
-    }
-  ],
-  "trade_regions": [
-
-  ],
   "countries": [
     {
       "key": "IL",
