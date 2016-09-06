@@ -26,6 +26,6 @@ class Api::V2::ApiModelsController < Api::V2Controller
   end
 
   def setup_search_params
-    self.search_params = %i(api_key callback format offset size api version_number) + @data_source.search_params
+    self.search_params = %i(api_key callback format offset size sort api version_number) + @data_source.search_params
   end
 end

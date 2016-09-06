@@ -48,13 +48,26 @@ class Query
     @offset = options[:offset].to_i
     @size = [options[:size].to_i, MAX_SIZE].min
     @q = options[:q]
+
     initialize_search_fields(options)
+    @sort = options[:sort] ? parse_sort_parameter(options[:sort]) : []
     initialize_semantic_query(options[:semantic_query_service_configuration])
 
     unless valid?
       e = InvalidParamsException.new
       e.errors = errors.to_a
       raise e
+    end
+  end
+
+  def parse_sort_parameter(value)
+    array = split_to_array(value.strip)
+    array.map! do |value|
+      if value.include?(':')
+        { value.split(':')[0].strip => value.split(':')[1].strip }
+      else
+        value.strip
+      end
     end
   end
 
@@ -224,6 +237,7 @@ class Query
   def generate_from_size_sort(json)
     json.from @offset
     json.size @size
+    json.sort @sort unless @sort.empty?
   end
 
   def generate_aggregations(json)

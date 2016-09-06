@@ -79,6 +79,22 @@ describe Api::V2::ApiModelsController, type: :request do
 
       specify { expect(subject.status).to eq(404) }
     end
+
+    context 'when sort is specified' do
+      let(:expected) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/data_sources/sorted.json").read }
+      let(:params) { { sort: 'country:desc' } }
+      before { get '/v1/de_minimis_currencies/search', params, @v2_headers }
+      subject { response }
+
+      it_behaves_like 'a successful search request'
+
+      it 'returns the results in reverse alphabetical order' do
+        json_response = JSON.parse(response.body)
+        results = json_response['results']
+
+        expect(results).to match_array(expected)
+      end
+    end
   end
 
   context 'endpoint does not exist' do
