@@ -3,19 +3,19 @@ require 'spec_helper'
 describe String do
   describe '#indexize' do
     subject { operand.indexize }
-    context 'of "TradeEvent::Ita"' do
-      let(:operand) { 'TradeEvent::Ita' }
-      it { is_expected.to eq 'trade_event:itas' }
+    context 'of "FooBar::Ita"' do
+      let(:operand) { 'FooBar::Ita' }
+      it { is_expected.to eq 'foo_bar:itas' }
     end
 
-    context 'of "TradeEvent::Sba"' do
-      let(:operand) { 'TradeEvent::Sba' }
-      it { is_expected.to eq 'trade_event:sbas' }
+    context 'of "FooBar::Sba"' do
+      let(:operand) { 'FooBar::Sba' }
+      it { is_expected.to eq 'foo_bar:sbas' }
     end
 
-    context 'of "TradeEvent::Exim"' do
-      let(:operand) { 'TradeEvent::Exim' }
-      it { is_expected.to eq 'trade_event:exims' }
+    context 'of "FooBar::Exim"' do
+      let(:operand) { 'FooBar::Exim' }
+      it { is_expected.to eq 'foo_bar:exims' }
     end
 
     context 'of "BisDeniedPerson"' do
@@ -31,19 +31,19 @@ describe String do
 
   describe '#typeize' do
     subject { operand.typeize }
-    context 'of "TradeEvent::Ita"' do
-      let(:operand) { 'TradeEvent::Ita' }
-      it { is_expected.to eq :'trade_event:ita' }
+    context 'of "FooBar::Ita"' do
+      let(:operand) { 'FooBar::Ita' }
+      it { is_expected.to eq :'foo_bar:ita' }
     end
 
-    context 'of "TradeEvent::Sba"' do
-      let(:operand) { 'TradeEvent::Sba' }
-      it { is_expected.to eq :'trade_event:sba' }
+    context 'of "FooBar::Sba"' do
+      let(:operand) { 'FooBar::Sba' }
+      it { is_expected.to eq :'foo_bar:sba' }
     end
 
-    context 'of "TradeEvent::Exim"' do
-      let(:operand) { 'TradeEvent::Exim' }
-      it { is_expected.to eq :'trade_event:exim' }
+    context 'of "FooBar::Exim"' do
+      let(:operand) { 'FooBar::Exim' }
+      it { is_expected.to eq :'foo_bar:exim' }
     end
 
     context 'of "BisDeniedPerson"' do

@@ -11,17 +11,4 @@ class CountryIndustryQuery < Query
     @industry = options[:industry]
     @q = options[:q].downcase if options[:q].present?
   end
-
-  private
-
-  def generate_multi_query(json, multi_fields)
-    json.query do
-      json.bool do
-        json.must do |must_json|
-          must_json.child! { must_json.match { must_json.set! 'industries.tokenized', @industry } } if @industry
-          must_json.child! { generate_multi_match(must_json, multi_fields, @q) } unless @q.blank?
-        end
-      end
-    end if @industry || !@q.blank?
-  end
 end

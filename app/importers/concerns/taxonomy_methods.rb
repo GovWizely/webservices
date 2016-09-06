@@ -1,9 +1,4 @@
 module TaxonomyMethods
-  def get_missing_country(mappable_field)
-    country_array = normalize_industry('Missing Country: ' + mappable_field)
-    country_array.nil? ? nil : country_array.first
-  end
-
   def add_related_fields(terms)
     terms = terms.compact
     related_fields = { trade_regions: [], world_regions: [] }
