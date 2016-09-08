@@ -40,14 +40,7 @@
         "post": "Tel Aviv"
       }
     ],
-    "source": "ITA",
-    "trade_regions": [
-
-    ],
-    "world_regions": [
-      "Levant",
-      "Middle East"
-    ]
+    "source": "ITA"
   },
   {
     "id": "33831",
@@ -85,18 +78,7 @@
         "post": "Milwaukee"
       }
     ],
-    "source": "ITA",
-    "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "CAFTA-DR",
-      "NAFTA",
-      "Trans Pacific Partnership"
-    ],
-    "world_regions": [
-      "Pacific Rim",
-      "North America",
-      "Western Hemisphere"
-    ]
+    "source": "ITA"
   },
   {
     "id": "34436",
@@ -163,18 +145,7 @@
         "post": null
       }
     ],
-    "source": "ITA",
-    "trade_regions": [
-      "Asia Pacific Economic Cooperation",
-      "CAFTA-DR",
-      "NAFTA",
-      "Trans Pacific Partnership"
-    ],
-    "world_regions": [
-      "Pacific Rim",
-      "North America",
-      "Western Hemisphere"
-    ]
+    "source": "ITA"
   },
   {
     "id": "34568",
@@ -237,15 +208,6 @@
         "post": "Messe Dusseldorf North America"
       }
     ],
-    "source": "ITA",
-    "trade_regions": [
-      "Global System of Trade Preferences among Developing Countries",
-      "Southern Common Market"
-    ],
-    "world_regions": [
-      "South America",
-      "Latin America",
-      "Western Hemisphere"
-    ]
+    "source": "ITA"
   }
 ]

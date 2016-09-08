@@ -1,36 +1,4 @@
 {
-  "world_regions": [
-    {
-      "key": "North America",
-      "doc_count": 1
-    },
-    {
-      "key": "Pacific Rim",
-      "doc_count": 1
-    },
-    {
-      "key": "Western Hemisphere",
-      "doc_count": 1
-    }
-  ],
-  "trade_regions": [
-    {
-      "key": "Asia Pacific Economic Cooperation",
-      "doc_count": 1
-    },
-    {
-      "key": "CAFTA-DR",
-      "doc_count": 1
-    },
-    {
-      "key": "NAFTA",
-      "doc_count": 1
-    },
-    {
-      "key": "Trans Pacific Partnership",
-      "doc_count": 1
-    }
-  ],
   "countries": [
     {
       "key": "US",

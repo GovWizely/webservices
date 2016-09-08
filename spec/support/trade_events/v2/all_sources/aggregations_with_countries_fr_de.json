@@ -1,16 +1,4 @@
 {
-  "world_regions": [
-    {
-      "key": "Europe",
-      "doc_count": 2
-    }
-  ],
-  "trade_regions": [
-    {
-      "key": "European Union - 28",
-      "doc_count": 2
-    }
-  ],
   "countries": [
     {
       "key": "DE",

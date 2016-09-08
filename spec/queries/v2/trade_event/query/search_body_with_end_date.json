@@ -23,12 +23,6 @@
     },
     "sources" : {
       "terms" : { "field" : "source", "size" : 0 }
-    },
-    "trade_regions" : {
-      "terms" : { "field" : "trade_regions", "size" : 0 }
-    },
-    "world_regions" : {
-      "terms" : { "field" : "world_regions", "size" : 0 }
     }
   }
 }

@@ -32,8 +32,6 @@ source_field_lists = {
     :venues,
     :contacts,
     :source,
-    :trade_regions,
-    :world_regions,
   ],
   sba:   [
     :event_name,
@@ -51,8 +49,6 @@ source_field_lists = {
     :venues,
     :contacts,
     :source,
-    :trade_regions,
-    :world_regions,
   ],
 
   ustda: [
@@ -60,7 +56,6 @@ source_field_lists = {
     :cost_currency, :registration_link, :registration_title,
     :description, :industries, :ita_industries, :url, :venues, :first_name, :last_name,
     :post, :person_title, :phone, :email, :source, :event_type,
-    :trade_regions, :world_regions,
   ],
 }
 
