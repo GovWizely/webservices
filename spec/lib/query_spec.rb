@@ -129,4 +129,14 @@ describe Query, type: :model do
       it_behaves_like 'a query that was given a valid date range'
     end
   end
+
+  describe '#parse_sort_parameter' do
+    include_context 'with MockChildQuery child class'
+
+    subject { MockChildQuery.new(sort: '_score,publish_date:desc') }
+
+    it 'builds the correct query when provided a sort param' do
+      expect(subject.sort).to eq(['_score', { 'publish_date' => 'desc' }])
+    end
+  end
 end
