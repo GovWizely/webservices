@@ -13,7 +13,7 @@ describe DataSource do
       it { is_expected.not_to allow_value(bad_value).for(:api) }
     end
 
-    %w(market_researches ita_office_locations ita_zip_codes ita_taxonomy screening_lists trade_events sharepoint_trade_articles api_models).each do |existing_api|
+    %w(market_researches ita_office_locations ita_zip_codes ita_taxonomy screening_lists sharepoint_trade_articles api_models).each do |existing_api|
       it { is_expected.not_to allow_value(existing_api).for(:api) }
     end
 

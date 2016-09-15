@@ -25,7 +25,6 @@ Webservices::Application.routes.draw do
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
     get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
     get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
-    get '/trade_events/:id' => 'trade_events/consolidated#show', constraints: { id: /.+/ }, format: false
   end
 
   concern :api_routable do
@@ -41,10 +40,6 @@ Webservices::Application.routes.draw do
 
     scope '/consolidated_screening_list' do
       get '/search', to: 'screening_lists/consolidated#search'
-    end
-
-    namespace :trade_events do
-      get 'search', to: 'consolidated#search'
     end
 
     scope '/market_intelligence' do
@@ -73,7 +68,7 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates trade_leads)
+    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates trade_leads trade_events)
     apis_migrated_to_endpointme.each do |legacy_endpoint|
       get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
       get "/#{legacy_endpoint}/*id", to: 'api_models#show', version_number: 1, api: legacy_endpoint.to_sym

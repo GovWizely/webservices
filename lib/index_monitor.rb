@@ -17,10 +17,6 @@ class IndexMonitor
     'ScreeningList::Sdn',
     'ScreeningList::Ssi',
     'ScreeningList::Uvl',
-    'TradeEvent::Dl',
-    'TradeEvent::Ita',
-    'TradeEvent::Sba',
-    'TradeEvent::Ustda',
   ]
 
   def initialize(model_list = MODEL_LIST)
