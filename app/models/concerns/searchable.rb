@@ -128,11 +128,7 @@ module Searchable
     def build_search_options(query)
       search_options = {
         index: index_names(query.try(:sources)),
-        type:  (begin
-                  model_classes.map { |mc| mc.to_s.typeize }
-                rescue
-                  nil
-                end),
+        type:  model_classes.map { |mc| mc.to_s.typeize },
         body:  query.generate_search_body,
         from:  query.offset,
         size:  query.size,

@@ -94,17 +94,7 @@ module Indexable
     EMPTY_METADATA = { version: '', last_updated: '', last_imported: '', import_rate: '' }
 
     def stored_metadata
-      stored = begin
-                 ES.client.get(
-                   index: index_name,
-                   type:  'metadata',
-                   id:    0,
-                 )['_source'].symbolize_keys
-               rescue
-                 {}
-               end
-
-      EMPTY_METADATA.merge(stored)
+      EMPTY_METADATA.merge(ES.client.get(index: index_name, type: 'metadata', id: 0)['_source'].symbolize_keys)
     end
 
     def index_exists?
