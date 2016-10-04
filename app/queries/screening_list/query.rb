@@ -34,20 +34,18 @@ module ScreeningList
       name_fields = %i(alt_names name)
       if @name && @fuzzy_name
         remove_stops
-        if !@name.match(/\s/)
-          json.highlight do
-            json.fields do
-              json.alt_idx({})
-              json.alt_no_ws({})
-              json.alt_no_ws_rev({})
-              json.alt_no_ws_with_common({})
-              json.name_idx({})
-              json.name_no_ws({})
-              json.name_no_ws_rev({})
-              json.name_no_ws_with_common({})
-            end
-            json.order 'score'
+        json.highlight do
+          json.fields do
+            json.alt_idx({})
+            json.alt_no_ws({})
+            json.alt_no_ws_rev({})
+            json.alt_no_ws_with_common({})
+            json.name_idx({})
+            json.name_no_ws({})
+            json.name_no_ws_rev({})
+            json.name_no_ws_with_common({})
           end
+          json.order 'score'
         end
       end
       json.query do
