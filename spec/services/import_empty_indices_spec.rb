@@ -8,6 +8,7 @@ describe ImportEmptyIndices do
     let(:expected) do
       Webservices::Application
         .model_classes
+        .find_all { |m| m.name !~ /Envirotech/ }
         .find_all { |m| !m.importer_class.disabled? }
     end
     context 'with all indices empty' do

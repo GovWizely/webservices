@@ -1,0 +1,35 @@
+---
+- :abstract_chinese: 城市污水的一个重要特点是它适合于生物处理。城市处理厂的生物处理组件被称为二级处理，通常继简单沉淀（初级处理）之后。二级处理标准由EPA针对公有处理厂（POTW）而设定，反映二级污水处理厂的工作表现。二级处理标准还适用于与合流污水渠、工业废物、废物稳定塘、合并和单独下水道浓度较低污水流相关的特别注意事项，替代标准适用于被视为与二级处理同等的处理设施。
+  :abstract_english: An important aspect of municipal wastewater is that it is amenable to biological treatment. The biological treatment component of a municipal treatment plant is termed secondary treatment and is usually preceded by simple settling (primary treatment). Secondary treatment standards are established by EPA for publicly owned treatment works (POTWs) and reflect the performance of secondary wastewater treatment plants. The secondary treatment standards also provide for special considerations regarding combined sewers, industrial wastes, waste stabilization ponds, less concentrated influent wastewater for combined and separate sewers, and alternative standards for treatment facilities considered equivalent to secondary treatment.
+  :abstract_french: Un des aspects le plus importants des eaux usées municipales est que celles-ci réagissent à un traitement biologique. Le composant de traitement biologique d'une station d'épuration municipale est appelé le traitement secondaire, et il est habituellement précédé d'une simple préparation (traitement primaire). Les normes de traitement secondaire sont établies par l'EPA pour les stations d'épurations des eaux usées de propriété publique (POTW en anglais) et reflètent la performance de stations d'épurations des eaux usées secondaires. Les normes de traitement secondaire offrent également des considérations particulières concernant les égouts unitaires, les déchets industriels, les étangs de stabilisation de déchets, des eaux usées de pénétration moins concentrées pour les égouts unitaires et séparatifs ainsi que des normes alternatives pour les stations d'épurations considérées comme équivalentes au traitement secondaire.
+  :abstract_portuguese: Um aspecto importante dos efluentes municipais é que é passível de tratamento biológico. O componente do tratamento biológico de uma estação de tratamento municipal é denominado tratamento secundário e geralmente é precedido pela simples sedimentação (tratamento primário). Os padrões de tratamento secundário são estabelecidos pela EPA para obras de tratamento públicas e refletem o desempenho das estações de tratamento secundário de águas residuais. Os padrões de tratamento secundário também incluem considerações especiais sobre esgotos combinados, resíduos industriais, lagoas de estabilização, águas residuais afluentes menos concentradas para esgotos combinados e separados, e padrões alternativos para estações de tratamento considerados equivalentes ao tratamento secundário.
+  :abstract_spanish: Un aspecto importante de las aguas residuales municipales es que responden al tratamiento biológico. El componente de tratamiento biológico de una planta municipal de tratamiento se denomina tratamiento secundario y usualmente la precede el tratamiento primario. La EPA establece las normas sobre el tratamiento secundario para el tratamiento público (POTWs) y reflejan el funcionamiento de las plantas de tratamiento secundario de aguas residuales. Las normas de tratamiento secundario también disponen consideraciones especiales sobre alcantarillados combinados, desechos industriales, lagunas de estabilización de desechos, agua residual influente menos concentrada para alcantarillados combinados y separados, y normas de instalaciones para tratamientos que se consideran equivalentes al tratamiento secundario.
+  :id: 24
+  :name_chinese: 二级或高级污水处理
+  :name_english: Secondary or Advanced Wastewater Treatment
+  :name_french: Traitement secondaire ou avancé des eaux usées
+  :name_portuguese: Secondary or Advanced Wastewater Treatment
+  :name_spanish: Tratamiento Secundario o Avanzado de Aguas Residuales
+  :source: ISSUES
+  :source_created_at: '2013-10-31'
+  :source_id: 24
+  :source_updated_at: '2015-05-29'
+  :solution_ids: []
+  :regulation_ids: []
+- :abstract_chinese: 生物固体是污水污泥处理产生的养分丰富的有机材料（是指在处理设施中进行生活污水处理期间所产生的固体，半固体或未处理的液体残留）。污水污泥经处理后变成生物固体，它可被安全回收并用作肥料来持续改善维持土壤生产力并促进农作物生长。
+  :abstract_english: Biosolids are the nutrient-rich organic materials resulting from the treatment of sewage sludge (the name for the solid, semisolid or liquid untreated residue generated during the treatment of domestic sewage in a treatment facility). When treated and processed, sewage sludge becomes biosolids which can be safely recycled and applied as fertilizer to sustainably improve and maintain productive soils and stimulate plant growth.
+  :abstract_french: Les biosolides sont des matériaux organiques riches en nutriments résultant du traitement de boues d'épurations (le nom que l'on donne aux résidus solides, semi-solides et liquides non traités générés par le traitement d'égouts domestiques dans une station d'épuration). Une fois traitées, les boues d'épurations deviennent des biosolides pouvant être recyclés et réutilisés en toute sécurité sous forme d'engrais, afin d'améliorer et de maintenir des terres productives et de stimuler la croissance des plantes de manière durable.
+  :abstract_portuguese: Os biossólidos são o material orgânico ricos em nutrientes que é resultado do tratamento da lama de esgoto (o nome do resíduo sólido, semisólido ou líquido sem tratamento produzido ao tratar o esgoto residencial em uma central de tratamento). Quando tratada e processada, a lama de esgoto torna-se um biossólido que pode ser reciclado e utilizado como adubo para melhorar e manter a produtividade dos solos de forma segura e sustentável e simultaneamente estimular o crescimento vegetal.
+  :abstract_spanish: Los biosólidos son materiales orgánicos ricos en nutrientes que resultan del tratamiento de lodos cloacales (el nombre que se le da a los residuos sólidos, semisólidos o líquidos no tratados que se generan durante el tratamiento de aguas residuales domésticas en una instalación para tratamientos). Cuando se trata y procesa los lodos cloacales, estos se transforman en biosólidos que pueden ser reciclados de una forma segura, y aplicados como fertilizante para mejorar y mantener el suelo productivo de manera sostenida, y para estimular el crecimiento vegetal.
+  :id: 23
+  :name_chinese: 生物固体/污泥处理、利用或处置
+  :name_english: Biosolid/Sludge Management, Use, or Disposal
+  :name_french: Gestion, utilisation et élimination de biosolides
+  :name_portuguese: Biosolid/Sludge Management, Use, or Disposal
+  :name_spanish: Gestión, Uso o Eliminación de Biosólidos
+  :source: ISSUES
+  :source_created_at: '2013-10-31'
+  :source_id: 23
+  :source_updated_at: '2015-05-29'
+  :solution_ids: []
+  :regulation_ids: []
