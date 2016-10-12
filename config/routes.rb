@@ -81,6 +81,7 @@ Webservices::Application.routes.draw do
     end
 
     get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
+    get '/v*version_number/*api/freshen(.json)', to: 'admin#freshen', constraints: ApiModelRouteConstraint.new
     get '/v*version_number/*api/*id', to: 'api_models#show', constraints: ApiModelRouteConstraint.new
   end
 
