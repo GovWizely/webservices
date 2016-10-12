@@ -49,8 +49,8 @@ class Query
     @size = [options[:size].to_i, MAX_SIZE].min
     @q = options[:q]
 
-    initialize_search_fields(options)
     @sort = options[:sort] ? parse_sort_parameter(options[:sort]) : []
+    initialize_search_fields(options)
     initialize_semantic_query(options[:semantic_query_service_configuration])
 
     unless valid?
@@ -75,7 +75,9 @@ class Query
     if query_fields
       query_fields[:query].each { |f| instance_variable_set("@#{f}", options[f]) }
       query_fields[:filter].each { |f| instance_variable_set("@#{f}", options[f]) }
-      instance_variable_set('@sort', query_fields[:sort].try(:join, ',')) unless q
+      if @sort.empty? && @q.nil? && query_fields[:sort].present?
+        @sort = query_fields[:sort]
+      end
     end
   end
 

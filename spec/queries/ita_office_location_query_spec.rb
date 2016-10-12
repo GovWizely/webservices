@@ -5,6 +5,12 @@ describe ItaOfficeLocationQuery do
 
   describe '#new' do
     it_behaves_like 'a paginated query'
+
+    context 'when options does not include q' do
+      subject { described_class.new(countries: 'BR,RU') }
+
+      it { is_expected.to have_attributes(sort: %i(post.sort)) }
+    end
   end
 
   describe '#generate_search_body' do
