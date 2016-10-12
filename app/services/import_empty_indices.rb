@@ -20,7 +20,7 @@ class ImportEmptyIndices
     private
 
     def import?(importer_class)
-      !importer_class.disabled?
+      importer_class.name !~ /Envirotech/ && !importer_class.disabled?
     end
   end
 end

@@ -1,0 +1,134 @@
+[
+  {
+    "created_at": "2013-10-30T18:39:53-04:00",
+    "id": 24,
+    "name_chinese": "\u56fd\u5bb6\u6c61\u67d3\u7269\u6392\u653e\u6d88\u9664\u7cfb\u7edf\uff08NPDES\uff09\u4e8c\u7ea7\u5904\u7406\u6807\u51c6",
+    "name_english": "Secondary Treatment Standards under the National Pollutant Discharge Elimination System (NPDES)",
+    "name_french": "Normes de traitement secondaire selon le National Pollutant Discharge Elimination System (NPDES)",
+    "name_portuguese": "Padr\u00f5es de Tratamento Secund\u00e1rio no Sistema Nacional de Elimina\u00e7\u00e3o de Efluentes Poluentes (NPDES)",
+    "name_spanish": "Normas de Tratamiento Secundario seg\u00fan el Sistema Nacional de Eliminaci\u00f3n de Descargas Contaminantes (NPDES)",
+    "updated_at": "2013-10-30T18:39:53-04:00",
+    "url": "http://www.epa.gov/npdes/pubs/chapt_05.pdf"
+  },
+  {
+    "created_at": "2013-10-30T17:32:05-04:00",
+    "id": 23,
+    "name_chinese": "\u6c61\u6ce5\u5229\u7528\u6216\u5904\u7f6e\u6807\u51c6",
+    "name_english": "Standards for the Use or Disposal of Sewage Sludge",
+    "name_french": "Normes d'utilisation et d'\u00e9limination de boues d'\u00e9puration",
+    "name_portuguese": "Padr\u00f5es para o Uso ou a Elimina\u00e7\u00e3o de Lama de Esgoto",
+    "name_spanish": "Normas para el Uso o la Eliminaci\u00f3n de Lodos Cloacales ",
+    "updated_at": "2013-10-30T17:32:05-04:00",
+    "url": "http://water.epa.gov/scitech/wastetech/biosolids/upload/fr2-19-93.pdf"
+  },
+  {
+    "created_at": "2013-10-30T12:20:42-04:00",
+    "id": 22,
+    "name_chinese": "\u5b89\u5168\u996e\u7528\u6c34\u6cd5\u6848 \u2013 \u7837\u6c61\u67d3\u89c4\u5b9a",
+    "name_english": "Safe Drinking Water Act - Arsenic Rule",
+    "name_french": "Le Safe Drinking Water Act - r\u00e8glementation sur l'arsenic",
+    "name_portuguese": "Lei da \u00c1gua Pot\u00e1vel Segura- Regra sobre o ars\u00eanio",
+    "name_spanish": "Ley de Agua Potable Segura \u2013 Norma de Ars\u00e9nico",
+    "updated_at": "2013-12-19T14:00:33-05:00",
+    "url": "http://www.epa.gov/fedrgstr/EPA-WATER/2001/January/Day-22/w1668.htm"
+  },
+  {
+    "created_at": "2013-08-08T09:37:04-04:00",
+    "id": 21,
+    "name_chinese": "\u65b0\u56fa\u5b9a\u6c61\u67d3\u6e90\u6027\u80fd\u6807\u51c6\uff1a\u77f3\u6cb9\u548c\u5929\u7136\u6c14",
+    "name_english": "Standards of Performance for New Stationary Sources: Oil and Gas",
+    "name_french": "Normes de performance pour les nouvelles sources fixes : p\u00e9trole et gaz",
+    "name_portuguese": "Padr\u00f5es de Desempenho para Novas Fontes Estacion\u00e1rias: Petr\u00f3leo e G\u00e1s",
+    "name_spanish": "Normas de Funcionamiento de Nuevas Fuentes Estacionarias: Petr\u00f3leo y Gas",
+    "updated_at": "2013-11-12T17:12:08-05:00",
+    "url": "http://www.gpo.gov/fdsys/pkg/CFR-2011-title40-vol6/xml/CFR-2011-title40-vol6-part60.xml"
+  },
+  {
+    "created_at": "2013-08-08T09:26:47-04:00",
+    "id": 20,
+    "name_chinese": "\u4e00\u822c\u5e9f\u7269\u7ba1\u7406\u6807\u51c6",
+    "name_english": "Standards for Universal Waste Management",
+    "name_french": "Normes de gestion de d\u00e9chets universels",
+    "name_portuguese": "Padr\u00f5es para o Gerenciamento de Res\u00edduos Universais",
+    "name_spanish": "Normas de Gesti\u00f3n de Desechos Universales",
+    "updated_at": "2013-12-08T17:33:33-05:00",
+    "url": "http://www.gpo.gov/fdsys/pkg/CFR-2012-title40-vol28/pdf/CFR-2012-title40-vol28-part273.pdf"
+  },
+  {
+    "created_at": "2013-08-08T09:25:15-04:00",
+    "id": 19,
+    "name_chinese": "\u65b0\u56fa\u5b9a\u6c61\u67d3\u6e90\u6027\u80fd\u6807\u51c6\uff1a\u5783\u573e\u586b\u57cb\u573a\u548c\u57ce\u5e02\u5783\u573e",
+    "name_english": "Standards of Performance for New Stationary Sources: Landfills and Municipal Waste",
+    "name_french": "Normes de performance pour les nouvelles sources fixes : d\u00e9charge et d\u00e9chets municipaux",
+    "name_portuguese": "Padr\u00f5es de Desempenho para Novas Fontes Estacion\u00e1rias: Aterros e Res\u00edduos Municipais",
+    "name_spanish": "Normas de Funcionamiento de Nuevas Fuentes Estacionarias: Vertederos y Desechos Municipales",
+    "updated_at": "2013-12-08T17:35:38-05:00",
+    "url": "http://www.gpo.gov/fdsys/pkg/CFR-2011-title40-vol6/xml/CFR-2011-title40-vol6-part60.xml"
+  },
+  {
+    "created_at": "2013-08-08T08:55:08-04:00",
+    "id": 18,
+    "name_chinese": "\u8de8\u5dde\u7a7a\u6c14\u6c61\u67d3\u89c4\u5b9a\uff08CSAPR\uff09",
+    "name_english": "Cross-State Air Pollution Rule (CSAPR)",
+    "name_french": "La Cross-State Air Pollution Rule (CSAPR)",
+    "name_portuguese": "Regra sobre a Polui\u00e7\u00e3o do Ar nos Estados (CSAPR)",
+    "name_spanish": "Norma de Contaminaci\u00f3n Atmosf\u00e9rica de Fronteras Estatales (CSAPR)",
+    "updated_at": "2013-11-12T16:33:33-05:00",
+    "url": "http://www.epa.gov/crossstaterule/"
+  },
+  {
+    "created_at": "2013-07-29T09:08:00-04:00",
+    "id": 16,
+    "name_chinese": "\u975e\u9053\u8def\u5e9f\u6c14\u6392\u653e\u6807\u51c6",
+    "name_english": "Non-road Exhaust Emissions Standards",
+    "name_french": "Normes des \u00e9missions de gaz d'\u00e9chappement hors-route",
+    "name_portuguese": "Padr\u00f5es de Emiss\u00f5es de Escape Fora da Estrada",
+    "name_spanish": "Normas de Emisiones de Escape Fuera de Carretera",
+    "updated_at": "2013-08-15T09:18:22-04:00",
+    "url": "http://www.epa.gov/otaq/standards/nonroad/"
+  },
+  {
+    "created_at": "2013-07-29T09:08:00-04:00",
+    "id": 15,
+    "name_chinese": "\u6c5e\u548c\u7a7a\u6c14\u4e2d\u6709\u5bb3\u6bd2\u7269\u6807\u51c6",
+    "name_english": "Mercury and Air Toxics Standards",
+    "name_french": "Normes de mercure et de toxiques atmosph\u00e9riques",
+    "name_portuguese": "Padr\u00f5es para o Merc\u00fario e T\u00f3xicos Vol\u00e1teis",
+    "name_spanish": "Normas de Mercurio y T\u00f3xicos de Aire ",
+    "updated_at": "2013-08-15T09:18:22-04:00",
+    "url": "http://www.epa.gov/mats/"
+  },
+  {
+    "created_at": "2013-07-29T09:08:00-04:00",
+    "id": 14,
+    "name_chinese": "\u65b0\u5efa\u548c\u5728\u7528\u8239\u7528\u53d1\u52a8\u673a\u548c\u8239\u53ea\u6392\u653e\u63a7\u5236",
+    "name_english": "Control of Emissions from New and In-Use Marine Engines and Vessels",
+    "name_french": "Contr\u00f4les des \u00e9missions de moteurs marins et des vaisseaux neufs et en service",
+    "name_portuguese": "Controle de Emiss\u00f5es de Motores e Embarca\u00e7\u00f5es Mar\u00edtimas novas e existentes",
+    "name_spanish": "Control de Emisiones de Motores y Buques Marinos Nuevos y En Uso",
+    "updated_at": "2013-08-15T09:18:22-04:00",
+    "url": "http://www.epa.gov/otaq/oceanvessels.htm"
+  },
+  {
+    "created_at": "2013-07-29T09:08:00-04:00",
+    "id": 13,
+    "name_chinese": "\u7efc\u5408\u73af\u5883\u5e94\u5bf9\u3001\u8865\u507f\u548c\u8d23\u4efb\u6cd5\u6848",
+    "name_english": "Comprehensive Environmental Response, Compensation and Liability Act",
+    "name_french": "Le Comprehensive Environmental Response, Compensation and Liability Act",
+    "name_portuguese": "Lei Integral Ambiental de Resposta, Indeniza\u00e7\u00e3o e Responsabilidade Civil",
+    "name_spanish": "Ley de Responsabilidad, Compensaci\u00f3n y Respuesta Ambiental Abarcativa ",
+    "updated_at": "2013-08-15T09:18:22-04:00",
+    "url": "http://www.epa.gov/superfund/policy/cercla.htm"
+  },
+  {
+    "created_at": "2013-07-29T09:08:00-04:00",
+    "id": 12,
+    "name_chinese": "\u6e05\u6d01\u6c34\u6cd5\u6848",
+    "name_english": "Clean Water Act",
+    "name_french": "Le Clean Water Act",
+    "name_portuguese": "Lei da \u00c1gua Limpa",
+    "name_spanish": "Ley de Agua Limpia",
+    "updated_at": "2013-08-15T09:18:22-04:00",
+    "url": "http://www.epa.gov/agriculture/lcwa.html"
+  }
+]

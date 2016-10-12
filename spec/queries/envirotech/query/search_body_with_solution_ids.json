@@ -1,0 +1,18 @@
+{
+  "filter": {
+    "bool": {
+      "should": [
+        {
+          "terms": {
+            "solution_ids": [ "100", "101" ]
+          }
+        },
+        {
+          "terms": {
+            "solution_id": [ "100", "101" ]
+          }
+        }
+      ]
+    }
+  }
+}
