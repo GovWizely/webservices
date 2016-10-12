@@ -29,7 +29,7 @@ module Envirotech
             json.child! { json.terms { json.issue_ids @issue_ids } } if @issue_ids.any?
             json.child! { json.terms { json.provider_id @provider_ids } } if @provider_ids.any?
             json.child! { json.terms { json.regulation_ids @regulation_ids } } if @regulation_ids.any?
-          end if any_field_exists? && @solution_ids.empty?
+          end if any_field_exists?
 
           json.set! 'should' do
             json.child! { json.terms { json.solution_ids @solution_ids } }

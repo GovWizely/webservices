@@ -229,9 +229,9 @@ describe 'Consolidated Envirotech API V2', type: :request do
       end
     end
 
-    context 'when provider_ids and solution_id are specified' do
+    context 'when provider_ids and solution_ids are specified' do
       context 'when one document matches provider_ids 977' do
-        let(:params) { { provider_ids: 977, solution_ids: 200 } }
+        let(:params) { { provider_ids: 977, solution_ids: '200,201' } }
         it_behaves_like 'a successful search request'
         it_behaves_like 'it contains all Envirotech::ProviderSolution results that match provider_id 977 and solution_id 200'
       end
