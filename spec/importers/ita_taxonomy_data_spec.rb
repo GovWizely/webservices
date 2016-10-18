@@ -14,8 +14,10 @@ describe ItaTaxonomyData do
 
     it 'loads ita taxonomies entries from specified resource' do
       expect(ItaTaxonomy).to receive(:index) do |entries|
-        expect(entries.size).to eq(19)
-        expect(entries).to match_array entry_hash
+        expect(entries.size).to eq(entry_hash.count)
+        entry_hash.each_with_index do |expected, index|
+          expect(entries[index]).to eq(expected)
+        end
       end
       importer.import
     end

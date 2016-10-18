@@ -128,4 +128,47 @@ describe 'Ita Taxonomy API V2', type: :request do
       end
     end
   end
+
+  describe 'GET /ita_taxonomies/suggest' do
+    let(:suggest_path) { '/ita_taxonomies/suggest' }
+
+    context 'when label is specified' do
+      let(:params) { { label: 'aero' } }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 200) }
+
+      it 'returns suggestions' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:labels]).to eq(['Aerospace and Defense'])
+      end
+    end
+
+    context 'when label is too short' do
+      let(:params) { { label: ' a ' } }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 400) }
+
+      it 'returns error message' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:error]).to eq('`label` parameter is required and it must be at least 2 characters long')
+      end
+    end
+
+    context 'when label is not specified' do
+      let(:params) { {} }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 400) }
+
+      it 'returns error message' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:error]).to eq('`label` parameter is required and it must be at least 2 characters long')
+      end
+    end
+  end
 end
