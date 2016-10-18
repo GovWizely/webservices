@@ -5,7 +5,7 @@ gem 'rails', '4.0.9'
 
 gem 'aws-sdk-core'
 gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
-gem 'elasticsearch'
+gem 'elasticsearch', '~> 1.0.0'
 gem 'elasticsearch-persistence'
 gem 'elasticsearch-model'
 gem 'iso_country_codes'
