@@ -83,3 +83,9 @@
 - :label: World Regions
   :type: []
   :related_terms: {}
+- :label: Côte d'Ivoire
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions: []
+    :world_regions: []

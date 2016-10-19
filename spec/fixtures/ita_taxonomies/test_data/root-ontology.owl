@@ -2443,4 +2443,50 @@ One such application is illustrated by the EUROVOC and the UNESCO thesaurus.  Bo
         <skos:altLabel>US</skos:altLabel>
     </owl:Class>
 
+    <!-- http://webprotege.stanford.edu/R72Vq8tvj233V96ZX6FnbkI -->
+
+    <owl:Class rdf:about="http://webprotege.stanford.edu/R72Vq8tvj233V96ZX6FnbkI">
+        <rdfs:label>Côte d&apos;Ivoire</rdfs:label>
+        <rdfs:subClassOf rdf:resource="http://www.w3.org/2004/02/skos/core#Concept"/>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8DdIMDFzHvwLDKQu30RRmN"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#broader"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R7q9jrGbpXPRPccAu33iNNU"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RBYST5TkMsG3aOT9QMbCYFF"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#related"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RFLXc4pqxjgrJXHW7QlWRS"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://purl.org/umu/uneskos#memberOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/R8W91u35GBegWcXXFflYE4"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <rdfs:subClassOf>
+            <owl:Restriction>
+                <owl:onProperty rdf:resource="http://www.w3.org/2004/02/skos/core#topConceptOf"/>
+                <owl:someValuesFrom rdf:resource="http://webprotege.stanford.edu/RC7BwiZbq5uJvqujC7p9NAy"/>
+            </owl:Restriction>
+        </rdfs:subClassOf>
+        <skos:altLabel>Ivory Coast</skos:altLabel>
+        <dc:source>ISO 3166</dc:source>
+        <skos:altLabel>Cote d&apos;Ivoire</skos:altLabel>
+        <skos:prefLabel>Côte d&apos;Ivoire</skos:prefLabel>
+    </owl:Class>
 </rdf:RDF>
