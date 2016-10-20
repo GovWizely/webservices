@@ -20,14 +20,14 @@ describe 'Ita Taxonomy API V2', type: :request do
 
       it 'returns ita taxonomies terms' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(19)
+        expect(json_response[:total]).to eq(20)
         results = json_response[:results]
         expect(results).to match_array expected_results
       end
     end
 
     context 'when q is specified' do
-      let(:params) { { q: 'aviation' } }
+      let(:params) { { q: 'cote' } }
       before { get search_path, params, @v2_headers }
       subject { response }
 
@@ -38,7 +38,7 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        expect(results).to include(expected_results[3])
+        expect(results).to include(expected_results[7])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -55,8 +55,8 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        expect(results).to include(expected_results[0])
-        expect(results).to include(expected_results[1])
+        expect(results).to include(expected_results[6])
+        expect(results).to include(expected_results[13])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -125,6 +125,49 @@ describe 'Ita Taxonomy API V2', type: :request do
       it 'responds with an error message and 400 status' do
         expect(response.status).to eq(400)
         expect(JSON.parse(response.body)).to eq('error'=> 'param is missing or the value is empty: q')
+      end
+    end
+  end
+
+  describe 'GET /ita_taxonomies/suggest' do
+    let(:suggest_path) { '/ita_taxonomies/suggest' }
+
+    context 'when term is specified' do
+      let(:params) { { term: 'asia', size: '1' } }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 200) }
+
+      it 'returns suggestions' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response).to eq(['Asia'])
+      end
+    end
+
+    context 'when term is too short' do
+      let(:params) { { term: ' a ' } }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 400) }
+
+      it 'returns error message' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:error]).to eq('`term` parameter is required and it must be at least 2 characters long')
+      end
+    end
+
+    context 'when term is not specified' do
+      let(:params) { {} }
+      before { get suggest_path, params, @v2_headers }
+      subject { response }
+
+      it { is_expected.to have_attributes(status: 400) }
+
+      it 'returns error message' do
+        json_response = JSON.parse(response.body, symbolize_names: true)
+        expect(json_response[:error]).to eq('`term` parameter is required and it must be at least 2 characters long')
       end
     end
   end

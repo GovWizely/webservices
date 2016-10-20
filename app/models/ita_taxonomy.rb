@@ -28,6 +28,10 @@ class ItaTaxonomy
           keyword_strip_commas:       {
             tokenizer:   'keyword',
             char_filter: ['strip_commas'], },
+          label_analyzer: {
+            tokenizer: 'lowercase',
+            filter: 'asciifolding'
+          }
         },
       },
     },
@@ -41,9 +45,17 @@ class ItaTaxonomy
         label:       {
           type:   'string',
           fields: {
-            tokenized: { type: 'string', analyzer: 'standard' },
+            tokenized: { type: 'string', analyzer: 'label_analyzer' },
             keyword:   { type: 'string', analyzer: 'keyword_strip_commas' },
           },
+        },
+        label_suggest: {
+          type: 'completion',
+          analyzer: 'label_analyzer',
+          payloads: false,
+          preserve_separators: true,
+          preserve_position_increments: true,
+          max_input_length: 50
         },
         type:        { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
       },

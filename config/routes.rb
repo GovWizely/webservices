@@ -49,6 +49,7 @@ Webservices::Application.routes.draw do
     scope '/ita_taxonomies' do
       get 'search', to: 'ita_taxonomy#search'
       get 'query_expansion', to: 'ita_taxonomy#query_expansion'
+      get 'suggest', to: 'ita_taxonomy_suggestions#search'
       get ':id', to: 'ita_taxonomy#show', constraints: { id: /.+/ }, format: false
     end
 

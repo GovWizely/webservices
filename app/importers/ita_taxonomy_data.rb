@@ -27,6 +27,7 @@ class ItaTaxonomyData
       process_entry(entry)
       entry
     end
+    assign_suggest processed_entries
     processed_entries
   end
 
@@ -73,5 +74,17 @@ class ItaTaxonomyData
       trade_regions: trade_regions.uniq,
       world_regions: world_regions.uniq,
     }
+  end
+
+  def assign_suggest(entries)
+    entries.sort! { |a, b| I18n.transliterate(a[:label]) <=> I18n.transliterate(b[:label]) }
+    weight = entries.count
+    entries.each do |entry|
+      entry[:label_suggest] = {
+        input: entry[:label],
+        weight: weight
+      }
+      weight -= 1
+    end
   end
 end
