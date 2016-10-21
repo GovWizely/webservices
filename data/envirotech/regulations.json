@@ -19,7 +19,7 @@
     "name_portuguese": "Padr\u00f5es para o Uso ou a Elimina\u00e7\u00e3o de Lama de Esgoto",
     "name_spanish": "Normas para el Uso o la Eliminaci\u00f3n de Lodos Cloacales ",
     "updated_at": "2013-10-30T17:32:05-04:00",
-    "url": "http://water.epa.gov/scitech/wastetech/biosolids/upload/fr2-19-93.pdf"
+    "url": "http://www.ecfr.gov/cgi-bin/text-idx?tpl=/ecfrbrowse/Title40/40cfr503_main_02.tpl"
   },
   {
     "created_at": "2013-10-30T12:20:42-04:00",
@@ -30,7 +30,7 @@
     "name_portuguese": "Lei da \u00c1gua Pot\u00e1vel Segura- Regra sobre o ars\u00eanio",
     "name_spanish": "Ley de Agua Potable Segura \u2013 Norma de Ars\u00e9nico",
     "updated_at": "2013-12-19T14:00:33-05:00",
-    "url": "http://www.epa.gov/fedrgstr/EPA-WATER/2001/January/Day-22/w1668.htm"
+    "url": "https://www.epa.gov/dwreginfo/chemical-contaminant-rules"
   },
   {
     "created_at": "2013-08-08T09:37:04-04:00",
@@ -74,7 +74,7 @@
     "name_portuguese": "Regra sobre a Polui\u00e7\u00e3o do Ar nos Estados (CSAPR)",
     "name_spanish": "Norma de Contaminaci\u00f3n Atmosf\u00e9rica de Fronteras Estatales (CSAPR)",
     "updated_at": "2013-11-12T16:33:33-05:00",
-    "url": "http://www.epa.gov/crossstaterule/"
+    "url": "https://www3.epa.gov/crossstaterule/"
   },
   {
     "created_at": "2013-07-29T09:08:00-04:00",
@@ -85,7 +85,7 @@
     "name_portuguese": "Padr\u00f5es de Emiss\u00f5es de Escape Fora da Estrada",
     "name_spanish": "Normas de Emisiones de Escape Fuera de Carretera",
     "updated_at": "2013-08-15T09:18:22-04:00",
-    "url": "http://www.epa.gov/otaq/standards/nonroad/"
+    "url": "https://www.epa.gov/emission-standards-reference-guide"
   },
   {
     "created_at": "2013-07-29T09:08:00-04:00",
@@ -129,6 +129,6 @@
     "name_portuguese": "Lei da \u00c1gua Limpa",
     "name_spanish": "Ley de Agua Limpia",
     "updated_at": "2013-08-15T09:18:22-04:00",
-    "url": "http://www.epa.gov/agriculture/lcwa.html"
+    "url": "https://www.epa.gov/laws-regulations/summary-clean-water-act"
   }
 ]
