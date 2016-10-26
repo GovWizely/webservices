@@ -1,33 +1,52 @@
 module ScreeningList
   module GenerateFuzzyNameQuery
-    def generate_fuzzy_name_query(json)
+    def remove_stops
       stopwords    = %w( and the los )
       common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
-
-      # name variants
-      names         = %w( name_idx name_rev alt_idx alt_rev )
-      names_kw      = %w( name_idx.keyword alt_idx.keyword name_rev.keyword alt_rev.keyword )
-      name_no_wss   = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
-                          name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
 
       @name = @name.gsub(/[^\p{Alnum}\p{Space}]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
       @name = @name.split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
+    end
 
-      single_token = names_kw + name_no_wss
-      all_fields   = single_token + names
+    def generate_fuzzy_name_query(json)
+      multi_word_query = @name.match(/\s/) ? true : false
+      if multi_word_query
+        names         = %w( name_idx name_rev alt_idx alt_rev )
+        names_kw      = %w( name_idx.keyword alt_idx.keyword name_rev.keyword alt_rev.keyword )
+        name_no_wss   = %w( name_no_ws name_no_ws_rev alt_no_ws alt_no_ws_rev
+                                name_no_ws_with_common name_no_ws_rev_with_common alt_no_ws_with_common alt_no_ws_rev_with_common )
 
-      score_hash = {
-        # full string matches
-        full_string_0:      { fields: single_token, fuzziness: 0, weight: 5 },
-        full_string_1:      { fields: single_token, fuzziness: 1, weight: 5 },
-        full_string_2:      { fields: single_token, fuzziness: 2, weight: 5 },
+        single_token = names_kw + name_no_wss
+        all_fields   = single_token + names
 
-        # individual token matches
-        individual_token_0: { fields: all_fields, fuzziness: 0, weight: 5 },
-        individual_token_1: { fields: all_fields, fuzziness: 1, weight: 5 },
-        individual_token_2: { fields: all_fields, fuzziness: 2, weight: 75 },
-      }
+        score_hash = {
+          # full string matches
+          full_string_0:      { fields: single_token, fuzziness: 0, weight: 5 },
+          full_string_1:      { fields: single_token, fuzziness: 1, weight: 5 },
+          full_string_2:      { fields: single_token, fuzziness: 2, weight: 5 },
+
+          # individual token matches
+          individual_token_0: { fields: all_fields, fuzziness: 0, weight: 5 },
+          individual_token_1: { fields: all_fields, fuzziness: 1, weight: 5 },
+          individual_token_2: { fields: all_fields, fuzziness: 2, weight: 75 },
+        }
+      else
+        name_variants = %w( name_idx
+                            alt_idx
+                            name_no_ws
+                            name_no_ws_rev
+                            alt_no_ws
+                            alt_no_ws_rev
+                            name_no_ws_with_common
+                            alt_no_ws_with_common )
+
+        score_hash = {
+          individual_token_0: { fields: name_variants, fuzziness: 0, weight: 5 },
+          individual_token_1: { fields: name_variants, fuzziness: 1, weight: 5 },
+          individual_token_2: { fields: name_variants, fuzziness: 2, weight: 90 },
+        }
+      end
 
       json.disable_coord true
       json.set! 'should' do

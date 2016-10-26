@@ -1,4 +1,17 @@
 {
+    "highlight": {
+        "fields": {
+            "alt_idx": {},
+            "alt_no_ws": {},
+            "alt_no_ws_rev": {},
+            "alt_no_ws_with_common": {},
+            "name_idx": {},
+            "name_no_ws": {},
+            "name_no_ws_rev": {},
+            "name_no_ws_with_common": {}
+        },
+        "order": "score"
+    },
     "query": {
         "bool": {
             "disable_coord": true,
@@ -14,18 +27,14 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
+                                    "name_idx",
+                                    "alt_idx",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
                                     "alt_no_ws_rev",
                                     "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common"
+                                    "alt_no_ws_with_common"
                                 ],
                                 "fuzziness": 0,
                                 "operator": "and",
@@ -45,18 +54,14 @@
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
+                                    "name_idx",
+                                    "alt_idx",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
                                     "alt_no_ws_rev",
                                     "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common"
+                                    "alt_no_ws_with_common"
                                 ],
                                 "fuzziness": 1,
                                 "operator": "and",
@@ -70,129 +75,20 @@
                         "boost_mode": "replace",
                         "functions": [
                             {
-                                "weight": 5
+                                "weight": 90
                             }
                         ],
                         "query": {
                             "multi_match": {
                                 "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
-                                    "name_no_ws",
-                                    "name_no_ws_rev",
-                                    "alt_no_ws",
-                                    "alt_no_ws_rev",
-                                    "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common"
-                                ],
-                                "fuzziness": 2,
-                                "operator": "and",
-                                "query": "mohamed"
-                            }
-                        }
-                    }
-                },
-                {
-                    "function_score": {
-                        "boost_mode": "replace",
-                        "functions": [
-                            {
-                                "weight": 5
-                            }
-                        ],
-                        "query": {
-                            "multi_match": {
-                                "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
-                                    "name_no_ws",
-                                    "name_no_ws_rev",
-                                    "alt_no_ws",
-                                    "alt_no_ws_rev",
-                                    "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common",
                                     "name_idx",
-                                    "name_rev",
                                     "alt_idx",
-                                    "alt_rev"
-                                ],
-                                "fuzziness": 0,
-                                "operator": "and",
-                                "query": "mohamed"
-                            }
-                        }
-                    }
-                },
-                {
-                    "function_score": {
-                        "boost_mode": "replace",
-                        "functions": [
-                            {
-                                "weight": 5
-                            }
-                        ],
-                        "query": {
-                            "multi_match": {
-                                "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
                                     "name_no_ws",
                                     "name_no_ws_rev",
                                     "alt_no_ws",
                                     "alt_no_ws_rev",
                                     "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common",
-                                    "name_idx",
-                                    "name_rev",
-                                    "alt_idx",
-                                    "alt_rev"
-                                ],
-                                "fuzziness": 1,
-                                "operator": "and",
-                                "query": "mohamed"
-                            }
-                        }
-                    }
-                },
-                {
-                    "function_score": {
-                        "boost_mode": "replace",
-                        "functions": [
-                            {
-                                "weight": 75
-                            }
-                        ],
-                        "query": {
-                            "multi_match": {
-                                "fields": [
-                                    "name_idx.keyword",
-                                    "alt_idx.keyword",
-                                    "name_rev.keyword",
-                                    "alt_rev.keyword",
-                                    "name_no_ws",
-                                    "name_no_ws_rev",
-                                    "alt_no_ws",
-                                    "alt_no_ws_rev",
-                                    "name_no_ws_with_common",
-                                    "name_no_ws_rev_with_common",
-                                    "alt_no_ws_with_common",
-                                    "alt_no_ws_rev_with_common",
-                                    "name_idx",
-                                    "name_rev",
-                                    "alt_idx",
-                                    "alt_rev"
+                                    "alt_no_ws_with_common"
                                 ],
                                 "fuzziness": 2,
                                 "operator": "and",

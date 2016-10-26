@@ -44,5 +44,14 @@ module ScreeningList
       :places_of_birth,
       :source_information_url,
     ]
+
+    def self.search_for(options)
+      result = super(options)
+      if options['fuzzy_name'].present?
+        score_adjuster = ScoreAdjuster.new(options['name'], result[:hits])
+        result[:hits] = score_adjuster.rescored_hits
+      end
+      result
+    end
   end
 end

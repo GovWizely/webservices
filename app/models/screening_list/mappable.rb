@@ -10,49 +10,58 @@ module ScreeningList
         klass.name.typeize => {
           properties: {
             _updated_at:                { type: 'date', format: 'strictDateOptionalTime' },
-            # name variants
-            name:                       { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            # base names
+            name:                       { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
-
-            name_idx:                   { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            name_idx:                   { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
-
-            alt_names:                  { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            alt_names:                  { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
-
-            alt_idx:                    { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            alt_idx:                    { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
-
             # reversed
-            name_rev:                   { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            name_rev:                   { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
 
-            alt_rev:                    { type:     'string',
-                                          analyzer: 'standard_asciifolding_nostop',
-                                          fields:   {
+            alt_rev:                    { type:        'string',
+                                          term_vector: 'with_positions_offsets',
+                                          analyzer:    'standard_asciifolding_nostop',
+                                          fields:      {
                                             keyword: { type: 'string', analyzer: 'keyword_asciifolding_lowercase' }, }, },
-
             # whitespace removed
-            name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            name_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws:                  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws:                 { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            name_no_ws_with_common:     { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            alt_no_ws:                  { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            alt_no_ws_with_common:      { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
 
             # whitespace removed and reversed
-            name_no_ws_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            name_no_ws_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws_rev:              { type: 'string', analyzer: 'standard_asciifolding_nostop' },
-            alt_no_ws_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop' },
+            name_no_ws_rev:             { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            name_no_ws_rev_with_common: { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            alt_no_ws_rev:              { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
+            alt_no_ws_rev_with_common:  { type: 'string', analyzer: 'standard_asciifolding_nostop',
+                                          term_vector: 'with_positions_offsets', },
 
             remarks:                    { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
             title:                      { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
