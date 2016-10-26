@@ -47,7 +47,7 @@ module ScreeningList
 
     def self.search_for(options)
       result = super(options)
-      if options['fuzzy_name'].present?
+      if options['fuzzy_name'].present? && options['name'].present?
         score_adjuster = ScoreAdjuster.new(options['name'], result[:hits])
         result[:hits] = score_adjuster.rescored_hits
       end
