@@ -7,7 +7,7 @@ module ScreeningList
 
     def initialize(name, hits)
       new_name = remove_stops(name)
-      @no_adjustment_required = new_name.blank? || new_name.split.many? || hits.empty? || hits.first[:highlight].empty?
+      @no_adjustment_required = new_name.blank? || new_name.split.many? || hits.empty? || !hits.map{|x|x[:highlight]}.all?
       @hits = hits
     end
 
