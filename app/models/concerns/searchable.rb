@@ -71,11 +71,11 @@ module Searchable
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
-      results = { offset:              0,
-                  sources_used:        index_meta(sources),
+      results = { offset: 0,
+                  sources_used: index_meta(sources),
                   search_performed_at: search_performed_at,
-                  hits:                response['hits'].deep_symbolize_keys[:hits],
-                  total:               response['hits']['total'], }
+                  hits: response['hits'].deep_symbolize_keys[:hits],
+                  total: response['hits']['total'], }
 
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         batch = response['hits'].deep_symbolize_keys
@@ -91,13 +91,12 @@ module Searchable
     end
 
     def index_meta(sources = nil)
-      models(sources).map do |model|
-        {
-          source:              model.source[:full_name] || model.source[:code],
-          source_last_updated: model.stored_metadata[:last_updated] || '',
-          last_imported:       model.stored_metadata[:last_imported] || '',
-          import_rate:         model.stored_metadata[:import_rate] || '',
-        }
+      searchable_models = models sources
+      metadatas = raw_metadatas searchable_models.map(&:index_name)
+
+      searchable_models.map do |model|
+        stored_metadata = model.normalize_metadata(metadatas[model.index_name])
+        build_model_metadata model.source, stored_metadata
       end
     end
 
@@ -139,6 +138,30 @@ module Searchable
       search_options[:search_type] = query.search_type if query.search_type
 
       search_options
+    end
+
+    def raw_metadatas(index_names)
+      query = IdsQuery.new([0])
+      search_options = {
+        index: index_names,
+        type: 'metadata',
+        body: query.generate_search_body_hash,
+        size: 10_000 }
+
+      hits = ES.client.search(search_options)['hits']['hits']
+      results = hits.map do |metadata|
+        [metadata['_index'], metadata['_source'].symbolize_keys]
+      end
+      Hash[results]
+    end
+
+    def build_model_metadata(source, stored_metadata)
+      {
+        source:              source[:full_name] || source[:code],
+        source_last_updated: stored_metadata[:last_updated],
+        last_imported:       stored_metadata[:last_imported],
+        import_rate:         stored_metadata[:import_rate],
+      }
     end
   end
 end
