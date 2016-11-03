@@ -36,20 +36,20 @@ class ItaZipCodeData
 
   def import
     post_doc = Nokogiri::XML(open(@post_resource))
-    ita_office_locations = post_doc.xpath('//POSTINFO').map { |location_info| process_location_info(location_info) }
+    locations = post_doc.xpath('//POSTINFO').map { |location_info| process_location_info(location_info) }
 
     zip_code_doc = Nokogiri::XML(open(@zip_code_resource))
     zip_entries = zip_code_doc.xpath('//ZIPINFO').map { |zip_info| process_zip_info(zip_info) }
 
-    ItaZipCode.index combine_hashes(zip_entries, ita_office_locations)
+    ItaZipCode.index combine_hashes(zip_entries, locations)
   end
 
   private
 
-  def combine_hashes(zip_entries, ita_office_locations)
+  def combine_hashes(zip_entries, locations)
     combined_hashes = []
     zip_entries.each do |zip_entry|
-      ita_office_locations.each do |office|
+      locations.each do |office|
         if zip_entry[:post] == office[:post]
           combined_hashes.push zip_entry.merge(office)
         end

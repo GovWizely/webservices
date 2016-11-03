@@ -30,7 +30,6 @@ Webservices::Application.routes.draw do
   concern :api_routable do
     mapping = { 'market_researches'       => 'market_research_library',
                 'salesforce_articles/faq' => 'ita_faqs',
-                'ita_office_locations'    => 'ita_office_locations',
                 'ita_zip_codes'           => 'ita_zipcode_to_post',
      }
 
