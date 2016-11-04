@@ -17,7 +17,7 @@ module ScreeningList
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = 'http://www.bis.doc.gov/dpl/dpl.txt'
+    ENDPOINT = 'https://www.bis.doc.gov/dpl/dpl.txt'
 
     COLUMN_HASH = {
       name:            :name,

@@ -15,7 +15,7 @@ module ScreeningList
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
+    ENDPOINT = 'https://www.bis.doc.gov/index.php/forms-documents/doc_download/1053-unverified-list'
 
     def import
       @source_list_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html', model_class)

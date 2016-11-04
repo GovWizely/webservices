@@ -22,7 +22,7 @@ module ScreeningList
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = 'http://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
+    ENDPOINT = 'https://www.bis.doc.gov/index.php/forms-documents/doc_download/1072-el'
 
     COLUMN_HASH = {
       name:                    :name,
