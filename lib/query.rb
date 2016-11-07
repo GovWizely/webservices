@@ -154,7 +154,6 @@ class Query
 
   def generate_should_clauses(fields, json)
     json.set! :should do
-      generate_query_field_matches(fields, json)
       multi_match_semantic_query(fields, json) if @q
     end
   end
@@ -162,13 +161,6 @@ class Query
   def multi_match_semantic_query(fields, json)
     json.child! { generate_multi_match(json, fields[:q], @q) }
     json.child! { generate_semantic_query(json, fields[:q]) } if @semantic_query && @semantic_query.query != @q
-  end
-
-  def generate_query_field_matches(fields, json)
-    fields[:query].each do |field|
-      search = send(field)
-      json.child! { generate_match(json, field, search) } if search
-    end
   end
 
   def filter_from_fields(json, fields)

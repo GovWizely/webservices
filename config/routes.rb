@@ -30,7 +30,6 @@ Webservices::Application.routes.draw do
   concern :api_routable do
     mapping = { 'market_researches'       => 'market_research_library',
                 'salesforce_articles/faq' => 'ita_faqs',
-                'ita_office_locations'    => 'ita_office_locations',
                 'ita_zip_codes'           => 'ita_zipcode_to_post',
      }
 
@@ -75,7 +74,7 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates trade_leads trade_events)
+    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates trade_leads trade_events ita_office_locations)
     apis_migrated_to_endpointme.each do |legacy_endpoint|
       get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
       get "/#{legacy_endpoint}/*id", to: 'api_models#show', version_number: 1, api: legacy_endpoint.to_sym
