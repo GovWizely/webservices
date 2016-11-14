@@ -122,12 +122,6 @@ class Query
     end
   end
 
-  def generate_multi_match_query(json, multi_fields, query)
-    json.query do
-      generate_multi_match(json, multi_fields, query)
-    end if query
-  end
-
   def generate_match(json, field, query, operator = :and)
     json.match do
       json.set! field do

@@ -85,16 +85,6 @@ module Importable
     self.class.model_class
   end
 
-  def lookup_state(state_str)
-    State.normalize state_str
-  end
-
-  def parse_city_from_address(event_hash)
-    event_hash[:address].grep(/[A-Z]{2} [0-9]{5}(-\d{4})*$/) do |address_line|
-      address_line.split(',').reverse[1].to_s.squish
-    end.compact.first
-  end
-
   delegate :can_purge_old?, to: :model_class
 
   module ClassMethods
