@@ -24,14 +24,10 @@ Webservices::Application.routes.draw do
   concern :api_v2_routable do
     get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
     get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
-    get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
   end
 
   concern :api_routable do
-    mapping = { 'market_researches'       => 'market_research_library',
-                'salesforce_articles/faq' => 'ita_faqs',
-                'ita_zip_codes'           => 'ita_zipcode_to_post',
-     }
+    mapping = { 'market_researches' => 'market_research_library', 'salesforce_articles/faq' => 'ita_faqs' }
 
     mapping.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false
@@ -65,16 +61,19 @@ Webservices::Application.routes.draw do
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    get '/ita_zipcode_to_post/search(.json)'  => 'ita_zip_codes#search'
-  end
-
-  scope module: 'api/v2', defaults: { format: :json } do
     concerns :api_routable
     concerns :api_v2_routable
   end
 
   scope module: 'api/v2', defaults: { format: :json } do
-    apis_migrated_to_endpointme = %w(business_service_providers tariff_rates trade_leads trade_events ita_office_locations)
+    apis_migrated_to_endpointme = %w(
+      business_service_providers
+      tariff_rates
+      trade_leads
+      trade_events
+      ita_office_locations
+      ita_zipcode_to_post
+    )
     apis_migrated_to_endpointme.each do |legacy_endpoint|
       get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
       get "/#{legacy_endpoint}/*id", to: 'api_models#show', version_number: 1, api: legacy_endpoint.to_sym
