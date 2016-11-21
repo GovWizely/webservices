@@ -81,7 +81,7 @@ Fire up a server:
 This Procfile assumes you already have Elasticsearch and Redis running.
     
 Import some data:    
-    bundle exec rake ita:import[ScreeningList,MarketResearchData]
+    bundle exec rake ita:import[ScreeningList]
 
 Admin users can log in and monitor the progress of the Sidekiq import jobs via `/sidekiq`.
 
@@ -89,21 +89,15 @@ Admin users can log in and monitor the progress of the Sidekiq import jobs via `
 
 Since v2 of the API, an authentication token is required for every request. Pass it on the query string:
 
-<http://localhost:3000/market_research_library/search?api_key=devkey>
-
 <http://localhost:3000/consolidated_screening_list/search?api_key=devkey&size=5&offset=8>
 
 <http://localhost:3000/consolidated_screening_list/search?api_key=devkey&q=john>
 
 <http://localhost:3000/consolidated_screening_list/search?api_key=devkey&sources=SDN,EL>
 
-<http://localhost:3000/market_research_library/search?api_key=devkey&q=oil>
-
-<http://localhost:3000/market_research_library/search?api_key=devkey&countries=HU,CA>
-
 Or using http headers:
 
-    curl -H'Api-Key: devkey' 'http://localhost:3000/v2/market_research_library/search'
+    curl -H'Api-Key: devkey' 'http://localhost:3000/v2/consolidated_screening_list/search'
 
 ### Dynamic APIs
 

@@ -5,7 +5,6 @@ describe Webservices::Application do
     subject { described_class.model_classes }
 
     it { is_expected.to include(ScreeningList::Dpl) }
-    it { is_expected.to include(MarketResearch) }
 
     it { is_expected.not_to include(ScreeningList::Consolidated) }
     it { is_expected.not_to include(SalesforceArticle::FaqData) }

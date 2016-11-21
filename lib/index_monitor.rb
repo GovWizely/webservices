@@ -1,6 +1,5 @@
 class IndexMonitor
   MODEL_LIST = [
-    'MarketResearch',
     'SalesforceArticle::CountryCommercial',
     'SalesforceArticle::Faq',
     'SalesforceArticle::MarketInsight',
