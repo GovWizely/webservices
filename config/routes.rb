@@ -27,7 +27,7 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_routable do
-    mapping = { 'market_researches' => 'market_research_library', 'salesforce_articles/faq' => 'ita_faqs' }
+    mapping = { 'salesforce_articles/faq' => 'ita_faqs' }
 
     mapping.each do |controller, path|
       get "/#{path}/search(.json)" => "#{controller}#search", format: false
@@ -73,6 +73,7 @@ Webservices::Application.routes.draw do
       trade_events
       ita_office_locations
       ita_zipcode_to_post
+      market_research_library
     )
     apis_migrated_to_endpointme.each do |legacy_endpoint|
       get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
