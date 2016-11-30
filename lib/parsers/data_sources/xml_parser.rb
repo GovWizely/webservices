@@ -34,5 +34,7 @@ class DataSources::XMLParser
     field_values = xml.xpath(source_xpath).children.map(&:inner_text).join("\n")
     converted_field_values = CSV.parse(field_values, converters: [:date, :numeric], headers: false).flatten
     guess_column_type_from_data(converted_field_values)
+  rescue CSV::MalformedCSVError
+    'string'
   end
 end
