@@ -346,7 +346,13 @@ end
 
 shared_examples 'it contains all ScreeningList::Isn results' do
   let(:source) { ScreeningList::Isn }
-  let(:expected) { (0..7).to_a }
+  let(:expected) { (0..2).to_a }
+  it_behaves_like 'it contains all expected results of source'
+end
+
+shared_examples 'it contains all ScreeningList::Isn results that match countries "PK"' do
+  let(:source) { ScreeningList::Isn }
+  let(:expected) { [2] }
   it_behaves_like 'it contains all expected results of source'
 end
 
