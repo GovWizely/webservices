@@ -101,6 +101,7 @@ module ScreeningList
             json.child! { json.terms { json.set! 'ids.country', @countries } }
             json.child! { json.terms { json.nationalities @countries } }
             json.child! { json.terms { json.citizenships @countries } }
+            json.child! { json.terms { json.country @countries } }
           end if @countries
         end
       end if @countries || @type || @sources.any? || @start_date || @end_date || @issue_date || @expiration_date

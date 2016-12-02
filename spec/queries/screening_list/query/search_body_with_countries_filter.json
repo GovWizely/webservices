@@ -21,6 +21,11 @@
                     "terms": {
                         "citizenships": ["US", "CA"]
                     }
+                },
+                {
+                    "terms": {
+                        "country": ["US", "CA"]
+                    }
                 }
             ]
         }

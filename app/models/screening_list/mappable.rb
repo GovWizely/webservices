@@ -88,7 +88,7 @@ module ScreeningList
             dates_of_birth:             { type: 'string', analyzer: 'keyword' },
             start_date:                 { type: 'date',   format: 'YYYY-MM-dd' },
             end_date:                   { type: 'date',   format: 'YYYY-MM-dd' },
-
+            country:                    { type: 'string', analyzer: 'keyword' },
             entity_number:              { type: 'integer' },
           },
         },

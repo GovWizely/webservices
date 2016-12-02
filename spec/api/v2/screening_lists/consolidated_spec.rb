@@ -173,6 +173,14 @@ describe 'Consolidated Screening List API V2', type: :request do
             let(:sources) { [ScreeningList::Sdn] }
           end
         end
+
+        context 'which is present in country' do
+          let(:params) { { countries: 'PK' } }
+          it_behaves_like 'it contains all ScreeningList::Isn results that match countries "PK"'
+          it_behaves_like 'it contains only results with sources' do
+            let(:sources) { [ScreeningList::Isn] }
+          end
+        end
       end
 
       context 'two countries searched for' do

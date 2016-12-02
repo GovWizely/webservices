@@ -1,179 +1,53 @@
 ---
-- :name: 7th of Tir
-  :federal_register_notice: Vol. 74, No. 8, 01/13/09
-  :start_date: '2008-07-08'
-  :end_date: 
+- :name: 150th Aircraft Repair Plant (ARZ) (Kaliningrad)
+  :federal_register_notice: Vol. 81, No. 128, 07/05/16
+  :start_date: '2016-06-28'
   :remarks: 
   :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 3fc0796544251d91d81d8b35ccc3d91cc02d2cd6
+  :alt_names: 
+  :country: RU
+  :id: 66a593540d9afb462007a039dc4ba73bbf0306b8
   :source: &1
     :full_name: Nonproliferation Sanctions (ISN) - State Department
     :code: ISN
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
-  :source_information_url: http://1.usa.gov/1NuVFxV
-  :programs:
-  - E.O. 13382
-  :name_idx: 7th of Tir
-  :name_rev: Tir of 7th
-  :name_no_ws: 7thofTir
-  :name_no_ws_rev: Tirof7th
-- :name: Aerospace Industries Organization (AIO)
-  :federal_register_notice: Vol. 70, No. 126, 07/01/05
-  :start_date: '2005-06-28'
-  :end_date: 
-  :remarks: 
-  :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 96d5a86319756c3a7ce3819d208e636bd59b897e
-  :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
-  :source_information_url: http://1.usa.gov/1NuVFxV
-  :programs:
-  - E.O. 13382
-  :name_idx: Aerospace Industries AIO
-  :name_no_ws_with_common: AerospaceIndustriesOrganizationAIO
-  :name_no_ws_rev_with_common: AIOOrganizationIndustriesAerospace
-  :name_rev: AIO Industries Aerospace
-  :name_no_ws: AerospaceIndustriesAIO
-  :name_no_ws_rev: AIOIndustriesAerospace
-- :name: Aerospace Industries Organization (AIO)
-  :federal_register_notice: Vol. 72, No. 186, 09/26/07
-  :start_date: '2007-09-26'
-  :end_date: 
-  :remarks: 
-  :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 1e5fd06bb5e85dd97f5cbc3e3cfe4b507ccf08dd
-  :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
-  :source_information_url: http://1.usa.gov/1NuVFxV
-  :programs:
-  - E.O. 12938
-  :name_idx: Aerospace Industries AIO
-  :name_no_ws_with_common: AerospaceIndustriesOrganizationAIO
-  :name_no_ws_rev_with_common: AIOOrganizationIndustriesAerospace
-  :name_rev: AIO Industries Aerospace
-  :name_no_ws: AerospaceIndustriesAIO
-  :name_no_ws_rev: AIOIndustriesAerospace
-- :name: Aerospace Industries Organization
-  :federal_register_notice: Vol. 72, No. 186, 09/26/07
-  :start_date: '2007-09-26'
-  :end_date: 
-  :remarks: 
-  :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 711b69021125111614718c34349d64cc7c90e887
-  :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
-  :source_information_url: http://1.usa.gov/1NuVFxV
-  :programs:
-  - Missle Sanctions Laws
-  :name_idx: Aerospace Industries
-  :name_no_ws_with_common: AerospaceIndustriesOrganization
-  :name_no_ws_rev_with_common: OrganizationIndustriesAerospace
-  :name_rev: Industries Aerospace
-  :name_no_ws: AerospaceIndustries
-  :name_no_ws_rev: IndustriesAerospace
-- :name: Aerospace Logistics Services
-  :federal_register_notice: Vol. 72, No. 3, 1/5/07
-  :start_date: '2006-12-28'
-  :end_date: 
-  :remarks: 
-  :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 5e4533a32e6d442a082c985d97bcb301308016a4
-  :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: GB
-    :postal_code: 
-    :state: 
   :source_information_url: http://1.usa.gov/1NuVFxV
   :programs:
   - INKSNA
-  - ISNA
-  :name_idx: Aerospace Logistics Services
-  :name_rev: Services Logistics Aerospace
-  :name_no_ws: AerospaceLogisticsServices
-  :name_no_ws_rev: ServicesLogisticsAerospace
-- :name: Aerospace Logistics Services
-  :federal_register_notice: Vol. 72, No. 77, 4/23/07
-  :start_date: '2007-04-17'
-  :end_date: 
+  :name_idx: 150th Aircraft Repair Plant ARZ Kaliningrad
+  :name_rev: Kaliningrad ARZ Plant Repair Aircraft 150th
+  :name_no_ws: 150thAircraftRepairPlantARZKaliningrad
+  :name_no_ws_rev: KaliningradARZPlantRepairAircraft150th
+- :name: Amir Hossein Rahimyar
+  :federal_register_notice: Vol. 78, No. 38, 02/26/13
+  :start_date: '2012-12-13'
   :remarks: 
   :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: cf64bfd5c424e4fc3880e82ac6ce4d028e4f8af3
+  :alt_names: 
+  :country: IR
+  :id: f862fb370c69ed50a5448840cd5aafd3dbfef568
   :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: GB
-    :postal_code: 
-    :state: 
   :source_information_url: http://1.usa.gov/1NuVFxV
   :programs:
-  - INKSNA
-  - ISNA
-  :name_idx: Aerospace Logistics Services
-  :name_rev: Services Logistics Aerospace
-  :name_no_ws: AerospaceLogisticsServices
-  :name_no_ws_rev: ServicesLogisticsAerospace
-- :name: Ahmad Derakhshandeh
-  :federal_register_notice: Vol. 72, No. 34, 02/21/07
-  :start_date: '2007-01-09'
-  :end_date: 
-  :remarks: 
+  - E.O. 13382
+  :name_idx: Amir Hossein Rahimyar
+  :name_rev: Rahimyar Hossein Amir
+  :name_no_ws: AmirHosseinRahimyar
+  :name_no_ws_rev: RahimyarHosseinAmir
+- :name: Abdul Qadeer Khan
+  :federal_register_notice: Vol. 74, No. 11, 01/16/09
+  :start_date: '2009-01-09'
+  :remarks: Associated with the A.Q. Khan Network
   :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 0d402d6fab3a1479c4d504c4b56a84f6e28f8779
+  :alt_names: 
+  :country: PK
+  :id: 2d2db09c686e4829d0ef1b0b04145eec3d42cd88
   :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
   :source_information_url: http://1.usa.gov/1NuVFxV
   :programs:
-  - E.O. 13328 - Iran
-  :name_idx: Ahmad Derakhshandeh
-  :name_rev: Derakhshandeh Ahmad
-  :name_no_ws: AhmadDerakhshandeh
-  :name_no_ws_rev: DerakhshandehAhmad
-- :name: Ahmad Vahid Dastjerdi
-  :federal_register_notice: Vol. 72, No. 213, 11/05/07
-  :start_date: '2007-10-25'
-  :end_date: 
-  :remarks: 
-  :source_list_url: http://1.usa.gov/1NuVFxV
-  :id: 93f693f4195d02dc7e8f5cc861ca51512287f2fe
-  :source: *1
-  :addresses:
-  - :address: 
-    :city: 
-    :country: IR
-    :postal_code: 
-    :state: 
-  :source_information_url: http://1.usa.gov/1NuVFxV
-  :programs:
-  - E.O. 13328 - Iran
-  :name_idx: Ahmad Vahid Dastjerdi
-  :name_rev: Dastjerdi Vahid Ahmad
-  :name_no_ws: AhmadVahidDastjerdi
-  :name_no_ws_rev: DastjerdiVahidAhmad
+  - E.O. 13382
+  - Export-Import Bank Act
+  - Nuclear Proliferation Prevention Act
+  :name_idx: Abdul Qadeer Khan
+  :name_rev: Khan Qadeer Abdul
+  :name_no_ws: AbdulQadeerKhan
+  :name_no_ws_rev: KhanQadeerAbdul

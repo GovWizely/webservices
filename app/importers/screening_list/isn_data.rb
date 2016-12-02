@@ -9,30 +9,28 @@ module ScreeningList
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
-      address address_number address_remarks
-      alternate_name alternate_number alternate_remarks alternate_type
-      call_sign city country date_liftedwaivedexpired
-      effective_date entity_number federal_register_notice
-      gross_register_tonnage gross_tonnage license_policy
-      license_requirement name postal_code programs
-      remarksnotes sdn_type source_list standard_order
-      stateprovince title vessel_flag vessel_owner
-      vessel_type web_link)
+      alternative_names
+      country
+      effective_date federal_register_notice
+      name programs
+      remarksnotes source_list
+      web_link)
 
     include ScreeningList::CanGroupRows
     self.group_by = %i(name effective_date federal_register_notice)
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = "#{Rails.root}/data/screening_lists/isn/isn.csv"
+    ENDPOINT = 'https://mbcsanctions.t.state.gov/sanctions.csv'
 
     COLUMN_HASH = {
-      name:                     :name,
-      federal_register_notice:  :federal_register_notice,
-      effective_date:           :start_date,
-      date_liftedwaivedexpired: :end_date,
-      remarksnotes:             :remarks,
-      web_link:                 :source_list_url,
+      name:                    :name,
+      federal_register_notice: :federal_register_notice,
+      effective_date:          :start_date,
+      remarksnotes:            :remarks,
+      web_link:                :source_list_url,
+      alternative_names:       :alt_names,
+      country:                 :country,
     }
 
     def loaded_resource
@@ -59,33 +57,18 @@ module ScreeningList
       doc[:id]                     = id
       doc[:source]                 = model_class.source
 
-      doc[:addresses] = rows.map { |row| process_address(row) }.uniq
+      doc[:start_date] &&= parse_american_date(doc[:start_date])
 
-      %i(start_date end_date).each do |field|
-        doc[field] &&= parse_american_date(doc[field])
-      end
-
-      doc[:source_list_url] = UrlMapper.get_bitly_url(doc[:source_list_url], model_class)
+      doc[:source_list_url] = doc[:source_list_url] ? UrlMapper.get_bitly_url(doc[:source_list_url], model_class) : doc[:source_list_url]
       doc[:source_information_url] = doc[:source_list_url]
 
       doc[:programs] = rows.map { |row| row[:programs] }
+      doc[:alt_names] = doc[:alt_names].split(',').map(&:strip) if doc[:alt_names]
+      doc[:country] &&= lookup_country(doc[:country])
 
       make_names(doc)
 
       doc
-    end
-
-    ADDRESS_HASH = {
-      address:       :address,
-      city:          :city,
-      country:       :country,
-      postal_code:   :postal_code,
-      stateprovince: :state,
-    }
-
-    def process_address(row)
-      address = remap_keys(ADDRESS_HASH, row.to_hash)
-      address
     end
   end
 end
