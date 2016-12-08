@@ -22,7 +22,6 @@ Webservices::Application.routes.draw do
   end
 
   concern :api_v2_routable do
-    get '/trade_articles/search(.json)' => 'sharepoint_trade_articles#search'
     get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
   end
 

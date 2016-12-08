@@ -13,7 +13,7 @@ describe DataSource do
       it { is_expected.not_to allow_value(bad_value).for(:api) }
     end
 
-    %w(ita_taxonomy screening_lists sharepoint_trade_articles envirotech api_models).each do |existing_api|
+    %w(ita_taxonomy screening_lists envirotech api_models).each do |existing_api|
       it { is_expected.not_to allow_value(existing_api).for(:api) }
     end
 
