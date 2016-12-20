@@ -44,7 +44,7 @@ module ScreeningList
 
       docs = group_rows(rows).map do |id, grouped|
         process_grouped_rows(id, grouped)
-      end
+      end.compact
 
       model_class.index(docs)
     end
@@ -53,6 +53,7 @@ module ScreeningList
 
     def process_grouped_rows(id, rows)
       doc = remap_keys(COLUMN_HASH, rows.first.to_hash)
+      return if doc.values.compact.empty?
 
       doc[:id]                     = id
       doc[:source]                 = model_class.source
