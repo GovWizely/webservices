@@ -40,7 +40,13 @@ module VersionableResource
 
   def loaded_resource
     return super if defined?(super)
-    @loaded_resource ||= Array(@resource).map { |r| open(r).read }.join
+    @loaded_resource ||= Array(@resource).map { |r| read_resource(r) }.join
+  end
+
+  def read_resource(r)
+    resource_content = open(r).read
+    detection = CharlockHolmes::EncodingDetector.detect resource_content
+    CharlockHolmes::Converter.convert resource_content, detection[:encoding], 'UTF-8'
   end
 
   def available_version

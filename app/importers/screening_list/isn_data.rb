@@ -33,10 +33,6 @@ module ScreeningList
       country:                 :country,
     }
 
-    def loaded_resource
-      @loaded_resource ||= open(@resource, 'r:iso-8859-1').read
-    end
-
     def import
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 

@@ -258,3 +258,22 @@
   - AcademyBusiness2Training
   - T2BA
   - TrainingBusinessofAcademy
+- :name: Advent International Limited
+  :id: 10db46acdbc58715b66059723606eaa59d1ff0d7
+  :source: *1
+  :source_list_url: http://1.usa.gov/1iwwTSJ
+  :source_information_url: http://1.usa.gov/1Qi4R7Z
+  :addresses:
+  - :address: Room 1303 Goldfield Tower, 53–59 Wuhu Street, Kung Hom, Kowloon, Hong
+      Kong
+    :city:
+    :state:
+    :postal_code:
+    :country: HK
+  :alt_names: []
+  :name_idx: Advent International
+  :name_no_ws_with_common: AdventInternationalLimited
+  :name_no_ws_rev_with_common: LimitedInternationalAdvent
+  :name_rev: International Advent
+  :name_no_ws: AdventInternational
+  :name_no_ws_rev: InternationalAdvent

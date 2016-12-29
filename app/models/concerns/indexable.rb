@@ -87,7 +87,8 @@ module Indexable
         index: index_name,
         type:  'metadata',
         id:    0,
-        body:  body,)
+        body:  body)
+      ES.client.indices.refresh index: index_name
     end
 
     # If any field is not present, we initialize it with those values.

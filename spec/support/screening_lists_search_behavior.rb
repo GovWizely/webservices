@@ -316,7 +316,7 @@ end
 
 shared_examples 'it contains all ScreeningList::Uvl results' do
   let(:source) { ScreeningList::Uvl }
-  let(:expected) { (0..11).to_a }
+  let(:expected) { (0..12).to_a }
   it_behaves_like 'it contains all expected results of source'
 end
 

@@ -3,7 +3,7 @@
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
   :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title:
@@ -16,13 +16,13 @@
   - :address: 'Microrayan 3rd Apt. 45, block #21'
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   - :address: A2 Ground Floor, City Computer Plaza, Shar-e-Naw
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: &1
     :full_name: Entity List (EL) - Bureau of Industry and Security
     :code: EL
@@ -38,8 +38,8 @@
 - :name: Fazel Khalil Construction Company
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
-  :standard_order: 
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :standard_order:
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title:
@@ -50,8 +50,8 @@
       10
     :city: Kabul
     :country: AF
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
   :source: *1
   :source_information_url: http://1.usa.gov/1L47xrV
   :name_idx: Fazel Khalil Construction
@@ -64,7 +64,7 @@
   :federal_register_notice: 77 FR 25055
   :start_date: '2012-04-27'
   :standard_order:
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title:
@@ -119,7 +119,7 @@
   :federal_register_notice: '78 FR 75485 '
   :start_date: '2013-12-12'
   :standard_order:
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title:
@@ -141,7 +141,7 @@
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-21'
   :standard_order:
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title:
@@ -168,7 +168,7 @@
   :federal_register_notice: 76 FR 10001
   :start_date: '2011-11-21'
   :standard_order:
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title: Title 1
@@ -195,7 +195,7 @@
   :federal_register_notice: 76 FR 71867
   :start_date: '2011-11-22'
   :standard_order:
-  :license_requirement: For all items subject to the EAR. (See Â§744.11 of the EAR).
+  :license_requirement: For all items subject to the EAR. (See §744.11 of the EAR).
   :license_policy: Presumption of denial.
   :source_list_url: http://1.usa.gov/1L47xrV
   :title: Title 2
