@@ -52,7 +52,6 @@ class ItaTaxonomy
         label_suggest: {
           type: 'completion',
           analyzer: 'label_analyzer',
-          payloads: false,
           preserve_separators: true,
           preserve_position_increments: true,
           max_input_length: 50

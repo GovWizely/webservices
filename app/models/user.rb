@@ -98,6 +98,7 @@ class User
   def email_was
     persisted? ? self.class.to_adapter.get(id).email : nil
   end
+
   # -- END OF STUFF THAT DIRECTLY SUPPORTS ES + DEVISE ------------------------
 
   # TODO: can I reuse code from Indexable?
@@ -108,7 +109,7 @@ class User
   attribute :email, String, mapping: { type: 'string', index: 'not_analyzed' }
   attribute :encrypted_password, String
   attribute :api_key, String, mapping: { type: 'string', index: 'not_analyzed' },
-                              default: proc { generate_api_key }
+            default: proc { generate_api_key }
   attribute :full_name, String
   attribute :company, String
 
@@ -149,7 +150,7 @@ class User
 
   def email_must_be_unique
     return unless email
-    match = self.class.search(filter: { bool: { must: { term: { email: email } } } }).first
+    match = self.class.search(query: { constant_score: { filter: { term: { email: email } } } }).first
     errors.add(:email, 'has already been taken') if match && match.id != id
   end
 end

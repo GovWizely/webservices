@@ -4,7 +4,7 @@ class UrlMapper
   include Indexable
 
   BITLY_BASE_URL = "https://api-ssl.bitly.com/v3/user/link_save?access_token=#{Rails.configuration.bitly_api_token}"
-
+  self.settings = {}
   self.mappings = {
     url_mapper: {
       dynamic:    'false',
