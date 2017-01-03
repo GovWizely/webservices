@@ -8,7 +8,7 @@ module Utils
   def older_than(timefield, timestamp)
     Jbuilder.new do |json|
       json.query do
-        json.filtered do
+        json.constant_score do
           json.filter do
             json.range do
               json.set! timefield do

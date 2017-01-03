@@ -21,6 +21,19 @@ GIT
       nokogiri (= 1.6.7.1)
       rubyzip (= 1.2.0)
 
+GIT
+  remote: git://github.com/loren/elasticsearch-ruby.git
+  revision: 2798c446ab7d98e3e8292992ebb82316ad463faa
+  specs:
+    elasticsearch (1.0.18)
+      elasticsearch-api (= 1.0.18)
+      elasticsearch-transport (= 1.0.18)
+    elasticsearch-api (1.0.18)
+      multi_json
+    elasticsearch-transport (1.0.18)
+      faraday
+      multi_json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -115,11 +128,6 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
-    elasticsearch (5.0.0)
-      elasticsearch-api (= 5.0.0)
-      elasticsearch-transport (= 5.0.0)
-    elasticsearch-api (5.0.0)
-      multi_json
     elasticsearch-model (0.1.9)
       activesupport (> 3)
       elasticsearch (> 0.4)
@@ -131,9 +139,6 @@ GEM
       elasticsearch-model (>= 0.1)
       hashie
       virtus
-    elasticsearch-transport (5.0.0)
-      faraday
-      multi_json
     equalizer (0.0.11)
     erubis (2.7.0)
     eventmachine (1.2.1)
@@ -373,7 +378,7 @@ DEPENDENCIES
   charlock_holmes
   codeclimate-test-reporter
   devise (~> 3.4.0)
-  elasticsearch
+  elasticsearch!
   elasticsearch-model
   elasticsearch-persistence
   foreman
