@@ -90,8 +90,9 @@ class Query
 
   def generate_search_body
     Jbuilder.encode do |json|
-      generate_query(json)
-      generate_filter(json)
+      generate_query_and_filter(json)
+      # generate_query(json)
+      # generate_filter(json)
       generate_aggregations(json)
     end
   end

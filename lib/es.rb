@@ -8,7 +8,7 @@ class ES
   private
 
   def self.config
-    config = { url: 'http://127.0.0.1:9200', log: Rails.env == 'development' }
+    config = { url: 'http://127.0.0.1:9200', log: Rails.env == 'test' }
 
     if File.exist?("#{Rails.root}/config/elasticsearch.yml")
       # :nocov:

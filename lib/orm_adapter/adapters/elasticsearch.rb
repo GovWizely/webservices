@@ -38,7 +38,7 @@ module OrmAdapter
         { term: { key => options[field] } }
       end
 
-      query = { query: { filtered: { filter: { bool: { must: must } } } } }
+      query = { query: { bool: { filter: must } } }
       klass.search(query)
     end
   end

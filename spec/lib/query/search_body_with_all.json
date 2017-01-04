@@ -44,33 +44,33 @@
             ]
           }
         }
-      ]
-    }
-  },
-  "filter": {
-    "bool": {
-      "must": [
-        {
-          "query": {
-            "match": {
-              "countries": {
-                "operator": "and",
-                "query": "canada"
+      ],
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "query": {
+                "match": {
+                  "countries": {
+                    "operator": "and",
+                    "query": "canada"
+                  }
+                }
+              }
+            },
+            {
+              "query": {
+                "match": {
+                  "industries": {
+                    "operator": "and",
+                    "query": "fishing"
+                  }
+                }
               }
             }
-          }
-        },
-        {
-          "query": {
-            "match": {
-              "industries": {
-                "operator": "and",
-                "query": "fishing"
-              }
-            }
-          }
+          ]
         }
-      ]
+      }
     }
   }
 }

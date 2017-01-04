@@ -9,18 +9,18 @@ module DataSources
 
       def find_published(api, version_number, exclude_data = true)
         versioned_id = id_from_params(api, version_number)
-        query_hash = { filter: { and: [{ term: { _id: versioned_id } }, { term: { published: true } }] } }
-        query_hash[:_source] = { exclude: ['data'] } if exclude_data
+        query_hash = { query: { bool: { filter: [{ term: { _id: versioned_id } }, { term: { published: true } }] } } }
+        query_hash[:_source] = { excludes: ['data'] } if exclude_data
         search(query_hash).first
       end
 
       def directory
-        all(_source: { exclude: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }])
+        all(_source: { excludes: %w(data dictionary) }, sort: [{ api: { order: :asc } }, { version_number: { order: :asc } }])
       end
 
       def api_versions(api)
-        search(query:   { filtered: { filter: { term: { api: api } } } },
-               _source: { include: ['version_number'] },
+        search(query:   { constant_score: { filter: { term: { api: api } } } },
+               _source: { includes: ['version_number'] },
                sort:    :version_number,).collect(&:version_number)
       end
 
