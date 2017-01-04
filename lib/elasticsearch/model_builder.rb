@@ -3,6 +3,7 @@ module ModelBuilder
   TYPE_TO_MAPPING = { enum:    { type:    String,
                                  mapping: {
                                    type:     'string',
+                                   fielddata: true,
                                    analyzer: 'keyword_lowercase',
                                    fields:   {
                                      raw: {
@@ -16,6 +17,7 @@ module ModelBuilder
                       string:  { type:    String,
                                  mapping: {
                                    type:     'string',
+                                   fielddata: true,
                                    analyzer: 'snowball_asciifolding_nostop',
                                    fields:   {
                                      raw: {
