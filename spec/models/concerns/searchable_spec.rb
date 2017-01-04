@@ -56,7 +56,6 @@ describe Searchable do
 
   before(:each) do
     MockModel.update_metadata(9989, '2001-01-01T01:01:01Z')
-    ES.client.indices.refresh(index: MockModel.index_name)
   end
 
   after(:all) do

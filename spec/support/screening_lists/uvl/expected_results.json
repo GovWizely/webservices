@@ -270,5 +270,22 @@
     "source": "Unverified List (UVL) - Bureau of Industry and Security",
     "source_information_url": "http://1.usa.gov/1Qi4R7Z",
     "source_list_url": "http://1.usa.gov/1iwwTSJ"
+  },
+  {
+    "addresses": [
+      {
+        "address": "Room 1303 Goldfield Tower, 53–59 Wuhu Street, Kung Hom, Kowloon, Hong Kong",
+        "city": null,
+        "state": null,
+        "postal_code": null,
+        "country": "HK"
+      }
+    ],
+    "alt_names": [],
+    "id": "10db46acdbc58715b66059723606eaa59d1ff0d7",
+    "name": "Advent International Limited",
+    "source": "Unverified List (UVL) - Bureau of Industry and Security",
+    "source_information_url": "http://1.usa.gov/1Qi4R7Z",
+    "source_list_url": "http://1.usa.gov/1iwwTSJ"
   }
 ]

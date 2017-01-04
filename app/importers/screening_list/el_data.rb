@@ -35,10 +35,6 @@ module ScreeningList
       title:                   :title,
     }
 
-    def loaded_resource
-      @loaded_resource ||= open(@resource, 'r:iso-8859-1:utf-8').read
-    end
-
     def import
       rows = CSV.parse(loaded_resource, headers: true, header_converters: [:symbol])
       ensure_expected_headers(rows.first)
