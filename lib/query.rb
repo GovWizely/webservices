@@ -140,7 +140,6 @@ class Query
     field_values = fields[:query].map { |f| send(f) }
     json.query do
       json.bool do
-        json.minimum_should_match 1
         generate_should_clauses(fields, json)
         yield if block_given?
       end
@@ -148,8 +147,11 @@ class Query
   end
 
   def generate_should_clauses(fields, json)
-    json.set! :should do
-      multi_match_semantic_query(fields, json) if @q
+    if @q
+      json.minimum_should_match 1
+      json.set! :should do
+        multi_match_semantic_query(fields, json)
+      end
     end
   end
 
