@@ -7,6 +7,7 @@ class Query
 
   DEFAULT_SIZE = 10
   MAX_SIZE = 100
+  UNLIMITED = 2**30
   attr_accessor :offset, :size, :sort, :q, :search_type
 
   validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
@@ -241,7 +242,7 @@ class Query
         json.set! k do
           json.terms do
             json.field v[:field]
-            json.size v[:size] || 0
+            json.size v[:size] || UNLIMITED
           end
         end
       end

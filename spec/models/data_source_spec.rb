@@ -301,7 +301,7 @@ describe DataSource do
 
   describe '.find_published(api, version_number)' do
     before do
-      query_hash = { _source: { exclude: ['data'] }, filter: { and: [{ term: { _id: 'my_api:v2' } }, { term: { published: true } }] } }
+      query_hash = { :query => { :bool => { :filter => [{ :term => { :_id => "my_api:v2" } }, { :term => { :published => true } }] } }, :_source => { :excludes => ["data"] } }
       expect(DataSource).to receive(:search).with(query_hash).and_return ['expected data source']
     end
 
