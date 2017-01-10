@@ -7,12 +7,12 @@ class UrlMapper
   self.settings = {}
   self.mappings = {
     url_mapper: {
-      dynamic:    'false',
+      dynamic: 'false',
       properties: {
         _updated_at: { type: 'date' },
-        link:        { type: 'string', index: 'not_analyzed' },
-        long_url:    { type: 'string', index: 'not_analyzed' },
-        title:       { type: 'string', analyzer: 'standard' },
+        link: { type: 'string', index: 'not_analyzed' },
+        long_url: { type: 'string', index: 'not_analyzed' },
+        title: { type: 'string', analyzer: 'standard' },
         description: { type: 'string', analyzer: 'standard' },
       },
     },
@@ -61,9 +61,9 @@ class UrlMapper
 
   def self.build_json(url_string, title)
     {
-      id:       Digest::SHA1.hexdigest(url_string),
+      id: Digest::SHA1.hexdigest(url_string),
       long_url: url_string,
-      title:    title,
+      title: title,
     }
   end
 
@@ -92,8 +92,8 @@ class UrlMapper
   def self.search_for_url(url_string)
     search_options = {
       index: index_name,
-      type:  index_type,
-      body:  generate_search_body(url_string),
+      type: index_type,
+      body: generate_search_body(url_string),
     }
 
     ES.client.search(search_options)['hits'].deep_symbolize_keys
@@ -101,10 +101,12 @@ class UrlMapper
 
   def self.generate_search_body(url_string)
     Jbuilder.encode do |json|
-      json.filter do
-        json.bool do
-          json.must do
-            json.child! { json.term { json.long_url url_string } }
+      json.query do
+        json.constant_score do
+          json.filter do
+            json.term do
+              json.long_url url_string
+            end
           end
         end
       end
