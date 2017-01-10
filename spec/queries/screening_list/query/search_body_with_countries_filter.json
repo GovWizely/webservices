@@ -1,33 +1,52 @@
 {
-    "filter": {
+  "query": {
+    "bool": {
+      "filter": {
         "bool": {
-            "should": [
-                {
-                    "terms": {
-                        "addresses.country": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "ids.country": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "nationalities": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "citizenships": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "country": ["US", "CA"]
-                    }
-                }
-            ]
+          "should": [
+            {
+              "terms": {
+                "addresses.country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "ids.country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "nationalities": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "citizenships": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            }
+          ]
         }
+      }
     }
+  }
 }

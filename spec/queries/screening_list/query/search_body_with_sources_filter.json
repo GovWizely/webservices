@@ -1,13 +1,19 @@
 {
-    "filter": {
+  "query": {
+    "bool": {
+      "filter": {
         "bool": {
-            "must": [
-                {
-                    "terms": {
-                        "source.code": ["SDN"]
-                    }
-                }
-            ]
+          "must": [
+            {
+              "terms": {
+                "source.code": [
+                  "SDN"
+                ]
+              }
+            }
+          ]
         }
+      }
     }
+  }
 }
