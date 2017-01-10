@@ -14,22 +14,22 @@ module SalesforceArticle
             first_published_date: { type: 'date', format: 'YYYY-MM-dd' },
             last_published_date:  { type: 'date', format: 'YYYY-MM-dd' },
 
-            url:                  { type: 'string', index: 'not_analyzed' },
+            url:                  { type: 'keyword' },
 
-            references:           { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            summary:              { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
-            title:                { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            references:           { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
+            summary:              { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
+            title:                { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
 
-            url_name:             { type: 'string', index: 'not_analyzed' },
-            source:               { type: 'string', index: 'not_analyzed' },
+            url_name:             { type: 'keyword' },
+            source:               { type: 'keyword' },
 
-            countries:            { type: 'string', index: 'not_analyzed' },
-            industries:           { type: 'string', index: 'not_analyzed' },
-            topics:               { type: 'string', index: 'not_analyzed' },
-            trade_regions:        { type: 'string', index: 'not_analyzed' },
-            world_regions:        { type: 'string', index: 'not_analyzed' },
+            countries:            { type: 'keyword' },
+            industries:           { type: 'keyword' },
+            topics:               { type: 'keyword' },
+            trade_regions:        { type: 'keyword' },
+            world_regions:        { type: 'keyword' },
 
-            atom:                 { type: 'string', analyzer: 'snowball_asciifolding_nostop' },
+            atom:                 { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
           },
         },
       }.merge(klass.metadata_mappings,).freeze

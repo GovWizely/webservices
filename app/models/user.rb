@@ -106,9 +106,9 @@ class User
 
   devise :registerable, :database_authenticatable, :recoverable, :confirmable, :lockable
 
-  attribute :email, String, mapping: { type: 'string', index: 'not_analyzed' }
+  attribute :email, String, mapping: { type: 'keyword' }
   attribute :encrypted_password, String
-  attribute :api_key, String, mapping: { type: 'string', index: 'not_analyzed' },
+  attribute :api_key, String, mapping: { type: 'keyword' },
             default: proc { generate_api_key }
   attribute :full_name, String
   attribute :company, String

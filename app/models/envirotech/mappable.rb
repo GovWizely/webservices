@@ -38,28 +38,28 @@ module Envirotech
         klass.name.typeize => {
           properties: {
             _updated_at:          { type: 'date', format: 'strictDateOptionalTime' },
-            name_chinese:        { type: 'string', analyzer: 'chinese_analyzer' },
+            name_chinese:        { type: 'text', analyzer: 'chinese_analyzer' },
             name_english:        {
-              type:     'string',
+              type:     'text',
               analyzer: 'english_analyzer',
               fields:   {
-                sort: { type: 'string', analyzer: 'keyword' },
+                sort: { type: 'keyword' },
               },
             },
-            name_french:         { type: 'string', analyzer: 'french_analyzer' },
-            name_portuguese:     { type: 'string', analyzer: 'portuguese_analyzer' },
-            name_spanish:        { type: 'string', analyzer: 'spanish_analyzer' },
+            name_french:         { type: 'text', analyzer: 'french_analyzer' },
+            name_portuguese:     { type: 'text', analyzer: 'portuguese_analyzer' },
+            name_spanish:        { type: 'text', analyzer: 'spanish_analyzer' },
 
-            abstract_chinese:    { type: 'string', analyzer: 'chinese_analyzer' },
-            abstract_english:    { type: 'string', analyzer: 'english_analyzer' },
-            abstract_french:     { type: 'string', analyzer: 'french_analyzer' },
-            abstract_portuguese: { type: 'string', analyzer: 'portuguese_analyzer' },
-            abstract_spanish:    { type: 'string', analyzer: 'spanish_analyzer' },
+            abstract_chinese:    { type: 'text', analyzer: 'chinese_analyzer' },
+            abstract_english:    { type: 'text', analyzer: 'english_analyzer' },
+            abstract_french:     { type: 'text', analyzer: 'french_analyzer' },
+            abstract_portuguese: { type: 'text', analyzer: 'portuguese_analyzer' },
+            abstract_spanish:    { type: 'text', analyzer: 'spanish_analyzer' },
 
             source_created_at:   { type: 'date', format: 'YYYY-MM-dd' },
             source_updated_at:   { type: 'date', format: 'YYYY-MM-dd' },
-            source:              { type: 'string', analyzer: 'keyword' },
-            url:                 { type: 'string' },
+            source:              { type: 'keyword' },
+            url:                 { type: 'keyword' },
             source_id:           { type: 'integer' },
 
             issue_ids:           { type: 'integer' },
@@ -69,8 +69,8 @@ module Envirotech
             # For ProviderSolution documents:
             provider_id:         { type: 'integer' },
             solution_id:         { type: 'integer' },
-            provider_name:       { type: 'string', analyzer: 'keyword' },
-            solution_name:       { type: 'string', analyzer: 'keyword' },
+            provider_name:       { type: 'keyword' },
+            solution_name:       { type: 'keyword' },
           },
         },
       }.merge(klass.metadata_mappings).freeze

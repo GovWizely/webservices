@@ -43,10 +43,10 @@ class ItaTaxonomy
       properties: {
         _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
         label:       {
-          type:   'string',
+          type:   'text',
           fields: {
-            tokenized: { type: 'string', analyzer: 'label_analyzer' },
-            keyword:   { type: 'string', analyzer: 'keyword_strip_commas' },
+            tokenized: { type: 'text', analyzer: 'label_analyzer' },
+            keyword:   { type: 'text', analyzer: 'keyword_strip_commas' },
           },
         },
         label_suggest: {
@@ -56,7 +56,7 @@ class ItaTaxonomy
           preserve_position_increments: true,
           max_input_length: 50
         },
-        type:        { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
+        type:        { type: 'text', analyzer: 'lowercase_keyword_analyzer' },
       },
     },
   }.merge(metadata_mappings,).freeze
