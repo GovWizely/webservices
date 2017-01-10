@@ -33,7 +33,7 @@ class Query
   end
 
   def self.setup_query(fields)
-    fields.reverse_merge!(query: [], filter: [], sort: [])
+    fields.reverse_merge!(query: [], filter: [], sort: [], raw_enabled: [])
     fields[:query].each { |f| attr_reader f }
     fields[:filter].each { |f| attr_reader f }
     self.query_fields = fields
@@ -64,11 +64,15 @@ class Query
     array = split_to_array(value.strip)
     array.map! do |value|
       if value.include?(':')
-        { value.split(':')[0].strip => value.split(':')[1].strip }
+        { maybe_raw(value.split(':')[0].strip) => value.split(':')[1].strip }
       else
-        value.strip
+        maybe_raw(value.strip)
       end
     end
+  end
+
+  def maybe_raw(field)
+    query_fields[:raw_enabled].include?(field.to_sym) ? field + ".raw" : field
   end
 
   def initialize_search_fields(options)

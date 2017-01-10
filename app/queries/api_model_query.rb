@@ -4,7 +4,7 @@ class ApiModelQuery < Query
     pluralized_key_strings = metadata.pluralized_filter_fields.keys
     options.keys.each { |k| options[k.singularize] = options.delete(k) if pluralized_key_strings.include?(k.to_sym) }
     self.class.aggregate_terms_by(metadata.aggregation_terms)
-    self.class.setup_query(q: var_field_mapping(metadata.fulltext_fields).values, filter: metadata.filter_fields.keys + @date_fields.keys)
+    self.class.setup_query(q: var_field_mapping(metadata.fulltext_fields).values, filter: metadata.filter_fields.keys + @date_fields.keys, raw_enabled: metadata.fulltext_fields.keys + metadata.filter_fields.keys)
     super(options.merge(semantic_query_service_configuration: metadata.semantic_query_service_configuration))
   end
 
