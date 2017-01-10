@@ -367,8 +367,7 @@ describe DataSource do
         data_source.dictionary = "---\r\n:f1:\r\n  :source: f1\r\n  :description: Description of f1\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n:f2:\r\n  :source: f2\r\n  :description: Description of f2\r\n  :indexed: true\r\n  :plural: true\r\n  :type: enum\r\n"
         data_source.freshen
         data_source.with_api_model do |klass|
-          es_client_count = ES.client.count(index: klass.index_name)
-          expect(es_client_count["count"]).to eq(2)
+          expect(klass.count).to eq(2)
           query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f1: 'one,three'))
           expect(klass.search(query.generate_search_body_hash).count).to eq(2)
           query = ApiModelQuery.new(data_source.metadata, ActionController::Parameters.new(f2: 'two,five'))

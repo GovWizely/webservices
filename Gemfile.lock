@@ -34,6 +34,22 @@ GIT
       faraday
       multi_json
 
+GIT
+  remote: git@github.com:loren/elasticsearch-rails.git
+  revision: 3a22d3e45ac40f5c4e381745601c9e27c24a9b5d
+  specs:
+    elasticsearch-model (0.1.9)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-persistence (0.1.9)
+      activemodel (> 3)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      elasticsearch-model (>= 0.1)
+      hashie
+      virtus
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -128,17 +144,6 @@ GEM
     docile (1.1.5)
     domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
-    elasticsearch-model (0.1.9)
-      activesupport (> 3)
-      elasticsearch (> 0.4)
-      hashie
-    elasticsearch-persistence (0.1.9)
-      activemodel (> 3)
-      activesupport (> 3)
-      elasticsearch (> 0.4)
-      elasticsearch-model (>= 0.1)
-      hashie
-      virtus
     equalizer (0.0.11)
     erubis (2.7.0)
     eventmachine (1.2.1)
@@ -380,7 +385,7 @@ DEPENDENCIES
   devise (~> 3.4.0)
   elasticsearch!
   elasticsearch-model
-  elasticsearch-persistence
+  elasticsearch-persistence!
   foreman
   git
   haml
