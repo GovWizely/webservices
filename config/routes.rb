@@ -46,12 +46,6 @@ Webservices::Application.routes.draw do
       get 'suggest', to: 'ita_taxonomy_suggestions#search'
       get ':id', to: 'ita_taxonomy#show', constraints: { id: /.+/ }, format: false
     end
-
-    namespace :envirotech do
-      get ':sources/search', to: 'consolidated#search', constraints: lambda { |request|
-        %w(solutions issues regulations providers analysis_links background_links provider_solutions).include? request.params[:sources]
-      }
-    end
   end
 
   scope 'v2', module: 'api/v2', defaults: { format: :json } do
