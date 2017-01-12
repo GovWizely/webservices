@@ -13,10 +13,10 @@ class ItaTaxonomyQuery < Query
       json.bool do
         json.must do
           json.child! { generate_match(json, 'label.tokenized', @q, :or) }
-        end
+        end  if @q
         terms_filter_from_field_mapping(json, type: @types, 'label.keyword' => @labels)
       end
-    end if @q
+    end
   end
 
 end
