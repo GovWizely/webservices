@@ -4,6 +4,7 @@ shared_context 'a working Mock model class' do
   before do
     class Mock
       include Indexable
+      analyze_by :snowball_asciifolding_nostop
       self.mappings = {
         name.typeize => {
           properties: {
@@ -53,6 +54,7 @@ describe Indexable do
       before do
         class Mock
           include Indexable
+          analyze_by :snowball_asciifolding_nostop
           self.mappings = { name.typeize => { properties: {} } }
         end
       end
