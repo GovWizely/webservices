@@ -14,16 +14,16 @@ module Indexable
           metadata: {
             properties: {
               last_imported: {
-                type: 'string',
+                type: 'keyword',
               },
               last_updated:  {
-                type: 'string',
+                type: 'keyword',
               },
               version:       {
-                type: 'string',
+                type: 'keyword',
               },
               import_rate:   {
-                type: 'string',
+                type: 'keyword',
               },
             },
           },
