@@ -67,7 +67,7 @@ module ScreeningList
             title:                      { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
 
             type:                       { type: 'text', analyzer: 'keyword_asciifolding_lowercase' },
-            source:                     { properties: { full_name: { type: 'text', index: 'no' },
+            source:                     { properties: { full_name: { type: 'text', index: false },
                                                         code:      { type: 'keyword' }, }, },
             federal_register_notice:    { type: 'keyword' },
 
