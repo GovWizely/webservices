@@ -6,9 +6,9 @@ class IdQuery < Query
 
   private
 
-  def generate_query(json)
+  def generate_query_and_filter(json)
     json.query do
-      json.filtered do
+      json.bool do
         json.filter do
           json.ids do
             json.values @ids
@@ -16,9 +16,6 @@ class IdQuery < Query
         end
       end
     end
-  end
-
-  def generate_filter(_json)
   end
 
   def generate_aggregations(_json)
