@@ -96,8 +96,6 @@ class Query
   def generate_search_body
     Jbuilder.encode do |json|
       generate_query_and_filter(json)
-      # generate_query(json)
-      # generate_filter(json)
       generate_aggregations(json)
     end
   end
@@ -198,10 +196,6 @@ class Query
     query_from_fields(json, query_fields) do
       generate_filter(json)
     end
-  end
-
-  def generate_query(json)
-    query_from_fields(json, query_fields)
   end
 
   def generate_filter(json)
