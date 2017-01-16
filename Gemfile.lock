@@ -22,20 +22,7 @@ GIT
       rubyzip (= 1.2.0)
 
 GIT
-  remote: git://github.com/loren/elasticsearch-ruby.git
-  revision: 2798c446ab7d98e3e8292992ebb82316ad463faa
-  specs:
-    elasticsearch (1.0.18)
-      elasticsearch-api (= 1.0.18)
-      elasticsearch-transport (= 1.0.18)
-    elasticsearch-api (1.0.18)
-      multi_json
-    elasticsearch-transport (1.0.18)
-      faraday
-      multi_json
-
-GIT
-  remote: git@github.com:loren/elasticsearch-rails.git
+  remote: git://github.com/loren/elasticsearch-rails.git
   revision: 3a22d3e45ac40f5c4e381745601c9e27c24a9b5d
   specs:
     elasticsearch-model (0.1.9)
@@ -49,6 +36,19 @@ GIT
       elasticsearch-model (>= 0.1)
       hashie
       virtus
+
+GIT
+  remote: git://github.com/loren/elasticsearch-ruby.git
+  revision: 2798c446ab7d98e3e8292992ebb82316ad463faa
+  specs:
+    elasticsearch (1.0.18)
+      elasticsearch-api (= 1.0.18)
+      elasticsearch-transport (= 1.0.18)
+    elasticsearch-api (1.0.18)
+      multi_json
+    elasticsearch-transport (1.0.18)
+      faraday
+      multi_json
 
 GEM
   remote: https://rubygems.org/

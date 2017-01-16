@@ -1,21 +1,16 @@
 bundler_args: --without development staging production
 language: ruby
-sudo: false
-
-env:
-  - ES_VERSION=2.2.0
+sudo: true
 
 addons:
   code_climate:
     repo_token: b2be59fc94d6de5b889a16c640227b42d40d8aa21df90fad79dd70f2687d630c
+  apt:
+    packages:
+      - oracle-java8-set-default
 
 before_install:
-  - "mkdir /tmp/elasticsearch"
-  - "wget -O - https://download.elasticsearch.org/elasticsearch/release/org/elasticsearch/distribution/tar/elasticsearch/${ES_VERSION}/elasticsearch-${ES_VERSION}.tar.gz | tar xz --directory=/tmp/elasticsearch --strip-components=1"
-  - "/tmp/elasticsearch/bin/plugin install delete-by-query"
-  - 'echo ''index.number_of_shards: 1'' | tee --append /tmp/elasticsearch/config/elasticsearch.yml'
-  - "/tmp/elasticsearch/bin/elasticsearch &"
-  - "sleep 10"
+  - curl -O https://artifacts.elastic.co/downloads/elasticsearch/elasticsearch-5.1.2.deb && sudo dpkg -i --force-confnew elasticsearch-5.1.2.deb && env && sudo service elasticsearch start
 
 notifications:
   slack: govwizely:R9Nhshn0NO7eRh4ThXaMKqWw

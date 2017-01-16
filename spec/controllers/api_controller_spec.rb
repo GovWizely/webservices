@@ -1,7 +1,7 @@
 require 'spec_helper'
 
 describe ApiController, type: :controller do
-  class InheritsFromApiController < described_class
+  class InheritsFromApiController < ApiController
     def foo
       ActionController::Parameters.new(params).permit([:q])
       render text: 'ok', status: :ok
