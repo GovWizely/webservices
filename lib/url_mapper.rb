@@ -10,10 +10,10 @@ class UrlMapper
       dynamic: 'false',
       properties: {
         _updated_at: { type: 'date' },
-        link: { type: 'string', index: 'not_analyzed' },
-        long_url: { type: 'string', index: 'not_analyzed' },
-        title: { type: 'string', analyzer: 'standard' },
-        description: { type: 'string', analyzer: 'standard' },
+        link: { type: 'keyword' },
+        long_url: { type: 'keyword' },
+        title: { type: 'text', analyzer: 'standard' },
+        description: { type: 'text', analyzer: 'standard' },
       },
     },
   }.freeze

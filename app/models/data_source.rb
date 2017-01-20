@@ -9,19 +9,19 @@ class DataSource
   VALID_CONTENT_TYPES = %w(text/csv text/plain text/tab-separated-values text/xml application/xml application/vnd.ms-excel application/json).freeze
 
   index_name [ES::INDEX_PREFIX, name.indexize].join(':')
-  attribute :name, String, mapping: { type: 'string', analyzer: 'english' }
+  attribute :name, String, mapping: { type: 'text', analyzer: 'english' }
   validates :name, presence: true
-  attribute :api, String, mapping: { type: 'string', index: 'not_analyzed' }
+  attribute :api, String, mapping: { type: 'keyword' }
   validates :api, presence: true, format: { with: /\A[a-z0-9_]+\z/ }, reserved_api: true
-  attribute :description, String, mapping: { type: 'string', analyzer: 'english' }
-  attribute :dictionary, String, mapping: { type: 'string', index: 'no' }
-  attribute :data, String, mapping: { type: 'string', index: 'no' }
+  attribute :description, String, mapping: { type: 'text', analyzer: 'english' }
+  attribute :dictionary, String, mapping: { type: 'text', index: 'no' }
+  attribute :data, String, mapping: { type: 'text', index: 'no' }
   attribute :version_number, Integer
   validates :version_number, numericality: true, presence: true
   attribute :published, Boolean
   attribute :consolidated, Boolean
-  attribute :url, String, mapping: { type: 'string', index: 'no' }
-  attribute :message_digest, String, mapping: { type: 'string', index: 'no' }
+  attribute :url, String, mapping: { type: 'text', index: 'no' }
+  attribute :message_digest, String, mapping: { type: 'text', index: 'no' }
   attribute :data_changed_at, DateTime
   attribute :data_imported_at, DateTime
 
