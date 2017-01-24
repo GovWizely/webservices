@@ -25,7 +25,11 @@ module Envirotech
 
     def process_article_info(article)
       %i(source_created_at source_updated_at).each do |field|
-        article[field] &&= Date.parse(article[field]).iso8601 rescue nil
+        begin
+          article[field] &&= Date.parse(article[field]).iso8601
+        rescue
+          nil
+        end
       end
       article[:source] = model_class.source[:code]
       article[:id] = article[:source_id]

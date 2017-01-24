@@ -81,8 +81,8 @@ class ItaTaxonomyData
     weight = entries.count
     entries.each do |entry|
       entry[:label_suggest] = {
-        input: entry[:label],
-        weight: weight
+        input:  entry[:label],
+        weight: weight,
       }
       weight -= 1
     end

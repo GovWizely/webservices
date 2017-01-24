@@ -28,10 +28,10 @@ class ItaTaxonomy
           keyword_strip_commas:       {
             tokenizer:   'keyword',
             char_filter: ['strip_commas'], },
-          label_analyzer: {
+          label_analyzer:             {
             tokenizer: 'lowercase',
-            filter: 'asciifolding'
-          }
+            filter:    'asciifolding',
+          },
         },
       },
     },
@@ -41,8 +41,8 @@ class ItaTaxonomy
     name.typeize => {
       dynamic:    'true',
       properties: {
-        _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
-        label:       {
+        _updated_at:   { type: 'date', format: 'strictDateOptionalTime' },
+        label:         {
           type:   'string',
           fields: {
             tokenized: { type: 'string', analyzer: 'label_analyzer' },
@@ -50,14 +50,14 @@ class ItaTaxonomy
           },
         },
         label_suggest: {
-          type: 'completion',
-          analyzer: 'label_analyzer',
-          payloads: false,
-          preserve_separators: true,
+          type:                         'completion',
+          analyzer:                     'label_analyzer',
+          payloads:                     false,
+          preserve_separators:          true,
           preserve_position_increments: true,
-          max_input_length: 50
+          max_input_length:             50,
         },
-        type:        { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
+        type:          { type: 'string', analyzer: 'lowercase_keyword_analyzer' },
       },
     },
   }.merge(metadata_mappings,).freeze

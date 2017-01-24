@@ -30,7 +30,7 @@ shared_context 'Envirotech::Solution data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Solution] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/solution/all_results.json",).read,)
   end
 end
 
@@ -72,7 +72,7 @@ shared_context 'Envirotech::Issue data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Issue] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/issue/all_results.json",).read,)
   end
 end
 
@@ -115,7 +115,7 @@ shared_context 'Envirotech::Regulation data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Regulation] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/regulation/all_results.json",).read,)
   end
 end
 
@@ -151,7 +151,7 @@ shared_context 'Envirotech::Provider data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::Provider] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/provider/all_results.json",).read,)
   end
 end
 
@@ -181,7 +181,7 @@ shared_context 'Envirotech::AnalysisLink data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::AnalysisLink] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/analysis_link/all_results.json",).read,)
   end
 end
 
@@ -217,7 +217,7 @@ shared_context 'Envirotech::BackgroundLink data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::BackgroundLink] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/background_link/all_results.json",).read,)
   end
 end
 
@@ -253,7 +253,7 @@ shared_context 'Envirotech::ProviderSolution data' do
 
     @all_possible_full_results ||= {}
     @all_possible_full_results[Envirotech::ProviderSolution] = JSON.parse(open(
-      "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json").read)
+      "#{File.dirname(__FILE__)}/envirotech/provider_solution/all_results.json",).read,)
   end
 end
 

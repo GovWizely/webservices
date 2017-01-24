@@ -7,28 +7,28 @@ module Envirotech
             analyzer:
                       { english_analyzer:    {
                         tokenizer: 'standard',
-                        filter:    %w(standard asciifolding lowercase snowball) },
+                        filter:    %w(standard asciifolding lowercase snowball), },
                         french_analyzer:     {
                           tokenizer: 'standard',
-                          filter:    %w(standard asciifolding lowercase french) },
+                          filter:    %w(standard asciifolding lowercase french), },
                         chinese_analyzer:    {
                           tokenizer: 'standard',
-                          filter:    %w(standard  lowercase) },
+                          filter:    %w(standard  lowercase), },
                         portuguese_analyzer: {
                           tokenizer: 'standard',
-                          filter:    %w(standard asciifolding lowercase portuguese) },
+                          filter:    %w(standard asciifolding lowercase portuguese), },
                         spanish_analyzer:    {
                           tokenizer: 'standard',
-                          filter:    %w(standard asciifolding lowercase spanish) },
+                          filter:    %w(standard asciifolding lowercase spanish), },
 
               },
             filter:   {
               french:     { type:     'snowball',
-                            language: 'French' },
+                            language: 'French', },
               portuguese: { type:     'snowball',
-                            language: 'Portuguese' },
+                            language: 'Portuguese', },
               spanish:    { type:     'snowball',
-                            language: 'Spanish' },
+                            language: 'Spanish', },
             },
           },
         },
@@ -37,7 +37,7 @@ module Envirotech
       klass.mappings = {
         klass.name.typeize => {
           properties: {
-            _updated_at:          { type: 'date', format: 'strictDateOptionalTime' },
+            _updated_at:         { type: 'date', format: 'strictDateOptionalTime' },
             name_chinese:        { type: 'string', analyzer: 'chinese_analyzer' },
             name_english:        {
               type:     'string',
@@ -73,7 +73,7 @@ module Envirotech
             solution_name:       { type: 'string', analyzer: 'keyword' },
           },
         },
-      }.merge(klass.metadata_mappings).freeze
+      }.merge(klass.metadata_mappings,).freeze
 
       klass.class_eval do
         class << self

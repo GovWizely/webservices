@@ -7,7 +7,7 @@ module Envirotech
                           Envirotech::Provider,
                           Envirotech::AnalysisLink,
                           Envirotech::BackgroundLink,
-                          Envirotech::ProviderSolution]
+                          Envirotech::ProviderSolution,]
     self.fetch_all_sort_by = 'name_english.sort'
   end
 end

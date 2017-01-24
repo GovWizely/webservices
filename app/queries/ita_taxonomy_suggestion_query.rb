@@ -4,7 +4,11 @@ class ItaTaxonomySuggestionQuery
 
   def initialize(options)
     @term = options[:term]
-    @size = options[:size].to_i rescue DEFAULT_SIZE
+    @size = begin
+              options[:size].to_i
+            rescue
+              DEFAULT_SIZE
+            end
     @size = DEFAULT_SIZE unless VALID_SIZE_RANGE.include?(@size)
   end
 

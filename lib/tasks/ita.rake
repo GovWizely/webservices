@@ -38,4 +38,20 @@ namespace :ita do
   task import_empty_indices: :environment do
     ImportEmptyIndices.call
   end
+
+  desc 'Upload static file dump of search data'
+  task :upload_static_files, [:arg] => :environment do |_t, args|
+    args.to_a.each do |module_or_importer_class_name|
+      module_or_importer_class = module_or_importer_class_name.constantize
+      next unless module_or_importer_class.respond_to?(:import_all_sources)
+      search_class = (module_or_importer_class_name + '::Consolidated').constantize
+      # Only upload files if there is new data from at least one source:
+      search_class.search_for(size: 0)[:sources_used].each do |sources_hash|
+        if sources_hash[:source_last_updated].present? && Time.parse(sources_hash[:source_last_updated]) > (Time.now - 1.hour).utc
+          StaticFileManager.upload_all_files(search_class)
+          break
+        end
+      end
+    end
+  end
 end
