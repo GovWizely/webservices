@@ -48,7 +48,7 @@ module ScreeningList
 
     def remove_stops(name)
       stopwords    = %w( and the los )
-      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc university univ )
 
       nme = name.gsub(/[^\p{Alnum}\p{Space}]/, '')
       nme = nme.split.delete_if { |n| stopwords.include?(n.downcase) }.join(' ')

@@ -2,7 +2,7 @@ module ScreeningList
   module GenerateFuzzyNameQuery
     def remove_stops
       stopwords    = %w( and the los )
-      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc university univ )
 
       @name = @name.gsub(/[^\p{Alnum}\p{Space}]/, '')
       @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
