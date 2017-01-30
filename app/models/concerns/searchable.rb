@@ -71,11 +71,11 @@ module Searchable
       search_options[:sort] = fetch_all_sort_by if fetch_all_sort_by
 
       response = ES.client.search(search_options)
-      results = { offset: 0,
-                  sources_used: index_meta(sources),
+      results = { offset:              0,
+                  sources_used:        index_meta(sources),
                   search_performed_at: search_performed_at,
-                  hits: response['hits'].deep_symbolize_keys[:hits],
-                  total: response['hits']['total'], }
+                  hits:                response['hits'].deep_symbolize_keys[:hits],
+                  total:               response['hits']['total'], }
 
       while response = ES.client.scroll(scroll_id: response['_scroll_id'], scroll: '5m')
         batch = response['hits'].deep_symbolize_keys
@@ -144,9 +144,9 @@ module Searchable
       query = IdsQuery.new([0])
       search_options = {
         index: index_names,
-        type: 'metadata',
-        body: query.generate_search_body_hash,
-        size: 10_000 }
+        type:  'metadata',
+        body:  query.generate_search_body_hash,
+        size:  10_000, }
 
       hits = ES.client.search(search_options)['hits']['hits']
       results = hits.map do |metadata|

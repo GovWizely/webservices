@@ -109,7 +109,7 @@ class User
   attribute :email, String, mapping: { type: 'keyword' }
   attribute :encrypted_password, String
   attribute :api_key, String, mapping: { type: 'keyword' },
-            default: proc { generate_api_key }
+                              default: proc { generate_api_key }
   attribute :full_name, String
   attribute :company, String
 

@@ -2,8 +2,8 @@ module SalesforceArticle
   class Query < ::Query
     attr_accessor :countries
 
-    aggregate_terms_by countries: { field: 'countries' },
-                       sources: { field: 'source' },
+    aggregate_terms_by countries:     { field: 'countries' },
+                       sources:       { field: 'source' },
                        trade_regions: { field: 'trade_regions' },
                        world_regions: { field: 'world_regions' }
 

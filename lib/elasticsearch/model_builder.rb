@@ -6,7 +6,7 @@ module ModelBuilder
                                    analyzer: 'keyword_lowercase',
                                    fields:   {
                                      raw: {
-                                       type:  'keyword',
+                                       type: 'keyword',
                                      },
                                    }, }, },
                       integer: { type: Integer, mapping: { type: 'long' } },
@@ -18,7 +18,7 @@ module ModelBuilder
                                    analyzer: 'snowball_asciifolding_nostop',
                                    fields:   {
                                      raw: {
-                                       type:  'keyword',
+                                       type: 'keyword',
                                      },
                                    }, }, }, }.with_indifferent_access
 

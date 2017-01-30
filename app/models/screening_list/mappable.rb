@@ -15,7 +15,7 @@ module ScreeningList
                                           term_vector: 'with_positions_offsets',
                                           analyzer:    'standard_asciifolding_nostop',
                                           fields:      {
-                                            keyword: { type: 'keyword', }, }, },
+                                            keyword: { type: 'keyword' }, }, },
             name_idx:                   { type:        'text',
                                           term_vector: 'with_positions_offsets',
                                           analyzer:    'standard_asciifolding_nostop',

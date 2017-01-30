@@ -73,7 +73,7 @@ class Query
   end
 
   def maybe_raw(field)
-    query_fields[:raw_enabled].include?(field.to_sym) ? field + ".raw" : field
+    query_fields[:raw_enabled].include?(field.to_sym) ? field + '.raw' : field
   end
 
   def initialize_search_fields(options)

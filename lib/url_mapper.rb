@@ -7,12 +7,12 @@ class UrlMapper
   self.settings = {}
   self.mappings = {
     url_mapper: {
-      dynamic: 'false',
+      dynamic:    'false',
       properties: {
         _updated_at: { type: 'date' },
-        link: { type: 'keyword' },
-        long_url: { type: 'keyword' },
-        title: { type: 'text', analyzer: 'standard' },
+        link:        { type: 'keyword' },
+        long_url:    { type: 'keyword' },
+        title:       { type: 'text', analyzer: 'standard' },
         description: { type: 'text', analyzer: 'standard' },
       },
     },
@@ -61,9 +61,9 @@ class UrlMapper
 
   def self.build_json(url_string, title)
     {
-      id: Digest::SHA1.hexdigest(url_string),
+      id:       Digest::SHA1.hexdigest(url_string),
       long_url: url_string,
-      title: title,
+      title:    title,
     }
   end
 
@@ -92,8 +92,8 @@ class UrlMapper
   def self.search_for_url(url_string)
     search_options = {
       index: index_name,
-      type: index_type,
-      body: generate_search_body(url_string),
+      type:  index_type,
+      body:  generate_search_body(url_string),
     }
 
     ES.client.search(search_options)['hits'].deep_symbolize_keys
