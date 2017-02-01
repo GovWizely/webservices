@@ -31,8 +31,8 @@ class ApiController < ActionController::Base
     s[:api_version] = api_version
 
     respond_to do |format|
-      format.csv { render_sv('csv') }
-      format.tsv { render_sv('tsv') }
+      format.csv { serve_sv('csv') }
+      format.tsv { serve_sv('tsv') }
       format.json do
         @query_info_fields = query_info_fields
         @search =
@@ -74,15 +74,12 @@ class ApiController < ActionController::Base
     parts.join('::').constantize
   end
 
-  def render_sv(format)
-    search = search_class.fetch_all[:hits]
+  def serve_sv(format)
+    file = StaticFileManager.download_file("#{search_class.to_s.underscore}.#{format}")
+    last_modified = file.last_modified.strftime('%F')
     send_data(
-      search_class.send("as_#{format}", search),
+      file.body.read,
       type:        "Mime::#{format.upcase}".constantize,
-      disposition: "attachment; filename=#{sv_filename}.#{format}",)
-  end
-
-  def sv_filename
-    'search'
+      disposition: "attachment; filename=#{search_class.to_s.underscore}_#{last_modified}.#{format}",)
   end
 end

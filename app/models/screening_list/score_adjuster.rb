@@ -7,7 +7,7 @@ module ScreeningList
 
     def initialize(name, hits)
       new_name = remove_stops(name)
-      @no_adjustment_required = new_name.blank? || new_name.split.many? || hits.empty? || !hits.map{|x|x[:highlight]}.all?
+      @no_adjustment_required = new_name.blank? || new_name.split.many? || hits.empty? || !hits.map { |x| x[:highlight] }.all?
       @hits = hits
     end
 
@@ -34,14 +34,14 @@ module ScreeningList
     def matched_penalty(tokens)
       tokens.inject(0) do |sum, token|
         stripped_token = Sanitize.fragment token
-        penalty = MATCHED_PENALTIES[stripped_token.length-1] || LONG_MATCH_PENALTY
+        penalty = MATCHED_PENALTIES[stripped_token.length - 1] || LONG_MATCH_PENALTY
         sum + penalty
       end
     end
 
     def unmatched_penalty(tokens)
       tokens.inject(0) do |sum, token|
-        penalty = UNMATCHED_PENALTIES[token.length-1] || LONG_MISS_PENALTY
+        penalty = UNMATCHED_PENALTIES[token.length - 1] || LONG_MISS_PENALTY
         sum + penalty
       end
     end

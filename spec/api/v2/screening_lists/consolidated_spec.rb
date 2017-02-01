@@ -341,19 +341,44 @@ describe 'Consolidated Screening List API V2', type: :request do
     end
   end
 
-  describe 'GET /consolidated_screening_list/search.csv' do
-    before { get '/v2/consolidated_screening_list/search.csv', {}, @v2_headers }
-    it 'is a CSV' do
-      expect(response.status).to eq(200)
-      expect(response.content_type.symbol).to eq(:csv)
-    end
-  end
+  context 'requesting a static file' do
+    before(:all) do
+      class ResponseDummy
+        def initialize
+        end
 
-  describe 'GET /consolidated_screening_list/search.tsv' do
-    before { get '/v2/consolidated_screening_list/search.tsv', {}, @v2_headers }
-    it 'is a TSV' do
-      expect(response.status).to eq(200)
-      expect(response.content_type.symbol).to eq(:tsv)
+        def body
+          StringIO.new('foo')
+        end
+
+        def last_modified
+          return DateTime.parse('2017-01-28')
+        end
+      end
+    end
+
+    describe 'GET /consolidated_screening_list/search.csv' do
+      before do
+        allow(StaticFileManager).to receive(:download_file).and_return(ResponseDummy.new)
+        get '/v2/consolidated_screening_list/search.csv', {}, @v2_headers
+      end
+      it 'is a CSV' do
+        expect(response.status).to eq(200)
+        expect(response.content_type.symbol).to eq(:csv)
+        expect(response.header['Content-Disposition']).to eq("attachment; filename=screening_list/consolidated_2017-01-28.csv")
+      end
+    end
+
+    describe 'GET /consolidated_screening_list/search.tsv' do
+      before do
+        allow(StaticFileManager).to receive(:download_file).and_return(ResponseDummy.new)
+        get '/v2/consolidated_screening_list/search.tsv', {}, @v2_headers
+      end
+      it 'is a TSV' do
+        expect(response.status).to eq(200)
+        expect(response.content_type.symbol).to eq(:tsv)
+        expect(response.header['Content-Disposition']).to eq("attachment; filename=screening_list/consolidated_2017-01-28.tsv")
+      end
     end
   end
 end

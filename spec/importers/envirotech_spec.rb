@@ -4,16 +4,16 @@ describe Envirotech do
   include_context 'empty Envirotech indices'
 
   describe '.import_sequentially' do
-    let(:all_issue_info) {
+    let(:all_issue_info) do
       {
         _source: {
-          version: '',
-          last_updated: '',
+          version:       '',
+          last_updated:  '',
           last_imported: '',
-          import_rate: ''
-        }
+          import_rate:   '',
+        },
       }
-    }
+    end
 
     before do
       allow_any_instance_of(Envirotech::IssueData).to receive(:fetch_data).and_return({})

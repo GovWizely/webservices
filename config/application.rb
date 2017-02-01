@@ -61,5 +61,10 @@ module Webservices
     }
 
     config.salesforce_url = 'not_a_real_URL/'
+
+    config.aws_credentials = {
+      access_key_id: 'fake_value',
+      secret_access_key: 'fake_value',
+    }
   end
 end

@@ -49,7 +49,7 @@ describe Envirotech::RelationalData do
 
   def fetch(source, name)
     Envirotech::Consolidated
-      .search_for(sources: source)[:hits]
+      .search_for(sources: source,)[:hits]
       .map { |h| h[:_source] }
       .find { |h| h[:name_english] == name }
   end
