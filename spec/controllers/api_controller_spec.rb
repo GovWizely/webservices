@@ -48,10 +48,5 @@ describe ApiController, type: :controller do
         it { expect(response.body).to include('Offset must be greater than or equal to 0') }
       end
     end
-
-    describe '#sv_header' do
-      subject { @controller.send(:sv_filename) }
-      it { is_expected.to eq('search') }
-    end
   end
 end
