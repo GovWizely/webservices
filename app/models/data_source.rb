@@ -24,6 +24,7 @@ class DataSource
   attribute :message_digest, String, mapping: { type: 'text', index: 'no' }
   attribute :data_changed_at, DateTime
   attribute :data_imported_at, DateTime
+  attribute :s3_bucket_name, String, mapping: { type: 'text', index: 'no' }
 
   before_save :build_dictionary, :initialize_timestamps
   after_update :refresh_metadata

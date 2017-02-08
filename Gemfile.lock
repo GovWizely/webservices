@@ -50,6 +50,15 @@ GIT
       faraday
       multi_json
 
+PATH
+  remote: /Users/tmh/Documents/s3_browser
+  specs:
+    s3_browser (0.0.1)
+      aws-sdk-core
+      codeclimate-test-reporter
+      jquery-rails
+      rails (= 4.0.9)
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -360,7 +369,7 @@ GEM
       coercible (~> 1.0)
       descendants_tracker (~> 0.0, >= 0.0.3)
       equalizer (~> 0.0, >= 0.0.9)
-    warden (1.2.6)
+    warden (1.2.7)
       rack (>= 1.0)
     webmock (2.3.2)
       addressable (>= 2.3.6)
@@ -414,6 +423,7 @@ DEPENDENCIES
   rspec-rails
   rubocop (= 0.39.0)
   rubyzip
+  s3_browser!
   sanitize
   sass
   shoulda-matchers

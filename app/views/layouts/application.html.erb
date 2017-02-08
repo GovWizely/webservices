@@ -25,12 +25,12 @@
             <nav>
               <% if user_signed_in? %>
                 <em><%= "Signed in as #{current_user.full_name}" %></em> |
-                <%= current_page?(authenticated_root_path) ? 'API Key' : link_to('API Key', authenticated_root_path) %> |
-                <%= current_page?(edit_user_registration_path) ? 'Account' : link_to('Account', edit_user_registration_path) %> |
-                <%= link_to('Logout', destroy_user_session_path) %>
+                <%= current_page?(main_app.authenticated_root_path) ? 'API Key' : link_to('API Key', main_app.authenticated_root_path) %> |
+                <%= current_page?(main_app.edit_user_registration_path) ? 'Account' : link_to('Account', main_app.edit_user_registration_path) %> |
+                <%= link_to('Logout', main_app.destroy_user_session_path) %>
               <% else %>
-                <%= current_page?(new_user_session_path) || current_page?(unauthenticated_root_path) ? 'Login' : link_to('Login', new_user_session_path) %> |
-                <%= current_page?(new_user_registration_path) ? 'Sign Up' : link_to('Sign Up', new_user_registration_path) %>
+                <%= current_page?(main_app.new_user_session_path) || current_page?(main_app.unauthenticated_root_path) ? 'Login' : link_to('Login', main_app.new_user_session_path) %> |
+                <%= current_page?(main_app.new_user_registration_path) ? 'Sign Up' : link_to('Sign Up', main_app.new_user_registration_path) %>
               <% end %>
             </nav>
 

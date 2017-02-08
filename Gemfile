@@ -37,6 +37,7 @@ gem 'jquery-rails'
 
 gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
 gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
+gem 's3_browser', git: 'git://github.com/GovWizely/s3_browser.git'
 
 gem 'restforce'
 
