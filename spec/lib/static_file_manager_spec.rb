@@ -2,7 +2,6 @@ require 'spec_helper'
 
 describe StaticFileManager do
   before(:all) do
-
     class ResponseDummy
       def initialize
       end
@@ -25,7 +24,7 @@ describe StaticFileManager do
   before(:each) do
     @s3 = instance_double(Aws::S3::Client)
     allow(Aws::S3::Client).to receive(:new).with(region: 'us-east-1', credentials: StaticFileManager::CREDENTIALS)
-                                .and_return(@s3)
+      .and_return(@s3,)
   end
 
   describe '#upload_all_files' do
