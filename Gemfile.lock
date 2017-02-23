@@ -149,7 +149,7 @@ GEM
     eventmachine (1.2.1)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.11.0)
+    faraday_middleware (0.11.0.1)
       faraday (>= 0.7.4, < 1.0)
     foreman (0.83.0)
       thor (~> 0.19.1)
@@ -429,4 +429,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.12.5
+   1.14.5
