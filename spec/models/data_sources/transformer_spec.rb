@@ -100,6 +100,7 @@ describe DataSources::Transformer do
     it 'returns the default value' do
       expect(transformer.transform('')).to eq('USD')
       expect(transformer.transform('EUR')).to eq('EUR')
+      expect(transformer.transform(nil)).to eq('USD')
     end
   end
 
