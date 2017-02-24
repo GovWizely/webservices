@@ -102,7 +102,7 @@ include CSV, TSV, JSON, XLS, and XML. The initial admin user created with the `d
 set to true already. To toggle an existing user, you can do this from the Rails console:
     
     email = "admin@example.co"
-    u = User.search(filter: { bool: { must: { term: { email: email } } } }).first
+    u = User.search(query: { constant_score: { filter: { term: { email: email } } } }).first
     u.update_attribute(:admin, true)
 
 To create an API, click the `+` next to the Dynamic APIs subnav heading.
