@@ -7,6 +7,7 @@ class Query
 
   DEFAULT_SIZE = 10
   MAX_SIZE = 100
+  UNLIMITED = 2**30
   attr_accessor :offset, :size, :sort, :q, :search_type
 
   validates_numericality_of :offset, greater_than_or_equal_to: 0, allow_nil: true
@@ -33,7 +34,7 @@ class Query
   end
 
   def self.setup_query(fields)
-    fields.reverse_merge!(query: [], filter: [], sort: [])
+    fields.reverse_merge!(query: [], filter: [], sort: [], raw_enabled: [])
     fields[:query].each { |f| attr_reader f }
     fields[:filter].each { |f| attr_reader f }
     self.query_fields = fields
@@ -64,11 +65,15 @@ class Query
     array = split_to_array(value.strip)
     array.map! do |value|
       if value.include?(':')
-        { value.split(':')[0].strip => value.split(':')[1].strip }
+        { maybe_raw(value.split(':')[0].strip) => value.split(':')[1].strip }
       else
-        value.strip
+        maybe_raw(value.strip)
       end
     end
+  end
+
+  def maybe_raw(field)
+    query_fields[:raw_enabled].include?(field.to_sym) ? field + '.raw' : field
   end
 
   def initialize_search_fields(options)
@@ -90,8 +95,7 @@ class Query
 
   def generate_search_body
     Jbuilder.encode do |json|
-      generate_query(json)
-      generate_filter(json)
+      generate_query_and_filter(json)
       generate_aggregations(json)
     end
   end
@@ -139,7 +143,6 @@ class Query
     field_values = fields[:query].map { |f| send(f) }
     json.query do
       json.bool do
-        json.minimum_should_match 1
         generate_should_clauses(fields, json)
         yield if block_given?
       end
@@ -147,8 +150,11 @@ class Query
   end
 
   def generate_should_clauses(fields, json)
-    json.set! :should do
-      multi_match_semantic_query(fields, json) if @q
+    if @q
+      json.minimum_should_match 1
+      json.set! :should do
+        multi_match_semantic_query(fields, json)
+      end
     end
   end
 
@@ -192,10 +198,6 @@ class Query
     end
   end
 
-  def generate_query(json)
-    query_from_fields(json, query_fields)
-  end
-
   def generate_filter(json)
     filter_from_fields(json, query_fields)
   end
@@ -234,7 +236,7 @@ class Query
         json.set! k do
           json.terms do
             json.field v[:field]
-            json.size v[:size] || 0
+            json.size v[:size] || UNLIMITED
           end
         end
       end

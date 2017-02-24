@@ -48,15 +48,11 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 2.2.0) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.2.1) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
-
-You need to install the delete-by-query plugin and restart elasticsearch if it was already running:
-
-    $ plugin install delete-by-query
 
 Webservices can use foreman to start Rails and Sidekiq in development environments. 
 
@@ -106,7 +102,7 @@ include CSV, TSV, JSON, XLS, and XML. The initial admin user created with the `d
 set to true already. To toggle an existing user, you can do this from the Rails console:
     
     email = "admin@example.co"
-    u = User.search(filter: { bool: { must: { term: { email: email } } } }).first
+    u = User.search(query: { constant_score: { filter: { term: { email: email } } } }).first
     u.update_attribute(:admin, true)
 
 To create an API, click the `+` next to the Dynamic APIs subnav heading.

@@ -46,7 +46,7 @@ namespace :ita do
       next unless module_or_importer_class.respond_to?(:import_all_sources)
       search_class = (module_or_importer_class_name + '::Consolidated').constantize
       # Only upload files if there is new data from at least one source:
-      search_class.search_for(size: 0)[:sources_used].each do |sources_hash|
+      search_class.search_for(size: 1)[:sources_used].each do |sources_hash|
         if sources_hash[:source_last_updated].present? && Time.parse(sources_hash[:source_last_updated]) > (Time.now - 1.hour).utc
           StaticFileManager.upload_all_files(search_class)
           break

@@ -11,10 +11,10 @@ module SalesforceArticle
       super
       @q = options[:q]
       @sources = begin
-                   split_to_array(options[:sources].upcase)
-                 rescue
-                   []
-                 end
+        split_to_array(options[:sources].upcase)
+      rescue
+        []
+      end
       @industries = split_to_array(options[:industries]) if options[:industries].present?
       @topics = split_to_array(options[:topics]) if options[:topics].present?
 
@@ -26,23 +26,18 @@ module SalesforceArticle
 
     MULTI_FIELDS = %i(atom references summary title)
 
-    private
-
-    def generate_query(json)
-      multi_fields = %i(title)
+    def generate_query_and_filter(json)
       json.query do
-        json.filtered do
+        json.bool do
           generate_filtered(json)
-          json.query do
-            json.bool do
-              json.must do
-                json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) } if @q
-              end
-            end
-          end if @q
+          json.must do
+            json.child! { generate_multi_match(json, self.class::MULTI_FIELDS, @q) } if @q
+          end
         end
-      end
+      end if @q || any_filter_field_exists?
     end
+
+    private
 
     def generate_filtered(json)
       json.filter do

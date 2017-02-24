@@ -29,7 +29,7 @@ module ScreeningList
       @fuzzy_name = true if options[:fuzzy_name].present? && options[:fuzzy_name].try(:downcase) == 'true'
     end
 
-    def generate_query(json)
+    def generate_query_and_filter(json)
       multi_fields = %i(alt_names name remarks title)
       name_fields = %i(alt_names name)
       if @name && @fuzzy_name
@@ -50,6 +50,7 @@ module ScreeningList
       end
       json.query do
         json.bool do
+          generate_filter(json)
           json.must do
             json.child! { generate_multi_match(json, multi_fields, @q) }
           end if @q
@@ -68,7 +69,7 @@ module ScreeningList
             generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
           end
         end
-      end if [@q, @name, @distance, @address].any?
+      end
     end
 
     def generate_fuzziness_queries(json, fields, value)

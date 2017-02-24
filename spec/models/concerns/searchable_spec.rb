@@ -4,11 +4,12 @@ describe Searchable do
   before(:all) do
     class MockModel
       include Indexable
+      analyze_by :snowball_asciifolding_nostop
       self.fetch_all_sort_by = 'foo'
       self.mappings = {
         name.typeize => {
           properties: {
-            foo:         { type: 'string' },
+            foo:         { type: 'keyword' },
             _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },

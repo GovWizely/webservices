@@ -4,16 +4,19 @@ describe IndexMonitor do
   before do
     class Mock
       include Indexable
+      analyze_by :snowball_asciifolding_nostop
       self.import_rate = 'Daily'
       self.mappings = {}
     end
     class Mock2
       include Indexable
+      analyze_by :snowball_asciifolding_nostop
       self.import_rate = 'Hourly'
       self.mappings = {}
     end
     class Mock3
       include Indexable
+      analyze_by :snowball_asciifolding_nostop
       self.import_rate = 'Weekly'
       self.mappings = {}
     end
@@ -66,6 +69,7 @@ describe IndexMonitor do
     before do
       class Mock4
         include Indexable
+        analyze_by :snowball_asciifolding_nostop
         self.mappings = {}
       end
       Mock4.recreate_index

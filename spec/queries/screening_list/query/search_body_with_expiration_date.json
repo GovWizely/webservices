@@ -1,16 +1,20 @@
 {
-  "filter": {
+  "query": {
     "bool": {
-      "must": [
-        {
-          "range": {
-            "ids.expiration_date": {
-              "from": "2015-08-27",
-              "to": "2015-08-28"
+      "filter": {
+        "bool": {
+          "must": [
+            {
+              "range": {
+                "ids.expiration_date": {
+                  "from": "2015-08-27",
+                  "to": "2015-08-28"
+                }
+              }
             }
-          }
+          ]
         }
-      ]
+      }
     }
   }
 }

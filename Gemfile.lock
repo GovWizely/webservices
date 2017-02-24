@@ -21,6 +21,35 @@ GIT
       nokogiri (= 1.6.7.1)
       rubyzip (= 1.2.0)
 
+GIT
+  remote: git://github.com/loren/elasticsearch-rails.git
+  revision: 3a22d3e45ac40f5c4e381745601c9e27c24a9b5d
+  specs:
+    elasticsearch-model (0.1.9)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      hashie
+    elasticsearch-persistence (0.1.9)
+      activemodel (> 3)
+      activesupport (> 3)
+      elasticsearch (> 0.4)
+      elasticsearch-model (>= 0.1)
+      hashie
+      virtus
+
+GIT
+  remote: git://github.com/loren/elasticsearch-ruby.git
+  revision: 2798c446ab7d98e3e8292992ebb82316ad463faa
+  specs:
+    elasticsearch (1.0.18)
+      elasticsearch-api (= 1.0.18)
+      elasticsearch-transport (= 1.0.18)
+    elasticsearch-api (1.0.18)
+      multi_json
+    elasticsearch-transport (1.0.18)
+      faraday
+      multi_json
+
 GEM
   remote: https://rubygems.org/
   specs:
@@ -48,16 +77,19 @@ GEM
       multi_json (~> 1.3)
       thread_safe (~> 0.1)
       tzinfo (~> 0.3.37)
-    addressable (2.4.0)
-    airbrake (5.6.0)
+    addressable (2.5.0)
+      public_suffix (~> 2.0, >= 2.0.2)
+    airbrake (5.6.1)
       airbrake-ruby (~> 1.6)
-    airbrake-ruby (1.6.0)
-    airbrussh (1.1.1)
+    airbrake-ruby (1.7.0)
+    airbrussh (1.1.2)
       sshkit (>= 1.6.1, != 1.7.0)
     arel (4.0.2)
     ast (2.3.0)
-    aws-sdk-core (2.6.12)
+    aws-sdk-core (2.7.0)
+      aws-sigv4 (~> 1.0)
       jmespath (~> 1.0)
+    aws-sigv4 (1.0.0)
     axiom-types (0.1.1)
       descendants_tracker (~> 0.0.4)
       ice_nine (~> 0.11.0)
@@ -72,14 +104,14 @@ GEM
     blankslate (3.1.3)
     builder (3.1.4)
     byebug (9.0.6)
-    capistrano (3.6.1)
+    capistrano (3.7.1)
       airbrussh (>= 1.0.0)
       capistrano-harrow
       i18n
       rake (>= 10.0.0)
       sshkit (>= 1.9.0)
     capistrano-harrow (0.5.3)
-    capybara (2.10.1)
+    capybara (2.11.0)
       addressable
       mime-types (>= 1.16)
       nokogiri (>= 1.3.3)
@@ -87,13 +119,13 @@ GEM
       rack-test (>= 0.5.4)
       xpath (~> 2.0)
     charlock_holmes (0.7.3)
-    codeclimate-test-reporter (0.6.0)
-      simplecov (>= 0.7.1, < 1.0.0)
+    codeclimate-test-reporter (1.0.5)
+      simplecov
     coderay (1.1.1)
     coercible (1.0.0)
       descendants_tracker (~> 0.0.1)
-    concurrent-ruby (1.0.2)
-    connection_pool (2.2.0)
+    concurrent-ruby (1.0.4)
+    connection_pool (2.2.1)
     crack (0.4.3)
       safe_yaml (~> 1.0.0)
     crass (1.0.2)
@@ -108,43 +140,24 @@ GEM
       responders
       thread_safe (~> 0.1)
       warden (~> 1.2.3)
-    diff-lcs (1.2.5)
+    diff-lcs (1.3)
     docile (1.1.5)
-    domain_name (0.5.20160826)
+    domain_name (0.5.20161129)
       unf (>= 0.0.5, < 1.0.0)
-    elasticsearch (1.0.18)
-      elasticsearch-api (= 1.0.18)
-      elasticsearch-transport (= 1.0.18)
-    elasticsearch-api (1.0.18)
-      multi_json
-    elasticsearch-model (0.1.9)
-      activesupport (> 3)
-      elasticsearch (> 0.4)
-      hashie
-    elasticsearch-persistence (0.1.9)
-      activemodel (> 3)
-      activesupport (> 3)
-      elasticsearch (> 0.4)
-      elasticsearch-model (>= 0.1)
-      hashie
-      virtus
-    elasticsearch-transport (1.0.18)
-      faraday
-      multi_json
     equalizer (0.0.11)
     erubis (2.7.0)
-    eventmachine (1.2.0.1)
+    eventmachine (1.2.1)
     faraday (0.9.2)
       multipart-post (>= 1.2, < 3)
-    faraday_middleware (0.10.0)
-      faraday (>= 0.7.4, < 0.10)
-    foreman (0.82.0)
+    faraday_middleware (0.11.0.1)
+      faraday (>= 0.7.4, < 1.0)
+    foreman (0.83.0)
       thor (~> 0.19.1)
     git (1.3.0)
     git-version-bump (0.15.1)
     haml (4.0.7)
       tilt
-    hashdiff (0.3.0)
+    hashdiff (0.3.2)
     hashie (3.4.6)
     htmlentities (4.3.4)
     http-cookie (1.0.3)
@@ -154,14 +167,14 @@ GEM
     i18n (0.7.0)
     ice_nine (0.11.2)
     iso_country_codes (0.7.4)
-    jbuilder (2.6.0)
+    jbuilder (2.6.1)
       activesupport (>= 3.0.0, < 5.1)
       multi_json (~> 1.2)
     jmespath (1.3.1)
     jquery-rails (3.1.4)
       railties (>= 3.0, < 5.0)
       thor (>= 0.14, < 2.0)
-    json (2.0.2)
+    json (2.0.3)
     jsonpath (0.5.8)
       multi_json
     launchy (2.4.3)
@@ -182,27 +195,27 @@ GEM
     mime-types (1.25.1)
     mini_portile2 (2.0.0)
     minitest (4.7.5)
-    monetize (1.4.0)
-      money (~> 6.7)
-    money (6.7.1)
+    monetize (1.6.0)
+      money (~> 6.8)
+    money (6.8.1)
       i18n (>= 0.6.4, <= 0.7.0)
       sixarm_ruby_unaccent (>= 1.1.1, < 2)
     multi_json (1.12.1)
-    multi_xml (0.5.5)
+    multi_xml (0.6.0)
     multipart-post (2.0.0)
     net-http-digest_auth (1.4)
     net-http-persistent (2.9.4)
     net-scp (1.2.1)
       net-ssh (>= 2.6.5)
-    net-ssh (3.2.0)
-    newrelic_rpm (3.17.0.325)
+    net-ssh (4.0.1)
+    newrelic_rpm (3.17.2.327)
     nokogiri (1.6.7.1)
       mini_portile2 (~> 2.0.0.rc2)
-    nokogumbo (1.4.9)
+    nokogumbo (1.4.10)
       nokogiri
     ntlm-http (0.1.1)
     orm_adapter (0.5.0)
-    parser (2.3.1.4)
+    parser (2.3.3.1)
       ast (~> 2.2)
     parslet (1.7.1)
       blankslate (>= 2.0, <= 4.0)
@@ -212,7 +225,7 @@ GEM
       coderay (~> 1.1.0)
       method_source (~> 0.8.1)
       slop (~> 3.4)
-    pry-byebug (3.4.0)
+    pry-byebug (3.4.2)
       byebug (~> 9.0)
       pry (~> 0.10)
     pry-rails (0.3.4)
@@ -220,6 +233,7 @@ GEM
     pry-remote (0.1.8)
       pry (~> 0.9)
       slop (~> 3.0)
+    public_suffix (2.0.5)
     rack (1.5.5)
     rack-contrib (1.4.0)
       git-version-bump (~> 0.15)
@@ -241,18 +255,18 @@ GEM
       activesupport (= 4.0.9)
       rake (>= 0.8.7)
       thor (>= 0.18.1, < 2.0)
-    rainbow (2.1.0)
-    rake (11.3.0)
+    rainbow (2.2.1)
+    rake (12.0.0)
     rdiscount (2.2.0.1)
-    redis (3.3.1)
+    redis (3.3.2)
     responders (1.1.2)
       railties (>= 3.2, < 4.2)
-    restforce (2.4.2)
+    restforce (2.5.0)
       faraday (~> 0.9.0)
       faraday_middleware (>= 0.8.8)
       hashie (>= 1.2.0, < 4.0)
       json (>= 1.7.5)
-    roo (2.5.1)
+    roo (2.7.1)
       nokogiri (~> 1)
       rubyzip (~> 1.1, < 2.0.0)
     roo-xls (1.0.0)
@@ -290,10 +304,10 @@ GEM
       crass (~> 1.0.2)
       nokogiri (>= 1.4.4)
       nokogumbo (~> 1.4.1)
-    sass (3.4.22)
+    sass (3.4.23)
     shoulda-matchers (3.1.1)
       activesupport (>= 4.0.0)
-    sidekiq (4.2.3)
+    sidekiq (4.2.9)
       concurrent-ruby (~> 1.0)
       connection_pool (~> 2.2, >= 2.2.0)
       rack-protection (>= 1.5.0)
@@ -312,34 +326,34 @@ GEM
       tilt (>= 1.3, < 3)
     sixarm_ruby_unaccent (1.1.1)
     slop (3.6.0)
-    smarter_csv (1.1.0)
-    spreadsheet (1.1.3)
+    smarter_csv (1.1.4)
+    spreadsheet (1.1.4)
       ruby-ole (>= 1.0)
-    sprockets (3.7.0)
+    sprockets (3.7.1)
       concurrent-ruby (~> 1.0)
       rack (> 1, < 3)
     sprockets-rails (2.3.3)
       actionpack (>= 3.0)
       activesupport (>= 3.0)
       sprockets (>= 2.8, < 4.0)
-    sshkit (1.11.3)
+    sshkit (1.11.5)
       net-scp (>= 1.1.2)
       net-ssh (>= 2.8.0)
     thin (1.7.0)
       daemons (~> 1.0, >= 1.0.9)
       eventmachine (~> 1.0, >= 1.0.4)
       rack (>= 1, < 3)
-    thor (0.19.1)
+    thor (0.19.4)
     thread_safe (0.3.5)
     tilt (2.0.5)
     treetop (1.4.15)
       polyglot
       polyglot (>= 0.3.1)
-    tzinfo (0.3.51)
+    tzinfo (0.3.52)
     unf (0.1.4)
       unf_ext
     unf_ext (0.0.7.2)
-    unicode-display_width (1.1.1)
+    unicode-display_width (1.1.3)
     vcr (3.0.3)
     virtus (1.0.5)
       axiom-types (~> 0.1)
@@ -348,7 +362,7 @@ GEM
       equalizer (~> 0.0, >= 0.0.9)
     warden (1.2.6)
       rack (>= 1.0)
-    webmock (2.1.0)
+    webmock (2.3.2)
       addressable (>= 2.3.6)
       crack (>= 0.3.2)
       hashdiff
@@ -369,9 +383,9 @@ DEPENDENCIES
   charlock_holmes
   codeclimate-test-reporter
   devise (~> 3.4.0)
-  elasticsearch (~> 1.0.0)
+  elasticsearch!
   elasticsearch-model
-  elasticsearch-persistence
+  elasticsearch-persistence!
   foreman
   git
   haml
@@ -415,4 +429,4 @@ DEPENDENCIES
   webmock
 
 BUNDLED WITH
-   1.12.5
+   1.14.5

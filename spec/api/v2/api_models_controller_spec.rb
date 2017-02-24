@@ -80,7 +80,7 @@ describe Api::V2::ApiModelsController, type: :request do
       specify { expect(subject.status).to eq(404) }
     end
 
-    context 'when sort is specified' do
+    context 'when desc sort is specified on country field' do
       let(:expected) { JSON.parse Rails.root.join("#{File.dirname(__FILE__)}/data_sources/sorted.json").read }
       let(:params) { { sort: 'country:desc' } }
       before { get '/v1/de_minimis_currencies/search', params, @v2_headers }
@@ -88,7 +88,7 @@ describe Api::V2::ApiModelsController, type: :request do
 
       it_behaves_like 'a successful search request'
 
-      it 'returns the results in reverse alphabetical order' do
+      it 'returns the results in reverse alphabetical order on raw multi field' do
         json_response = JSON.parse(response.body)
         results = json_response['results']
 

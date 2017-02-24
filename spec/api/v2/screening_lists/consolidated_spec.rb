@@ -5,7 +5,7 @@ describe 'Consolidated Screening List API V2', type: :request do
   include_context 'V2 headers'
 
   describe 'GET /consolidated_screening_list/search' do
-    let(:params) { { size: 100 } }
+    let(:params) { { size: -1 } }
     before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
 
     context 'when search parameters are empty' do
@@ -352,7 +352,7 @@ describe 'Consolidated Screening List API V2', type: :request do
         end
 
         def last_modified
-          return DateTime.parse('2017-01-28')
+          DateTime.parse('2017-01-28')
         end
       end
     end
@@ -365,7 +365,7 @@ describe 'Consolidated Screening List API V2', type: :request do
       it 'is a CSV' do
         expect(response.status).to eq(200)
         expect(response.content_type.symbol).to eq(:csv)
-        expect(response.header['Content-Disposition']).to eq("attachment; filename=screening_list/consolidated_2017-01-28.csv")
+        expect(response.header['Content-Disposition']).to eq('attachment; filename=screening_list/consolidated_2017-01-28.csv')
       end
     end
 
@@ -377,7 +377,7 @@ describe 'Consolidated Screening List API V2', type: :request do
       it 'is a TSV' do
         expect(response.status).to eq(200)
         expect(response.content_type.symbol).to eq(:tsv)
-        expect(response.header['Content-Disposition']).to eq("attachment; filename=screening_list/consolidated_2017-01-28.tsv")
+        expect(response.header['Content-Disposition']).to eq('attachment; filename=screening_list/consolidated_2017-01-28.tsv')
       end
     end
   end

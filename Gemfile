@@ -5,8 +5,8 @@ gem 'rails', '4.0.9'
 
 gem 'aws-sdk-core'
 gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
-gem 'elasticsearch', '~> 1.0.0'
-gem 'elasticsearch-persistence'
+gem 'elasticsearch', git: 'git://github.com/loren/elasticsearch-ruby.git'
+gem 'elasticsearch-persistence', git: 'git://github.com/loren/elasticsearch-rails.git'
 gem 'elasticsearch-model'
 gem 'iso_country_codes'
 gem 'jbuilder'

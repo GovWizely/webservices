@@ -1,63 +1,80 @@
 {
-    "filter": {
+  "query": {
+    "bool": {
+      "filter": {
         "bool": {
-            "must": [
-                {
-                    "term": {
-                        "type": "entity"
-                    }
-                },
-                {
-                    "terms": {
-                        "source.code": ["SDN"]
-                    }
-                }
+          "must": [
+            {
+              "term": {
+                "type": "entity"
+              }
+            },
+            {
+              "terms": {
+                "source.code": [
+                  "SDN"
+                ]
+              }
+            }
+          ],
+          "should": [
+            {
+              "terms": {
+                "addresses.country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "ids.country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "nationalities": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "citizenships": [
+                  "US",
+                  "CA"
+                ]
+              }
+            },
+            {
+              "terms": {
+                "country": [
+                  "US",
+                  "CA"
+                ]
+              }
+            }
+          ]
+        }
+      },
+      "must": [
+        {
+          "multi_match": {
+            "fields": [
+              "alt_names",
+              "name",
+              "remarks",
+              "title"
             ],
-            "should": [
-                {
-                    "terms": {
-                        "addresses.country": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "ids.country": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "nationalities": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "citizenships": ["US", "CA"]
-                    }
-                },
-                {
-                    "terms": {
-                        "country": ["US", "CA"]
-                    }
-                }
-            ]
+            "operator": "and",
+            "query": "fish"
+          }
         }
-    },
-    "query": {
-        "bool": {
-            "must": [
-                {
-                    "multi_match": {
-                        "fields": [
-                            "alt_names",
-                            "name",
-                            "remarks",
-                            "title"
-                        ],
-                        "operator": "and",
-                        "query": "fish"
-                    }
-                }
-            ]
-        }
+      ]
     }
+  }
 }

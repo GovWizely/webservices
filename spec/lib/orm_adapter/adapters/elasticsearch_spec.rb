@@ -5,7 +5,7 @@ describe OrmAdapter::Elasticsearch do
   before do
     class ThingModel
       include Elasticsearch::Persistence::Model
-      attribute :email, String, mapping: { type: 'string', index: 'not_analyzed' }
+      attribute :email, String, mapping: { type: 'keyword' }
     end
     ThingModel.create_index!
   end

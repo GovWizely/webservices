@@ -45,7 +45,7 @@ describe RecreateIndicesWithModifiedMappings do
       let(:type) { model.index_type }
       let(:index) { model.index_name }
       let(:field) { 'foo' }
-      let(:mappings) { { type: 'string' } }
+      let(:mappings) { { type: 'keyword' } }
 
       before do
         new_mappings = model.mappings.deep_dup

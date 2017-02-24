@@ -2,12 +2,11 @@ module ModelBuilder
   TEMPLATE_PATH = 'lib/elasticsearch/templates/document.rb.erb'.freeze
   TYPE_TO_MAPPING = { enum:    { type:    String,
                                  mapping: {
-                                   type:     'string',
+                                   type:     'text',
                                    analyzer: 'keyword_lowercase',
                                    fields:   {
                                      raw: {
-                                       index: 'not_analyzed',
-                                       type:  'string',
+                                       type: 'keyword',
                                      },
                                    }, }, },
                       integer: { type: Integer, mapping: { type: 'long' } },
@@ -15,12 +14,11 @@ module ModelBuilder
                       date:    { type: DateTime, mapping: { type: 'date' } },
                       string:  { type:    String,
                                  mapping: {
-                                   type:     'string',
+                                   type:     'text',
                                    analyzer: 'snowball_asciifolding_nostop',
                                    fields:   {
                                      raw: {
-                                       index: 'not_analyzed',
-                                       type:  'string',
+                                       type: 'keyword',
                                      },
                                    }, }, }, }.with_indifferent_access
 
