@@ -15,6 +15,7 @@
     "query": {
         "bool": {
             "disable_coord": true,
+            "minimum_should_match": 1,
             "should": [
                 {
                     "function_score": {

@@ -49,6 +49,7 @@ module ScreeningList
       end
 
       json.disable_coord true
+      json.minimum_should_match 1
       json.set! 'should' do
         score_hash.each do |_key, value|
           json.child! do
