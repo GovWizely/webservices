@@ -381,4 +381,61 @@ describe 'Consolidated Screening List API V2', type: :request do
       end
     end
   end
+
+  context 'when countries is specified' do
+    let(:params) {
+      {
+        countries: 'DE'
+      }
+    }
+
+    before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
+    subject { response }
+    it_behaves_like 'a successful search request'
+
+    it 'returns only matching response' do
+      results = JSON.parse(subject.body)['results']
+      expect(results.count).to eq(2)
+    end
+  end
+
+  context 'when fuzzy_name=true and countries are specified' do
+    let(:params) {
+      {
+        name: 'abd',
+        fuzzy_name: 'true',
+        countries: 'DE'
+      }
+    }
+
+    before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
+    subject { response }
+    it_behaves_like 'a successful search request'
+
+    it 'returns only matching response' do
+      results = JSON.parse(subject.body)['results']
+      expect(results.count).to eq(1)
+      expect(results.first['name']).to eq('ADT ANALOG AND DIGITAL TECHNIK')
+    end
+  end
+
+  context 'when name is multi word string and fuzzy_name=true' do
+    let(:params) {
+      {
+        name: 'qazi abdallha',
+        fuzzy_name: 'true'
+      }
+    }
+
+    before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
+    subject { response }
+    it_behaves_like 'a successful search request'
+
+    it 'returns only matching response' do
+      results = JSON.parse(subject.body)['results']
+      expect(results.count).to eq(3)
+      names = results.map { |r| r['name'] }.uniq
+      expect(names).to eq(['Qazi Abdallah'])
+    end
+  end
 end
