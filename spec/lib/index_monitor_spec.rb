@@ -39,14 +39,21 @@ describe IndexMonitor do
       Mock.touch_metadata(DateTime.now.utc - 25.hours)
       Mock2.touch_metadata
       Mock3.touch_metadata
-      expect { monitor.check_indices }.to raise_error('Indices need refresh:  ["test:webservices:mocks"]')
+      expect { monitor.check_indices }.to raise_error('Indices need refresh: ["test:webservices:mocks"]. Indices may be empty: [].')
     end
 
     it 'throws an error with all non-updated indexes' do
       Mock.touch_metadata(DateTime.now.utc - 25.hours)
       Mock2.touch_metadata(DateTime.now.utc - 2.hours)
       Mock3.touch_metadata(DateTime.now.utc - 169.hours)
-      expect { monitor.check_indices }.to raise_error('Indices need refresh:  ["test:webservices:mocks", "test:webservices:mock2s", "test:webservices:mock3s"]')
+      expect { monitor.check_indices }.to raise_error('Indices need refresh: ["test:webservices:mocks", "test:webservices:mock2s", "test:webservices:mock3s"]. Indices may be empty: [].')
+    end
+
+    it 'throws an error when the last_imported time is blank' do 
+      Mock.touch_metadata('')
+      Mock2.touch_metadata
+      Mock3.touch_metadata
+      expect { monitor.check_indices }.to raise_error('Indices need refresh: []. Indices may be empty: ["test:webservices:mocks"].')
     end
   end
 
