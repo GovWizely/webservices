@@ -2,7 +2,7 @@ class DataSourcesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_data_source, only: [:show, :edit, :update, :destroy, :iterate_version]
   rescue_from Elasticsearch::Transport::Transport::Errors::Conflict, with: :api_not_unique
-  COMMON_PARAMS = %i(name api description path url version_number consolidated)
+  COMMON_PARAMS = %i(name api description path url version_number consolidated s3_bucket_name)
   MESSAGES = { created:   'Data source was successfully created. Review the dictionary and make any changes.',
                destroyed: 'Dataset was successfully destroyed.',
                set_up:    'Consolidated data source was successfully set up',

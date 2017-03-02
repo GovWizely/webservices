@@ -20,6 +20,6 @@ class StaticFileManager
   private
 
   def self.get_s3_client
-    Aws::S3::Client.new(region: 'us-east-1', credentials: CREDENTIALS)
+    Aws::S3::Client.new(region: Rails.configuration.aws_credentials[:region], credentials: CREDENTIALS)
   end
 end
