@@ -23,8 +23,13 @@ class IndexMonitor
 
   def check_indices
     errored_indices = []
+    empty_indices = []
     @index_list.each do |index|
       metadata = get_metadata(index)
+      if metadata[:last_imported].blank?
+        empty_indices.push(index)
+        next
+      end
       actual_last_imported = DateTime.strptime(metadata[:last_imported], '%Y-%m-%dT%H:%M:%S%z')
       expected_last_imported = compute_expected_last_imported(metadata[:import_rate])
 
@@ -33,8 +38,8 @@ class IndexMonitor
       end
     end
 
-    if !errored_indices.empty?
-      raise "Indices need refresh:  #{errored_indices}"
+    if !errored_indices.empty? || !empty_indices.empty?
+      raise "Indices need refresh: #{errored_indices}. Indices may be empty: #{empty_indices}."
     else
       Rails.logger.info 'All indices are up to date.'
     end
