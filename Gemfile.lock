@@ -13,7 +13,7 @@ GIT
 
 GIT
   remote: git://github.com/GovWizely/s3_browser.git
-  revision: 6034fb804c9d3f41761213d414c3371fe985e8ec
+  revision: 76d1eab19f8645ff2b54be6ec041bdc495690bfb
   specs:
     s3_browser (0.0.1)
       aws-sdk-core
