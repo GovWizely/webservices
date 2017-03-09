@@ -399,6 +399,25 @@ describe 'Consolidated Screening List API V2', type: :request do
     end
   end
 
+  context 'when countries and address are specified' do
+    let(:params) {
+      {
+        countries: 'DE',
+        address: 'lane'
+      }
+    }
+
+    before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
+    subject { response }
+    it_behaves_like 'a successful search request'
+
+    it 'returns only matching response' do
+      results = JSON.parse(subject.body)['results']
+      expect(results.count).to eq(1)
+      expect(results.first['addresses'].first['address']).to eq('20 Ironmonger Lane')
+    end
+  end
+
   context 'when fuzzy_name=true and countries are specified' do
     let(:params) {
       {

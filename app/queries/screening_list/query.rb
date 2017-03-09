@@ -84,6 +84,7 @@ module ScreeningList
           end
         end if @distance
       end
+      json.minimum_should_match 1
     end
 
     def generate_filter(json)
