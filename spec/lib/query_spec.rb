@@ -5,10 +5,10 @@ describe Query, type: :model do
     before do
       class MockChildQuery < Query
         setup_query(
-          q:      %i(title description),
-          query:  %i(),
+          q: %i(title description),
+          query: %i(),
           filter: %i(countries industries),
-          sort:   %i(publish_date),
+          sort: %i(publish_date),
         )
       end
     end
@@ -18,8 +18,8 @@ describe Query, type: :model do
   describe 'validations' do
     it do
       is_expected.to validate_numericality_of(:offset)
-        .is_greater_than_or_equal_to(0,)
-        .allow_nil
+                       .is_greater_than_or_equal_to(0,)
+                       .allow_nil
     end
   end
 
@@ -42,7 +42,7 @@ describe Query, type: :model do
           end
 
           setup_query(
-            q:     %i(title description),
+            q: %i(title description),
             query: %i(q),
           )
         end
@@ -67,18 +67,12 @@ describe Query, type: :model do
     context 'setup_query contains all possible options' do
       include_context 'with MockChildQuery child class'
       let(:query) do
-        VCR.use_cassette('importers/data_sources/semantic_query_service/request.yml') do
-          MockChildQuery.new(q:                                    'scuba in cuba and asia',
-                             countries:                            'canada',
-                             industries:                           'fishing',
-                             semantic_query_service_configuration: {
-                               url: 'https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE',
-                               ttl: '1 hour', },)
-        end
+        MockChildQuery.new(q: 'scuba in cuba and asia', countries: 'canada', industries: 'fishing')
       end
       let(:search_body) { JSON.parse open("#{File.dirname(__FILE__)}/query/search_body_with_all.json").read }
 
       it 'generates search body with all the queries and filters' do
+        puts JSON.parse(query.generate_search_body)
         expect(JSON.parse(query.generate_search_body)).to eq(search_body)
       end
     end

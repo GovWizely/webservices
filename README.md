@@ -15,20 +15,6 @@ The Webservices project lets you take pretty much any structured data set and tu
 
 # Installation
 
-You can choose either a standard installation or you can use Docker.
-
-## Docker
-
-If you have [Docker](http://docker.io/) and [Docker Compose](https://docs.docker.com/compose/), all you have to do is
-
-    $ docker-compose up
-
-And it should automatically bring up the ElasticSearch container and the Rails app, correctly linking them.
-
-Otherwise, follow the standard setup instructions.
-
-## Standard setup
-
 ### Ruby
 
 You'll need [Ruby 2.2](http://www.ruby-lang.org/en/downloads/).
@@ -48,13 +34,11 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.2.1) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.2.2) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
 Otherwise, follow the [instructions](http://www.elasticsearch.org/download/) to download and run it.
-
-Webservices can use foreman to start Rails and Sidekiq in development environments. 
 
 ### Redis
 
@@ -72,9 +56,7 @@ Generate the default admin user with username `admin@example.co` and password `1
 
 Fire up a server:
 
-    foreman start -f Procfile.dev
-    
-This Procfile assumes you already have Elasticsearch and Redis running.
+    bundle exec rails s thin
     
 Import some data:    
     bundle exec rake ita:import[ScreeningList]
@@ -115,7 +97,7 @@ To refresh a URL-based api, you can periodically call the rake task to check for
 
     bundle exec rspec
 
-Elasticsearch must be running. It's easiest to just `foreman start -f Procfile.dev`.
+Elasticsearch must be running. 
 
 ### Code Coverage
 

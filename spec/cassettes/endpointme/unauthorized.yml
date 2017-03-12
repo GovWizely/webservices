@@ -1,0 +1,1218 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fbf598b73794a0cc317e75909a28678b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 82c6fd58-ffe1-44bb-9a82-70bdd11a59b6
+      X-Runtime:
+      - '0.029200'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-03-22T20:47:42.494Z","updated_at":"2017-03-22T21:40:48.604Z","name":"docs","api":"docs","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"docs","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:body:\n  :source: body\n  :description: Description of body\n  :indexed:
+        true\n  :plural: false\n  :type: string\n:fee:\n  :source: fee\n  :description:
+        Description of fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_date:\n  :source: end_date\n  :description: Description
+        of end_date\n  :indexed: true\n  :plural: false\n  :type: string\n:start_time:\n  :source:
+        start_time\n  :description: Description of start_time\n  :indexed: true\n  :plural:
+        false\n  :type: enum\n:event_cancelled:\n  :source: event_cancelled\n  :description:
+        Description of event_cancelled\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:node_title:\n  :source: node_title\n  :description: Description of
+        node_title\n  :indexed: true\n  :plural: false\n  :type: string\n:time_zone:\n  :source:
+        time_zone\n  :description: Description of time_zone\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_time:\n  :source: end_time\n  :description: Description
+        of end_time\n  :indexed: true\n  :plural: false\n  :type: enum\n:event_date:\n  :source:
+        event_date\n  :description: Description of event_date\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:start_date:\n  :source: start_date\n  :description: Description of
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"ad09548055ffbbb95585a3fa70d9561164c0db80","data_changed_at":"2017-03-22T21:40:48.601+00:00","data_imported_at":"2017-03-22T21:40:49.000+00:00","s3_bucket_name":"","id":"docs:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
+        of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
+        of event_type","indexed":true,"plural":false,"type":"string"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"string"},"event_cancelled":{"source":"event_cancelled","description":"Description
+        of event_cancelled","indexed":true,"plural":false,"type":"string"},"node_title":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"event_date":{"source":"event_date","description":"Description
+        of event_date","indexed":true,"plural":false,"type":"string"},"registration_website":{"source":"registration_website","description":"Description
+        of registration_website","indexed":true,"plural":false,"type":"string"},"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-17T17:45:17.578Z","updated_at":"2017-03-17T18:01:32.538Z","name":"ita_trade_events","api":"ita_trade_events","url":"https://s3.amazonaws.com/trade-events/ita.json","description":"ita_trade_events","dictionary":"---\n:_semantic_query_service:\n  :url:
+        https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE\u0026country_name_label=venues.country_name\n  :ttl:
+        1 day\n:_collection_path: \"$[*]\"\n:_aggregations:\n  :sources:\n    :field:
+        source\n  :countries:\n    :field: venues.country\n:event_id:\n  :source:
+        eventid\n  :description: Description of eventid\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n  :use_for_id: true\n:start_date:\n  :source: evstartdt\n  :description:
+        Description of evstartdt\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        evenddt\n  :description: Description of evenddt\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:url:\n  :source: url\n  :description: Description of
+        url\n  :indexed: false\n  :plural: false\n  :type: string\n:click_url:\n  :default:
+        \n  :copy_from: url\n  :indexed: false\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:event_type:\n  :source: eventtype\n  :description: Description of eventtype\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:registration_link:\n  :source:
+        registrationlink\n  :description: Description of registrationlink\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:description:\n  :source: detaildesc\n  :description:
+        Description of detaildesc\n  :indexed: true\n  :plural: false\n  :type: string\n:event_name:\n  :source:
+        eventname\n  :description: Description of eventname\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:cost:\n  :source: cost\n  :description: Description
+        of cost\n  :indexed: false\n  :plural: false\n  :type: float\n:registration_title:\n  :source:
+        registrationtitle\n  :description: Description of registrationtitle\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:source_industry:\n  :source: industries\n  :description:
+        Description of category\n  :indexed: true\n  :plural: false\n  :type: string\n:industry:\n  :copy_from:
+        source_industry\n  :indexed: true\n  :plural: true\n  :type: enum\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 day\n      :urls:\n      - :url: http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE\n        :result_path:
+        \"..name\"\n        :multi_value: true\n:source:\n  :constant: ITA\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source:
+        email\n    :description: desc of email\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :first_name:\n    :source: firstname\n    :description:
+        desc of first name\n    :indexed: true\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        lastname\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :person_title:\n    :source: title\n    :description:
+        desc of title\n    :indexed: true\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: post\n    :description: desc
+        of post\n    :indexed: false\n    :plural: false\n    :type: string\n:venues:\n  :_collection_path:
+        venues\n  :country_name:\n    :source: country\n    :description: desc of
+        country\n    :indexed: false\n    :plural: false\n    :type: string\n  :country:\n    :copy_from:
+        country_name\n    :description: desc of country code\n    :indexed: true\n    :plural:
+        true\n    :type: enum\n    :transformations:\n    - :sub:\n      - Korea (South)\n      -
+        South Korea\n    - :external_mapping:\n        :ttl: 1 month\n        :urls:\n        -
+        :url: https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :location:\n    :source: location\n    :description: desc
+        of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: state\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":"ae81986fa13b12da5c63b1f1369f9b54c623acfd","data_changed_at":"2017-03-17T17:58:43.184+00:00","data_imported_at":"2017-03-17T17:58:43.184+00:00","s3_bucket_name":"loren","id":"ita_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"industry":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"industries":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"detaildesc","description":"Description
+        of detaildesc","indexed":true,"plural":false,"type":"string"},"event_name":{"source":"eventname","description":"Description
+        of eventname","indexed":true,"plural":false,"type":"string"},"source_industry":{"source":"industries","description":"Description
+        of category","indexed":true,"plural":false,"type":"string"},"first_name":{"source":"firstname","description":"desc
+        of first name","indexed":true,"plural":false,"type":"string","search_path":"contacts.first_name"},"last_name":{"source":"lastname","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"person_title":{"source":"title","description":"desc
+        of title","indexed":true,"plural":false,"type":"string","search_path":"contacts.person_title"},"location":{"source":"location","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.location"},"state":{"source":"state","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"evstartdt","description":"Description
+        of evstartdt","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"evenddt","description":"Description
+        of evenddt","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T17:44:10.631Z","updated_at":"2017-03-17T18:18:19.727Z","name":"sba_trade_events","api":"sba_trade_events","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"sba_trade_events","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:_aggregations:\n  :sources:\n    :field: source\n  :countries:\n    :field:
+        venues.country\n:description:\n  :source: body\n  :description: Description
+        of body\n  :indexed: true\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :sanitize: xhtml1\n:cost:\n  :source: fee\n  :description: Description of
+        fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: false\n  :plural:
+        false\n  :type: string\n:start_date:\n  :source: start_date\n  :description:
+        Description of start_date\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        end_date\n  :description: Description of end_date\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:start_time:\n  :source: start_time\n  :description:
+        Description of start_time\n  :indexed: false\n  :plural: false\n  :type: enum\n:event_name:\n  :source:
+        node_title\n  :description: Description of node_title\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:time_zone:\n  :source: time_zone\n  :description:
+        Description of time_zone\n  :indexed: true\n  :plural: false\n  :type: string\n:end_time:\n  :source:
+        end_time\n  :description: Description of end_time\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n:registration_link:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: false\n  :plural: false\n  :type:
+        string\n:click_url:\n  :default: \n  :copy_from: registration_link\n  :indexed:
+        false\n  :plural: false\n  :type: string\n  :transformations:\n  - :external_mapping:\n      :ttl:
+        1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:source:\n  :constant: SBA\n  :indexed: false\n  :plural: false\n  :type:
+        enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source: registration_email\n    :description:
+        desc of email\n    :indexed: false\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        contact_name\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: agency\n    :description:
+        desc of agency\n    :indexed: false\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        registration_phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n:venues:\n  :_collection_path: venues\n  :country_name:\n    :source:
+        country\n    :description: desc of country\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :country:\n    :copy_from: country_name\n    :description:
+        desc of country code\n    :indexed: true\n    :plural: true\n    :type: enum\n    :transformations:\n    -
+        :external_mapping:\n        :ttl: 1 month\n        :urls:\n        - :url:
+        https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :name:\n    :source: location_name\n    :description:
+        desc of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: province\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n  :street:\n    :source: street\n    :description:
+        desc of street\n    :indexed: false\n    :plural: false\n    :type: string\n    :transformations:\n    -
+        :sanitize: xhtml1\n  :postal_code:\n    :source: postal_code\n    :description:
+        desc of postal_code\n    :indexed: false\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":null,"data_changed_at":"2017-03-17T17:44:10.663+00:00","data_imported_at":"2017-03-17T17:44:10.663+00:00","s3_bucket_name":"loren","id":"sba_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string","transformations":[{"sanitize":"xhtml1"}]},"event_name":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"last_name":{"source":"contact_name","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"name":{"source":"location_name","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.name"},"state":{"source":"province","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T20:29:52.730Z","updated_at":"2017-03-17T20:30:13.240Z","name":"trade_events","api":"trade_events","url":null,"description":"trade_events","dictionary":"---\r\n-
+        source: ITA\r\n  api: ita_trade_events\r\n  version_number: 1\r\n- source:
+        SBA\r\n  api: sba_trade_events\r\n  version_number: 1\r\n","data":null,"version_number":1,"published":true,"consolidated":true,"message_digest":null,"data_changed_at":"2017-03-17T20:29:52.730+00:00","data_imported_at":"2017-03-17T20:29:52.730+00:00","s3_bucket_name":"loren","id":"trade_events:v1","newest_version":true,"oldest_version":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:38 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"fbf598b73794a0cc317e75909a28678b"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 4bbc6afa-9072-432c-9640-91502096db2c
+      X-Runtime:
+      - '0.029457'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-03-22T20:47:42.494Z","updated_at":"2017-03-22T21:40:48.604Z","name":"docs","api":"docs","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"docs","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:body:\n  :source: body\n  :description: Description of body\n  :indexed:
+        true\n  :plural: false\n  :type: string\n:fee:\n  :source: fee\n  :description:
+        Description of fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_date:\n  :source: end_date\n  :description: Description
+        of end_date\n  :indexed: true\n  :plural: false\n  :type: string\n:start_time:\n  :source:
+        start_time\n  :description: Description of start_time\n  :indexed: true\n  :plural:
+        false\n  :type: enum\n:event_cancelled:\n  :source: event_cancelled\n  :description:
+        Description of event_cancelled\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:node_title:\n  :source: node_title\n  :description: Description of
+        node_title\n  :indexed: true\n  :plural: false\n  :type: string\n:time_zone:\n  :source:
+        time_zone\n  :description: Description of time_zone\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_time:\n  :source: end_time\n  :description: Description
+        of end_time\n  :indexed: true\n  :plural: false\n  :type: enum\n:event_date:\n  :source:
+        event_date\n  :description: Description of event_date\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:start_date:\n  :source: start_date\n  :description: Description of
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"ad09548055ffbbb95585a3fa70d9561164c0db80","data_changed_at":"2017-03-22T21:40:48.601+00:00","data_imported_at":"2017-03-22T21:40:49.000+00:00","s3_bucket_name":"","id":"docs:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
+        of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
+        of event_type","indexed":true,"plural":false,"type":"string"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"string"},"event_cancelled":{"source":"event_cancelled","description":"Description
+        of event_cancelled","indexed":true,"plural":false,"type":"string"},"node_title":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"event_date":{"source":"event_date","description":"Description
+        of event_date","indexed":true,"plural":false,"type":"string"},"registration_website":{"source":"registration_website","description":"Description
+        of registration_website","indexed":true,"plural":false,"type":"string"},"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-17T17:45:17.578Z","updated_at":"2017-03-17T18:01:32.538Z","name":"ita_trade_events","api":"ita_trade_events","url":"https://s3.amazonaws.com/trade-events/ita.json","description":"ita_trade_events","dictionary":"---\n:_semantic_query_service:\n  :url:
+        https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE\u0026country_name_label=venues.country_name\n  :ttl:
+        1 day\n:_collection_path: \"$[*]\"\n:_aggregations:\n  :sources:\n    :field:
+        source\n  :countries:\n    :field: venues.country\n:event_id:\n  :source:
+        eventid\n  :description: Description of eventid\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n  :use_for_id: true\n:start_date:\n  :source: evstartdt\n  :description:
+        Description of evstartdt\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        evenddt\n  :description: Description of evenddt\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:url:\n  :source: url\n  :description: Description of
+        url\n  :indexed: false\n  :plural: false\n  :type: string\n:click_url:\n  :default:
+        \n  :copy_from: url\n  :indexed: false\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:event_type:\n  :source: eventtype\n  :description: Description of eventtype\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:registration_link:\n  :source:
+        registrationlink\n  :description: Description of registrationlink\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:description:\n  :source: detaildesc\n  :description:
+        Description of detaildesc\n  :indexed: true\n  :plural: false\n  :type: string\n:event_name:\n  :source:
+        eventname\n  :description: Description of eventname\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:cost:\n  :source: cost\n  :description: Description
+        of cost\n  :indexed: false\n  :plural: false\n  :type: float\n:registration_title:\n  :source:
+        registrationtitle\n  :description: Description of registrationtitle\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:source_industry:\n  :source: industries\n  :description:
+        Description of category\n  :indexed: true\n  :plural: false\n  :type: string\n:industry:\n  :copy_from:
+        source_industry\n  :indexed: true\n  :plural: true\n  :type: enum\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 day\n      :urls:\n      - :url: http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE\n        :result_path:
+        \"..name\"\n        :multi_value: true\n:source:\n  :constant: ITA\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source:
+        email\n    :description: desc of email\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :first_name:\n    :source: firstname\n    :description:
+        desc of first name\n    :indexed: true\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        lastname\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :person_title:\n    :source: title\n    :description:
+        desc of title\n    :indexed: true\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: post\n    :description: desc
+        of post\n    :indexed: false\n    :plural: false\n    :type: string\n:venues:\n  :_collection_path:
+        venues\n  :country_name:\n    :source: country\n    :description: desc of
+        country\n    :indexed: false\n    :plural: false\n    :type: string\n  :country:\n    :copy_from:
+        country_name\n    :description: desc of country code\n    :indexed: true\n    :plural:
+        true\n    :type: enum\n    :transformations:\n    - :sub:\n      - Korea (South)\n      -
+        South Korea\n    - :external_mapping:\n        :ttl: 1 month\n        :urls:\n        -
+        :url: https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :location:\n    :source: location\n    :description: desc
+        of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: state\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":"ae81986fa13b12da5c63b1f1369f9b54c623acfd","data_changed_at":"2017-03-17T17:58:43.184+00:00","data_imported_at":"2017-03-17T17:58:43.184+00:00","s3_bucket_name":"loren","id":"ita_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"industry":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"industries":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"detaildesc","description":"Description
+        of detaildesc","indexed":true,"plural":false,"type":"string"},"event_name":{"source":"eventname","description":"Description
+        of eventname","indexed":true,"plural":false,"type":"string"},"source_industry":{"source":"industries","description":"Description
+        of category","indexed":true,"plural":false,"type":"string"},"first_name":{"source":"firstname","description":"desc
+        of first name","indexed":true,"plural":false,"type":"string","search_path":"contacts.first_name"},"last_name":{"source":"lastname","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"person_title":{"source":"title","description":"desc
+        of title","indexed":true,"plural":false,"type":"string","search_path":"contacts.person_title"},"location":{"source":"location","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.location"},"state":{"source":"state","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"evstartdt","description":"Description
+        of evstartdt","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"evenddt","description":"Description
+        of evenddt","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T17:44:10.631Z","updated_at":"2017-03-17T18:18:19.727Z","name":"sba_trade_events","api":"sba_trade_events","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"sba_trade_events","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:_aggregations:\n  :sources:\n    :field: source\n  :countries:\n    :field:
+        venues.country\n:description:\n  :source: body\n  :description: Description
+        of body\n  :indexed: true\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :sanitize: xhtml1\n:cost:\n  :source: fee\n  :description: Description of
+        fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: false\n  :plural:
+        false\n  :type: string\n:start_date:\n  :source: start_date\n  :description:
+        Description of start_date\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        end_date\n  :description: Description of end_date\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:start_time:\n  :source: start_time\n  :description:
+        Description of start_time\n  :indexed: false\n  :plural: false\n  :type: enum\n:event_name:\n  :source:
+        node_title\n  :description: Description of node_title\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:time_zone:\n  :source: time_zone\n  :description:
+        Description of time_zone\n  :indexed: true\n  :plural: false\n  :type: string\n:end_time:\n  :source:
+        end_time\n  :description: Description of end_time\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n:registration_link:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: false\n  :plural: false\n  :type:
+        string\n:click_url:\n  :default: \n  :copy_from: registration_link\n  :indexed:
+        false\n  :plural: false\n  :type: string\n  :transformations:\n  - :external_mapping:\n      :ttl:
+        1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:source:\n  :constant: SBA\n  :indexed: false\n  :plural: false\n  :type:
+        enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source: registration_email\n    :description:
+        desc of email\n    :indexed: false\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        contact_name\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: agency\n    :description:
+        desc of agency\n    :indexed: false\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        registration_phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n:venues:\n  :_collection_path: venues\n  :country_name:\n    :source:
+        country\n    :description: desc of country\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :country:\n    :copy_from: country_name\n    :description:
+        desc of country code\n    :indexed: true\n    :plural: true\n    :type: enum\n    :transformations:\n    -
+        :external_mapping:\n        :ttl: 1 month\n        :urls:\n        - :url:
+        https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :name:\n    :source: location_name\n    :description:
+        desc of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: province\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n  :street:\n    :source: street\n    :description:
+        desc of street\n    :indexed: false\n    :plural: false\n    :type: string\n    :transformations:\n    -
+        :sanitize: xhtml1\n  :postal_code:\n    :source: postal_code\n    :description:
+        desc of postal_code\n    :indexed: false\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":null,"data_changed_at":"2017-03-17T17:44:10.663+00:00","data_imported_at":"2017-03-17T17:44:10.663+00:00","s3_bucket_name":"loren","id":"sba_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string","transformations":[{"sanitize":"xhtml1"}]},"event_name":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"last_name":{"source":"contact_name","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"name":{"source":"location_name","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.name"},"state":{"source":"province","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T20:29:52.730Z","updated_at":"2017-03-17T20:30:13.240Z","name":"trade_events","api":"trade_events","url":null,"description":"trade_events","dictionary":"---\r\n-
+        source: ITA\r\n  api: ita_trade_events\r\n  version_number: 1\r\n- source:
+        SBA\r\n  api: sba_trade_events\r\n  version_number: 1\r\n","data":null,"version_number":1,"published":true,"consolidated":true,"message_digest":null,"data_changed_at":"2017-03-17T20:29:52.730+00:00","data_imported_at":"2017-03-17T20:29:52.730+00:00","s3_bucket_name":"loren","id":"trade_events:v1","newest_version":true,"oldest_version":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:38 GMT
+- request:
+    method: post
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: UTF-8
+      string: '{"consolidated":false,"name":"Some new API","api":"auth_test","description":"Not
+        published yet","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","version_number":"1","s3_bucket_name":"","published":true}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 201
+      message: Created
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Location:
+      - http://localhost:3000/data_sources/auth_test:v1
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"0fdc47c1506c799b108e057f4fdf90e9"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - ace0c392-24f7-4dfc-8a63-ad750ef33ec5
+      X-Runtime:
+      - '0.592976'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.096Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096Z","data_imported_at":"2017-03-22T21:58:39.096Z","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/auth_test:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ef531060a42770f0fcf3b70eceae3d2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 3034bc99-f2f7-43bd-8bbe-c0ad104b0bdc
+      X-Runtime:
+      - '0.008362'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.096Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\ncol1:\n  source: col1\n  description: Description
+        of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"39ba1761e1f7608bfbd64ac474933850"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a07c2ff8-dc8d-4ba5-8001-052011af15a6
+      X-Runtime:
+      - '0.044211'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.096Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-22T20:47:42.494Z","updated_at":"2017-03-22T21:40:48.604Z","name":"docs","api":"docs","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"docs","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:body:\n  :source: body\n  :description: Description of body\n  :indexed:
+        true\n  :plural: false\n  :type: string\n:fee:\n  :source: fee\n  :description:
+        Description of fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_date:\n  :source: end_date\n  :description: Description
+        of end_date\n  :indexed: true\n  :plural: false\n  :type: string\n:start_time:\n  :source:
+        start_time\n  :description: Description of start_time\n  :indexed: true\n  :plural:
+        false\n  :type: enum\n:event_cancelled:\n  :source: event_cancelled\n  :description:
+        Description of event_cancelled\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:node_title:\n  :source: node_title\n  :description: Description of
+        node_title\n  :indexed: true\n  :plural: false\n  :type: string\n:time_zone:\n  :source:
+        time_zone\n  :description: Description of time_zone\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_time:\n  :source: end_time\n  :description: Description
+        of end_time\n  :indexed: true\n  :plural: false\n  :type: enum\n:event_date:\n  :source:
+        event_date\n  :description: Description of event_date\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:start_date:\n  :source: start_date\n  :description: Description of
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"ad09548055ffbbb95585a3fa70d9561164c0db80","data_changed_at":"2017-03-22T21:40:48.601+00:00","data_imported_at":"2017-03-22T21:40:49.000+00:00","s3_bucket_name":"","id":"docs:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
+        of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
+        of event_type","indexed":true,"plural":false,"type":"string"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"string"},"event_cancelled":{"source":"event_cancelled","description":"Description
+        of event_cancelled","indexed":true,"plural":false,"type":"string"},"node_title":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"event_date":{"source":"event_date","description":"Description
+        of event_date","indexed":true,"plural":false,"type":"string"},"registration_website":{"source":"registration_website","description":"Description
+        of registration_website","indexed":true,"plural":false,"type":"string"},"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-17T17:45:17.578Z","updated_at":"2017-03-17T18:01:32.538Z","name":"ita_trade_events","api":"ita_trade_events","url":"https://s3.amazonaws.com/trade-events/ita.json","description":"ita_trade_events","dictionary":"---\n:_semantic_query_service:\n  :url:
+        https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE\u0026country_name_label=venues.country_name\n  :ttl:
+        1 day\n:_collection_path: \"$[*]\"\n:_aggregations:\n  :sources:\n    :field:
+        source\n  :countries:\n    :field: venues.country\n:event_id:\n  :source:
+        eventid\n  :description: Description of eventid\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n  :use_for_id: true\n:start_date:\n  :source: evstartdt\n  :description:
+        Description of evstartdt\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        evenddt\n  :description: Description of evenddt\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:url:\n  :source: url\n  :description: Description of
+        url\n  :indexed: false\n  :plural: false\n  :type: string\n:click_url:\n  :default:
+        \n  :copy_from: url\n  :indexed: false\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:event_type:\n  :source: eventtype\n  :description: Description of eventtype\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:registration_link:\n  :source:
+        registrationlink\n  :description: Description of registrationlink\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:description:\n  :source: detaildesc\n  :description:
+        Description of detaildesc\n  :indexed: true\n  :plural: false\n  :type: string\n:event_name:\n  :source:
+        eventname\n  :description: Description of eventname\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:cost:\n  :source: cost\n  :description: Description
+        of cost\n  :indexed: false\n  :plural: false\n  :type: float\n:registration_title:\n  :source:
+        registrationtitle\n  :description: Description of registrationtitle\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:source_industry:\n  :source: industries\n  :description:
+        Description of category\n  :indexed: true\n  :plural: false\n  :type: string\n:industry:\n  :copy_from:
+        source_industry\n  :indexed: true\n  :plural: true\n  :type: enum\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 day\n      :urls:\n      - :url: http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE\n        :result_path:
+        \"..name\"\n        :multi_value: true\n:source:\n  :constant: ITA\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source:
+        email\n    :description: desc of email\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :first_name:\n    :source: firstname\n    :description:
+        desc of first name\n    :indexed: true\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        lastname\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :person_title:\n    :source: title\n    :description:
+        desc of title\n    :indexed: true\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: post\n    :description: desc
+        of post\n    :indexed: false\n    :plural: false\n    :type: string\n:venues:\n  :_collection_path:
+        venues\n  :country_name:\n    :source: country\n    :description: desc of
+        country\n    :indexed: false\n    :plural: false\n    :type: string\n  :country:\n    :copy_from:
+        country_name\n    :description: desc of country code\n    :indexed: true\n    :plural:
+        true\n    :type: enum\n    :transformations:\n    - :sub:\n      - Korea (South)\n      -
+        South Korea\n    - :external_mapping:\n        :ttl: 1 month\n        :urls:\n        -
+        :url: https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :location:\n    :source: location\n    :description: desc
+        of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: state\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":"ae81986fa13b12da5c63b1f1369f9b54c623acfd","data_changed_at":"2017-03-17T17:58:43.184+00:00","data_imported_at":"2017-03-17T17:58:43.184+00:00","s3_bucket_name":"loren","id":"ita_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"industry":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"industries":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"detaildesc","description":"Description
+        of detaildesc","indexed":true,"plural":false,"type":"string"},"event_name":{"source":"eventname","description":"Description
+        of eventname","indexed":true,"plural":false,"type":"string"},"source_industry":{"source":"industries","description":"Description
+        of category","indexed":true,"plural":false,"type":"string"},"first_name":{"source":"firstname","description":"desc
+        of first name","indexed":true,"plural":false,"type":"string","search_path":"contacts.first_name"},"last_name":{"source":"lastname","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"person_title":{"source":"title","description":"desc
+        of title","indexed":true,"plural":false,"type":"string","search_path":"contacts.person_title"},"location":{"source":"location","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.location"},"state":{"source":"state","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"evstartdt","description":"Description
+        of evstartdt","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"evenddt","description":"Description
+        of evenddt","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T17:44:10.631Z","updated_at":"2017-03-17T18:18:19.727Z","name":"sba_trade_events","api":"sba_trade_events","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"sba_trade_events","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:_aggregations:\n  :sources:\n    :field: source\n  :countries:\n    :field:
+        venues.country\n:description:\n  :source: body\n  :description: Description
+        of body\n  :indexed: true\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :sanitize: xhtml1\n:cost:\n  :source: fee\n  :description: Description of
+        fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: false\n  :plural:
+        false\n  :type: string\n:start_date:\n  :source: start_date\n  :description:
+        Description of start_date\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        end_date\n  :description: Description of end_date\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:start_time:\n  :source: start_time\n  :description:
+        Description of start_time\n  :indexed: false\n  :plural: false\n  :type: enum\n:event_name:\n  :source:
+        node_title\n  :description: Description of node_title\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:time_zone:\n  :source: time_zone\n  :description:
+        Description of time_zone\n  :indexed: true\n  :plural: false\n  :type: string\n:end_time:\n  :source:
+        end_time\n  :description: Description of end_time\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n:registration_link:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: false\n  :plural: false\n  :type:
+        string\n:click_url:\n  :default: \n  :copy_from: registration_link\n  :indexed:
+        false\n  :plural: false\n  :type: string\n  :transformations:\n  - :external_mapping:\n      :ttl:
+        1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:source:\n  :constant: SBA\n  :indexed: false\n  :plural: false\n  :type:
+        enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source: registration_email\n    :description:
+        desc of email\n    :indexed: false\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        contact_name\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: agency\n    :description:
+        desc of agency\n    :indexed: false\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        registration_phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n:venues:\n  :_collection_path: venues\n  :country_name:\n    :source:
+        country\n    :description: desc of country\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :country:\n    :copy_from: country_name\n    :description:
+        desc of country code\n    :indexed: true\n    :plural: true\n    :type: enum\n    :transformations:\n    -
+        :external_mapping:\n        :ttl: 1 month\n        :urls:\n        - :url:
+        https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :name:\n    :source: location_name\n    :description:
+        desc of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: province\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n  :street:\n    :source: street\n    :description:
+        desc of street\n    :indexed: false\n    :plural: false\n    :type: string\n    :transformations:\n    -
+        :sanitize: xhtml1\n  :postal_code:\n    :source: postal_code\n    :description:
+        desc of postal_code\n    :indexed: false\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":null,"data_changed_at":"2017-03-17T17:44:10.663+00:00","data_imported_at":"2017-03-17T17:44:10.663+00:00","s3_bucket_name":"loren","id":"sba_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string","transformations":[{"sanitize":"xhtml1"}]},"event_name":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"last_name":{"source":"contact_name","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"name":{"source":"location_name","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.name"},"state":{"source":"province","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T20:29:52.730Z","updated_at":"2017-03-17T20:30:13.240Z","name":"trade_events","api":"trade_events","url":null,"description":"trade_events","dictionary":"---\r\n-
+        source: ITA\r\n  api: ita_trade_events\r\n  version_number: 1\r\n- source:
+        SBA\r\n  api: sba_trade_events\r\n  version_number: 1\r\n","data":null,"version_number":1,"published":true,"consolidated":true,"message_digest":null,"data_changed_at":"2017-03-17T20:29:52.730+00:00","data_imported_at":"2017-03-17T20:29:52.730+00:00","s3_bucket_name":"loren","id":"trade_events:v1","newest_version":true,"oldest_version":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/auth_test:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"4ef531060a42770f0fcf3b70eceae3d2"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 99ba2db9-42ee-4897-8964-d7564b5d825c
+      X-Runtime:
+      - '0.006752'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.096Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\ncol1:\n  source: col1\n  description: Description
+        of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: put
+    uri: http://localhost:3000/data_sources/auth_test:v1.json
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.096Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\r\ncol1:\r\n  source: col1\r\n  description:
+        Description of col1\r\n  indexed: true\r\n  plural: false\r\n  type: enum\r\ncol2:\r\n  source:
+        col2\r\n  description: Description of col2\r\n  indexed: true\r\n  plural:
+        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    headers:
+      Content-Type:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"25882b4f0e4f578ccb888562db86c56a"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 071403fa-1917-4e5a-a821-8a551c81436f
+      X-Runtime:
+      - '0.073467'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.266Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources/auth_test:v1.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"7efbffb690ade14dc87867a45d1d5fbe"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - e202819c-d9d4-4321-b9d5-16ed348050d5
+      X-Runtime:
+      - '0.006549'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.266Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\ncol1:\n  source: col1\n  description: Description
+        of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
+        col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2a278d793d22fd7b9c221565fb5ff8f0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - 6e7ea096-17cd-4d8f-aa03-3671f5a002c4
+      X-Runtime:
+      - '0.031921'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.266Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-22T20:47:42.494Z","updated_at":"2017-03-22T21:40:48.604Z","name":"docs","api":"docs","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"docs","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:body:\n  :source: body\n  :description: Description of body\n  :indexed:
+        true\n  :plural: false\n  :type: string\n:fee:\n  :source: fee\n  :description:
+        Description of fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_date:\n  :source: end_date\n  :description: Description
+        of end_date\n  :indexed: true\n  :plural: false\n  :type: string\n:start_time:\n  :source:
+        start_time\n  :description: Description of start_time\n  :indexed: true\n  :plural:
+        false\n  :type: enum\n:event_cancelled:\n  :source: event_cancelled\n  :description:
+        Description of event_cancelled\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:node_title:\n  :source: node_title\n  :description: Description of
+        node_title\n  :indexed: true\n  :plural: false\n  :type: string\n:time_zone:\n  :source:
+        time_zone\n  :description: Description of time_zone\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_time:\n  :source: end_time\n  :description: Description
+        of end_time\n  :indexed: true\n  :plural: false\n  :type: enum\n:event_date:\n  :source:
+        event_date\n  :description: Description of event_date\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:start_date:\n  :source: start_date\n  :description: Description of
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"ad09548055ffbbb95585a3fa70d9561164c0db80","data_changed_at":"2017-03-22T21:40:48.601+00:00","data_imported_at":"2017-03-22T21:40:49.000+00:00","s3_bucket_name":"","id":"docs:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
+        of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
+        of event_type","indexed":true,"plural":false,"type":"string"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"string"},"event_cancelled":{"source":"event_cancelled","description":"Description
+        of event_cancelled","indexed":true,"plural":false,"type":"string"},"node_title":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"event_date":{"source":"event_date","description":"Description
+        of event_date","indexed":true,"plural":false,"type":"string"},"registration_website":{"source":"registration_website","description":"Description
+        of registration_website","indexed":true,"plural":false,"type":"string"},"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-17T17:45:17.578Z","updated_at":"2017-03-17T18:01:32.538Z","name":"ita_trade_events","api":"ita_trade_events","url":"https://s3.amazonaws.com/trade-events/ita.json","description":"ita_trade_events","dictionary":"---\n:_semantic_query_service:\n  :url:
+        https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE\u0026country_name_label=venues.country_name\n  :ttl:
+        1 day\n:_collection_path: \"$[*]\"\n:_aggregations:\n  :sources:\n    :field:
+        source\n  :countries:\n    :field: venues.country\n:event_id:\n  :source:
+        eventid\n  :description: Description of eventid\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n  :use_for_id: true\n:start_date:\n  :source: evstartdt\n  :description:
+        Description of evstartdt\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        evenddt\n  :description: Description of evenddt\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:url:\n  :source: url\n  :description: Description of
+        url\n  :indexed: false\n  :plural: false\n  :type: string\n:click_url:\n  :default:
+        \n  :copy_from: url\n  :indexed: false\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:event_type:\n  :source: eventtype\n  :description: Description of eventtype\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:registration_link:\n  :source:
+        registrationlink\n  :description: Description of registrationlink\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:description:\n  :source: detaildesc\n  :description:
+        Description of detaildesc\n  :indexed: true\n  :plural: false\n  :type: string\n:event_name:\n  :source:
+        eventname\n  :description: Description of eventname\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:cost:\n  :source: cost\n  :description: Description
+        of cost\n  :indexed: false\n  :plural: false\n  :type: float\n:registration_title:\n  :source:
+        registrationtitle\n  :description: Description of registrationtitle\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:source_industry:\n  :source: industries\n  :description:
+        Description of category\n  :indexed: true\n  :plural: false\n  :type: string\n:industry:\n  :copy_from:
+        source_industry\n  :indexed: true\n  :plural: true\n  :type: enum\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 day\n      :urls:\n      - :url: http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE\n        :result_path:
+        \"..name\"\n        :multi_value: true\n:source:\n  :constant: ITA\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source:
+        email\n    :description: desc of email\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :first_name:\n    :source: firstname\n    :description:
+        desc of first name\n    :indexed: true\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        lastname\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :person_title:\n    :source: title\n    :description:
+        desc of title\n    :indexed: true\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: post\n    :description: desc
+        of post\n    :indexed: false\n    :plural: false\n    :type: string\n:venues:\n  :_collection_path:
+        venues\n  :country_name:\n    :source: country\n    :description: desc of
+        country\n    :indexed: false\n    :plural: false\n    :type: string\n  :country:\n    :copy_from:
+        country_name\n    :description: desc of country code\n    :indexed: true\n    :plural:
+        true\n    :type: enum\n    :transformations:\n    - :sub:\n      - Korea (South)\n      -
+        South Korea\n    - :external_mapping:\n        :ttl: 1 month\n        :urls:\n        -
+        :url: https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :location:\n    :source: location\n    :description: desc
+        of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: state\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":"ae81986fa13b12da5c63b1f1369f9b54c623acfd","data_changed_at":"2017-03-17T17:58:43.184+00:00","data_imported_at":"2017-03-17T17:58:43.184+00:00","s3_bucket_name":"loren","id":"ita_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"industry":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"industries":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"detaildesc","description":"Description
+        of detaildesc","indexed":true,"plural":false,"type":"string"},"event_name":{"source":"eventname","description":"Description
+        of eventname","indexed":true,"plural":false,"type":"string"},"source_industry":{"source":"industries","description":"Description
+        of category","indexed":true,"plural":false,"type":"string"},"first_name":{"source":"firstname","description":"desc
+        of first name","indexed":true,"plural":false,"type":"string","search_path":"contacts.first_name"},"last_name":{"source":"lastname","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"person_title":{"source":"title","description":"desc
+        of title","indexed":true,"plural":false,"type":"string","search_path":"contacts.person_title"},"location":{"source":"location","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.location"},"state":{"source":"state","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"evstartdt","description":"Description
+        of evstartdt","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"evenddt","description":"Description
+        of evenddt","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T17:44:10.631Z","updated_at":"2017-03-17T18:18:19.727Z","name":"sba_trade_events","api":"sba_trade_events","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"sba_trade_events","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:_aggregations:\n  :sources:\n    :field: source\n  :countries:\n    :field:
+        venues.country\n:description:\n  :source: body\n  :description: Description
+        of body\n  :indexed: true\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :sanitize: xhtml1\n:cost:\n  :source: fee\n  :description: Description of
+        fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: false\n  :plural:
+        false\n  :type: string\n:start_date:\n  :source: start_date\n  :description:
+        Description of start_date\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        end_date\n  :description: Description of end_date\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:start_time:\n  :source: start_time\n  :description:
+        Description of start_time\n  :indexed: false\n  :plural: false\n  :type: enum\n:event_name:\n  :source:
+        node_title\n  :description: Description of node_title\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:time_zone:\n  :source: time_zone\n  :description:
+        Description of time_zone\n  :indexed: true\n  :plural: false\n  :type: string\n:end_time:\n  :source:
+        end_time\n  :description: Description of end_time\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n:registration_link:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: false\n  :plural: false\n  :type:
+        string\n:click_url:\n  :default: \n  :copy_from: registration_link\n  :indexed:
+        false\n  :plural: false\n  :type: string\n  :transformations:\n  - :external_mapping:\n      :ttl:
+        1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:source:\n  :constant: SBA\n  :indexed: false\n  :plural: false\n  :type:
+        enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source: registration_email\n    :description:
+        desc of email\n    :indexed: false\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        contact_name\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: agency\n    :description:
+        desc of agency\n    :indexed: false\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        registration_phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n:venues:\n  :_collection_path: venues\n  :country_name:\n    :source:
+        country\n    :description: desc of country\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :country:\n    :copy_from: country_name\n    :description:
+        desc of country code\n    :indexed: true\n    :plural: true\n    :type: enum\n    :transformations:\n    -
+        :external_mapping:\n        :ttl: 1 month\n        :urls:\n        - :url:
+        https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :name:\n    :source: location_name\n    :description:
+        desc of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: province\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n  :street:\n    :source: street\n    :description:
+        desc of street\n    :indexed: false\n    :plural: false\n    :type: string\n    :transformations:\n    -
+        :sanitize: xhtml1\n  :postal_code:\n    :source: postal_code\n    :description:
+        desc of postal_code\n    :indexed: false\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":null,"data_changed_at":"2017-03-17T17:44:10.663+00:00","data_imported_at":"2017-03-17T17:44:10.663+00:00","s3_bucket_name":"loren","id":"sba_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string","transformations":[{"sanitize":"xhtml1"}]},"event_name":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"last_name":{"source":"contact_name","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"name":{"source":"location_name","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.name"},"state":{"source":"province","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T20:29:52.730Z","updated_at":"2017-03-17T20:30:13.240Z","name":"trade_events","api":"trade_events","url":null,"description":"trade_events","dictionary":"---\r\n-
+        source: ITA\r\n  api: ita_trade_events\r\n  version_number: 1\r\n- source:
+        SBA\r\n  api: sba_trade_events\r\n  version_number: 1\r\n","data":null,"version_number":1,"published":true,"consolidated":true,"message_digest":null,"data_changed_at":"2017-03-17T20:29:52.730+00:00","data_imported_at":"2017-03-17T20:29:52.730+00:00","s3_bucket_name":"loren","id":"trade_events:v1","newest_version":true,"oldest_version":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+- request:
+    method: get
+    uri: http://localhost:3000/data_sources.json
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept:
+      - application/json
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: OK
+    headers:
+      X-Frame-Options:
+      - SAMEORIGIN
+      X-Xss-Protection:
+      - 1; mode=block
+      X-Content-Type-Options:
+      - nosniff
+      Content-Type:
+      - application/json; charset=utf-8
+      Etag:
+      - W/"2a278d793d22fd7b9c221565fb5ff8f0"
+      Cache-Control:
+      - max-age=0, private, must-revalidate
+      X-Request-Id:
+      - a7f64ac6-18d5-4f8c-8017-524faaa603ad
+      X-Runtime:
+      - '0.032243'
+      Transfer-Encoding:
+      - chunked
+    body:
+      encoding: UTF-8
+      string: '[{"created_at":"2017-03-22T21:58:39.095Z","updated_at":"2017-03-22T21:58:39.266Z","name":"Some
+        new API","api":"auth_test","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","description":"Not
+        published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
+        Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
+        col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-03-22T21:58:39.096+00:00","data_imported_at":"2017-03-22T21:58:39.096+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
+        of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-22T20:47:42.494Z","updated_at":"2017-03-22T21:40:48.604Z","name":"docs","api":"docs","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"docs","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:body:\n  :source: body\n  :description: Description of body\n  :indexed:
+        true\n  :plural: false\n  :type: string\n:fee:\n  :source: fee\n  :description:
+        Description of fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_date:\n  :source: end_date\n  :description: Description
+        of end_date\n  :indexed: true\n  :plural: false\n  :type: string\n:start_time:\n  :source:
+        start_time\n  :description: Description of start_time\n  :indexed: true\n  :plural:
+        false\n  :type: enum\n:event_cancelled:\n  :source: event_cancelled\n  :description:
+        Description of event_cancelled\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:node_title:\n  :source: node_title\n  :description: Description of
+        node_title\n  :indexed: true\n  :plural: false\n  :type: string\n:time_zone:\n  :source:
+        time_zone\n  :description: Description of time_zone\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:end_time:\n  :source: end_time\n  :description: Description
+        of end_time\n  :indexed: true\n  :plural: false\n  :type: enum\n:event_date:\n  :source:
+        event_date\n  :description: Description of event_date\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
+        string\n:start_date:\n  :source: start_date\n  :description: Description of
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"ad09548055ffbbb95585a3fa70d9561164c0db80","data_changed_at":"2017-03-22T21:40:48.601+00:00","data_imported_at":"2017-03-22T21:40:49.000+00:00","s3_bucket_name":"","id":"docs:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
+        of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
+        of event_type","indexed":true,"plural":false,"type":"string"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"string"},"event_cancelled":{"source":"event_cancelled","description":"Description
+        of event_cancelled","indexed":true,"plural":false,"type":"string"},"node_title":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"event_date":{"source":"event_date","description":"Description
+        of event_date","indexed":true,"plural":false,"type":"string"},"registration_website":{"source":"registration_website","description":"Description
+        of registration_website","indexed":true,"plural":false,"type":"string"},"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-03-17T17:45:17.578Z","updated_at":"2017-03-17T18:01:32.538Z","name":"ita_trade_events","api":"ita_trade_events","url":"https://s3.amazonaws.com/trade-events/ita.json","description":"ita_trade_events","dictionary":"---\n:_semantic_query_service:\n  :url:
+        https://gahaag0204.execute-api.us-east-1.amazonaws.com/prod/semantic_query_service?q=ORIGINAL_VALUE\u0026country_name_label=venues.country_name\n  :ttl:
+        1 day\n:_collection_path: \"$[*]\"\n:_aggregations:\n  :sources:\n    :field:
+        source\n  :countries:\n    :field: venues.country\n:event_id:\n  :source:
+        eventid\n  :description: Description of eventid\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n  :use_for_id: true\n:start_date:\n  :source: evstartdt\n  :description:
+        Description of evstartdt\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        evenddt\n  :description: Description of evenddt\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:url:\n  :source: url\n  :description: Description of
+        url\n  :indexed: false\n  :plural: false\n  :type: string\n:click_url:\n  :default:
+        \n  :copy_from: url\n  :indexed: false\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:event_type:\n  :source: eventtype\n  :description: Description of eventtype\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:registration_link:\n  :source:
+        registrationlink\n  :description: Description of registrationlink\n  :indexed:
+        false\n  :plural: false\n  :type: string\n:description:\n  :source: detaildesc\n  :description:
+        Description of detaildesc\n  :indexed: true\n  :plural: false\n  :type: string\n:event_name:\n  :source:
+        eventname\n  :description: Description of eventname\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:cost:\n  :source: cost\n  :description: Description
+        of cost\n  :indexed: false\n  :plural: false\n  :type: float\n:registration_title:\n  :source:
+        registrationtitle\n  :description: Description of registrationtitle\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:source_industry:\n  :source: industries\n  :description:
+        Description of category\n  :indexed: true\n  :plural: false\n  :type: string\n:industry:\n  :copy_from:
+        source_industry\n  :indexed: true\n  :plural: true\n  :type: enum\n  :transformations:\n  -
+        :external_mapping:\n      :ttl: 1 day\n      :urls:\n      - :url: http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE\n        :result_path:
+        \"..name\"\n        :multi_value: true\n:source:\n  :constant: ITA\n  :indexed:
+        false\n  :plural: false\n  :type: enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source:
+        email\n    :description: desc of email\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :first_name:\n    :source: firstname\n    :description:
+        desc of first name\n    :indexed: true\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        lastname\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :person_title:\n    :source: title\n    :description:
+        desc of title\n    :indexed: true\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: post\n    :description: desc
+        of post\n    :indexed: false\n    :plural: false\n    :type: string\n:venues:\n  :_collection_path:
+        venues\n  :country_name:\n    :source: country\n    :description: desc of
+        country\n    :indexed: false\n    :plural: false\n    :type: string\n  :country:\n    :copy_from:
+        country_name\n    :description: desc of country code\n    :indexed: true\n    :plural:
+        true\n    :type: enum\n    :transformations:\n    - :sub:\n      - Korea (South)\n      -
+        South Korea\n    - :external_mapping:\n        :ttl: 1 month\n        :urls:\n        -
+        :url: https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :location:\n    :source: location\n    :description: desc
+        of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: state\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":"ae81986fa13b12da5c63b1f1369f9b54c623acfd","data_changed_at":"2017-03-17T17:58:43.184+00:00","data_imported_at":"2017-03-17T17:58:43.184+00:00","s3_bucket_name":"loren","id":"ita_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"industry":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"industries":{"copy_from":"source_industry","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        day","urls":[{"url":"http://im.govwizely.com/api/terms.json?source=TradeEvent::Ita\u0026mapped_term=ORIGINAL_VALUE","result_path":"..name","multi_value":true}]}}]},"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"sub":["Korea
+        (South)","South Korea"]},{"external_mapping":{"ttl":"1 month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"detaildesc","description":"Description
+        of detaildesc","indexed":true,"plural":false,"type":"string"},"event_name":{"source":"eventname","description":"Description
+        of eventname","indexed":true,"plural":false,"type":"string"},"source_industry":{"source":"industries","description":"Description
+        of category","indexed":true,"plural":false,"type":"string"},"first_name":{"source":"firstname","description":"desc
+        of first name","indexed":true,"plural":false,"type":"string","search_path":"contacts.first_name"},"last_name":{"source":"lastname","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"person_title":{"source":"title","description":"desc
+        of title","indexed":true,"plural":false,"type":"string","search_path":"contacts.person_title"},"location":{"source":"location","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.location"},"state":{"source":"state","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"evstartdt","description":"Description
+        of evstartdt","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"evenddt","description":"Description
+        of evenddt","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T17:44:10.631Z","updated_at":"2017-03-17T18:18:19.727Z","name":"sba_trade_events","api":"sba_trade_events","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"sba_trade_events","dictionary":"---\n:_collection_path:
+        \"$[*]\"\n:_aggregations:\n  :sources:\n    :field: source\n  :countries:\n    :field:
+        venues.country\n:description:\n  :source: body\n  :description: Description
+        of body\n  :indexed: true\n  :plural: false\n  :type: string\n  :transformations:\n  -
+        :sanitize: xhtml1\n:cost:\n  :source: fee\n  :description: Description of
+        fee\n  :indexed: true\n  :plural: false\n  :type: float\n:event_type:\n  :source:
+        event_type\n  :description: Description of event_type\n  :indexed: false\n  :plural:
+        false\n  :type: string\n:start_date:\n  :source: start_date\n  :description:
+        Description of start_date\n  :indexed: true\n  :plural: false\n  :type: date\n:end_date:\n  :source:
+        end_date\n  :description: Description of end_date\n  :indexed: true\n  :plural:
+        false\n  :type: date\n:start_time:\n  :source: start_time\n  :description:
+        Description of start_time\n  :indexed: false\n  :plural: false\n  :type: enum\n:event_name:\n  :source:
+        node_title\n  :description: Description of node_title\n  :indexed: true\n  :plural:
+        false\n  :type: string\n:time_zone:\n  :source: time_zone\n  :description:
+        Description of time_zone\n  :indexed: true\n  :plural: false\n  :type: string\n:end_time:\n  :source:
+        end_time\n  :description: Description of end_time\n  :indexed: false\n  :plural:
+        false\n  :type: enum\n:registration_link:\n  :source: registration_website\n  :description:
+        Description of registration_website\n  :indexed: false\n  :plural: false\n  :type:
+        string\n:click_url:\n  :default: \n  :copy_from: registration_link\n  :indexed:
+        false\n  :plural: false\n  :type: string\n  :transformations:\n  - :external_mapping:\n      :ttl:
+        1 year\n      :urls:\n      - :url: https://xf6x1hyqhi.execute-api.us-east-1.amazonaws.com/prod/googl?url=ORIGINAL_VALUE\n        :result_path:
+        id\n:source:\n  :constant: SBA\n  :indexed: false\n  :plural: false\n  :type:
+        enum\n:contacts:\n  :_collection_path: contacts\n  :email:\n    :source: registration_email\n    :description:
+        desc of email\n    :indexed: false\n    :plural: false\n    :type: string\n  :last_name:\n    :source:
+        contact_name\n    :description: desc of last name\n    :indexed: true\n    :plural:
+        false\n    :type: string\n  :post:\n    :source: agency\n    :description:
+        desc of agency\n    :indexed: false\n    :plural: false\n    :type: string\n  :phone:\n    :source:
+        registration_phone\n    :description: desc of phone\n    :indexed: false\n    :plural:
+        false\n    :type: string\n:venues:\n  :_collection_path: venues\n  :country_name:\n    :source:
+        country\n    :description: desc of country\n    :indexed: false\n    :plural:
+        false\n    :type: string\n  :country:\n    :copy_from: country_name\n    :description:
+        desc of country code\n    :indexed: true\n    :plural: true\n    :type: enum\n    :transformations:\n    -
+        :external_mapping:\n        :ttl: 1 month\n        :urls:\n        - :url:
+        https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true\n          :result_path:
+        \"..alpha2Code\"\n  :name:\n    :source: location_name\n    :description:
+        desc of location\n    :indexed: true\n    :plural: false\n    :type: string\n  :city:\n    :source:
+        city\n    :description: desc of city\n    :indexed: false\n    :plural: false\n    :type:
+        string\n  :state:\n    :source: province\n    :description: desc of state\n    :indexed:
+        true\n    :plural: false\n    :type: string\n  :street:\n    :source: street\n    :description:
+        desc of street\n    :indexed: false\n    :plural: false\n    :type: string\n    :transformations:\n    -
+        :sanitize: xhtml1\n  :postal_code:\n    :source: postal_code\n    :description:
+        desc of postal_code\n    :indexed: false\n    :plural: false\n    :type: string\n","data":null,"version_number":1,"published":true,"consolidated":null,"message_digest":null,"data_changed_at":"2017-03-17T17:44:10.663+00:00","data_imported_at":"2017-03-17T17:44:10.663+00:00","s3_bucket_name":"loren","id":"sba_trade_events:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{"country":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"pluralized_filter_fields":{"countries":{"copy_from":"country_name","description":"desc
+        of country code","indexed":true,"plural":true,"type":"enum","transformations":[{"external_mapping":{"ttl":"1
+        month","urls":[{"url":"https://restcountries.eu/rest/v1/name/ORIGINAL_VALUE?fullText=true","result_path":"..alpha2Code"}]}}],"search_path":"venues.country"}},"singular_filter_fields":{},"fulltext_fields":{"description":{"source":"body","description":"Description
+        of body","indexed":true,"plural":false,"type":"string","transformations":[{"sanitize":"xhtml1"}]},"event_name":{"source":"node_title","description":"Description
+        of node_title","indexed":true,"plural":false,"type":"string"},"time_zone":{"source":"time_zone","description":"Description
+        of time_zone","indexed":true,"plural":false,"type":"string"},"last_name":{"source":"contact_name","description":"desc
+        of last name","indexed":true,"plural":false,"type":"string","search_path":"contacts.last_name"},"name":{"source":"location_name","description":"desc
+        of location","indexed":true,"plural":false,"type":"string","search_path":"venues.name"},"state":{"source":"province","description":"desc
+        of state","indexed":true,"plural":false,"type":"string","search_path":"venues.state"}},"date_fields":{"start_date":{"source":"start_date","description":"Description
+        of start_date","indexed":true,"plural":false,"type":"date"},"end_date":{"source":"end_date","description":"Description
+        of end_date","indexed":true,"plural":false,"type":"date"}}},{"created_at":"2017-03-17T20:29:52.730Z","updated_at":"2017-03-17T20:30:13.240Z","name":"trade_events","api":"trade_events","url":null,"description":"trade_events","dictionary":"---\r\n-
+        source: ITA\r\n  api: ita_trade_events\r\n  version_number: 1\r\n- source:
+        SBA\r\n  api: sba_trade_events\r\n  version_number: 1\r\n","data":null,"version_number":1,"published":true,"consolidated":true,"message_digest":null,"data_changed_at":"2017-03-17T20:29:52.730+00:00","data_imported_at":"2017-03-17T20:29:52.730+00:00","s3_bucket_name":"loren","id":"trade_events:v1","newest_version":true,"oldest_version":true}]'
+    http_version: 
+  recorded_at: Wed, 22 Mar 2017 21:58:39 GMT
+recorded_with: VCR 3.0.3

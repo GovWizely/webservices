@@ -35,11 +35,14 @@
           %td= data_source.version_number
           %td= time_ago_in_words(data_source.data_changed_at)
           %td= time_ago_in_words(data_source.data_imported_at)
-          %td= sample_api_call(data_source, false)
+          %td= sample_api_call(data_source)
           %td= link_to('admin', data_source_path(data_source) )
     %p Use the param `sources` to search across multiple sources (plural) separated by commas.
     %hr
 - else
+  %p
+    %b Url:
+    = link_to @data_source.url, @data_source.url
   %p
     %b Data Last Imported:
     = @data_source.data_imported_at
@@ -52,37 +55,34 @@
     (
     = time_ago_in_words(@data_source.data_changed_at)
     ago )
-- if @data_source.metadata.plural_filter_fields.present?
-  %p
-    %b Plural Filtered Fields:
-    = param_table(@data_source.metadata.pluralized_filter_fields)
+  - if @data_source.singular_filter_fields.attributes.present?
     %p
-      Filter on multiple values by passing in a comma-separated list (e.g.,
-      %i FR,US,DE
-      )
-    %hr
-- if @data_source.metadata.singular_filter_fields.present?
-  %p
-    %b Singular Filtered Fields:
-    = param_table(@data_source.metadata.singular_filter_fields)
-    %hr
-- if @data_source.metadata.fulltext_fields.present?
-  %p
-    %b Fulltext Fields :
-    = param_table(@data_source.metadata.fulltext_fields)
-    %p Use the param `q` to search across all fulltext fields
-    %hr
-- if @data_source.metadata.date_fields.present?
-  %p
-    %b Date Range Fields:
-    = param_table(@data_source.metadata.date_fields)
-    %p Specify a date range in this format (e.g., 2013-10-01+TO+2015-10-04)
-    %hr
+      %b Singular Filtered Fields:
+      = param_table(@data_source.singular_filter_fields.attributes)
+      %hr
+  - if @data_source.plural_filter_fields.attributes.present?
+    %p
+      %b Plural Filtered Fields:
+      = param_table(@data_source.pluralized_filter_fields.attributes)
+      %p
+        Filter on multiple values by passing in a comma-separated list (e.g.,
+        %i FR,US,DE
+        )
+      %hr
+  - if @data_source.fulltext_fields.attributes.present?
+    %p
+      %b Fulltext Fields :
+      = param_table(@data_source.fulltext_fields.attributes)
+      %p Use the param `q` to search across all fulltext fields
+      %hr
+  - if @data_source.date_fields.attributes.present?
+    %p
+      %b Date Range Fields:
+      = param_table(@data_source.date_fields.attributes)
+      %p Specify a date range in this format (e.g., 2013-10-01+TO+2015-10-04)
+      %hr
 %p
   %b API call showing the first page of available data:
-  = sample_api_call @data_source, false
-%p
-  %b Sample API call:
   = sample_api_call @data_source
 
 - if @data_source.newest_version?

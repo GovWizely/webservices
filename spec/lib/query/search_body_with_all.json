@@ -12,37 +12,6 @@
             "operator": "and",
             "query": "scuba in cuba and asia"
           }
-        },
-        {
-          "bool": {
-            "boost": 2.0,
-            "must": [
-              {
-                "multi_match": {
-                  "fields": [
-                    "title",
-                    "description"
-                  ],
-                  "operator": "and",
-                  "query": "scuba in and"
-                }
-              },
-              {
-                "terms": {
-                  "country_name": [
-                    "cuba"
-                  ]
-                }
-              },
-              {
-                "terms": {
-                  "world_region": [
-                    "asia"
-                  ]
-                }
-              }
-            ]
-          }
         }
       ],
       "filter": {

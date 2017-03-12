@@ -31,14 +31,12 @@ RSpec.configure do |config|
   config.before(:suite) do
     ES.client.indices.put_template name: 'one_shard', body: { template: 'test:*', settings: { number_of_shards: 1, number_of_replicas: 0 } }
     User.create_index!
-    DataSource.create_index!
     UrlMapper.recreate_index
     ItaTaxonomy.recreate_index unless ItaTaxonomy.index_exists?
   end
 
   config.after(:suite) do
     User.gateway.delete_index!
-    DataSource.gateway.delete_index!
     ES.client.indices.delete_template name: 'one_shard'
   end
   # ## Mock Framework

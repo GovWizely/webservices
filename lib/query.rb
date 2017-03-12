@@ -52,7 +52,6 @@ class Query
 
     @sort = options[:sort] ? parse_sort_parameter(options[:sort]) : []
     initialize_search_fields(options)
-    initialize_semantic_query(options[:semantic_query_service_configuration])
 
     unless valid?
       e = InvalidParamsException.new
@@ -86,26 +85,11 @@ class Query
     end
   end
 
-  def initialize_semantic_query(semantic_query_service_configuration)
-    if semantic_query_service_configuration && @q.present?
-      semantic_query_service = SemanticQueryService.new(semantic_query_service_configuration)
-      @semantic_query = semantic_query_service.parse(@q)
-    end
-  end
-
   def generate_search_body
     Jbuilder.encode do |json|
       generate_query_and_filter(json)
       generate_aggregations(json)
     end
-  end
-
-  def generate_search_body_hash
-    Jbuilder.new do |json|
-      generate_from_size_sort(json)
-      generate_query_and_filter(json)
-      generate_aggregations(json)
-    end.attributes!
   end
 
   def generate_multi_match(json, fields, query, operator = :and)
@@ -114,16 +98,6 @@ class Query
       json.operator operator
       json.query query
     end if query
-  end
-
-  def generate_semantic_query(json, fields)
-    json.bool do
-      json.boost 2.0
-      json.must do
-        generate_semantic_multi_match(fields, json)
-        generate_semantic_query_filters(json)
-      end
-    end
   end
 
   def generate_match(json, field, query, operator = :and)
@@ -224,12 +198,6 @@ class Query
     raise Exceptions::InvalidDateRangeFormat
   end
 
-  def generate_from_size_sort(json)
-    json.from @offset
-    json.size @size
-    json.sort @sort unless @sort.empty?
-  end
-
   def generate_aggregations(json)
     json.aggs do
       aggregation_terms.each do |k, v|
@@ -257,16 +225,6 @@ class Query
     json.child! { json.terms { json.set! country_field, @countries } } if @countries
     json.child! { json.terms { json.trade_regions @trade_regions } } if @trade_regions
     json.child! { json.terms { json.world_regions @world_regions } } if @world_regions
-  end
-
-  def generate_semantic_multi_match(fields, json)
-    json.child! { generate_multi_match(json, fields, @semantic_query.query) } if @semantic_query.query.present?
-  end
-
-  def generate_semantic_query_filters(json)
-    @semantic_query.filters.each do |field, values|
-      json.child! { generate_terms(json, field, values.map(&:downcase)) }
-    end
   end
 
   private
