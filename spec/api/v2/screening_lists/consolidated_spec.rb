@@ -383,11 +383,11 @@ describe 'Consolidated Screening List API V2', type: :request do
   end
 
   context 'when countries is specified' do
-    let(:params) {
+    let(:params) do
       {
-        countries: 'DE'
+        countries: 'DE',
       }
-    }
+    end
 
     before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
     subject { response }
@@ -400,12 +400,12 @@ describe 'Consolidated Screening List API V2', type: :request do
   end
 
   context 'when countries and address are specified' do
-    let(:params) {
+    let(:params) do
       {
         countries: 'DE',
-        address: 'lane'
+        address:   'lane',
       }
-    }
+    end
 
     before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
     subject { response }
@@ -419,13 +419,13 @@ describe 'Consolidated Screening List API V2', type: :request do
   end
 
   context 'when fuzzy_name=true and countries are specified' do
-    let(:params) {
+    let(:params) do
       {
-        name: 'abd',
+        name:       'abd',
         fuzzy_name: 'true',
-        countries: 'DE'
+        countries:  'DE',
       }
-    }
+    end
 
     before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
     subject { response }
@@ -439,12 +439,12 @@ describe 'Consolidated Screening List API V2', type: :request do
   end
 
   context 'when name is multi word string and fuzzy_name=true' do
-    let(:params) {
+    let(:params) do
       {
-        name: 'qazi abdallha',
-        fuzzy_name: 'true'
+        name:       'qazi abdallha',
+        fuzzy_name: 'true',
       }
-    }
+    end
 
     before { get '/v2/consolidated_screening_list/search', params, @v2_headers }
     subject { response }

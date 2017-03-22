@@ -5,10 +5,10 @@ describe Query, type: :model do
     before do
       class MockChildQuery < Query
         setup_query(
-          q: %i(title description),
-          query: %i(),
+          q:      %i(title description),
+          query:  %i(),
           filter: %i(countries industries),
-          sort: %i(publish_date),
+          sort:   %i(publish_date),
         )
       end
     end
@@ -18,8 +18,8 @@ describe Query, type: :model do
   describe 'validations' do
     it do
       is_expected.to validate_numericality_of(:offset)
-                       .is_greater_than_or_equal_to(0,)
-                       .allow_nil
+        .is_greater_than_or_equal_to(0,)
+        .allow_nil
     end
   end
 
@@ -42,7 +42,7 @@ describe Query, type: :model do
           end
 
           setup_query(
-            q: %i(title description),
+            q:     %i(title description),
             query: %i(q),
           )
         end

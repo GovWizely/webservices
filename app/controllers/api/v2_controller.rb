@@ -17,7 +17,6 @@ class Api::V2Controller < ApiController
   end
 
   def versioned_api_prefix
-    "#{Rails.configuration.endpointme_url}/v#{params["version_number"]}/#{params["api"]}"
+    "#{Rails.configuration.endpointme_url}/v#{params['version_number']}/#{params['api']}"
   end
-
 end

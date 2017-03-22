@@ -12,5 +12,4 @@ module DataSourcesHelper
       end
     end
   end
-
 end

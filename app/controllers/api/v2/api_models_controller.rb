@@ -9,9 +9,8 @@ class Api::V2::ApiModelsController < Api::V2Controller
   end
 
   def show
-    url = "#{versioned_api_prefix}/#{params["id"]}"
+    url = "#{versioned_api_prefix}/#{params['id']}"
     response = Net::HTTP.get(URI.parse(url))
     respond_with response
   end
-
 end

@@ -10,7 +10,7 @@ class DataSourcesController < ApplicationController
 
   def new
     @data_source = DataSource.new(version_number: 1, consolidated: params[:consolidated], name: '', api: '',
-                                  description: '', s3_bucket_name: '', url: '')
+                                  description: '', s3_bucket_name: '', url: '',)
   end
 
   def iterate_version
@@ -20,8 +20,8 @@ class DataSourcesController < ApplicationController
   end
 
   def create
-    data_source_params = params.require(:data_source).permit(COMMON_PARAMS).merge(published: true).
-      reverse_merge(consolidated: false)
+    data_source_params = params.require(:data_source).permit(COMMON_PARAMS).merge(published: true)
+                               .reverse_merge(consolidated: false,)
     @data_source = DataSource.new(data_source_params)
     if @data_source.save
       redirect_to edit_data_source_path(@data_source, just_created: true), notice: MESSAGES[:created]
