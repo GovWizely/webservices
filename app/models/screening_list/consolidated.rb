@@ -16,7 +16,7 @@ module ScreeningList
 
     include SeparatedValuesable
     self.separated_values_config = [
-      { source: [:code] },
+      { source: [:full_name] },
       :entity_number,
       :type,
       :programs,
@@ -43,6 +43,7 @@ module ScreeningList
       :nationalities,
       :places_of_birth,
       :source_information_url,
+      { ids: [:country, :expiration_date, :issue_date, :number, :type] }
     ]
 
     def self.search_for(options)
