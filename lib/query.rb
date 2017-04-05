@@ -44,7 +44,7 @@ class Query
     options.delete_if { |_k, v| v == '' }
     options.reverse_merge!(size: DEFAULT_SIZE)
 
-    cleanup_invalid_bytes(options, [:q])
+    cleanup_invalid_bytes(options, [:q, :name])
 
     @offset = options[:offset].to_i
     @size = [options[:size].to_i, MAX_SIZE].min
