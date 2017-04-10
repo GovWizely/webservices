@@ -21,6 +21,8 @@ Webservices::Application.routes.draw do
     member { get :iterate_version }
   end
 
+  get '/data_sources_documentation' => 'data_sources#documentation'
+
   concern :api_v2_routable do
     get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
   end
