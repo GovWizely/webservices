@@ -187,6 +187,7 @@ GEM
     json (2.0.3)
     jsonpath (0.5.8)
       multi_json
+    kramdown (1.13.2)
     launchy (2.4.3)
       addressable (~> 2.3)
     mail (2.5.4)
@@ -405,6 +406,7 @@ DEPENDENCIES
   jbuilder
   jquery-rails
   jsonpath
+  kramdown
   launchy
   mechanize
   monetize

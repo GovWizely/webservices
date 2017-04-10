@@ -27,7 +27,11 @@
                 <em><%= "Signed in as #{current_user.full_name}" %></em> |
                 <%= current_page?(main_app.authenticated_root_path) ? 'API Key' : link_to('API Key', main_app.authenticated_root_path) %> |
                 <%= current_page?(main_app.edit_user_registration_path) ? 'Account' : link_to('Account', main_app.edit_user_registration_path) %> |
+                <% if current_user && current_user.admin? %>
+                  <%= link_to("Endpoint Me Documentation", main_app.data_sources_documentation_path ) %> |
+                <% end %>
                 <%= link_to('Logout', main_app.destroy_user_session_path) %>
+                
               <% else %>
                 <%= current_page?(main_app.new_user_session_path) || current_page?(main_app.unauthenticated_root_path) ? 'Login' : link_to('Login', main_app.new_user_session_path) %> |
                 <%= current_page?(main_app.new_user_registration_path) ? 'Sign Up' : link_to('Sign Up', main_app.new_user_registration_path) %>
