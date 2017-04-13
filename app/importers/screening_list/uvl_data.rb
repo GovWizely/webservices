@@ -21,11 +21,7 @@ module ScreeningList
       @source_list_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/enforcement/unverifiedlist/unverified_parties.html', model_class)
       @source_information_url = UrlMapper.get_bitly_url('http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/unverified-list', model_class)
 
-      rows = CSV.parse(loaded_resource, encoding: 'UTF-8').map do |row|
-        { country: row[0],
-          name:    row[1],
-          address: row[2], }
-      end
+      rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')
 
       ensure_expected_headers(rows.first)
 
