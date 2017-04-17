@@ -55,4 +55,6 @@ module ScreeningList
       result
     end
   end
+
+  def foo; puts 'bar'; end
 end
