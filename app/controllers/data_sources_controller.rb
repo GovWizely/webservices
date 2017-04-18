@@ -60,6 +60,9 @@ class DataSourcesController < ApplicationController
     redirect_to '/', notice: MESSAGES[:destroyed]
   end
 
+  def documentation
+  end
+
   private
 
   def symbolized_yaml(dictionary)
