@@ -7,10 +7,9 @@ module ScreeningList
 
     include ::CanEnsureCsvHeaders
     self.expected_csv_headers = %i(
-      alias corp corrected_notice corrected_notice_date
-      date_of_birth__public_release debarred_party_full_name
-      debarred_party_given_names debarred_party_surnamecorporate_name eff_date
-      notice notice_date type)
+      corrected_notice corrected_notice_date
+      date_of_birth debarred_party_full_name_and_alias
+      notice notice_date)
 
     # We don't group source entries in this importer, but we want
     # to use the generate_id method brought in by this module.
@@ -19,7 +18,7 @@ module ScreeningList
 
     include ScreeningList::MakeNameVariants
 
-    ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_07142014.csv"
+    ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_04172017.csv"
 
     def import
       @source_information_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_intro.html', model_class)
@@ -40,7 +39,6 @@ module ScreeningList
       doc = {
         name:                    extract_name(row),
         alt_names:               extract_alt_names(row),
-        start_date:              parse_american_date(row[:eff_date]),
         federal_register_notice: (row[:corrected_notice] || row[:notice]),
         source:                  model_class.source,
         source_information_url:  @source_information_url,
@@ -55,14 +53,21 @@ module ScreeningList
     end
 
     def extract_name(row)
-      %i(debarred_party_given_names
-         debarred_party_surnamecorporate_name).map do |key|
-        row[key].to_s
-      end.join(' ',)
+      name = row[:debarred_party_full_name_and_alias]
+      if name.include? 'Inc.'
+        name
+      else
+        name.sub(/\(.*\)/, '').sub(/(.*),(.*)/, '\2 \1')
+      end
     end
 
     def extract_alt_names(row)
-      row[:alias] ? row[:alias].split(';') : []
+      name = row[:debarred_party_full_name_and_alias]
+      if name.include? 'a.k.a.'
+        name.sub(/.*(\(a.*\))/, '\1').sub('(a.k.a. ', '').sub(')', '').split('; ')
+      else
+        []
+      end
     end
   end
 end
