@@ -21,6 +21,7 @@ gem 'sidekiq'
 gem 'sidekiq-unique-jobs'
 gem 'haml'
 gem 'charlock_holmes'
+gem 'kramdown'
 
 gem 'sass'
 gem 'jquery-rails'

@@ -187,5 +187,17 @@ RSpec.feature 'Data Source management' do
         expect(page).to have_text('Unauthorized.')
       end
     end
+
+    scenario 'admin views endpoint me documentation' do
+      visit '/'
+
+      fill_in 'Email', with: 'test@gov.gov'
+      fill_in 'Password', with: 'p4ssword'
+      click_button('Log in')
+      expect(page).to have_text('Your API Key is')
+
+      click_link('Endpoint Me Documentation')
+      expect(page).to have_text('This section describes what is in this user guide.')
+    end
   end
 end

@@ -51,6 +51,9 @@ class DataSourcesController < ApplicationController
     redirect_to '/', notice: MESSAGES[:destroyed]
   end
 
+  def documentation
+  end
+
   private
 
   def set_data_source
