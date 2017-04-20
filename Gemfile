@@ -16,19 +16,19 @@ gem 'rack-contrib'
 gem 'rake'
 gem 'sanitize'
 gem 'htmlentities'
-gem 'git'
 gem 'sidekiq'
 gem 'sidekiq-unique-jobs'
 gem 'haml'
 gem 'charlock_holmes'
 gem 'kramdown'
+gem 'rouge', '1.11.1'
 
 gem 'sass'
 gem 'jquery-rails'
 
-gem 'industry_mapping_client', git: 'git://github.com/GovWizely/industry_mapping_client.git'
-gem 'taxonomy_parser', github: 'GovWizely/taxonomy_parser'
-gem 's3_browser', git: 'git://github.com/GovWizely/s3_browser.git'
+gem 'industry_mapping_client', git: 'https://github.com/GovWizely/industry_mapping_client.git'
+gem 'taxonomy_parser', git: 'https://github.com/GovWizely/taxonomy_parser.git'
+gem 's3_browser', git: 'https://github.com/GovWizely/s3_browser.git'
 
 gem 'restforce'
 
