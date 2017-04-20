@@ -1,5 +1,6 @@
 class DataSource < ActiveResource::Base
   self.site = Rails.configuration.endpointme_url
+  self.timeout = 3600
 
   def is_consolidated?
     consolidated.present? && consolidated.to_s == 'true'
