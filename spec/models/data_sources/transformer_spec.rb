@@ -163,6 +163,28 @@ describe DataSources::Transformer do
     end
   end
 
+  context 'adding ITA taxonomy countries and world regions' do
+    context 'source field is a country and country is needed' do 
+
+    end
+
+    context 'source field is a country and world_region is needed' do
+
+    end
+
+    context 'source field is a region and country is needed' do 
+
+    end
+
+    context 'source field is a region and world_region is needed' do
+
+    end
+
+    context 'the mapping for the source field is not found' do
+
+    end
+  end
+
   context 'an unsupported transformation is specified' do
     let(:transformer) { DataSources::Transformer.new(metadata.merge(transformations: %w(nope))) }
 
