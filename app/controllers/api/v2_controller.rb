@@ -15,4 +15,8 @@ class Api::V2Controller < ApiController
       render json: { error: 'Unauthorized - Please get a new key at https://api.trade.gov' }, status: :unauthorized
     end
   end
+
+  def versioned_api_prefix
+    "#{Rails.configuration.endpointme_url}/v#{params['version_number']}/#{params['api']}"
+  end
 end

@@ -14,3 +14,6 @@ before_install:
 
 notifications:
   slack: govwizely:R9Nhshn0NO7eRh4ThXaMKqWw
+
+after_success:
+  - bundle exec codeclimate-test-reporter

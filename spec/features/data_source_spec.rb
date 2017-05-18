@@ -1,288 +1,206 @@
 require 'spec_helper'
 
 RSpec.feature 'Data Source management' do
-  context 'with an admin user' do
-    before(:all) { @user = create_user(email: 'test@gov.gov', admin: true) }
+  context 'with single data sources' do
+    before(:all) do
+      @user = create_user(email: 'test@gov.gov', admin: true)
+      @non_admin_user = create_user(email: 'nonadmin@gov.gov', admin: false)
+    end
 
-    scenario 'admin user creates, edits, and deletes an API' do
-      visit '/'
+    scenario 'admin user creates, edits, searches on, freshens, and deletes an API' do
+      VCR.use_cassette('endpointme/sanity', record: :once) do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button('Log in')
-      expect(page).to have_text('Your API Key is')
-      expect(page).to have_text('Dynamic APIs')
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button('Log in')
+        expect(page).to have_text('Your API Key is')
+        expect(page).to have_text('Dynamic APIs')
 
-      click_link('+')
-      expect(page).to have_text('New data source')
-      fill_in 'Description', with: 'Not gonna work'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      expect(page).to have_text("Name can't be blank")
-      expect(page).to have_text("Api can't be blank")
+        click_link('+')
+        expect(page).to have_text('New data source')
+        fill_in 'Description', with: 'Not gonna work'
+        click_button('Create')
+        expect(page).to have_text("Name can't be blank")
+        expect(page).to have_text("Api can't be blank")
 
-      fill_in 'Name', with: 'Some human readable name'
-      fill_in 'Description', with: 'Some human readable desc'
-      fill_in 'Api', with: 'success_cases'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      expect(page).to have_text('Data source was successfully created. Review the dictionary and make any changes')
-      expect(page).to have_text('Editing data source')
-      expect(page).to have_field('Name', with: 'Some human readable name')
-      expect(page).to have_field('Api', readonly: true)
+        fill_in 'Name', with: 'Some human readable name'
+        fill_in 'Description', with: 'Some human readable desc'
+        fill_in 'Api', with: 'success_cases'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv'
+        click_button('Create')
+        expect(page).to have_text('Data source was successfully created. Review the dictionary and make any changes')
+        expect(page).to have_text('Editing data source')
+        expect(page).to have_field('Name', with: 'Some human readable name')
+        expect(page).to have_field('Api', readonly: true)
 
-      fill_in 'Name', with: 'Some other human readable name'
-      click_button('Update')
-      expect(page).to have_text('Data source was successfully updated and data uploaded.')
-      expect(page).to have_text('Some other human readable name')
-      expect(page).to have_text('less than a minute ago')
+        fill_in 'Name', with: 'Some other human readable name'
+        click_button('Update')
+        expect(page).to have_text('Data source was successfully updated and data uploaded.')
+        expect(page).to have_text('Some other human readable name')
 
-      click_link('Back')
-      expect(page).to have_text('Some other human readable name (v1)')
+        click_link('Back')
+        expect(page).to have_text('Some other human readable name (v1)')
 
-      click_link('Some other human readable name (v1)')
-      click_link('Edit')
-      fill_in 'Name', with: ''
-      click_button('Update')
-      expect(page).to have_text("Name can't be blank")
+        click_link('Some other human readable name (v1)')
+        click_link('Edit')
+        fill_in 'Name', with: ''
+        click_button('Update')
+        expect(page).to have_text("Name can't be blank")
 
-      click_link('Some other human readable name (v1)')
-      click_button('Delete')
-      expect(page).to have_text('Dataset was successfully destroyed')
+        visit("/v1/success_cases/search.json?api_key=#{@user.api_key}&q=pony")
+        expect(page).to have_text('"col2":"ponies are nice"')
+
+        visit("/v1/success_cases/freshen.json?api_key=#{@user.api_key}")
+        expect(page).to have_text('"success":"success_cases:v1 API freshened"')
+
+        visit '/'
+        click_link('Some other human readable name (v1)')
+        click_button('Delete')
+        expect(page).to have_text('Dataset was successfully destroyed')
+      end
     end
 
     scenario 'admin user tries to create an already existing API' do
-      visit '/'
+      VCR.use_cassette('endpointme/api_already_exists', record: :once) do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button 'Log in'
 
-      click_link('+')
-      fill_in 'Name', with: 'Some human readable name'
-      fill_in 'Description', with: 'Some human readable desc'
-      fill_in 'Api', with: 'already_exists'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
+        click_link('+')
+        fill_in 'Name', with: 'Some human readable name'
+        fill_in 'Description', with: 'Some human readable desc'
+        fill_in 'Api', with: 'already_exists'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
 
-      click_link('+')
-      fill_in 'Name', with: 'this is a dupe'
-      fill_in 'Description', with: 'should reject it'
-      fill_in 'Api', with: 'already_exists'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      expect(page).to have_text("Api 'already_exists' already exists.")
+        click_link('+')
+        fill_in 'Name', with: 'this is a dupe'
+        fill_in 'Description', with: 'should reject it'
+        fill_in 'Api', with: 'already_exists'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
+        expect(page).to have_text("Api 'already_exists' already exists.")
+      end
     end
 
     scenario 'admin user iterates version of API' do
-      visit '/'
+      VCR.use_cassette('endpointme/iterate', record: :once) do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button 'Log in'
 
-      click_link('+')
-      fill_in 'Name', with: 'Iterate Me'
-      fill_in 'Description', with: 'Iterate Me desc'
-      fill_in 'Api', with: 'nouns'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      click_button('Update')
-      expect(page).to have_text('Version: 1')
+        click_link('+')
+        fill_in 'Name', with: 'Iterate Me'
+        fill_in 'Description', with: 'Iterate Me desc'
+        fill_in 'Api', with: 'nouns'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
+        click_button('Update')
+        expect(page).to have_text('Version: 1')
 
-      click_link('Iterate API Version')
-      expect(page).to have_text('New version of data source')
-      expect(page).to have_field('Version', readonly: true, with: '2')
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      expect(page).to have_field('Version', readonly: true, with: '2')
-      click_button('Update')
-      expect(page).to have_text('Version: 2')
+        click_link('Iterate API Version')
+        expect(page).to have_text('New version of data source')
+        expect(page).to have_field('Version', readonly: true, with: '2')
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
+        expect(page).to have_field('Version', readonly: true, with: '2')
+        click_button('Update')
+        expect(page).to have_text('Version: 2')
 
-      click_link('Iterate API Version')
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      click_button('Update')
+        click_link('Iterate API Version')
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
+        click_button('Update')
 
-      click_link('Iterate Me (v1)')
-      expect(page).to have_text('Version: 1')
-      expect(page).to have_button('Delete')
-      expect(page).not_to have_link('Edit')
-      expect(page).not_to have_link('Iterate API Version')
+        click_link('Iterate Me (v1)')
+        expect(page).to have_text('Version: 1')
+        expect(page).to have_button('Delete')
+        expect(page).not_to have_link('Edit')
+        expect(page).not_to have_link('Iterate API Version')
 
-      click_link('Iterate Me (v2)')
-      expect(page).to have_text('Version: 2')
-      expect(page).not_to have_button('Delete')
-      expect(page).not_to have_link('Edit')
-      expect(page).not_to have_link('Iterate API Version')
+        click_link('Iterate Me (v2)')
+        expect(page).to have_text('Version: 2')
+        expect(page).not_to have_button('Delete')
+        expect(page).not_to have_link('Edit')
+        expect(page).not_to have_link('Iterate API Version')
 
-      click_link('Iterate Me (v3)')
-      expect(page).to have_text('Version: 3')
-      expect(page).to have_button('Delete')
-      expect(page).to have_link('Edit')
-      expect(page).to have_link('Iterate API Version')
+        click_link('Iterate Me (v3)')
+        expect(page).to have_text('Version: 3')
+        expect(page).to have_button('Delete')
+        expect(page).to have_link('Edit')
+        expect(page).to have_link('Iterate API Version')
+      end
     end
 
     scenario 'admin user marks an API as unpublished' do
-      visit '/'
+      VCR.use_cassette('endpointme/unpublish', record: :once) do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button 'Log in'
 
-      click_link('+')
-      fill_in 'Name', with: 'Some new API'
-      fill_in 'Description', with: 'Not published yet'
-      fill_in 'Api', with: 'publishing_test'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
-      click_button('Update')
-      expect(page).to have_text('Published: true')
+        click_link('+')
+        fill_in 'Name', with: 'Some new API'
+        fill_in 'Description', with: 'Not published yet'
+        fill_in 'Api', with: 'publishing_test'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/trade-events/sba.json'
+        click_button('Create')
+        click_button('Update')
+        expect(page).to have_text('Published: true')
 
-      click_link('Edit')
-      uncheck('Published')
-      click_button('Update')
-      expect(page).to have_text('Published: false')
+        click_link('Edit')
+        uncheck('Published')
+        click_button('Update')
+        expect(page).to have_text('Published: false')
+      end
     end
 
-    scenario 'admin user updates the data in the data source file (non-breaking change)' do
-      visit '/'
+    scenario 'non-admin tries to freshen an API' do
+      VCR.use_cassette('endpointme/unauthorized', record: :once) do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button 'Log in'
 
-      click_link('+')
-      fill_in 'Name', with: 'Some new API'
-      fill_in 'Description', with: 'Soon to be updated'
-      fill_in 'Api', with: 'csv_edits'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/de_minimis_date.csv")
-      click_button('Create')
+        click_link('+')
+        fill_in 'Name', with: 'Some new API'
+        fill_in 'Description', with: 'Not published yet'
+        fill_in 'Api', with: 'auth_test'
+        fill_in 'Url', with: 'https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv'
+        click_button('Create')
+        click_button('Update')
 
-      expect(page).not_to have_field('Path')
-      click_button('Update')
+        visit '/'
+        click_link('Logout')
 
-      visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
-      expect(page).to have_text('Andorra')
-
-      visit '/data_sources/csv_edits:v1/edit'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/updated_de_minimis_date.csv")
-      click_button('Update')
-
-      visit("/v1/csv_edits/search.json?api_key=#{@user.api_key}&iso2_code=AD")
-      expect(page).to have_text('Andorraaah')
-    end
-
-    scenario 'admin user uploads TSV file' do
-      visit '/'
-
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
-
-      click_link('+')
-      fill_in 'Name', with: 'Testing tabs'
-      fill_in 'Description', with: 'Testing tabs'
-      fill_in 'Api', with: 'tabs'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/tabs.tsv")
-      click_button('Create')
-
-      click_button('Update')
-
-      visit("/v1/tabs/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('from tabs')
-    end
-
-    scenario 'admin user uploads XML file' do
-      visit '/'
-
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
-
-      click_link('+')
-      fill_in 'Name', with: 'Testing XML'
-      fill_in 'Description', with: 'Testing XML'
-      fill_in 'Api', with: 'xml_records'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/posts.xml")
-      click_button('Create')
-
-      click_button('Update')
-
-      visit("/v1/xml_records/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('"officename":"from XML"')
-    end
-
-    scenario 'admin user uploads XLS file' do
-      visit '/'
-
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
-
-      click_link('+')
-      fill_in 'Name', with: 'Testing XLS'
-      fill_in 'Description', with: 'Testing XLS'
-      fill_in 'Api', with: 'xls_records'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/excel.xls")
-      click_button('Create')
-
-      click_button('Update')
-
-      visit("/v1/xls_records/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('"country":"ALGERIA"')
-    end
-
-    scenario 'admin user uploads JSON Object file' do
-      visit '/'
-
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
-
-      click_link('+')
-      fill_in 'Name', with: 'Testing JSON Object'
-      fill_in 'Description', with: 'Testing JSON'
-      fill_in 'Api', with: 'json_object_records'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json.json")
-      click_button('Create')
-
-      click_button('Update')
-
-      visit("/v1/json_object_records/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('"site":"United Kingdom"')
-    end
-
-    scenario 'admin user uploads JSON Array file' do
-      visit '/'
-
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button 'Log in'
-
-      click_link('+')
-      fill_in 'Name', with: 'Testing JSON Array'
-      fill_in 'Description', with: 'Testing JSON'
-      fill_in 'Api', with: 'json_array_records'
-      attach_file('Path', "#{Rails.root}/spec/fixtures/data_sources/json_array.json")
-      click_button('Create')
-
-      click_button('Update')
-
-      visit("/v1/json_array_records/search.json?api_key=#{@user.api_key}")
-      expect(page).to have_text('"name":"South Korea"')
+        fill_in 'Email', with: 'nonadmin@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button('Log in')
+        visit("/v1/auth_test/freshen.json?api_key=#{@non_admin_user.api_key}")
+        expect(page).to have_text('Unauthorized.')
+      end
     end
 
     scenario 'admin views endpoint me documentation' do
-      visit '/'
+      VCR.use_cassette('endpointme/sanity') do
+        visit '/'
 
-      fill_in 'Email', with: 'test@gov.gov'
-      fill_in 'Password', with: 'p4ssword'
-      click_button('Log in')
-      expect(page).to have_text('Your API Key is')
+        fill_in 'Email', with: 'test@gov.gov'
+        fill_in 'Password', with: 'p4ssword'
+        click_button('Log in')
+        expect(page).to have_text('Your API Key is')
 
-      click_link('Endpoint Me Documentation')
-      expect(page).to have_text('This section describes what is in this user guide.')
+        click_link('Endpoint Me Documentation')
+        expect(page).to have_text('This section describes what is in this user guide.')
+      end
     end
+
   end
 end

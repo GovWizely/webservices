@@ -6,7 +6,6 @@ namespace :db do
     end
     UrlMapper.create_index unless UrlMapper.index_exists?
     User.create_index!
-    DataSource.create_index!
   end
 
   desc 'Delete all indices relating to this project and environment'

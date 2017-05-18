@@ -30,13 +30,8 @@
 .field
   = form.label :s3_bucket_name
   = form.text_field :s3_bucket_name
-  %p Add an admin-provided bucket name to manage source files that must be converted. 
+  %p Add an admin-provided bucket name to manage source files that must be converted.
 - unless params["just_created"] == "true" || @data_source.is_consolidated?
   .field
     = form.label :url
     = form.text_field :url
-  .field
-    = form.label :path
-    = form.file_field :path, accept: DataSource::VALID_CONTENT_TYPES.join(',')
-    - if action_name == 'edit'
-      %p If any column names have changed, be sure to update the dictionary, too.

@@ -82,5 +82,5 @@ Webservices::Application.routes.draw do
 
   match '404', via: :all, to: 'api#not_found'
 
-  mount S3Browser::Engine, at: "/s3_browser", constraints: S3BrowserConstraint.new
+  mount S3Browser::Engine, at: '/s3_browser', constraints: S3BrowserConstraint.new
 end
