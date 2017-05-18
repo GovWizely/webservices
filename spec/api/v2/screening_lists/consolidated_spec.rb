@@ -238,6 +238,7 @@ describe 'Consolidated Screening List API V2', type: :request do
       it_behaves_like 'it contains only results with sources' do
         let(:sources) { [ScreeningList::Sdn] }
       end
+      it_behaves_like 'it contains all ScreeningList::Sdn results sorted by default'
 
       context 'and is set to "Part561" source' do
         let(:params) { { sources: '561' } }
@@ -338,6 +339,32 @@ describe 'Consolidated Screening List API V2', type: :request do
       let(:params) { { sources: 'DPL', end_date: '2005-06-05 TO 2005-06-05' } }
       it_behaves_like 'a successful search request'
       it_behaves_like 'it contains all ScreeningList::Dpl results that match end_date "2005-06-05"'
+    end
+
+    context 'when sort is specified' do
+      context 'and is set to name' do
+        include_context 'ScreeningList::Sdn data'
+        let(:params) { { sources: 'SDN', sort: 'name:desc' } }
+        it 'sorts the results correctly' do
+          results = JSON.parse(response.body)['results']
+          expect(results).to eq(@all_possible_full_results[ScreeningList::Sdn].reverse)
+        end
+      end
+
+      context 'and is set to start_date:desc' do
+        include_context 'ScreeningList::Isn data'
+        let(:params) { { sources: 'ISN', sort: 'start_date:desc' } }
+        it 'sorts the results correctly' do
+          results = JSON.parse(response.body)['results']
+          expect(results).to eq(@all_possible_full_results[ScreeningList::Isn])
+        end
+      end
+
+      context 'and is set to a non-sortable field' do
+        include_context 'ScreeningList::Sdn data'
+        let(:params) { { sources: 'SDN', sort: 'address' } }
+        it_behaves_like 'it contains all ScreeningList::Sdn results sorted by default'
+      end
     end
   end
 

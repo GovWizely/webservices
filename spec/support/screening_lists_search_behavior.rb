@@ -102,6 +102,13 @@ shared_context 'ScreeningList::Sdn data' do
   end
 end
 
+shared_examples 'it contains all ScreeningList::Sdn results sorted by default' do
+  it 'it returns the correct results' do
+    results = JSON.parse(response.body)['results']
+    expect(results).to eq(@all_possible_full_results[ScreeningList::Sdn])
+  end
+end
+
 shared_examples 'it contains all ScreeningList::Sdn results' do
   let(:source) { ScreeningList::Sdn }
   let(:expected) { [1, 0, 2, 3] }

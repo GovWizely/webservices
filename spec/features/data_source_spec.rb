@@ -201,6 +201,5 @@ RSpec.feature 'Data Source management' do
         expect(page).to have_text('This section describes what is in this user guide.')
       end
     end
-
   end
 end

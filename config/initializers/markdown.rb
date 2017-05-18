@@ -6,9 +6,9 @@ module Haml::Filters
 
     def render(text)
       Kramdown::Document.new(text,
-                             input: 'GFM',
-                             hard_wrap: false,
-                             syntax_highlighter: :rouge).to_html
+                             input:              'GFM',
+                             hard_wrap:          false,
+                             syntax_highlighter: :rouge,).to_html
     end
   end
 end
