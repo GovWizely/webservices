@@ -43,7 +43,7 @@ module ScreeningList
       :nationalities,
       :places_of_birth,
       :source_information_url,
-      { ids: [:country, :expiration_date, :issue_date, :number, :type] }
+      { ids: [:country, :expiration_date, :issue_date, :number, :type] },
     ]
 
     def self.search_for(options)
