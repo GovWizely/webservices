@@ -103,7 +103,7 @@ describe Searchable do
       expect(hits.find { |h| h.key?(:time) }).to be_nil
 
       # Sorted correctly?
-      expect(hits.first(10)).to eq hits.first(10).sort { |x, y| x[:foo] <=> y[:foo] }
+      expect(hits.first(10)).to eq hits.first(10).sort { |x, y| x[:_source][:foo] <=> y[:_source][:foo] }
     end
 
     it 'response includes metadata' do

@@ -1,5 +1,6 @@
 [
   {
+    "id": "306",
     "addresses": [
       {
         "address": "Zweierstrasse 35",
@@ -41,7 +42,6 @@
 
     ],
     "entity_number": "306",
-    "id": "306",
     "ids": [
 
     ],
@@ -63,6 +63,7 @@
     "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
+    "id": "521",
     "addresses": [
       {
         "address": "20 Ironmonger Lane",
@@ -82,7 +83,6 @@
 
     ],
     "entity_number": "521",
-    "id": "521",
     "ids": [
       {
         "country": "BE",
@@ -110,6 +110,7 @@
     "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
+    "id": "6982",
     "addresses": [
       {
         "address": "P.O. Box 3312",
@@ -152,7 +153,6 @@
       "circa 1954"
     ],
     "entity_number": "6982",
-    "id": "6982",
     "ids": [
       {
         "country": "SO",
@@ -180,6 +180,7 @@
     "source": "Specially Designated Nationals (SDN) - Treasury Department"
   },
   {
+    "id": "11043",
     "addresses": [
 
     ],
@@ -192,7 +193,6 @@
     "entity_number": "11043",
     "gross_registered_tonnage": "16621",
     "gross_tonnage": "24065",
-    "id": "11043",
     "ids": [
       {
         "country": "IR",
