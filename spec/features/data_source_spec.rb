@@ -189,7 +189,7 @@ RSpec.feature 'Data Source management' do
     end
 
     scenario 'admin views endpoint me documentation' do
-      VCR.use_cassette('endpointme/sanity') do
+      VCR.use_cassette('endpointme/sanity', record: :once) do
         visit '/'
 
         fill_in 'Email', with: 'test@gov.gov'
