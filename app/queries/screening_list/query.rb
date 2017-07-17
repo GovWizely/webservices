@@ -13,6 +13,7 @@ module ScreeningList
 
     include ScreeningList::GenerateFuzzyNameQuery
     include ScreeningList::GenerateSort
+    include ::FuzzyNameStops
 
     private
 
@@ -35,7 +36,7 @@ module ScreeningList
       multi_fields = %i(alt_names name remarks title)
       name_fields = %i(alt_names name)
       if @name && @fuzzy_name
-        remove_stops
+        @name = remove_stops(@name)
         json.highlight do
           json.fields do
             json.alt_idx({})
