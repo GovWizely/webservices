@@ -2,7 +2,7 @@
 http_interactions:
 - request:
     method: get
-    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx&title=ScreeningList::Plc
+    uri: https://api-ssl.bitly.com/v3/user/link_save?access_token=<BITLY_API_TOKEN>&longUrl=https://www.treasury.gov/resource-center/sanctions/Programs/Pages/pa.aspx&title=ScreeningList::Plc
     body:
       encoding: US-ASCII
       string: ''
@@ -33,7 +33,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"status_code": 304, "data": {"link_save": {"link": "http://1.usa.gov/1Qi4n1M",
-        "aggregate_link": "http://bit.ly/1iwvfR5", "long_url": "https://www.treasury.gov/resource-center/sanctions/Terrorism-Proliferation-Narcotics/Pages/index.aspx",
+        "aggregate_link": "http://bit.ly/1iwvfR5", "long_url": "https://www.treasury.gov/resource-center/sanctions/Programs/Pages/pa.aspx",
         "new_link": 0}}, "status_txt": "LINK_ALREADY_EXISTS"}'
     http_version: 
   recorded_at: Wed, 16 Sep 2015 18:49:26 GMT
