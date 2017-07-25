@@ -1,7 +1,6 @@
 module ScreeningList
   module MakeNameVariants
-    STOPWORDS    = %w( and the los )
-    COMMON_WORDS = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
+    include ::FuzzyNameStops
 
     def make_names(doc)
       doc[:name_idx] = strip(doc[:name], 'punct')

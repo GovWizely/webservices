@@ -1,5 +1,7 @@
 module ScreeningList
   class ScoreAdjuster
+    include ::FuzzyNameStops
+
     MATCHED_PENALTIES = [20, 15, 10, 7, 5]
     UNMATCHED_PENALTIES = [0, 1, 5, 7, 10]
     LONG_MATCH_PENALTY = 1
@@ -44,16 +46,6 @@ module ScreeningList
         penalty = UNMATCHED_PENALTIES[token.length - 1] || LONG_MISS_PENALTY
         sum + penalty
       end
-    end
-
-    def remove_stops(name)
-      stopwords    = %w( and the los )
-      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
-
-      nme = name.gsub(/[^\p{Alnum}\p{Space}]/, '')
-      nme = nme.split.delete_if { |n| stopwords.include?(n.downcase) }.join(' ')
-      nme = nme.split.delete_if { |n| common_words.include?(n.downcase) }.join(' ')
-      nme
     end
   end
 end

@@ -1,14 +1,5 @@
 module ScreeningList
   module GenerateFuzzyNameQuery
-    def remove_stops
-      stopwords    = %w( and the los )
-      common_words = %w( co company corp corporation inc incorporated limited ltd mr mrs ms organization sa sas llc )
-
-      @name = @name.gsub(/[^\p{Alnum}\p{Space}]/, '')
-      @name = @name.split.delete_if { |name| stopwords.include?(name.downcase) }.join(' ')
-      @name = @name.split.delete_if { |name| common_words.include?(name.downcase) }.join(' ')
-    end
-
     def generate_fuzzy_name_query(json)
       multi_word_query = @name =~ /\s/ ? true : false
       if multi_word_query
