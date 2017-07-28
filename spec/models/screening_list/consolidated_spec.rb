@@ -5,7 +5,7 @@ describe ScreeningList::Consolidated, type: :model do
     subject { described_class.index_names(sources) }
 
     let(:all_index_names) do
-      %w(dpl dtc el fse isn part561 plc sdn ssi uvl)
+      %w(dpl dtc el fse isa isn part561 plc sdn ssi uvl)
         .map { |x| "test:webservices:screening_list:#{x}s" }
     end
 
