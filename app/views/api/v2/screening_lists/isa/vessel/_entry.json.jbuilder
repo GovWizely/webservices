@@ -9,8 +9,7 @@ json.call(entry[:_source],
           :ids,
           :name,
           :programs,
-          :remarks,
-         )
+          :remarks,)
 json.source entry[:_source][:source][:full_name]
 json.call(entry[:_source],
           :source_information_url,
@@ -19,5 +18,4 @@ json.call(entry[:_source],
           :type,
           :vessel_flag,
           :vessel_owner,
-          :vessel_type,
-         )
+          :vessel_type,)

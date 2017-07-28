@@ -10,12 +10,10 @@ json.call(entry[:_source],
           :nationalities,
           :places_of_birth,
           :programs,
-          :remarks,
-         )
+          :remarks,)
 json.source entry[:_source][:source][:full_name]
 json.call(entry[:_source],
           :source_information_url,
           :source_list_url,
           :title,
-          :type,
-         )
+          :type,)
