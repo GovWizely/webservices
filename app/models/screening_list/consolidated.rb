@@ -5,6 +5,7 @@ module ScreeningList
                           ScreeningList::Dtc,
                           ScreeningList::El,
                           ScreeningList::Fse,
+                          ScreeningList::Isa,
                           ScreeningList::Isn,
                           ScreeningList::Part561,
                           ScreeningList::Plc,
