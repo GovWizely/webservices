@@ -1,4 +1,5 @@
 json.partial! 'shared/queryinfo'
+json.deprecation_notice 'The NS-ISA list will be removed on December 31, 2017. Please use the EO13599 list instead.'
 json.results do
   json.array! @search[:hits] do |hit|
     entry = hit.deep_symbolize_keys
