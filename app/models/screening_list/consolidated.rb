@@ -4,6 +4,7 @@ module ScreeningList
     self.model_classes = [ScreeningList::Dpl,
                           ScreeningList::Dtc,
                           ScreeningList::El,
+                          ScreeningList::Eo13599,
                           ScreeningList::Fse,
                           ScreeningList::Isa,
                           ScreeningList::Isn,
