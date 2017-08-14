@@ -1,0 +1,60 @@
+[
+    {
+        "addresses": [
+            {
+                "address": "Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port, Near Mina Khalid Road, Al Khan Area",
+                "city": "Sharjah",
+                "country": "AE",
+                "postal_code": null,
+                "state": "Sharjah"
+            }
+        ],
+        "alt_names": [],
+        "citizenships": [],
+        "dates_of_birth": [],
+        "entity_number": "13043",
+        "id": "13043",
+        "ids": [],
+        "name": "FAL OIL COMPANY LTD.",
+        "nationalities": [],
+        "places_of_birth": [],
+        "programs": [
+            "IRAN"
+        ],
+        "remarks": "Telephone: 97165029999; Telephone: 97165280861; Telephone: 97165286666; Telephone: 97165283334; Telephone: 97165283323; Telephone: 97165022234; Telephone: 97165029999; Telephone: 97165029804; Telephone: 97165029914; Telephone: 97165029824; Telephone: 97165281737; Telephone: 97165029814; Telephone: 97165029825; Telephone: 97165029840; Telephone: 97165029863; Telephone: 97165029842; Telephone: 97165029819; Telephone: 97165029836; Telephone: 97168029939; Fax: 97165281437; Fax: 97165280861; United States financial institutions are prohibited from making loans or providing credits totaling more than $10,000,000 in any 12-month period to the person listed here unless such person is engaged in activities to relieve human suffering and the loans or credits are provided for such activities",
+        "source": "List of Persons Identified as Blocked Solely Pursuant to Executive Order 13599 (13599) - Treasury Department",
+        "source_information_url": "http://bit.ly/2tVePH5",
+        "source_list_url": null,
+        "title": null,
+        "type": "Entity"
+    },
+    {
+        "addresses": [
+            {
+                "address": "200 Cantonment Road, #15-00 Southpoint",
+                "city": "Singapore",
+                "country": "SG",
+                "postal_code": "089763",
+                "state": null
+            }
+        ],
+        "alt_names": [],
+        "citizenships": [],
+        "dates_of_birth": [],
+        "entity_number": "13042",
+        "id": "13042",
+        "ids": [],
+        "name": "KUO OIL (S) PTE. LIMITED",
+        "nationalities": [],
+        "places_of_birth": [],
+        "programs": [
+            "IRAN"
+        ],
+        "remarks": "Telephone: 6563184677; Fax: 6562243040; United States financial institutions are prohibited from making loans or providing credits totaling more than $10,000,000 in any 12-month period to the person listed here unless such person is engaged in activities to relieve human suffering and the loans or credits are provided for such activities",
+        "source": "List of Persons Identified as Blocked Solely Pursuant to Executive Order 13599 (13599) - Treasury Department",
+        "source_information_url": "http://bit.ly/2tVePH5",
+        "source_list_url": null,
+        "title": null,
+        "type": "Entity"
+    }
+]

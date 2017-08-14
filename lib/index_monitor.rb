@@ -6,6 +6,7 @@ class IndexMonitor
     'ScreeningList::Dpl',
     'ScreeningList::Dtc',
     'ScreeningList::El',
+    'ScreeningList::Eo13599',
     'ScreeningList::Fse',
     'ScreeningList::Isa',
     'ScreeningList::Isn',
