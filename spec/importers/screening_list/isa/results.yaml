@@ -1,12 +1,12 @@
 ---
 - :entity_number: '13042'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: 'Telephone: 6563184677; Fax: 6562243040; United States financial institutions
     are prohibited from making loans or providing credits totaling more than $10,000,000
     in any 12-month period to the person listed here unless such person is engaged
@@ -31,8 +31,9 @@
   - :city: Singapore
     :country: SG
     :postal_code: 089763
-    :state: 
+    :state:
     :address: '200 Cantonment Road, #15-00 Southpoint'
+    :full_address: '200 Cantonment Road, #15-00 Southpoint, Singapore, SG, 089763'
   :ids: []
   :name_idx: KUO OIL S PTE
   :name_no_ws_with_common: KUOOILSPTELIMITED
@@ -41,13 +42,13 @@
   :name_no_ws: KUOOILSPTE
   :name_no_ws_rev: PTESOILKUO
 - :entity_number: '13043'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: 'Telephone: 97165029999; Telephone: 97165280861; Telephone: 97165286666;
     Telephone: 97165283334; Telephone: 97165283323; Telephone: 97165022234; Telephone:
     97165029999; Telephone: 97165029804; Telephone: 97165029914; Telephone: 97165029824;
@@ -74,9 +75,12 @@
   :addresses:
   - :city: Sharjah
     :country: AE
-    :postal_code: 
+    :postal_code:
     :state: Sharjah
-    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port, Near Mina Khalid Road, Al Khan Area
+    :address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea Port,
+      Near Mina Khalid Road, Al Khan Area
+    :full_address: Sultan Al Awal Street (Sheikh Sultan Bin Awal Road), Near Mina Sea
+      Port, Near Mina Khalid Road, Al Khan Area, Sharjah, AE, Sharjah
   :ids: []
   :name_idx: FAL OIL
   :name_no_ws_with_common: FALOILCOMPANYLTD

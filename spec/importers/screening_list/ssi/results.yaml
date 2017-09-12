@@ -39,16 +39,19 @@
     :postal_code: '190000'
     :state:
     :address: 29, Bolshaya Morskaya str.
+    :full_address: 29, Bolshaya Morskaya str., St. Petersburg, RU, 190000
   - :city: Moscow
     :country: RU
     :postal_code: '119121'
     :state:
     :address: 37 Plyushchikha ul.
+    :full_address: 37 Plyushchikha ul., Moscow, RU, 119121
   - :city: Moscow
     :country: RU
     :postal_code: '109044'
     :state:
     :address: 43, Vorontsovskaya str.
+    :full_address: 43, Vorontsovskaya str., Moscow, RU, 109044
   :ids: 
   - :country: RU
     :expiration_date:
@@ -187,11 +190,13 @@
     :postal_code: '107996'
     :state:
     :address: 8/15 Korp. 3 ul. Rozhdestvenka
+    :full_address: 8/15 Korp. 3 ul. Rozhdestvenka, Moscow, RU, 107996
   - :city: Moscow
     :country: RU
     :postal_code: '107996'
     :state:
     :address: Bld 3 8/15, Rozhdestvenka St.
+    :full_address: Bld 3 8/15, Rozhdestvenka St., Moscow, RU, 107996
   :ids: 
   - :country:
     :expiration_date:
@@ -291,12 +296,14 @@
     :postal_code: '119180'
     :state:
     :address: 57 B. Polyanka ul.
+    :full_address: 57 B. Polyanka ul., Moscow, RU, 119180
   - :city: Moscow
     :country: RU
     :postal_code: '119180'
     :state:
     :address: 57 Bolshaya. Polyanka
-  :ids: 
+    :full_address: 57 Bolshaya. Polyanka, Moscow, RU, 119180
+  :ids:
   - :country:
     :expiration_date:
     :issue_date:
@@ -409,11 +416,13 @@
     :postal_code: '119048'
     :state:
     :address: 24 Usacheva ul.
+    :full_address: 24 Usacheva ul., Moscow, RU, 119048
   - :city: Moscow
     :country: RU
     :postal_code: '119991'
     :state:
     :address: 21 Gogolevsky Blvd.
+    :full_address: 21 Gogolevsky Blvd., Moscow, RU, 119991
   :ids: 
   - :country: RU
     :expiration_date:

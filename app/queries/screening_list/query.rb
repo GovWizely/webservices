@@ -69,7 +69,7 @@ module ScreeningList
           end
 
           if @address
-            generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country), @address)
+            generate_fuzziness_queries(json, %w(addresses.address addresses.city addresses.state addresses.postal_code addresses.country addresses.full_address), @address)
           end
         end
       end

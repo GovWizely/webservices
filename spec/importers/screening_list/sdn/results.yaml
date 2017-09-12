@@ -1,18 +1,18 @@
 ---
 - :entity_number: '306'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks:
   :id: '306'
   :source: &1
     :full_name: Specially Designated Nationals (SDN) - Treasury Department
     :code: SDN
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi4rhP
   :name: BANCO NACIONAL DE CUBA
   :type: Entity
@@ -29,56 +29,69 @@
   - :city: Zurich
     :country: CH
     :postal_code: CH-8022
-    :state: 
+    :state:
     :address: Zweierstrasse 35
+    :full_address: Zweierstrasse 35, Zurich, CH, CH-8022
   - :city: Madrid
     :country: ES
     :postal_code: E-28036
-    :state: 
+    :state:
     :address: Avenida de Concha Espina 8
+    :full_address: Avenida de Concha Espina 8, Madrid, ES, E-28036
   - :city: Tokyo
     :country: JP
     :postal_code: '103'
-    :state: 
+    :state:
     :address: Dai-Ichi Bldg. 6th Floor, 10-2 Nihombashi, 2-chome, Chuo-ku
+    :full_address: Dai-Ichi Bldg. 6th Floor, 10-2 Nihombashi, 2-chome, Chuo-ku, Tokyo,
+      JP, 103
   - :city: Panama City
     :country: PA
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
     :address: Federico Boyd Avenue & 51 Street
+    :full_address: Federico Boyd Avenue & 51 Street, Panama City, PA
   :ids: []
   :name_idx: BANCO NACIONAL DE CUBA
   :name_rev: CUBA DE NACIONAL BANCO
   :name_no_ws: BANCONACIONALDECUBA
   :name_no_ws_rev: CUBADENACIONALBANCO
-  :alt_idx: [BNC, NATIONAL BANK OF CUBA]
-  :alt_rev: [BNC, CUBA OF BANK NATIONAL]
-  :alt_no_ws: [BNC, NATIONALBANKOFCUBA]
-  :alt_no_ws_rev: [BNC, CUBAOFBANKNATIONAL]
+  :alt_idx:
+  - BNC
+  - NATIONAL BANK OF CUBA
+  :alt_rev:
+  - BNC
+  - CUBA OF BANK NATIONAL
+  :alt_no_ws:
+  - BNC
+  - NATIONALBANKOFCUBA
+  :alt_no_ws_rev:
+  - BNC
+  - CUBAOFBANKNATIONAL
 - :entity_number: '6982'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: Additional Djiboutian passport issued in 2010.
   :id: '6982'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi4rhP
-  :name: "JIM'ALE, Ahmed Nur Ali"
+  :name: JIM'ALE, Ahmed Nur Ali
   :type: Individual
   :alt_names:
-  - 'JUMALI, Ahmed Ali'
-  - 'JIMALE, Ahmad Ali'
-  - "JIM'ALE, Ahmad Nur Ali"
-  - 'JUMALE, Ahmed Nur'
-  - 'JIMALE, Ahmed Ali'
-  - 'JIMALE, Shaykh Ahmed Nur'
-  - 'JIMALE, Sheikh Ahmed'
-  - 'JUMALE, Ahmed Ali'
+  - JUMALI, Ahmed Ali
+  - JIMALE, Ahmad Ali
+  - JIM'ALE, Ahmad Nur Ali
+  - JUMALE, Ahmed Nur
+  - JIMALE, Ahmed Ali
+  - JIMALE, Shaykh Ahmed Nur
+  - JIMALE, Sheikh Ahmed
+  - JUMALE, Ahmed Ali
   :programs:
   - SDGT
   :nationalities:
@@ -94,19 +107,22 @@
   :addresses:
   - :city: Dubai
     :country: AE
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
     :address: P.O. Box 3312
+    :full_address: P.O. Box 3312, Dubai, AE
   - :city: Mogadishu
     :country: SO
-    :postal_code: 
-    :state: 
-    :address: 
+    :postal_code:
+    :state:
+    :address:
+    :full_address: Mogadishu, SO
   - :city: Djibouti
     :country: DJ
-    :postal_code: 
-    :state: 
-    :address: 
+    :postal_code:
+    :state:
+    :address:
+    :full_address: Djibouti, DJ
   :ids:
   - :country: SO
     :expiration_date: '2011-01-23'
@@ -154,17 +170,17 @@
   - AhmedSheikhJIMALE
   - AliAhmedJUMALE
 - :entity_number: '11043'
-  :title: 
-  :call_sign: 
+  :title:
+  :call_sign:
   :vessel_type: General Cargo
   :gross_tonnage: '24065'
   :gross_registered_tonnage: '16621'
   :vessel_flag: Iran
   :vessel_owner: IRISL
-  :remarks: 
+  :remarks:
   :id: '11043'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi4rhP
   :name: PARSHAN
   :type: Vessel
@@ -181,30 +197,42 @@
   :addresses: []
   :ids:
   - :country: IR
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: IMO 9051648
     :type: Vessel Registration Identification
   :name_idx: PARSHAN
   :name_rev: PARSHAN
   :name_no_ws: PARSHAN
   :name_no_ws_rev: PARSHAN
-  :alt_idx: [IRAN BRIGHTNESS, BRIGHTNESS, MARIGOLD]
-  :alt_rev: [BRIGHTNESS IRAN, BRIGHTNESS, MARIGOLD]
-  :alt_no_ws: [IRANBRIGHTNESS, BRIGHTNESS, MARIGOLD]
-  :alt_no_ws_rev: [BRIGHTNESSIRAN, BRIGHTNESS, MARIGOLD]
+  :alt_idx:
+  - IRAN BRIGHTNESS
+  - BRIGHTNESS
+  - MARIGOLD
+  :alt_rev:
+  - BRIGHTNESS IRAN
+  - BRIGHTNESS
+  - MARIGOLD
+  :alt_no_ws:
+  - IRANBRIGHTNESS
+  - BRIGHTNESS
+  - MARIGOLD
+  :alt_no_ws_rev:
+  - BRIGHTNESSIRAN
+  - BRIGHTNESS
+  - MARIGOLD
 - :entity_number: '521'
   :title: Executive Director, Havana International Bank
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: Might have something to do with Cuba.
   :id: '521'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi4rhP
   :name: CHAO, Lazaro R.
   :type: Individual
@@ -221,8 +249,9 @@
   - :city: London
     :country: GB
     :postal_code: EC2V 8EY
-    :state: 
+    :state:
     :address: 20 Ironmonger Lane
+    :full_address: 20 Ironmonger Lane, London, GB, EC2V 8EY
   :ids:
   - :country: BE
     :expiration_date: '2011-12-25'

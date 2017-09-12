@@ -114,15 +114,22 @@ module ScreeningList
     def extract_address(node)
       hash = extract_fields(node, ADDRESS_XPATHS)
       address_line_keys = %i(address1 address2 address3)
-
-      address = address_line_keys.map do |field|
-        hash[field].present? ? hash[field] : nil
-      end.compact.join(', ',).squish
+      address = make_addr(hash, address_line_keys)
       hash[:address] = address.present? ? address : nil
 
       hash[:country] &&= lookup_country(hash[:country].squish)
 
+      full_address_keys  = %i(address1 address2 address3 city country postal_code state)
+      full_address = make_addr(hash, full_address_keys)
+      hash[:full_address] = full_address.present? ? full_address : nil
+
       hash.except(*address_line_keys)
+    end
+
+    def make_addr(hash, keys)
+      addr = keys.map do |field|
+        hash[field].present? ? hash[field] : nil
+      end.compact.join(', ',).squish
     end
 
     ID_XPATHS = {
