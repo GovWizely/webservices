@@ -9,7 +9,8 @@
                           "addresses.city",
                           "addresses.state",
                           "addresses.postal_code",
-                          "addresses.country"
+                          "addresses.country",
+                          "addresses.full_address"
                         ],
                         "operator": "and",
                         "query": "Avenida Bady Bassitt"

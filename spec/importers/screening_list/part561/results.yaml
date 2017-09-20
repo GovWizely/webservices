@@ -1,12 +1,12 @@
 ---
 - :entity_number: '15268'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
   :remarks: United States financial institutions are prohibited from opening or maintaining
     a correspondent account or a payable-through account for the foreign financial
     institution listed here, pursuant to 31 C.F.R. section 561.201(c)
@@ -31,28 +31,35 @@
   - :city: Daqing
     :country: CN
     :postal_code: '163453'
-    :state: 
+    :state:
     :address: 172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch)
+    :full_address: 172 Xibin Rd, Ranghulu District, (Daqing, Heilongjiang Branch),
+      Daqing, CN, 163453
   - :city: Beijing
     :country: CN
     :postal_code: '100007'
-    :state: 
+    :state:
     :address: 9 Dongzhimen North Street, Dongcheng District, (Head Office)
+    :full_address: 9 Dongzhimen North Street, Dongcheng District, (Head Office), Beijing,
+      CN, 100007
   - :city: Xinjiang
     :country: CN
     :postal_code: '834000'
     :state: Karamay
     :address: No. 7 Century Ave, (Registered Office)
+    :full_address: No. 7 Century Ave, (Registered Office), Xinjiang, CN, 834000, Karamay
   - :city: Urumqi
     :country: CN
     :postal_code: '830026'
-    :state: 
+    :state:
     :address: No. 68 Zhongya South Rd, Economic and Technological Development Zone,
       (Urumqi, Xinjiang Branch)
+    :full_address: No. 68 Zhongya South Rd, Economic and Technological Development
+      Zone, (Urumqi, Xinjiang Branch), Urumqi, CN, 830026
   :ids:
   - :country:
-    :expiration_date: 
-    :issue_date: 
+    :expiration_date:
+    :issue_date:
     :number: CKLB CN BJ
     :type: SWIFT/BIC
   :name_idx: BANK OF KUNLUN
@@ -64,7 +71,6 @@
   :alt_idx:
   - KARAMAY URBAN CREDIT COOPERATIVES
   - KARAMAY CITY COMMERCIAL BANK
-  :alt_no_ws_with_common:
   :alt_no_ws_with_common:
   - KARAMAYURBANCREDITCOOPERATIVES
   - KARAMAYCITYCOMMERCIALBANKCOLTD

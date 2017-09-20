@@ -1,18 +1,18 @@
 ---
 - :entity_number: '15987'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: '(Linked To: NATIONAL IRANIAN TANKER COMPANY)'
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks: "(Linked To: NATIONAL IRANIAN TANKER COMPANY)"
   :id: '15987'
   :source: &1
     :full_name: Foreign Sanctions Evaders (FSE) - Treasury Department
     :code: FSE
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi3V3z
   :name: FERLAND COMPANY LIMITED
   :type: Entity
@@ -29,18 +29,20 @@
   :addresses:
   - :city: Nicosia
     :country: CY
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
     :address: 29 A Anna Komnini St., PO Box 2303
+    :full_address: 29 A Anna Komnini St., PO Box 2303, Nicosia, CY
   - :city: Odessa
     :country: UA
-    :postal_code: 
-    :state: 
+    :postal_code:
+    :state:
     :address: 5/7 Sabaneyev Most.
+    :full_address: 5/7 Sabaneyev Most., Odessa, UA
   :ids:
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: FERLAND
@@ -49,24 +51,30 @@
   :name_rev: FERLAND
   :name_no_ws: FERLAND
   :name_no_ws_rev: FERLAND
-  :alt_idx: [FERLAND]
-  :alt_no_ws_with_common: [FERLANDCOLTD]
-  :alt_no_ws_rev_with_common: [LTDCOFERLAND]
-  :alt_rev: [FERLAND]
-  :alt_no_ws: [FERLAND]
-  :alt_no_ws_rev: [FERLAND]
+  :alt_idx:
+  - FERLAND
+  :alt_no_ws_with_common:
+  - FERLANDCOLTD
+  :alt_no_ws_rev_with_common:
+  - LTDCOFERLAND
+  :alt_rev:
+  - FERLAND
+  :alt_no_ws:
+  - FERLAND
+  :alt_no_ws_rev:
+  - FERLAND
 - :entity_number: '16422'
   :title: General Manager of Ferland Company Limited
-  :call_sign: 
+  :call_sign:
   :vessel_type:
   :gross_tonnage:
-  :gross_registered_tonnage: 
+  :gross_registered_tonnage:
   :vessel_flag:
   :vessel_owner:
-  :remarks: '(Linked To: FERLAND COMPANY LIMITED)'
+  :remarks: "(Linked To: FERLAND COMPANY LIMITED)"
   :id: '16422'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi3V3z
   :name: SOKOLENKO, Vitaly
   :type: Individual
@@ -83,41 +91,49 @@
   :places_of_birth: []
   :addresses: []
   :ids:
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: EH354160
     :type: Passport
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: P0329907
     :type: Passport
-  - :country: 
-    :expiration_date: 
-    :issue_date: 
+  - :country:
+    :expiration_date:
+    :issue_date:
     :number: Material Support
     :type: Executive Order 13645 Determination -
   :name_idx: SOKOLENKO Vitaly
   :name_rev: Vitaly SOKOLENKO
   :name_no_ws: SOKOLENKOVitaly
   :name_no_ws_rev: VitalySOKOLENKO
-  :alt_idx: [SOKOLENKO Vitalii, SOKOLENKO Vitaliy]
-  :alt_rev: [Vitalii SOKOLENKO, Vitaliy SOKOLENKO]
-  :alt_no_ws: [SOKOLENKOVitalii, SOKOLENKOVitaliy]
-  :alt_no_ws_rev: [VitaliiSOKOLENKO, VitaliySOKOLENKO]
+  :alt_idx:
+  - SOKOLENKO Vitalii
+  - SOKOLENKO Vitaliy
+  :alt_rev:
+  - Vitalii SOKOLENKO
+  - Vitaliy SOKOLENKO
+  :alt_no_ws:
+  - SOKOLENKOVitalii
+  - SOKOLENKOVitaliy
+  :alt_no_ws_rev:
+  - VitaliiSOKOLENKO
+  - VitaliySOKOLENKO
 - :entity_number: '16531'
-  :title: 
-  :call_sign: 
-  :vessel_type: 
-  :gross_tonnage: 
-  :gross_registered_tonnage: 
-  :vessel_flag: 
-  :vessel_owner: 
-  :remarks: 
+  :title:
+  :call_sign:
+  :vessel_type:
+  :gross_tonnage:
+  :gross_registered_tonnage:
+  :vessel_flag:
+  :vessel_owner:
+  :remarks:
   :id: '16531'
   :source: *1
-  :source_list_url: 
+  :source_list_url:
   :source_information_url: http://1.usa.gov/1Qi3V3z
   :name: HOSSEINPOUR, Houshang
   :type: Individual
@@ -139,14 +155,22 @@
   :ids:
   - :country: IR
     :expiration_date: '2015-07-11'
-    :issue_date: 
+    :issue_date:
     :number: R17550559
     :type: Passport
   :name_idx: HOSSEINPOUR Houshang
   :name_rev: Houshang HOSSEINPOUR
   :name_no_ws: HOSSEINPOURHoushang
   :name_no_ws_rev: HoushangHOSSEINPOUR
-  :alt_idx: [HOSSEINPOUR Houshang Shahali, HOSEINPUR Houshang]
-  :alt_rev: [Shahali Houshang HOSSEINPOUR, Houshang HOSEINPUR]
-  :alt_no_ws: [HOSSEINPOURHoushangShahali, HOSEINPURHoushang]
-  :alt_no_ws_rev: [ShahaliHoushangHOSSEINPOUR, HoushangHOSEINPUR]
+  :alt_idx:
+  - HOSSEINPOUR Houshang Shahali
+  - HOSEINPUR Houshang
+  :alt_rev:
+  - Shahali Houshang HOSSEINPOUR
+  - Houshang HOSEINPUR
+  :alt_no_ws:
+  - HOSSEINPOURHoushangShahali
+  - HOSEINPURHoushang
+  :alt_no_ws_rev:
+  - ShahaliHoushangHOSSEINPOUR
+  - HoushangHOSEINPUR
