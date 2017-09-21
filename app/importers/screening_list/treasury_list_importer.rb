@@ -127,7 +127,7 @@ module ScreeningList
     end
 
     def make_addr(hash, keys)
-      addr = keys.map do |field|
+      keys.map do |field|
         hash[field].present? ? hash[field] : nil
       end.compact.join(', ',).squish
     end
