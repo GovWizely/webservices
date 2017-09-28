@@ -6,7 +6,6 @@ module ScreeningList
                           ScreeningList::El,
                           ScreeningList::Eo13599,
                           ScreeningList::Fse,
-                          ScreeningList::Isa,
                           ScreeningList::Isn,
                           ScreeningList::Part561,
                           ScreeningList::Plc,
