@@ -1,10 +1,9 @@
 source 'https://rubygems.org'
 
-# Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '4.0.9'
 
 gem 'activeresource'
-gem 'aws-sdk-core'
+gem 'aws-sdk-core', '~> 2.9' # https://github.com/aws/aws-sdk-ruby/issues/1041
 gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
 gem 'elasticsearch'
 gem 'elasticsearch-persistence'
@@ -19,7 +18,7 @@ gem 'htmlentities'
 gem 'sidekiq'
 gem 'sidekiq-unique-jobs'
 gem 'haml'
-gem 'charlock_holmes'
+gem 'charlock_holmes', '0.7.4'
 gem 'kramdown'
 gem 'rouge', '1.11.1'
 
@@ -28,7 +27,7 @@ gem 'jquery-rails'
 
 gem 'industry_mapping_client', git: 'https://github.com/GovWizely/industry_mapping_client.git'
 gem 'taxonomy_parser', git: 'https://github.com/GovWizely/taxonomy_parser.git'
-gem 's3_browser', git: 'https://github.com/GovWizely/s3_browser.git'
+gem 's3_browser', git: 'https://github.com/GovWizely/s3_browser.git', ref: '09857a81d65ec5ee2789a167dd3393d20364b071'
 
 gem 'restforce'
 
