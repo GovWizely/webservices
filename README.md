@@ -17,7 +17,7 @@ The Webservices project lets you take pretty much any structured data set and tu
 
 ### Ruby
 
-You'll need [Ruby 2.2](http://www.ruby-lang.org/en/downloads/).
+You'll need [Ruby 2.3](http://www.ruby-lang.org/en/downloads/).
 
 ### Gems
 
@@ -34,7 +34,7 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.2.2) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.6.3) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
