@@ -5,6 +5,18 @@ class ItaTaxonomyData
   include Importable
   include VersionableResource
 
+  LOOKUP_MAPPINGS = {
+        "Cape Verde" => "Verde",
+        "Pitcairn Islands" => "Pitcairn",
+        "South Korea" => "Korea (Republic of)",
+        "Guinea Bissau" => "Guinea-Bissau",
+        "North Korea" => "Korea (Democratic People's Republic of)",
+        "British Virgin Islands" => "Virgin Islands (British)",
+        "United States" => "United States of America"
+      }
+  PARTIAL_MATCH_URL = "https://restcountries.eu/rest/v2/name/%s"
+  FULL_MATCH_URL = PARTIAL_MATCH_URL + "?fullText=true"
+
   def initialize(resource = nil, pre_loaded_terms = nil)
     resource = Rails.configuration.protege_url if resource.nil?
     @taxonomy_parser = TaxonomyParser.new(resource, pre_loaded_terms)
@@ -35,6 +47,34 @@ class ItaTaxonomyData
     entry[:type] = @taxonomy_parser.get_high_level_type(entry[:label])
     process_ids(entry)
     entry[:related_terms] = entry[:type].include?('Countries') ? add_geo_fields([entry[:label]]) : {}
+    process_country_fields(entry) if is_country_entry?(entry)
+  end
+
+  def process_country_fields(entry)
+    name = LOOKUP_MAPPINGS.key?(entry[:label]) ? LOOKUP_MAPPINGS[entry[:label]] : entry[:label]
+    response = country_lookup(FULL_MATCH_URL % URI.escape(name))
+    response = country_lookup(PARTIAL_MATCH_URL % URI.escape(name)) if !response
+    add_country_fields(entry, response) if response
+  end
+
+  def add_country_fields(entry, response)
+    entry[:annotations][:iso_alpha_2] = response.first['alpha2Code']
+    entry[:annotations][:iso_alpha_3] = response.first['alpha3Code']
+    entry[:annotations][:iso_numeric] = response.first['numericCode'].to_i
+    entry[:annotations][:iso_short_name] = response.first['name']
+  end
+
+  def is_country_entry?(entry)
+    entry[:type].include?('Countries') && !entry[:sub_class_of].include?({id: "RC4HD9CwKjvgX8dSybAp3Sk", label: 'United States'})
+  end
+
+  def country_lookup(url)
+    response = nil
+    begin
+        response = JSON.parse(open(url).read)
+    rescue OpenURI::HTTPError => e 
+    end
+    return response
   end
 
   def process_ids(entry)

@@ -3,7 +3,9 @@ require 'spec_helper'
 describe ItaTaxonomy, type: :model do
   before(:all) do
     ItaTaxonomy.recreate_index
-    ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+    VCR.use_cassette('importers/ita_taxonomy.yml', record: :once) do 
+      ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+    end
   end
 
   let(:expected_results) { YAML.load_file("#{Rails.root}/spec/models/ita_taxonomy/related_term_results.yaml") }
@@ -20,7 +22,7 @@ describe ItaTaxonomy, type: :model do
       it 'returns the correct result' do
         results = ItaTaxonomy.search_related_terms(q: 'tech in china', types: 'countries')
         expect(results.count).to eq(1)
-        expect(results).to include(expected_results[0])
+        expect(results).to include(expected_results[7])
       end
     end
 
@@ -29,7 +31,7 @@ describe ItaTaxonomy, type: :model do
         it 'returns the correct result first' do
           results = ItaTaxonomy.search_related_terms(q: 'Asia', types: 'world regions')
           expect(results.count).to eq(3)
-          expect(results[0]).to eq(expected_results[5])
+          expect(results[0]).to eq(expected_results[2])
         end
       end
 
@@ -37,7 +39,7 @@ describe ItaTaxonomy, type: :model do
         it 'returns the correct result first' do
           results = ItaTaxonomy.search_related_terms(q: 'East Asia', types: 'world regions')
           expect(results.count).to eq(3)
-          expect(results[0]).to eq(expected_results[6])
+          expect(results[0]).to eq(expected_results[10])
         end
       end
     end

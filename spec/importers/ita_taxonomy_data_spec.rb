@@ -1,6 +1,6 @@
 require 'spec_helper'
 
-describe ItaTaxonomyData do
+describe ItaTaxonomyData, vcr: { cassette_name: 'importers/ita_taxonomy.yml', record: :once } do
   before { ItaTaxonomy.recreate_index }
   let(:fixtures_dir) { "#{Rails.root}/spec/fixtures/ita_taxonomies/" }
   let(:resource) { "#{fixtures_dir}/test_data.zip" }

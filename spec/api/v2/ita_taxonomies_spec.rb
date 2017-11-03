@@ -5,7 +5,9 @@ describe 'Ita Taxonomy API V2', type: :request do
 
   before(:all) do
     ItaTaxonomy.recreate_index
-    ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+    VCR.use_cassette('importers/ita_taxonomy.yml', record: :once) do 
+      ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+    end
   end
 
   let(:search_path) { '/v2/ita_taxonomies/search' }
@@ -20,7 +22,7 @@ describe 'Ita Taxonomy API V2', type: :request do
 
       it 'returns ita taxonomies terms' do
         json_response = JSON.parse(response.body, symbolize_names: true)
-        expect(json_response[:total]).to eq(20)
+        expect(json_response[:total]).to eq(21)
         results = json_response[:results]
         expect(results).to match_array expected_results
       end
@@ -38,7 +40,7 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(1)
 
         results = json_response[:results]
-        expect(results).to include(expected_results[7])
+        expect(results).to include(expected_results[8])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end
@@ -55,8 +57,8 @@ describe 'Ita Taxonomy API V2', type: :request do
         expect(json_response[:total]).to eq(2)
 
         results = json_response[:results]
-        expect(results).to include(expected_results[6])
-        expect(results).to include(expected_results[13])
+        expect(results).to include(expected_results[7])
+        expect(results).to include(expected_results[14])
       end
       it_behaves_like "an empty result when a query doesn't match any documents"
     end

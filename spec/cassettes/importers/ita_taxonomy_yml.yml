@@ -1,0 +1,364 @@
+---
+http_interactions:
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/Verde?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 404
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:25 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '36'
+    body:
+      encoding: UTF-8
+      string: '{"status":404,"message":"Not Found"}'
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:53 GMT
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/Verde
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:26 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1069'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkNhYm8gVmVyZGUiLCJ0b3BMZXZlbERvbWFpbiI6WyIuY3Yi
+        XSwiYWxwaGEyQ29kZSI6IkNWIiwiYWxwaGEzQ29kZSI6IkNQViIsImNhbGxp
+        bmdDb2RlcyI6WyIyMzgiXSwiY2FwaXRhbCI6IlByYWlhIiwiYWx0U3BlbGxp
+        bmdzIjpbIkNWIiwiUmVwdWJsaWMgb2YgQ2FibyBWZXJkZSIsIlJlcMO6Ymxp
+        Y2EgZGUgQ2FibyBWZXJkZSJdLCJyZWdpb24iOiJBZnJpY2EiLCJzdWJyZWdp
+        b24iOiJXZXN0ZXJuIEFmcmljYSIsInBvcHVsYXRpb24iOjUzMTIzOSwibGF0
+        bG5nIjpbMTYuMCwtMjQuMF0sImRlbW9ueW0iOiJDYXBlIFZlcmRpYW4iLCJh
+        cmVhIjo0MDMzLjAsImdpbmkiOjUwLjUsInRpbWV6b25lcyI6WyJVVEMtMDE6
+        MDAiXSwiYm9yZGVycyI6W10sIm5hdGl2ZU5hbWUiOiJDYWJvIFZlcmRlIiwi
+        bnVtZXJpY0NvZGUiOiIxMzIiLCJjdXJyZW5jaWVzIjpbeyJjb2RlIjoiQ1ZF
+        IiwibmFtZSI6IkNhcGUgVmVyZGVhbiBlc2N1ZG8iLCJzeW1ib2wiOiJFc2Mi
+        fV0sImxhbmd1YWdlcyI6W3siaXNvNjM5XzEiOiJwdCIsImlzbzYzOV8yIjoi
+        cG9yIiwibmFtZSI6IlBvcnR1Z3Vlc2UiLCJuYXRpdmVOYW1lIjoiUG9ydHVn
+        dcOqcyJ9XSwidHJhbnNsYXRpb25zIjp7ImRlIjoiS2FwIFZlcmRlIiwiZXMi
+        OiJDYWJvIFZlcmRlIiwiZnIiOiJDYXAgVmVydCIsImphIjoi44Kr44O844Oc
+        44OZ44Or44OHIiwiaXQiOiJDYXBvIFZlcmRlIiwiYnIiOiJDYWJvIFZlcmRl
+        IiwicHQiOiJDYWJvIFZlcmRlIiwibmwiOiJLYWFwdmVyZGnDqyIsImhyIjoi
+        WmVsZW5vcnRza2EgUmVwdWJsaWthIiwiZmEiOiLaqduM2b4g2YjYsdivIn0s
+        ImZsYWciOiJodHRwczovL3Jlc3Rjb3VudHJpZXMuZXUvZGF0YS9jcHYuc3Zn
+        IiwicmVnaW9uYWxCbG9jcyI6W3siYWNyb255bSI6IkFVIiwibmFtZSI6IkFm
+        cmljYW4gVW5pb24iLCJvdGhlckFjcm9ueW1zIjpbXSwib3RoZXJOYW1lcyI6
+        WyLYp9mE2KfYqtit2KfYryDYp9mE2KPZgdix2YrZgtmKIiwiVW5pb24gYWZy
+        aWNhaW5lIiwiVW5pw6NvIEFmcmljYW5hIiwiVW5pw7NuIEFmcmljYW5hIiwi
+        VW1vamEgd2EgQWZyaWthIl19XSwiY2lvYyI6IkNQViJ9XQ==
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:54 GMT
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/China?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:26 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '968'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkNoaW5hIiwidG9wTGV2ZWxEb21haW4iOlsiLmNuIl0sImFs
+        cGhhMkNvZGUiOiJDTiIsImFscGhhM0NvZGUiOiJDSE4iLCJjYWxsaW5nQ29k
+        ZXMiOlsiODYiXSwiY2FwaXRhbCI6IkJlaWppbmciLCJhbHRTcGVsbGluZ3Mi
+        OlsiQ04iLCJaaMWNbmdndcOzIiwiWmhvbmdndW8iLCJaaG9uZ2h1YSIsIlBl
+        b3BsZSdzIFJlcHVibGljIG9mIENoaW5hIiwi5Lit5Y2O5Lq65rCR5YWx5ZKM
+        5Zu9IiwiWmjFjW5naHXDoSBSw6lubcOtbiBHw7JuZ2jDqWd1w7MiXSwicmVn
+        aW9uIjoiQXNpYSIsInN1YnJlZ2lvbiI6IkVhc3Rlcm4gQXNpYSIsInBvcHVs
+        YXRpb24iOjEzNzc0MjIxNjYsImxhdGxuZyI6WzM1LjAsMTA1LjBdLCJkZW1v
+        bnltIjoiQ2hpbmVzZSIsImFyZWEiOjk2NDAwMTEuMCwiZ2luaSI6NDcuMCwi
+        dGltZXpvbmVzIjpbIlVUQyswODowMCJdLCJib3JkZXJzIjpbIkFGRyIsIkJU
+        TiIsIk1NUiIsIkhLRyIsIklORCIsIktBWiIsIlBSSyIsIktHWiIsIkxBTyIs
+        Ik1BQyIsIk1ORyIsIlBBSyIsIlJVUyIsIlRKSyIsIlZOTSJdLCJuYXRpdmVO
+        YW1lIjoi5Lit5Zu9IiwibnVtZXJpY0NvZGUiOiIxNTYiLCJjdXJyZW5jaWVz
+        IjpbeyJjb2RlIjoiQ05ZIiwibmFtZSI6IkNoaW5lc2UgeXVhbiIsInN5bWJv
+        bCI6IsKlIn1dLCJsYW5ndWFnZXMiOlt7ImlzbzYzOV8xIjoiemgiLCJpc282
+        MzlfMiI6InpobyIsIm5hbWUiOiJDaGluZXNlIiwibmF0aXZlTmFtZSI6IuS4
+        reaWhyAoWmjFjW5nd8OpbikifV0sInRyYW5zbGF0aW9ucyI6eyJkZSI6IkNo
+        aW5hIiwiZXMiOiJDaGluYSIsImZyIjoiQ2hpbmUiLCJqYSI6IuS4reWbvSIs
+        Iml0IjoiQ2luYSIsImJyIjoiQ2hpbmEiLCJwdCI6IkNoaW5hIiwibmwiOiJD
+        aGluYSIsImhyIjoiS2luYSIsImZhIjoi2obbjNmGIn0sImZsYWciOiJodHRw
+        czovL3Jlc3Rjb3VudHJpZXMuZXUvZGF0YS9jaG4uc3ZnIiwicmVnaW9uYWxC
+        bG9jcyI6W10sImNpb2MiOiJDSE4ifV0=
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:54 GMT
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/Afghanistan?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:27 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1148'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkFmZ2hhbmlzdGFuIiwidG9wTGV2ZWxEb21haW4iOlsiLmFm
+        Il0sImFscGhhMkNvZGUiOiJBRiIsImFscGhhM0NvZGUiOiJBRkciLCJjYWxs
+        aW5nQ29kZXMiOlsiOTMiXSwiY2FwaXRhbCI6IkthYnVsIiwiYWx0U3BlbGxp
+        bmdzIjpbIkFGIiwiQWbEocSBbmlzdMSBbiJdLCJyZWdpb24iOiJBc2lhIiwi
+        c3VicmVnaW9uIjoiU291dGhlcm4gQXNpYSIsInBvcHVsYXRpb24iOjI3NjU3
+        MTQ1LCJsYXRsbmciOlszMy4wLDY1LjBdLCJkZW1vbnltIjoiQWZnaGFuIiwi
+        YXJlYSI6NjUyMjMwLjAsImdpbmkiOjI3LjgsInRpbWV6b25lcyI6WyJVVEMr
+        MDQ6MzAiXSwiYm9yZGVycyI6WyJJUk4iLCJQQUsiLCJUS00iLCJVWkIiLCJU
+        SksiLCJDSE4iXSwibmF0aXZlTmFtZSI6Itin2YHYutin2YbYs9iq2KfZhiIs
+        Im51bWVyaWNDb2RlIjoiMDA0IiwiY3VycmVuY2llcyI6W3siY29kZSI6IkFG
+        TiIsIm5hbWUiOiJBZmdoYW4gYWZnaGFuaSIsInN5bWJvbCI6ItiLIn1dLCJs
+        YW5ndWFnZXMiOlt7ImlzbzYzOV8xIjoicHMiLCJpc282MzlfMiI6InB1cyIs
+        Im5hbWUiOiJQYXNodG8iLCJuYXRpdmVOYW1lIjoi2b7amtiq2YgifSx7Imlz
+        bzYzOV8xIjoidXoiLCJpc282MzlfMiI6InV6YiIsIm5hbWUiOiJVemJlayIs
+        Im5hdGl2ZU5hbWUiOiJPyrt6YmVrIn0seyJpc282MzlfMSI6InRrIiwiaXNv
+        NjM5XzIiOiJ0dWsiLCJuYW1lIjoiVHVya21lbiIsIm5hdGl2ZU5hbWUiOiJU
+        w7xya21lbiJ9XSwidHJhbnNsYXRpb25zIjp7ImRlIjoiQWZnaGFuaXN0YW4i
+        LCJlcyI6IkFmZ2FuaXN0w6FuIiwiZnIiOiJBZmdoYW5pc3RhbiIsImphIjoi
+        44Ki44OV44Ks44OL44K544K/44OzIiwiaXQiOiJBZmdoYW5pc3RhbiIsImJy
+        IjoiQWZlZ2FuaXN0w6NvIiwicHQiOiJBZmVnYW5pc3TDo28iLCJubCI6IkFm
+        Z2hhbmlzdGFuIiwiaHIiOiJBZmdhbmlzdGFuIiwiZmEiOiLYp9mB2LrYp9mG
+        2LPYqtin2YYifSwiZmxhZyI6Imh0dHBzOi8vcmVzdGNvdW50cmllcy5ldS9k
+        YXRhL2FmZy5zdmciLCJyZWdpb25hbEJsb2NzIjpbeyJhY3JvbnltIjoiU0FB
+        UkMiLCJuYW1lIjoiU291dGggQXNpYW4gQXNzb2NpYXRpb24gZm9yIFJlZ2lv
+        bmFsIENvb3BlcmF0aW9uIiwib3RoZXJBY3JvbnltcyI6W10sIm90aGVyTmFt
+        ZXMiOltdfV0sImNpb2MiOiJBRkcifV0=
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:55 GMT
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/United%20States%20of%20America?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:27 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1303'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IlVuaXRlZCBTdGF0ZXMgb2YgQW1lcmljYSIsInRvcExldmVs
+        RG9tYWluIjpbIi51cyJdLCJhbHBoYTJDb2RlIjoiVVMiLCJhbHBoYTNDb2Rl
+        IjoiVVNBIiwiY2FsbGluZ0NvZGVzIjpbIjEiXSwiY2FwaXRhbCI6Ildhc2hp
+        bmd0b24sIEQuQy4iLCJhbHRTcGVsbGluZ3MiOlsiVVMiLCJVU0EiLCJVbml0
+        ZWQgU3RhdGVzIG9mIEFtZXJpY2EiXSwicmVnaW9uIjoiQW1lcmljYXMiLCJz
+        dWJyZWdpb24iOiJOb3J0aGVybiBBbWVyaWNhIiwicG9wdWxhdGlvbiI6MzIz
+        OTQ3MDAwLCJsYXRsbmciOlszOC4wLC05Ny4wXSwiZGVtb255bSI6IkFtZXJp
+        Y2FuIiwiYXJlYSI6OTYyOTA5MS4wLCJnaW5pIjo0OC4wLCJ0aW1lem9uZXMi
+        OlsiVVRDLTEyOjAwIiwiVVRDLTExOjAwIiwiVVRDLTEwOjAwIiwiVVRDLTA5
+        OjAwIiwiVVRDLTA4OjAwIiwiVVRDLTA3OjAwIiwiVVRDLTA2OjAwIiwiVVRD
+        LTA1OjAwIiwiVVRDLTA0OjAwIiwiVVRDKzEwOjAwIiwiVVRDKzEyOjAwIl0s
+        ImJvcmRlcnMiOlsiQ0FOIiwiTUVYIl0sIm5hdGl2ZU5hbWUiOiJVbml0ZWQg
+        U3RhdGVzIiwibnVtZXJpY0NvZGUiOiI4NDAiLCJjdXJyZW5jaWVzIjpbeyJj
+        b2RlIjoiVVNEIiwibmFtZSI6IlVuaXRlZCBTdGF0ZXMgZG9sbGFyIiwic3lt
+        Ym9sIjoiJCJ9XSwibGFuZ3VhZ2VzIjpbeyJpc282MzlfMSI6ImVuIiwiaXNv
+        NjM5XzIiOiJlbmciLCJuYW1lIjoiRW5nbGlzaCIsIm5hdGl2ZU5hbWUiOiJF
+        bmdsaXNoIn1dLCJ0cmFuc2xhdGlvbnMiOnsiZGUiOiJWZXJlaW5pZ3RlIFN0
+        YWF0ZW4gdm9uIEFtZXJpa2EiLCJlcyI6IkVzdGFkb3MgVW5pZG9zIiwiZnIi
+        OiLDiXRhdHMtVW5pcyIsImphIjoi44Ki44Oh44Oq44Kr5ZCI6KGG5Zu9Iiwi
+        aXQiOiJTdGF0aSBVbml0aSBEJ0FtZXJpY2EiLCJiciI6IkVzdGFkb3MgVW5p
+        ZG9zIiwicHQiOiJFc3RhZG9zIFVuaWRvcyIsIm5sIjoiVmVyZW5pZ2RlIFN0
+        YXRlbiIsImhyIjoiU2plZGluamVuZSBBbWVyacSNa2UgRHLFvmF2ZSIsImZh
+        Ijoi2KfbjNin2YTYp9iqINmF2KrYrdiv2Ycg2KLZhdix24zaqdinIn0sImZs
+        YWciOiJodHRwczovL3Jlc3Rjb3VudHJpZXMuZXUvZGF0YS91c2Euc3ZnIiwi
+        cmVnaW9uYWxCbG9jcyI6W3siYWNyb255bSI6Ik5BRlRBIiwibmFtZSI6Ik5v
+        cnRoIEFtZXJpY2FuIEZyZWUgVHJhZGUgQWdyZWVtZW50Iiwib3RoZXJBY3Jv
+        bnltcyI6W10sIm90aGVyTmFtZXMiOlsiVHJhdGFkbyBkZSBMaWJyZSBDb21l
+        cmNpbyBkZSBBbcOpcmljYSBkZWwgTm9ydGUiLCJBY2NvcmQgZGUgTGlicmUt
+        w6ljaGFuZ2UgTm9yZC1BbcOpcmljYWluIl19XSwiY2lvYyI6IlVTQSJ9XQ==
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:55 GMT
+- request:
+    method: get
+    uri: https://restcountries.eu/rest/v2/name/C%C3%B4te%20d'Ivoire?fullText=true
+    body:
+      encoding: US-ASCII
+      string: ''
+    headers:
+      Accept-Encoding:
+      - gzip;q=1.0,deflate;q=0.6,identity;q=0.3
+      Accept:
+      - "*/*"
+      User-Agent:
+      - Ruby
+  response:
+    status:
+      code: 200
+      message: ''
+    headers:
+      Date:
+      - Fri, 03 Nov 2017 14:47:28 GMT
+      Server:
+      - Apache/2.4.25 (Debian)
+      Access-Control-Allow-Origin:
+      - "*"
+      Access-Control-Allow-Methods:
+      - GET
+      Access-Control-Allow-Headers:
+      - Accept, X-Requested-With
+      Cache-Control:
+      - public, max-age=86400
+      Content-Type:
+      - application/json;charset=utf-8
+      Content-Length:
+      - '1156'
+    body:
+      encoding: ASCII-8BIT
+      string: !binary |-
+        W3sibmFtZSI6IkPDtHRlIGQnSXZvaXJlIiwidG9wTGV2ZWxEb21haW4iOlsi
+        LmNpIl0sImFscGhhMkNvZGUiOiJDSSIsImFscGhhM0NvZGUiOiJDSVYiLCJj
+        YWxsaW5nQ29kZXMiOlsiMjI1Il0sImNhcGl0YWwiOiJZYW1vdXNzb3Vrcm8i
+        LCJhbHRTcGVsbGluZ3MiOlsiQ0kiLCJJdm9yeSBDb2FzdCIsIlJlcHVibGlj
+        IG9mIEPDtHRlIGQnSXZvaXJlIiwiUsOpcHVibGlxdWUgZGUgQ8O0dGUgZCdJ
+        dm9pcmUiXSwicmVnaW9uIjoiQWZyaWNhIiwic3VicmVnaW9uIjoiV2VzdGVy
+        biBBZnJpY2EiLCJwb3B1bGF0aW9uIjoyMjY3MTMzMSwibGF0bG5nIjpbOC4w
+        LC01LjBdLCJkZW1vbnltIjoiSXZvcmlhbiIsImFyZWEiOjMyMjQ2My4wLCJn
+        aW5pIjo0MS41LCJ0aW1lem9uZXMiOlsiVVRDIl0sImJvcmRlcnMiOlsiQkZB
+        IiwiR0hBIiwiR0lOIiwiTEJSIiwiTUxJIl0sIm5hdGl2ZU5hbWUiOiJDw7R0
+        ZSBkJ0l2b2lyZSIsIm51bWVyaWNDb2RlIjoiMzg0IiwiY3VycmVuY2llcyI6
+        W3siY29kZSI6IlhPRiIsIm5hbWUiOiJXZXN0IEFmcmljYW4gQ0ZBIGZyYW5j
+        Iiwic3ltYm9sIjoiRnIifV0sImxhbmd1YWdlcyI6W3siaXNvNjM5XzEiOiJm
+        ciIsImlzbzYzOV8yIjoiZnJhIiwibmFtZSI6IkZyZW5jaCIsIm5hdGl2ZU5h
+        bWUiOiJmcmFuw6dhaXMifV0sInRyYW5zbGF0aW9ucyI6eyJkZSI6IkVsZmVu
+        YmVpbmvDvHN0ZSIsImVzIjoiQ29zdGEgZGUgTWFyZmlsIiwiZnIiOiJDw7R0
+        ZSBkJ0l2b2lyZSIsImphIjoi44Kz44O844OI44K444Oc44Ov44O844OrIiwi
+        aXQiOiJDb3N0YSBEJ0F2b3JpbyIsImJyIjoiQ29zdGEgZG8gTWFyZmltIiwi
+        cHQiOiJDb3N0YSBkbyBNYXJmaW0iLCJubCI6Ikl2b29ya3VzdCIsImhyIjoi
+        T2JhbGEgQmplbG9rb3N0aSIsImZhIjoi2LPYp9it2YQg2LnYp9isIn0sImZs
+        YWciOiJodHRwczovL3Jlc3Rjb3VudHJpZXMuZXUvZGF0YS9jaXYuc3ZnIiwi
+        cmVnaW9uYWxCbG9jcyI6W3siYWNyb255bSI6IkFVIiwibmFtZSI6IkFmcmlj
+        YW4gVW5pb24iLCJvdGhlckFjcm9ueW1zIjpbXSwib3RoZXJOYW1lcyI6WyLY
+        p9mE2KfYqtit2KfYryDYp9mE2KPZgdix2YrZgtmKIiwiVW5pb24gYWZyaWNh
+        aW5lIiwiVW5pw6NvIEFmcmljYW5hIiwiVW5pw7NuIEFmcmljYW5hIiwiVW1v
+        amEgd2EgQWZyaWthIl19XSwiY2lvYyI6IkNJViJ9XQ==
+    http_version: 
+  recorded_at: Fri, 03 Nov 2017 14:46:56 GMT
+recorded_with: VCR 3.0.3

@@ -4,7 +4,9 @@ describe QueryParser do
   describe '.parse' do
     before(:all) do
       ItaTaxonomy.recreate_index
-      ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+      VCR.use_cassette('importers/ita_taxonomy.yml', record: :once) do 
+        ItaTaxonomyData.new("#{Rails.root}/spec/fixtures/ita_taxonomies/test_data.zip").import
+      end
     end
 
     context 'when query contains a country name' do
