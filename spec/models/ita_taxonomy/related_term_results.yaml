@@ -1,22 +1,5 @@
 ---
-- :label: China
-  :type:
-  - Countries
-  :related_terms:
-    :trade_regions:
-    - Asia Pacific Economic Cooperation
-    :world_regions:
-    - East Asia
-    - Asia
-- :label: North America
-  :type:
-  - World Regions
-  :related_terms: {}
 - :label: Aerospace and Defense
-  :type:
-  - Industries
-  :related_terms: {}
-- :label: Aviation
   :type:
   - Industries
   :related_terms: {}
@@ -33,43 +16,64 @@
   :type:
   - World Regions
   :related_terms: {}
-- :label: East Asia
-  :type:
-  - World Regions
-  :related_terms: {}
-- :label: Central Asia
-  :type:
-  - World Regions
-  :related_terms: {}
-- :label: International Cooperation
-  :type:
-  - Topics
-  :related_terms: {}
-- :label: Regional Organizations
-  :type:
-  - Topics
-  :related_terms: {}
 - :label: Asia Pacific Economic Cooperation
   :type:
   - Trade Regions
   :related_terms: {}
-- :label: Economic Cooperation Organization
+- :label: Aviation
   :type:
-  - Trade Regions
+  - Industries
   :related_terms: {}
-- :label: United States
+- :label: Cape Verde
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions: []
+    :world_regions: []
+- :label: Central Asia
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: China
   :type:
   - Countries
   :related_terms:
     :trade_regions:
     - Asia Pacific Economic Cooperation
     :world_regions:
-    - North America
+    - East Asia
+    - Asia
+- :label: Côte d'Ivoire
+  :type:
+  - Countries
+  :related_terms:
+    :trade_regions: []
+    :world_regions: []
 - :label: Countries
   :type: []
   :related_terms: {}
+- :label: East Asia
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: Economic Cooperation Organization
+  :type:
+  - Trade Regions
+  :related_terms: {}
 - :label: Industries
   :type: []
+  :related_terms: {}
+- :label: International Cooperation
+  :type:
+  - Topics
+  :related_terms: {}
+- :label: North America
+  :type:
+  - World Regions
+  :related_terms: {}
+- :label: Regional Organizations
+  :type:
+  - Topics
   :related_terms: {}
 - :label: Sector
   :type: []
@@ -80,12 +84,14 @@
 - :label: Trade Regions
   :type: []
   :related_terms: {}
-- :label: World Regions
-  :type: []
-  :related_terms: {}
-- :label: Côte d'Ivoire
+- :label: United States
   :type:
   - Countries
   :related_terms:
-    :trade_regions: []
-    :world_regions: []
+    :trade_regions:
+    - Asia Pacific Economic Cooperation
+    :world_regions:
+    - North America
+- :label: World Regions
+  :type: []
+  :related_terms: {}

@@ -1,10 +1,13 @@
 ---
-- :annotations:
+- :id: R8CoATsjiZSLAZF4Aaz6kK6
+  :label: Aerospace and Defense
+  :type:
+  - Industries
+  :sub_class_of: []
+  :annotations:
     :source: ITA
     :alt_label: Defense Industry
     :pref_label: Aerospace and Defense
-  :sub_class_of: []
-  :label: Aerospace and Defense
   :datatype_properties: {}
   :object_properties:
     :member_of:
@@ -17,16 +20,19 @@
     - :id: R3anJjpDBXy092dEyJ0nXU
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R8CoATsjiZSLAZF4Aaz6kK6
-  :type:
-  - Industries
   :related_terms: {}
-
-- :annotations:
+- :id: RDzjXT0GYF9ecQbq6oyxewD
+  :label: Afghanistan
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
     :pref_label: Afghanistan
     :source: ISO 3166
-  :sub_class_of: []
-  :label: Afghanistan
+    :iso_alpha_2: AF
+    :iso_alpha_3: AFG
+    :iso_numeric: 4
+    :iso_short_name: Afghanistan
   :datatype_properties:
     :country_code_un_numeric3:
     - '4'
@@ -49,21 +55,20 @@
       :label: Countries
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: RDzjXT0GYF9ecQbq6oyxewD
-  :type:
-  - Countries
   :related_terms:
     :trade_regions:
     - Economic Cooperation Organization
     :world_regions:
     - Central Asia
     - Asia
-
-- :annotations:
+- :id: R91fGuW6GPOnb7XSylIPwR5
+  :label: Asia
+  :type:
+  - World Regions
+  :sub_class_of: []
+  :annotations:
     :pref_label: Asia
     :source: ITA
-  :sub_class_of: []
-  :label: Asia
   :datatype_properties: {}
   :object_properties:
     :has_related:
@@ -82,19 +87,18 @@
     - :id: RDkKRunNIRFsKUYmLHwIMyM
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R91fGuW6GPOnb7XSylIPwR5
-  :type:
-  - World Regions
   :related_terms: {}
-
-- :annotations:
-    :alt_label: APEC
-    :source: ITA
-    :pref_label: Asia Pacific Economic Cooperation
+- :id: R7YQAlNP4iXuBJLBhgPAcIO
+  :label: Asia Pacific Economic Cooperation
+  :type:
+  - Trade Regions
   :sub_class_of:
   - :id: RBb72pZnfGSZApKbgfMfARC
     :label: Regional Organizations
-  :label: Asia Pacific Economic Cooperation
+  :annotations:
+    :alt_label: APEC
+    :source: ITA
+    :pref_label: Asia Pacific Economic Cooperation
   :datatype_properties: {}
   :object_properties:
     :has_related:
@@ -131,22 +135,21 @@
     :has_broader:
     - :id: RBb72pZnfGSZApKbgfMfARC
       :label: Regional Organizations
-  :id: R7YQAlNP4iXuBJLBhgPAcIO
-  :type:
-  - Trade Regions
   :related_terms: {}
-
-- :annotations:
+- :id: RDBsKPGzqliWT5godmR5PDV
+  :label: Aviation
+  :type:
+  - Industries
+  :sub_class_of:
+  - :id: R8CoATsjiZSLAZF4Aaz6kK6
+    :label: Aerospace and Defense
+  :annotations:
     :alt_label: Aviation Industry
     :definition: The industry involved in the operation of commercial, non-military
       passenger and cargo transportation by air. The category features aviation transport
       businesses and organizations, as well as those providing supplies and services
       to this industry.
     :pref_label: Aviation
-  :sub_class_of:
-  - :id: R8CoATsjiZSLAZF4Aaz6kK6
-    :label: Aerospace and Defense
-  :label: Aviation
   :datatype_properties: {}
   :object_properties:
     :is_in_scheme:
@@ -164,18 +167,44 @@
     :has_broader:
     - :id: R8CoATsjiZSLAZF4Aaz6kK6
       :label: Aerospace and Defense
-  :id: RDBsKPGzqliWT5godmR5PDV
-  :type:
-  - Industries
   :related_terms: {}
-
-- :annotations:
-    :pref_label: Central Asia
-    :source: ITA
+- :id: R5cLr1RomklAFGRkvK3Bh8
+  :label: Cape Verde
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
+    :pref_label: Cape Verde
+    :source: ISO 3166
+    :iso_alpha_2: CV
+    :iso_alpha_3: CPV
+    :iso_numeric: 132
+    :iso_short_name: Cabo Verde
+  :datatype_properties: {}
+  :object_properties:
+    :member_of:
+    - :id: R8W91u35GBegWcXXFflYE4
+      :label: Countries
+    :has_broader:
+    - :id: R8DdIMDFzHvwLDKQu30RRmN
+    - :id: R7q9jrGbpXPRPccAu33iNNU
+    :is_top_concept_in_scheme:
+    - :id: RC7BwiZbq5uJvqujC7p9NAy
+    :has_related:
+    - :id: RBYST5TkMsG3aOT9QMbCYFF
+  :related_terms:
+    :trade_regions: []
+    :world_regions: []
+- :id: R9pQ9NO7LyXj7vL7WbTAVVA
+  :label: Central Asia
+  :type:
+  - World Regions
   :sub_class_of:
   - :id: R91fGuW6GPOnb7XSylIPwR5
     :label: Asia
-  :label: Central Asia
+  :annotations:
+    :pref_label: Central Asia
+    :source: ITA
   :datatype_properties: {}
   :object_properties:
     :has_related:
@@ -198,16 +227,19 @@
       :label: Asia
     :is_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R9pQ9NO7LyXj7vL7WbTAVVA
-  :type:
-  - World Regions
   :related_terms: {}
-
-- :annotations:
+- :id: RCFeONxXFzHO4GMg16HylOc
+  :label: China
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
     :source: ISO 3166
     :pref_label: China
-  :sub_class_of: []
-  :label: China
+    :iso_alpha_2: CN
+    :iso_alpha_3: CHN
+    :iso_numeric: 156
+    :iso_short_name: China
   :datatype_properties: {}
   :object_properties:
     :has_related:
@@ -227,22 +259,25 @@
       :label: Countries
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: RCFeONxXFzHO4GMg16HylOc
-  :type:
-  - Countries
   :related_terms:
     :trade_regions:
     - Asia Pacific Economic Cooperation
     :world_regions:
     - East Asia
     - Asia
-
-- :annotations:
+- :id: R72Vq8tvj233V96ZX6FnbkI
+  :label: Côte d'Ivoire
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
     :alt_label: Cote d'Ivoire
     :source: ISO 3166
     :pref_label: Côte d'Ivoire
-  :sub_class_of: []
-  :label: Côte d'Ivoire
+    :iso_alpha_2: CI
+    :iso_alpha_3: CIV
+    :iso_numeric: 384
+    :iso_short_name: Côte d'Ivoire
   :datatype_properties: {}
   :object_properties:
     :has_broader:
@@ -256,33 +291,31 @@
       :label: Countries
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R72Vq8tvj233V96ZX6FnbkI
-  :type:
-  - Countries
   :related_terms:
     :trade_regions: []
     :world_regions: []
-
-- :annotations:
+- :id: R8W91u35GBegWcXXFflYE4
+  :label: Countries
+  :type: []
+  :sub_class_of: []
+  :annotations:
     :comment: The International Standards Organization (ISO) maintains a list of country
       codes since 1974. Other standards bodies have adopted the ISO 3166 code list.
     :source: ISO 3166
     :pref_label: Countries
-  :sub_class_of: []
-  :label: Countries
   :datatype_properties: {}
   :object_properties: {}
-  :id: R8W91u35GBegWcXXFflYE4
-  :type: []
   :related_terms: {}
-
-- :annotations:
-    :source: ITA
-    :pref_label: East Asia
+- :id: RDAklO0LFVtjIoIUYj4Dg4M
+  :label: East Asia
+  :type:
+  - World Regions
   :sub_class_of:
   - :id: R91fGuW6GPOnb7XSylIPwR5
     :label: Asia
-  :label: East Asia
+  :annotations:
+    :source: ITA
+    :pref_label: East Asia
   :datatype_properties: {}
   :object_properties:
     :has_narrower:
@@ -303,19 +336,18 @@
       :label: Asia
     :is_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: RDAklO0LFVtjIoIUYj4Dg4M
-  :type:
-  - World Regions
   :related_terms: {}
-
-- :annotations:
-    :pref_label: Economic Cooperation Organization
-    :source: UNCTAD/WTO
-    :alt_label: ECO
+- :id: RDrX1xLUDh7oA05RQ3JXshC
+  :label: Economic Cooperation Organization
+  :type:
+  - Trade Regions
   :sub_class_of:
   - :id: RBb72pZnfGSZApKbgfMfARC
     :label: Regional Organizations
-  :label: Economic Cooperation Organization
+  :annotations:
+    :pref_label: Economic Cooperation Organization
+    :source: UNCTAD/WTO
+    :alt_label: ECO
   :datatype_properties: {}
   :object_properties:
     :has_related:
@@ -341,29 +373,27 @@
     :has_broader:
     - :id: RBb72pZnfGSZApKbgfMfARC
       :label: Regional Organizations
-  :id: RDrX1xLUDh7oA05RQ3JXshC
-  :type:
-  - Trade Regions
   :related_terms: {}
-
-- :annotations:
+- :id: R79uIjoQaQ9KzvJfyB1H7Ru
+  :label: Industries
+  :type: []
+  :sub_class_of: []
+  :annotations:
     :source: ITA
     :pref_label: Industries
-  :sub_class_of: []
-  :label: Industries
   :datatype_properties: {}
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R79uIjoQaQ9KzvJfyB1H7Ru
-  :type: []
   :related_terms: {}
-
-- :annotations:
+- :id: RBUhToH9SFoFVriuHfHzcvT
+  :label: International Cooperation
+  :type:
+  - Topics
+  :sub_class_of: []
+  :annotations:
     :pref_label: International Cooperation
     :alt_label: International Relations
-  :sub_class_of: []
-  :label: International Cooperation
   :datatype_properties: {}
   :object_properties:
     :has_narrower:
@@ -391,15 +421,14 @@
       :label: Topics
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: RBUhToH9SFoFVriuHfHzcvT
-  :type:
-  - Topics
   :related_terms: {}
-
-- :annotations:
-    :pref_label: North America
-  :sub_class_of: []
+- :id: RKn0x8BGb8udkb77NaE1ch
   :label: North America
+  :type:
+  - World Regions
+  :sub_class_of: []
+  :annotations:
+    :pref_label: North America
   :datatype_properties: {}
   :object_properties:
     :is_top_concept_in_scheme:
@@ -415,21 +444,20 @@
     - :id: RBTBNP5i0kFGFdhQ82AFali
     - :id: RC4HD9CwKjvgX8dSybAp3Sk
       :label: United States
-  :id: RKn0x8BGb8udkb77NaE1ch
-  :type:
-  - World Regions
   :related_terms: {}
-
-- :annotations:
+- :id: RBb72pZnfGSZApKbgfMfARC
+  :label: Regional Organizations
+  :type:
+  - Topics
+  :sub_class_of:
+  - :id: RBUhToH9SFoFVriuHfHzcvT
+    :label: International Cooperation
+  :annotations:
     :source: UNCTAD/WTO
     :definition: An organization, the members of which are nations in the same geographical
       region of the world; or a group of countries undergoing economic integration
       according to international treaties.
     :pref_label: Regional Organizations
-  :sub_class_of:
-  - :id: RBUhToH9SFoFVriuHfHzcvT
-    :label: International Cooperation
-  :label: Regional Organizations
   :datatype_properties: {}
   :object_properties:
     :has_narrower:
@@ -453,58 +481,58 @@
     :has_broader:
     - :id: RBUhToH9SFoFVriuHfHzcvT
       :label: International Cooperation
-  :id: RBb72pZnfGSZApKbgfMfARC
-  :type:
-  - Topics
   :related_terms: {}
-
-- :annotations:
-    :pref_label: Sector
-    :alt_label: Industry Sector
-    :source: ITA
+- :id: RwdbpCsGlOI2iwaG4UqDl0
+  :label: Sector
+  :type: []
   :sub_class_of:
   - :id: R79uIjoQaQ9KzvJfyB1H7Ru
     :label: Industries
-  :label: Sector
+  :annotations:
+    :pref_label: Sector
+    :alt_label: Industry Sector
+    :source: ITA
   :datatype_properties: {}
   :object_properties: {}
-  :id: RwdbpCsGlOI2iwaG4UqDl0
-  :type: []
   :related_terms: {}
-
-- :annotations:
+- :id: RBBed4Voz7iS3nUECA3yzNM
+  :label: Topics
+  :type: []
+  :sub_class_of: []
+  :annotations:
     :source: UNCTAD/WTO
     :pref_label: Topics
-  :sub_class_of: []
-  :label: Topics
   :datatype_properties: {}
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: RBBed4Voz7iS3nUECA3yzNM
-  :type: []
   :related_terms: {}
-
-- :annotations:
+- :id: R7ySyiNxcfeZ6bfNjhocNun
+  :label: Trade Regions
+  :type: []
+  :sub_class_of: []
+  :annotations:
     :alt_label: Economic Groupings
     :pref_label: Trade Regions
     :comment: Trade regions as defined by the International Trade Administration
-  :sub_class_of: []
-  :label: Trade Regions
   :datatype_properties: {}
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R7ySyiNxcfeZ6bfNjhocNun
-  :type: []
   :related_terms: {}
-
-- :annotations:
+- :id: RC4HD9CwKjvgX8dSybAp3Sk
+  :label: United States
+  :type:
+  - Countries
+  :sub_class_of: []
+  :annotations:
     :source: ISO 3166
     :alt_label: US
     :pref_label: United States
-  :sub_class_of: []
-  :label: United States
+    :iso_alpha_2: US
+    :iso_alpha_3: USA
+    :iso_numeric: 840
+    :iso_short_name: United States of America
   :datatype_properties: {}
   :object_properties:
     :has_narrower:
@@ -602,24 +630,20 @@
     :member_of:
     - :id: R8W91u35GBegWcXXFflYE4
       :label: Countries
-  :id: RC4HD9CwKjvgX8dSybAp3Sk
-  :type:
-  - Countries
   :related_terms:
     :trade_regions:
     - Asia Pacific Economic Cooperation
     :world_regions:
     - North America
-
-- :annotations:
+- :id: R8cndKa2D8NuNg7djwJcXxB
+  :label: World Regions
+  :type: []
+  :sub_class_of: []
+  :annotations:
     :source: ITA
     :pref_label: World Regions
-  :sub_class_of: []
-  :label: World Regions
   :datatype_properties: {}
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :id: R8cndKa2D8NuNg7djwJcXxB
-  :type: []
   :related_terms: {}
