@@ -21,8 +21,8 @@ module ScreeningList
     ENDPOINT = "#{Rails.root}/data/screening_lists/dtc/itar_debarred_party_list_01242018.csv"
 
     def import
-      @source_information_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_intro.html', model_class)
-      @source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar.html', model_class)
+      @source_information_url = UrlMapper.get_bitly_url('https://www.pmddtc.state.gov/?id=ddtc_kb_article_page&sys_id=c22d1833dbb8d300d0a370131f9619f0', model_class)
+      @source_list_url = UrlMapper.get_bitly_url('https://www.pmddtc.state.gov/?id=ddtc_kb_article_page&sys_id=7188dac6db3cd30044f9ff621f961914', model_class)
       @admin_source_list_url = UrlMapper.get_bitly_url('http://www.pmddtc.state.gov/compliance/debar_admin.html', model_class)
 
       rows = CSV.parse(loaded_resource, headers: true, header_converters: :symbol, encoding: 'UTF-8')

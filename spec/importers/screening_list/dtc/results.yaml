@@ -5,32 +5,32 @@
   :source: &1
     :full_name: ITAR Debarred (DTC) - State Department
     :code: DTC
-  :source_information_url: http://1.usa.gov/1Qi3I0b
+  :source_information_url: http://bit.ly/2KpFtRn
   :name_idx: 'Juwhan Yun'
   :name_rev: 'Yun Juwhan'
   :name_no_ws: 'JuwhanYun'
   :name_no_ws_rev: 'YunJuwhan'
-  :source_list_url: http://1.usa.gov/1Qi3Igw
+  :source_list_url: http://bit.ly/2IxEvAM
   :id: '05637b9de1618993cc842d89d412ae6083449e3f'
 - :name: Dilligas Trading Co., Inc.
   :alt_names: []
   :federal_register_notice: 57 FR 37184
   :source: *1
-  :source_information_url: http://1.usa.gov/1Qi3I0b
+  :source_information_url: http://bit.ly/2KpFtRn
   :name_idx: Dilligas Trading
   :name_no_ws_with_common: DilligasTradingCoInc
   :name_no_ws_rev_with_common: IncCoTradingDilligas
   :name_rev: Trading Dilligas
   :name_no_ws: DilligasTrading
   :name_no_ws_rev: TradingDilligas
-  :source_list_url: http://1.usa.gov/1Qi3Igw
+  :source_list_url: http://bit.ly/2IxEvAM
   :id: '14877aca69e9a858ac9316eafeb8fdca941f8fd0'
 - :name: Brian Joseph Fleming
   :alt_names:
   - Brian Joseph McSulla
   :federal_register_notice: 58 FR 6835
   :source: *1
-  :source_information_url: http://1.usa.gov/1Qi3I0b
+  :source_information_url: http://bit.ly/2KpFtRn
   :name_idx: 'Brian Joseph Fleming'
   :name_rev: 'Fleming Joseph Brian'
   :name_no_ws: 'BrianJosephFleming'
@@ -39,7 +39,7 @@
   :alt_rev: ['McSulla Joseph Brian']
   :alt_no_ws: ['BrianJosephMcSulla']
   :alt_no_ws_rev: ['McSullaJosephBrian']
-  :source_list_url: http://1.usa.gov/1Qi3Igw
+  :source_list_url: http://bit.ly/2IxEvAM
   :id: 'd31933e64deaa8b6f74d2470c1868abb84e34b16'
 - :name: Bajro Hukic
   :alt_names:
@@ -47,7 +47,7 @@
   - Bab Hucici
   :federal_register_notice: 59 FR 44451
   :source: *1
-  :source_information_url: http://1.usa.gov/1Qi3I0b
+  :source_information_url: http://bit.ly/2KpFtRn
   :name_idx: 'Bajro Hukic'
   :name_rev: 'Hukic Bajro'
   :name_no_ws: 'BajroHukic'
@@ -56,5 +56,5 @@
   :alt_rev: ['Hukic Bob','Hucici Bab']
   :alt_no_ws: ['BobHukic','BabHucici']
   :alt_no_ws_rev: ['HukicBob','HuciciBab']
-  :source_list_url: http://1.usa.gov/1Qi3Igw
+  :source_list_url: http://bit.ly/2IxEvAM
   :id: '47138e5f361e31c71d3e0f39be10ac3edef20b23'
