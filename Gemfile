@@ -48,7 +48,7 @@ group :development do
   gem 'capistrano'
   gem 'better_errors'
   gem 'binding_of_caller'
-  gem 'rubocop', '0.39.0', require: false
+  gem 'rubocop', '~> 0.58.2', require: false
 end
 
 group :test do
