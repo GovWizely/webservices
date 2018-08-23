@@ -37,7 +37,7 @@ http_interactions:
         published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-05-31T17:15:09.946Z","updated_at":"2017-05-31T17:15:10.118Z","name":"Iterate
         Me","api":"nouns","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"Iterate
@@ -59,7 +59,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","s3_bucket_name":"","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -90,7 +90,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","s3_bucket_name":"","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -121,7 +121,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","s3_bucket_name":"","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -152,7 +152,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","s3_bucket_name":"","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -203,7 +203,7 @@ http_interactions:
         published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-05-31T17:15:09.946Z","updated_at":"2017-05-31T17:15:10.118Z","name":"Iterate
         Me","api":"nouns","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"Iterate
@@ -225,7 +225,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","s3_bucket_name":"","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -256,7 +256,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","s3_bucket_name":"","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -287,7 +287,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","s3_bucket_name":"","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -318,7 +318,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","s3_bucket_name":"","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -338,7 +338,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"consolidated":false,"name":"Some human readable name","api":"already_exists","description":"Some
-        human readable desc","url":"https://s3.amazonaws.com/trade-events/sba.json","version_number":"1","s3_bucket_name":"","published":true}'
+        human readable desc","url":"https://s3.amazonaws.com/trade-events/sba.json","version_number":"1","published":true}'
     headers:
       Content-Type:
       - application/json
@@ -805,7 +805,7 @@ http_interactions:
         East Levee Street\u003cbr /\u003e2nd Floor\", \"postal_code\": \"78520\"}],
         \"time_zone\": \"America/Chicago\", \"end_time\": \"11:00:00\", \"event_date\":
         \"2017-12-26 08:30:00 to 2017-12-26 11:00:00\", \"registration_website\":
-        \"\", \"start_date\": \"2017-12-26\"}]","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898Z","data_imported_at":"2017-05-31T17:15:14.898Z","s3_bucket_name":"","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        \"\", \"start_date\": \"2017-12-26\"}]","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898Z","data_imported_at":"2017-05-31T17:15:14.898Z","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -871,7 +871,7 @@ http_interactions:
         false\n  type: string\nregistration_website:\n  source: registration_website\n  description:
         Description of registration_website\n  indexed: true\n  plural: false\n  type:
         string\nstart_date:\n  source: start_date\n  description: Description of start_date\n  indexed:
-        true\n  plural: false\n  type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","s3_bucket_name":"","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        true\n  plural: false\n  type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -937,7 +937,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","s3_bucket_name":"","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -953,7 +953,7 @@ http_interactions:
         published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-05-31T17:15:09.946Z","updated_at":"2017-05-31T17:15:10.118Z","name":"Iterate
         Me","api":"nouns","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"Iterate
@@ -975,7 +975,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","s3_bucket_name":"","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1006,7 +1006,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","s3_bucket_name":"","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1037,7 +1037,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","s3_bucket_name":"","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1068,7 +1068,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","s3_bucket_name":"","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1134,7 +1134,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","s3_bucket_name":"","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1150,7 +1150,7 @@ http_interactions:
         published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-05-31T17:15:09.946Z","updated_at":"2017-05-31T17:15:10.118Z","name":"Iterate
         Me","api":"nouns","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"Iterate
@@ -1172,7 +1172,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","s3_bucket_name":"","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1203,7 +1203,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","s3_bucket_name":"","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1234,7 +1234,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","s3_bucket_name":"","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1265,7 +1265,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","s3_bucket_name":"","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1285,7 +1285,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"consolidated":false,"name":"this is a dupe","api":"already_exists","description":"should
-        reject it","url":"https://s3.amazonaws.com/trade-events/sba.json","version_number":"1","s3_bucket_name":"","published":true}'
+        reject it","url":"https://s3.amazonaws.com/trade-events/sba.json","version_number":"1","published":true}'
     headers:
       Content-Type:
       - application/json
@@ -1367,7 +1367,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","s3_bucket_name":"","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:14.898+00:00","data_imported_at":"2017-05-31T17:15:14.898+00:00","id":"already_exists:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1383,7 +1383,7 @@ http_interactions:
         published yet","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","s3_bucket_name":"","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:08.054+00:00","data_imported_at":"2017-05-31T17:15:08.054+00:00","id":"auth_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}},{"created_at":"2017-05-31T17:15:09.946Z","updated_at":"2017-05-31T17:15:10.118Z","name":"Iterate
         Me","api":"nouns","url":"https://s3.amazonaws.com/trade-events/sba.json","description":"Iterate
@@ -1405,7 +1405,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","s3_bucket_name":"","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:09.959+00:00","data_imported_at":"2017-05-31T17:15:09.959+00:00","id":"nouns:v1","newest_version":false,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1436,7 +1436,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","s3_bucket_name":"","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":2,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:10.978+00:00","data_imported_at":"2017-05-31T17:15:10.978+00:00","id":"nouns:v2","newest_version":false,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1467,7 +1467,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","s3_bucket_name":"","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":3,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:11.994+00:00","data_imported_at":"2017-05-31T17:15:11.994+00:00","id":"nouns:v3","newest_version":true,"oldest_version":false,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description
@@ -1498,7 +1498,7 @@ http_interactions:
         false\n  :type: string\n:registration_website:\n  :source: registration_website\n  :description:
         Description of registration_website\n  :indexed: true\n  :plural: false\n  :type:
         string\n:start_date:\n  :source: start_date\n  :description: Description of
-        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","s3_bucket_name":"","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
+        start_date\n  :indexed: true\n  :plural: false\n  :type: string\n","data":null,"version_number":1,"published":false,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:15:13.499+00:00","data_imported_at":"2017-05-31T17:15:13.499+00:00","id":"publishing_test:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"start_time":{"source":"start_time","description":"Description
         of start_time","indexed":true,"plural":false,"type":"enum"},"end_time":{"source":"end_time","description":"Description
         of end_time","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"body":{"source":"body","description":"Description
         of body","indexed":true,"plural":false,"type":"string"},"event_type":{"source":"event_type","description":"Description

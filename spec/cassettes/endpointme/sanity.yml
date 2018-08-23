@@ -75,7 +75,7 @@ http_interactions:
     uri: http://localhost:3000/data_sources.json
     body:
       encoding: UTF-8
-      string: '{"consolidated":false,"name":"","api":"","description":"Not gonna work","url":"","version_number":"1","s3_bucket_name":"","published":true}'
+      string: '{"consolidated":false,"name":"","api":"","description":"Not gonna work","url":"","version_number":"1","published":true}'
     headers:
       Content-Type:
       - application/json
@@ -147,7 +147,7 @@ http_interactions:
     body:
       encoding: UTF-8
       string: '{"consolidated":false,"name":"Some human readable name","api":"success_cases","description":"Some
-        human readable desc","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","version_number":"1","s3_bucket_name":"","published":true}'
+        human readable desc","url":"https://s3.amazonaws.com/search-api-static-files/screening_list/feed2.csv","version_number":"1","published":true}'
     headers:
       Content-Type:
       - application/json
@@ -183,7 +183,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184Z","data_imported_at":"2017-05-31T17:14:53.184Z","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184Z","data_imported_at":"2017-05-31T17:14:53.184Z","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -225,7 +225,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -267,7 +267,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -309,7 +309,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -324,7 +324,7 @@ http_interactions:
         human readable desc","dictionary":"---\r\ncol1:\r\n  source: col1\r\n  description:
         Description of col1\r\n  indexed: true\r\n  plural: false\r\n  type: enum\r\ncol2:\r\n  source:
         col2\r\n  description: Description of col2\r\n  indexed: true\r\n  plural:
-        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     headers:
@@ -360,7 +360,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":"col1,col2\nc,ponies are nice\nd,horses are bigger\n","version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -402,7 +402,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -444,7 +444,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -486,7 +486,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -528,7 +528,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -570,7 +570,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -612,7 +612,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -654,7 +654,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -696,7 +696,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -710,7 +710,7 @@ http_interactions:
         human readable desc","dictionary":"---\r\ncol1:\r\n  source: col1\r\n  description:
         Description of col1\r\n  indexed: true\r\n  plural: false\r\n  type: enum\r\ncol2:\r\n  source:
         col2\r\n  description: Description of col2\r\n  indexed: true\r\n  plural:
-        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        false\r\n  type: string\r\n","data":null,"version_number":"1","published":"1","consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     headers:
@@ -779,7 +779,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":null,"data_changed_at":"2017-05-31T17:14:53.184+00:00","data_imported_at":"2017-05-31T17:14:53.184+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -897,7 +897,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -939,7 +939,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 
@@ -981,7 +981,7 @@ http_interactions:
         human readable desc","dictionary":"---\n:col1:\n  :source: col1\n  :description:
         Description of col1\n  :indexed: true\n  :plural: false\n  :type: enum\n:col2:\n  :source:
         col2\n  :description: Description of col2\n  :indexed: true\n  :plural: false\n  :type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}]'
     http_version: 
@@ -1023,7 +1023,7 @@ http_interactions:
         human readable desc","dictionary":"---\ncol1:\n  source: col1\n  description:
         Description of col1\n  indexed: true\n  plural: false\n  type: enum\ncol2:\n  source:
         col2\n  description: Description of col2\n  indexed: true\n  plural: false\n  type:
-        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","s3_bucket_name":"","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
+        string\n","data":null,"version_number":1,"published":true,"consolidated":false,"message_digest":"f1d59c21827e26fc4ba6daadba6c4c3bb311e698","data_changed_at":"2017-05-31T17:14:54.301+00:00","data_imported_at":"2017-05-31T17:14:54.301+00:00","id":"success_cases:v1","newest_version":true,"oldest_version":true,"plural_filter_fields":{},"pluralized_filter_fields":{},"singular_filter_fields":{"col1":{"source":"col1","description":"Description
         of col1","indexed":true,"plural":false,"type":"enum"}},"fulltext_fields":{"col2":{"source":"col2","description":"Description
         of col2","indexed":true,"plural":false,"type":"string"}},"date_fields":{}}'
     http_version: 

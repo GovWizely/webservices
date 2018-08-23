@@ -1,7 +1,7 @@
 class DataSourcesController < ApplicationController
   before_action :authenticate_user!
   before_action :set_data_source, only: [:show, :edit, :update, :destroy, :iterate_version]
-  COMMON_PARAMS = %i(name api description url version_number consolidated s3_bucket_name)
+  COMMON_PARAMS = %i(name api description url version_number consolidated)
   MESSAGES = { created:   'Data source was successfully created. Review the dictionary and make any changes.',
                destroyed: 'Dataset was successfully destroyed.',
                set_up:    'Consolidated data source was successfully set up',
@@ -10,7 +10,7 @@ class DataSourcesController < ApplicationController
 
   def new
     @data_source = DataSource.new(version_number: 1, consolidated: params[:consolidated], name: '', api: '',
-                                  description: '', s3_bucket_name: '', url: '',)
+                                  description: '', url: '',)
   end
 
   def iterate_version
