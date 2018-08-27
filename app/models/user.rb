@@ -126,7 +126,6 @@ class User
   attribute :unlock_token, String
 
   attribute :admin, Boolean, default: false
-  attribute :approved_buckets, Object, default: []
 
   validates_presence_of :email
   validates_presence_of :password, if: proc { !persisted? }

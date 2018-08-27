@@ -13,9 +13,6 @@
 %p
   %b Version:
   = @data_source.version_number
-%p
-  %b Data Source S3 Bucket: 
-  = link_to "#{@data_source.s3_bucket_name}", "/s3_browser/buckets/#{@data_source.s3_bucket_name}", :target => "_blank"
 - if @data_source.is_consolidated?
   %p
     %b Consolidated Data Sources:

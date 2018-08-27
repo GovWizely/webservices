@@ -8,7 +8,7 @@ The Webservices project lets you take pretty much any structured data set and tu
 * understands CSV, TSV, JSON, XLS, or XML file formats
 * smart guessing of data types and schemas based on heuristics
 * versioned APIs by default
-* ingest by file upload or URL
+* ingest by URL
 * easy polling/refresh of URL-based data sources
 * simple YAML-based configuration for each data source
 * customize the ETL process via built-in transformations
@@ -34,7 +34,7 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (>= 5.6.3) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (== 5.6.3) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
@@ -79,7 +79,7 @@ Or using http headers:
 
 ### Dynamic APIs
 
-Admin users can create and administer search APIs from uploaded files or from URLs. The file formats supported 
+Admin users can create and administer search APIs from URLs. The file formats supported 
 include CSV, TSV, JSON, XLS, and XML. The initial admin user created with the `db:devseed` task has the `admin` flag 
 set to true already. To toggle an existing user, you can do this from the Rails console:
     
