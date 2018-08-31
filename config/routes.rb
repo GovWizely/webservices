@@ -75,9 +75,9 @@ Webservices::Application.routes.draw do
       get "/#{legacy_endpoint}/*id", to: 'api_models#show', version_number: 1, api: legacy_endpoint.to_sym
     end
 
-    get '/v*version_number/*api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
-    get '/v*version_number/*api/freshen(.json)', to: 'admin#freshen', constraints: ApiModelRouteConstraint.new
-    get '/v*version_number/*api/*id', to: 'api_models#show', constraints: ApiModelRouteConstraint.new
+    get '/v:version_number/:api/search(.json)', to: 'api_models#search', constraints: ApiModelRouteConstraint.new
+    get '/v:version_number/:api/freshen(.json)', to: 'admin#freshen', constraints: ApiModelRouteConstraint.new
+    get '/v:version_number/:api/:id', to: 'api_models#show', constraints: ApiModelRouteConstraint.new
   end
 
   match '404', via: :all, to: 'api#not_found'

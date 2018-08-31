@@ -30,7 +30,7 @@ class IndexMonitor
         empty_indices.push(index)
         next
       end
-      actual_last_imported = DateTime.strptime(metadata[:last_imported], '%Y-%m-%dT%H:%M:%S%z')
+      actual_last_imported = DateTime.strptime(metadata[:last_imported], '%FT%T.%L%z')
       expected_last_imported = compute_expected_last_imported(metadata[:import_rate])
 
       if actual_last_imported < expected_last_imported
