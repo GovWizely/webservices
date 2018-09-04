@@ -59,7 +59,7 @@ describe UrlMapper do
                                                       _type:   'url_mapper',
                                                       _id:     '738ddf35b3a85a7a6ba7b232bd3d5f1e4d284ad1',
                                                       _score:  1.0,
-                                                      _source: { link: 'http://bit.ly/randomid', long_url: 'http://www.google.com', title: 'Title', _updated_at: now.strftime('%FT%TZ') }, },], }
+                                                      _source: { link: 'http://bit.ly/randomid', long_url: 'http://www.google.com', title: 'Title', _updated_at: now.strftime('%FT%T.%LZ') }, },], }
       expect(UrlMapper.search_for_url('http://www.google.com')).to eq(expected)
     end
   end

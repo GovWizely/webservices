@@ -1,6 +1,6 @@
 source 'https://rubygems.org'
 
-gem 'rails', '4.0.9'
+gem 'rails', '~> 4.2.7.1'
 
 gem 'activeresource'
 gem 'aws-sdk-core', '~> 2.9' # https://github.com/aws/aws-sdk-ruby/issues/1041

@@ -1,4 +1,12 @@
 require 'active_record'
+module ActiveRecord
+  module TestFixtures
+    extend ActiveSupport::Concern
+
+    def before_setup
+    end
+  end
+end
 
 module OrmAdapter
   class Elasticsearch < Base
