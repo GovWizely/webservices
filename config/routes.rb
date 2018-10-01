@@ -22,6 +22,7 @@ Webservices::Application.routes.draw do
   end
 
   get '/data_sources_documentation' => 'data_sources#documentation'
+  get '/v:version_number/market_research_library/search(.json)' => 'deprecated#mrl'
 
   concern :api_v2_routable do
     get '/ita_faqs/:id' => 'salesforce_articles/faq#show', constraints: { id: /.+/ }, format: false
@@ -68,7 +69,6 @@ Webservices::Application.routes.draw do
       trade_events
       ita_office_locations
       ita_zipcode_to_post
-      market_research_library
     )
     apis_migrated_to_endpointme.each do |legacy_endpoint|
       get "/#{legacy_endpoint}/search(.json)", to: 'api_models#search', version_number: 1, api: legacy_endpoint.to_sym
