@@ -494,7 +494,7 @@ The Developer Portal includes [comprehensive documentation](api-list.html) for e
 
 You have a wealth of opportunities to turn ITA’s trade information into useful and valuable applications for exporters. Immediate ideas for using the trade information include:
 
-* **Country Pages:** Add ITA’s Trade Event, Trade Leads, Market Research, Consolidated Screening List data, and Trade News & Articles to pages for specific countries.
+* **Country Pages:** Add ITA’s Trade Event, Trade Leads, Market Intelligence, Consolidated Screening List data, and Trade News & Articles to pages for specific countries.
 
 * **Industry Pages:** Create a widget that aggregates event information from other trade organizations with ITA’s Trade Events for businesses in particular industries. Add a search tool for finding Tariff information for a particular industry.
 
@@ -626,8 +626,7 @@ ITA has also developed simple search apps designed to help our data customers ea
 | FAQs on Exporting API                | Includes more than 200 commonly asked questions about exporting. |
 | ITA Offices & Centers API                    | Provides contact and address information for all of ITA’s domestic and international export assistance centers. | 
 | ITA Taxonomies API              | Gives developers direct access to the exporting, trade, and investment terms that ITA uses to tag the content and data in its other APIs. |
-| Market Intelligence API              | [ERIK: STILL NEED DATA ON THIS. WHAT DOES IT DO, PLEASE?] |
-| Market Research Library API                          | Provides metadata for country and industry reports that are produced by ITA’s trade experts and are available in ITA’s online market research library. |
+| Market Intelligence API              | Provides access to all types of Market Intelligence articles. |
 | Tariff Rates API                             | Provides data about each country with whom the United States has a Free Trade Agreement (FTA). |
 | Trade Events API        | Provides data on events for U.S. businesses interested in selling their products and services overseas. |
 | Trade Leads API                         | Provides contract opportunities for U.S. businesses selling their products and services overseas. |
