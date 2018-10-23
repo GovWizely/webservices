@@ -36,7 +36,7 @@ module ScreeningList
     }
 
     def import
-      rows = CSV.parse(loaded_resource, headers: true, header_converters: [:symbol])
+      rows = CSV.parse(loaded_resource, headers: true, header_converters: [:symbol], encoding: 'UTF-8')
       ensure_expected_headers(rows.first)
       @source_list_url = 'http://www.bis.doc.gov/index.php/policy-guidance/lists-of-parties-of-concern/entity-list'
       docs = group_rows(rows).map { |id, grouped| process_grouped_rows(id, grouped) }
