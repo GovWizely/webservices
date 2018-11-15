@@ -9,26 +9,6 @@ module Indexable
   included do
     class << self
       attr_accessor :mappings, :settings, :source, :import_rate
-      def metadata_mappings
-        {
-          metadata: {
-            properties: {
-              last_imported: {
-                type: 'keyword',
-              },
-              last_updated:  {
-                type: 'keyword',
-              },
-              version:       {
-                type: 'keyword',
-              },
-              import_rate:   {
-                type: 'keyword',
-              },
-            },
-          },
-        }
-      end
     end
 
     # If the model class doesn't define the source full_name,
@@ -66,40 +46,6 @@ module Indexable
       ES.client.indices.create(
         index: index_name,
         body:  { settings: settings, mappings: mappings },)
-      initialize_metadata
-    end
-
-    def update_metadata(version, time = DateTime.now.utc)
-      _update_metadata(version: version, last_updated: time, last_imported: time)
-    end
-
-    def touch_metadata(import_time = DateTime.now.utc)
-      _update_metadata(stored_metadata.merge(last_imported: import_time))
-    end
-
-    def initialize_metadata
-      _update_metadata(EMPTY_METADATA)
-    end
-
-    def _update_metadata(body)
-      body[:import_rate] = import_rate.nil? ? '' : import_rate
-      ES.client.index(
-        index: index_name,
-        type:  'metadata',
-        id:    0,
-        body:  body,)
-      ES.client.indices.refresh index: index_name
-    end
-
-    # If any field is not present, we initialize it with those values.
-    EMPTY_METADATA = { version: '', last_updated: '', last_imported: '', import_rate: '' }
-
-    def stored_metadata
-      normalize_metadata ES.client.get(index: index_name, type: 'metadata', id: 0)['_source'].symbolize_keys
-    end
-
-    def normalize_metadata(metadata)
-      EMPTY_METADATA.merge metadata
     end
 
     def index_exists?

@@ -1,8 +1,8 @@
 module ItaTaxonomySuggestion
   def self.search_for(options)
     query = ItaTaxonomySuggestionQuery.new options
-    results = ES.client.suggest(build_search_options(query))
-    results['suggestions'].first['options'].map { |s| s['text'] }
+    results = ES.client.search(build_search_options(query))
+    results['suggest']['suggestions'].first['options'].map { |s| s['text'] }
   end
 
   module ClassMethods

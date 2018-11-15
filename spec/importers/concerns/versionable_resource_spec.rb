@@ -21,10 +21,6 @@ describe VersionableResource do
         @docs = docs
       end
 
-      def available_version
-        Digest::SHA1.hexdigest(@docs.to_yaml)
-      end
-
       def import
         model_class.index(@docs)
       end
@@ -45,52 +41,19 @@ describe VersionableResource do
   end
 
   describe '#import' do
-    it 'stores the time of import' do
-      expect(Mock.stored_metadata[:version]).to eq('')
+    it 'stores the data' do
       MockData.new([{ id: 1, content: 'foo' }]).import
-      expect(Mock.stored_metadata[:last_updated]).to_not be_nil
-      expect(Mock.stored_metadata[:last_imported]).to_not be_nil
-    end
-
-    context 'when source is unchanged' do
-      before do
-        expect(Mock.stored_metadata[:version]).to eq('')
-        MockData.new([{ id: 1, content: 'foo' }]).import
-        Mock.update_metadata(Mock.stored_metadata[:version], '2000-01-01')
-        MockData.new([{ id: 1, content: 'foo' }]).import
-      end
-      it 'updates only the time of import when source is unchanged' do
-        expect(Mock.stored_metadata[:last_updated]).to eq('2000-01-01')
-        expect(Mock.stored_metadata[:version]).to eq('29cb2c0fe72b5d841236ddf88e22371a58649717')
-        expect(Mock.stored_metadata[:last_imported]).to_not eq('2000-01-01')
-      end
-    end
-
-    context 'when source is unchanged but the importer performs Mapper lookups' do
-      before do
-        class MockDataMapper < MockData
-          CONTAINS_MAPPER_LOOKUPS = true
-          def model_class
-            Mock
-          end
-        end
-      end
-      it 're-indexes the same content anyways' do
-        expect(Mock).to receive(:index).twice
-        MockDataMapper.new([{ id: 1, content: 'foo' }]).import
-        MockDataMapper.new([{ id: 1, content: 'foo' }]).import
-      end
     end
 
     describe 'resource-versioning logic' do
-      it 're-indexes when there is a new version available' do
+      it 're-indexes different data' do
         expect(Mock).to receive(:index).twice
         MockData.new([{ id: 1, content: 'foo' }]).import
         MockData.new([{ id: 2, content: 'bar' }]).import
       end
 
-      it 'does not re-index an existing version' do
-        expect(Mock).to receive(:index).once
+      it 're-indexes identical data' do
+        expect(Mock).to receive(:index).twice
         MockData.new([{ id: 1, content: 'foo' }]).import
         MockData.new([{ id: 1, content: 'foo' }]).import
       end

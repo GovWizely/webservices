@@ -32,7 +32,6 @@ module Searchable
       hits = results['hits']
       hits[:aggregations] = results['aggregations']
       hits[:offset] = query.offset
-      hits[:sources_used] = index_meta(query.try(:sources))
       hits[:search_performed_at] = search_performed_at
       hits.deep_symbolize_keys
     end
@@ -72,7 +71,6 @@ module Searchable
 
       response = ES.client.search(search_options)
       results = { offset:              0,
-                  sources_used:        index_meta(sources),
                   search_performed_at: search_performed_at,
                   hits:                response['hits'].deep_symbolize_keys[:hits],
                   total:               response['hits']['total'], }
@@ -88,16 +86,6 @@ module Searchable
 
     def index_names(sources = nil)
       models(sources).map(&:index_name)
-    end
-
-    def index_meta(sources = nil)
-      searchable_models = models sources
-      metadatas = raw_metadatas searchable_models.map(&:index_name)
-
-      searchable_models.map do |model|
-        stored_metadata = model.normalize_metadata(metadatas[model.index_name])
-        build_model_metadata model.source, stored_metadata
-      end
     end
 
     private
@@ -138,30 +126,6 @@ module Searchable
       search_options[:search_type] = query.search_type if query.search_type
 
       search_options
-    end
-
-    def raw_metadatas(index_names)
-      query = IdsQuery.new([0])
-      search_options = {
-        index: index_names,
-        type:  'metadata',
-        body:  query.generate_search_body_hash,
-        size:  10_000, }
-
-      hits = ES.client.search(search_options)['hits']['hits']
-      results = hits.map do |metadata|
-        [metadata['_index'], metadata['_source'].symbolize_keys]
-      end
-      Hash[results]
-    end
-
-    def build_model_metadata(source, stored_metadata)
-      {
-        source:              source[:full_name] || source[:code],
-        source_last_updated: stored_metadata[:last_updated],
-        last_imported:       stored_metadata[:last_imported],
-        import_rate:         stored_metadata[:import_rate],
-      }
     end
   end
 end

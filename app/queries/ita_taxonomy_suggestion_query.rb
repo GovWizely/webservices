@@ -17,11 +17,13 @@ class ItaTaxonomySuggestionQuery
   private
 
   def generate_suggest(json)
-    json.suggestions do
-      json.text @term
-      json.completion do
-        json.field 'label_suggest'
-        json.size @size
+    json.suggest do
+      json.suggestions do
+        json.text @term
+        json.completion do
+          json.field 'label_suggest'
+          json.size @size
+        end
       end
     end
   end
