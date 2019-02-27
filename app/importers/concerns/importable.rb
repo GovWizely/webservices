@@ -23,7 +23,6 @@ module Importable
       start_time = Time.now.utc.iso8601(8) if can_purge_old?
       super
       model_class.purge_old(start_time) if can_purge_old?
-      model_class.touch_metadata
       Rails.logger.info "#{self.class.name}: import finished."
     end
   end

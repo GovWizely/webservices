@@ -59,7 +59,7 @@ class ItaTaxonomy
         type:          { type: 'text', analyzer: 'lowercase_keyword_analyzer' },
       },
     },
-  }.merge(metadata_mappings,).freeze
+  }.freeze
 
   self.source = {
     full_name: 'ITA',

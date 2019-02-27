@@ -27,10 +27,6 @@ class ItaTaxonomyData
     ItaTaxonomy.index build_json_entries
   end
 
-  def loaded_resource
-    @taxonomy_parser.raw_source
-  end
-
   private
 
   def build_json_entries

@@ -34,7 +34,7 @@ More information about the gem can be found [here](https://github.com/brianmario
 
 ### ElasticSearch
 
-We're using [ElasticSearch](http://www.elasticsearch.org/) (== 5.6.3) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
+We're using [ElasticSearch](http://www.elasticsearch.org/) (== 6.6.0) for fulltext search. On a Mac, it's easy to install with [Homebrew](http://mxcl.github.com/homebrew/).
 
     brew install elasticsearch
 
@@ -58,7 +58,8 @@ Fire up a server:
 
     bundle exec rails s thin
     
-Import some data:    
+Import some data:
+
     bundle exec rake ita:import[ScreeningList]
 
 Admin users can log in and monitor the progress of the Sidekiq import jobs via `/sidekiq`.

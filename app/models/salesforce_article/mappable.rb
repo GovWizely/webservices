@@ -32,7 +32,7 @@ module SalesforceArticle
             atom:                 { type: 'text', analyzer: 'snowball_asciifolding_nostop' },
           },
         },
-      }.merge(klass.metadata_mappings,).freeze
+      }.freeze
 
       klass.class_eval do
         class << self

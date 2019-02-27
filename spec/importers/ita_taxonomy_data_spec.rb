@@ -7,7 +7,6 @@ describe ItaTaxonomyData, vcr: { cassette_name: 'importers/ita_taxonomy.yml', re
   let(:importer) { ItaTaxonomyData.new(resource) }
 
   it_behaves_like 'an importer which can purge old documents'
-  it_behaves_like 'a versionable resource'
 
   describe '#import' do
     let(:entry_hash) { YAML.load_file("#{File.dirname(__FILE__)}/ita_taxonomy/results.yaml") }

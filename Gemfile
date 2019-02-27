@@ -5,9 +5,9 @@ gem 'rails', '~> 4.2.7.1'
 gem 'activeresource'
 gem 'aws-sdk-core', '~> 2.9' # https://github.com/aws/aws-sdk-ruby/issues/1041
 gem 'devise', '~> 3.4.0' # https://github.com/plataformatec/devise/issues/3624
-gem 'elasticsearch'
-gem 'elasticsearch-persistence'
-gem 'elasticsearch-model'
+gem 'elasticsearch', github: 'elastic/elasticsearch-ruby', branch: '5.x'
+gem 'elasticsearch-persistence', github: 'elastic/elasticsearch-rails', branch: '5.x'
+gem 'elasticsearch-model', github: 'elastic/elasticsearch-rails', branch: '5.x'
 gem 'iso_country_codes'
 gem 'jbuilder'
 gem 'nokogiri'

@@ -92,7 +92,7 @@ module ScreeningList
             entity_number:              { type: 'integer' },
           },
         },
-      }.merge(klass.metadata_mappings,).freeze
+      }.freeze
 
       klass.class_eval do
         class << self

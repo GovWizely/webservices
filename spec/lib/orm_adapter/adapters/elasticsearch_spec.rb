@@ -50,7 +50,7 @@ describe OrmAdapter::Elasticsearch do
       expect(subject.find_first(email: thing.email).id).to eq(thing.id)
     end
 
-    it "doesn't find anything when the search critera don't match an existing record" do
+    it "doesn't find anything when the search criteria don't match an existing record" do
       expect(subject.find_first(foo: :bar)).to be_nil
     end
   end

@@ -11,7 +11,7 @@ describe Importable do
             _updated_at: { type: 'date', format: 'strictDateOptionalTime' },
           },
         },
-      }.merge(metadata_mappings,).freeze
+      }.freeze
     end
 
     class MockData
@@ -152,21 +152,6 @@ describe Importable do
 
     def stored_docs
       Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
-    end
-  end
-  describe '#import' do
-    before do
-      Mock.update_metadata('', '')
-    end
-    it 'stores the last_imported time' do
-      expect do
-        MockData.new([{ id: 3, content: 'ping pong' }]).import
-      end.to change {
-        Mock.stored_metadata[:last_imported]
-      }.from('',)
-
-      last_imported_time = DateTime.parse(Mock.stored_metadata[:last_imported])
-      expect(last_imported_time.to_time).to be_within(60.seconds).of(Time.now)
     end
   end
 

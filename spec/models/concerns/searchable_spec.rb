@@ -55,38 +55,9 @@ describe Searchable do
     MockModel.index((1..1_000).map { |i| { foo: "Bar #{i}" } })
   end
 
-  before(:each) do
-    MockModel.update_metadata(9989, '2001-01-01T01:01:01Z')
-  end
-
   after(:all) do
     Object.send(:remove_const, :MockModel)
     Object.send(:remove_const, :MockModelQuery)
-  end
-
-  context 'Metadata handling' do
-    describe '#stored_metadata' do
-      subject { MockModel.stored_metadata }
-      it 'has correct fields' do
-        expect(subject.keys).to include(:version, :last_updated, :last_imported, :import_rate)
-      end
-    end
-
-    describe '#touch_metadata' do
-      subject { MockModel.stored_metadata }
-      it 'updates only the import_time field' do
-        MockModel.touch_metadata('3000-03-03T03:03:03Z')
-        expect(subject).to eq(version: 9989, last_updated: '2001-01-01T01:01:01Z', last_imported: '3000-03-03T03:03:03Z', import_rate: '')
-      end
-    end
-
-    describe '#update_metadata' do
-      subject { MockModel.stored_metadata }
-      it 'updates all fields' do
-        MockModel.update_metadata(4321, '4000-04-04T04:04:04Z')
-        expect(subject).to eq(version: 4321, last_updated: '4000-04-04T04:04:04Z', last_imported: '4000-04-04T04:04:04Z', import_rate: '')
-      end
-    end
   end
 
   describe '#fetch_all' do
@@ -107,12 +78,11 @@ describe Searchable do
     end
 
     it 'response includes metadata' do
-      expect(subject.keys).to include(:sources_used, :search_performed_at)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model', import_rate: '' }])
+      expect(subject.keys).to include(:search_performed_at)
       expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
-      expect(subject.keys).to match_array([:total, :hits, :offset, :sources_used, :search_performed_at])
+      expect(subject.keys).to match_array([:total, :hits, :offset, :search_performed_at])
     end
   end
 
@@ -120,20 +90,11 @@ describe Searchable do
     subject { MockModel.search_for({}) }
 
     it 'response includes metadata' do
-      expect(subject.keys).to include(:sources_used, :search_performed_at)
-      expect(subject[:sources_used]).to eq([{ source_last_updated: '2001-01-01T01:01:01Z', last_imported: '2001-01-01T01:01:01Z', source: 'A mocked model', import_rate: '' }])
+      expect(subject.keys).to include(:search_performed_at)
       expect(subject[:search_performed_at]).to be_within(2).of(DateTime.now.utc)
 
       # too wide test for the description
-      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :sources_used, :search_performed_at, :aggregations])
-    end
-  end
-
-  describe '#index_meta' do
-    subject { MockModel.index_meta.first }
-
-    it 'contains correct fields' do
-      expect(subject.keys).to include(:source, :source_last_updated, :last_imported, :import_rate)
+      expect(subject.keys).to match_array([:total, :max_score, :hits, :offset, :search_performed_at, :aggregations])
     end
   end
 end
