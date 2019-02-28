@@ -928,7 +928,7 @@ One such application is illustrated by the EUROVOC and the UNESCO thesaurus.  Bo
     <!-- http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM -->
 
     <owl:Class rdf:about="http://webprotege.stanford.edu/RBBed4Voz7iS3nUECA3yzNM">
-        <rdfs:label>Topics</rdfs:label>
+        <rdfs:label>Trade Topics</rdfs:label>
         <rdfs:subClassOf rdf:resource="http://purl.org/iso25964/skos-thes#ConceptGroup"/>
         <rdfs:subClassOf>
             <owl:Restriction>

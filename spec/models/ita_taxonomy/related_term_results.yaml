@@ -65,7 +65,7 @@
   :related_terms: {}
 - :label: International Cooperation
   :type:
-  - Topics
+  - Trade Topics
   :related_terms: {}
 - :label: North America
   :type:
@@ -73,12 +73,12 @@
   :related_terms: {}
 - :label: Regional Organizations
   :type:
-  - Topics
+  - Trade Topics
   :related_terms: {}
 - :label: Sector
   :type: []
   :related_terms: {}
-- :label: Topics
+- :label: Trade Topics
   :type: []
   :related_terms: {}
 - :label: Trade Regions
