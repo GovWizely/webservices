@@ -454,11 +454,11 @@
     - :id: RDHA9zT6LXQYJveXoKXYU68
     :member_of:
     - :id: RBBed4Voz7iS3nUECA3yzNM
-      :label: Topics
+      :label: Trade Topics
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
   :type:
-  - Topics
+  - Trade Topics
   :id: RBUhToH9SFoFVriuHfHzcvT
   :related_terms: {}
   :label_suggest:
@@ -524,7 +524,7 @@
     - :id: RBUhToH9SFoFVriuHfHzcvT
       :label: International Cooperation
   :type:
-  - Topics
+  - Trade Topics
   :id: RBb72pZnfGSZApKbgfMfARC
   :related_terms: {}
   :label_suggest:
@@ -547,21 +547,6 @@
     :input: Sector
     :weight: 5
 - :annotations:
-    :source: UNCTAD/WTO
-    :pref_label: Topics
-  :sub_class_of: []
-  :label: Topics
-  :datatype_properties: {}
-  :object_properties:
-    :micro_thesaurus_of:
-    - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :type: []
-  :id: RBBed4Voz7iS3nUECA3yzNM
-  :related_terms: {}
-  :label_suggest:
-    :input: Topics
-    :weight: 4
-- :annotations:
     :alt_label: Economic Groupings
     :pref_label: Trade Regions
     :comment: Trade regions as defined by the International Trade Administration
@@ -576,6 +561,21 @@
   :related_terms: {}
   :label_suggest:
     :input: Trade Regions
+    :weight: 4
+- :annotations:
+    :source: UNCTAD/WTO
+    :pref_label: Topics
+  :sub_class_of: []
+  :label: Trade Topics
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+      - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :type: []
+  :id: RBBed4Voz7iS3nUECA3yzNM
+  :related_terms: {}
+  :label_suggest:
+    :input: Trade Topics
     :weight: 3
 - :annotations:
     :source: ISO 3166

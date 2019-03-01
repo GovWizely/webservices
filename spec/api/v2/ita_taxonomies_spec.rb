@@ -24,7 +24,9 @@ describe 'Ita Taxonomy API V2', type: :request do
         json_response = JSON.parse(response.body, symbolize_names: true)
         expect(json_response[:total]).to eq(21)
         results = json_response[:results]
-        expect(results).to match_array expected_results
+        expected_results.each_with_index do |expected, index|
+          expect(results[index]).to eq(expected)
+        end
       end
     end
 

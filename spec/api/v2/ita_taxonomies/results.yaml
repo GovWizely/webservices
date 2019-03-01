@@ -389,7 +389,7 @@
 - :id: RBUhToH9SFoFVriuHfHzcvT
   :label: International Cooperation
   :type:
-  - Topics
+  - Trade Topics
   :sub_class_of: []
   :annotations:
     :pref_label: International Cooperation
@@ -418,7 +418,7 @@
     - :id: RDHA9zT6LXQYJveXoKXYU68
     :member_of:
     - :id: RBBed4Voz7iS3nUECA3yzNM
-      :label: Topics
+      :label: Trade Topics
     :is_top_concept_in_scheme:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
   :related_terms: {}
@@ -448,7 +448,7 @@
 - :id: RBb72pZnfGSZApKbgfMfARC
   :label: Regional Organizations
   :type:
-  - Topics
+  - Trade Topics
   :sub_class_of:
   - :id: RBUhToH9SFoFVriuHfHzcvT
     :label: International Cooperation
@@ -495,18 +495,6 @@
   :datatype_properties: {}
   :object_properties: {}
   :related_terms: {}
-- :id: RBBed4Voz7iS3nUECA3yzNM
-  :label: Topics
-  :type: []
-  :sub_class_of: []
-  :annotations:
-    :source: UNCTAD/WTO
-    :pref_label: Topics
-  :datatype_properties: {}
-  :object_properties:
-    :micro_thesaurus_of:
-    - :id: RC7BwiZbq5uJvqujC7p9NAy
-  :related_terms: {}
 - :id: R7ySyiNxcfeZ6bfNjhocNun
   :label: Trade Regions
   :type: []
@@ -519,6 +507,18 @@
   :object_properties:
     :micro_thesaurus_of:
     - :id: RC7BwiZbq5uJvqujC7p9NAy
+  :related_terms: {}
+- :id: RBBed4Voz7iS3nUECA3yzNM
+  :label: Trade Topics
+  :type: []
+  :sub_class_of: []
+  :annotations:
+    :source: UNCTAD/WTO
+    :pref_label: Topics
+  :datatype_properties: {}
+  :object_properties:
+    :micro_thesaurus_of:
+      - :id: RC7BwiZbq5uJvqujC7p9NAy
   :related_terms: {}
 - :id: RC4HD9CwKjvgX8dSybAp3Sk
   :label: United States
