@@ -1,5 +1,7 @@
 require 'simplecov'
-SimpleCov.start 'rails'
+SimpleCov.start 'rails' do
+  add_filter '/.bundle/'
+end
 
 # This file is copied to spec/ when you run 'rails generate rspec:install'
 ENV['RAILS_ENV'] ||= 'test'
@@ -31,6 +33,7 @@ RSpec.configure do |config|
   config.before(:suite) do
     ES.client.indices.put_template name: 'one_shard', body: { template: 'test:*', settings: { number_of_shards: 1, number_of_replicas: 0 } }
     User.create_index!
+    MetadataRepository.create_index! force: true
     UrlMapper.recreate_index
     ItaTaxonomy.recreate_index unless ItaTaxonomy.index_exists?
   end

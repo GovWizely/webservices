@@ -33,6 +33,7 @@ describe Importable do
       end
     end
 
+    MetadataRepository.delete Mock.index_name, { ignore: 404 }
     Mock.recreate_index
   end
 
@@ -152,6 +153,21 @@ describe Importable do
 
     def stored_docs
       Mock.search_for({})[:hits].map { |h| h[:_source].deep_symbolize_keys }
+    end
+  end
+
+  describe '#import' do
+    before { Mock.update_metadata(nil, nil) }
+
+    it 'updates the Metadata.last_imported' do
+      expect do
+        MockData.new([{ id: 3, content: 'ping pong' }]).import
+      end.to change {
+        MetadataRepository.find(Mock.index_name).last_imported
+      }.from(nil)
+
+      m = MetadataRepository.find Mock.index_name
+      expect(m.last_imported.to_time).to be_within(60.seconds).of(Time.now)
     end
   end
 

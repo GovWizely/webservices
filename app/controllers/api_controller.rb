@@ -23,7 +23,7 @@ class ApiController < ActionController::Base
   respond_to :json, :csv, :tsv
 
   def query_info_fields
-    [:total, :offset, :search_performed_at]
+    [:total, :offset, :sources_used, :search_performed_at]
   end
 
   def search

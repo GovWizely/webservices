@@ -30,6 +30,13 @@ describe 'Consolidated Screening List API V2', type: :request do
            ScreeningList::Dtc, ScreeningList::Part561, ScreeningList::Plc, ScreeningList::Ssi,]
         end
       end
+      it_behaves_like 'it contains sources_used' do
+        let(:sources) do
+          [ScreeningList::Sdn, ScreeningList::Fse, ScreeningList::El, ScreeningList::Eo13599,
+           ScreeningList::Dpl, ScreeningList::Uvl, ScreeningList::Isn,
+           ScreeningList::Dtc, ScreeningList::Part561, ScreeningList::Plc, ScreeningList::Ssi,]
+        end
+      end
     end
 
     context 'when name is specified' do
@@ -246,12 +253,18 @@ describe 'Consolidated Screening List API V2', type: :request do
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Part561] }
         end
+        it_behaves_like 'it contains sources_used' do
+          let(:sources) { [ScreeningList::Part561] }
+        end
       end
 
       context 'and is set to "Eo13599" source' do
         let(:params) { { sources: '13599' } }
         it_behaves_like 'it contains all ScreeningList::Eo13599 results'
         it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [ScreeningList::Eo13599] }
+        end
+        it_behaves_like 'it contains sources_used' do
           let(:sources) { [ScreeningList::Eo13599] }
         end
       end
@@ -262,12 +275,18 @@ describe 'Consolidated Screening List API V2', type: :request do
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Fse] }
         end
+        it_behaves_like 'it contains sources_used' do
+          let(:sources) { [ScreeningList::Fse] }
+        end
       end
 
       context 'and is set to "EL" source' do
         let(:params) { { sources: 'EL' } }
         it_behaves_like 'it contains all ScreeningList::El results'
         it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [ScreeningList::El] }
+        end
+        it_behaves_like 'it contains sources_used' do
           let(:sources) { [ScreeningList::El] }
         end
       end
@@ -278,12 +297,18 @@ describe 'Consolidated Screening List API V2', type: :request do
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Dpl] }
         end
+        it_behaves_like 'it contains sources_used' do
+          let(:sources) { [ScreeningList::Dpl] }
+        end
       end
 
       context 'and is set to "UVL" source' do
         let(:params) { { sources: 'UVL', size: 100 } }
         it_behaves_like 'it contains all ScreeningList::Uvl results'
         it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [ScreeningList::Uvl] }
+        end
+        it_behaves_like 'it contains sources_used' do
           let(:sources) { [ScreeningList::Uvl] }
         end
       end
@@ -294,12 +319,18 @@ describe 'Consolidated Screening List API V2', type: :request do
         it_behaves_like 'it contains only results with sources' do
           let(:sources) { [ScreeningList::Isn] }
         end
+        it_behaves_like 'it contains sources_used' do
+          let(:sources) { [ScreeningList::Isn] }
+        end
       end
 
       context 'and is set to "DTC" source' do
         let(:params) { { sources: 'DTC' } }
         it_behaves_like 'it contains all ScreeningList::Dtc results'
         it_behaves_like 'it contains only results with sources' do
+          let(:sources) { [ScreeningList::Dtc] }
+        end
+        it_behaves_like 'it contains sources_used' do
           let(:sources) { [ScreeningList::Dtc] }
         end
       end

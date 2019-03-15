@@ -12,6 +12,7 @@ shared_context 'a working Mock model class' do
           },
         },
       }
+      self.import_rate = 'Weekly'
     end
     class MockData
     end
@@ -66,6 +67,7 @@ describe Indexable do
   describe '.purge_old' do
     include_context 'a working Mock model class'
     before do
+      MetadataRepository.delete Mock.index_name, ignore: 404
       Mock.recreate_index
       Mock.index(docs_to_index)
     end
@@ -115,5 +117,18 @@ describe Indexable do
     include_context 'a working Mock model class'
     subject { Mock.importer_class }
     it { is_expected.to eq(MockData) }
+  end
+
+  describe '.recreate_index' do
+    include_context 'a working Mock model class'
+    before { Mock.recreate_index }
+
+    it 'sets Metadata' do
+      m = MetadataRepository.find Mock.index_name
+      expect(m.import_rate).to eq('Weekly')
+      expect(m.source).to eq('Mock')
+      expect(m.source_last_updated).to be_nil
+      expect(m.last_imported).to be_nil
+    end
   end
 end
