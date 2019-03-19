@@ -32,6 +32,7 @@ module Searchable
       hits = results['hits']
       hits[:aggregations] = results['aggregations']
       hits[:offset] = query.offset
+      hits[:sources_used] = index_meta(query.try(:sources))
       hits[:search_performed_at] = search_performed_at
       hits.deep_symbolize_keys
     end
@@ -71,6 +72,7 @@ module Searchable
 
       response = ES.client.search(search_options)
       results = { offset:              0,
+                  sources_used:        index_meta(sources),
                   search_performed_at: search_performed_at,
                   hits:                response['hits'].deep_symbolize_keys[:hits],
                   total:               response['hits']['total'], }
@@ -86,6 +88,13 @@ module Searchable
 
     def index_names(sources = nil)
       models(sources).map(&:index_name)
+    end
+
+    def index_meta(sources = nil)
+      searchable_models = models sources
+      MetadataRepository.find(searchable_models.map(&:index_name)).map do |metadata|
+        metadata.to_hash(only: %i(source source_last_updated last_imported import_rate))
+      end
     end
 
     private

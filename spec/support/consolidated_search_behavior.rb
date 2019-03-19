@@ -78,6 +78,19 @@ shared_examples 'it contains all expected results without source' do
   end
 end
 
+shared_examples 'it contains sources_used' do
+  let(:expected_sources) do
+    sources.map { |s| s.source[:full_name] }.sort
+  end
+
+  let(:sources_used) { JSON.parse(response.body)['sources_used'] }
+  let(:actual_sources) { sources_used.map { |s| s['source'] }.sort }
+
+  it 'contains only expected sources_used' do
+    expect(actual_sources).to eq(expected_sources)
+  end
+end
+
 shared_examples 'it contains only results with sources' do
   let(:results) { JSON.parse(response.body)['results'] }
   let(:source_full_names) { sources.map { |s| source_full_name(s) } }

@@ -5,6 +5,7 @@ module Indexable
   # for docs via the index defined by is module.
   include Findable
   include Searchable
+  include Trackable
 
   included do
     class << self
@@ -40,12 +41,14 @@ module Indexable
 
     def delete_index
       ES.client.indices.delete index: index_name
+      delete_metadata
     end
 
     def create_index
       ES.client.indices.create(
         index: index_name,
         body:  { settings: settings, mappings: mappings },)
+      find_or_create_metadata
     end
 
     def index_exists?
